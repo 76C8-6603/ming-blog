@@ -1,4 +1,4 @@
-baseURL: 76C8-6603.github.io/ming-blog/
+baseURL:
 theme: pure
 title: Ming Blog
 defaultContentLanguage: en  # en/zh/...
