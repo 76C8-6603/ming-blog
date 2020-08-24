@@ -14,4 +14,7 @@ git reset --hard HEAD~
 
 #删除所有本地未提交内容
 git checkout .
+
+#下次push时保存输入密码
+git config credential.helper store
 ```

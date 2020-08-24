@@ -1,6 +1,6 @@
 ---
     title: "Git push 异常：remote: No anonymous write access"
-    date: 2020-08-23
+    date: 2018-05-06
     tags: ["git"]
     
 ---
