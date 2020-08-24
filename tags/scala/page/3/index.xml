@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>scala on Ming Blog</title>
+    <link>76C8-6603.github.io/ming-blog/tags/scala/</link>
+    <description>Recent content in scala on Ming Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="76C8-6603.github.io/ming-blog/tags/scala/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mybatis Generator配置</title>
+      <link>76C8-6603.github.io/ming-blog/2019/07/mybatisgenerator%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2019/07/mybatisgenerator%E9%85%8D%E7%BD%AE/</guid>
+      <description>配置复杂，比较臃肿，推荐使用idea的插件easyCode pom.xml配置： &amp;lt;!-- mybatis自动生成 start --&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis.generator&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-generator-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.3.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;!--配置文件的</description>
+    </item>
+    
+    <item>
+      <title>mySql 插入中文异常 Incorrect string value: &#39;***&#39; for column</title>
+      <link>76C8-6603.github.io/ming-blog/2019/07/mysql_%E6%8F%92%E5%85%A5%E4%B8%AD%E6%96%87%E5%BC%82%E5%B8%B8/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2019/07/mysql_%E6%8F%92%E5%85%A5%E4%B8%AD%E6%96%87%E5%BC%82%E5%B8%B8/</guid>
+      <description>问题是由mysql的编码问题造成，因为建表的时候没有指定utf-8作为字符集 建议重新建表，或者直接调整对应字段的字符集 1.修改mysql编码</description>
+    </item>
+    
+    <item>
+      <title>FastJson解析结果部分属性为null的问题</title>
+      <link>76C8-6603.github.io/ming-blog/2019/07/json%E8%A7%A3%E6%9E%90%E7%BB%93%E6%9E%9C%E9%83%A8%E5%88%86%E5%B1%9E%E6%80%A7%E4%B8%BAnull%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2019/07/json%E8%A7%A3%E6%9E%90%E7%BB%93%E6%9E%9C%E9%83%A8%E5%88%86%E5%B1%9E%E6%80%A7%E4%B8%BAnull%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>在协作开发时，从接口获取到的json实体部分为空，但是在调试时发现原对象没有任何问题，但是经过解析成为json后，部分属性变为： &amp;ldquo</description>
+    </item>
+    
+    <item>
+      <title>SparkSql函数文档</title>
+      <link>76C8-6603.github.io/ming-blog/2019/07/sparksqlapi/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2019/07/sparksqlapi/</guid>
+      <description>spark sql也支持函数，但与通常的数据库函数有些区别，附上官方api文档，以作备忘： http://spark.apache.org/docs/latest/api/sql/index.html#acos</description>
+    </item>
+    
+    <item>
+      <title>为服务开启BBR加速</title>
+      <link>76C8-6603.github.io/ming-blog/2019/05/%E4%B8%BA%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%90%AFbbr%E5%8A%A0%E9%80%9F/</link>
+      <pubDate>Fri, 31 May 2019 19:03:55 +0800</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2019/05/%E4%B8%BA%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%90%AFbbr%E5%8A%A0%E9%80%9F/</guid>
+      <description>脚本： wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;amp;&amp;amp; chmod +x bbr.sh &amp;amp;&amp;amp; ./bbr.sh 查看结果： sysctl net.ipv4.tcp_available_congestion_control</description>
+    </item>
+    
+    <item>
+      <title>Java上传文件格式判断</title>
+      <link>76C8-6603.github.io/ming-blog/2019/03/java%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E5%88%A4%E6%96%AD/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2019/03/java%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E5%88%A4%E6%96%AD/</guid>
+      <description>判断用户上传文件的合法性仅仅通过后缀名是完全不够的，谁也不知道后缀名是否被更改，服务器保存一个不知道真实类型的文件有极大的风险。 因此需要后台</description>
+    </item>
+    
+    <item>
+      <title>QPS、TPS、PV等网站业务关键字释义</title>
+      <link>76C8-6603.github.io/ming-blog/2018/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</link>
+      <pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2018/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</guid>
+      <description>QPS：Query Per Second TPS：Transaction Per Second PV：Page View RT：Response Time UV：Unique Visitor DAU：Daily Actived Users M</description>
+    </item>
+    
+    <item>
+      <title>大型网站架构演化概论</title>
+      <link>76C8-6603.github.io/ming-blog/2018/09/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96%E6%A6%82%E8%AE%BA/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2018/09/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96%E6%A6%82%E8%AE%BA/</guid>
+      <description>1.大型网站的特点： 相比传统企业应用系统，大型互联网应用系统有以下特点： 高并发、大流量：需要面对高并发用户，大流量访问。 高可用：系统需要7*</description>
+    </item>
+    
+    <item>
+      <title>[译]Java8：循环与函数式编程</title>
+      <link>76C8-6603.github.io/ming-blog/2018/08/%E8%AF%91java8%E5%BE%AA%E7%8E%AF%E4%B8%8E%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2018/08/%E8%AF%91java8%E5%BE%AA%E7%8E%AF%E4%B8%8E%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</guid>
+      <description>Java8函数式编程的加入彻底改变了游戏规则。对Java开发者来说这是一个全新的世界，我们也需要做出相应的改变。 在这篇文章中我们将找寻传统循</description>
+    </item>
+    
+    <item>
+      <title>[译]Java8的函数式接口</title>
+      <link>76C8-6603.github.io/ming-blog/2018/08/%E8%AF%91java8%E7%9A%84%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2018/08/%E8%AF%91java8%E7%9A%84%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/</guid>
+      <description>Java8引入了 java.util.function 包，他包含了函数式接口，具体的描述在以下api说明文档中： 函数式接口为lambda表达式和方法引用提供目标类型。每个函数式</description>
+    </item>
+    
+    <item>
+      <title>Spring boot 文件路径读取异常</title>
+      <link>76C8-6603.github.io/ming-blog/2018/08/springboot%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E8%AF%BB%E5%8F%96%E5%BC%82%E5%B8%B8/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2018/08/springboot%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E8%AF%BB%E5%8F%96%E5%BC%82%E5%B8%B8/</guid>
+      <description>在开发代码中，有一段需要获取resources目录下的一个配置文件（这里写作test.xml）。 这段代码在ide中没有任何问题，但是一打成j</description>
+    </item>
+    
+    <item>
+      <title>Linux常用命令备忘</title>
+      <link>76C8-6603.github.io/ming-blog/2018/08/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2018/08/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</guid>
+      <description>文档查看和修改 cd - #查看上一次所在的目录 cat /etc/hosts #文档查看 ls #查看当前目录下所有文件 pwd #查看当前目录的绝对路径 ll #查看目录下文件的详细信息，包括</description>
+    </item>
+    
+    <item>
+      <title>vim命令备忘</title>
+      <link>76C8-6603.github.io/ming-blog/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</guid>
+      <description>vi /etc/hosts i 修改模式 esc 退出修改 :q 正常退出(文件没有修改 :q! 不保存退出 :wq 保存退出 G 跳到末尾行 dd 删除当前行 gg 跳到第一行第一个字符 $ 跳到当前行的最后一个字</description>
+    </item>
+    
+    <item>
+      <title>大浏览量系统的静态化架构设计</title>
+      <link>76C8-6603.github.io/ming-blog/2018/08/%E5%A4%A7%E6%B5%8F%E8%A7%88%E9%87%8F%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9D%99%E6%80%81%E5%8C%96%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2018/08/%E5%A4%A7%E6%B5%8F%E8%A7%88%E9%87%8F%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9D%99%E6%80%81%E5%8C%96%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</guid>
+      <description>本篇文章着重整理什么是静态化系统架构，以及静态化架构的几种方案。 首先先贴一个淘宝系统升级的历程(09~13)： 09年，系统拆分，静态文件合并</description>
+    </item>
+    
+    <item>
+      <title>请求参数中的&#43;号为什么会丢失,如何保证参数完整</title>
+      <link>76C8-6603.github.io/ming-blog/2018/08/%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E4%B8%AD%E7%9A%84-%E5%8F%B7%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E4%B8%A2%E5%A4%B1/</link>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2018/08/%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E4%B8%AD%E7%9A%84-%E5%8F%B7%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E4%B8%A2%E5%A4%B1/</guid>
+      <description>最近在开发中碰见一个问题，后端代码调用接口，在请求端参数没有任何问题，但是当接口接收到参数时，其中的加号全部变为了空格。 在查阅资料后发现是U</description>
+    </item>
+    
+    <item>
+      <title>[译]lambda表达式对 SAM （单个抽象方法类）type的处理方式</title>
+      <link>76C8-6603.github.io/ming-blog/2018/06/%E8%AF%91lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AF%B9-sam/</link>
+      <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2018/06/%E8%AF%91lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AF%B9-sam/</guid>
+      <description>在阅读Venkat Subramaniam的著作《Functional Programming in Java》 之后，方法模式和lambda完美结合让我印象深刻。 这种模式</description>
+    </item>
+    
+    <item>
+      <title>Java反射常用API汇总</title>
+      <link>76C8-6603.github.io/ming-blog/2018/06/java%E5%8F%8D%E5%B0%84%E5%B8%B8%E7%94%A8api%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2018/06/java%E5%8F%8D%E5%B0%84%E5%B8%B8%E7%94%A8api%E6%B1%87%E6%80%BB/</guid>
+      <description>“JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性” 一、类对</description>
+    </item>
+    
+    <item>
+      <title>[译]java8新特性：函数式编程（functional programming）的优点</title>
+      <link>76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java8%E6%96%B0%E7%89%B9%E6%80%A7%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9/</link>
+      <pubDate>Thu, 10 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java8%E6%96%B0%E7%89%B9%E6%80%A7%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9/</guid>
+      <description>Java8引入了函数式编程，他对java是一个极大的扩展。Java从此不在是一个单纯的面向对象语言，现在他同时混合了函数式编程。这是巨大的改</description>
+    </item>
+    
+    <item>
+      <title>[译]java9新特性：在接口中用pirvate方法让default(java8接口特性)更简练</title>
+      <link>76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</link>
+      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</guid>
+      <description>Java8 带来了许多改变，其中之一就是default修饰的接口方法。 这些方法改变了我们已知的接口，现在我们能够在接口中定义默认实现方法。默认实现方法</description>
+    </item>
+    
+    <item>
+      <title>[转]quartz cron表达式详解</title>
+      <link>76C8-6603.github.io/ming-blog/2018/05/quartzcron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>76C8-6603.github.io/ming-blog/2018/05/quartzcron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/</guid>
+      <description>Cron表达式是一个字符串，字符串以5或6个空格隔开，分为6或7个域，每一个域代表一个含义，Cron有如下两种语法格式： （1） Seconds Minutes Hours DayofMonth Month DayofWeek Year</description>
+    </item>
+    
+  </channel>
+</rss>

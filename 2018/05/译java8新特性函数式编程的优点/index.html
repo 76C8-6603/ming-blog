@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+        [译]java8新特性：函数式编程（functional programming）的优点 - Ming Blog
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="Java8引入了函数式编程，他对java是一个极大的扩展。Java从此不在是一个单纯的面向对象语言，现在他同时混合了函数式编程。这是巨大的改" />
+    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
+    <title>[译]java8新特性：函数式编程（functional programming）的优点 - Ming Blog</title>
+    
+    
+    <link rel="stylesheet" href="/76C8-6603.github.io/ming-blog/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="[译]java8新特性：函数式编程（functional programming）的优点" />
+<meta property="og:description" content="Java8引入了函数式编程，他对java是一个极大的扩展。Java从此不在是一个单纯的面向对象语言，现在他同时混合了函数式编程。这是巨大的改" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java8%E6%96%B0%E7%89%B9%E6%80%A7%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9/" />
+<meta property="article:published_time" content="2018-05-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-05-10T00:00:00+00:00" />
+<meta itemprop="name" content="[译]java8新特性：函数式编程（functional programming）的优点">
+<meta itemprop="description" content="Java8引入了函数式编程，他对java是一个极大的扩展。Java从此不在是一个单纯的面向对象语言，现在他同时混合了函数式编程。这是巨大的改">
+<meta itemprop="datePublished" content="2018-05-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-05-10T00:00:00+00:00" />
+<meta itemprop="wordCount" content="771">
+
+
+
+<meta itemprop="keywords" content="java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[译]java8新特性：函数式编程（functional programming）的优点"/>
+<meta name="twitter:description" content="Java8引入了函数式编程，他对java是一个极大的扩展。Java从此不在是一个单纯的面向对象语言，现在他同时混合了函数式编程。这是巨大的改"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-purple" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="" target="_blank">
+            <img class="img-circle img-rotate" src="76C8-6603.github.io/ming-blog/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Ming</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">tianshiming5@outlook.com</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>BeiJing, China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="76C8-6603.github.io/ming-blog/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="76C8-6603.github.io/ming-blog/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Archives</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="76C8-6603.github.io/ming-blog/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Categories</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="76C8-6603.github.io/ming-blog/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/design-pattern/" class="tag-list-link">design-pattern</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/druid/" class="tag-list-link">druid</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/hadoop/" class="tag-list-link">hadoop</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/hive/" class="tag-list-link">hive</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/java/" class="tag-list-link">java</a><span
+                    class="tag-list-count">20</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/jooq/" class="tag-list-link">jooq</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/linux/" class="tag-list-link">linux</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/mybatis/" class="tag-list-link">mybatis</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/mysql/" class="tag-list-link">mysql</a><span
+                    class="tag-list-count">13</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/npm/" class="tag-list-link">npm</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/regexp/" class="tag-list-link">regexp</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/scala/" class="tag-list-link">scala</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/spark/" class="tag-list-link">spark</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/spring/" class="tag-list-link">spring</a><span
+                    class="tag-list-count">6</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/website-build/" class="tag-list-link">website-build</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="76C8-6603.github.io/ming-blog/tags/wsl/" class="tag-list-link">wsl</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="76C8-6603.github.io/ming-blog/2020/08/npm%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F/" class="title">Npm淘宝镜像</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-19 16:07:12 &#43;0800 CST" itemprop="datePublished">2020-08-19</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="76C8-6603.github.io/ming-blog/2020/08/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/" class="title">Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-10 14:52:32 &#43;0800 CST" itemprop="datePublished">2020-08-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="76C8-6603.github.io/ming-blog/2020/08/win10/" class="title">WIN10 UBUNTU 异常：sleep: cannot read realtime clock: Invalid argument</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-10 13:37:30 &#43;0800 CST" itemprop="datePublished">2020-08-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="76C8-6603.github.io/ming-blog/2020/08/mysql%E8%A1%A8%E5%90%8D%E5%BF%BD%E7%95%A5%E5%A4%A7%E5%B0%8F%E5%86%99/" class="title">Mysql表名忽略大小写</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-10 13:18:03 &#43;0800 CST" itemprop="datePublished">2020-08-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="76C8-6603.github.io/ming-blog/2020/08/springboot%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%B9%B6%E6%98%A0%E5%B0%84%E5%88%B0%E6%8C%87%E5%AE%9A%E7%B1%BB%E4%B8%AD/" class="title">Spring自定义配置文件并映射到指定类中</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-05 11:14:55 &#43;0800 CST" itemprop="datePublished">2020-08-05</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java8%E6%96%B0%E7%89%B9%E6%80%A7%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9/"
+    >[译]java8新特性：函数式编程（functional programming）的优点</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java8%E6%96%B0%E7%89%B9%E6%80%A7%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9/" class="article-date">
+  <time datetime="2018-05-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-05-10</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/76C8-6603.github.io/ming-blog/tags/java/"> java </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java8%E6%96%B0%E7%89%B9%E6%80%A7%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 771words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>Java8引入了函数式编程，他对java是一个极大的扩展。Java从此不在是一个单纯的面向对象语言，现在他同时混合了函数式编程。这是巨大的改变，需要我们调整面对对象的编程习惯，以适应这些变化。</p>
+<p>但是为什么我们需要去适应这些改变？为什么我们需要花费时间精力上手函数式编程而不是直接用面对对象解决问题？</p>
+<ul>
+<li>函数式编程的引入，帮助我们减少业务逻辑和代码的分歧。他允许我们在更高层次更自然的描述业务逻辑。让代码直接描述“你想做什么”，而不是“你想怎样去做”。</li>
+<li>许多样板（boilerplates）可以被移除，这会让代码更清晰更简洁。</li>
+<li>高阶函数（Higher-order functions）允许我们：　　
+<ul>
+<li>发送方法到其他方法中。</li>
+<li>在其他方法中创建方法。</li>
+<li>从其他方法中返回方法。</li>
+</ul>
+</li>
+</ul>
+<p>这对Java来说是一个巨大的胜利，我们需要发送，创建并返回对象来完成这项工作。我们将能创建更健壮，更集中并且更容易重用的代码。</p>
+<ul>
+<li>多亏lambda表达式，现在我们可以实现惰性求值（lazy evalutions）。当发送lambda表达式作为一个方法的参数，Java编译器会在lambda表达式在方法中被调用时才计算他的值。这跟一般的方法参数被直接求职是不一样的。</li>
+<li>lambda让单元测试变得更加有趣~他允许我们创建简洁，小巧和快速的轻量级单元测试。用lambda我们能够储存测试代码。他允许我们测试各种场景对代码的影响。</li>
+<li>探索新的模式。</li>
+<li>等等好处。
+掌握新的函数式编程对于熟悉面对对象编程的开发者来说是一个挑战，但他应该是一个非常受欢迎的挑战。经过之前的的铺垫，我所要说的是你真的应该学习一门函数式编程语言。他会让你了解到他带来的可能性和能量。我认为这将帮助你在另一个层面了解函数式编程。</li>
+</ul>
+<p>因此，掌握函数式编程，加上良好的面对对象思想，能够让你的代码更加牛b！</p>
+<p>*英文链接：<a href="http://www.deadcoderising.com/why-you-should-embrace-lambdas-in-java-8/">deadCodeRising</a></p>
+<p>*原创译文</p>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java8%E6%96%B0%E7%89%B9%E6%80%A7%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9/" title="[译]java8新特性：函数式编程（functional programming）的优点" target="_blank" rel="external">76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java8%E6%96%B0%E7%89%B9%E6%80%A7%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="76C8-6603.github.io/ming-blog/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="" target="_blank"><span class="text-dark">Ming</span><small class="ml-1x">tianshiming5@outlook.com</small></a></h3>
+        <div>Finally</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/" title="[译]java9新特性：在接口中用pirvate方法让default(java8接口特性)更简练"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="76C8-6603.github.io/ming-blog/2018/06/java%E5%8F%8D%E5%B0%84%E5%B8%B8%E7%94%A8api%E6%B1%87%E6%80%BB/"
+                    title="Java反射常用API汇总"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2017  -
+    2020
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="/76C8-6603.github.io/ming-blog/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
+<script src="/76C8-6603.github.io/ming-blog/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: '76C8-6603.github.io\/ming-blog\/',
+            CONTENT_URL: '76C8-6603.github.io\/ming-blog\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="/76C8-6603.github.io/ming-blog/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+
+  </body>
+</html>
