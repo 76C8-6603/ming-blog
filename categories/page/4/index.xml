@@ -10,12 +10,12 @@
     
     
     <item>
-      <title>[译]java9新特性：在接口中用pirvate方法让default(java8接口特性)更简练</title>
-      <link>https://76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</link>
-      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      <title>Git上传本地项目</title>
+      <link>https://76C8-6603.github.io/ming-blog/2018/05/git%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</guid>
-      <description>Java8 带来了许多改变，其中之一就是default修饰的接口方法。 这些方法改变了我们已知的接口，现在我们能够在接口中定义默认实现方法。默认实现方法</description>
+      <guid>https://76C8-6603.github.io/ming-blog/2018/05/git%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE/</guid>
+      <description>1.在git上创建仓库，记下clone地址 2.把线上仓库拉到本地 git clone https://github.com/*/*.git 3.把要上传的本地项目文件全部放入本地仓库中 4.把所有文件提交到线上 git</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://76C8-6603.github.io/ming-blog/2018/05/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</guid>
-      <description>#查看工作区状态 git status -s #撤回上一次的commit内容 git reset --hard HEAD~ #删除所有本地未提交内容 git checkout .</description>
+      <description>#查看工作区状态 git status -s #撤回上一次的commit内容 git reset --hard HEAD~ #删除所有本地未提交内容 git checkout . #下次push时保存输入密码 git config credential.helper store</description>
     </item>
     
     <item>

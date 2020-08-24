@@ -5,28 +5,10 @@
     <link>https://76C8-6603.github.io/ming-blog/tags/git/</link>
     <description>Recent content in git on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 May 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://76C8-6603.github.io/ming-blog/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Mysql批量更新</title>
-      <link>https://76C8-6603.github.io/ming-blog/2019/07/mysql%E6%89%B9%E9%87%8F%E6%9B%B4%E6%96%B0/</link>
-      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://76C8-6603.github.io/ming-blog/2019/07/mysql%E6%89%B9%E9%87%8F%E6%9B%B4%E6%96%B0/</guid>
-      <description>多个where条件，每个条件对应的更新值不同，需要mysql批量更新 UPDATE test_table SET test_target = test_id CASE WHEN &amp;quot;123&amp;quot; THEN &amp;quot;456&amp;quot; WHEN &amp;quot;789&amp;quot; THEN &amp;quot;101&amp;quot; END WHERE test_id in [&#39;123&#39;,&#39;789&#39;] 但是在程序中，直接写常量的情况太</description>
-    </item>
-    
-    <item>
-      <title>spring boot configuration annotation processor not found in classpath</title>
-      <link>https://76C8-6603.github.io/ming-blog/2019/07/springbootconfigurationexception/</link>
-      <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://76C8-6603.github.io/ming-blog/2019/07/springbootconfigurationexception/</guid>
-      <description>配置有@ConfigurationProperties 注解的类，有如下提示 spring boot configuration annotation processor not found in classpath pom追加配置如下依赖即可 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-configuration-processor&amp;lt;/artifactId&amp;gt; &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; &amp;lt;/dependency&amp;gt;</description>
-    </item>
     
     <item>
       <title>Mybatis Generator配置</title>
@@ -188,6 +170,24 @@
       
       <guid>https://76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java8%E6%96%B0%E7%89%B9%E6%80%A7%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9/</guid>
       <description>Java8引入了函数式编程，他对java是一个极大的扩展。Java从此不在是一个单纯的面向对象语言，现在他同时混合了函数式编程。这是巨大的改</description>
+    </item>
+    
+    <item>
+      <title>[译]java9新特性：在接口中用pirvate方法让default(java8接口特性)更简练</title>
+      <link>https://76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</link>
+      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</guid>
+      <description>Java8 带来了许多改变，其中之一就是default修饰的接口方法。 这些方法改变了我们已知的接口，现在我们能够在接口中定义默认实现方法。默认实现方法</description>
+    </item>
+    
+    <item>
+      <title>Git push 异常：remote: No anonymous write access</title>
+      <link>https://76C8-6603.github.io/ming-blog/2018/05/gitpush%E5%BC%82%E5%B8%B8/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2018/05/gitpush%E5%BC%82%E5%B8%B8/</guid>
+      <description>异常信息 No anonymous write access. Authentication failed for 解决方案 提交的时候设置UserName和email 或者重新设置全局git用户名和邮箱 git config --global user.name &amp;quot;username&amp;quot; git config --global user.email &amp;quot;email&amp;quot;</description>
     </item>
     
   </channel>

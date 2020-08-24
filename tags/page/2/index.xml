@@ -5,28 +5,10 @@
     <link>https://76C8-6603.github.io/ming-blog/tags/</link>
     <description>Recent content in Tags on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2020 16:07:12 +0800</lastBuildDate>
     
         <atom:link href="https://76C8-6603.github.io/ming-blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Scala实现的尾递归</title>
-      <link>https://76C8-6603.github.io/ming-blog/2020/02/scala%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%B0%BE%E9%80%92%E5%BD%92/</link>
-      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://76C8-6603.github.io/ming-blog/2020/02/scala%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%B0%BE%E9%80%92%E5%BD%92/</guid>
-      <description>最大公约数： @tailrec def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b) 阶乘: def factorial(n: Int): Int = { @tailrec def iter(x: Int, result: Int): Int = if (x == 0) result else iter(x - 1, result * x) iter(n, 1) } @tailrec注解可以检测</description>
-    </item>
-    
-    <item>
-      <title>SBT仓库镜像配置</title>
-      <link>https://76C8-6603.github.io/ming-blog/2020/02/sbt%E4%BB%93%E5%BA%93%E9%95%9C%E5%83%8F%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://76C8-6603.github.io/ming-blog/2020/02/sbt%E4%BB%93%E5%BA%93%E9%95%9C%E5%83%8F%E9%85%8D%E7%BD%AE/</guid>
-      <description>一、打开sbt安装路径找到conf\sbtconfig.txt，在文件末尾添加仓库文件地址 -Dsbt.repository.config=%SBT_HOME/sbt/conf/repository.properties 二、在对应目录创建repository.prop</description>
-    </item>
     
     <item>
       <title>怎么给自己的域名指定IP</title>
@@ -188,6 +170,24 @@
       
       <guid>https://76C8-6603.github.io/ming-blog/2019/07/java%E5%8A%A0%E5%AF%86%E7%B1%BBcipher%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
       <description>public class EncryptUtils { private static final String SECRET_KEY_1 = &amp;quot;YIORGA4dBYp6y7u8&amp;quot;; private static final String SECRET_KEY_2 = &amp;quot;C6B8r5y7u7Uh37Sy&amp;quot;; private IvParameterSpec ivParameterSpec; private SecretKeySpec secretKeySpec; private Cipher cipher; public EncryptUtils() throws UnsupportedEncodingException, NoSuchPaddingException, NoSuchAlgorithmException { ivParameterSpec = new IvParameterSpec(SECRET_KEY_1.getBytes(&amp;quot;UTF-8&amp;quot;)); secretKeySpec = new SecretKeySpec(SECRET_KEY_2.getBytes(&amp;quot;UTF-8&amp;quot;), &amp;quot;AES&amp;quot;); cipher = Cipher.getInstance(&amp;quot;AES/CBC/PKCS5PADDING&amp;quot;); } /** * Encrypt the string with this internal algorithm. * * @param toBeEncrypt string object to be encrypt. * @return returns encrypted string.</description>
+    </item>
+    
+    <item>
+      <title>Mysql批量更新</title>
+      <link>https://76C8-6603.github.io/ming-blog/2019/07/mysql%E6%89%B9%E9%87%8F%E6%9B%B4%E6%96%B0/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2019/07/mysql%E6%89%B9%E9%87%8F%E6%9B%B4%E6%96%B0/</guid>
+      <description>多个where条件，每个条件对应的更新值不同，需要mysql批量更新 UPDATE test_table SET test_target = test_id CASE WHEN &amp;quot;123&amp;quot; THEN &amp;quot;456&amp;quot; WHEN &amp;quot;789&amp;quot; THEN &amp;quot;101&amp;quot; END WHERE test_id in [&#39;123&#39;,&#39;789&#39;] 但是在程序中，直接写常量的情况太</description>
+    </item>
+    
+    <item>
+      <title>spring boot configuration annotation processor not found in classpath</title>
+      <link>https://76C8-6603.github.io/ming-blog/2019/07/springbootconfigurationexception/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2019/07/springbootconfigurationexception/</guid>
+      <description>配置有@ConfigurationProperties 注解的类，有如下提示 spring boot configuration annotation processor not found in classpath pom追加配置如下依赖即可 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-configuration-processor&amp;lt;/artifactId&amp;gt; &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; &amp;lt;/dependency&amp;gt;</description>
     </item>
     
   </channel>

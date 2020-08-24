@@ -11,24 +11,6 @@
     
     
     <item>
-      <title>Git push 异常：remote: No anonymous write access</title>
-      <link>https://76C8-6603.github.io/ming-blog/2020/08/gitpush%E5%BC%82%E5%B8%B8/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://76C8-6603.github.io/ming-blog/2020/08/gitpush%E5%BC%82%E5%B8%B8/</guid>
-      <description>异常信息 No anonymous write access. Authentication failed for 解决方案 提交的时候设置UserName和email 或者重新设置全局git用户名和邮箱 git config --global user.name &amp;quot;username&amp;quot; git config --global user.email &amp;quot;email&amp;quot;</description>
-    </item>
-    
-    <item>
-      <title>Git上传本地项目</title>
-      <link>https://76C8-6603.github.io/ming-blog/2020/08/git%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://76C8-6603.github.io/ming-blog/2020/08/git%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE/</guid>
-      <description>1.在git上创建仓库，记下clone地址 2.把线上仓库拉到本地 git clone https://github.com/*/*.git 3.把要上传的本地项目文件全部放入本地仓库中 4.把所有文件提交到线上 git</description>
-    </item>
-    
-    <item>
       <title>Npm淘宝镜像</title>
       <link>https://76C8-6603.github.io/ming-blog/2020/08/npm%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F/</link>
       <pubDate>Wed, 19 Aug 2020 16:07:12 +0800</pubDate>
@@ -188,6 +170,24 @@
       
       <guid>https://76C8-6603.github.io/ming-blog/2020/04/mysql%E6%8F%92%E5%85%A5%E9%87%8D%E5%A4%8D%E5%80%BC%E8%BF%BD%E5%8A%A0%E5%90%8E%E7%BC%80/</guid>
       <description>实现方式是自定义触发器 drop trigger if exists trigger_name; delimiter | CREATE TRIGGER trigger_name BEFORE INSERT ON table_name FOR EACH ROW BEGIN declare original_column_name varchar(255); declare column_name_counter int; set original_column_name = new.column_name; set column_name_counter = 1; while exists (select true from pc_volumes where name = new.column_name) do set new.column_name = concat(original_column_name, &#39;-&#39;, column_name_counter); set column_name_counter = column_name_counter + 1; end while; END; |</description>
+    </item>
+    
+    <item>
+      <title>Scala实现的尾递归</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/02/scala%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%B0%BE%E9%80%92%E5%BD%92/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/02/scala%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%B0%BE%E9%80%92%E5%BD%92/</guid>
+      <description>最大公约数： @tailrec def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b) 阶乘: def factorial(n: Int): Int = { @tailrec def iter(x: Int, result: Int): Int = if (x == 0) result else iter(x - 1, result * x) iter(n, 1) } @tailrec注解可以检测</description>
+    </item>
+    
+    <item>
+      <title>SBT仓库镜像配置</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/02/sbt%E4%BB%93%E5%BA%93%E9%95%9C%E5%83%8F%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/02/sbt%E4%BB%93%E5%BA%93%E9%95%9C%E5%83%8F%E9%85%8D%E7%BD%AE/</guid>
+      <description>一、打开sbt安装路径找到conf\sbtconfig.txt，在文件末尾添加仓库文件地址 -Dsbt.repository.config=%SBT_HOME/sbt/conf/repository.properties 二、在对应目录创建repository.prop</description>
     </item>
     
   </channel>
