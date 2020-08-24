@@ -2,83 +2,110 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mysql on Ming Blog</title>
-    <link>76C8-6603.github.io/ming-blog/tags/mysql/</link>
+    <link>/tags/mysql/</link>
     <description>Recent content in mysql on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 10 Aug 2020 14:52:32 +0800</lastBuildDate>
     
-        <atom:link href="76C8-6603.github.io/ming-blog/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>[译]java9新特性：在接口中用pirvate方法让default(java8接口特性)更简练</title>
+      <link>/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</link>
+      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</guid>
+      <description>Java8 带来了许多改变，其中之一就是default修饰的接口方法。 这些方法改变了我们已知的接口，现在我们能够在接口中定义默认实现方法。默认实现方法</description>
+    </item>
+    
+    <item>
+      <title>Git常用命令备忘</title>
+      <link>/2018/05/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/05/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</guid>
+      <description>#查看工作区状态 git status -s #撤回上一次的commit内容 git reset --hard HEAD~ #删除所有本地未提交内容 git checkout .</description>
+    </item>
+    
+    <item>
+      <title>[转]quartz cron表达式详解</title>
+      <link>/2018/05/quartzcron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/05/quartzcron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/</guid>
+      <description>Cron表达式是一个字符串，字符串以5或6个空格隔开，分为6或7个域，每一个域代表一个含义，Cron有如下两种语法格式： （1） Seconds Minutes Hours DayofMonth Month DayofWeek Year</description>
+    </item>
+    
+    <item>
       <title>字符编码笔记：ASCII、Unicode、UTF-8 和 Base64</title>
-      <link>76C8-6603.github.io/ming-blog/2018/03/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0/</link>
+      <link>/2018/03/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>76C8-6603.github.io/ming-blog/2018/03/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0/</guid>
+      <guid>/2018/03/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0/</guid>
       <description>1. ASCII码 我们知道，在计算机内部，所有的信息最终都表示为一个二进制的字符串。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就</description>
     </item>
     
     <item>
       <title>Request的Body只能读取一次解决方法</title>
-      <link>76C8-6603.github.io/ming-blog/2018/03/request%E7%9A%84body%E5%8F%AA%E8%83%BD%E8%AF%BB%E5%8F%96%E4%B8%80%E6%AC%A1%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+      <link>/2018/03/request%E7%9A%84body%E5%8F%AA%E8%83%BD%E8%AF%BB%E5%8F%96%E4%B8%80%E6%AC%A1%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>76C8-6603.github.io/ming-blog/2018/03/request%E7%9A%84body%E5%8F%AA%E8%83%BD%E8%AF%BB%E5%8F%96%E4%B8%80%E6%AC%A1%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+      <guid>/2018/03/request%E7%9A%84body%E5%8F%AA%E8%83%BD%E8%AF%BB%E5%8F%96%E4%B8%80%E6%AC%A1%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
       <description>一、需要一个类继承HttpServletRequestWrapper，该类继承了ServletRequestWrapper并实现了HttpS</description>
     </item>
     
     <item>
       <title>Java获取当前类名和方法名</title>
-      <link>76C8-6603.github.io/ming-blog/2018/01/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B1%BB%E5%90%8D%E5%92%8C%E6%96%B9%E6%B3%95%E5%90%8D/</link>
+      <link>/2018/01/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B1%BB%E5%90%8D%E5%92%8C%E6%96%B9%E6%B3%95%E5%90%8D/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>76C8-6603.github.io/ming-blog/2018/01/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B1%BB%E5%90%8D%E5%92%8C%E6%96%B9%E6%B3%95%E5%90%8D/</guid>
+      <guid>/2018/01/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B1%BB%E5%90%8D%E5%92%8C%E6%96%B9%E6%B3%95%E5%90%8D/</guid>
       <description>Description Below I present you two different ways to get the current Class: Using Thread Using getClass() The simplest way to get the name of the class where your code is being executed in is using the getClass() method present in every java object. Like here: String clazz = this.getClass().getName(); This works only if executed in an Object, namely an instanciated class. If you try to execute the code above</description>
     </item>
     
     <item>
       <title>观察者模式和java委托</title>
-      <link>76C8-6603.github.io/ming-blog/2018/01/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8Cjava%E5%A7%94%E6%89%98/</link>
+      <link>/2018/01/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8Cjava%E5%A7%94%E6%89%98/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>76C8-6603.github.io/ming-blog/2018/01/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8Cjava%E5%A7%94%E6%89%98/</guid>
+      <guid>/2018/01/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8Cjava%E5%A7%94%E6%89%98/</guid>
       <description>所谓观察者模式，指的某个状态信息的改变，会影响其他一系列的操作，这时就可以将这些操作抽象化，同时创建一个类统一的管理和执行这些操作。把这些抽</description>
     </item>
     
     <item>
       <title>[转]Class.forName()用法详解</title>
-      <link>76C8-6603.github.io/ming-blog/2017/11/class.forname%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/</link>
+      <link>/2017/11/class.forname%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/</link>
       <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>76C8-6603.github.io/ming-blog/2017/11/class.forname%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>/2017/11/class.forname%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/</guid>
       <description>转自:http://blog.csdn.net/kaiwii/article/details/7405761 主要功能 Class.forNam</description>
     </item>
     
     <item>
       <title>[转]谈谈Java中的语法糖</title>
-      <link>76C8-6603.github.io/ming-blog/2017/10/%E8%BD%AC%E8%B0%88%E8%B0%88java%E4%B8%AD%E7%9A%84%E8%AF%AD%E6%B3%95%E7%B3%96/</link>
+      <link>/2017/10/%E8%BD%AC%E8%B0%88%E8%B0%88java%E4%B8%AD%E7%9A%84%E8%AF%AD%E6%B3%95%E7%B3%96/</link>
       <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>76C8-6603.github.io/ming-blog/2017/10/%E8%BD%AC%E8%B0%88%E8%B0%88java%E4%B8%AD%E7%9A%84%E8%AF%AD%E6%B3%95%E7%B3%96/</guid>
+      <guid>/2017/10/%E8%BD%AC%E8%B0%88%E8%B0%88java%E4%B8%AD%E7%9A%84%E8%AF%AD%E6%B3%95%E7%B3%96/</guid>
       <description>*该博客转自 http://blog.csdn.net/danchu/article/details/54986442 语法糖（Syntactic Sugar），也称糖衣语法，指在计算机语言中添加的某种语法，这种语法对语言本身功能来说没有什么影响，</description>
     </item>
     
     <item>
       <title>Java编码,乱码问题详解</title>
-      <link>76C8-6603.github.io/ming-blog/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</link>
+      <link>/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</link>
       <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>76C8-6603.github.io/ming-blog/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</guid>
       <description>一、常见的编码格式 1.ASCII 基础编码，英文和西欧字符。 用一个字节的低7位表示，一共128个。 0~13是控制字符如换行、回车、删除等，32~126是打</description>
     </item>
     
     <item>
       <title>设计模式总览</title>
-      <link>76C8-6603.github.io/ming-blog/2017/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88/</link>
+      <link>/2017/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88/</link>
       <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>76C8-6603.github.io/ming-blog/2017/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88/</guid>
+      <guid>/2017/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88/</guid>
       <description>1.什么叫依赖倒转，里氏替换？ 所谓依赖倒转就是抽象类不应该依赖于子类，子类应该依赖于抽象类，并且子类之间不应该互相依赖。依赖倒转是面对对象的</description>
     </item>
     
