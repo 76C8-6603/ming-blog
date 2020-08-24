@@ -1,4 +1,4 @@
-baseURL:
+baseURL: ming-blog/
 theme: pure
 title: Ming Blog
 defaultContentLanguage: en  # en/zh/...
