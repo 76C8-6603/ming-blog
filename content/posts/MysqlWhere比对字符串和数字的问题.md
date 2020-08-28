@@ -1,8 +1,7 @@
 ---
-    title: "Mysql Where条件判断"字符串和数字"是否相等时存在的问题"
+    title: "Mysql Where条件判断 字符串和数字 是否相等时存在的问题"
     date: 2016-07-08
     tags: ["mysql"]
-    
 ---
 
 + 测试数据  
