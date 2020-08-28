@@ -5,4 +5,4 @@
     
 ---
 
-![scala](/scala_base_type.png)
+![scala](scala_base_type.png)

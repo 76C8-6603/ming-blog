@@ -32,7 +32,7 @@ mkdir -p #创建文件夹
 
 cat [目录1]  >> [目录2] #把目录1的文件内容输入到目录2中 
 
-chmod +x filename #让执行文件能被./filename调用
+chmod a+x filename #让执行文件能被./filename调用
 
 mv #文件移动或者重命名
 ```
