@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java on Ming Blog</title>
+    <link>https://76C8-6603.github.io/ming-blog/tags/java/</link>
+    <description>Recent content in java on Ming Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 Jul 2020 17:42:55 +0800</lastBuildDate>
+    
+        <atom:link href="https://76C8-6603.github.io/ming-blog/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Npm淘宝镜像</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/08/npm%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F/</link>
+      <pubDate>Wed, 19 Aug 2020 16:07:12 +0800</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/08/npm%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F/</guid>
+      <description>npm config set registry https://registry.npm.taobao.org</description>
+    </item>
+    
+    <item>
+      <title>Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/08/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</link>
+      <pubDate>Mon, 10 Aug 2020 14:52:32 +0800</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/08/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</guid>
+      <description>usermod -d /var/lib/mysql/ mysql ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock chown -R mysql:mysql /var/lib/mysql</description>
+    </item>
+    
+    <item>
+      <title>WIN10 UBUNTU 异常：sleep: cannot read realtime clock: Invalid argument</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/08/win10/</link>
+      <pubDate>Mon, 10 Aug 2020 13:37:30 +0800</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/08/win10/</guid>
+      <description>WSL ubuntu20.04官方问题，为了稳定推荐18.04 参考官方说明</description>
+    </item>
+    
+    <item>
+      <title>Spring自定义配置文件并映射到指定类中</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/08/springboot%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%B9%B6%E6%98%A0%E5%B0%84%E5%88%B0%E6%8C%87%E5%AE%9A%E7%B1%BB%E4%B8%AD/</link>
+      <pubDate>Wed, 05 Aug 2020 11:14:55 +0800</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/08/springboot%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%B9%B6%E6%98%A0%E5%B0%84%E5%88%B0%E6%8C%87%E5%AE%9A%E7%B1%BB%E4%B8%AD/</guid>
+      <description>新建指定配置类TestConfiguration 该类需要的注解： @Configuration @ConfigurationProperties(prefix=&amp;quot;test&amp;quot;) @PropertySource(&amp;quot;classpath:test.properties&amp;quot;) 同时启动类上需要增加注解： @EnableConfigurationProperties({TestConfiguration.class})</description>
+    </item>
+    
+    <item>
+      <title>List addAll产生异常java.lang.UnsupportedOperationException</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/07/list_add_all%E5%BC%82%E5%B8%B8/</link>
+      <pubDate>Thu, 30 Jul 2020 17:42:55 +0800</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/07/list_add_all%E5%BC%82%E5%B8%B8/</guid>
+      <description>原因是因为list是由Arrays.asList生成的 根据Arrays源码，asList方法生成的ArrayList，并不是java.uti</description>
+    </item>
+    
+    <item>
+      <title>Oracle extract函数提取时分秒的问题</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/07/oracleextract%E5%87%BD%E6%95%B0%E6%8F%90%E5%8F%96%E6%97%B6%E5%88%86%E7%A7%92%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 30 Jul 2020 17:42:55 +0800</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/07/oracleextract%E5%87%BD%E6%95%B0%E6%8F%90%E5%8F%96%E6%97%B6%E5%88%86%E7%A7%92%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>当提取字段为Date类型时，extract只能读取年月日，提取时分秒会报错 要提取年月日，需要将Date类型转为timestamp</description>
+    </item>
+    
+    <item>
+      <title>JOOQ默认schema</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/07/jooq%E9%BB%98%E8%AE%A4schema/</link>
+      <pubDate>Tue, 14 Jul 2020 11:16:55 +0800</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/07/jooq%E9%BB%98%E8%AE%A4schema/</guid>
+      <description>Setting中有个选项setRenderSchema(true)，但是这种只适用于表是由JOOQ代码生成器生成的表对象。 如果是自己声明的表</description>
+    </item>
+    
+    <item>
+      <title>Druid数据库连接失败，无限尝试问题</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/06/druid%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E6%97%A0%E9%99%90%E5%B0%9D%E8%AF%95%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Tue, 16 Jun 2020 15:38:20 +0800</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/06/druid%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E6%97%A0%E9%99%90%E5%B0%9D%E8%AF%95%E9%97%AE%E9%A2%98/</guid>
+      <description>需提前设置BreakAfterAcquireFailure为true，不然连接重试次数限制无效 还需要设置FailFast为true，不然原始</description>
+    </item>
+    
+    <item>
+      <title>Mysql安装后root无法登陆(Access denied for user &#39;root&#39;@&#39;localhost&#39;)</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/06/mysql%E5%AE%89%E8%A3%85%E5%90%8Eroot%E6%97%A0%E6%B3%95%E7%99%BB%E9%99%86/</link>
+      <pubDate>Mon, 08 Jun 2020 16:24:55 +0800</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/06/mysql%E5%AE%89%E8%A3%85%E5%90%8Eroot%E6%97%A0%E6%B3%95%E7%99%BB%E9%99%86/</guid>
+      <description>复杂密码才能通过 sudo mysql -u root -p mysql&amp;gt; select user, plugin from mysql.user; mysql&amp;gt; update mysql.user set authentication_string=PASSWORD(&#39;xcvds_32GDS&#39;), plugin=&#39;mysql_native_password&#39; where user=&#39;root&#39;; mysql8.0不能用上边的语句： ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &amp;quot;svewe_123&amp;quot;;</description>
+    </item>
+    
+    <item>
+      <title>avg函数忽略null值</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/06/avg%E5%87%BD%E6%95%B0%E5%BF%BD%E7%95%A5null%E5%80%BC/</link>
+      <pubDate>Fri, 05 Jun 2020 16:33:55 +0800</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/06/avg%E5%87%BD%E6%95%B0%E5%BF%BD%E7%95%A5null%E5%80%BC/</guid>
+      <description>avg函数对值为null的行，会忽略不计 解决方案 avg((coalesce(column,0))</description>
+    </item>
+    
+    <item>
+      <title>正则表达式转义所有特殊符号</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/05/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E4%B9%89%E6%89%80%E6%9C%89%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7/</link>
+      <pubDate>Tue, 26 May 2020 17:11:55 +0800</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/05/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E4%B9%89%E6%89%80%E6%9C%89%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7/</guid>
+      <description>正则表达式的特殊符号包括 \ $ ( ) * + . [ ] ? ^ { } | - 实现代码(java) public class RegexUtils { private static final String[] SPECIAL_SYMBOLS = new String[]{&amp;quot;\\&amp;quot;, &amp;quot;$&amp;quot;, &amp;quot;(&amp;quot;, &amp;quot;)&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;[&amp;quot;, &amp;quot;]&amp;quot;, &amp;quot;?&amp;quot;, &amp;quot;^&amp;quot;, &amp;quot;{&amp;quot;, &amp;quot;}&amp;quot;, &amp;quot;|&amp;quot;, &amp;quot;-&amp;quot;}; /** * 转义目标正</description>
+    </item>
+    
+    <item>
+      <title>Scala基础类结构图</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/05/scala%E5%9F%BA%E7%A1%80%E7%B1%BB%E7%BB%93%E6%9E%84%E5%9B%BE/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/05/scala%E5%9F%BA%E7%A1%80%E7%B1%BB%E7%BB%93%E6%9E%84%E5%9B%BE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scala运算符优先顺序</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/05/scala%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E9%A1%BA%E5%BA%8F/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/05/scala%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E9%A1%BA%E5%BA%8F/</guid>
+      <description>运算符的优先级由其第一个字符决定 以下列出的字符按优先级从高到低的顺序排列 (all letters) | ^ &amp;amp; &amp;lt; &amp;gt; = ! + - * / % (all other special characters)</description>
+    </item>
+    
+    <item>
+      <title>hive cast( as integer)报错 in primitive type specification</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/05/hivecast%E6%8A%A5%E9%94%99/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/05/hivecast%E6%8A%A5%E9%94%99/</guid>
+      <description>原因是hive版本太老，不能识别integer，只能识别int 官方说明 生效版本是0.8.0</description>
+    </item>
+    
+    <item>
+      <title>spark dataset写csv的时候将null值写为空字符串</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/05/spark%E5%86%99csv%E6%8A%8Anull%E5%80%BC%E5%86%99%E4%B8%BA%E7%A9%BA%E4%B8%B2/</link>
+      <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/05/spark%E5%86%99csv%E6%8A%8Anull%E5%80%BC%E5%86%99%E4%B8%BA%E7%A9%BA%E4%B8%B2/</guid>
+      <description>用spark写csv的时候碰见一个问题，join后未匹配的单元应该是null，但是spark写出来全部都为&amp;rdquo;&amp;rdquo; F23338994668,F23338994669,F23338995220 12,1,1 1,7,&amp;quot;&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>spark精度丢失，导致列查询为null的解决办法</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/04/spark%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1/</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/04/spark%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1/</guid>
+      <description>spark decimal列进行计算时，可能丢失精度 在默认情况下[spark.sql.decimalOperations.allowPrecision</description>
+    </item>
+    
+    <item>
+      <title>Mysql插入重复值追加后缀</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/04/mysql%E6%8F%92%E5%85%A5%E9%87%8D%E5%A4%8D%E5%80%BC%E8%BF%BD%E5%8A%A0%E5%90%8E%E7%BC%80/</link>
+      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/04/mysql%E6%8F%92%E5%85%A5%E9%87%8D%E5%A4%8D%E5%80%BC%E8%BF%BD%E5%8A%A0%E5%90%8E%E7%BC%80/</guid>
+      <description>实现方式是自定义触发器 drop trigger if exists trigger_name; delimiter | CREATE TRIGGER trigger_name BEFORE INSERT ON table_name FOR EACH ROW BEGIN declare original_column_name varchar(255); declare column_name_counter int; set original_column_name = new.column_name; set column_name_counter = 1; while exists (select true from pc_volumes where name = new.column_name) do set new.column_name = concat(original_column_name, &#39;-&#39;, column_name_counter); set column_name_counter = column_name_counter + 1; end while; END; |</description>
+    </item>
+    
+    <item>
+      <title>Scala实现的尾递归</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/02/scala%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%B0%BE%E9%80%92%E5%BD%92/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/02/scala%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%B0%BE%E9%80%92%E5%BD%92/</guid>
+      <description>最大公约数： @tailrec def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b) 阶乘: def factorial(n: Int): Int = { @tailrec def iter(x: Int, result: Int): Int = if (x == 0) result else iter(x - 1, result * x) iter(n, 1) } @tailrec注解可以检测</description>
+    </item>
+    
+    <item>
+      <title>SBT仓库镜像配置</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/02/sbt%E4%BB%93%E5%BA%93%E9%95%9C%E5%83%8F%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/02/sbt%E4%BB%93%E5%BA%93%E9%95%9C%E5%83%8F%E9%85%8D%E7%BD%AE/</guid>
+      <description>一、打开sbt安装路径找到conf\sbtconfig.txt，在文件末尾添加仓库文件地址 -Dsbt.repository.config=%SBT_HOME/sbt/conf/repository.properties 二、在对应目录创建repository.prop</description>
+    </item>
+    
+    <item>
+      <title>怎么给自己的域名指定IP</title>
+      <link>https://76C8-6603.github.io/ming-blog/2020/02/%E6%80%8E%E4%B9%88%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE%E6%8C%87%E5%AE%9Aip/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2020/02/%E6%80%8E%E4%B9%88%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE%E6%8C%87%E5%AE%9Aip/</guid>
+      <description>一般来讲直接指定A record就行，这里以NameCheap为例： //@ - used to point a root domain (yourdomain.tld) to the IP address: //在浏览器输入yourdomain.tld想跳</description>
+    </item>
+    
+  </channel>
+</rss>
