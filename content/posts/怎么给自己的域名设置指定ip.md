@@ -4,19 +4,23 @@
     tags: ["website build"]
     
 ---
+### 这里主要参照NameCheap，其他域名服务商大同小异
+**host:**  
+`@`代表在浏览器输入yourdomain.tld想跳转到的地址  
+`www`代表在浏览器输入www.yourdomain.tld想跳转到的地址
+### 跳转到指定IP  
 
-一般来讲直接指定A record就行，这里以NameCheap为例：
+|type|host|target|
+|---|---|---|
+|A Record | @ |  11.22.33.44|
+|A Record | www |  11.22.33.44|
 
-```
-//@ - used to point a root domain (yourdomain.tld) to the IP address:
-//在浏览器输入yourdomain.tld想跳转到的ip
+### 跳转到指定域名
 
-A Record | @ |  11.22.33.44
+|type|host|target|
+|---|---|---|
+|CNAME Record|@|[name].github.io
+|CNAME Record|www|[name].github.io
 
-//www - is selected when it is needed to point www.yourdomain.tld to the IP address:
-//在浏览器输入www.yourdomain.tld想跳转到的ip
-
-A Record | www |  11.22.33.44
-```
 
 [NameCheap的详细说明](https://www.namecheap.com/support/knowledgebase/article.aspx/319/2237/how-can-i-set-up-an-a-address-record-for-my-domain)
