@@ -356,7 +356,7 @@
 <p>回答:肯定答自增啊。innodb 中的主键是聚簇索引。如果主键是自增的，那么每次插入新的记录，记录就会顺序添加到当前索引节点的后续位置，当一页写满，就会自动开辟一个新的页。如果不是自增主键，那么可能会在中间插入，就会引发页的分裂，产生很多表碎片！。</p>
 <p>上面那句话看不懂没事，大白话一句就是:用自增插入性能好！</p>
 <p>另外，附一个测试表给你们，表名带uuid的就是用uuid作为主键。大家看一下就知道性能差距了:</p>
-<p><img src="mysql%E8%A1%A8%E6%B3%A8%E6%84%8F01.jpg" alt="mysql表注意01.jpg"></p>
+<p><img src="/ming-blog/mysql%E8%A1%A8%E6%B3%A8%E6%84%8F01.jpg" alt="mysql表注意01.jpg"></p>
 <p>如上图所示，当主键是UUID的时候，插入时间更长，而且占用空间更大！</p>
 <p>ps：这个问题，你要是能把UUID讲出合理的理由也行。</p>
 <h4 id="问题3主键为什么不推荐有业务含义">问题3:主键为什么不推荐有业务含义?</h4>
@@ -376,7 +376,7 @@
 <pre><code class="language-sql">mysql&gt; INSERT INTO test VALUES (1);
 </code></pre>
 <p>查询出的结果为</p>
-<p><img src="mysql%E8%A1%A8%E6%B3%A8%E6%84%8F02.jpg" alt="mysql表注意02.jpg"></p>
+<p><img src="/ming-blog/mysql%E8%A1%A8%E6%B3%A8%E6%84%8F02.jpg" alt="mysql表注意02.jpg"></p>
 <p>就产生了一个坑爹的结果。 插入语句应该像下面这么写，插入的才是1</p>
 <pre><code class="language-sql">mysql&gt; INSERT INTO test VALUES (`1`);
 </code></pre>

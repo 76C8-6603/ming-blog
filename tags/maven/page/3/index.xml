@@ -83,15 +83,6 @@
     </item>
     
     <item>
-      <title>QPS、TPS、PV等网站业务关键字释义</title>
-      <link>https://76C8-6603.github.io/ming-blog/2018/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</link>
-      <pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://76C8-6603.github.io/ming-blog/2018/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</guid>
-      <description>QPS：Query Per Second TPS：Transaction Per Second PV：Page View RT：Response Time UV：Unique Visitor DAU：Daily Actived Users M</description>
-    </item>
-    
-    <item>
       <title>大型网站架构演化概论</title>
       <link>https://76C8-6603.github.io/ming-blog/2018/09/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96%E6%A6%82%E8%AE%BA/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
@@ -188,6 +179,15 @@
       
       <guid>https://76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java8%E6%96%B0%E7%89%B9%E6%80%A7%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9/</guid>
       <description>Java8引入了函数式编程，他对java是一个极大的扩展。Java从此不在是一个单纯的面向对象语言，现在他同时混合了函数式编程。这是巨大的改</description>
+    </item>
+    
+    <item>
+      <title>[译]java9新特性：在接口中用pirvate方法让default(java8接口特性)更简练</title>
+      <link>https://76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</link>
+      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</guid>
+      <description>Java8 带来了许多改变，其中之一就是default修饰的接口方法。 这些方法改变了我们已知的接口，现在我们能够在接口中定义默认实现方法。默认实现方法</description>
     </item>
     
   </channel>

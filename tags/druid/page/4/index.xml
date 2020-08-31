@@ -11,15 +11,6 @@
     
     
     <item>
-      <title>[译]java9新特性：在接口中用pirvate方法让default(java8接口特性)更简练</title>
-      <link>https://76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</link>
-      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://76C8-6603.github.io/ming-blog/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</guid>
-      <description>Java8 带来了许多改变，其中之一就是default修饰的接口方法。 这些方法改变了我们已知的接口，现在我们能够在接口中定义默认实现方法。默认实现方法</description>
-    </item>
-    
-    <item>
       <title>Git push 异常：remote: No anonymous write access</title>
       <link>https://76C8-6603.github.io/ming-blog/2018/05/gitpush%E5%BC%82%E5%B8%B8/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
@@ -125,6 +116,15 @@
       
       <guid>https://76C8-6603.github.io/ming-blog/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</guid>
       <description>一、常见的编码格式 1.ASCII 基础编码，英文和西欧字符。 用一个字节的低7位表示，一共128个。 0~13是控制字符如换行、回车、删除等，32~126是打</description>
+    </item>
+    
+    <item>
+      <title>QPS、TPS、PV等网站业务关键字释义</title>
+      <link>https://76C8-6603.github.io/ming-blog/2017/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</link>
+      <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://76C8-6603.github.io/ming-blog/2017/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</guid>
+      <description>QPS：Query Per Second TPS：Transaction Per Second PV：Page View RT：Response Time UV：Unique Visitor DAU：Daily Actived Users M</description>
     </item>
     
     <item>

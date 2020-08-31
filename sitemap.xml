@@ -479,13 +479,6 @@
   </url>
   
   <url>
-    <loc>https://76C8-6603.github.io/ming-blog/2018/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</loc>
-    <lastmod>2018-09-02T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://76C8-6603.github.io/ming-blog/2018/09/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96%E6%A6%82%E8%AE%BA/</loc>
     <lastmod>2018-09-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -663,6 +656,13 @@
   <url>
     <loc>https://76C8-6603.github.io/ming-blog/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2017-10-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://76C8-6603.github.io/ming-blog/2017/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</loc>
+    <lastmod>2017-09-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
