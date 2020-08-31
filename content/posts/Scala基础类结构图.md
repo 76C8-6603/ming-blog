@@ -5,4 +5,4 @@
     
 ---
 
-![scala](scala_base_type.png)
+![scala](/ming-blog/scala_base_type.png)

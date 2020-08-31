@@ -42,7 +42,7 @@ OK，具体有下面这些问题
 
 另外，附一个测试表给你们，表名带uuid的就是用uuid作为主键。大家看一下就知道性能差距了:
 
-![mysql表注意01.jpg](mysql表注意01.jpg)
+![mysql表注意01.jpg](/ming-blog/mysql表注意01.jpg)
 
 如上图所示，当主键是UUID的时候，插入时间更长，而且占用空间更大！  
 
@@ -78,7 +78,7 @@ mysql> INSERT INTO test VALUES (1);
 ```
 查询出的结果为
 
-![mysql表注意02.jpg](mysql表注意02.jpg)
+![mysql表注意02.jpg](/ming-blog/mysql表注意02.jpg)
 
 就产生了一个坑爹的结果。 插入语句应该像下面这么写，插入的才是1
 
