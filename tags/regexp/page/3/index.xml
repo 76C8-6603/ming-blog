@@ -5,19 +5,10 @@
     <link>http://www.mingaccount.com/tags/regexp/</link>
     <description>Recent content in regexp on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 26 May 2020 17:11:55 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://www.mingaccount.com/tags/regexp/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>mySql 插入中文异常 Incorrect string value: &#39;***&#39; for column</title>
-      <link>http://www.mingaccount.com/2019/07/mysql_%E6%8F%92%E5%85%A5%E4%B8%AD%E6%96%87%E5%BC%82%E5%B8%B8/</link>
-      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2019/07/mysql_%E6%8F%92%E5%85%A5%E4%B8%AD%E6%96%87%E5%BC%82%E5%B8%B8/</guid>
-      <description>问题是由mysql的编码问题造成，因为建表的时候没有指定utf-8作为字符集 建议重新建表，或者直接调整对应字段的字符集 1.修改mysql编码</description>
-    </item>
     
     <item>
       <title>Maven jar包冲突导致NoClassDefFoundError</title>
@@ -134,6 +125,15 @@
       
       <guid>http://www.mingaccount.com/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</guid>
       <description>vi /etc/hosts i 修改模式 esc 退出修改 :q 正常退出(文件没有修改 :q! 不保存退出 :wq 保存退出 G 跳到末尾行 dd 删除当前行 gg 跳到第一行第一个字符 $ 跳到当前行的最后一个字</description>
+    </item>
+    
+    <item>
+      <title>SpringBoot定时任务</title>
+      <link>http://www.mingaccount.com/2018/08/springboot%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</link>
+      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/08/springboot%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</guid>
+      <description>开启定时任务 @Configuration @EnableScheduling @ComponentScan(basePackages=&amp;quot;com.myco.tasks&amp;quot;) public class AppConfig { } 如果需要对定时任务的生命周期有其他的操作，可以实现接口SchedulingConfigurer @Configuration @EnableScheduling public class AppConfig implements SchedulingConfigurer { @Override</description>
     </item>
     
     <item>
