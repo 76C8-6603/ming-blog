@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>WSL on Ming Blog</title>
-    <link>http://www.mingaccount.com/tags/wsl/</link>
-    <description>Recent content in WSL on Ming Blog</description>
+    <title>windows on Ming Blog</title>
+    <link>http://www.mingaccount.com/tags/windows/</link>
+    <description>Recent content in windows on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 10 Aug 2020 13:37:30 +0800</lastBuildDate>
     
-        <atom:link href="http://www.mingaccount.com/tags/wsl/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.mingaccount.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
