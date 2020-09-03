@@ -1,7 +1,7 @@
 ---
 title: "WIN10 UBUNTU 异常：sleep: cannot read realtime clock: Invalid argument"
 date: 2020-08-10T13:37:30+08:00
-tags: ["WSL"]
+tags: ["windows"]
 
 ---
 
