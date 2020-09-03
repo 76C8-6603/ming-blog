@@ -1,6 +1,6 @@
 ---
 title: "List addAll产生异常java.lang.UnsupportedOperationException"
-date: 2020-07-30T17:42:55+08:00
+date: 2017-11-12
 tags: ["java"]
 
 ---

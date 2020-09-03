@@ -1,6 +1,6 @@
 ---
 title: "Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied"
-date: 2020-08-10T14:52:32+08:00
+date: 2017-07-11
 tags: ["mysql"]
 
 ---

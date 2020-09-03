@@ -1,6 +1,6 @@
 ---
     title: "Mysql安装后root无法登陆(Access denied for user 'root'@'localhost')"
-    date: 2020-06-08T16:24:55+08:00
+    date: 2018-06-08
     tags: ["mysql"]
     
 ---

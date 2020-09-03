@@ -1,6 +1,6 @@
 ---
     title: "Scala实现的尾递归"
-    date: 2020-02-25
+    date: 2019-02-25
     tags: ["scala"]
     
 ---

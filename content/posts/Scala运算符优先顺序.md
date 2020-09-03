@@ -1,6 +1,6 @@
 ---
     title: "Scala运算符优先顺序"
-    date: 2020-05-13
+    date: 2019-05-13
     tags: ["scala"]
     
 ---
