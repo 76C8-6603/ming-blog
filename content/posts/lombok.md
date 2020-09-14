@@ -712,5 +712,374 @@ public final class ValueExample {
   }
 }
 ```
+## `Builder` 构造者模式生成实体类，可修饰类，构造方法和一般方法
+类似
+```java
+Person.builder().name("Adam Savage").city("San Francisco").job("Mythbusters").job("Unchained Reaction").build();
+```
+* 当一个方法被`Builder`注解修饰（以下简称*target*)，会有七个要素生成
+    * 一个内部静态类叫做 `FooBuilder` ，有着和静态方法一样的类型参数(以下简称*builder*)
+    * 在*builder*里，*target*方法的每一个参数都对应了一个私有的非静态非final的成员变量
+    * 在*builder*里，包含一个package范围的私有无参的空构造方法
+    * 在*builder*里，每一个*target*的参数都对应了一个类似`setter`的方法，但是这个`setter`方法跟*target*方法的参数名一样，并且返回了*builder*自身，以形成链式结构
+    * 在*builder*里，包含一个`build`方法，用对应的参数调用*target*方法，最终生成*target*方法的返回值
+    * 在*builder*里，包含一个合理的`toString`实现
+    * 在target方法所在的类，会包含一个`builder`方法，他会创建类*builder*的实例
+* 以上的7个要素如果在检测到有同名的要素时会自动跳过（只对比名称）
+* 当`Builder`作用于类时，请确保该类没有任何显性的构造函数。如果有任意显性构造函数，请直接将`Builder`作用于构造函数上
+* 当`Builder`和`Value`同时作用于一个类时，`Builder`想要生成的Package范围的构造函数会覆盖`Value`想要生成的private范围的构造函数
+* 如果参数的值需要从某个字段或者方法获取，可以在字段或者参数上添加注解`@Builder.ObtainVia(method = "")`
+* `Builder`可配置的方面包括
+    * 静态内部类的名称(默认是type + "Builder")
+    * `build`方法的名称
+    * `builder`方法的名称
+    * 是否需要toBuilder()方法
+    * 生成元素的访问范围
+    * 如果你的构造链方法需要一个前缀，比如`Person.builder().setName`
+* 关于以上配置项，下面是个实例  
+`@Builder(builderClassName = "HelloWorldBuilder", buildMethodName = "execute", builderMethodName = "helloWorld", toBuilder = true, access = AccessLevel.PRIVATE, setterPrefix = "set")`
+* 当`Builder`注解作用于类，某些成员变量不需要set的时候，可以设置成员变量默认值  
+成员变量上用注解`@Builder.Default`实现  
+`@Builder.Default private final long created = System.currentTimeMillis();`
+* `@Singular` 注解作用于参数或者成员变量时，会吧对应参数当做集合。  
+    * 不会生成`setter`而会生成两个`adder`方法，一个新增单个，一个新增整个集合  
+    * 还会生成一个`clear`方法，一旦`build`方法被调用，生成的集合不能再被修改  
+    * 可指定新增单个的方法名`@Singular("axis") List<Line> axes;`
+    * 如果追加的集合为null会抛出异常，可设置忽略空集合`@Singular(ignoreNullCollections = true)`
+
+
+```java
+
+import lombok.Builder;
+import lombok.Singular;
+import java.util.Set;
+
+@Builder
+public class BuilderExample {
+  @Builder.Default private long created = System.currentTimeMillis();
+  private String name;
+  private int age;
+  @Singular private Set<String> occupations;
+}
+```
+等同于
+***
+```java
+import java.util.Set;
+
+public class BuilderExample {
+  private long created;
+  private String name;
+  private int age;
+  private Set<String> occupations;
+  
+  BuilderExample(String name, int age, Set<String> occupations) {
+    this.name = name;
+    this.age = age;
+    this.occupations = occupations;
+  }
+  
+  private static long $default$created() {
+    return System.currentTimeMillis();
+  }
+  
+  public static BuilderExampleBuilder builder() {
+    return new BuilderExampleBuilder();
+  }
+  
+  public static class BuilderExampleBuilder {
+    private long created;
+    private boolean created$set;
+    private String name;
+    private int age;
+    private java.util.ArrayList<String> occupations;
+    
+    BuilderExampleBuilder() {
+    }
+    
+    public BuilderExampleBuilder created(long created) {
+      this.created = created;
+      this.created$set = true;
+      return this;
+    }
+    
+    public BuilderExampleBuilder name(String name) {
+      this.name = name;
+      return this;
+    }
+    
+    public BuilderExampleBuilder age(int age) {
+      this.age = age;
+      return this;
+    }
+    
+    public BuilderExampleBuilder occupation(String occupation) {
+      if (this.occupations == null) {
+        this.occupations = new java.util.ArrayList<String>();
+      }
+      
+      this.occupations.add(occupation);
+      return this;
+    }
+    
+    public BuilderExampleBuilder occupations(Collection<? extends String> occupations) {
+      if (this.occupations == null) {
+        this.occupations = new java.util.ArrayList<String>();
+      }
+
+      this.occupations.addAll(occupations);
+      return this;
+    }
+    
+    public BuilderExampleBuilder clearOccupations() {
+      if (this.occupations != null) {
+        this.occupations.clear();
+      }
+      
+      return this;
+    }
+
+    public BuilderExample build() {
+      // complicated switch statement to produce a compact properly sized immutable set omitted.
+      Set<String> occupations = ...;
+      return new BuilderExample(created$set ? created : BuilderExample.$default$created(), name, age, occupations);
+    }
+    
+    @java.lang.Override
+    public String toString() {
+      return "BuilderExample.BuilderExampleBuilder(created = " + this.created + ", name = " + this.name + ", age = " + this.age + ", occupations = " + this.occupations + ")";
+    }
+  }
+}
+```
+
+## `SneakyThrows` checked Exception不用再try catch
+不推荐
+
+## `Synchronized` 用户成员方法或者静态方法
+关键字`synchronized`锁的是`this`，但是该注解锁的是不同的对象
+```java
+
+import lombok.Synchronized;
+
+public class SynchronizedExample {
+  private final Object readLock = new Object();
+  
+  @Synchronized
+  public static void hello() {
+    System.out.println("world");
+  }
+  
+  @Synchronized
+  public int answerToLife() {
+    return 42;
+  }
+  
+  @Synchronized("readLock")
+  public void foo() {
+    System.out.println("bar");
+  }
+}
+```
+等同于
+***
+```java
+
+public class SynchronizedExample {
+  private static final Object $LOCK = new Object[0];
+  private final Object $lock = new Object[0];
+  private final Object readLock = new Object();
+  
+  public static void hello() {
+    synchronized($LOCK) {
+      System.out.println("world");
+    }
+  }
+  
+  public int answerToLife() {
+    synchronized($lock) {
+      return 42;
+    }
+  }
+  
+  public void foo() {
+    synchronized(readLock) {
+      System.out.println("bar");
+    }
+  }
+}
+```
+## `With`用于成员变量或者类上，表示可修改类中的任何或者指定字段，即使该字段是final
+其实就是clone了一个当前类，并修改对应成员变量的值
+```java
+
+import lombok.AccessLevel;
+import lombok.NonNull;
+import lombok.With;
+
+public class WithExample {
+  @With(AccessLevel.PROTECTED) @NonNull private final String name;
+  @With private final int age;
+  
+  public WithExample(String name, int age) {
+    if (name == null) throw new NullPointerException();
+    this.name = name;
+    this.age = age;
+  }
+}
+```
+```java
+import lombok.NonNull;
+
+public class WithExample {
+  private @NonNull final String name;
+  private final int age;
+
+  public WithExample(String name, int age) {
+    if (name == null) throw new NullPointerException();
+    this.name = name;
+    this.age = age;
+  }
+
+  protected WithExample withName(@NonNull String name) {
+    if (name == null) throw new java.lang.NullPointerException("name");
+    return this.name == name ? this : new WithExample(name, age);
+  }
+
+  public WithExample withAge(int age) {
+    return this.age == age ? this : new WithExample(name, age);
+  }
+}
+```
+
+## `Getter(lazy=true)` 修饰private final 成员变量，获取一次，并缓存，之后都取缓存
+当一个成员变量的计算需要消耗大量资源，可以将它设置为private final，并加上该注解  
+这个注解会在第一次计算后缓存结果，他要求计算方法是非线程安全的
+```java
+
+import lombok.Getter;
+
+public class GetterLazyExample {
+  @Getter(lazy=true) private final double[] cached = expensive();
+  
+  private double[] expensive() {
+    double[] result = new double[1000000];
+    for (int i = 0; i < result.length; i++) {
+      result[i] = Math.asin(i);
+    }
+    return result;
+  }
+}
+```
+等同于
+***
+```java
+
+public class GetterLazyExample {
+  private final java.util.concurrent.AtomicReference<java.lang.Object> cached = new java.util.concurrent.AtomicReference<java.lang.Object>();
+  
+  public double[] getCached() {
+    java.lang.Object value = this.cached.get();
+    if (value == null) {
+      synchronized(this.cached) {
+        value = this.cached.get();
+        if (value == null) {
+          final double[] actualValue = expensive();
+          value = actualValue == null ? this.cached : actualValue;
+          this.cached.set(value);
+        }
+      }
+    }
+    return (double[])(value == this.cached ? null : value);
+  }
+  
+  private double[] expensive() {
+    double[] result = new double[1000000];
+    for (int i = 0; i < result.length; i++) {
+      result[i] = Math.asin(i);
+    }
+    return result;
+  }
+}
+```
+
+## `Log`修饰类，增加成员变量`log`
+多个注解，以适配多种Logger:
+* @CommonsLog  
+    private static final org.apache.commons.logging.Log log = org.apache.commons.logging.LogFactory.getLog(LogExample.class);
+* @Flogger  
+    private static final com.google.common.flogger.FluentLogger log = com.google.common.flogger.FluentLogger.forEnclosingClass();
+* @JBossLog
+    private static final org.jboss.logging.Logger log = org.jboss.logging.Logger.getLogger(LogExample.class);
+* @Log  
+    private static final java.util.logging.Logger log = java.util.logging.Logger.getLogger(LogExample.class.getName());
+* @Log4j  
+    private static final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(LogExample.class);
+* @Log4j2  
+    private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager.getLogger(LogExample.class);
+* @Slf4j  
+    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(LogExample.class);
+* @XSlf4j  
+    private static final org.slf4j.ext.XLogger log = org.slf4j.ext.XLoggerFactory.getXLogger(LogExample.class);
+* @CustomLog  
+    可自定义log，详情参考结尾的官方链接
+
+```java
+
+import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
+
+@Log
+public class LogExample {
+  
+  public static void main(String... args) {
+    log.severe("Something's wrong here");
+  }
+}
+
+@Slf4j
+public class LogExampleOther {
+  
+  public static void main(String... args) {
+    log.error("Something else is wrong here");
+  }
+}
+
+@CommonsLog(topic="CounterLog")
+public class LogExampleCategory {
+
+  public static void main(String... args) {
+    log.error("Calling the 'CounterLog' with a message");
+  }
+}
+```
+相当于
+***
+```java
+public class LogExample {
+  private static final java.util.logging.Logger log = java.util.logging.Logger.getLogger(LogExample.class.getName());
+  
+  public static void main(String... args) {
+    log.severe("Something's wrong here");
+  }
+}
+
+public class LogExampleOther {
+  private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(LogExampleOther.class);
+  
+  public static void main(String... args) {
+    log.error("Something else is wrong here");
+  }
+}
+
+public class LogExampleCategory {
+  private static final org.apache.commons.logging.Log log = org.apache.commons.logging.LogFactory.getLog("CounterLog");
+
+  public static void main(String... args) {
+    log.error("Calling the 'CounterLog' with a message");
+  }
+}
+```
+
 
 > 详细参考 [lombok官方文档](https://projectlombok.org/features/all)
