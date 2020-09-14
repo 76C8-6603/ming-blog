@@ -100,6 +100,15 @@
     </item>
     
     <item>
+      <title>lombok详解</title>
+      <link>http://www.mingaccount.com/2019/07/lombok/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2019/07/lombok/</guid>
+      <description>val 精简变量修饰，类似Scala，但是默认追加了final修饰符 val list = new ArrayList&amp;lt;String&amp;gt;(); //等同于 final ArrayList&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(); var 精简变量修饰，类似Scala，修饰变量 val list =</description>
+    </item>
+    
+    <item>
       <title>Maven jar包冲突导致NoClassDefFoundError</title>
       <link>http://www.mingaccount.com/2019/07/mavenjar%E5%8C%85%E5%86%B2%E7%AA%81/</link>
       <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>http://www.mingaccount.com/2019/02/scala%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%B0%BE%E9%80%92%E5%BD%92/</guid>
       <description>最大公约数： @tailrec def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b) 阶乘: def factorial(n: Int): Int = { @tailrec def iter(x: Int, result: Int): Int = if (x == 0) result else iter(x - 1, result * x) iter(n, 1) } @tailrec注解可以检测</description>
-    </item>
-    
-    <item>
-      <title>Markdown常用语法备忘</title>
-      <link>http://www.mingaccount.com/2019/01/markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%A4%87%E5%BF%98/</link>
-      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2019/01/markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%A4%87%E5%BF%98/</guid>
-      <description>markdown语法大多数符号需要加一个空格和正式内容区分开才会生效 横线 -&amp;ndash; *** ___ 标题 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标</description>
     </item>
     
   </channel>

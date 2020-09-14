@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+        lombok详解 - Ming Blog
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="val 精简变量修饰，类似Scala，但是默认追加了final修饰符 val list = new ArrayList&amp;lt;String&amp;gt;(); //等同于 final ArrayList&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(); var 精简变量修饰，类似Scala，修饰变量 val list =" />
+    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
+    <title>lombok详解 - Ming Blog</title>
+    
+    
+    <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="lombok详解" />
+<meta property="og:description" content="val 精简变量修饰，类似Scala，但是默认追加了final修饰符 val list = new ArrayList&lt;String&gt;(); //等同于 final ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;(); var 精简变量修饰，类似Scala，修饰变量 val list =" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.mingaccount.com/2019/07/lombok/" />
+<meta property="article:published_time" content="2019-07-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-07-09T00:00:00+00:00" />
+<meta itemprop="name" content="lombok详解">
+<meta itemprop="description" content="val 精简变量修饰，类似Scala，但是默认追加了final修饰符 val list = new ArrayList&lt;String&gt;(); //等同于 final ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;(); var 精简变量修饰，类似Scala，修饰变量 val list =">
+<meta itemprop="datePublished" content="2019-07-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-07-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="3395">
+
+
+
+<meta itemprop="keywords" content="lombok,java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="lombok详解"/>
+<meta name="twitter:description" content="val 精简变量修饰，类似Scala，但是默认追加了final修饰符 val list = new ArrayList&lt;String&gt;(); //等同于 final ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;(); var 精简变量修饰，类似Scala，修饰变量 val list ="/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-blue" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="" target="_blank">
+            <img class="img-circle img-rotate" src="http://www.mingaccount.com/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Ming</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">tianshiming5@outlook.com</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>BeiJing, China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Archives</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Categories</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/design-pattern/" class="tag-list-link">design-pattern</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/druid/" class="tag-list-link">druid</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/git/" class="tag-list-link">git</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/hadoop/" class="tag-list-link">hadoop</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/hive/" class="tag-list-link">hive</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/java/" class="tag-list-link">java</a><span
+                    class="tag-list-count">26</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/jooq/" class="tag-list-link">jooq</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/linux/" class="tag-list-link">linux</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/lombok/" class="tag-list-link">lombok</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/markdown/" class="tag-list-link">markdown</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/maven/" class="tag-list-link">maven</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mybatis/" class="tag-list-link">mybatis</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mysql/" class="tag-list-link">mysql</a><span
+                    class="tag-list-count">14</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/npm/" class="tag-list-link">npm</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/regexp/" class="tag-list-link">regexp</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/scala/" class="tag-list-link">scala</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/spark/" class="tag-list-link">spark</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
+                    class="tag-list-count">10</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/website-build/" class="tag-list-link">website-build</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/windows/" class="tag-list-link">windows</a><span
+                    class="tag-list-count">2</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="http://www.mingaccount.com/2020/08/win10/" class="title">WIN10 UBUNTU 异常：sleep: cannot read realtime clock: Invalid argument</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-10 13:37:30 &#43;0800 CST" itemprop="datePublished">2020-08-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="http://www.mingaccount.com/2020/07/oracleextract%E5%87%BD%E6%95%B0%E6%8F%90%E5%8F%96%E6%97%B6%E5%88%86%E7%A7%92%E7%9A%84%E9%97%AE%E9%A2%98/" class="title">Oracle extract函数提取时分秒的问题</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-07-30 17:42:55 &#43;0800 CST" itemprop="datePublished">2020-07-30</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="http://www.mingaccount.com/2020/07/jooq%E9%BB%98%E8%AE%A4schema/" class="title">JOOQ默认schema</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-07-14 11:16:55 &#43;0800 CST" itemprop="datePublished">2020-07-14</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="http://www.mingaccount.com/2020/06/druid%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E6%97%A0%E9%99%90%E5%B0%9D%E8%AF%95%E9%97%AE%E9%A2%98/" class="title">Druid数据库连接失败，无限尝试问题</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-16 15:38:20 &#43;0800 CST" itemprop="datePublished">2020-06-16</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="http://www.mingaccount.com/2020/05/hivecast%E6%8A%A5%E9%94%99/" class="title">hive cast( as integer)报错 in primitive type specification</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-05-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-05-09</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2019/07/lombok/"
+    >lombok详解</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="http://www.mingaccount.com/2019/07/lombok/" class="article-date">
+  <time datetime="2019-07-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-07-09</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/lombok/"> lombok </a>
+    <a class="article-tag-link" href="/tags/java/"> java </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2019/07/lombok/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 3395words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 7minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h2 id="val-精简变量修饰类似scala但是默认追加了final修饰符"><code>val</code> 精简变量修饰，类似Scala，但是默认追加了final修饰符</h2>
+<pre><code class="language-java">val list = new ArrayList&lt;String&gt;();
+//等同于
+final ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
+</code></pre>
+<h2 id="var-精简变量修饰类似scala修饰变量"><code>var</code> 精简变量修饰，类似Scala，修饰变量</h2>
+<pre><code class="language-java">val list = new ArrayList&lt;String&gt;();
+//等同于
+ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
+</code></pre>
+<h2 id="nonnull-修饰方法或者构造方法的参数以及成员变量"><code>NonNull</code> 修饰方法或者构造方法的参数，以及成员变量</h2>
+<pre><code class="language-java">public NonNullExample(@NonNull Person person) {
+    super(&quot;Hello&quot;);
+    this.name = person.getName();
+}
+//等同于
+public NonNullExample(@NonNull Person person) {
+    super(&quot;Hello&quot;);
+    if (person == null) {
+      throw new NullPointerException(&quot;person is marked @NonNull but is null&quot;);
+    }
+    this.name = person.getName();
+}
+</code></pre>
+<h2 id="cleanup-修饰局部变量用于关闭资源"><code>Cleanup</code> 修饰局部变量，用于关闭资源</h2>
+<p>默认触发修饰变量的<code>close</code>方法，但是如果目标对象没有close方法，可以直接指定关闭方法的名称
+但是要求关闭方法不能有参数</p>
+<pre><code class="language-java">@Cleanup(&quot;dispose&quot;) org.eclipse.swt.widgets.CoolBar bar = new CoolBar(parent, 0);
+</code></pre>
+<pre><code class="language-java">
+import lombok.Cleanup;
+import java.io.*;
+
+public class CleanupExample {
+  public static void main(String[] args) throws IOException {
+    @Cleanup InputStream in = new FileInputStream(args[0]);
+    @Cleanup OutputStream out = new FileOutputStream(args[1]);
+    byte[] b = new byte[10000];
+    while (true) {
+      int r = in.read(b);
+      if (r == -1) break;
+      out.write(b, 0, r);
+    }
+  }
+}
+</code></pre>
+<p>等同于</p>
+<hr>
+<pre><code class="language-java">
+import java.io.*;
+
+public class CleanupExample {
+  public static void main(String[] args) throws IOException {
+    InputStream in = new FileInputStream(args[0]);
+    try {
+      OutputStream out = new FileOutputStream(args[1]);
+      try {
+        byte[] b = new byte[10000];
+        while (true) {
+          int r = in.read(b);
+          if (r == -1) break;
+          out.write(b, 0, r);
+        }
+      } finally {
+        if (out != null) {
+          out.close();
+        }
+      }
+    } finally {
+      if (in != null) {
+        in.close();
+      }
+    }
+  }
+}
+</code></pre>
+<h2 id="gettersetter-修饰成员变量或者类已生成getset方法"><code>Getter/Setter</code> 修饰成员变量或者类，已生成GetSet方法</h2>
+<ul>
+<li>当修饰类时，将生成类中所有的非静态成员变量的Get/Set类</li>
+<li>Getter/Setter都有<code>AccessLevel</code>参数，可设置生成的方法的修饰符(<code>PUBLIC</code>, <code>PROTECTED</code>, <code>PACKAGE</code>, and <code>PRIVATE</code>)</li>
+<li>如果类被注解修饰，但是某个成员变量不想生成方法，可以设置<code>AccessLevel</code>参数值为<code>NONE</code></li>
+</ul>
+<pre><code class="language-java">import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.Setter;
+
+public class GetterSetterExample {
+  /**
+   * Age of the person. Water is wet.
+   * 
+   * @param age New value for this person's age. Sky is blue.
+   * @return The current value of this person's age. Circles are round.
+   */
+  @Getter @Setter private int age = 10;
+  
+  /**
+   * Name of the person.
+   * -- SETTER --
+   * Changes the name of this person.
+   * 
+   * @param name The new value.
+   */
+  @Setter(AccessLevel.PROTECTED) private String name;
+  
+  @Override public String toString() {
+    return String.format(&quot;%s (age: %d)&quot;, name, age);
+  }
+}
+</code></pre>
+<p>等同于</p>
+<hr>
+<pre><code class="language-java">
+public class GetterSetterExample {
+  /**
+   * Age of the person. Water is wet.
+   */
+  private int age = 10;
+
+  /**
+   * Name of the person.
+   */
+  private String name;
+  
+  @Override public String toString() {
+    return String.format(&quot;%s (age: %d)&quot;, name, age);
+  }
+  
+  /**
+   * Age of the person. Water is wet.
+   *
+   * @return The current value of this person's age. Circles are round.
+   */
+  public int getAge() {
+    return age;
+  }
+  
+  /**
+   * Age of the person. Water is wet.
+   *
+   * @param age New value for this person's age. Sky is blue.
+   */
+  public void setAge(int age) {
+    this.age = age;
+  }
+  
+  /**
+   * Changes the name of this person.
+   *
+   * @param name The new value.
+   */
+  protected void setName(String name) {
+    this.name = name;
+  }
+}
+</code></pre>
+<h2 id="tostring-修饰类和方法重写tostring方法"><code>ToString</code> 修饰类和方法，重写toString方法</h2>
+<ul>
+<li>默认格式<code>类名(字段值1，字段值2)</code></li>
+<li>可通过设置includeFieldNames=true，在字段值前面加上<code>字段名:</code></li>
+<li>默认所有非静态字段都会被打印，可以通过注解<code>@ToString.Exclude</code>来排除字段</li>
+<li>如果只展示目标字段，可以在类的注解上追加参数<code>onlyExplicitlyIncluded=true</code>，然后在字段上加注解<code>ToString.Include</code></li>
+<li>如果需要打印父类的字段，可以设置参数<code>callSuper=true</code></li>
+<li>打印方法的输出，在方法上追加注解<code>ToString.Include</code>，注意必须是非静态方法，并且没有参数</li>
+</ul>
+<pre><code class="language-java">import lombok.ToString;
+
+@ToString
+public class ToStringExample {
+  private static final int STATIC_VAR = 10;
+  private String name;
+  private Shape shape = new Square(5, 10);
+  private String[] tags;
+  @ToString.Exclude private int id;
+  
+  public String getName() {
+    return this.name;
+  }
+  
+  @ToString(callSuper=true, includeFieldNames=true)
+  public static class Square extends Shape {
+    private final int width, height;
+    
+    public Square(int width, int height) {
+      this.width = width;
+      this.height = height;
+    }
+  }
+}
+</code></pre>
+<p>等同于</p>
+<hr>
+<pre><code class="language-java">
+import java.util.Arrays;
+
+public class ToStringExample {
+  private static final int STATIC_VAR = 10;
+  private String name;
+  private Shape shape = new Square(5, 10);
+  private String[] tags;
+  private int id;
+  
+  public String getName() {
+    return this.name;
+  }
+  
+  public static class Square extends Shape {
+    private final int width, height;
+    
+    public Square(int width, int height) {
+      this.width = width;
+      this.height = height;
+    }
+    
+    @Override public String toString() {
+      return &quot;Square(super=&quot; + super.toString() + &quot;, width=&quot; + this.width + &quot;, height=&quot; + this.height + &quot;)&quot;;
+    }
+  }
+  
+  @Override public String toString() {
+    return &quot;ToStringExample(&quot; + this.getName() + &quot;, &quot; + this.shape + &quot;, &quot; + Arrays.deepToString(this.tags) + &quot;)&quot;;
+  }
+}
+</code></pre>
+<h2 id="equalsandhashcode-生成equals和hashcode方法"><code>EqualsAndHashCode</code> 生成equals和hashCode方法</h2>
+<ul>
+<li>默认使用非静态和非<code>transient</code>修饰的字段</li>
+<li>排除指定字段：注解<code>@EqualsAndHashCode.Exclude</code></li>
+<li>只选择指定字段：类注解<code>@EqualsAndHashCode(onlyExplicitlyIncluded = true)</code>，和字段注解<code>@EqualsAndHashCode.Include</code></li>
+<li>如果包含非Object父类，设置属性<code>callSuper=true</code></li>
+</ul>
+<pre><code class="language-java">import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode
+public class EqualsAndHashCodeExample {
+  private transient int transientVar = 10;
+  private String name;
+  private double score;
+  @EqualsAndHashCode.Exclude private Shape shape = new Square(5, 10);
+  private String[] tags;
+  @EqualsAndHashCode.Exclude private int id;
+  
+  public String getName() {
+    return this.name;
+  }
+  
+  @EqualsAndHashCode(callSuper=true)
+  public static class Square extends Shape {
+    private final int width, height;
+    
+    public Square(int width, int height) {
+      this.width = width;
+      this.height = height;
+    }
+  }
+}
+</code></pre>
+<p>等同于</p>
+<hr>
+<pre><code class="language-java">import java.util.Arrays;
+
+public class EqualsAndHashCodeExample {
+  private transient int transientVar = 10;
+  private String name;
+  private double score;
+  private Shape shape = new Square(5, 10);
+  private String[] tags;
+  private int id;
+  
+  public String getName() {
+    return this.name;
+  }
+  
+  @Override public boolean equals(Object o) {
+    if (o == this) return true;
+    if (!(o instanceof EqualsAndHashCodeExample)) return false;
+    EqualsAndHashCodeExample other = (EqualsAndHashCodeExample) o;
+    if (!other.canEqual((Object)this)) return false;
+    if (this.getName() == null ? other.getName() != null : !this.getName().equals(other.getName())) return false;
+    if (Double.compare(this.score, other.score) != 0) return false;
+    if (!Arrays.deepEquals(this.tags, other.tags)) return false;
+    return true;
+  }
+  
+  @Override public int hashCode() {
+    final int PRIME = 59;
+    int result = 1;
+    final long temp1 = Double.doubleToLongBits(this.score);
+    result = (result*PRIME) + (this.name == null ? 43 : this.name.hashCode());
+    result = (result*PRIME) + (int)(temp1 ^ (temp1 &gt;&gt;&gt; 32));
+    result = (result*PRIME) + Arrays.deepHashCode(this.tags);
+    return result;
+  }
+  
+  protected boolean canEqual(Object other) {
+    return other instanceof EqualsAndHashCodeExample;
+  }
+  
+  public static class Square extends Shape {
+    private final int width, height;
+    
+    public Square(int width, int height) {
+      this.width = width;
+      this.height = height;
+    }
+    
+    @Override public boolean equals(Object o) {
+      if (o == this) return true;
+      if (!(o instanceof Square)) return false;
+      Square other = (Square) o;
+      if (!other.canEqual((Object)this)) return false;
+      if (!super.equals(o)) return false;
+      if (this.width != other.width) return false;
+      if (this.height != other.height) return false;
+      return true;
+    }
+    
+    @Override public int hashCode() {
+      final int PRIME = 59;
+      int result = 1;
+      result = (result*PRIME) + super.hashCode();
+      result = (result*PRIME) + this.width;
+      result = (result*PRIME) + this.height;
+      return result;
+    }
+    
+    protected boolean canEqual(Object other) {
+      return other instanceof Square;
+    }
+  }
+}
+</code></pre>
+<h2 id="noargsconstructor-requiredargsconstructor-allargsconstructor-生成构造函数"><code>@NoArgsConstructor</code>, <code>@RequiredArgsConstructor</code>, <code>@AllArgsConstructor</code> 生成构造函数</h2>
+<ul>
+<li><code>NoArgsConstructor</code> 注意有参数被final修饰的情况，需要加上参数<code>(force = true)</code></li>
+<li><code>RequiredArgsConstructor</code> 只对两类变量有效，一种是<code>final</code>修饰的并且没有初始化的变量，另外一类是<code>NonNull</code>注解修饰并且没有初始化的变量</li>
+<li><code>AllArgsConstructor</code> 生成一个包括所有参数的构造方法，并且有<code>NonNull</code>注解的会进行非空检查</li>
+<li><code>@RequiredArgsConstructor(staticName=&quot;of&quot;)</code> 生成一个私有的构造方法，并提供一个静态方法of包装私有构造方法</li>
+<li>以上注解只对非static字段生效</li>
+</ul>
+<pre><code class="language-java">
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.NonNull;
+
+@RequiredArgsConstructor(staticName = &quot;of&quot;)
+@AllArgsConstructor(access = AccessLevel.PROTECTED)
+public class ConstructorExample&lt;T&gt; {
+  private int x, y;
+  @NonNull private T description;
+  
+  @NoArgsConstructor
+  public static class NoArgsExample {
+    @NonNull private String field;
+  }
+}
+</code></pre>
+<p>等同于</p>
+<hr>
+<pre><code class="language-java">
+public class ConstructorExample&lt;T&gt; {
+  private int x, y;
+  @NonNull private T description;
+  
+  private ConstructorExample(T description) {
+    if (description == null) throw new NullPointerException(&quot;description&quot;);
+    this.description = description;
+  }
+  
+  public static &lt;T&gt; ConstructorExample&lt;T&gt; of(T description) {
+    return new ConstructorExample&lt;T&gt;(description);
+  }
+  
+  @java.beans.ConstructorProperties({&quot;x&quot;, &quot;y&quot;, &quot;description&quot;})
+  protected ConstructorExample(int x, int y, T description) {
+    if (description == null) throw new NullPointerException(&quot;description&quot;);
+    this.x = x;
+    this.y = y;
+    this.description = description;
+  }
+  
+  public static class NoArgsExample {
+    @NonNull private String field;
+    
+    public NoArgsExample() {
+    }
+  }
+}
+</code></pre>
+<h2 id="data-大集合"><code>Data</code> 大集合</h2>
+<ul>
+<li>相当于一个快捷方式，包括之前的<code>toString</code>,<code>EqualsAndHashCode</code>,所有字段的<code>Getter</code>,非final字段的<code>Setter</code>，和<code>RequiredArgsConstructor</code></li>
+<li><code>Data</code>无法像单个注解一样添加自定义属性，但是可以再次追加单个注解，以覆盖<code>Data</code>对应的方法</li>
+<li>如果有任何同名的方法存在，<code>Data</code>不会再生成对应的方法</li>
+<li>如果有任意一个构造方法，<code>Data</code>注解将不会生成<code>RequiredArgsConstructor</code>对应的构造方法</li>
+</ul>
+<pre><code class="language-java">
+import lombok.AccessLevel;
+import lombok.Setter;
+import lombok.Data;
+import lombok.ToString;
+
+@Data public class DataExample {
+  private final String name;
+  @Setter(AccessLevel.PACKAGE) private int age;
+  private double score;
+  private String[] tags;
+  
+  @ToString(includeFieldNames=true)
+  @Data(staticConstructor=&quot;of&quot;)
+  public static class Exercise&lt;T&gt; {
+    private final String name;
+    private final T value;
+  }
+}
+</code></pre>
+<p>等同于</p>
+<hr>
+<pre><code class="language-java">import java.util.Arrays;
+
+public class DataExample {
+  private final String name;
+  private int age;
+  private double score;
+  private String[] tags;
+  
+  public DataExample(String name) {
+    this.name = name;
+  }
+  
+  public String getName() {
+    return this.name;
+  }
+  
+  void setAge(int age) {
+    this.age = age;
+  }
+  
+  public int getAge() {
+    return this.age;
+  }
+  
+  public void setScore(double score) {
+    this.score = score;
+  }
+  
+  public double getScore() {
+    return this.score;
+  }
+  
+  public String[] getTags() {
+    return this.tags;
+  }
+  
+  public void setTags(String[] tags) {
+    this.tags = tags;
+  }
+  
+  @Override public String toString() {
+    return &quot;DataExample(&quot; + this.getName() + &quot;, &quot; + this.getAge() + &quot;, &quot; + this.getScore() + &quot;, &quot; + Arrays.deepToString(this.getTags()) + &quot;)&quot;;
+  }
+  
+  protected boolean canEqual(Object other) {
+    return other instanceof DataExample;
+  }
+  
+  @Override public boolean equals(Object o) {
+    if (o == this) return true;
+    if (!(o instanceof DataExample)) return false;
+    DataExample other = (DataExample) o;
+    if (!other.canEqual((Object)this)) return false;
+    if (this.getName() == null ? other.getName() != null : !this.getName().equals(other.getName())) return false;
+    if (this.getAge() != other.getAge()) return false;
+    if (Double.compare(this.getScore(), other.getScore()) != 0) return false;
+    if (!Arrays.deepEquals(this.getTags(), other.getTags())) return false;
+    return true;
+  }
+  
+  @Override public int hashCode() {
+    final int PRIME = 59;
+    int result = 1;
+    final long temp1 = Double.doubleToLongBits(this.getScore());
+    result = (result*PRIME) + (this.getName() == null ? 43 : this.getName().hashCode());
+    result = (result*PRIME) + this.getAge();
+    result = (result*PRIME) + (int)(temp1 ^ (temp1 &gt;&gt;&gt; 32));
+    result = (result*PRIME) + Arrays.deepHashCode(this.getTags());
+    return result;
+  }
+  
+  public static class Exercise&lt;T&gt; {
+    private final String name;
+    private final T value;
+    
+    private Exercise(String name, T value) {
+      this.name = name;
+      this.value = value;
+    }
+    
+    public static &lt;T&gt; Exercise&lt;T&gt; of(String name, T value) {
+      return new Exercise&lt;T&gt;(name, value);
+    }
+    
+    public String getName() {
+      return this.name;
+    }
+    
+    public T getValue() {
+      return this.value;
+    }
+    
+    @Override public String toString() {
+      return &quot;Exercise(name=&quot; + this.getName() + &quot;, value=&quot; + this.getValue() + &quot;)&quot;;
+    }
+    
+    protected boolean canEqual(Object other) {
+      return other instanceof Exercise;
+    }
+    
+    @Override public boolean equals(Object o) {
+      if (o == this) return true;
+      if (!(o instanceof Exercise)) return false;
+      Exercise&lt;?&gt; other = (Exercise&lt;?&gt;) o;
+      if (!other.canEqual((Object)this)) return false;
+      if (this.getName() == null ? other.getValue() != null : !this.getName().equals(other.getName())) return false;
+      if (this.getValue() == null ? other.getValue() != null : !this.getValue().equals(other.getValue())) return false;
+      return true;
+    }
+    
+    @Override public int hashCode() {
+      final int PRIME = 59;
+      int result = 1;
+      result = (result*PRIME) + (this.getName() == null ? 43 : this.getName().hashCode());
+      result = (result*PRIME) + (this.getValue() == null ? 43 : this.getValue().hashCode());
+      return result;
+    }
+  }
+}
+</code></pre>
+<h2 id="value修饰类生成一个final类并且成员变量全是private-final修饰"><code>Value</code>修饰类，生成一个<code>final</code>类，并且成员变量全是<code>private final</code>修饰</h2>
+<ul>
+<li><code>Value</code>是个快捷方式，完整的注解：<code>final @ToString @EqualsAndHashCode @AllArgsConstructor @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE) @Getter </code></li>
+<li>在修饰类和成员变量的同时，<code>Value</code>会生成<code>toString</code>、<code>equals</code>、<code>hashCode</code>方法，还有包括所有参数的构造方法以及所有成员变量的<code>get</code>方法</li>
+<li>如果有任何自定义的构造方法，<code>Value</code>将不会再生成一个所有参数的构造方法</li>
+</ul>
+<pre><code class="language-java">
+import lombok.AccessLevel;
+import lombok.experimental.NonFinal;
+import lombok.experimental.Value;
+import lombok.experimental.Wither;
+import lombok.ToString;
+
+@Value public class ValueExample {
+  String name;
+  @Wither(AccessLevel.PACKAGE) @NonFinal int age;
+  double score;
+  protected String[] tags;
+  
+  @ToString(includeFieldNames=true)
+  @Value(staticConstructor=&quot;of&quot;)
+  public static class Exercise&lt;T&gt; {
+    String name;
+    T value;
+  }
+}
+</code></pre>
+<p>等同于</p>
+<hr>
+<pre><code class="language-java">import java.util.Arrays;
+
+public final class ValueExample {
+  private final String name;
+  private int age;
+  private final double score;
+  protected final String[] tags;
+  
+  @java.beans.ConstructorProperties({&quot;name&quot;, &quot;age&quot;, &quot;score&quot;, &quot;tags&quot;})
+  public ValueExample(String name, int age, double score, String[] tags) {
+    this.name = name;
+    this.age = age;
+    this.score = score;
+    this.tags = tags;
+  }
+  
+  public String getName() {
+    return this.name;
+  }
+  
+  public int getAge() {
+    return this.age;
+  }
+  
+  public double getScore() {
+    return this.score;
+  }
+  
+  public String[] getTags() {
+    return this.tags;
+  }
+  
+  @java.lang.Override
+  public boolean equals(Object o) {
+    if (o == this) return true;
+    if (!(o instanceof ValueExample)) return false;
+    final ValueExample other = (ValueExample)o;
+    final Object this$name = this.getName();
+    final Object other$name = other.getName();
+    if (this$name == null ? other$name != null : !this$name.equals(other$name)) return false;
+    if (this.getAge() != other.getAge()) return false;
+    if (Double.compare(this.getScore(), other.getScore()) != 0) return false;
+    if (!Arrays.deepEquals(this.getTags(), other.getTags())) return false;
+    return true;
+  }
+  
+  @java.lang.Override
+  public int hashCode() {
+    final int PRIME = 59;
+    int result = 1;
+    final Object $name = this.getName();
+    result = result * PRIME + ($name == null ? 43 : $name.hashCode());
+    result = result * PRIME + this.getAge();
+    final long $score = Double.doubleToLongBits(this.getScore());
+    result = result * PRIME + (int)($score &gt;&gt;&gt; 32 ^ $score);
+    result = result * PRIME + Arrays.deepHashCode(this.getTags());
+    return result;
+  }
+  
+  @java.lang.Override
+  public String toString() {
+    return &quot;ValueExample(name=&quot; + getName() + &quot;, age=&quot; + getAge() + &quot;, score=&quot; + getScore() + &quot;, tags=&quot; + Arrays.deepToString(getTags()) + &quot;)&quot;;
+  }
+  
+  ValueExample withAge(int age) {
+    return this.age == age ? this : new ValueExample(name, age, score, tags);
+  }
+  
+  public static final class Exercise&lt;T&gt; {
+    private final String name;
+    private final T value;
+    
+    private Exercise(String name, T value) {
+      this.name = name;
+      this.value = value;
+    }
+    
+    public static &lt;T&gt; Exercise&lt;T&gt; of(String name, T value) {
+      return new Exercise&lt;T&gt;(name, value);
+    }
+    
+    public String getName() {
+      return this.name;
+    }
+    
+    public T getValue() {
+      return this.value;
+    }
+    
+    @java.lang.Override
+    public boolean equals(Object o) {
+      if (o == this) return true;
+      if (!(o instanceof ValueExample.Exercise)) return false;
+      final Exercise&lt;?&gt; other = (Exercise&lt;?&gt;)o;
+      final Object this$name = this.getName();
+      final Object other$name = other.getName();
+      if (this$name == null ? other$name != null : !this$name.equals(other$name)) return false;
+      final Object this$value = this.getValue();
+      final Object other$value = other.getValue();
+      if (this$value == null ? other$value != null : !this$value.equals(other$value)) return false;
+      return true;
+    }
+    
+    @java.lang.Override
+    public int hashCode() {
+      final int PRIME = 59;
+      int result = 1;
+      final Object $name = this.getName();
+      result = result * PRIME + ($name == null ? 43 : $name.hashCode());
+      final Object $value = this.getValue();
+      result = result * PRIME + ($value == null ? 43 : $value.hashCode());
+      return result;
+    }
+    
+    @java.lang.Override
+    public String toString() {
+      return &quot;ValueExample.Exercise(name=&quot; + getName() + &quot;, value=&quot; + getValue() + &quot;)&quot;;
+    }
+  }
+}
+</code></pre>
+<blockquote>
+<p>详细参考 <a href="https://projectlombok.org/features/all">lombok官方文档</a></p>
+</blockquote>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="http://www.mingaccount.com/2019/07/lombok/" title="lombok详解" target="_blank" rel="external">http://www.mingaccount.com/2019/07/lombok/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="http://www.mingaccount.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="" target="_blank"><span class="text-dark">Ming</span><small class="ml-1x">tianshiming5@outlook.com</small></a></h3>
+        <div>Finally</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="http://www.mingaccount.com/2019/07/mavenjar%E5%8C%85%E5%86%B2%E7%AA%81/" title="Maven jar包冲突导致NoClassDefFoundError"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="http://www.mingaccount.com/2019/07/mysql_%E6%8F%92%E5%85%A5%E4%B8%AD%E6%96%87%E5%BC%82%E5%B8%B8/"
+                    title="mySql 插入中文异常 Incorrect string value: &#39;***&#39; for column"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="http://www.mingaccount.com/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2015  -
+    2020
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="http://www.mingaccount.com/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
+<script src="http://www.mingaccount.com/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'http:\/\/www.mingaccount.com',
+            CONTENT_URL: 'http:\/\/www.mingaccount.com\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="http://www.mingaccount.com/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+
+  </body>
+</html>

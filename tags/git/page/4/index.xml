@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Git常用命令备忘</title>
+      <link>http://www.mingaccount.com/2018/05/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/05/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</guid>
+      <description>#查看工作区状态 git status -s #撤回上一次的commit内容 git reset --hard HEAD~ #删除所有本地未提交内容 git checkout . #下次push时保存输入密码 git config credential.helper store #更改当前项目</description>
+    </item>
+    
+    <item>
       <title>Spring @Transactional事务失效</title>
       <link>http://www.mingaccount.com/2018/05/spring%E4%BA%8B%E5%8A%A1%E5%A4%B1%E6%95%88/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
@@ -53,6 +62,15 @@
       
       <guid>http://www.mingaccount.com/2018/03/request%E7%9A%84body%E5%8F%AA%E8%83%BD%E8%AF%BB%E5%8F%96%E4%B8%80%E6%AC%A1%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
       <description>一、需要一个类继承HttpServletRequestWrapper，该类继承了ServletRequestWrapper并实现了HttpS</description>
+    </item>
+    
+    <item>
+      <title>全局获取request</title>
+      <link>http://www.mingaccount.com/2018/01/%E5%85%A8%E5%B1%80%E8%8E%B7%E5%8F%96request/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/01/%E5%85%A8%E5%B1%80%E8%8E%B7%E5%8F%96request/</guid>
+      <description>交于Spring管理的类，通过注解调用 @Component public class Test{ @Autowired private HttpServletRequest httpServletRequest; } 通过静态方法调用 HttpServletRequest httpServletRequest = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();</description>
     </item>
     
     <item>
@@ -128,6 +146,15 @@
     </item>
     
     <item>
+      <title>通过request获取客户端IP</title>
+      <link>http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/</link>
+      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/</guid>
+      <description>请求头枚举类 public enum HttpHeader { AUTHORIZATION(&amp;quot;Authorization&amp;quot;), AUTHENTICATION_TYPE_BASIC(&amp;quot;Basic&amp;quot;), X_AUTH_TOKEN(&amp;quot;X-AUTH-TOKEN&amp;quot;), WWW_Authenticate(&amp;quot;WWW-Authenticate&amp;quot;), X_FORWARDED_FOR(&amp;quot;X-Forwarded-For&amp;quot;), PROXY_CLIENT_IP(&amp;quot;Proxy-Client-IP&amp;quot;), WL_PROXY_CLIENT_IP(&amp;quot;WL-Proxy-Client-IP&amp;quot;), HTTP_CLIENT_IP(&amp;quot;HTTP_CLIENT_IP&amp;quot;), HTTP_X_FORWARDED_FOR(&amp;quot;HTTP_X_FORWARDED_FOR&amp;quot;); private String key; private HttpHeader(String key) { this.key = key; } public String key() { return this.key; } } 工具类 public class RemoteIpHelper { private static final String UNKNOWN = &amp;quot;unknown&amp;quot;; public static String getRemoteIpFrom(HttpServletRequest request) { String ip = null; int tryCount = 1; while (!isIpFound(ip) &amp;amp;&amp;amp; tryCount</description>
+    </item>
+    
+    <item>
       <title>Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied</title>
       <link>http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</link>
       <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
@@ -161,33 +188,6 @@
       
       <guid>http://www.mingaccount.com/2017/05/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E4%B9%89%E6%89%80%E6%9C%89%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7/</guid>
       <description>正则表达式的特殊符号包括 \ $ ( ) * + . [ ] ? ^ { } | - 实现代码(java) public class RegexUtils { private static final String[] SPECIAL_SYMBOLS = new String[]{&amp;quot;\\&amp;quot;, &amp;quot;$&amp;quot;, &amp;quot;(&amp;quot;, &amp;quot;)&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;[&amp;quot;, &amp;quot;]&amp;quot;, &amp;quot;?&amp;quot;, &amp;quot;^&amp;quot;, &amp;quot;{&amp;quot;, &amp;quot;}&amp;quot;, &amp;quot;|&amp;quot;, &amp;quot;-&amp;quot;}; /** * 转义目标正</description>
-    </item>
-    
-    <item>
-      <title>SpringBoot入口类常用注解</title>
-      <link>http://www.mingaccount.com/2017/05/springboot%E5%85%A5%E5%8F%A3%E7%B1%BB%E7%9A%84%E6%B3%A8%E8%A7%A3/</link>
-      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/05/springboot%E5%85%A5%E5%8F%A3%E7%B1%BB%E7%9A%84%E6%B3%A8%E8%A7%A3/</guid>
-      <description>@SpringBootApplication(scanBasePackages=&amp;quot;com.*.*&amp;quot;) @EnableScheduling @EnableTransactionManagement @MapperScan(&amp;quot;com.*.**.*mapper&amp;quot;) @EnableConfigurationProperties({CustomConfiguration.class}) public class Application {} SpringBootApplication Spring注解的扫描路径 EnableScheduling 开启Spring的定时任务 EnableTransactionManagement 开始Spring的事务管理 MapperScan 扫描MyBatis Mapper类的路</description>
-    </item>
-    
-    <item>
-      <title>Spring自定义配置文件并映射到指定类中</title>
-      <link>http://www.mingaccount.com/2017/01/springboot%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%B9%B6%E6%98%A0%E5%B0%84%E5%88%B0%E6%8C%87%E5%AE%9A%E7%B1%BB%E4%B8%AD/</link>
-      <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/01/springboot%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%B9%B6%E6%98%A0%E5%B0%84%E5%88%B0%E6%8C%87%E5%AE%9A%E7%B1%BB%E4%B8%AD/</guid>
-      <description>新建指定配置类TestConfiguration 该类需要的注解： @Configuration @ConfigurationProperties(prefix=&amp;quot;test&amp;quot;) @PropertySource(&amp;quot;classpath:test.properties&amp;quot;) 同时启动类上需要增加注解： @EnableConfigurationProperties({TestConfiguration.class})</description>
-    </item>
-    
-    <item>
-      <title>Mysql Where条件判断 字符串和数字 是否相等时存在的问题</title>
-      <link>http://www.mingaccount.com/2016/07/mysqlwhere%E6%AF%94%E5%AF%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E7%9A%84%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Fri, 08 Jul 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/07/mysqlwhere%E6%AF%94%E5%AF%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
-      <description>测试数据 random 24 24uixcvkjklwer 查询sql1 SELECT random FROM table WHERE random = 24 该sql会把两条记录都查出来 查询sql2 SELECT random FROM table WHERE random = &#39;24&#39; 该sql只会匹配第一条记录 总结 条件列为字符</description>
     </item>
     
   </channel>
