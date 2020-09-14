@@ -17,4 +17,13 @@ git checkout .
 
 #下次push时保存输入密码
 git config credential.helper store
+
+#更改当前项目的用户名和邮箱
+git config user.name ""
+git config user.email ""
+
+#更改全局的用户名和邮箱
+git config --global user.name ""
+git config --global user.email ""
+
 ```
