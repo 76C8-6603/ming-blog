@@ -11,6 +11,24 @@
     
     
     <item>
+      <title>正则表达式转义所有特殊符号</title>
+      <link>http://www.mingaccount.com/2017/05/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E4%B9%89%E6%89%80%E6%9C%89%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7/</link>
+      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/05/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E4%B9%89%E6%89%80%E6%9C%89%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7/</guid>
+      <description>正则表达式的特殊符号包括 \ $ ( ) * + . [ ] ? ^ { } | - 实现代码(java) public class RegexUtils { private static final String[] SPECIAL_SYMBOLS = new String[]{&amp;quot;\\&amp;quot;, &amp;quot;$&amp;quot;, &amp;quot;(&amp;quot;, &amp;quot;)&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;[&amp;quot;, &amp;quot;]&amp;quot;, &amp;quot;?&amp;quot;, &amp;quot;^&amp;quot;, &amp;quot;{&amp;quot;, &amp;quot;}&amp;quot;, &amp;quot;|&amp;quot;, &amp;quot;-&amp;quot;}; /** * 转义目标正</description>
+    </item>
+    
+    <item>
+      <title>关于mysql和oracle的大小写敏感</title>
+      <link>http://www.mingaccount.com/2017/05/%E5%85%B3%E4%BA%8Emysql%E5%92%8Coracle%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/05/%E5%85%B3%E4%BA%8Emysql%E5%92%8Coracle%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F/</guid>
+      <description>表名 mysql 每一个表至少对应一个服务器文件，而且名字对应，因此表名的大小写敏感跟系统有关系，windows不区分，linux区分 oracle 所有不在双引号里</description>
+    </item>
+    
+    <item>
       <title>SpringBoot入口类常用注解</title>
       <link>http://www.mingaccount.com/2017/05/springboot%E5%85%A5%E5%8F%A3%E7%B1%BB%E7%9A%84%E6%B3%A8%E8%A7%A3/</link>
       <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
