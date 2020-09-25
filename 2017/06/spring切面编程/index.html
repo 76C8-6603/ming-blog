@@ -39,7 +39,7 @@
 <meta itemprop="description" content="1.切面编程核心概念 切面编程Aspect-oriented Programming (AOP) AOP只是一个概念，跟Spring是独立关系 最典型的AOP实现框架Aspect">
 <meta itemprop="datePublished" content="2017-06-06T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2017-06-06T00:00:00+00:00" />
-<meta itemprop="wordCount" content="8607">
+<meta itemprop="wordCount" content="10027">
 
 
 
@@ -61,7 +61,7 @@
   
   
 
-  <body class="main-center theme-blue" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <body class="main-center theme-green" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
     <div class="slimContent">
       <div class="navbar-header">
         <div class="profile-block text-center">
@@ -337,8 +337,8 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2017/06/spring%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 8607words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 18minutes </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 10027words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 21minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -354,6 +354,8 @@
 <li>Join point: 代表需要切面处理的方法（Spring AOP只针对方法，因此以下简称<em>目标方法</em>）</li>
 <li>Advice: 切面类需要在<em>目标方法</em>运行的哪个阶段进行处理，比如<code>before(调用之前)</code>，<code>after(调用之后)</code>，<code>around(前后都进行处理)</code></li>
 <li>Pointcut: 当前的切面类需要监听的<em>目标方法</em>有什么特征，或者说切面类要怎样找到需要处理的<em>目标方法</em>，比如被注解<code>@Log</code>修饰的方法</li>
+<li>Introduction: 申明一个额外的方法或者字段去代表<em>目标方法</em>的对象，意思就是你可以给<em>目标方法</em>所在类追加一个父类（接口），并指定一个实现去代表它（AspectJ称为inter-type declaration）</li>
+<li>Target object: <em>目标方法</em>所在的对象，也叫作<code>advised object</code>。但是Spring AOP是通过运行时代理实现的，意思就是这个对象是一个代理类的对象</li>
 </ul>
 <p>完整的Advice类型包括：</p>
 <ul>
@@ -660,10 +662,10 @@ AspectJ的标识符可以分为三类：类型，范围，和上下文：(以下
 <p>一个好的pointcut表达式至少要包含<code>类型</code>和<code>范围</code>两个类型<br>
 如果只有<code>类型</code>和<code>上下文</code>，会影响性能，因为需要一些额外的处理和分析<br>
 但是<code>范围</code>不同，他的匹配速度非常快，一个好的pointcut表达式应该尽可能的包含一个</p>
-<h3 id="236-申明advice">2.3.6 申明Advice</h3>
+<h2 id="24-申明advice">2.4 申明Advice</h2>
 <p>Advice需要关联一个pointcut表达式，并申明在匹配的pointcut之前(before)，之后(after)，或者前后(around)运行<br>
 引用pointcut表达式可简单引用已命名的pointcut表达式，或者就地申明pointcut表达式</p>
-<h4 id="before-advice">Before Advice</h4>
+<h3 id="241-before-advice">2.4.1 Before Advice</h3>
 <p>你可以在一个切面类中申明<code>before advice</code>通过使用<code>@Before</code>注解:</p>
 <pre><code class="language-java">import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -692,7 +694,7 @@ public class BeforeExample {
 
 }
 </code></pre>
-<h4 id="after-returning-advice">After Returning Advice</h4>
+<h3 id="242-after-returning-advice">2.4.2 After Returning Advice</h3>
 <p><code>After Returning Advice</code>在方法正常<code>return</code>后运行。<br>
 你可以申明它通过使用<code>@AfterReturning</code>注解：</p>
 <pre><code class="language-java">import org.aspectj.lang.annotation.Aspect;
@@ -730,7 +732,7 @@ public class AfterReturningExample {
 <p><code>returning</code>参数所用的名字，必须跟advice方法的参数名相同<br>
 并且返回值的类型也必须匹配(这里用的Object，可匹配所有返回值)</p>
 <p>注意想通过<code>after returning advice</code>返回一个完全不同的引用是不可能的</p>
-<h4 id="after-throwing-advice">After Throwing Advice</h4>
+<h3 id="243-after-throwing-advice">2.4.3 After Throwing Advice</h3>
 <p><code>After Throwing Advice</code>当<code>目标方法</code>是因为抛出异常退出的时候执行。
 可以通过<code>@AfterThrowing</code>注解来实现：</p>
 <pre><code class="language-java">import org.aspectj.lang.annotation.Aspect;
@@ -765,7 +767,7 @@ public class AfterThrowingExample {
 </code></pre>
 <p>同样<code>throwing</code>中的名字必须跟advice方法的参数名称相同<br>
 当然也有类型限制，advice方法的参数类型，必须跟<em>目标方法</em>抛出的异常类型相同</p>
-<h4 id="after-finally-advice">After (Finally) Advice</h4>
+<h3 id="244-after-finally-advice">2.4.4 After (Finally) Advice</h3>
 <p><code>After (Finally) Advice</code>是在<em>目标方法</em>执行退出后运行<br>
 它通过注解<code>@After</code>来实现，用该注解的时候，你需要同时处理正常返回现象和异常退出现象<br>
 这个Advice通常用来处理资源释放问题或者其他相似的情形：</p>
@@ -782,7 +784,7 @@ public class AfterFinallyExample {
 
 }
 </code></pre>
-<h4 id="around-advice">Around Advice</h4>
+<h3 id="245-around-advice">2.4.5 Around Advice</h3>
 <p><code>Around Advice</code>是最后一个advice，也是最强大的一个。你可以在方法执行前，执行后做处理，甚至可以决定什么时候运行，怎样运行，是否运行<em>目标方法</em><br>
 它经常使用的场景是在方法运行前后有状态信息需要分享的，比如方法的运行时间等等<br>
 在选择Advice的时候，始终使用功能最弱的那个，比如能用Before，就不用Around</p>
@@ -809,6 +811,7 @@ public class AroundExample {
 </code></pre>
 <p>around advice 的返回值就是方法调用者看到的返回值。举个例子，一个简单的缓存切面，如果缓存里面有直接从缓存返回，如果缓存里面没有再调用<code>proceed()</code>方法。<br>
 注意<code>proceed</code>有可能调用一次，或者多次，甚至不调用，这都是合法的</p>
+<h3 id="246-advice参数">2.4.6 advice参数</h3>
 <h4 id="访问当前的-joinpoint">访问当前的 <code>JoinPoint</code></h4>
 <p>任何的advice方法都可以申明<code>JoinPoint</code>作为第一个参数（除了<code>around</code>例外，不过它的第一个参数<code>ProceedingJoinPoint</code>，也是<code>JoinPoint</code>的子类)<br>
 <code>JoinPoint</code>提供了一些很有用的方法：</p>
@@ -939,7 +942,7 @@ public Object preProcessQueryPattern(ProceedingJoinPoint pjp,
 }
 </code></pre>
 <p>无论如何都要像上面的例子一样绑定</p>
-<h4 id="advice顺序">Advice顺序</h4>
+<h3 id="247-advice顺序">2.4.7 advice顺序</h3>
 <p>当多个advice同时指向一个<em>目标方法</em>时，Spring AOP和AspectJ遵循同样的优先级规则：</p>
 <ul>
 <li>进入方法：优先级高的先执行（比如两个给定的<code>before</code>advice，优先级高的先执行）</li>
@@ -961,7 +964,7 @@ public Object preProcessQueryPattern(ProceedingJoinPoint pjp,
 因为没有办法从javac已经编译过的类反射中获取源码的申明顺序<br>
 所以当遇到这种情况时，请考虑合并这两个advice方法，或者把重复advice方法提取到另外一个切面类中</p>
 </blockquote>
-<h3 id="introductions">Introductions</h3>
+<h2 id="25-introductions">2.5 Introductions</h2>
 <p>Introductions(在AspectJ中叫做类型间声明) 让切面类可以申明<em>目标方法</em>所在对象实现指定接口，而且提供一个接口的实现类去代表那些对象</p>
 <p>你可以创建一个introduction通过使用<code>@DeclareParents</code>注解。这个注解被用来申明匹配的类型有一个新的父类<br>
 举个例子，给定接口叫做<code>UsageTracked</code>然后这个接口的实现类叫做<code>DefaultUsageTracked</code><br>
@@ -979,6 +982,96 @@ public class UsageTracking {
 
 }
 </code></pre>
+<h2 id="26-切面类实例化模型">2.6 切面类实例化模型</h2>
+<p>默认情况下，对application context来说每个切面类都是单例的。AspectJ将其称作单实例模型。可以使用备用的生命周期来定义Aspect<br>
+Spring 支持AspectJ的<code>perthis</code>和<code>pertarget</code>实例化模型<br>
+暂不支持<code>percflow</code>,<code>percflowbelow</code>，和<code>pertypewithin</code></p>
+<p>你可以申明一个<code>perthis</code>切面通过制定<code>perthis</code>语句在注解<code>@Aspect</code>中：</p>
+<pre><code class="language-java">@Aspect(&quot;perthis(com.xyz.myapp.CommonPointcuts.businessService())&quot;)
+public class MyAspect{
+    private int someState;
+
+    @Before(&quot;com.xyz.myapp.CommonPointcuts.businessService()&quot;)
+    public void recordServiceUsage(){
+        // ...
+    }
+}
+</code></pre>
+<p>在上面的例子中，<code>perthis</code>语句的作用就是每匹配一个service对象就创建一个切面实例。当一个service对象的方法被调用时，切面实例被第一次创建<br>
+当service对象超出范围时，切面对象也会超出范围（暂不明白这里的超出范围指的是什么）<br>
+在切面实例被创建之前，里面的advice方法不会被调用。只要切面实例被创建，并且service对象与一个切面关联的时候，advice才会在匹配的时候运行</p>
+<p><code>pertarget</code>实例化模型的工作方式跟<code>perthis</code>完全相同</p>
+<h2 id="27-一个完整的aop实例">2.7 一个完整的AOP实例</h2>
+<p>当执行业务service的时候，有时候会因为并发原因失败（例如，一个因为获取悲观锁失败的操作）。如果重新尝试，很可能在下次尝试的时候成功<br>
+当这种情况出现时，我们应该有一个明显的重试操作以避免向客户端发送<code>PessimisticLockingFailureException</code>。这个需求很明显跨越了多个service，很明显可以用切面来实现</p>
+<p>因为我们需要多次执行<code>proceed</code>方法，所以我们肯定需要around advice：</p>
+<pre><code class="language-java">@Aspect
+public class ConcurrentOperationExecutor implements Ordered {
+
+    private static final int DEFAULT_MAX_RETRIES = 2;
+
+    private int maxRetries = DEFAULT_MAX_RETRIES;
+    private int order = 1;
+
+    public void setMaxRetries(int maxRetries) {
+        this.maxRetries = maxRetries;
+    }
+
+    public int getOrder() {
+        return this.order;
+    }
+
+    public void setOrder(int order) {
+        this.order = order;
+    }
+
+    @Around(&quot;com.xyz.myapp.CommonPointcuts.businessService()&quot;)
+    public Object doConcurrentOperation(ProceedingJoinPoint pjp) throws Throwable {
+        int numAttempts = 0;
+        PessimisticLockingFailureException lockFailureException;
+        do {
+            numAttempts++;
+            try {
+                return pjp.proceed();
+            }
+            catch(PessimisticLockingFailureException ex) {
+                lockFailureException = ex;
+            }
+        } while(numAttempts &lt;= this.maxRetries);
+        throw lockFailureException;
+    }
+
+}
+</code></pre>
+<p>注意上面的切面类实现了<code>Ordered</code>接口，所以我们设置切面类的优先级是高于事务的（我们想每次尝试都是一个新事务）<br>
+<code>maxRetries</code>和<code>order</code>属性都由Spring配置<br>
+主要的操作都发生在<code>doConcurrentOperation</code>around advice。注意，在当前情况，我们应用了重试逻辑在每个<code>businessService()</code>。如果运行抛出<code>PessimisticLockingFailureException</code>异常，就会进行重试操作，除非重新操作次数已经耗尽。</p>
+<p>对应的Spring配置如下：</p>
+<pre><code class="language-xml">&lt;aop:aspectj-autoproxy/&gt;
+&lt;bean id=&quot;concurrentOperationExecutor&quot; class=&quot;com.xyz.myapp.service.impl.ConcurrentOperationExecutor&quot;&gt;
+    &lt;property name=&quot;maxRetries&quot; value=&quot;3&quot;/&gt;
+    &lt;property name=&quot;order&quot; value=&quot;100&quot;/&gt;
+&lt;/bean&gt;
+</code></pre>
+<p>提炼aspect让他只有在幂等操作的时候才重试（幂等：函数多次运行结果与一次运行结果相同），我们可以定义<code>Idempotent</code>注解：</p>
+<pre><code class="language-java">import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Idempotent{}
+</code></pre>
+<p>现在可以使用<code>Idempotent</code>注解去标注需要重试的service 方法，同时我们的pointcut表达式也需要修改：</p>
+<pre><code class="language-java">@Around(&quot;com.xyz.myapp.CommonPointcuts.businessService() &amp;&amp; &quot; +
+        &quot;@annotation(com.xyz.myapp.service.Idempotent)&quot;)
+public Object doConcurrentOperation(ProceedingJoinPoint pjp) throws Throwable {
+    // ...
+}
+</code></pre>
+<h1 id="3--基于架构的aop支持xml配置形式的">3.  基于架构的AOP支持（xml配置形式的）</h1>
+<p>xml配置形式的AOP跟基于AspectJ的形，只是方式不一样，用的pointcut表达式都是一样的，这里不细讲，详细参考文末的官方文档</p>
 <blockquote>
 <p>详情参考 <a href="https://docs.spring.io/spring/docs/5.2.8.RELEASE/spring-framework-reference/core.html#aop">Spring官方文档</a></p>
 </blockquote>
