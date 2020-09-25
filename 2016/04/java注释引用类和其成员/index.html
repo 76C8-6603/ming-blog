@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>
-        vim命令备忘 - Ming Blog
+        Java注释引用类和其成员 - Ming Blog
       </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -20,33 +20,33 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    <meta name="description" content="vi /etc/hosts i 修改模式 esc 退出修改 :q 正常退出(文件没有修改 :q! 不保存退出 :wq 保存退出 G 跳到末尾行 dd 删除当前行 gg 跳到第一行第一个字符 $ 跳到当前行的最后一个字" />
+    <meta name="description" content="注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类" />
     <meta name="generator" content="Hugo 0.74.3 with theme pure" />
-    <title>vim命令备忘 - Ming Blog</title>
+    <title>Java注释引用类和其成员 - Ming Blog</title>
     
     
     <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="vim命令备忘" />
-<meta property="og:description" content="vi /etc/hosts i 修改模式 esc 退出修改 :q 正常退出(文件没有修改 :q! 不保存退出 :wq 保存退出 G 跳到末尾行 dd 删除当前行 gg 跳到第一行第一个字符 $ 跳到当前行的最后一个字" />
+    <meta property="og:title" content="Java注释引用类和其成员" />
+<meta property="og:description" content="注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.mingaccount.com/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/" />
-<meta property="article:published_time" content="2018-08-14T00:00:00+00:00" />
-<meta property="article:modified_time" content="2018-08-14T00:00:00+00:00" />
-<meta itemprop="name" content="vim命令备忘">
-<meta itemprop="description" content="vi /etc/hosts i 修改模式 esc 退出修改 :q 正常退出(文件没有修改 :q! 不保存退出 :wq 保存退出 G 跳到末尾行 dd 删除当前行 gg 跳到第一行第一个字符 $ 跳到当前行的最后一个字">
-<meta itemprop="datePublished" content="2018-08-14T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2018-08-14T00:00:00+00:00" />
-<meta itemprop="wordCount" content="123">
+<meta property="og:url" content="http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/" />
+<meta property="article:published_time" content="2016-04-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-04-05T00:00:00+00:00" />
+<meta itemprop="name" content="Java注释引用类和其成员">
+<meta itemprop="description" content="注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类">
+<meta itemprop="datePublished" content="2016-04-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-04-05T00:00:00+00:00" />
+<meta itemprop="wordCount" content="84">
 
 
 
-<meta itemprop="keywords" content="linux," />
+<meta itemprop="keywords" content="java," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="vim命令备忘"/>
-<meta name="twitter:description" content="vi /etc/hosts i 修改模式 esc 退出修改 :q 正常退出(文件没有修改 :q! 不保存退出 :wq 保存退出 G 跳到末尾行 dd 删除当前行 gg 跳到第一行第一个字符 $ 跳到当前行的最后一个字"/>
+<meta name="twitter:title" content="Java注释引用类和其成员"/>
+<meta name="twitter:description" content="注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -316,8 +316,8 @@
       <h1 itemprop="name">
   <a
     class="article-title"
-    href="/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/"
-    >vim命令备忘</a
+    href="/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/"
+    >Java注释引用类和其成员</a
   >
 </h1>
 
@@ -325,51 +325,32 @@
         
 <span class="article-date">
   <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="http://www.mingaccount.com/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/" class="article-date">
-  <time datetime="2018-08-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-08-14</time>
+<a href="http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/" class="article-date">
+  <time datetime="2016-04-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-04-05</time>
 </a>
 </span>
   
   <span class="article-tag">
     <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/linux/"> linux </a>
+    <a class="article-tag-link" href="/tags/java/"> java </a>
   </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/#comments"
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 123words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 84words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <p>vi  /etc/hosts</p>
-<pre><code>i 　　 修改模式
-
-esc　 退出修改
-
-:q　　正常退出(文件没有修改
-
-:q!　   不保存退出
-
-:wq    保存退出
-
-G　　跳到末尾行
-
-dd　　删除当前行
-
-gg　　跳到第一行第一个字符
-
-$　　跳到当前行的最后一个字符
-
-o　　在当前行之后插入一个新行
-
-/搜索内容　　搜索指定内容
-
-:122　　跳转到指定行
-
-:%d 删除所有内容
-
-dG 删除当前光标以下的所有内容</code></pre>
+      <p>注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用</p>
+<hr>
+<pre><code class="language-java">/**
+* {@link String#toString()} }
+* 在类后面追加#号，可以指向类的成员方法或者变量
+**/
+public class Test{
+}
+</code></pre>
 
     </div>
     <div class="article-footer">
@@ -377,7 +358,7 @@ dG 删除当前光标以下的所有内容</code></pre>
   <ul class="post-copyright list-unstyled">
     <li class="post-copyright-link hidden-xs">
       <strong>Permalink: </strong>
-      <a href="http://www.mingaccount.com/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/" title="vim命令备忘" target="_blank" rel="external">http://www.mingaccount.com/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</a>
+      <a href="http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/" title="Java注释引用类和其成员" target="_blank" rel="external">http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/</a>
     </li>
     <li class="post-copyright-license">
       <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
@@ -407,13 +388,13 @@ dG 删除当前光标以下的所有内容</code></pre>
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="http://www.mingaccount.com/2018/08/springboot%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/" title="SpringBoot定时任务"><i
+                <a href="http://www.mingaccount.com/2016/01/javafinal%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96/" title="Java final成员变量初始化"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
             </li>
             <li class="next">
-                <a href="http://www.mingaccount.com/2018/08/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/"
-                    title="Linux常用命令备忘"><span>Newer&nbsp;&nbsp;</span><i
+                <a href="http://www.mingaccount.com/2016/06/%E5%AE%9E%E4%BD%93%E7%B1%BBbuild/"
+                    title="实体类通过建造者模式创建"><span>Newer&nbsp;&nbsp;</span><i
                         class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             
