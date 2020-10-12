@@ -10,12 +10,30 @@
     
     
     <item>
+      <title>Git上传本地项目</title>
+      <link>http://www.mingaccount.com/2018/05/git%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/05/git%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE/</guid>
+      <description>1.在git上创建仓库，记下clone地址 2.把线上仓库拉到本地 git clone https://github.com/*/*.git 3.把要上传的本地项目文件全部放入本地仓库中 4.把所有文件提交到线上 git</description>
+    </item>
+    
+    <item>
       <title>Git常用命令备忘</title>
       <link>http://www.mingaccount.com/2018/05/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
       <guid>http://www.mingaccount.com/2018/05/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</guid>
       <description>#查看工作区状态 git status -s #撤回上一次的commit内容 git reset --hard HEAD~ #删除所有本地未提交内容 git checkout . #下次push时保存输入密码 git config credential.helper store #更改当前项目</description>
+    </item>
+    
+    <item>
+      <title>Hutool工具包</title>
+      <link>http://www.mingaccount.com/2018/05/hutool%E5%B7%A5%E5%85%B7%E5%8C%85/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/05/hutool%E5%B7%A5%E5%85%B7%E5%8C%85/</guid>
+      <description>Hutool封装大量java工具类 maven配置： &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;cn.hutool&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;hutool-all&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.4.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; API文档 官方首页</description>
     </item>
     
     <item>
@@ -169,24 +187,6 @@
       
       <guid>http://www.mingaccount.com/2017/06/spring%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/</guid>
       <description>1.切面编程核心概念 切面编程Aspect-oriented Programming (AOP) AOP只是一个概念，跟Spring是独立关系 最典型的AOP实现框架Aspect</description>
-    </item>
-    
-    <item>
-      <title>设计模式总览</title>
-      <link>http://www.mingaccount.com/2017/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88/</link>
-      <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88/</guid>
-      <description>1.什么叫依赖倒转，里氏替换？ 所谓依赖倒转就是抽象类不应该依赖于子类，子类应该依赖于抽象类，并且子类之间不应该互相依赖。依赖倒转是面对对象的</description>
-    </item>
-    
-    <item>
-      <title>JavaString 特殊符号处理工具类</title>
-      <link>http://www.mingaccount.com/2017/05/javastring%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
-      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/05/javastring%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7%E7%B1%BB/</guid>
-      <description>Java, Java Script, HTML, JSON, CSV and XML org.apache.commons.lang3.StringEscapeUtils //使用示例 StringEscapeUtils.escapeCsv(&amp;quot;&amp;quot;); SqtringEscapeUtils.escapeXml(&amp;quot;&amp;quot;); api文档 Regexp 正则表达式转义所有特殊符号 其他 com.google.common.escape.Escapers Escaper build = Escapers.builder().addEscape(&#39;$&#39;, &amp;quot; &amp;quot;).build(); String str = build.escape(&amp;quot;$$$$&amp;quot;); api文档</description>
     </item>
     
   </channel>

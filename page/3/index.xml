@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Scala实现的尾递归</title>
+      <link>http://www.mingaccount.com/2019/02/scala%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%B0%BE%E9%80%92%E5%BD%92/</link>
+      <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2019/02/scala%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%B0%BE%E9%80%92%E5%BD%92/</guid>
+      <description>最大公约数： @tailrec def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b) 阶乘: def factorial(n: Int): Int = { @tailrec def iter(x: Int, result: Int): Int = if (x == 0) result else iter(x - 1, result * x) iter(n, 1) } @tailrec注解可以检测</description>
+    </item>
+    
+    <item>
       <title>Markdown常用语法备忘</title>
       <link>http://www.mingaccount.com/2019/01/markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%A4%87%E5%BF%98/</link>
       <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
@@ -179,15 +188,6 @@
       
       <guid>http://www.mingaccount.com/2018/05/gitpush%E5%BC%82%E5%B8%B8/</guid>
       <description>异常信息 No anonymous write access. Authentication failed for 解决方案 提交的时候设置UserName和email 或者重新设置全局git用户名和邮箱 git config --global user.name &amp;quot;username&amp;quot; git config --global user.email &amp;quot;email&amp;quot;</description>
-    </item>
-    
-    <item>
-      <title>Git上传本地项目</title>
-      <link>http://www.mingaccount.com/2018/05/git%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE/</link>
-      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2018/05/git%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE/</guid>
-      <description>1.在git上创建仓库，记下clone地址 2.把线上仓库拉到本地 git clone https://github.com/*/*.git 3.把要上传的本地项目文件全部放入本地仓库中 4.把所有文件提交到线上 git</description>
     </item>
     
   </channel>
