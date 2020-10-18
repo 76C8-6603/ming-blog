@@ -1,5 +1,5 @@
 ---
-    title: "Spring切面编程AOP"
+    title: "Spring切面编程"
     date: 2017-06-06
     tags: ["spring"]
     
@@ -14,10 +14,10 @@ AOP只是一个概念，跟Spring是独立关系
 几个核心的参数概念（基于AspectJ）
 * Aspect: 切面编程的核心是切面，因此首先需要一个切面类(`@Aspect`注解修饰的类)
 * Join point: 代表需要切面处理的方法（Spring AOP只针对方法，因此以下简称*目标方法*）
-* Advice: 代表拦截*目标方法*需要进行的操作，可以选择*目标方法*运行的哪个阶段进行处理，比如`before(调用之前)`，`after(调用之后)`，`around(前后都进行处理)`
+* Advice: 切面类需要在*目标方法*运行的哪个阶段进行处理，比如`before(调用之前)`，`after(调用之后)`，`around(前后都进行处理)`
 * Pointcut: 当前的切面类需要监听的*目标方法*有什么特征，或者说切面类要怎样找到需要处理的*目标方法*，比如被注解`@Log`修饰的方法
-* Introduction: 让你申明另外的方法或字段去代表*目标方法*的对象，意思就是可以让*目标方法*所在类有一个新的父类（接口），并且给出一个默认实现来代替他（在AspectJ中这个叫做inter-type declaration类型间申明)
-* Target object:  
+* Introduction: 申明一个额外的方法或者字段去代表*目标方法*的对象，意思就是你可以给*目标方法*所在类追加一个父类（接口），并指定一个实现去代表它（AspectJ称为inter-type declaration）  
+* Target object: *目标方法*所在的对象，也叫作`advised object`。但是Spring AOP是通过运行时代理实现的，意思就是这个对象是一个代理类的对象  
 
 完整的Advice类型包括：
 * Before advice: 在*目标方法*之前
@@ -280,10 +280,10 @@ AspectJ的标识符可以分为三类：类型，范围，和上下文：(以下
 如果只有`类型`和`上下文`，会影响性能，因为需要一些额外的处理和分析  
 但是`范围`不同，他的匹配速度非常快，一个好的pointcut表达式应该尽可能的包含一个
 
-### 2.3.6 申明Advice
+## 2.4 申明Advice
 Advice需要关联一个pointcut表达式，并申明在匹配的pointcut之前(before)，之后(after)，或者前后(around)运行  
 引用pointcut表达式可简单引用已命名的pointcut表达式，或者就地申明pointcut表达式  
-#### Before Advice
+### 2.4.1 Before Advice
 你可以在一个切面类中申明`before advice`通过使用`@Before`注解:
 ```java
 import org.aspectj.lang.annotation.Aspect;
@@ -315,7 +315,7 @@ public class BeforeExample {
 }
 ```
 
-#### After Returning Advice
+### 2.4.2 After Returning Advice
 `After Returning Advice`在方法正常`return`后运行。  
 你可以申明它通过使用`@AfterReturning`注解：  
 ```java
@@ -357,7 +357,7 @@ public class AfterReturningExample {
   
 注意想通过`after returning advice`返回一个完全不同的引用是不可能的  
              
-#### After Throwing Advice
+### 2.4.3 After Throwing Advice
 `After Throwing Advice`当`目标方法`是因为抛出异常退出的时候执行。
 可以通过`@AfterThrowing`注解来实现：
 ```java
@@ -396,7 +396,7 @@ public class AfterThrowingExample {
 同样`throwing`中的名字必须跟advice方法的参数名称相同  
 当然也有类型限制，advice方法的参数类型，必须跟*目标方法*抛出的异常类型相同
 
-#### After (Finally) Advice
+### 2.4.4 After (Finally) Advice
 `After (Finally) Advice`是在*目标方法*执行退出后运行  
 它通过注解`@After`来实现，用该注解的时候，你需要同时处理正常返回现象和异常退出现象  
 这个Advice通常用来处理资源释放问题或者其他相似的情形：
@@ -415,7 +415,7 @@ public class AfterFinallyExample {
 }
 ```
 
-#### Around Advice
+### 2.4.5 Around Advice
 `Around Advice`是最后一个advice，也是最强大的一个。你可以在方法执行前，执行后做处理，甚至可以决定什么时候运行，怎样运行，是否运行*目标方法*  
 它经常使用的场景是在方法运行前后有状态信息需要分享的，比如方法的运行时间等等  
 在选择Advice的时候，始终使用功能最弱的那个，比如能用Before，就不用Around  
@@ -444,6 +444,8 @@ public class AroundExample {
 ```
 around advice 的返回值就是方法调用者看到的返回值。举个例子，一个简单的缓存切面，如果缓存里面有直接从缓存返回，如果缓存里面没有再调用`proceed()`方法。  
 注意`proceed`有可能调用一次，或者多次，甚至不调用，这都是合法的  
+
+### 2.4.6 advice参数 
 
 #### 访问当前的 `JoinPoint`
 任何的advice方法都可以申明`JoinPoint`作为第一个参数（除了`around`例外，不过它的第一个参数`ProceedingJoinPoint`，也是`JoinPoint`的子类)  
@@ -583,7 +585,7 @@ public Object preProcessQueryPattern(ProceedingJoinPoint pjp,
 ```
 无论如何都要像上面的例子一样绑定  
 
-#### Advice顺序
+### 2.4.7 advice顺序
 当多个advice同时指向一个*目标方法*时，Spring AOP和AspectJ遵循同样的优先级规则：  
 * 进入方法：优先级高的先执行（比如两个给定的`before`advice，优先级高的先执行）
 * 离开方法：优先级高的后执行（比如两个给定的`after`advice，优先级高的后执行）  
@@ -601,7 +603,7 @@ public Object preProcessQueryPattern(ProceedingJoinPoint pjp,
 > 因为没有办法从javac已经编译过的类反射中获取源码的申明顺序  
 > 所以当遇到这种情况时，请考虑合并这两个advice方法，或者把重复advice方法提取到另外一个切面类中
 
-### Introductions  
+## 2.5 Introductions  
 Introductions(在AspectJ中叫做类型间声明) 让切面类可以申明*目标方法*所在对象实现指定接口，而且提供一个接口的实现类去代表那些对象  
 
 你可以创建一个introduction通过使用`@DeclareParents`注解。这个注解被用来申明匹配的类型有一个新的父类  
@@ -622,15 +624,108 @@ public class UsageTracking {
 }
 ```
 
-这个接口的实现是由注解字段的类型决定的。`value`
+## 2.6 切面类实例化模型
 
+默认情况下，对application context来说每个切面类都是单例的。AspectJ将其称作单实例模型。可以使用备用的生命周期来定义Aspect  
+Spring 支持AspectJ的`perthis`和`pertarget`实例化模型  
+暂不支持`percflow`,`percflowbelow`，和`pertypewithin`  
 
+你可以申明一个`perthis`切面通过制定`perthis`语句在注解`@Aspect`中：
+```java
+@Aspect("perthis(com.xyz.myapp.CommonPointcuts.businessService())")
+public class MyAspect{
+    private int someState;
 
+    @Before("com.xyz.myapp.CommonPointcuts.businessService()")
+    public void recordServiceUsage(){
+        // ...
+    }
+}
+```
+在上面的例子中，`perthis`语句的作用就是每匹配一个service对象就创建一个切面实例。当一个service对象的方法被调用时，切面实例被第一次创建  
+当service对象超出范围时，切面对象也会超出范围（暂不明白这里的超出范围指的是什么）  
+在切面实例被创建之前，里面的advice方法不会被调用。只要切面实例被创建，并且service对象与一个切面关联的时候，advice才会在匹配的时候运行  
 
+`pertarget`实例化模型的工作方式跟`perthis`完全相同
 
+## 2.7 一个完整的AOP实例
+当执行业务service的时候，有时候会因为并发原因失败（例如，一个因为获取悲观锁失败的操作）。如果重新尝试，很可能在下次尝试的时候成功  
+当这种情况出现时，我们应该有一个明显的重试操作以避免向客户端发送`PessimisticLockingFailureException`。这个需求很明显跨越了多个service，很明显可以用切面来实现  
 
+因为我们需要多次执行`proceed`方法，所以我们肯定需要around advice：
 
+```java
+@Aspect
+public class ConcurrentOperationExecutor implements Ordered {
 
+    private static final int DEFAULT_MAX_RETRIES = 2;
+
+    private int maxRetries = DEFAULT_MAX_RETRIES;
+    private int order = 1;
+
+    public void setMaxRetries(int maxRetries) {
+        this.maxRetries = maxRetries;
+    }
+
+    public int getOrder() {
+        return this.order;
+    }
+
+    public void setOrder(int order) {
+        this.order = order;
+    }
+
+    @Around("com.xyz.myapp.CommonPointcuts.businessService()")
+    public Object doConcurrentOperation(ProceedingJoinPoint pjp) throws Throwable {
+        int numAttempts = 0;
+        PessimisticLockingFailureException lockFailureException;
+        do {
+            numAttempts++;
+            try {
+                return pjp.proceed();
+            }
+            catch(PessimisticLockingFailureException ex) {
+                lockFailureException = ex;
+            }
+        } while(numAttempts <= this.maxRetries);
+        throw lockFailureException;
+    }
+
+}
+```
+注意上面的切面类实现了`Ordered`接口，所以我们设置切面类的优先级是高于事务的（我们想每次尝试都是一个新事务）  
+`maxRetries`和`order`属性都由Spring配置  
+主要的操作都发生在`doConcurrentOperation`around advice。注意，在当前情况，我们应用了重试逻辑在每个`businessService()`。如果运行抛出`PessimisticLockingFailureException`异常，就会进行重试操作，除非重新操作次数已经耗尽。  
+
+对应的Spring配置如下：
+```xml
+<aop:aspectj-autoproxy/>
+<bean id="concurrentOperationExecutor" class="com.xyz.myapp.service.impl.ConcurrentOperationExecutor">
+    <property name="maxRetries" value="3"/>
+    <property name="order" value="100"/>
+</bean>
+```
+提炼aspect让他只有在幂等操作的时候才重试（幂等：函数多次运行结果与一次运行结果相同），我们可以定义`Idempotent`注解：
+```java
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Idempotent{}
+```
+现在可以使用`Idempotent`注解去标注需要重试的service 方法，同时我们的pointcut表达式也需要修改：
+```java
+@Around("com.xyz.myapp.CommonPointcuts.businessService() && " +
+        "@annotation(com.xyz.myapp.service.Idempotent)")
+public Object doConcurrentOperation(ProceedingJoinPoint pjp) throws Throwable {
+    // ...
+}
+```
+# 3.  基于架构的AOP支持（xml配置形式的）
+xml配置形式的AOP跟基于AspectJ的形，只是方式不一样，用的pointcut表达式都是一样的，这里不细讲，详细参考文末的官方文档
 
 
 
