@@ -6,11 +6,21 @@
 ---
 
 ```shell script
+
+#拉线上代码
+git clone https://***.git.com
+
 #查看工作区状态
 git status -s
 
 #撤回上一次的commit内容
 git reset --hard HEAD~
+
+#查看当前分支
+git branch
+
+#切换到对应分支
+git checkout dev
 
 #删除所有本地未提交内容
 git checkout .
