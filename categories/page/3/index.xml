@@ -28,6 +28,15 @@
     </item>
     
     <item>
+      <title>SpringBoot Mybatis配置多数据源</title>
+      <link>http://www.mingaccount.com/2018/09/springbootmybatis%E9%85%8D%E7%BD%AE%E5%A4%9A%E6%95%B0%E6%8D%AE%E6%BA%90/</link>
+      <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/09/springbootmybatis%E9%85%8D%E7%BD%AE%E5%A4%9A%E6%95%B0%E6%8D%AE%E6%BA%90/</guid>
+      <description>@Configuration @MapperScan(basePackages = MysqlDatasourceConfig.PACKAGE, sqlSessionFactoryRef = &amp;quot;mysqlSessionFactory&amp;quot;) public class MysqlDatasourceConfig { public static final String PACKAGE = &amp;quot;com.ming.mapper.mysql1&amp;quot;; public static final String MAPPER_LOCATION = &amp;quot;classpath:mapper/mysql1/*.xml&amp;quot;; @Primary @Bean(name = &amp;quot;mysqlDatasource&amp;quot;) @ConfigurationProperties(&amp;quot;spring.datasource.druid.mysql1&amp;quot;) public DataSource mysqlDataSource(){ return DruidDataSourceBuilder.create().build(); } @Bean(name = &amp;quot;mysqlTransactionManager&amp;quot;) @Primary public DataSourceTransactionManager mysqlTransactionManager() { return new DataSourceTransactionManager(mysqlDataSource()); } @Bean(name = &amp;quot;mysqlSessionFactory&amp;quot;) @Primary public SqlSessionFactory mysqlSessionFactory(@Qualifier(&amp;quot;mysqlDatasource&amp;quot;) DataSource dataSource) throws Exception { final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean(); sessionFactory.setDataSource(dataSource); sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MysqlDatasourceConfig.MAPPER_LOCATION)); return</description>
+    </item>
+    
+    <item>
       <title>大型网站架构演化概论</title>
       <link>http://www.mingaccount.com/2018/09/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96%E6%A6%82%E8%AE%BA/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>http://www.mingaccount.com/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</guid>
       <description>Java8 带来了许多改变，其中之一就是default修饰的接口方法。 这些方法改变了我们已知的接口，现在我们能够在接口中定义默认实现方法。默认实现方法</description>
-    </item>
-    
-    <item>
-      <title>Git push 异常：remote: No anonymous write access</title>
-      <link>http://www.mingaccount.com/2018/05/gitpush%E5%BC%82%E5%B8%B8/</link>
-      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2018/05/gitpush%E5%BC%82%E5%B8%B8/</guid>
-      <description>异常信息 No anonymous write access. Authentication failed for 解决方案 提交的时候设置UserName和email 或者重新设置全局git用户名和邮箱 git config --global user.name &amp;quot;username&amp;quot; git config --global user.email &amp;quot;email&amp;quot;</description>
     </item>
     
   </channel>

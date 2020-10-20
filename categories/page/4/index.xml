@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>Git push 异常：remote: No anonymous write access</title>
+      <link>http://www.mingaccount.com/2018/05/gitpush%E5%BC%82%E5%B8%B8/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/05/gitpush%E5%BC%82%E5%B8%B8/</guid>
+      <description>异常信息 No anonymous write access. Authentication failed for 解决方案 提交的时候设置UserName和email 或者重新设置全局git用户名和邮箱 git config --global user.name &amp;quot;username&amp;quot; git config --global user.email &amp;quot;email&amp;quot;</description>
+    </item>
+    
+    <item>
       <title>Git上传本地项目</title>
       <link>http://www.mingaccount.com/2018/05/git%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
@@ -24,7 +33,7 @@
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
       <guid>http://www.mingaccount.com/2018/05/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</guid>
-      <description>#查看工作区状态 git status -s #撤回上一次的commit内容 git reset --hard HEAD~ #删除所有本地未提交内容 git checkout . #下次push时保存输入密码 git config credential.helper store #更改当前项目</description>
+      <description>#拉线上代码 git clone https://***.git.com #查看工作区状态 git status -s #撤回上一次的commit内容 git reset --hard HEAD~ #查看当前分支 git branch #切换到对应分支 git checkout dev #删除所有本地未提交内</description>
     </item>
     
     <item>
@@ -52,6 +61,15 @@
       
       <guid>http://www.mingaccount.com/2018/05/quartzcron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/</guid>
       <description>Cron表达式是一个字符串，字符串以5或6个空格隔开，分为6或7个域，每一个域代表一个含义，Cron有如下两种语法格式： （1） Seconds Minutes Hours DayofMonth Month DayofWeek Year</description>
+    </item>
+    
+    <item>
+      <title>Windows IP DNS批处理</title>
+      <link>http://www.mingaccount.com/2018/03/windowsdnsbatch/</link>
+      <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/03/windowsdnsbatch/</guid>
+      <description>指定ip信息，只需要修改set参数 name是控制面板\网络和 Internet\网络连接中对应的连接名称 @echo off set name=&amp;quot;Wi-Fi&amp;quot; set ipaddress=172.16.61.216 set mask=255.255.255.0 set gateway=172.16.61.254 set dns1=172.16.3.38 set dns2=172.16.3.41 netsh interface ip set address</description>
     </item>
     
     <item>
@@ -169,24 +187,6 @@
       
       <guid>http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/</guid>
       <description>请求头枚举类 public enum HttpHeader { AUTHORIZATION(&amp;quot;Authorization&amp;quot;), AUTHENTICATION_TYPE_BASIC(&amp;quot;Basic&amp;quot;), X_AUTH_TOKEN(&amp;quot;X-AUTH-TOKEN&amp;quot;), WWW_Authenticate(&amp;quot;WWW-Authenticate&amp;quot;), X_FORWARDED_FOR(&amp;quot;X-Forwarded-For&amp;quot;), PROXY_CLIENT_IP(&amp;quot;Proxy-Client-IP&amp;quot;), WL_PROXY_CLIENT_IP(&amp;quot;WL-Proxy-Client-IP&amp;quot;), HTTP_CLIENT_IP(&amp;quot;HTTP_CLIENT_IP&amp;quot;), HTTP_X_FORWARDED_FOR(&amp;quot;HTTP_X_FORWARDED_FOR&amp;quot;); private String key; private HttpHeader(String key) { this.key = key; } public String key() { return this.key; } } 工具类 public class RemoteIpHelper { private static final String UNKNOWN = &amp;quot;unknown&amp;quot;; public static String getRemoteIpFrom(HttpServletRequest request) { String ip = null; int tryCount = 1; while (!isIpFound(ip) &amp;amp;&amp;amp; tryCount</description>
-    </item>
-    
-    <item>
-      <title>Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied</title>
-      <link>http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</link>
-      <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</guid>
-      <description>usermod -d /var/lib/mysql/ mysql ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock chown -R mysql:mysql /var/lib/mysql</description>
-    </item>
-    
-    <item>
-      <title>Spring切面编程</title>
-      <link>http://www.mingaccount.com/2017/06/spring%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/</link>
-      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/06/spring%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/</guid>
-      <description>1.切面编程核心概念 切面编程Aspect-oriented Programming (AOP) AOP只是一个概念，跟Spring是独立关系 最典型的AOP实现框架Aspect</description>
     </item>
     
   </channel>

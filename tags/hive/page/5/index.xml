@@ -11,6 +11,33 @@
     
     
     <item>
+      <title>Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied</title>
+      <link>http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</link>
+      <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</guid>
+      <description>usermod -d /var/lib/mysql/ mysql ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock chown -R mysql:mysql /var/lib/mysql</description>
+    </item>
+    
+    <item>
+      <title>Spring切面编程</title>
+      <link>http://www.mingaccount.com/2017/06/spring%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/06/spring%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/</guid>
+      <description>1.切面编程核心概念 切面编程Aspect-oriented Programming (AOP) AOP只是一个概念，跟Spring是独立关系 最典型的AOP实现框架Aspect</description>
+    </item>
+    
+    <item>
+      <title>根据Method获取所有参数名</title>
+      <link>http://www.mingaccount.com/2017/06/%E6%A0%B9%E6%8D%AEmethod%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E5%8F%82%E6%95%B0%E5%90%8D/</link>
+      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/06/%E6%A0%B9%E6%8D%AEmethod%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E5%8F%82%E6%95%B0%E5%90%8D/</guid>
+      <description>LocalVariableTableParameterNameDiscoverer discoverer = new LocalVariableTableParameterNameDiscoverer(); discoverer.getParameterNames(method); 详情参考API文档</description>
+    </item>
+    
+    <item>
       <title>设计模式总览</title>
       <link>http://www.mingaccount.com/2017/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88/</link>
       <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
@@ -107,15 +134,6 @@
       
       <guid>http://www.mingaccount.com/2016/01/oraclelimit/</guid>
       <description>1.Oracle 12c R1 (12.1)支持limit语句 从Oracle 12c R1 (12.1)版本开始，oracle开始支持limit语句，但是跟熟悉的limit(1,</description>
-    </item>
-    
-    <item>
-      <title>SpringBoot Mybatis配置多数据源</title>
-      <link>http://www.mingaccount.com/1/01/springbootmybatis%E9%85%8D%E7%BD%AE%E5%A4%9A%E6%95%B0%E6%8D%AE%E6%BA%90/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/1/01/springbootmybatis%E9%85%8D%E7%BD%AE%E5%A4%9A%E6%95%B0%E6%8D%AE%E6%BA%90/</guid>
-      <description>@Configuration @MapperScan(basePackages = MysqlDatasourceConfig.PACKAGE, sqlSessionFactoryRef = &amp;quot;mysqlSessionFactory&amp;quot;) public class MysqlDatasourceConfig { public static final String PACKAGE = &amp;quot;com.ming.mapper.mysql1&amp;quot;; public static final String MAPPER_LOCATION = &amp;quot;classpath:mapper/mysql1/*.xml&amp;quot;; @Primary @Bean(name = &amp;quot;mysqlDatasource&amp;quot;) @ConfigurationProperties(&amp;quot;spring.datasource.druid.mysql1&amp;quot;) public DataSource mysqlDataSource(){ return DruidDataSourceBuilder.create().build(); } @Bean(name = &amp;quot;mysqlTransactionManager&amp;quot;) @Primary public DataSourceTransactionManager mysqlTransactionManager() { return new DataSourceTransactionManager(mysqlDataSource()); } @Bean(name = &amp;quot;mysqlSessionFactory&amp;quot;) @Primary public SqlSessionFactory mysqlSessionFactory(@Qualifier(&amp;quot;mysqlDatasource&amp;quot;) DataSource dataSource) throws Exception { final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean(); sessionFactory.setDataSource(dataSource); sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MysqlDatasourceConfig.MAPPER_LOCATION)); return</description>
     </item>
     
   </channel>
