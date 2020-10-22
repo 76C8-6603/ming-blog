@@ -80,6 +80,9 @@ jobs [选项] [JobID] #该命令生效之前需执行find / -name password &
     #-p仅显示任务对应的进程号
     #-r仅输出运行状态的任务 
     #-s仅输出停止状态的任务
+ps -ef  #查询所有正在运行的service
+    ps -ef | grep mysql #查询mysql相关的进程
+service --status-all  #查询所有已安装的service
 ```
 
 ## 启动重启相关
