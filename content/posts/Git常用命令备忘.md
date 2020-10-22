@@ -36,4 +36,7 @@ git config user.email ""
 git config --global user.name ""
 git config --global user.email ""
 
+#git日志
+git log
+
 ```
