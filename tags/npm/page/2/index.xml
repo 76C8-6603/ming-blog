@@ -5,10 +5,19 @@
     <link>http://www.mingaccount.com/tags/npm/</link>
     <description>Recent content in npm on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 19 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://www.mingaccount.com/tags/npm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java读取文件内容文件头有﻿</title>
+      <link>http://www.mingaccount.com/2019/09/java%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2019/09/java%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9/</guid>
+      <description>&amp;ldquo;\ufeff&amp;quot;是UTF-8 BOM编码的文件头，代表该文件按照什么字节顺序排序 调用java的工具类 [UnicodeIn</description>
+    </item>
     
     <item>
       <title>SparkSession.read().csv()无法定位本地文件的问题</title>
@@ -179,15 +188,6 @@
       
       <guid>http://www.mingaccount.com/2019/05/scala%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E9%A1%BA%E5%BA%8F/</guid>
       <description>运算符的优先级由其第一个字符决定 以下列出的字符按优先级从高到低的顺序排列 (all letters) | ^ &amp;amp; &amp;lt; &amp;gt; = ! + - * / % (all other special characters)</description>
-    </item>
-    
-    <item>
-      <title>Java上传文件格式判断</title>
-      <link>http://www.mingaccount.com/2019/03/java%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E5%88%A4%E6%96%AD/</link>
-      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2019/03/java%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E5%88%A4%E6%96%AD/</guid>
-      <description>判断用户上传文件的合法性仅仅通过后缀名是完全不够的，谁也不知道后缀名是否被更改，服务器保存一个不知道真实类型的文件有极大的风险。 因此需要后台</description>
     </item>
     
   </channel>

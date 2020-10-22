@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>Windows CMD 错误pngquant failed to build, make sure that libpng-dev is installed</title>
+      <link>http://www.mingaccount.com/2020/10/windowspngquantfailedtobuild/</link>
+      <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2020/10/windowspngquantfailedtobuild/</guid>
+      <description>背景：windows npm install失败 错误信息：pngquant failed to build, make sure that libpng-dev is installed 解决方案 npm install --global windows-build-tools 如果仍然失败，参考github回答</description>
+    </item>
+    
+    <item>
       <title>WIN10 UBUNTU 异常：sleep: cannot read realtime clock: Invalid argument</title>
       <link>http://www.mingaccount.com/2020/08/win10/</link>
       <pubDate>Mon, 10 Aug 2020 13:37:30 +0800</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>http://www.mingaccount.com/2019/10/%E8%87%AA%E5%A2%9E%E4%B8%BB%E9%94%AE%E7%94%A8%E5%AE%8C%E4%BA%86%E8%AF%A5%E6%80%8E%E4%B9%88%E5%8A%9E/</guid>
       <description>转自微信公众号“孤独烟” 简单版 我们先明白一点，在mysql中，Int整型的范围如下 我们以无符号整型为例，存储范围为0～4294967295，</description>
-    </item>
-    
-    <item>
-      <title>Java读取文件内容文件头有﻿</title>
-      <link>http://www.mingaccount.com/2019/09/java%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9/</link>
-      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2019/09/java%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9/</guid>
-      <description>&amp;ldquo;\ufeff&amp;quot;是UTF-8 BOM编码的文件头，代表该文件按照什么字节顺序排序 调用java的工具类 [UnicodeIn</description>
     </item>
     
   </channel>
