@@ -183,7 +183,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/maven/" class="tag-list-link">maven</a><span
-                    class="tag-list-count">2</span></li>
+                    class="tag-list-count">3</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mybatis/" class="tag-list-link">mybatis</a><span
@@ -488,6 +488,42 @@
         <h1 itemprop="name">
   <a
     class="article-title"
+    href="/2018/07/mavenpackage%E5%AE%8C%E6%95%B4%E4%BE%9D%E8%B5%96jar%E5%8C%85/"
+    >Maven package完整依赖jar包</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        maven package生成的jar包默认是没有项目依赖的 需要导出的jar包包含项目所有的依赖，需要配置pom： &lt;build&gt; &lt;finalName&gt;yourApp&lt;/finalName&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt; &lt;configuration&gt; &lt;shadedArtifactAttached&gt;true&lt;/shadedArtifactAttached&gt; &lt;shadedClassifierName&gt;jar-with-dependencies&lt;/shadedClassifierName&gt; &lt;!-- Any name that makes sense --&gt; &lt;outputDirectory&gt;../output/jar-with-dependencies&lt;/outputDirectory&gt; &lt;/configuration&gt;
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="http://www.mingaccount.com/2018/07/mavenpackage%E5%AE%8C%E6%95%B4%E4%BE%9D%E8%B5%96jar%E5%8C%85/" class="">
+  <time datetime="2018-07-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-15</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/maven/"> maven </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2018/07/mavenpackage%E5%AE%8C%E6%95%B4%E4%BE%9D%E8%B5%96jar%E5%8C%85/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 148words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
     href="/2018/07/windows%E5%88%A0%E9%99%A4%E5%90%AF%E5%8A%A8%E7%9B%98%E7%9A%84%E5%90%84%E7%A7%8D%E5%88%86%E5%8C%BA/"
     >Windows删除启动盘的所有分区</a
   >
@@ -514,42 +550,6 @@
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 76words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2018/06/%E8%AF%91lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AF%B9-sam/"
-    >[译]lambda表达式对 SAM （单个抽象方法类）type的处理方式</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        在阅读Venkat Subramaniam的著作《Functional Programming in Java》 之后，方法模式和lambda完美结合让我印象深刻。 这种模式
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="http://www.mingaccount.com/2018/06/%E8%AF%91lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AF%B9-sam/" class="">
-  <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/java/"> java </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2018/06/%E8%AF%91lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AF%B9-sam/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 693words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
-      </p>
     </article></div>
   
 <nav class="bar bar-footer clearfix" data-stick-bottom>
@@ -567,7 +567,7 @@
       </li>
     </ul>
     <div class="total-article bar-right">
-      Page:8/14
+      Page:8/15
     </div>
   </div>
 </nav>

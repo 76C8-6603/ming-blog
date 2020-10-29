@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>avg函数忽略null值</title>
+      <link>http://www.mingaccount.com/2018/06/avg%E5%87%BD%E6%95%B0%E5%BF%BD%E7%95%A5null%E5%80%BC/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/06/avg%E5%87%BD%E6%95%B0%E5%BF%BD%E7%95%A5null%E5%80%BC/</guid>
+      <description>avg函数对值为null的行，会忽略不计 解决方案 avg((coalesce(column,0))</description>
+    </item>
+    
+    <item>
       <title>[译]java8新特性：函数式编程（functional programming）的优点</title>
       <link>http://www.mingaccount.com/2018/05/%E8%AF%91java8%E6%96%B0%E7%89%B9%E6%80%A7%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9/</link>
       <pubDate>Thu, 10 May 2018 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>http://www.mingaccount.com/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</guid>
       <description>一、常见的编码格式 1.ASCII 基础编码，英文和西欧字符。 用一个字节的低7位表示，一共128个。 0~13是控制字符如换行、回车、删除等，32~126是打</description>
-    </item>
-    
-    <item>
-      <title>QPS、TPS、PV等网站业务关键字释义</title>
-      <link>http://www.mingaccount.com/2017/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</link>
-      <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</guid>
-      <description>QPS：Query Per Second TPS：Transaction Per Second PV：Page View RT：Response Time UV：Unique Visitor DAU：Daily Actived Users M</description>
     </item>
     
   </channel>
