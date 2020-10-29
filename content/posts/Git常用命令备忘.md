@@ -39,4 +39,7 @@ git config --global user.email ""
 #git日志
 git log
 
+#取消cherry pick
+git cherry-pick --abort
+
 ```
