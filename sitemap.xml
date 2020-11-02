@@ -458,6 +458,34 @@
   </url>
   
   <url>
+    <loc>http://www.mingaccount.com/tags/ehcache/</loc>
+    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/tags/redis/</loc>
+    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2018/09/springbootehcache%E9%9B%86%E6%88%90/</loc>
+    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2018/09/springbootredis%E9%9B%86%E6%88%90/</loc>
+    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mingaccount.com/2018/09/spring%E7%BC%93%E5%AD%98%E5%A4%84%E7%90%86/</loc>
     <lastmod>2018-09-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>

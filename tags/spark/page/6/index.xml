@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spark on Ming Blog</title>
+    <link>http://www.mingaccount.com/tags/spark/</link>
+    <description>Recent content in spark on Ming Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 07 May 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://www.mingaccount.com/tags/spark/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Oracle limit 问题</title>
+      <link>http://www.mingaccount.com/2016/01/oraclelimit/</link>
+      <pubDate>Wed, 06 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/01/oraclelimit/</guid>
+      <description>1.Oracle 12c R1 (12.1)支持limit语句 从Oracle 12c R1 (12.1)版本开始，oracle开始支持limit语句，但是跟熟悉的limit(1,</description>
+    </item>
+    
+  </channel>
+</rss>

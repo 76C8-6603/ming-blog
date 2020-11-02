@@ -10,6 +10,24 @@
     
     
     <item>
+      <title>Java反射常用API汇总</title>
+      <link>http://www.mingaccount.com/2018/06/java%E5%8F%8D%E5%B0%84%E5%B8%B8%E7%94%A8api%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/06/java%E5%8F%8D%E5%B0%84%E5%B8%B8%E7%94%A8api%E6%B1%87%E6%80%BB/</guid>
+      <description>“JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性” 一、类对</description>
+    </item>
+    
+    <item>
+      <title>Mysql安装后root无法登陆(Access denied for user &#39;root&#39;@&#39;localhost&#39;)</title>
+      <link>http://www.mingaccount.com/2018/06/mysql%E5%AE%89%E8%A3%85%E5%90%8Eroot%E6%97%A0%E6%B3%95%E7%99%BB%E9%99%86/</link>
+      <pubDate>Fri, 08 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/06/mysql%E5%AE%89%E8%A3%85%E5%90%8Eroot%E6%97%A0%E6%B3%95%E7%99%BB%E9%99%86/</guid>
+      <description>复杂密码才能通过 sudo mysql -u root -p mysql&amp;gt; select user, plugin from mysql.user; mysql&amp;gt; update mysql.user set authentication_string=PASSWORD(&#39;xcvds_32GDS&#39;), plugin=&#39;mysql_native_password&#39; where user=&#39;root&#39;; mysql8.0不能用上边的语句： ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &amp;quot;svewe_123&amp;quot;;</description>
+    </item>
+    
+    <item>
       <title>avg函数忽略null值</title>
       <link>http://www.mingaccount.com/2018/06/avg%E5%87%BD%E6%95%B0%E5%BF%BD%E7%95%A5null%E5%80%BC/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
@@ -169,24 +187,6 @@
       
       <guid>http://www.mingaccount.com/2017/11/list_add_all%E5%BC%82%E5%B8%B8/</guid>
       <description>原因是因为list是由Arrays.asList生成的 根据Arrays源码，asList方法生成的ArrayList，并不是java.uti</description>
-    </item>
-    
-    <item>
-      <title>[转]谈谈Java中的语法糖</title>
-      <link>http://www.mingaccount.com/2017/10/%E8%BD%AC%E8%B0%88%E8%B0%88java%E4%B8%AD%E7%9A%84%E8%AF%AD%E6%B3%95%E7%B3%96/</link>
-      <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/10/%E8%BD%AC%E8%B0%88%E8%B0%88java%E4%B8%AD%E7%9A%84%E8%AF%AD%E6%B3%95%E7%B3%96/</guid>
-      <description>*该博客转自 http://blog.csdn.net/danchu/article/details/54986442 语法糖（Syntactic Sugar），也称糖衣语法，指在计算机语言中添加的某种语法，这种语法对语言本身功能来说没有什么影响，</description>
-    </item>
-    
-    <item>
-      <title>Java编码,乱码问题详解</title>
-      <link>http://www.mingaccount.com/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</link>
-      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</guid>
-      <description>一、常见的编码格式 1.ASCII 基础编码，英文和西欧字符。 用一个字节的低7位表示，一共128个。 0~13是控制字符如换行、回车、删除等，32~126是打</description>
     </item>
     
   </channel>
