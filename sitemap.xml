@@ -836,6 +836,27 @@
   </url>
   
   <url>
+    <loc>http://www.mingaccount.com/tags/jackson/</loc>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2017/04/jackson/</loc>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2017/04/%E4%BF%AE%E6%94%B9springboot%E7%9A%84banner/</loc>
+    <lastmod>2017-04-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mingaccount.com/2017/04/spring%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E9%80%9A%E7%94%A8%E5%8F%82%E6%95%B0/</loc>
     <lastmod>2017-04-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>

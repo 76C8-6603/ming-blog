@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jackson on Ming Blog</title>
+    <link>http://www.mingaccount.com/tags/jackson/</link>
+    <description>Recent content in jackson on Ming Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 26 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://www.mingaccount.com/tags/jackson/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java注释引用类和其成员</title>
+      <link>http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/</link>
+      <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/</guid>
+      <description>注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类</description>
+    </item>
+    
+    <item>
+      <title>Java final成员变量初始化</title>
+      <link>http://www.mingaccount.com/2016/01/javafinal%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96/</link>
+      <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/01/javafinal%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96/</guid>
+      <description>public class Test{ /** ** 一种是直接指定初始值 **/ final String msg = &amp;quot;&amp;quot;; /** ** 另一种是不指定初始值，在构造方法里面指定 ** 但不允许无参构造的存在，并且每一个构造方法都要对该变</description>
+    </item>
+    
+    <item>
+      <title>Oracle limit 问题</title>
+      <link>http://www.mingaccount.com/2016/01/oraclelimit/</link>
+      <pubDate>Wed, 06 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/01/oraclelimit/</guid>
+      <description>1.Oracle 12c R1 (12.1)支持limit语句 从Oracle 12c R1 (12.1)版本开始，oracle开始支持limit语句，但是跟熟悉的limit(1,</description>
+    </item>
+    
+  </channel>
+</rss>
