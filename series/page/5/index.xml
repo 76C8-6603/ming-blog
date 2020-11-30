@@ -28,6 +28,15 @@
     </item>
     
     <item>
+      <title>Spring集成测试</title>
+      <link>http://www.mingaccount.com/2017/09/spring%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/09/spring%E6%B5%8B%E8%AF%95/</guid>
+      <description>1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成</description>
+    </item>
+    
+    <item>
       <title>QPS、TPS、PV等网站业务关键字释义</title>
       <link>http://www.mingaccount.com/2017/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</link>
       <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>http://www.mingaccount.com/2016/06/%E5%AE%9E%E4%BD%93%E7%B1%BBbuild/</guid>
       <description>现在可以通过lombok注解@Builder一步实现 1.调用效果 public class Test{ public static void main(String[] args){ Student student = Student.builder().name(&amp;quo</description>
-    </item>
-    
-    <item>
-      <title>Mybatis insert完成后获取自增主键</title>
-      <link>http://www.mingaccount.com/2016/05/mybatis%E8%8E%B7%E5%8F%96%E8%87%AA%E5%A2%9Eid/</link>
-      <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/05/mybatis%E8%8E%B7%E5%8F%96%E8%87%AA%E5%A2%9Eid/</guid>
-      <description>示例代码 public void insert(User user){ mapper.insert(user); String id = user.getId(); } id会赋值到传进来的user对象中 xml &amp;lt;insert keyProperty=&amp;quot;id&amp;quot; keyColumn=&amp;quot;id&amp;quot; useGeneratedKeys=&amp;quot;true&amp;quot;&amp;gt; INSERT INTO ... &amp;lt;/insert&amp;gt; keyProperty代表实体类中主键对应的成员变量名称 ke</description>
     </item>
     
   </channel>

@@ -752,6 +752,20 @@
   </url>
   
   <url>
+    <loc>http://www.mingaccount.com/2017/09/spring%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2017-09-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/tags/unit-test/</loc>
+    <lastmod>2017-09-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mingaccount.com/2017/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</loc>
     <lastmod>2017-09-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -887,6 +901,20 @@
   <url>
     <loc>http://www.mingaccount.com/2016/05/mybatis%E8%8E%B7%E5%8F%96%E8%87%AA%E5%A2%9Eid/</loc>
     <lastmod>2016-05-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/tags/assert/</loc>
+    <lastmod>2016-05-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2016-05-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

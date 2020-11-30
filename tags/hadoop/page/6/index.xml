@@ -11,6 +11,24 @@
     
     
     <item>
+      <title>Mybatis insert完成后获取自增主键</title>
+      <link>http://www.mingaccount.com/2016/05/mybatis%E8%8E%B7%E5%8F%96%E8%87%AA%E5%A2%9Eid/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/05/mybatis%E8%8E%B7%E5%8F%96%E8%87%AA%E5%A2%9Eid/</guid>
+      <description>示例代码 public void insert(User user){ mapper.insert(user); String id = user.getId(); } id会赋值到传进来的user对象中 xml &amp;lt;insert keyProperty=&amp;quot;id&amp;quot; keyColumn=&amp;quot;id&amp;quot; useGeneratedKeys=&amp;quot;true&amp;quot;&amp;gt; INSERT INTO ... &amp;lt;/insert&amp;gt; keyProperty代表实体类中主键对应的成员变量名称 ke</description>
+    </item>
+    
+    <item>
+      <title>Assert常用方法</title>
+      <link>http://www.mingaccount.com/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>org.junit.Assert assertEquals 判断对象是否相等，equals方法判断 assertSame 判断对象是否相等，==判断 assertTrue 判断条件是否为真 assertFalse 判断条件是否为假 assertNotNull 判断对象是否不为null assertArrayEquals 判断数</description>
+    </item>
+    
+    <item>
       <title>Java注释引用类和其成员</title>
       <link>http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/</link>
       <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>

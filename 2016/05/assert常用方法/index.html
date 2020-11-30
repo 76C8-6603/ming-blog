@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+        Assert常用方法 - Ming Blog
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="org.junit.Assert assertEquals 判断对象是否相等，equals方法判断 assertSame 判断对象是否相等，==判断 assertTrue 判断条件是否为真 assertFalse 判断条件是否为假 assertNotNull 判断对象是否不为null assertArrayEquals 判断数" />
+    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
+    <title>Assert常用方法 - Ming Blog</title>
+    
+    
+    <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="Assert常用方法" />
+<meta property="og:description" content="org.junit.Assert assertEquals 判断对象是否相等，equals方法判断 assertSame 判断对象是否相等，==判断 assertTrue 判断条件是否为真 assertFalse 判断条件是否为假 assertNotNull 判断对象是否不为null assertArrayEquals 判断数" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.mingaccount.com/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" />
+<meta property="article:published_time" content="2016-05-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-05-17T00:00:00+00:00" />
+<meta itemprop="name" content="Assert常用方法">
+<meta itemprop="description" content="org.junit.Assert assertEquals 判断对象是否相等，equals方法判断 assertSame 判断对象是否相等，==判断 assertTrue 判断条件是否为真 assertFalse 判断条件是否为假 assertNotNull 判断对象是否不为null assertArrayEquals 判断数">
+<meta itemprop="datePublished" content="2016-05-17T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-05-17T00:00:00+00:00" />
+<meta itemprop="wordCount" content="562">
+
+
+
+<meta itemprop="keywords" content="assert," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Assert常用方法"/>
+<meta name="twitter:description" content="org.junit.Assert assertEquals 判断对象是否相等，equals方法判断 assertSame 判断对象是否相等，==判断 assertTrue 判断条件是否为真 assertFalse 判断条件是否为假 assertNotNull 判断对象是否不为null assertArrayEquals 判断数"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-green" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="" target="_blank">
+            <img class="img-circle img-rotate" src="http://www.mingaccount.com/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Ming</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">tianshiming5@outlook.com</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>BeiJing, China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Archives</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Categories</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/assert/" class="tag-list-link">assert</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/design-pattern/" class="tag-list-link">design-pattern</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/druid/" class="tag-list-link">druid</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/ehcache/" class="tag-list-link">ehcache</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/git/" class="tag-list-link">git</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/hadoop/" class="tag-list-link">hadoop</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/hive/" class="tag-list-link">hive</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/jackson/" class="tag-list-link">jackson</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/java/" class="tag-list-link">java</a><span
+                    class="tag-list-count">29</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/jooq/" class="tag-list-link">jooq</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/linux/" class="tag-list-link">linux</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/lombok/" class="tag-list-link">lombok</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/markdown/" class="tag-list-link">markdown</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/maven/" class="tag-list-link">maven</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mybatis/" class="tag-list-link">mybatis</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mysql/" class="tag-list-link">mysql</a><span
+                    class="tag-list-count">15</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/npm/" class="tag-list-link">npm</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/oracle/" class="tag-list-link">oracle</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/redis/" class="tag-list-link">redis</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/regexp/" class="tag-list-link">regexp</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/scala/" class="tag-list-link">scala</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/spark/" class="tag-list-link">spark</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
+                    class="tag-list-count">18</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/unit-test/" class="tag-list-link">unit-test</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/website-build/" class="tag-list-link">website-build</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/windows/" class="tag-list-link">windows</a><span
+                    class="tag-list-count">4</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="http://www.mingaccount.com/2020/10/windowspngquantfailedtobuild/" class="title">Windows CMD 错误pngquant failed to build, make sure that libpng-dev is installed</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-10-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-10-18</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="http://www.mingaccount.com/2020/08/win10/" class="title">WIN10 UBUNTU 异常：sleep: cannot read realtime clock: Invalid argument</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-10 13:37:30 &#43;0800 CST" itemprop="datePublished">2020-08-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="http://www.mingaccount.com/2020/07/oracleextract%E5%87%BD%E6%95%B0%E6%8F%90%E5%8F%96%E6%97%B6%E5%88%86%E7%A7%92%E7%9A%84%E9%97%AE%E9%A2%98/" class="title">Oracle extract函数提取时分秒的问题</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-07-30 17:42:55 &#43;0800 CST" itemprop="datePublished">2020-07-30</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="http://www.mingaccount.com/2020/07/jooq%E9%BB%98%E8%AE%A4schema/" class="title">JOOQ默认schema</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-07-14 11:16:55 &#43;0800 CST" itemprop="datePublished">2020-07-14</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="http://www.mingaccount.com/2020/06/druid%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E6%97%A0%E9%99%90%E5%B0%9D%E8%AF%95%E9%97%AE%E9%A2%98/" class="title">Druid数据库连接失败，无限尝试问题</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-16 15:38:20 &#43;0800 CST" itemprop="datePublished">2020-06-16</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/"
+    >Assert常用方法</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="http://www.mingaccount.com/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2016-05-17 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-05-17</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/assert/"> assert </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 562words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h2 id="orgjunitassert">org.junit.Assert</h2>
+<ul>
+<li><code>assertEquals</code> 判断对象是否相等，equals方法判断</li>
+<li><code>assertSame</code> 判断对象是否相等，==判断</li>
+<li><code>assertTrue</code> 判断条件是否为真</li>
+<li><code>assertFalse</code> 判断条件是否为假</li>
+<li><code>assertNotNull</code> 判断对象是否不为null</li>
+<li><code>assertArrayEquals</code> 判断数组是否相等</li>
+</ul>
+<h2 id="orgskyscreamerjsonassertjsonassert">org.skyscreamer.jsonassert.JSONAssert</h2>
+<p>JSONAssert可对json进行断言</p>
+<ul>
+<li>判断两个JSON对象 assertEquals(&hellip;boolean strict) 字段顺序不影响结果。当strict为false时，一个json是另外一个json的子集也能通过(比如{&ldquo;id&rdquo;:1}和{&ldquo;id&rdquo;:1,&ldquo;name&rdquo;:&ldquo;赵四&rdquo;})</li>
+<li>判断两个JSON数组 assertEquals(&hellip;boolean strict) 所有子元素必须全匹配，strict为false时，可以忽略数组顺序</li>
+</ul>
+<h2 id="assertj">AssertJ</h2>
+<p><code>AssertJ</code>是一个强大的链式结构的断言，一段代码可以进行多个断言。下面是一个官方实例：</p>
+<pre><code class="language-java">// entry point for all assertThat methods and utility methods (e.g. entry)
+import static org.assertj.core.api.Assertions.*;
+
+// basic assertions
+assertThat(frodo.getName()).isEqualTo(&quot;Frodo&quot;);
+assertThat(frodo).isNotEqualTo(sauron);
+
+// chaining string specific assertions
+assertThat(frodo.getName()).startsWith(&quot;Fro&quot;)
+                           .endsWith(&quot;do&quot;)
+                           .isEqualToIgnoringCase(&quot;frodo&quot;);
+
+// collection specific assertions (there are plenty more)
+// in the examples below fellowshipOfTheRing is a List&lt;TolkienCharacter&gt;
+assertThat(fellowshipOfTheRing).hasSize(9)
+                               .contains(frodo, sam)
+                               .doesNotContain(sauron);
+
+// as() is used to describe the test and will be shown before the error message
+assertThat(frodo.getAge()).as(&quot;check %s's age&quot;, frodo.getName()).isEqualTo(33);
+
+// exception assertion, standard style ...
+assertThatThrownBy(() -&gt; { throw new Exception(&quot;boom!&quot;); }).hasMessage(&quot;boom!&quot;);
+// ... or BDD style
+Throwable thrown = catchThrowable(() -&gt; { throw new Exception(&quot;boom!&quot;); });
+assertThat(thrown).hasMessageContaining(&quot;boom&quot;);
+
+// using the 'extracting' feature to check fellowshipOfTheRing character's names
+assertThat(fellowshipOfTheRing).extracting(TolkienCharacter::getName)
+                               .doesNotContain(&quot;Sauron&quot;, &quot;Elrond&quot;);
+
+// extracting multiple values at once grouped in tuples
+assertThat(fellowshipOfTheRing).extracting(&quot;name&quot;, &quot;age&quot;, &quot;race.name&quot;)
+                               .contains(tuple(&quot;Boromir&quot;, 37, &quot;Man&quot;),
+                                         tuple(&quot;Sam&quot;, 38, &quot;Hobbit&quot;),
+                                         tuple(&quot;Legolas&quot;, 1000, &quot;Elf&quot;));
+
+// filtering a collection before asserting
+assertThat(fellowshipOfTheRing).filteredOn(character -&gt; character.getName().contains(&quot;o&quot;))
+                               .containsOnly(aragorn, frodo, legolas, boromir);
+
+// combining filtering and extraction (yes we can)
+assertThat(fellowshipOfTheRing).filteredOn(character -&gt; character.getName().contains(&quot;o&quot;))
+                               .containsOnly(aragorn, frodo, legolas, boromir)
+                               .extracting(character -&gt; character.getRace().getName())
+                               .contains(&quot;Hobbit&quot;, &quot;Elf&quot;, &quot;Man&quot;);
+
+// and many more assertions: iterable, stream, array, map, dates, path, file, numbers, predicate, optional ...
+</code></pre>
+<p>AssertJ的语法比较简单，通过ide提示基本都能找到目标断言，更多可以参考<a href="https://assertj.github.io/doc/#assertj-overview">AssertJ官方文档</a> 和 <a href="https://www.javadoc.io/doc/org.assertj/assertj-core">AssertJ java doc</a></p>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="http://www.mingaccount.com/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" title="Assert常用方法" target="_blank" rel="external">http://www.mingaccount.com/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="http://www.mingaccount.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="" target="_blank"><span class="text-dark">Ming</span><small class="ml-1x">tianshiming5@outlook.com</small></a></h3>
+        <div>Finally</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/" title="Java注释引用类和其成员"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="http://www.mingaccount.com/2016/05/mybatis%E8%8E%B7%E5%8F%96%E8%87%AA%E5%A2%9Eid/"
+                    title="Mybatis insert完成后获取自增主键"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="http://www.mingaccount.com/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2015  -
+    2020
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="http://www.mingaccount.com/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
+<script src="http://www.mingaccount.com/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'http:\/\/www.mingaccount.com',
+            CONTENT_URL: 'http:\/\/www.mingaccount.com\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="http://www.mingaccount.com/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+
+  </body>
+</html>
