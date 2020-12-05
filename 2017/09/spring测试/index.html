@@ -39,7 +39,7 @@
 <meta itemprop="description" content="1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成">
 <meta itemprop="datePublished" content="2017-09-15T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2017-09-15T00:00:00+00:00" />
-<meta itemprop="wordCount" content="9384">
+<meta itemprop="wordCount" content="20937">
 
 
 
@@ -150,10 +150,6 @@
         <ul class="tag-list">
             
             
-            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/assert/" class="tag-list-link">assert</a><span
-                    class="tag-list-count">1</span></li>
-            
-            
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/design-pattern/" class="tag-list-link">design-pattern</a><span
                     class="tag-list-count">3</span></li>
             
@@ -183,7 +179,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/java/" class="tag-list-link">java</a><span
-                    class="tag-list-count">29</span></li>
+                    class="tag-list-count">30</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/jooq/" class="tag-list-link">jooq</a><span
@@ -239,11 +235,11 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
-                    class="tag-list-count">18</span></li>
+                    class="tag-list-count">20</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/unit-test/" class="tag-list-link">unit-test</a><span
-                    class="tag-list-count">1</span></li>
+                    class="tag-list-count">2</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/website-build/" class="tag-list-link">website-build</a><span
@@ -358,8 +354,8 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2017/09/spring%E6%B5%8B%E8%AF%95/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 9384words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 19minutes </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 20937words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 42minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -401,7 +397,7 @@
 <li><code>JdbcTemplate</code>，用于执行sql表达式。你可以查询数据库相关应用代码执行前后的数据库状态，并且Spring确保这些查询都在同一个事务中。党和ORM框架配合使用时，需要确保避免<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-tx-false-positives">false positives</a></li>
 </ul>
 <p>另外你可能想创建你自定义的支持类，更多信息可以参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-framework">TestContext framework</a></p>
-<h2 id="3-jdbc测试的支持">3. JDBC测试的支持</h2>
+<h1 id="3-jdbc测试的支持">3. JDBC测试的支持</h1>
 <p>JDBC相关的工具方法在类<code>JdbcTestUtils</code>类中，他在<code>org.springframework.test.jdbc</code>包下。它简化了标准的数据库测试场景。<code>JdbcTestUtils</code>提供了以下静态的工具方法：</p>
 <ul>
 <li><code>countRowsInTable(..)</code>:计算指定表有多少行数据</li>
@@ -414,7 +410,7 @@
 <p><code>AbstractTransactionalJUnit4SpringContextTests</code>和<code>AbstractTransactionalTestNGSpringContextTests</code>代理了前面提及的<code>JdbcTestUtils</code>类的方法。<br>
 <code>spring-jdbc</code>模块支持配置和启动一个集成的数据库，你可以用它进行集成测试。更多细节，参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#jdbc-embedded-database-support">Embedded Database Support</a> 和 <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#jdbc-embedded-database-dao-testing"> Testing Data Access Logic with an Embedded Database</a></p>
 </blockquote>
-<h2 id="4-注解">4. 注解</h2>
+<h1 id="4-注解">4. 注解</h1>
 <p>这个章节介绍你在测试Spring应用时可以用的注解。它包含如下几个主题：</p>
 <ul>
 <li>Spring 测试注解</li>
@@ -423,7 +419,7 @@
 <li>Spring JUnit Jupiter 测试注解</li>
 <li>测试元注解</li>
 </ul>
-<h3 id="41-spring-测试注解">4.1. Spring 测试注解</h3>
+<h2 id="41-spring-测试注解">4.1. Spring 测试注解</h2>
 <p>Spring框架提供了如下Spring特有的注解，你可以使用他们在你的单元和集成测试中。查看他们对应的javadoc以查找更多信息，包括默认的属性值，属性别名，和其他细节。</p>
 <p>Spring测试注解包括：</p>
 <ul>
@@ -445,9 +441,9 @@
 <li><code>@SqlMergeMode</code></li>
 <li><code>@SqlGroup</code></li>
 </ul>
-<h4 id="boostrapwith"><code>@BoostrapWith</code></h4>
+<h3 id="boostrapwith"><code>@BoostrapWith</code></h3>
 <p><code>@BootstrapWith</code>是一个类级别的注解，你可以使用它配置Spring TestContext框架是怎样引导启动的。具体可以使用<code>@BootstrapWith</code>去指定一个自定的<code>TestContextBootstrapper</code>。查看<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-bootstrapping">bootstrapping the TestContext framework</a> 以获取详细信息</p>
-<h4 id="contextconfiguration"><code>@ContextConfiguration</code></h4>
+<h3 id="contextconfiguration"><code>@ContextConfiguration</code></h3>
 <p><code>@ContextConfiguration</code> 定义类级别的源数据，常用来决定集成测试如何加载和配置一个<code>ApplicationContext</code>。具体的，可以使用<code>@ContextConfiguration</code>声明应用上下文的资源位置，或者用于加载上下文的组件类</p>
 <p>资源位置，一般来说就是在classpath路径下的XML的配置文件或者Groovy的脚本，而组件类一般来说是<code>@Configuration</code>注解的类。但是，资源位置可以引用文件系统中的文件和脚本，并且组件类可以是<code>@Component</code>类，<code>@Service</code>类，其他等等。更多参照<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-ctx-management-javaconfig-component-classes">Component Classes</a></p>
 <p>下面的例子<code>@ContextConfiguration</code>注解指向了一个XML文件：</p>
@@ -471,7 +467,7 @@ class CustomLoaderXmlApplicationContextTests{}
 <p><code>@ContextConfigurtion</code>对继承资源位置或者配置类提供了支持，还有由父类或者封闭类声明的context initializers</p>
 </blockquote>
 <p>详情参考 <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-ctx-management">Context Management</a> ,<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-junit-jupiter-nested-test-configuration">@Nested test class configuration</a> 以及<code>@ContextConfiguration</code>的API文档</p>
-<h4 id="webappconfiguration"><code>@WebAppConfiguration</code></h4>
+<h3 id="webappconfiguration"><code>@WebAppConfiguration</code></h3>
 <p><code>@WebAppConfiguration</code>是一个类级别的注解，它能将为集成测试声明的<code>ApplicationContext</code>指定为<code>WebApplicationContext</code>。<code>WebAppConfiguration</code>注解仅仅在测试类上存在，为确保<code>WebApplicationContext</code>是为测试加载，使用默认值<code>file:src/main/webapp</code>作为web应用的根路径（资源仓库路径）。资源仓库路径用于在后台创建<code>MockServletContext</code>，它被用作<code>WebApplicationContext</code>的<code>ServletContext</code></p>
 <p>下面是如何使用<code>@WebAppConfiguration</code>注解：</p>
 <pre><code class="language-java">@ContextConfiguration
@@ -484,7 +480,7 @@ class WebAppTests{}
 class WebAppTests{}
 </code></pre>
 <p>注意<code>WebAppConfiguration</code>必须与<code>ContextConfiguration</code>配合使用，不管在单个测试类还是一个测试类的层次结构中。详情参考<a href="https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/test/context/web/WebAppConfiguration.html">@WebAppConfiguration</a> API文档</p>
-<h4 id="contexthierarchy"><code>@ContextHierarchy</code></h4>
+<h3 id="contexthierarchy"><code>@ContextHierarchy</code></h3>
 <p>它是一个类级别的注解，为集成测试定义<code>ApplicationContext</code>实例的层次结构。<code>@ContextHierarchy</code>应该由一个<code>@ContextConfiguration</code>的实例集合来申明，其中每一个都定义context层级关系中的一级。下面的例子展示了<code>@ContextHierarchy</code>在单个测试类中的的使用（它也可以用在一个测试类的层次结构中）</p>
 <pre><code class="language-java">@ContextHierarchy({
     @ContextConfiguration(&quot;/parent-config.xml&quot;),
@@ -500,7 +496,7 @@ class ContextHierarchyTests{}
 class WebIntegrationTests{}
 </code></pre>
 <p>如果你需要在测试类的层次结构中对指定层级的配置进行合并或者重写，那么需要一个别名值来对应层级，在设置<code>@ContextHierarchy</code>的每个<code>@ContextConfiguration</code>层级时，需要给他们指明参数<code>name</code>的值。详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-ctx-management-ctx-hierarchies">Context Hierarchies</a> 和<a href="https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/test/context/ContextHierarchy.html"> @ContextHierarchy</a> api文档</p>
-<h4 id="activeprofiles"><code>@ActiveProfiles</code></h4>
+<h3 id="activeprofiles"><code>@ActiveProfiles</code></h3>
 <p>它是类级别的注解，当为继承测试加载<code>ApplicationContext</code>时用来声明启用哪些bean定义配置文件</p>
 <p>下面的例子表示启用了<code>dev</code>配置文件：</p>
 <pre><code class="language-java">@ContextConfiguration
@@ -516,7 +512,7 @@ class DeveloperIntegrationTests{}
 <p>默认情况下<code>@ActiveProfiles</code>是支持继承父类或者封闭类的配置信息的。你可以完全自定义解析激活配置文件通过实现<code>ActiveProfilesResolver</code>，并使用<code>@ActiveProfiles</code>的属性<code>resolver</code>来注册。</p>
 </blockquote>
 <p>详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-ctx-management-env-profiles">Context Configuration with Environment Profiles</a> ,<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-junit-jupiter-nested-test-configuration">@Nested test class configuration</a> ,以及<a href="https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/test/context/ActiveProfiles.html">@ActiveProfiles</a></p>
-<h4 id="testpropertysource"><code>@TestPropertySource</code></h4>
+<h3 id="testpropertysource"><code>@TestPropertySource</code></h3>
 <p>它是一个类级别的注解，你可以使用它来配置属性文件和内联属性的位置，最后添加到<code>PropertySources</code>集合中，这个集合在<code>ApplicationContext</code>的<code>Environment</code>中。</p>
 <p>下面的例子展示了怎样声明一个来自classpath的属性文件:</p>
 <pre><code class="language-java">@ContextConfiguration
@@ -529,7 +525,7 @@ class MyIntegrationTests{}
 class MyIntegrationTests{}
 </code></pre>
 <p>详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-ctx-management-property-sources">Context Configuration with Test Property Sources</a></p>
-<h4 id="dynamicpropertysource"><code>@DynamicPropertySource</code></h4>
+<h3 id="dynamicpropertysource"><code>@DynamicPropertySource</code></h3>
 <p>它是一个方法级别的注解，他可以注册动态属性，跟<code>@TestPropertySource</code>一样，也是添加到<code>PropertySources</code>集合中。当你不能提前判断属性值时，可以通过动态属性来设置-举个例子，如果属性是交由外部资源管理的，比如通过<a href="https://www.testcontainers.org/">TestContainers</a> 来进行的容器管理。</p>
 <p>下面的例子展示了如何注册一个动态属性：</p>
 <pre><code class="language-java">@ContextConfiguration
@@ -543,7 +539,7 @@ class MyIntegrationTests{
 }
 </code></pre>
 <p>详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-ctx-management-dynamic-property-sources">Context Configuration with Dynamic Property Sources</a></p>
-<h4 id="dirtiescontext"><code>@DirtiesContext</code></h4>
+<h3 id="dirtiescontext"><code>@DirtiesContext</code></h3>
 <p>这个注解表示底层的Spring<code>ApplicationContext</code>在执行测试的时候被污染了（意思就是，测试的时候以某种方式修改或者污染了<code>ApplicationContext</code>-比如说，改变单例bean的状态），并且需要关闭这个context。当一个应用上下文被dirty标记，会被测试框架从缓存中移除并关闭。在最后，如果还有其他测试需要这个context，Spring容器会重新构建。</p>
 <p>你可以使用该注解在类级别或者方法级别，在同一个类中或者类的层次结构中。你可以标记<code>ApplicationContext</code>是在方法前后还是在类前后被污染的，通过<code>methodMode</code>和<code>classMode</code>来配置。</p>
 <p>下面的例子展示了几个不同场景的使用方案：</p>
@@ -600,7 +596,7 @@ class ExtendedTests extends BaseTest{
 }
 </code></pre>
 <p>更多关于<code>EXHAUSTIVE</code>和<code>CURRENT_LEVEL</code>算法的问题，可以参考<a href="https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/test/annotation/DirtiesContext.HierarchyMode.html">DirtiesContext.HierarchyMode</a></p>
-<h4 id="testexecutionlisteners"><code>@TestExecutionListeners</code></h4>
+<h3 id="testexecutionlisteners"><code>@TestExecutionListeners</code></h3>
 <p>它定义了用来配置<code>TestExecutionListener</code>实现的类级别元数据(<code>TestExecutionListener</code>实现是由<code>TestContextManager</code>来注册的)。一般来说都是配合<code>@ContextConfiguration</code>来使用。</p>
 <p>下面的例子展示了如何注册两个<code>TestExecutionListener</code>实现</p>
 <pre><code class="language-java">@ContextConfiguration
@@ -608,7 +604,7 @@ class ExtendedTests extends BaseTest{
 class CustomTestExecutionListenerTests {}
 </code></pre>
 <p>默认情况下，<code>@TestExecutionListeners</code>是支持从父类继承的，或者内部类从外部封闭类继承。详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-junit-jupiter-nested-test-configuration">@Nested test class configuration</a> 和<a href="https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/test/context/TestExecutionListeners.html">@TestExecutionListeners javadoc</a></p>
-<h4 id="commit"><code>@Commit</code></h4>
+<h3 id="commit"><code>@Commit</code></h3>
 <p><code>@Commit</code>代表测试方法的事务会在测试方法完成后提交。你可以将<code>@Commit</code>替换为<code>@Rollback(false)</code>。<code>@Commit</code>和<code>@Rollback</code>相似，都可以声明在类或方法上。</p>
 <p>使用实例：</p>
 <pre><code class="language-java">@Commit
@@ -616,7 +612,7 @@ class CustomTestExecutionListenerTests {}
 void testProcessWithoutRollback(){
 }
 </code></pre>
-<h4 id="rollback"><code>@Rollback</code></h4>
+<h3 id="rollback"><code>@Rollback</code></h3>
 <p><code>@Rollback</code>代表测试方法执行完后，是否回滚事务。为true则回滚，否则事务会提交（跟<code>@Commit</code>一样）。该注解的默认值为true，就算没有声明该注解，事务默认也会回滚。</p>
 <p>当申明在类上时，<code>@Rollback</code>注解将会影响类的所有测试方法，当申明在方法时，只会影响指定方法，并会覆盖类上的全局<code>@Rollback</code>或<code>@Commit</code>配置</p>
 <p>使用实例：</p>
@@ -625,25 +621,25 @@ void testProcessWithoutRollback(){
 void testProcessWithoutRollback(){
 }
 </code></pre>
-<h4 id="beforetransaction"><code>@BeforeTransaction</code></h4>
+<h3 id="beforetransaction"><code>@BeforeTransaction</code></h3>
 <p>它代表注解的<code>void</code>方法应该在事务启动之前运行，对测试方法来说，它已经被配置好了在一个事务中运行，是通过使用Spring的<code>@Transactional</code>注解来实现的。<code>@BeforeTransaction</code>方法是不需要<code>public</code>修饰的，并且可以声明在java8的接口默认方法上。</p>
 <p>使用实例：</p>
 <pre><code class="language-java">@BeforeTransaction
 void beforeTransaction(){}
 </code></pre>
-<h4 id="aftertransaction"><code>@AfterTransaction</code></h4>
+<h3 id="aftertransaction"><code>@AfterTransaction</code></h3>
 <p>它代表注解的<code>void</code>方法应该在事务结束后运行，对测试方法来说，它已经被配置好了在一个事务中运行，是通过使用Spring的<code>@Transactional</code>注解来实现的。<code>@AfterTransaction</code>方法是不需要<code>public</code>修饰的，并且可以声明在java8的接口默认方法上。</p>
 <pre><code class="language-java">@AfterTransaction
 void afterTransaction(){}
 </code></pre>
-<h4 id="sql"><code>@Sql</code></h4>
+<h3 id="sql"><code>@Sql</code></h3>
 <p>它是用来配置测试类或者方法需要的sql脚本的。</p>
 <pre><code class="language-java">@Test
 @Sql({&quot;/test-schema.sql&quot;,&quot;/test-user-data.sql&quot;})
 void userTest(){}
 </code></pre>
 <p>详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-executing-sql-declaratively">Executing SQL scripts declaratively with @Sql</a></p>
-<h4 id="sqlconfig"><code>@SqlConfig</code></h4>
+<h3 id="sqlconfig"><code>@SqlConfig</code></h3>
 <p>它用来配置如何解析和执行<code>@Sql</code>注解配置的脚本。</p>
 <pre><code class="language-java">@Test
 @Sql(
@@ -652,7 +648,7 @@ void userTest(){}
 )
 void userTest(){}
 </code></pre>
-<h4 id="sqlmergemode"><code>@SqlMergeMode</code></h4>
+<h3 id="sqlmergemode"><code>@SqlMergeMode</code></h3>
 <p>它是用来设置<code>@Sql</code>注解的方法和类的sql脚本是否融合在一起。如果类和方法上都没有<code>@SqlMergeMode</code>注解，那么默认的<code>OVERRIDE</code>模式将会被使用。在<code>OVERRIDE</code>模式下，方法上声明的<code>@Sql</code>会覆盖掉类上的<code>@Sql</code>声明。</p>
 <p>注意方法上的<code>@SqlMergeMode</code>声明会覆盖类上的声明。</p>
 <p>作用在类上：</p>
@@ -676,7 +672,7 @@ class UserTests{
     void standardUserProfile(){}
 }
 </code></pre>
-<h4 id="sqlgroup"><code>@SqlGroup</code></h4>
+<h3 id="sqlgroup"><code>@SqlGroup</code></h3>
 <p>它是一个容器注解，内部集成了多个<code>@Sql</code>注解。你可以使用<code>@SqlGroup</code>直接声明多个集成的<code>@Sql</code>，或者你可以配合java8对重复注解的支持来使用，<code>@Sql</code>可以在同一个类和方法上声明多次，隐式的生成注解容器。</p>
 <pre><code class="language-java">@Test
 @SqlGroup({
@@ -685,7 +681,7 @@ class UserTests{
 })
 void userTest(){}
 </code></pre>
-<h3 id="42-标准注解支持">4.2. 标准注解支持</h3>
+<h2 id="42-标准注解支持">4.2. 标准注解支持</h2>
 <p>下面的注解在任何配置的Spring TestContext框架的标准语法中都支持。注意这些注解并不是专门用来测试的，在Spring框架的任何地方都可以使用。</p>
 <ul>
 <li><code>@Autowired</code></li>
@@ -705,7 +701,7 @@ void userTest(){}
 在Spring TestContext框架中，你可以在<code>ApplicationContext</code>内部配置的任何应用组件上以标准语法使用<code>@PostConstruct</code>和<code>@PreDestroy</code>。但是在实际测试类中，这些生命周期注解还是有使用限制的。</p>
 <p>如果一个方法在测试类中，并且被注解<code>@PostConstruct</code>修饰，那么这个方法会在底层测试框架的所有before方法之前执行（举个例子，任何被JUnit Jupiter的<code>@BeforeEach</code>注解修饰的方法），并且他会被应用在测试类中的每个测试方法上。另一方面，如果一个方法在测试类中被<code>@PreDestroy</code>注解修饰，那么这个方法永远不会运行。所以，在一个测试类中，我们推荐使用来自测试框架的生命周期的回调函数，而不是<code>@PostConstruct</code>和<code>@PreDestroy</code>。</p>
 </blockquote>
-<h3 id="43-spring-junit-4-测试注解">4.3. Spring JUnit 4 测试注解</h3>
+<h2 id="43-spring-junit-4-测试注解">4.3. Spring JUnit 4 测试注解</h2>
 <p>下面的注解仅在与 <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-junit4-runner">SpringRunner</a> ，<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-junit4-rules">Spring&rsquo;s JUnit 4 rules</a> ,或者<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-support-classes-junit4">Spring’s JUnit 4 support classes</a> 配合使用时才有效：</p>
 <ul>
 <li><code>@IfProfileValue</code></li>
@@ -713,7 +709,7 @@ void userTest(){}
 <li><code>@Timed</code></li>
 <li><code>@Repeat</code></li>
 </ul>
-<h4 id="ifprofilevalue"><code>IfProfileValue</code></h4>
+<h3 id="ifprofilevalue"><code>IfProfileValue</code></h3>
 <p>它代表注解修饰的测试只在指定测试环境生效。如果<code>ProfileValueSource</code>的属性<code>value</code>跟<code>name</code>的值匹配，这个测试才生效。否则，这个测试不会启用。</p>
 <p>你可以声明<code>IfProfileValue</code>在类或者方法上。类级别的使用优先于方法级别的使用，特别是针对类下的所有方法或者所有子类的时候。要启用一个测试，他的类和方法都要是启用状态，但是在默认没有声明<code>IfProfileValue</code>的情况下，就代表着启用状态。JUnit4的<code>@Ignore</code>注解跟它类似，除了<code>@Ignore</code>只能用来屏蔽测试。</p>
 <p>使用实例：</p>
@@ -726,14 +722,14 @@ public void testProcessWithRunsOnlyOnOracleJvm(){}
 @IfProfileValue(name = &quot;test-groups&quot;, values={&quot;unit-tests&quot;,&quot;integration-tests&quot;})
 public void testProcessWhichRunsForUnitOrIntegrationTestGroups(){}
 </code></pre>
-<h4 id="profilevaluesourceconfiguration"><code>@ProfileValueSourceConfiguration</code></h4>
+<h3 id="profilevaluesourceconfiguration"><code>@ProfileValueSourceConfiguration</code></h3>
 <p>它是一个类级别的注解，它指定了当通过<code>@IfProfileValue</code>注解检索配置值的时候该使用什么类型的<code>ProfileValueSource</code>。如果该注解没有在测试上声明，<code>SystemProfileValueSource</code>会被作为默认值。</p>
 <p>使用实例：</p>
 <pre><code class="language-java">@Test
 @ProfileValueSourceConfiguration(CustomProfileValueSource.class)
 public class CustomProfileValueSourceTests(){}
 </code></pre>
-<h4 id="timed"><code>@Timed</code></h4>
+<h3 id="timed"><code>@Timed</code></h3>
 <p><code>@Timed</code>代表备注接的测试方法必须在指定的时间段内完成（微秒）。如果测试时间超过了指定的时间段，则测试失败。</p>
 <p>这个时间段包括运行测试方法自身的时间，以及重复测试的时间（<code>@Repeat</code>)，也包括其他测试资源的安装和卸载时间。</p>
 <pre><code class="language-java">@Timed(millis = 1000)
@@ -741,14 +737,14 @@ public void testProcessWithOneSecondTimeout(){
 }
 </code></pre>
 <p>Spring的<code>@Timed</code>语法跟JUnit4的语法<code>@Test(timeout=...)</code>不同，是因为JUnit4处理测试执行超时的处理方式（在单独的一个分支执行测试方法），如果测试超时<code>@Test(timeout=...)</code>会立即让测试失败。但Spring的<code>@Timed</code>不同，在标识失败之前，他会让测试方法先走完。</p>
-<h4 id="repeat"><code>@Repeat</code></h4>
+<h3 id="repeat"><code>@Repeat</code></h3>
 <p>它代表注解的测试方法必定会重复执行。重复执行的次数需要指定在注解参数中</p>
 <p>除了重复执行测试方法本身，测试资源的安装和卸载也会被重复执行。</p>
 <pre><code class="language-java">@Repeat(10)
 @Test
 public void testProcessRepeatedly(){}
 </code></pre>
-<h3 id="44-spring-junit-jupiter-测试注解">4.4. Spring JUnit Jupiter 测试注解</h3>
+<h2 id="44-spring-junit-jupiter-测试注解">4.4. Spring JUnit Jupiter 测试注解</h2>
 <p>下面的注解只在配合<code>SpringExtension</code>和JUnit Jupiter(也就是JUnit5的编程模型)使用时才可用</p>
 <ul>
 <li><code>@SpringJUnitConfig</code></li>
@@ -758,7 +754,7 @@ public void testProcessRepeatedly(){}
 <li><code>@EnabledIf</code></li>
 <li><code>@DisabledIf</code></li>
 </ul>
-<h4 id="springjunitconfig"><code>@SpringJUnitConfig</code></h4>
+<h3 id="springjunitconfig"><code>@SpringJUnitConfig</code></h3>
 <p>它是一个集成的注解，他是由来自JUnit Jupiter的<code>@ExtendWith(SpringExtension.class)</code>和来自Spring TestContext框架的<code>@ContextConfiguration</code>组成的。他可以作用在类上以替代<code>@ContextConfiguration</code>。关于配置选项，<code>@ContextConfiguration</code>和<code>@SpringJUnitConfig</code>唯一的区别是在<code>@SpringJUnitConfig</code>可以用<code>value</code>属性声明组件类。</p>
 <p>下面的例子展示了如何使用<code>@SpringJUnitConfig</code>注解指定一个配置类：</p>
 <pre><code class="language-java">@SpringJUnitConfig(TestConfig.class)
@@ -771,6 +767,386 @@ class XmlJUnitJupiterSpringTests{
 }
 </code></pre>
 <p>详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-ctx-management">Context Management</a> 和<a href="https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/test/context/junit/jupiter/SpringJUnitConfig.html">@SpringJUnitConfig</a> ，<code>@ContextConfiguration</code>的API文档</p>
+<h3 id="springjunitwebconfig"><code>@SpringJUnitWebConfig</code></h3>
+<p>它是一个复合注解，是由来自JUnit Jupiter的<code>@ExtendWith(SprintExtension.class)</code>与来自Spring TestContext框架的<code>ContextConfiguration</code>、<code>@WebAppConfiguration</code>构成。你可以将他申明在类上，它可以用来代替<code>@ContextConfiguration</code>和<code>@WebAppConfiguration</code>。关于配置选项，<code>@ContextConfiguration</code>和<code>@SpringJUnitWebConfig</code>的唯一区别是<code>@SpringJUnitWebConfig</code>可以同使用<code>value</code>属性来声明组件类。另外你可以覆盖<code>@WebAppConfiguration</code>的<code>value</code>属性，通过<code>@SpringJUnitWebConfig</code>的<code>resourcePath</code>属性。</p>
+<p>下面的例子展示了如何指定一个配置类：</p>
+<pre><code class="language-java">@SpringJUnitWebConfig(TestConfig.class)
+class ConfigurationClassJUnitJupiterSpringWebTests{}
+</code></pre>
+<p>下面的例子展示了如何指定一个配置文件的路径：</p>
+<pre><code class="language-java">@SpringJUnitWebConfig(locations = &quot;/test-config.xml&quot;)
+class XmlJUnitJupiterSpringWebTests{}
+</code></pre>
+<p>详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-ctx-management">Context Management</a> 和<a href="https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/test/context/junit/jupiter/web/SpringJUnitWebConfig.html">@SpringJUnitWebConfig</a> ，<a href="https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/test/context/ContextConfiguration.html">@ContextConfiguration</a> ，<a href="https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/test/context/web/WebAppConfiguration.html">@WebAppConfiguration</a></p>
+<h3 id="testconstructor">TestConstructor</h3>
+<p>它是一个类级别的注解，用来配置如何将测试的<code>ApplicationContext</code>组件参数装配到测试类构造方法的参数中。</p>
+<p>如果<code>@TestConstructor</code>不存在，那么会有一个默认的装配模式被使用。下面的提示展示了如何改变默认模式。注意，如果构造器上有一个<code>@Autowired</code>注解，那么<code>@TestConstructor</code>和默认模式都会被覆盖。</p>
+<blockquote>
+<p><strong>改变测试构造方法的默认装配模式</strong>
+要改变默认的装配模式可以通过设置<code>spring.test.constructor.autowire.mode</code>JVM 系统属性为<code>all</code>。还可以通过设置<code>SpringProperties</code>机制来完成。</p>
+<p>在Spring Framework 5.3，默认模式可以设置为一个<a href="https://junit.org/junit5/docs/current/user-guide/#running-tests-config-params">JUnit Platform configuration parameter</a></p>
+<p>如果<code>spring.test.constructor.autowire.mode</code>属性没有设置，那么测试类的构造函数将不会自动装配</p>
+</blockquote>
+<blockquote>
+<p>在Spring Framework 5.2，在使用JUnit Jupiter时<code>TestConstructor</code>只能和<code>SpringExtension</code>配合使用。注意在大多数境况下，<code>SpringExtension</code>已经为你自动注册完成了-比如在用了<code>@SpringJUnitConfig</code>和<code>@SpringJUnitWebConfig</code>或者各种来自Spring Boot测试相关的注解时</p>
+</blockquote>
+<h3 id="nestedtestconfiguration"><code>@NestedTestConfiguration</code></h3>
+<p>它是一个类级别的注解，被用来设置Spring测试配置注解如何在内部测试类中运行。</p>
+<p>如果它没有在测试类显性申明，在他的父类结构，或者在他的封闭类结构中，默认的封闭配置继承模型会被使用。下面的提示展示如何修改默认模式。</p>
+<blockquote>
+<p><strong>改变默认的封闭配置继承模式</strong><br>
+默认的封闭配置继承模式是<code>INHERIT</code>，要改变默认的模式可以通过设置<code>spring.test.enclosing.configuration</code>JVM系统属性为<code>OVERRIDE</code>.还可以通过<code>SpringProperties</code>机制来改变</p>
+</blockquote>
+<p>支持<code>@NestedTestConfiguration</code>语法的Spring测试框架注解：</p>
+<ul>
+<li><code>@BootstrapWith</code></li>
+<li><code>@ContextConfiguration</code></li>
+<li><code>@WebAppConfiguration</code></li>
+<li><code>@ContextHierarchy</code></li>
+<li><code>@ActiveProfiles</code></li>
+<li><code>@TestPropertySource</code></li>
+<li><code>@DiritesContext</code></li>
+<li><code>@TestExecutionListeners</code></li>
+<li><code>@Transactional</code></li>
+<li><code>@Commit</code></li>
+<li><code>@Rollback</code></li>
+<li><code>@Sql</code></li>
+<li><code>@SqlConfig</code></li>
+<li><code>@SqlMergeMode</code></li>
+<li><code>@TestContructor</code></li>
+</ul>
+<blockquote>
+<p>通常情况下<code>@NestedTestConfiguration</code>注解需要和<code>@Nested</code>注解结合使用在JUnit Jupiter中才有意义；但是可能有其他Spring支持的测试框架和继承测试类使用了该注解。</p>
+</blockquote>
+<p>详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-junit-jupiter-nested-test-configuration">@Nested test class configuration </a></p>
+<h3 id="enabledif"><code>@EnabledIf</code></h3>
+<p>它表示它修饰的JUnit Jupiter类或者测试方法是否启用，由提供的<code>expression</code>结果决定。具体来说，如果一个表达式的计算结果是<code>Boolean.TRUE</code>或者一个<code>String</code>equal为<code>true</code>(忽略大小写)，这个测试就是启用的。当应用于类级别时，所有在该类中的测试方法都会默认启用。</p>
+<p>以下的表达式都可用：</p>
+<ul>
+<li><a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#expressions">Spring Expression Language</a> 。举个例子：<code>@EnabledIf(&quot;#{systemProperties\['os.name'].toLowerCase().contains('mac')}&quot;)</code></li>
+<li>Spring <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-environment">Environment</a> 中可用的属性占位符。举个例子：<code>@EnabledIf(&quot;${smoke.tests.enabled}&quot;)</code></li>
+<li>文本。比如：<code>@EnabledIf(&quot;true&quot;)</code></li>
+</ul>
+<p>注意文本表达式如果不是动态的属性占位符的解析结果，那将没有任何意义，因为<code>@EnableIf(&quot;false&quot;)</code>等于<code>@Disabled</code>，并且<code>@EnabledIf(&quot;true&quot;)</code>也没有任何意义。</p>
+<p>你可以将<code>@EnabledIf</code>作为一个元注解去创建自定义的复合注解。比如，你可以创建一个自定义的<code>@EnabledOnMac</code>注解：</p>
+<pre><code class="language-java">@Target({ElementType.TYPE, ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+@EnabledIf(
+    expression = &quot;#{systemProperties['os.name'].toLowerCase().contains('mac')}&quot;,
+    reason = &quot;Enabled on Mac OS&quot;
+)
+public @interface EnabledOnMac{}
+</code></pre>
+<h3 id="disabledif"><code>@DisabledIf</code></h3>
+<p>它表示它修饰的JUnit Jupiter类或者测试方法是否弃用，由提供的<code>expression</code>结果决定。具体来说，如果一个表达式的计算结果是<code>Boolean.TRUE</code>或者一个<code>String</code>equal为<code>true</code>(忽略大小写)，这个测试就是弃用的。当应用于类级别时，所有在该类中的测试方法都会默认弃用。</p>
+<p>以下的表达式都可用：</p>
+<ul>
+<li><a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#expressions">Spring Expression Language</a> 。举个例子：<code>@DisabledIf(&quot;#{systemProperties\['os.name'].toLowerCase().contains('mac')}&quot;)</code></li>
+<li>Spring <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-environment">Environment</a> 中可用的属性占位符。举个例子：<code>@DisabledIf(&quot;${smoke.tests.enabled}&quot;)</code></li>
+<li>文本。比如：<code>@DisabledIf(&quot;true&quot;)</code></li>
+</ul>
+<p>注意文本表达式如果不是动态的属性占位符的解析结果，那将没有任何意义，因为<code>@DisabledIf(&quot;true&quot;)</code>等于<code>@Disabled</code>，并且<code>@EnabledIf(&quot;false&quot;)</code>也没有任何意义。</p>
+<p>你可以将<code>@DisabledIf</code>作为一个元注解去创建自定义的复合注解。比如，你可以创建一个自定义的<code>@DisabledOnMac</code>注解：</p>
+<pre><code class="language-java">@Target({ElementType.TYPE, ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+@DisabledIf(
+    expression = &quot;#{systemProperties['os.name'].toLowerCase().contains('mac')}&quot;,
+    reason = &quot;Disabled on Mac OS&quot;
+)
+public @interface DisabledOnMac {}
+</code></pre>
+<h2 id="45-测试元注解">4.5. 测试元注解</h2>
+<p>你可以使用大多数测试相关的注解作为元注解去创建自定义的复合注解，那样可以减少测试套件的重复配置。</p>
+<p>你可以使用下面任何一个注解作为元注解：</p>
+<ul>
+<li>@BootstrapWith</li>
+<li>@ContextConfiguration</li>
+<li>@ContextHierarchy</li>
+<li>@ActiveProfiles</li>
+<li>@TestPropertySource</li>
+<li>@DirtiesContext</li>
+<li>@WebAppConfiguration</li>
+<li>@TestExecutionListeners</li>
+<li>@Transactional</li>
+<li>@BeforeTransaction</li>
+<li>@AfterTransaction</li>
+<li>@Commit</li>
+<li>@Rollback</li>
+<li>@Sql</li>
+<li>@SqlConfig</li>
+<li>@SqlMergeMode</li>
+<li>@SqlGroup</li>
+<li>@Repeat (only supported on JUnit 4)</li>
+<li>@Timed (only supported on JUnit 4)</li>
+<li>@IfProfileValue (only supported on JUnit 4)</li>
+<li>@ProfileValueSourceConfiguration (only supported on JUnit 4)</li>
+<li>@SpringJUnitConfig (only supported on JUnit Jupiter)</li>
+<li>@SpringJUnitWebConfig (only supported on JUnit Jupiter)</li>
+<li>@TestConstructor (only supported on JUnit Jupiter)</li>
+<li>@NestedTestConfiguration (only supported on JUnit Jupiter)</li>
+<li>@EnabledIf (only supported on JUnit Jupiter)</li>
+<li>@DisabledIf (only supported on JUnit Jupiter)</li>
+</ul>
+<p>考虑下面的例子：</p>
+<pre><code class="language-java">@RunWith(SpringRunner.class)
+@ContextConfiguration({&quot;/app-config.xml&quot;,&quot;/test-data-access-config.xml&quot;})
+@ActiveProfiles(&quot;dev&quot;)
+@Transactional
+public class OrderRepositoryTests{}
+
+@RunWith(SpringRunner.class)
+@ContextConfiguration({&quot;/app-config.xml&quot;, &quot;/test-data-access-config.xml&quot;})
+@ActiveProfiles(&quot;dev&quot;)
+@Transactional
+public class UserRepositoryTests{}
+</code></pre>
+<p>观察上面的Spring测试注解配置基本都是重复的，可以通过自定义注解合并他们：</p>
+<pre><code class="language-java">@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@ContextConfiguration({&quot;/app-config.xml&quot;, &quot;/test-data-access-config.xml&quot;})
+@ActiveProfiles(&quot;dev&quot;)
+@Transactional
+public @interface TransactionalDevTestConfig {}
+</code></pre>
+<p>然后你就可以直接使用这个自定义注解去简化JUnit4为基础的测试类：</p>
+<pre><code class="language-java">@RunWith(SpringRunner.class)
+@TransactionalDevTestConfig
+public class OrderRepositoryTests{}
+
+@RunWith(SpringRunner.class)
+@TransactionalDevTestConfig
+public class UserRepositoryTests {}
+</code></pre>
+<p>如果我们使用JUnit Jupiter进行测试类编写，那么可以进一步减少重复代码，因为JUnit 5的注解同样可以作为元注解：</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+@ContextConfiguration({&quot;/app-config.xml&quot;, &quot;/test-data-access-config.xml&quot;})
+@ActiveProfiles(&quot;dev&quot;)
+@Transactional
+class OrderRepositoryTest{}
+
+@ExtendWith(SpringExtension.class)
+@ContextConfiguration({&quot;/app-config.xml&quot;, &quot;/test-data-access-config.xml&quot;})
+@ActiveProfiles(&quot;dev&quot;)
+@Transactional
+class UserRepositoryTests{}
+</code></pre>
+<p>观察上面的Spring测试注解配置基本都是重复的，可以通过自定义注解合并他们：</p>
+<pre><code class="language-java">@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@ExtendWith(SpringExtension.class)
+@ContextConfiguration({&quot;/app-config.xml&quot;, &quot;/test-data-access-config.xml&quot;})
+@ActiveProfiles(&quot;dev&quot;)
+@Transactional
+public @interface TransactionalDevTestConfig { }
+</code></pre>
+<p>然后你就可以直接使用这个自定义注解去简化JUnit5为基础的测试类：</p>
+<pre><code class="language-java">@TransactionalDevTestConfig
+class OrderRepositoryTests { }
+
+@TransactionalDevTestConfig
+class UserRepositoryTests { }
+</code></pre>
+<p>因为JUnit Jupiter支持<code>@Test</code>,<code>@RepeatedTest</code>,<code>ParameterizedTest</code>等等作为源注解，所以你也可以创建基于方法级别的自定义复合注解，比如我们创建一个注解它结合了来自JUnit Jupiter的<code>@Test</code>，<code>@Tag</code>和来自Spring的<code>@Transactional</code>：</p>
+<pre><code class="language-java">@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+@Transactional
+@Tag(&quot;integration-test&quot;) // org.junit.jupiter.api.Tag
+@Test // org.junit.jupiter.api.Test
+public @interface TransactionalIntegrationTest {
+}
+</code></pre>
+<p>然后我们可以在任何JUnit Jupiter测试方法上使用它们：</p>
+<pre><code class="language-java">@TransactionalIntegrationTest
+void saveOrder() { }
+
+@TransactionalIntegrationTest
+void deleteOrder() { }
+</code></pre>
+<p>详情参考<a href="https://github.com/spring-projects/spring-framework/wiki/Spring-Annotation-Programming-Model">Spring Annotation Programming Model</a></p>
+<h1 id="5-spring-testcontext-framework">5. Spring TestContext Framework</h1>
+<p>Spring TestContext Framework(在<code>org.springframework.test.context</code>包下)，提供了通用的，注解驱动的单元和集成测试，并且不跟你的测试框架耦合。TestContext framework更看重约定而不是配置，有合理的默认值，并且你可以通过注解参数来修改它。</p>
+<p>另外对于常见的测试架构：JUnit 4，JUnit Jupiter(JUnit 5)，和TestNG，TestContext framework提供了特定的支持。对于JUnit4和TestNG，spring提供了<code>abstract</code>支持类。此外，Spring为JUnit4提供了自定义JUnit<code>Runner</code>和自定义JUnit<code>Rules</code>，并且为JUnit Jupiter提供了自定义的<code>Extension</code>，它们可以让你编写所谓的POJO测试类。POJO测试类就是测试类不需要继承一个特定的类结构，比如<code>abstarct</code>父类。</p>
+<p>下面的章节提供了一个TestContext framework的概览。如果你只对使用框架有兴趣，对扩展自定义监听或者自定义加载器不感兴趣的话，可以直接跳过这个章节。</p>
+<h2 id="51-关键抽象概念">5.1. 关键抽象概念</h2>
+<p>框架的核心是由<code>TestContextManager</code>、<code>TestContext</code>、<code>TestExecutionListener</code>、和<code>SmartContextLoader</code>接口组成。每个测试类都会创建一个<code>TestContextManager</code>。反过来，<code>TestContextManger</code>管理着一个<code>TestContext</code>，这个<code>TestContext</code>保存着当前测试的上下文参数。在测试进行中<code>TestContextManger</code>同时也更新<code>TestContext</code>的状态，并且委托给<code>TestExecutionListener</code>的实现，它会通过依赖注入来检测实际测试的运行，管理事务等等。一个<code>SmartContextLoader</code>负责为一个给定的测试类加载<code>ApplicationContext</code>。详情参考<a href="https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/test/context/package-summary.html">javadoc</a></p>
+<h3 id="testcontext"><code>TestContext</code></h3>
+<p><code>TestContext</code>封装了测试运行所在的上下文（忽略具体的测试框架）并为其所负责的测试实例提供上下文管理和缓存支持。<code>TestContext</code>还能委托<code>SmarkContextLoader</code>去加载<code>ApplicationContext</code>。</p>
+<h3 id="testcontextmanager"><code>TestContextManager</code></h3>
+<p><code>TestContextManger</code>是Spring TestContext Framework的主要切入点，它负责管理一个单独的<code>TestContext</code>并且给每个已经注册的<code>TestExcutionListener</code>在以下定义良好的测试执行点发送信号：</p>
+<ul>
+<li>在任何&quot;before class&quot;或者&quot;before all&quot;方法之前</li>
+<li>测试实例的后期处理</li>
+<li>在任何&quot;before&quot;或者&quot;before each&quot;方法之前</li>
+<li>在测试方法执行之前但在测试初始化之后</li>
+<li>在测试方法执行之后但在测试销毁之前</li>
+<li>在任何&quot;after&quot;或者&quot;after each&quot;方法执行之后</li>
+<li>在任何&quot;after class&quot;或者&quot;after all&quot;方法执行之后</li>
+</ul>
+<h3 id="testexecutionlistener"><code>TestExecutionListener</code></h3>
+<p><code>TestExecutionListener</code>定义了一系列测试监听API，它们又<code>TestContextManager</code>注册和发布。详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-tel-config">TestExecutionListener Configuration</a></p>
+<h3 id="contextloaders"><code>ContextLoaders</code></h3>
+<p><code>ContextLoaders</code>是一个策略接口为一个Spring TestContext Framework管理的集成测试加载一个<code>ApplicationContext</code>。要提供组件类，激活bean定义配置，测试属性资源，上下文结构，和<code>WebApplicationContext</code>的支持你应该实现<code>SmartContextLoader</code>而不是这个接口。</p>
+<p><code>SmartContextLoader</code>是<code>ContextLoader</code>接口的扩展，它接替了原始<code>ContextLoader</code>极少的SPI。具体来说，一个<code>SmartContextLoader</code>可以选择去处理资源位置，组件类，或者上下文初始化。其次，一个<code>SmartContextLoader</code>可以设置启用bean定义配置和上下文加载的测试属性资源。</p>
+<p>Spring提供了下面的实现：</p>
+<ul>
+<li><code>DelegatingSmartContextLoader</code>：两个默认加载器之一，它委托给内部的一个<code>AnnotationConfigContextLoader</code>，一个<code>GenericXmlContextLoader</code>，或者一个<code>GenericGroovyXmlContextLoader</code>，取决于测试类的配置声明，或者存在的默认位置或者默认配置类。Groovy支持只在classpath目录下有Groovy时才可用。</li>
+<li><code>WebDelegatingSmartContextLoader</code>:两个默认加载器之一,它委托给内部的一个<code>AnnotationConfigWebContextLoader</code>，一个<code>GenericXmlWebContextLoader</code>，或者一个<code>GenericGroovyXmlWebContextLoader</code>，取决于测试类的配置声明，或者存在的默认位置或者默认配置类。只有在测试类上有<code>@WebAppConfiguration</code>存在时，才能使用web<code>ContextLoader</code>。Groovy支持只在classpath目录下有Groovy时才可用。</li>
+<li><code>AnnotationConfigContextLoader</code>:用组件类加载一个标准的<code>ApplicationContext</code></li>
+<li><code>AnnotationConfigWebContextLoader</code>:用组件类加载一个<code>WebApplicationContext</code></li>
+<li><code>GenericGroovyXmlContextLoader</code>:用Groovy脚本或者XML配置文件加载一个标准的<code>ApplicationContext</code></li>
+<li><code>GenericGroovyXmlWebContextLoader</code>:用Groovy脚本或者XML配置文件加载一个<code>WebApplicationContext</code></li>
+<li><code>GenericXmlContextLoader</code>:用XML资源地址加载一个标准的<code>ApplicationContext</code></li>
+<li><code>GenericXmlWebContextLoader</code>:用XML资源地址加载一个<code>WepApplicationContext</code></li>
+</ul>
+<h2 id="52-引导testcontext-framework">5.2. 引导TestContext Framework</h2>
+<p>Spring TestContext Framework内部的默认配置对于一般的使用情况已经足够了。但是，有时开发团队或者第三方框架想改变默认的<code>ContextLoader</code>，实现自定义的<code>TestContext</code>或者<code>ContextCache</code>，增加默认的<code>ContextCustomizerFactory</code>和<code>TestExecutionListener</code>实现集合等等操作。对于这种对TestContext 框架操作的底层的控制，Spring提供了一个引导策略。</p>
+<p><code>TestContextBootstrapper</code>为TestContext框架定义了SPI。一个<code>TestContextBootstrapper</code>通过<code>TextContextManager</code>被用来为当前测试加载<code>TestExecutionListener</code>实现和构建他管理的<code>TestContext</code>。你可以通过<code>@BootstrapWith</code>为测试类（或者测试类结构）配置一个自定义的引导策略，可以直接使用<code>@BootstrapWith</code>或者把它作为一个元注解.如果没有显式的指定<code>@BootstrapWith</code>，默认情况下使用<code>DefaultTestContextBootstrapper</code>或者<code>WebTestContextBootstrapper</code>，取决于<code>@WebAppConfiguration</code>是否存在</p>
+<p>因为<code>TestContextBootstrapper</code>SPI很可能在未来更改(去适应新需求),我们强烈建议继承<code>AbstractTestContextBootstrapper</code>类或者他的某个具体的字类,而不是实现<code>TestContextBootstrapper</code>这个接口</p>
+<h2 id="53-testexecutionlistener配置">5.3. <code>TestExecutionListener</code>配置</h2>
+<p>Spring提供了下面的<code>TestExecutionListener</code>实现，他们是被默认注册的，按照下面的顺序：</p>
+<ul>
+<li><code>ServletTestExecutionListener</code>:为<code>WebApplicationContext</code>配置Servlet API模拟。</li>
+<li><code>DirtiesContextBeforeModesTestExecutionListener</code>:为&quot;before&quot;模式处理<code>@DirtiesContext</code>注解。</li>
+<li><code>DependencyInjectionTestExecutionListener</code>:为测试实例提供依赖注入.</li>
+<li><code>DirtiesContextTestExecutionListener</code>:为&quot;after&quot;模式处理<code>@DirtiesContext</code>注解。</li>
+<li><code>TransactionalTestExecutionListener</code>:提供默认的rollback的事务测试执行。</li>
+<li><code>SqlScriptsTestExecutionListener</code>:使用<code>@Sql</code>注解时运行配置的SQL脚本.</li>
+<li><code>EventPublishingTestExecutionListener</code>:为测试的<code>ApplicationContext</code>发布测试执行事件(参照<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-test-execution-events">Test Execution Events</a>)  。</li>
+</ul>
+<h3 id="注册testexecutionlistener实现">注册<code>TestExecutionListener</code>实现</h3>
+<p>你可以为测试类和其字类注册<code>TestExecutionListener</code>实现通过使用<code>@TestExecutionListeners</code>注解。详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#integration-testing-annotations">annotation support</a> ,<a href="https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/test/context/TestExecutionListeners.html">@TestExecutionListeners</a></p>
+<h3 id="自动化探索默认的testexecutionlistener实现">自动化探索默认的<code>TestExecutionListener</code>实现</h3>
+<p>通过使用<code>@TestExecutionListeners</code>来注册<code>TestExecutionListener</code>实现,适合有限测试方案的自定义监听器。如果自定义监听器要跨越整个测试套件,那么他就会变得十分臃肿。解决这个问题需要通过支持自动探索默认的<code>TestExecutionListener</code>实现来完成，背后依靠<code>SpringFactoriesLoader</code>机制来实现。</p>
+<p>具体来说，<code>spring-test</code>模块申明所有的核心默认<code>TestExecutionListener</code>实现都在<code>META-INF/spring.factories</code>属性文件中的<code>org.springframework.test.context.TestExecutionListener</code>key下。第三方框架和开发者可以贡献他们自己的<code>TestExecutionListener</code>到默认的监听者列表，同样通过<code>META-INF/spring.factories</code>属性文件。</p>
+<h3 id="testexecutionlistener实现的顺序"><code>TestExecutionListener</code>实现的顺序</h3>
+<p>当TestContext框架发现了默认的<code>TesetExecutionListener</code>实现通过前面提到的SpringFactoriesLoader机制，这些初始化的监听器通过spring的<code>AnnotationAwareOrderComparator</code>来排序，而它又使用Spring的<code>Ordered</code>接口和<code>@Order</code>注解来排序。<code>AbstractTestExecutionListener</code>和所有默认的<code>TestExecutionListener</code>都以适当的值实现了<code>Ordered</code>。所以第三方框架和开发者应该确保他们的默认<code>TestExecutionListener</code>实现是是implements<code>Ordered</code>的或者由<code>@Order</code>注解。通过<code>TestExecutionListener</code>实现的<code>getOrder()</code>方法来查看核心监听器的顺序值。</p>
+<h3 id="合并testexecutionlistener实现">合并<code>TestExecutionListener</code>实现</h3>
+<p>如果一个自定义<code>TestExecutionListener</code>是通过<code>@TestExecutionListeners</code>注册的，那么默认的监听器将不会被注册。在大多数测试场景中，这会强制要求开发者手动申明所有默认的监听器加上用户自定义的监听器：</p>
+<pre><code class="language-java">@ContextConfiguration
+@TestExecutionListeners({
+    MyCustomTestExecutionListener.class,
+    ServletTestExecutionListener.class,
+    DirtiesContextBeforeModesTestExecutionListener.class,
+    DependencyInjectionTestExecutionListener.class,
+    DirtiesContextTestExecutionListener.class,
+    TransactionalTestExecutionListener.class,
+    SqlScriptsTestExecutionListener.class
+})
+class MyTest {
+    // class body...
+}
+</code></pre>
+<p>这种方法带来的挑战是，你必须要记得所有的默认监听器。并且每个发布版本的监听器可能改变-举个例子<code>SqlScriptsTestExecutionListener</code>是在Spring Framework 4.1引入的，而<code>DirtiesContextBeforeModesTestExecutionListener</code>实在Spring Framework 4.2引入的。此外，第三方框架比如Spring Boot和Spring Security通过前面提到的<code>automatic discovery mechanism</code>注册了他们自己的默认<code>TestExecutionListener</code>实现。</p>
+<p>为了避免记住和重新声明所有默认的监听器，你可以设置<code>@TestExecutionListeners</code>的<code>mergeMode</code>属性为<code>MergeMode.MERGE_WITH_DEFAULTS</code>。这个属性值表实本地申明的监听器应该和默认监听器合并。这个合并算法会移除重复的申明，并且会根据<code>AnnotationAwareOrderComparator</code>排序。如果监听器实现了<code>Ordered</code>或者由<code>@Order</code>注解修饰，那么它可以影响默认监听器的排序。否则，本地声明的监听器会追加到默认监听器列表的末尾。</p>
+<p>举个例子，如果<code>MyCustomTestExecutionListener</code>类配置了<code>order</code>值（举个例子，500）比<code>ServletTestExecutionListener</code>的order值小(恰好是1000)，<code>MyCustomTestExecutionListener</code>可以自动合并到默认集合中并在<code>ServletTestExecutionListener</code>之前，之前的例子可以替换成下面的代码：</p>
+<pre><code class="language-java">@ContextConfiguration
+@TestExecutionListeners(
+    listeners = MyCustomTestExecutionListener.class,
+    mergeMode = MERGE_WITH_DEFAULTS
+)
+class MyTest {
+    // class body...
+}
+</code></pre>
+<h2 id="54-测试执行事件">5.4. 测试执行事件</h2>
+<p>Spring Framework 5.2引入了<code>EventPublishingTestExecutionListener </code>，提供了一个实现自定义<code>TestExecutionListener</code>的替代方法。在测试<code>ApplicationContext</code>中的组件可以通过<code>EventPublishingTestExecutionListener</code>监听下列的事件，每个事件对应<code>TestExecutionListener</code>API中的一个方法。</p>
+<ul>
+<li><code>BeforeTestClassEvent</code></li>
+<li><code>PrepareTestInstanceEvent</code></li>
+<li><code>BeforeTestMethodEvent</code></li>
+<li><code>BeforeTestExecutionEvent</code></li>
+<li><code>AfterTestExecutionEvent</code></li>
+<li><code>AfterTestMethodEvent</code></li>
+<li><code>AfterTestClassEvent</code></li>
+</ul>
+<blockquote>
+<p>这些事件只有在<code>ApplicationContext</code>已经加载后才发布</p>
+</blockquote>
+<p>这些事件可能因为多种原因被消费，比如重设模拟bean或者追踪测试执行。选择消费测试执行事件，而不是实现一个自定义<code>TestExecutionListener</code>，其中的一个优点是测试执行事件可以被任何在测试<code>ApplicationContext</code>中注册的Spring bean消耗，这些bean可以直接受利于依赖注入或者<code>ApplicationContext</code>的其他特性。相对应的，在<code>ApplicationContext</code>中的<code>TestExecutionListener</code>并不是一个bean。</p>
+<p>为了监听测试执行事件，一个Spring bean可以选择去实现<code>org.springframework.context.ApplicationListener</code>接口。也可以用<code>@EventListener</code>修饰监听方法并且配置监听上面提到的指定事件类型中的一个。因为这个方法的流行，Spring提供了以下专用的<code>@EventListener</code>注解去简化测试执行事件监听器的注册。这些注解是在<code>org.springframework.test.context.event.annotation</code>包下的。</p>
+<ul>
+<li><code>@BeforeTestClass</code></li>
+<li><code>@PrepareTestInstance</code></li>
+<li><code>@BeforeTestMethod</code></li>
+<li><code>@BeforeTestExecution</code></li>
+<li><code>@AfterTestExecution</code></li>
+<li><code>@AfterTestMethod</code></li>
+<li><code>@AfterTestClass</code></li>
+</ul>
+<h3 id="异常处理">异常处理</h3>
+<p>默认情况下，如果一个测试执行事件监听器在消费事件时抛出了一个异常，这个异常会传递到底层使用的测试框架上（比如JUnit或者TestNG）。比如在消费<code>BeforeTestMethodEvent</code>时抛出一个异常，对应的测试方法将会失败。相反，如果一个异步的测试执行事件监听器抛出一个异常，这个异常是不会传递到底层的测试框架的。异步异常处理的详情，查阅类级别<code>@EventListener</code>的javadoc。</p>
+<h3 id="异步监听器">异步监听器</h3>
+<p>如果你想要一个特别的测试执行事件监听器去异步处理事件，可以使用Spring的<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#scheduling-annotation-support-async">常规<code>@Async</code>支持</a> 。详情查阅类级别<code>@EventListener</code>的javadoc。</p>
+<h2 id="55-上下文管理">5.5. 上下文管理</h2>
+<p>每个<code>TestContext</code>都为它负责的测试实例提供了上下文管理和缓存支持。测试实例不会自动接收对配置<code>ApplicationContext</code>的访问。但是，如果测试类实现了<code>ApplicationContextAware</code>接口，会为测试实例提供一个<code>ApplicationContext</code>的引用。注意<code>AbstractJUnit4SpringContextTests</code>和<code>AbstractTestNGSpringContextTests</code>实现了<code>ApplicationContextAware</code>，所以自动提供对<code>ApplicationContext</code>的访问。</p>
+<blockquote>
+<p><strong>@Autowired ApplicationContext</strong>
+作为一个实现<code>ApplicationContextAware</code>接口的替代方法，你可以通过设置<code>@Autowired</code>注解在字段上或者setter方法上来注入application context：</p>
+<pre><code class="language-java">@SpringJUnitConfig
+class MyTest {
+
+   @Autowired 
+   ApplicationContext applicationContext;
+
+   // class body...
+}
+</code></pre>
+<p>同样，如果你的测试需要加载一个<code>WebApplicationContext</code>:</p>
+<pre><code class="language-java">@SpringJUnitWebConfig
+class MyWebAppTest {
+
+   @Autowired 
+   WebApplicationContext wac;
+
+   // class body...
+}
+</code></pre>
+<p>通过使用<code>@Autowired</code>进行依赖注入是通过<code>DependencyInjectionTestExecutionListener</code>来提供的，默认情况下就会对它进行配置(参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-fixture-di">https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-fixture-di</a>)</p>
+</blockquote>
+<p>使用TestContext框架的测试类不需要extends任何特定的类或者实现任何特定接口去配置他们的application context。你只需要在类级别声明一个<code>@ContextConfiguration</code>注解即可。如果你的测试类没有显性的声明application context资源位置或者组件类，配置的<code>ContextLoader</code>会决定怎样从一个默认的位置或者默认的配置类加载一个context。除了资源位置和组件类，一个application context还可以通过application context初始化程序配置。</p>
+<p>下面的几个章节阐述了怎样使用Srping的<code>@ContextConfiguration</code>注解去配置一个测试的<code>ApplicationContext</code>通过使用XML配置文件，Groovy脚本，组件类（典型的<code>@Configuration</code>类），或者上下文初始化程序。另外，你可以实现并配置你自定义的<code>SmartContextLoader</code>为高级的使用场景。</p>
+<ul>
+<li>Context Configuration with XML resources</li>
+<li>Context Configuration with Groovy Scripts</li>
+<li>Context Configuration with Component Classes</li>
+<li>Mixing XML, Groovy Scripts, and Component Classes</li>
+<li>Context Configuration with Context Initializers</li>
+<li>Context Configuration Inheritance</li>
+<li>Context Configuration with Environment Profiles</li>
+<li>Context Configuration with Test Property Sources</li>
+<li>Context Configuration with Dynamic Property Sources</li>
+<li>Loading a <code>WebApplicationContext</code></li>
+<li>Context Caching</li>
+<li>Context Hierarchies</li>
+</ul>
+<h3 id="context-configuration-with-xml-resources">Context Configuration with XML resources</h3>
+<p>通过XML配置文件为你的测试加载<code>ApplicationContext</code>，需要用<code>@ContextConfiguration</code>注解修饰你的测试类，并用一个由XML文件位置构成的数组来给<code>locations</code>属性赋值。一个相对路径（比如<code>context.xml</code>）会被看做一个classpath资源并且会关联到测试类定义的包下。一个以斜线开头的路径会被看作绝对的classpath路径（比如<code>/org/example/config.xml</code>）。一个路径代表一个资源URL(比如一个路径的前缀是<code>classpath:</code>,<code>file:</code>,<code>http:</code>,等等)。</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+// ApplicationContext will be loaded from &quot;/app-config.xml&quot; and
+// &quot;/test-config.xml&quot; in the root of the classpath
+@ContextConfiguration(locations={&quot;/app-config.xml&quot;, &quot;/test-config.xml&quot;}) 
+class MyTest {
+    // class body...
+}
+</code></pre>
+<p><code>@ContextConfiguration</code>通过标准的Java<code>value</code>属性为<code>locations</code>属性提供了一个别名。所以如果你不在<code>@ContextConfiguration</code>申明额外的属性，你可以省略<code>locations</code>：</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+@ContextConfiguration({&quot;/app-config.xml&quot;, &quot;/test-config.xml&quot;}) 
+class MyTest {
+    // class body...
+}
+</code></pre>
+<p>如果你<code>locations</code>和<code>value</code>属性都没有声明，那么TestContext框架会尝试检测默认的XML资源路径。具体来说，<code>GenericXmlContextLoader </code>和<code>GenericXmlWebContextLoader </code>会基于测试类的名称检测资源路径。如果你的类名为<code>com.example.MyTest</code>，<code>GenericXmlContextLoader</code>会从<code>classpath:com/example/MyTest-context.xml</code>加载你的application context。</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+// ApplicationContext will be loaded from
+// &quot;classpath:com/example/MyTest-context.xml&quot;
+@ContextConfiguration 
+class MyTest {
+    // class body...
+}
+</code></pre>
+<h3 id="context-configuration-with-groovy-scripts">Context Configuration with Groovy Scripts</h3>
+<p>忽略本章，详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-ctx-management-groovy">Context Configuration with Groovy Scripts</a></p>
 
     </div>
     <div class="article-footer">
@@ -813,8 +1189,8 @@ class XmlJUnitJupiterSpringTests{
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
             </li>
             <li class="next">
-                <a href="http://www.mingaccount.com/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/"
-                    title="Java编码,乱码问题详解"><span>Newer&nbsp;&nbsp;</span><i
+                <a href="http://www.mingaccount.com/2017/09/spel/"
+                    title="Spring Expression Language"><span>Newer&nbsp;&nbsp;</span><i
                         class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             

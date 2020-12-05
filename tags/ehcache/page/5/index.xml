@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>List addAll产生异常java.lang.UnsupportedOperationException</title>
+      <link>http://www.mingaccount.com/2017/11/list_add_all%E5%BC%82%E5%B8%B8/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/11/list_add_all%E5%BC%82%E5%B8%B8/</guid>
+      <description>原因是因为list是由Arrays.asList生成的 根据Arrays源码，asList方法生成的ArrayList，并不是java.uti</description>
+    </item>
+    
+    <item>
       <title>[转]谈谈Java中的语法糖</title>
       <link>http://www.mingaccount.com/2017/10/%E8%BD%AC%E8%B0%88%E8%B0%88java%E4%B8%AD%E7%9A%84%E8%AF%AD%E6%B3%95%E7%B3%96/</link>
       <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
@@ -26,6 +35,15 @@
       
       <guid>http://www.mingaccount.com/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</guid>
       <description>一、常见的编码格式 1.ASCII 基础编码，英文和西欧字符。 用一个字节的低7位表示，一共128个。 0~13是控制字符如换行、回车、删除等，32~126是打</description>
+    </item>
+    
+    <item>
+      <title>Spring Expression Language</title>
+      <link>http://www.mingaccount.com/2017/09/spel/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/09/spel/</guid>
+      <description>Spring Expression Language</description>
     </item>
     
     <item>
@@ -170,24 +188,6 @@
       
       <guid>http://www.mingaccount.com/2017/01/springboot%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%B9%B6%E6%98%A0%E5%B0%84%E5%88%B0%E6%8C%87%E5%AE%9A%E7%B1%BB%E4%B8%AD/</guid>
       <description>新建指定配置类TestConfiguration 该类需要的注解： @Configuration @ConfigurationProperties(prefix=&amp;quot;test&amp;quot;) @PropertySource(&amp;quot;classpath:test.properties&amp;quot;) 同时启动类上需要增加注解： @EnableConfigurationProperties({TestConfiguration.class})</description>
-    </item>
-    
-    <item>
-      <title>Mysql Where条件判断 字符串和数字 是否相等时存在的问题</title>
-      <link>http://www.mingaccount.com/2016/07/mysqlwhere%E6%AF%94%E5%AF%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E7%9A%84%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Fri, 08 Jul 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/07/mysqlwhere%E6%AF%94%E5%AF%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
-      <description>测试数据 random 24 24uixcvkjklwer 查询sql1 SELECT random FROM table WHERE random = 24 该sql会把两条记录都查出来 查询sql2 SELECT random FROM table WHERE random = &#39;24&#39; 该sql只会匹配第一条记录 总结 条件列为字符</description>
-    </item>
-    
-    <item>
-      <title>实体类通过建造者模式创建</title>
-      <link>http://www.mingaccount.com/2016/06/%E5%AE%9E%E4%BD%93%E7%B1%BBbuild/</link>
-      <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/06/%E5%AE%9E%E4%BD%93%E7%B1%BBbuild/</guid>
-      <description>现在可以通过lombok注解@Builder一步实现 1.调用效果 public class Test{ public static void main(String[] args){ Student student = Student.builder().name(&amp;quo</description>
     </item>
     
   </channel>
