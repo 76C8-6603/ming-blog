@@ -1,7 +1,7 @@
 ---
     title: "Assert常用方法"
     date: 2016-05-17
-    tags: ["assert"]
+    tags: ["unit-test"]
     
 ---
 ## org.junit.Assert
