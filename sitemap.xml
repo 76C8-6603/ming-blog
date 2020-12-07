@@ -759,6 +759,13 @@
   </url>
   
   <url>
+    <loc>http://www.mingaccount.com/2017/09/mysqlcreateviewexception/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mingaccount.com/2017/09/spel/</loc>
     <lastmod>2017-09-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -865,7 +872,14 @@
   
   <url>
     <loc>http://www.mingaccount.com/tags/jackson/</loc>
-    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2017/04/jackson%E5%85%A8%E5%B1%80%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</loc>
+    <lastmod>2017-04-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

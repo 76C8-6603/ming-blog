@@ -38,6 +38,15 @@
     </item>
     
     <item>
+      <title>Mysql 创建视图报错：View&#39;s SELECT contains a subquery in the FROM clause</title>
+      <link>http://www.mingaccount.com/2017/09/mysqlcreateviewexception/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/09/mysqlcreateviewexception/</guid>
+      <description>问题背景 使用sql: create view test_view as select a.column_1, b.column_2 from (select column_1 from table_1) a left join (select column_2 from table_2) b on a.column_1 = b.column_2 报错信息： View&#39;s SELECT contains a subquery in the FROM clause 问题原因 根据mysql官方文档，版本5.7之</description>
+    </item>
+    
+    <item>
       <title>Spring Expression Language</title>
       <link>http://www.mingaccount.com/2017/09/spel/</link>
       <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
@@ -155,6 +164,15 @@
     </item>
     
     <item>
+      <title>Springboot Jackson全局日期格式处理</title>
+      <link>http://www.mingaccount.com/2017/04/jackson%E5%85%A8%E5%B1%80%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/04/jackson%E5%85%A8%E5%B1%80%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</guid>
+      <description>通过修改springboot application.properties spring.jackson.date-format=yyyy-MM-dd HH:mm:ss spring.jackson.time-zone=GMT+8</description>
+    </item>
+    
+    <item>
       <title>Jackson使用解析</title>
       <link>http://www.mingaccount.com/2017/04/jackson/</link>
       <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
@@ -170,24 +188,6 @@
       
       <guid>http://www.mingaccount.com/2017/04/%E4%BF%AE%E6%94%B9springboot%E7%9A%84banner/</guid>
       <description>1.新建banner.txt在resources目录下 _/_/_/ _/ _/ _/_/_/ _/ _/ _/_/ _/ _/ _/ _/ _/_/ _/ _/ _/ _/ _/_/_/_/ _/ _/ _/ _/ _/_/_/_/ _/ _/ _/ _/ _/ _/_/ _/ _/ _/_/_/ _/ _/ _/_/_/ _/ _/ _/ _/ 文本图形生</description>
-    </item>
-    
-    <item>
-      <title>Spring Application配置文件通用参数</title>
-      <link>http://www.mingaccount.com/2017/04/spring%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E9%80%9A%E7%94%A8%E5%8F%82%E6%95%B0/</link>
-      <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/04/spring%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E9%80%9A%E7%94%A8%E5%8F%82%E6%95%B0/</guid>
-      <description>参考Spring官网配置参数 完整列出了所有application配置文件中可用的参数</description>
-    </item>
-    
-    <item>
-      <title>Spring自定义配置文件并映射到指定类中</title>
-      <link>http://www.mingaccount.com/2017/01/springboot%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%B9%B6%E6%98%A0%E5%B0%84%E5%88%B0%E6%8C%87%E5%AE%9A%E7%B1%BB%E4%B8%AD/</link>
-      <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/01/springboot%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%B9%B6%E6%98%A0%E5%B0%84%E5%88%B0%E6%8C%87%E5%AE%9A%E7%B1%BB%E4%B8%AD/</guid>
-      <description>新建指定配置类TestConfiguration 该类需要的注解： @Configuration @ConfigurationProperties(prefix=&amp;quot;test&amp;quot;) @PropertySource(&amp;quot;classpath:test.properties&amp;quot;) 同时启动类上需要增加注解： @EnableConfigurationProperties({TestConfiguration.class})</description>
     </item>
     
   </channel>

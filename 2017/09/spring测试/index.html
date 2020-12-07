@@ -39,7 +39,7 @@
 <meta itemprop="description" content="1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成">
 <meta itemprop="datePublished" content="2017-09-15T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2017-09-15T00:00:00+00:00" />
-<meta itemprop="wordCount" content="20937">
+<meta itemprop="wordCount" content="22389">
 
 
 
@@ -175,7 +175,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/jackson/" class="tag-list-link">jackson</a><span
-                    class="tag-list-count">1</span></li>
+                    class="tag-list-count">2</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/java/" class="tag-list-link">java</a><span
@@ -207,7 +207,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mysql/" class="tag-list-link">mysql</a><span
-                    class="tag-list-count">15</span></li>
+                    class="tag-list-count">16</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/npm/" class="tag-list-link">npm</a><span
@@ -235,7 +235,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
-                    class="tag-list-count">20</span></li>
+                    class="tag-list-count">21</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/unit-test/" class="tag-list-link">unit-test</a><span
@@ -354,8 +354,8 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2017/09/spring%E6%B5%8B%E8%AF%95/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 20937words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 42minutes </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 22389words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 45minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -1127,7 +1127,7 @@ class MyWebAppTest {
 @ContextConfiguration(locations={&quot;/app-config.xml&quot;, &quot;/test-config.xml&quot;}) 
 class MyTest {
     // class body...
-}
+}n
 </code></pre>
 <p><code>@ContextConfiguration</code>通过标准的Java<code>value</code>属性为<code>locations</code>属性提供了一个别名。所以如果你不在<code>@ContextConfiguration</code>申明额外的属性，你可以省略<code>locations</code>：</p>
 <pre><code class="language-java">@ExtendWith(SpringExtension.class)
@@ -1146,7 +1146,91 @@ class MyTest {
 }
 </code></pre>
 <h3 id="context-configuration-with-groovy-scripts">Context Configuration with Groovy Scripts</h3>
-<p>忽略本章，详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-ctx-management-groovy">Context Configuration with Groovy Scripts</a></p>
+<p>通过使用<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#groovy-bean-definition-dsl">Groovy Bean Definition DSL</a> 生成的Groovy脚本可以为你的测试生成<code>ApplicationContext</code>，配置Groovy的脚本可以通过<code>@ContextConfiguration</code>的<code>locations</code>和<code>value</code>属性来设置Groovy脚本的资源位置。资源查找语法跟XML文件配置一样。</p>
+<blockquote>
+<p><strong>启用Groovy脚本支持</strong><br>
+如果Groovy在classpath路径下，Spring TestContext框架会自动支持用Groovy脚本加载<code>ApplicationContext</code></p>
+</blockquote>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+// ApplicationContext will be loaded from &quot;/AppConfig.groovy&quot; and
+// &quot;/TestConfig.groovy&quot; in the root of the classpath
+@ContextConfiguration({&quot;/AppConfig.groovy&quot;, &quot;/TestConfig.Groovy&quot;}) 
+class MyTest {
+    // class body...
+}
+</code></pre>
+<p>如果你同时忽略<code>locations</code>和<code>value</code>属性，测试框架会尝试检测默认的Groovy脚本。具体来说，<code>GenericGroovyXmlContextLoader</code>和<code>GenericGroovyXmlWebContextLoader</code>会检测一个默认的路径，基于测试类的名称。如果你的类名为<code>com.example.MyTset</code>，Groovy上下文加载器会从<code>classpath:com/example/MyTestContext.groovy</code>加载上下文。</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+// ApplicationContext will be loaded from
+// &quot;classpath:com/example/MyTestContext.groovy&quot;
+@ContextConfiguration 
+class MyTest {
+    // class body...
+}
+</code></pre>
+<blockquote>
+<p><strong>同时声明XML配置和Groovy脚本</strong><br>
+你可以同时申明XML配置和Groovy脚本通过<code>@Configuration</code>脚本的<code>locations</code>和<code>value</code>属性。如果配置路径以<code>.xml</code>路径结尾，<code>XmlBeanDefinitionReader</code>会用来加载配置。否则会使用<code>GroovyBeanDefinitionReader</code>。</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+// ApplicationContext will be loaded from
+// &quot;/app-config.xml&quot; and &quot;/TestConfig.groovy&quot;
+@ContextConfiguration({ &quot;/app-config.xml&quot;, &quot;/TestConfig.groovy&quot; })
+class MyTest {
+// class body...
+}
+</code></pre>
+</blockquote>
+<h3 id="context-configuration-with-component-classes">Context Configuration with Component Classes</h3>
+<p>使用组件类为你的测试加载一个<code>ApplicationContext</code>，你可以通过<code>@ContextConfiguration</code>注解，并配置<code>classes</code>属性：</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+// ApplicationContext will be loaded from AppConfig and TestConfig
+@ContextConfiguration(classes = {AppConfig.class, TestConfig.class}) 
+class MyTest {
+    // class body...
+}
+</code></pre>
+<blockquote>
+<p><strong>Component Classes</strong><br>
+&ldquo;Component Class&quot;组件类指的是：</p>
+<ul>
+<li>被<code>@Configuration</code>修饰的类</li>
+<li>一个组件（就是被<code>@Component</code>，<code>@Service</code>，<code>@Repository</code>，或者其他原始注解修饰的类）</li>
+<li>一个JSR-330编译的类，就是被<code>javax.inject</code>注解修饰的类</li>
+<li>任何类包含<code>@Bean</code>方法</li>
+<li>任何其他类尝试去注册为一个Spring组件(就是说一个在<code>ApplicationContext</code>里的Spring bean)，可能是利用单个构造方法的自动装配，而不是Spring注解 <br>
+查看<a href="https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/context/annotation/Configuration.html">@Configuration</a> 和<a href="https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/context/annotation/Bean.html">@Bean</a> 的javadoc查找更多详情。关于注解类的配置和语法，特别注意<code>@Bean</code>Lite模式的讨论。</li>
+</ul>
+</blockquote>
+<p>如果忽略<code>classes</code>属性，TestContext框架会尝试检测默认配置类是否存在。具体来说，<code>AnnotationConfigContextLoader</code>和<code>AnnotationConfigWebContextLoader</code>会检测所有满足配置类实现需求的<code>static</code>集成类，详情参考<a href="https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/context/annotation/Configuration.html">@Configuration</a> javadoc。注意配置类的名称是任意的。另外，如果测试类愿意的话他可以包含多个<code>static</code>集成配置类。下面的例子里,<code>OrderServiceTest</code>类声明了一个<code>static</code>集成配置类叫做<code>Config</code>，他会被用来为测试类自动加载<code>ApplicationContext</code>：</p>
+<pre><code class="language-java">@SpringJUnitConfig 
+// ApplicationContext will be loaded from the
+// static nested Config class
+class OrderServiceTest {
+
+    @Configuration
+    static class Config {
+
+        // this bean will be injected into the OrderServiceTest class
+        @Bean
+        OrderService orderService() {
+            OrderService orderService = new OrderServiceImpl();
+            // set properties, etc.
+            return orderService;
+        }
+    }
+
+    @Autowired
+    OrderService orderService;
+
+    @Test
+    void testOrderService() {
+        // test the orderService
+    }
+
+}
+</code></pre>
+<h3 id="mixing-xml-groovy-scripts-and-component-classes">Mixing XML, Groovy Scripts, and Component Classes</h3>
+<p>有时候会存在混合XML文件,Groovy脚本，和组件类去配置一个<code>ApplicationContext</code>的情况。</p>
 
     </div>
     <div class="article-footer">
