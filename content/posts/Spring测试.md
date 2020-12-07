@@ -920,7 +920,7 @@ Spring Framework 5.2引入了`EventPublishingTestExecutionListener `，提供了
 @ContextConfiguration(locations={"/app-config.xml", "/test-config.xml"}) 
 class MyTest {
     // class body...
-}
+}n
 ```
 `@ContextConfiguration`通过标准的Java`value`属性为`locations`属性提供了一个别名。所以如果你不在`@ContextConfiguration`申明额外的属性，你可以省略`locations`：  
 ```java
@@ -942,5 +942,96 @@ class MyTest {
 ```
 
 ### Context Configuration with Groovy Scripts
-忽略本章，详情参考[Context Configuration with Groovy Scripts](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-ctx-management-groovy)  
+通过使用[Groovy Bean Definition DSL](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#groovy-bean-definition-dsl) 生成的Groovy脚本可以为你的测试生成`ApplicationContext`，配置Groovy的脚本可以通过`@ContextConfiguration`的`locations`和`value`属性来设置Groovy脚本的资源位置。资源查找语法跟XML文件配置一样。  
+> **启用Groovy脚本支持**  
+> 如果Groovy在classpath路径下，Spring TestContext框架会自动支持用Groovy脚本加载`ApplicationContext`  
+
+```java
+@ExtendWith(SpringExtension.class)
+// ApplicationContext will be loaded from "/AppConfig.groovy" and
+// "/TestConfig.groovy" in the root of the classpath
+@ContextConfiguration({"/AppConfig.groovy", "/TestConfig.Groovy"}) 
+class MyTest {
+    // class body...
+}
+```
+如果你同时忽略`locations`和`value`属性，测试框架会尝试检测默认的Groovy脚本。具体来说，`GenericGroovyXmlContextLoader`和`GenericGroovyXmlWebContextLoader`会检测一个默认的路径，基于测试类的名称。如果你的类名为`com.example.MyTset`，Groovy上下文加载器会从`classpath:com/example/MyTestContext.groovy`加载上下文。  
+```java
+@ExtendWith(SpringExtension.class)
+// ApplicationContext will be loaded from
+// "classpath:com/example/MyTestContext.groovy"
+@ContextConfiguration 
+class MyTest {
+    // class body...
+}
+```
+
+> **同时声明XML配置和Groovy脚本**  
+> 你可以同时申明XML配置和Groovy脚本通过`@Configuration`脚本的`locations`和`value`属性。如果配置路径以`.xml`路径结尾，`XmlBeanDefinitionReader`会用来加载配置。否则会使用`GroovyBeanDefinitionReader`。  
+> ```java
+> @ExtendWith(SpringExtension.class)
+> // ApplicationContext will be loaded from
+> // "/app-config.xml" and "/TestConfig.groovy"
+> @ContextConfiguration({ "/app-config.xml", "/TestConfig.groovy" })
+> class MyTest {
+> // class body...
+> }
+> ```
+
+### Context Configuration with Component Classes
+使用组件类为你的测试加载一个`ApplicationContext`，你可以通过`@ContextConfiguration`注解，并配置`classes`属性：  
+```java
+@ExtendWith(SpringExtension.class)
+// ApplicationContext will be loaded from AppConfig and TestConfig
+@ContextConfiguration(classes = {AppConfig.class, TestConfig.class}) 
+class MyTest {
+    // class body...
+}
+```
+
+> **Component Classes**  
+> "Component Class"组件类指的是：  
+> * 被`@Configuration`修饰的类
+> * 一个组件（就是被`@Component`，`@Service`，`@Repository`，或者其他原始注解修饰的类）  
+> * 一个JSR-330编译的类，就是被`javax.inject`注解修饰的类
+> * 任何类包含`@Bean`方法
+> * 任何其他类尝试去注册为一个Spring组件(就是说一个在`ApplicationContext`里的Spring bean)，可能是利用单个构造方法的自动装配，而不是Spring注解    
+> 查看[@Configuration](https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/context/annotation/Configuration.html) 和[@Bean](https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/context/annotation/Bean.html) 的javadoc查找更多详情。关于注解类的配置和语法，特别注意`@Bean`Lite模式的讨论。  
+
+如果忽略`classes`属性，TestContext框架会尝试检测默认配置类是否存在。具体来说，`AnnotationConfigContextLoader`和`AnnotationConfigWebContextLoader`会检测所有满足配置类实现需求的`static`集成类，详情参考[@Configuration](https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/context/annotation/Configuration.html) javadoc。注意配置类的名称是任意的。另外，如果测试类愿意的话他可以包含多个`static`集成配置类。下面的例子里,`OrderServiceTest`类声明了一个`static`集成配置类叫做`Config`，他会被用来为测试类自动加载`ApplicationContext`：  
+```java
+@SpringJUnitConfig 
+// ApplicationContext will be loaded from the
+// static nested Config class
+class OrderServiceTest {
+
+    @Configuration
+    static class Config {
+
+        // this bean will be injected into the OrderServiceTest class
+        @Bean
+        OrderService orderService() {
+            OrderService orderService = new OrderServiceImpl();
+            // set properties, etc.
+            return orderService;
+        }
+    }
+
+    @Autowired
+    OrderService orderService;
+
+    @Test
+    void testOrderService() {
+        // test the orderService
+    }
+
+}
+```
+
+### Mixing XML, Groovy Scripts, and Component Classes
+有时候会存在混合XML文件,Groovy脚本，和组件类去配置一个`ApplicationContext`的情况。  
+
+
+
+
 
