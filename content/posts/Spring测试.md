@@ -1031,6 +1031,94 @@ class OrderServiceTest {
 ### Mixing XML, Groovy Scripts, and Component Classes
 有时候会存在混合XML文件,Groovy脚本，和组件类去配置一个`ApplicationContext`的情况。  
 
+一些第三方框架（比如SpringBoot）对这种混合类型加载提供了良好的支持。但是对Spring框架本身来说，因为之前Spring不支持这种形式的加载，所以在Spring-test模块中，大多数`SmartContextLoader`实现是只支持一种资源类型的。但是，这不意味着你写代码的时候只能用一种类型。`GenericGroovyXmlContextLoader`和`GenericGroovyXmlWebContextLoader`有些不同，他们同时支持XML配置文件和Groovy脚本。此外，第三方框架可以通过`@ContextConfiguration`的属性`locations`和`classes`来实现多类型资源支持，并且，有TestContext框架的标准测试支持，你还可以有如下选项：  
+
+如果你想使用一组资源位置(xml,groovy脚本)和一组`@Configuration`类来配置你的测试，你必须选择一个作为入口，这个入口必须include或者import其他的资源。比如说，在XML或者Groovy脚本中，你可以include`@Configuration`类通过component扫描或者把他们作为一般的Spring Bean定义，反之，在`@Configuration`类中，你可以使用`@ImportResource`去导入XML配置文件或者Groovy脚本。注意这个方式在语义上跟生产配置应用相同：在生产配置中，你可以定义XML或者Groovy资源集合抑或`@Configuration`类集合去加载你的`ApplicationContext`，但是你仍然可以选择include或者import其他类型的配置。  
+
+### Context Configuration with Context Initializers
+需要通过初始化程序构造`ApplicationContext`，使用`@ContextConfiguration`注解的`initializers`属性即可，该属性需要一个实现`ApplicationcontextInitializer`类的引用数组。申明初始化构造器之后，他们会被拿来初始化`ConfigurableApplicationContext`。注意每个初始化程序支持的具体`ConfigurableApplicationContext`类型必须跟使用中的`SmartContextLoader`所创建的`ApplicationContext`类型兼容（通常是`GenericApplicationContext`）。此外，初始化程序的调用顺序依赖于他们是否实现了Spring的`Ordered`接口或者以`@Order`注解修饰或者标准的`@Priority`注解。  
+```java
+@ExtendWith(SpringExtension.class)
+// ApplicationContext will be loaded from TestConfig
+// and initialized by TestAppCtxInitializer
+@ContextConfiguration(
+    classes = TestConfig.class,
+    initializers = TestAppCtxInitializer.class) 
+class MyTest {
+    // class body...
+}
+```
+
+如果你没有申明任何xml，groovy脚本或者组件类，仅仅声明了初始化程序，那么初始化程序将负责加载context中的bean-举个例子，通过编程方式从xml文件或者配置类中加载bean定义。  
+```java
+@ExtendWith(SpringExtension.class)
+// ApplicationContext will be initialized by EntireAppInitializer
+// which presumably registers beans in the context
+@ContextConfiguration(initializers = EntireAppInitializer.class) 
+class MyTest {
+    // class body...
+}
+```
+
+### Context Configuration Inheritance
+`@ContextConfiguration`提供了`inheritLocations`和`inheritInitializers`属性来设置当前测试类是否从父类继承 `资源位置`或者`组件类`和初始化程序  
+
+> Spring Framework 5.3版本，属性为false，配置信息还是可以从包围类继承  
+
+下面的例子展示了测试类`ExtendedTests`如何按照`base-config.xml`，`extended-config.xml`的顺序加载`ApplicaitonContext`。`extened-config.xml`可以覆盖`base-config.xml`中的bean配置。  
+```java
+@ExtendWith(SpringExtension.class)
+// ApplicationContext will be loaded from "/base-config.xml"
+// in the root of the classpath
+@ContextConfiguration("/base-config.xml") 
+class BaseTest {
+    // class body...
+}
+
+// ApplicationContext will be loaded from "/base-config.xml" and
+// "/extended-config.xml" in the root of the classpath
+@ContextConfiguration("/extended-config.xml") 
+class ExtendedTest extends BaseTest {
+    // class body...
+}
+```
+
+组件类也按照同样的加载顺序，覆盖规则也完全一样：  
+```java
+// ApplicationContext will be loaded from BaseConfig
+@SpringJUnitConfig(BaseConfig.class) 
+class BaseTest {
+    // class body...
+}
+
+// ApplicationContext will be loaded from BaseConfig and ExtendedConfig
+@SpringJUnitConfig(ExtendedConfig.class) 
+class ExtendedTest extends BaseTest {
+    // class body...
+}
+```
+
+下面的例子展示了初始化程序的继承关系，他们的执行顺序跟父子关系无关，参考上一章节对初始化程序执行顺序的描述：  
+```java
+// ApplicationContext will be initialized by BaseInitializer
+@SpringJUnitConfig(initializers = BaseInitializer.class) 
+class BaseTest {
+    // class body...
+}
+
+// ApplicationContext will be initialized by BaseInitializer
+// and ExtendedInitializer
+@SpringJUnitConfig(initializers = ExtendedInitializer.class) 
+class ExtendedTest extends BaseTest {
+    // class body...
+}
+```
+
+### Context Configuration with Environment Profiles
+
+
+
+
 
 
 

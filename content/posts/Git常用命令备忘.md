@@ -42,4 +42,7 @@ git log
 #取消cherry pick
 git cherry-pick --abort
 
+#在指定路径添加子模块
+git submodule add <url> [path] 
+
 ```
