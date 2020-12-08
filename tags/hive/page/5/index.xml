@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>[转]Class.forName()用法详解</title>
+      <link>http://www.mingaccount.com/2017/11/class.forname%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/11/class.forname%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/</guid>
+      <description>转自:http://blog.csdn.net/kaiwii/article/details/7405761 主要功能 Class.forNam</description>
+    </item>
+    
+    <item>
       <title>List addAll产生异常java.lang.UnsupportedOperationException</title>
       <link>http://www.mingaccount.com/2017/11/list_add_all%E5%BC%82%E5%B8%B8/</link>
       <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
@@ -44,15 +53,6 @@
       
       <guid>http://www.mingaccount.com/2017/09/mysqlcreateviewexception/</guid>
       <description>问题背景 使用sql: create view test_view as select a.column_1, b.column_2 from (select column_1 from table_1) a left join (select column_2 from table_2) b on a.column_1 = b.column_2 报错信息： View&#39;s SELECT contains a subquery in the FROM clause 问题原因 根据mysql官方文档，版本5.7之</description>
-    </item>
-    
-    <item>
-      <title>Spring Expression Language</title>
-      <link>http://www.mingaccount.com/2017/09/spel/</link>
-      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/09/spel/</guid>
-      <description>Spring Expression Language</description>
     </item>
     
     <item>

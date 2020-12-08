@@ -39,7 +39,7 @@
 <meta itemprop="description" content="1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成">
 <meta itemprop="datePublished" content="2017-09-15T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2017-09-15T00:00:00+00:00" />
-<meta itemprop="wordCount" content="22389">
+<meta itemprop="wordCount" content="24070">
 
 
 
@@ -171,7 +171,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/hive/" class="tag-list-link">hive</a><span
-                    class="tag-list-count">3</span></li>
+                    class="tag-list-count">4</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/jackson/" class="tag-list-link">jackson</a><span
@@ -235,7 +235,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
-                    class="tag-list-count">21</span></li>
+                    class="tag-list-count">20</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/unit-test/" class="tag-list-link">unit-test</a><span
@@ -354,8 +354,8 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2017/09/spring%E6%B5%8B%E8%AF%95/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 22389words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 45minutes </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 24070words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 49minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -1231,6 +1231,78 @@ class OrderServiceTest {
 </code></pre>
 <h3 id="mixing-xml-groovy-scripts-and-component-classes">Mixing XML, Groovy Scripts, and Component Classes</h3>
 <p>有时候会存在混合XML文件,Groovy脚本，和组件类去配置一个<code>ApplicationContext</code>的情况。</p>
+<p>一些第三方框架（比如SpringBoot）对这种混合类型加载提供了良好的支持。但是对Spring框架本身来说，因为之前Spring不支持这种形式的加载，所以在Spring-test模块中，大多数<code>SmartContextLoader</code>实现是只支持一种资源类型的。但是，这不意味着你写代码的时候只能用一种类型。<code>GenericGroovyXmlContextLoader</code>和<code>GenericGroovyXmlWebContextLoader</code>有些不同，他们同时支持XML配置文件和Groovy脚本。此外，第三方框架可以通过<code>@ContextConfiguration</code>的属性<code>locations</code>和<code>classes</code>来实现多类型资源支持，并且，有TestContext框架的标准测试支持，你还可以有如下选项：</p>
+<p>如果你想使用一组资源位置(xml,groovy脚本)和一组<code>@Configuration</code>类来配置你的测试，你必须选择一个作为入口，这个入口必须include或者import其他的资源。比如说，在XML或者Groovy脚本中，你可以include<code>@Configuration</code>类通过component扫描或者把他们作为一般的Spring Bean定义，反之，在<code>@Configuration</code>类中，你可以使用<code>@ImportResource</code>去导入XML配置文件或者Groovy脚本。注意这个方式在语义上跟生产配置应用相同：在生产配置中，你可以定义XML或者Groovy资源集合抑或<code>@Configuration</code>类集合去加载你的<code>ApplicationContext</code>，但是你仍然可以选择include或者import其他类型的配置。</p>
+<h3 id="context-configuration-with-context-initializers">Context Configuration with Context Initializers</h3>
+<p>需要通过初始化程序构造<code>ApplicationContext</code>，使用<code>@ContextConfiguration</code>注解的<code>initializers</code>属性即可，该属性需要一个实现<code>ApplicationcontextInitializer</code>类的引用数组。申明初始化构造器之后，他们会被拿来初始化<code>ConfigurableApplicationContext</code>。注意每个初始化程序支持的具体<code>ConfigurableApplicationContext</code>类型必须跟使用中的<code>SmartContextLoader</code>所创建的<code>ApplicationContext</code>类型兼容（通常是<code>GenericApplicationContext</code>）。此外，初始化程序的调用顺序依赖于他们是否实现了Spring的<code>Ordered</code>接口或者以<code>@Order</code>注解修饰或者标准的<code>@Priority</code>注解。</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+// ApplicationContext will be loaded from TestConfig
+// and initialized by TestAppCtxInitializer
+@ContextConfiguration(
+    classes = TestConfig.class,
+    initializers = TestAppCtxInitializer.class) 
+class MyTest {
+    // class body...
+}
+</code></pre>
+<p>如果你没有申明任何xml，groovy脚本或者组件类，仅仅声明了初始化程序，那么初始化程序将负责加载context中的bean-举个例子，通过编程方式从xml文件或者配置类中加载bean定义。</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+// ApplicationContext will be initialized by EntireAppInitializer
+// which presumably registers beans in the context
+@ContextConfiguration(initializers = EntireAppInitializer.class) 
+class MyTest {
+    // class body...
+}
+</code></pre>
+<h3 id="context-configuration-inheritance">Context Configuration Inheritance</h3>
+<p><code>@ContextConfiguration</code>提供了<code>inheritLocations</code>和<code>inheritInitializers</code>属性来设置当前测试类是否从父类继承 <code>资源位置</code>或者<code>组件类</code>和初始化程序</p>
+<blockquote>
+<p>Spring Framework 5.3版本，属性为false，配置信息还是可以从包围类继承</p>
+</blockquote>
+<p>下面的例子展示了测试类<code>ExtendedTests</code>如何按照<code>base-config.xml</code>，<code>extended-config.xml</code>的顺序加载<code>ApplicaitonContext</code>。<code>extened-config.xml</code>可以覆盖<code>base-config.xml</code>中的bean配置。</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+// ApplicationContext will be loaded from &quot;/base-config.xml&quot;
+// in the root of the classpath
+@ContextConfiguration(&quot;/base-config.xml&quot;) 
+class BaseTest {
+    // class body...
+}
+
+// ApplicationContext will be loaded from &quot;/base-config.xml&quot; and
+// &quot;/extended-config.xml&quot; in the root of the classpath
+@ContextConfiguration(&quot;/extended-config.xml&quot;) 
+class ExtendedTest extends BaseTest {
+    // class body...
+}
+</code></pre>
+<p>组件类也按照同样的加载顺序，覆盖规则也完全一样：</p>
+<pre><code class="language-java">// ApplicationContext will be loaded from BaseConfig
+@SpringJUnitConfig(BaseConfig.class) 
+class BaseTest {
+    // class body...
+}
+
+// ApplicationContext will be loaded from BaseConfig and ExtendedConfig
+@SpringJUnitConfig(ExtendedConfig.class) 
+class ExtendedTest extends BaseTest {
+    // class body...
+}
+</code></pre>
+<p>下面的例子展示了初始化程序的继承关系，他们的执行顺序跟父子关系无关，参考上一章节对初始化程序执行顺序的描述：</p>
+<pre><code class="language-java">// ApplicationContext will be initialized by BaseInitializer
+@SpringJUnitConfig(initializers = BaseInitializer.class) 
+class BaseTest {
+    // class body...
+}
+
+// ApplicationContext will be initialized by BaseInitializer
+// and ExtendedInitializer
+@SpringJUnitConfig(initializers = ExtendedInitializer.class) 
+class ExtendedTest extends BaseTest {
+    // class body...
+}
+</code></pre>
+<h3 id="context-configuration-with-environment-profiles">Context Configuration with Environment Profiles</h3>
 
     </div>
     <div class="article-footer">
@@ -1273,8 +1345,8 @@ class OrderServiceTest {
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
             </li>
             <li class="next">
-                <a href="http://www.mingaccount.com/2017/09/spel/"
-                    title="Spring Expression Language"><span>Newer&nbsp;&nbsp;</span><i
+                <a href="http://www.mingaccount.com/2017/09/mysqlcreateviewexception/"
+                    title="Mysql 创建视图报错：View&#39;s SELECT contains a subquery in the FROM clause"><span>Newer&nbsp;&nbsp;</span><i
                         class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             

@@ -451,6 +451,13 @@
   </url>
   
   <url>
+    <loc>http://www.mingaccount.com/2018/09/hiveoutofsequence/</loc>
+    <lastmod>2018-09-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mingaccount.com/2018/09/springbootmybatis%E9%85%8D%E7%BD%AE%E5%A4%9A%E6%95%B0%E6%8D%AE%E6%BA%90/</loc>
     <lastmod>2018-09-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -761,13 +768,6 @@
   <url>
     <loc>http://www.mingaccount.com/2017/09/mysqlcreateviewexception/</loc>
     <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.mingaccount.com/2017/09/spel/</loc>
-    <lastmod>2017-09-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
