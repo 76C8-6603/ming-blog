@@ -535,11 +535,11 @@ class XmlJUnitJupiterSpringWebTests{}
 > **改变测试构造方法的默认装配模式**
 > 要改变默认的装配模式可以通过设置`spring.test.constructor.autowire.mode`JVM 系统属性为`all`。还可以通过设置`SpringProperties`机制来完成。  
 > 
-> 在Spring Framework 5.3，默认模式可以设置为一个[JUnit Platform configuration parameter](https://junit.org/junit5/docs/current/user-guide/#running-tests-config-params)  
+> 从Spring Framework 5.3开始，默认模式可以设置为一个[JUnit Platform configuration parameter](https://junit.org/junit5/docs/current/user-guide/#running-tests-config-params)  
 > 
 > 如果`spring.test.constructor.autowire.mode`属性没有设置，那么测试类的构造函数将不会自动装配  
 
-> 在Spring Framework 5.2，在使用JUnit Jupiter时`TestConstructor`只能和`SpringExtension`配合使用。注意在大多数境况下，`SpringExtension`已经为你自动注册完成了-比如在用了`@SpringJUnitConfig`和`@SpringJUnitWebConfig`或者各种来自Spring Boot测试相关的注解时  
+> 从Spring Framework 5.2开始，在使用JUnit Jupiter时`TestConstructor`只能和`SpringExtension`配合使用。注意在大多数境况下，`SpringExtension`已经为你自动注册完成了-比如在用了`@SpringJUnitConfig`和`@SpringJUnitWebConfig`或者各种来自Spring Boot测试相关的注解时  
 
 
 ### `@NestedTestConfiguration`
@@ -1063,7 +1063,7 @@ class MyTest {
 ### Context Configuration Inheritance
 `@ContextConfiguration`提供了`inheritLocations`和`inheritInitializers`属性来设置当前测试类是否从父类继承 `资源位置`或者`组件类`和初始化程序  
 
-> Spring Framework 5.3版本，属性为false，配置信息还是可以从包围类继承  
+> 从Spring Framework 5.3开始，属性为false，配置信息还是可以从包围类继承  
 
 下面的例子展示了测试类`ExtendedTests`如何按照`base-config.xml`，`extended-config.xml`的顺序加载`ApplicaitonContext`。`extened-config.xml`可以覆盖`base-config.xml`中的bean配置。  
 ```java
@@ -1115,7 +1115,336 @@ class ExtendedTest extends BaseTest {
 ```
 
 ### Context Configuration with Environment Profiles
+当有多个环境的配置时，Spring提供`@ActiveProfiles`注解，可以让你指定当前激活的环境配置。  
 
+> 你可以在任何`SmartContextLoader`的实现类上使用`@ActvieProfiles`注解，但是旧的`ContextLoader`实现上是不支持的  
+
+下面是一个xml配置和一个`@Configuration`配置类  
+```xml
+<!-- app-config.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+    xmlns:jee="http://www.springframework.org/schema/jee"
+    xsi:schemaLocation="...">
+
+    <bean id="transferService"
+            class="com.bank.service.internal.DefaultTransferService">
+        <constructor-arg ref="accountRepository"/>
+        <constructor-arg ref="feePolicy"/>
+    </bean>
+
+    <bean id="accountRepository"
+            class="com.bank.repository.internal.JdbcAccountRepository">
+        <constructor-arg ref="dataSource"/>
+    </bean>
+
+    <bean id="feePolicy"
+        class="com.bank.service.internal.ZeroFeePolicy"/>
+
+    <beans profile="dev">
+        <jdbc:embedded-database id="dataSource">
+            <jdbc:script
+                location="classpath:com/bank/config/sql/schema.sql"/>
+            <jdbc:script
+                location="classpath:com/bank/config/sql/test-data.sql"/>
+        </jdbc:embedded-database>
+    </beans>
+
+    <beans profile="production">
+        <jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/datasource"/>
+    </beans>
+
+    <beans profile="default">
+        <jdbc:embedded-database id="dataSource">
+            <jdbc:script
+                location="classpath:com/bank/config/sql/schema.sql"/>
+        </jdbc:embedded-database>
+    </beans>
+
+</beans>
+```
+
+```java
+@ExtendWith(SpringExtension.class)
+// ApplicationContext will be loaded from "classpath:/app-config.xml"
+@ContextConfiguration("/app-config.xml")
+@ActiveProfiles("dev")
+class TransferServiceTest {
+
+    @Autowired
+    TransferService transferService;
+
+    @Test
+    void testTransferService() {
+        // test the transferService
+    }
+}
+```
+
+当`TransferServiceTest`运行时，他的`ApplicationContext`会从`app-config.xml`配置文件加载。查看`app-config.xml`你会发现，`accountRepository`有一个`dataSource`bean依赖，但是这个`dataSource`bean没有定义为一个顶级的bean，相反，`dataSource`bean定义了三次，分别在`production`profile，`dev`profile，和`default`profile。  
+
+通过`@ActiveProfiles("dev")`，我们命令Spring启用`{"dev"}`配置信息去加载`ApplicationContext`。最终，会创建一个集成数据库并填充测试数据，并且`accountRepositroy`装配时会带上一个开发的`DataSource`引用。  
+
+当没有明确指定一个profile时，Spring会启用`default`profile。他可以作为一个默认的备用方案。  
+
+下面展示如何使用`@Configuration`替代xml配置：  
+```java
+@Configuration
+@Profile("dev")
+public class StandaloneDataConfig {
+
+    @Bean
+    public DataSource dataSource() {
+        return new EmbeddedDatabaseBuilder()
+            .setType(EmbeddedDatabaseType.HSQL)
+            .addScript("classpath:com/bank/config/sql/schema.sql")
+            .addScript("classpath:com/bank/config/sql/test-data.sql")
+            .build();
+    }
+}
+```
+```java
+@Configuration
+@Profile("production")
+public class JndiDataConfig {
+
+    @Bean(destroyMethod="")
+    public DataSource dataSource() throws Exception {
+        Context ctx = new InitialContext();
+        return (DataSource) ctx.lookup("java:comp/env/jdbc/datasource");
+    }
+}
+```
+```java
+@Configuration
+@Profile("default")
+public class DefaultDataConfig {
+
+    @Bean
+    public DataSource dataSource() {
+        return new EmbeddedDatabaseBuilder()
+            .setType(EmbeddedDatabaseType.HSQL)
+            .addScript("classpath:com/bank/config/sql/schema.sql")
+            .build();
+    }
+}
+```
+```java
+@Configuration
+public class TransferServiceConfig {
+
+    @Autowired DataSource dataSource;
+
+    @Bean
+    public TransferService transferService() {
+        return new DefaultTransferService(accountRepository(), feePolicy());
+    }
+
+    @Bean
+    public AccountRepository accountRepository() {
+        return new JdbcAccountRepository(dataSource);
+    }
+
+    @Bean
+    public FeePolicy feePolicy() {
+        return new ZeroFeePolicy();
+    }
+}
+```
+
+```java
+@SpringJUnitConfig({
+        TransferServiceConfig.class,
+        StandaloneDataConfig.class,
+        JndiDataConfig.class,
+        DefaultDataConfig.class})
+@ActiveProfiles("dev")
+class TransferServiceTest {
+
+    @Autowired
+    TransferService transferService;
+
+    @Test
+    void testTransferService() {
+        // test the transferService
+    }
+}
+```
+上面的例子中将xml配置文件拆分成四个独立的`@Configuration`类：
+* `TransferServiceConfig`：使用`@Autowired`注解通过依赖注入获取一个`dataSource`  
+* `StandaloneDataConfig`：为开发测试定义一个`dataSource`，它集成了一个数据库  
+* `JndiDataCOnfig`：为生产环境定义一个`dataSrouce`，从JNDI检索而得  
+* `DefaultDataConfig`：定义一个默认环境，申明了一个集成的数据库  
+
+跟xml配置一样,`TransferServiceTest`同样声明了`@ActiveProfiles("dev")`，但是这次申明了所有组件类。测试类的具体内容没有任何改变。  
+
+通常情况下，配置信心会用在多个测试类上，为了避免重复申明，可以创建一个基类去配置`@ActiveProfiles`注解，以及其他注解配置，然后其他的测试类都实现这个基类：  
+> 从Spring Framework 5.3开始，测试配置可以从包围类继承  
+
+```java
+@SpringJUnitConfig({
+        TransferServiceConfig.class,
+        StandaloneDataConfig.class,
+        JndiDataConfig.class,
+        DefaultDataConfig.class})
+@ActiveProfiles("dev")
+abstract class AbstractIntegrationTest {
+}
+```
+```java
+// "dev" profile inherited from superclass
+class TransferServiceTest extends AbstractIntegrationTest {
+
+    @Autowired
+    TransferService transferService;
+
+    @Test
+    void testTransferService() {
+        // test the transferService
+    }
+}
+```
+
+`@ActvieProfiles`注解支持`inheritProfiles`属性，提供一个boolean值就可以配置是否从父类集成配置信息：  
+```java
+// "dev" profile overridden with "production"
+@ActiveProfiles(profiles = "production", inheritProfiles = false)
+class ProductionTransferServiceTest extends AbstractIntegrationTest {
+    // test body
+}
+```
+
+此外，有些时候只能用编程的形式解析要激活哪个配置信息，而不是用声明的方式-基于下面这几个方面：  
+* 当前的操作系统
+* 测试是否运行在一个不断集成构建的服务  
+* 是否存在某一环境参数
+* 是否存在类级别的自定义注解
+* 其他情况  
+
+通过编程的方式解析激活的配置，你需要实现`ActiveProfilesResolver`并且通过`resolver`属性去注册它。更多信息，请参考[javadoc](https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/test/context/ActiveProfilesResolver.html) ：
+```java
+// "dev" profile overridden programmatically via a custom resolver
+@ActiveProfiles(
+        resolver = OperatingSystemActiveProfilesResolver.class,
+        inheritProfiles = false)
+class TransferServiceTest extends AbstractIntegrationTest {
+    // test body
+}
+```
+```java
+public class OperatingSystemActiveProfilesResolver implements ActiveProfilesResolver {
+
+    @Override
+    public String[] resolve(Class<?> testClass) {
+        String profile = ...;
+        // determine the value of profile based on the operating system
+        return new String[] {profile};
+    }
+}
+```
+
+### Context Configuration with Test Property Sources
+相对于`@Configuration`配置的`@PropertySource`，你同样可以使用`@TestPropertySource`在测试类上去声明属性资源。这些申明的测试属性资源会被添加到`Environment`中的`PropertySource`集合中，为注解的集成测试类加载`ApplicationContext`。  
+
+> 你可以在任何实现`SmartContextLoader`的类上使用`@TestPropertySource`，但是他不支持在`ContextLoader`的实现上申明。  
+> 
+> `SmartContextLoader`的实现可以通过`MergedContextConfiguraiton`中的`getPropertySourceLocations()`和`getPropertySourceProperties()`方法来合并测试属性资源值。  
+
+#### 声明测试属性资源
+你可以通过`@TestPropertySource`的`locations`和`value`属性来配置测试的属性文件。  
+
+传统的和XML基础的属性文件格式都支持-举个例子`classpath:/com/example/test.properties`或者`file:///path/to/file.xml`  
+
+每个path都会被翻译为一个Spring`Resource`。一个相对路径（比如"test.properties)会被看做一个classpath资源，他指向了当前测试类所在的包。如果一个路径是以斜线开头，会被当做绝对路径（比如："/org/example/test.xml"）。引用了URL的路径（比如说，以`classpath:`，`file:`，或者`http:`开头的路径）会使用指定的资源协议去加载。资源位置通配符（比如`*/.properties`）是不允许的：每个位置必须被解析为一个具体的`.properties`或者`.xml`资源。  
+
+```java
+@ContextConfiguration
+@TestPropertySource("/test.properties") 
+class MyIntegrationTests {
+    // class body...
+}
+```
+
+你可以配置内联属性通过`properties`属性，以key-value的结构赋值，下面的例子会展示如何使用。所有的key-value值对会被添加到包围的`Environment`中，对一个单独测试`PropertySource`它们有最高的优先级。  
+
+key-value值对支持的语法跟java属性文件中的键值定义语法一样：  
+* key=value
+* key:value
+* key value
+```java
+@ContextConfiguration
+@TestPropertySource(properties = {"timezone = GMT", "port: 4242"}) 
+class MyIntegrationTests {
+    // class body...
+}
+```
+
+> 从Spring Framework 5.2开始，`@TestPropertySource`可以被用作可重复注解。这意味着你可以为一个测试类声明多次该注解。后面的`@TestPropertySource`的`locations`和`properties`属性会覆盖之前`@TestPropertySource`声明的。  
+> 
+> 另外，你申明的复合注解里面可能都包含了`@TestPropertySource`，那么所有的`@TestPropertySource`都会为你的测试属性提供资源。  
+> 
+> 直接声明的`@TestPropertySource`的优先级都会高于复合注解中的声明  
+
+#### 默认属性文件检测
+如果`@TestPropertySource`注解的`locations`和`properties`属性都没有声明，那么他会查找一个默认的属性文件，路径基于当前注解修饰的测试类所在位置。比如测试类在`com.example.MyTest`，那么默认的属性文件路径为`classpath:com/example/MyTest.properties`。如果找不到默认文件，那么将会抛出一个`IllegalStateException`。  
+
+#### 优先级
+测试配置的属性优先级比操作系环境，java系统，或者任何通过`@PropertySource`或者编程方式声明的属性配置优先级都要高。因此测试属性可以选择性的覆盖所有系统属性和application属性资源。此外，内联属性的优先级是高于资源位置的。但是，有个例外，由`@DynamicPropertySource`申明的属性优先级是高于`@TestPropertySource`的。  
+
+下面的例子中，`timezone`和`port`属性和定义在`/test.properties`中的所有属性会覆盖在系统或者application中相同的属性名称配置。此外如果`/test.properties`中也有`timezone`和`port`属性，那么他们会被由`properties`声明内联属性所覆盖。  
+```java
+@ContextConfiguration
+@TestPropertySource(
+    locations = "/test.properties",
+    properties = {"timezone = GMT", "port: 4242"}
+)
+class MyIntegrationTests {
+    // class body...
+}
+```
+
+#### 继承并覆盖测试属性资源
+`@TestPropertySource`支持`inheritLocations`和`inheritProperties`属性来设置是否从父类继承配置位置和内联属性信息，这两个参数的默认值都为ture。在值为ture的情况下，就代表可以从父类继承配置信息，并且如果有相同名称的配置，那么后出现的会覆盖之前的。其他的优先级信息跟前面章节提到的一致。  
+
+如果`inheritLocations`和`inheritProperties`属性为false，那么一丝就是不从父类继承配置信息，当前测试类的配置会替代父类的。  
+
+> 从Spring Framework 5.3开始，测试配置可以从环绕类中获取  
+
+下面的例子展示了怎么从父类继承配置资源位置信息：  
+```java
+@TestPropertySource("base.properties")
+@ContextConfiguration
+class BaseTest {
+    // ...
+}
+
+@TestPropertySource("extended.properties")
+@ContextConfiguration
+class ExtendedTest extends BaseTest {
+    // ...
+}
+```
+
+下面的例子展示了如何从父类继承内联属性：
+```java
+@TestPropertySource(properties = "key1 = value1")
+@ContextConfiguration
+class BaseTest {
+    // ...
+}
+
+@TestPropertySource(properties = "key2 = value2")
+@ContextConfiguration
+class ExtendedTest extends BaseTest {
+    // ...
+}
+```
+
+### Context Configuration with Dynamic Property Sources
+从Spring Framework 5.2.5版本开始，TestContext 框架通过`@DynamicPropertySource`注解提供了动态属性的支持。这个注解可以在继承测试类需要动态资源属性的时候提供帮助。
+
+相对于
 
 
 
