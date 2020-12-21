@@ -11,6 +11,24 @@
     
     
     <item>
+      <title>Java获取当前类名和方法名</title>
+      <link>http://www.mingaccount.com/2018/01/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B1%BB%E5%90%8D%E5%92%8C%E6%96%B9%E6%B3%95%E5%90%8D/</link>
+      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/01/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B1%BB%E5%90%8D%E5%92%8C%E6%96%B9%E6%B3%95%E5%90%8D/</guid>
+      <description>Description Below I present you two different ways to get the current Class: Using Thread Using getClass() The simplest way to get the name of the class where your code is being executed in is using the getClass() method present in every java object. Like here: String clazz = this.getClass().getName(); This works only if executed in an Object, namely an instanciated class. If you try to execute the code above</description>
+    </item>
+    
+    <item>
+      <title>观察者模式和java委托</title>
+      <link>http://www.mingaccount.com/2018/01/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8Cjava%E5%A7%94%E6%89%98/</link>
+      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/01/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8Cjava%E5%A7%94%E6%89%98/</guid>
+      <description>所谓观察者模式，指的某个状态信息的改变，会影响其他一系列的操作，这时就可以将这些操作抽象化，同时创建一个类统一的管理和执行这些操作。把这些抽</description>
+    </item>
+    
+    <item>
       <title>[转]Class.forName()用法详解</title>
       <link>http://www.mingaccount.com/2017/11/class.forname%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/</link>
       <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
@@ -170,24 +188,6 @@
       
       <guid>http://www.mingaccount.com/2017/04/jackson%E5%85%A8%E5%B1%80%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</guid>
       <description>通过修改springboot application.properties spring.jackson.date-format=yyyy-MM-dd HH:mm:ss spring.jackson.time-zone=GMT+8</description>
-    </item>
-    
-    <item>
-      <title>Jackson使用解析</title>
-      <link>http://www.mingaccount.com/2017/04/jackson/</link>
-      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/04/jackson/</guid>
-      <description>Jackson简介 Spring在@RequestBody和@ResponseBody中对对象的反序列化和序列化，都是借助Jackson来实现</description>
-    </item>
-    
-    <item>
-      <title>修改SpringBoot日志打印时候的标志</title>
-      <link>http://www.mingaccount.com/2017/04/%E4%BF%AE%E6%94%B9springboot%E7%9A%84banner/</link>
-      <pubDate>Sat, 15 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/04/%E4%BF%AE%E6%94%B9springboot%E7%9A%84banner/</guid>
-      <description>1.新建banner.txt在resources目录下 _/_/_/ _/ _/ _/_/_/ _/ _/ _/_/ _/ _/ _/ _/ _/_/ _/ _/ _/ _/ _/_/_/_/ _/ _/ _/ _/ _/_/_/_/ _/ _/ _/ _/ _/ _/_/ _/ _/ _/_/_/ _/ _/ _/_/_/ _/ _/ _/ _/ 文本图形生</description>
     </item>
     
   </channel>

@@ -10,6 +10,24 @@
     
     
     <item>
+      <title>Windows删除启动盘的所有分区</title>
+      <link>http://www.mingaccount.com/2018/07/windows%E5%88%A0%E9%99%A4%E5%90%AF%E5%8A%A8%E7%9B%98%E7%9A%84%E5%90%84%E7%A7%8D%E5%88%86%E5%8C%BA/</link>
+      <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/07/windows%E5%88%A0%E9%99%A4%E5%90%AF%E5%8A%A8%E7%9B%98%E7%9A%84%E5%90%84%E7%A7%8D%E5%88%86%E5%8C%BA/</guid>
+      <description>win10右键徽标-&amp;gt;Windows Powershell(管理员) dispark list disk 展示所有磁盘 select disk # 确认好所选目标磁盘，#号为id clean 删除选中磁盘</description>
+    </item>
+    
+    <item>
+      <title>[译]lambda表达式对 SAM （单个抽象方法类）type的处理方式</title>
+      <link>http://www.mingaccount.com/2018/06/%E8%AF%91lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AF%B9-sam/</link>
+      <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/06/%E8%AF%91lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AF%B9-sam/</guid>
+      <description>在阅读Venkat Subramaniam的著作《Functional Programming in Java》 之后，方法模式和lambda完美结合让我印象深刻。 这种模式</description>
+    </item>
+    
+    <item>
       <title>Npm淘宝镜像</title>
       <link>http://www.mingaccount.com/2018/06/npm%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F/</link>
       <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
@@ -169,24 +187,6 @@
       
       <guid>http://www.mingaccount.com/2018/01/%E5%85%A8%E5%B1%80%E8%8E%B7%E5%8F%96request/</guid>
       <description>交于Spring管理的类，通过注解调用 @Component public class Test{ @Autowired private HttpServletRequest httpServletRequest; } 通过静态方法调用 HttpServletRequest httpServletRequest = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();</description>
-    </item>
-    
-    <item>
-      <title>Java获取当前类名和方法名</title>
-      <link>http://www.mingaccount.com/2018/01/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B1%BB%E5%90%8D%E5%92%8C%E6%96%B9%E6%B3%95%E5%90%8D/</link>
-      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2018/01/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B1%BB%E5%90%8D%E5%92%8C%E6%96%B9%E6%B3%95%E5%90%8D/</guid>
-      <description>Description Below I present you two different ways to get the current Class: Using Thread Using getClass() The simplest way to get the name of the class where your code is being executed in is using the getClass() method present in every java object. Like here: String clazz = this.getClass().getName(); This works only if executed in an Object, namely an instanciated class. If you try to execute the code above</description>
-    </item>
-    
-    <item>
-      <title>观察者模式和java委托</title>
-      <link>http://www.mingaccount.com/2018/01/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8Cjava%E5%A7%94%E6%89%98/</link>
-      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2018/01/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8Cjava%E5%A7%94%E6%89%98/</guid>
-      <description>所谓观察者模式，指的某个状态信息的改变，会影响其他一系列的操作，这时就可以将这些操作抽象化，同时创建一个类统一的管理和执行这些操作。把这些抽</description>
     </item>
     
   </channel>

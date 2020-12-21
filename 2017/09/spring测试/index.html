@@ -39,7 +39,7 @@
 <meta itemprop="description" content="1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成">
 <meta itemprop="datePublished" content="2017-09-15T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2017-09-15T00:00:00+00:00" />
-<meta itemprop="wordCount" content="27953">
+<meta itemprop="wordCount" content="29876">
 
 
 
@@ -148,6 +148,10 @@
     <h3 class="widget-title"> Tags</h3>
     <div class="widget-body">
         <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/db2/" class="tag-list-link">db2</a><span
+                    class="tag-list-count">2</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/design-pattern/" class="tag-list-link">design-pattern</a><span
@@ -354,8 +358,8 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2017/09/spring%E6%B5%8B%E8%AF%95/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 27953words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 56minutes </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 29876words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 60minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -1595,7 +1599,73 @@ class ExtendedTest extends BaseTest {
 </code></pre>
 <h3 id="context-configuration-with-dynamic-property-sources">Context Configuration with Dynamic Property Sources</h3>
 <p>从Spring Framework 5.2.5版本开始，TestContext 框架通过<code>@DynamicPropertySource</code>注解提供了动态属性的支持。这个注解可以在继承测试类需要动态资源属性的时候提供帮助。</p>
-<p>相对于</p>
+<p>相对于作用在类级别的<code>@TestPropertySource</code>，<code>@DynamicPropertySource</code>只能作用在静态方法上，并且该方法必须有一个<code>DynamicPropertyRegistry</code>参数，这个参数被用来向<code>Environment</code>添加 name-value 格式的数据。这些动态的参数值都是通过一个<code>Supplier</code>来提供的，它只有在属性被解析的时候才会调用。通常来说，方法引用就是被用来提供参数的，就像下面的例子一样，使用TestContainers项目去管理一个在Spring <code>ApplicationContext</code>之外的Redis container。通过<code>redis.host</code>和<code>redis.port</code>属性，让redis容器管理的ip和host也对test<code>ApplicationContext</code>的组件可用。这些属性可以通过Spring的<code>Environment</code>抽象访问或者直接在Spring管理的组件中注入-举个例子，分别通过<code>@Value(&quot;${redis.host}&quot;)</code>和<code>@Value(&quot;${redis.port}&quot;)</code>赋值</p>
+<blockquote>
+<p>如果你的<code>@DynamicPropertySource</code>声明在基类，并且子类测试失败，因为属性值在子类之中已经被改变。那么你需要在基类上声明<code>@DirtiesContext</code>，以确保每个子类的<code>ApplcationContext</code>都有正确的属性值</p>
+</blockquote>
+<pre><code class="language-java">@SpringJUnitConfig(/* ... */)
+@Testcontainers
+class ExampleIntegrationTests {
+
+    @Container
+    static RedisContainer redis = new RedisContainer();
+
+    @DynamicPropertySource
+    static void redisProperties(DynamicPropertyRegistry registry) {
+        registry.add(&quot;redis.host&quot;, redis::getContainerIpAddress);
+        registry.add(&quot;redis.port&quot;, redis::getMappedPort);
+    }
+
+    // tests ...
+
+}
+</code></pre>
+<h4 id="优先级-1">优先级</h4>
+<p>动态属性拥有最高的优先级，意思就是会覆盖来自<code>@TestPropertySource</code>、操作系统环境、java系统属性、或者通过<code>@PropertySource</code>和编码方式申明的属性。因为他的高优先级特性，可以用来覆盖指定的属性值。</p>
+<h3 id="loading-a-webapplicationcontext">Loading a WebApplicationContext</h3>
+<p>如果你需要的上下文对象是<code>WebApplcationContext</code>而不是<code>ApplicationContext</code>，那你需要在每个测试类上声明<code>@WebAppConfiguration</code>注解。</p>
+<p>在TestContext框架为你的测试类生成<code>WebApplicationContext</code>时，会在后台为你的<code>WebApplicationContext</code>提供一个<code>MockServletContext</code>。默认情况下，<code>MockServletContext</code>的基础资源路径被设定为<code>src/main/webapp</code>。这个相对路径跟JVM的根路径关联（一般来说就是你的项目路径）。如果你熟悉maven项目的Web应用目录结构，你肯定知道WAR根目录的默认位置就是<code>src/main/webapp</code>。你可以提供自定义路径去覆盖默认的（<code>@WebAppConfiguration(&quot;src/test/webapp&quot;)</code>）。如果你想引用的基础资源路径是来自classpath而不是文件系统，可以使用Spring的<code>classpath:</code>前缀。</p>
+<p>注意Spring测试对<code>WebApplicationContext</code>实现的支持等同于对<code>ApplicationContext</code>实现的支持。这句话的意思就是<code>ApplicationContext</code>可用的注解，<code>WebaApplicationContext</code>同样可用，并且使用方式也一样-例如：<code>@Configuration</code>、<code>@ContextConfiguration</code>、<code>@ActiveProfiles</code>、<code>@TestExecutionListeners</code>、<code>@Sql</code>、<code>@Rollback</code>，等等其他注解。</p>
+<p>下面例子展示如果加载<code>WebApplicationContext</code>。第一个例子展示默认配置：</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+
+// defaults to &quot;file:src/main/webapp&quot;
+@WebAppConfiguration
+
+// detects &quot;WacTests-context.xml&quot; in the same package
+// or static nested @Configuration classes
+@ContextConfiguration
+class WacTests {
+    //...
+}
+</code></pre>
+<p>如果<code>@WebAppConfiguration</code>没有指定一个基础资源路径，那么默认的<code>file:src/main/webapp</code>路径将会使用。同样的，如果申明<code>@ContextConfiguration</code>没有指定资源<code>locations</code>，组件类，或者context<code>initializers</code>，Spring会尝试在当前测试类的所在路径检测<code>WacTests-context.xml</code>文件，或者静态集成的<code>@Configuration</code>类。</p>
+<p>下面的例子展示了如何清晰的声明一个<code>@WebAppConfiguration</code>基础资源路径，和<code>@ContextConfiguration</code>的XML资源路径：</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+
+// file system resource
+@WebAppConfiguration(&quot;webapp&quot;)
+
+// classpath resource
+@ContextConfiguration(&quot;/spring/test-servlet-config.xml&quot;)
+class WacTests {
+    //...
+}
+</code></pre>
+<p>这里有个重要的事情需要注意，默认情况下，<code>@WebAppConfiguration</code>资源路径是以文件系统为基础的，然而<code>@ContextConfiguration</code>资源路径是以classpath为基础的。</p>
+<p>下面展示了如果通过Spring前缀改变默认的路径语法：</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+
+// classpath resource
+@WebAppConfiguration(&quot;classpath:test-web-resources&quot;)
+
+// file system resource
+@ContextConfiguration(&quot;file:src/main/webapp/WEB-INF/servlet-config.xml&quot;)
+class WacTests {
+    //...
+}
+</code></pre>
+<h4 id="web-mocks">Web Mocks</h4>
 
     </div>
     <div class="article-footer">

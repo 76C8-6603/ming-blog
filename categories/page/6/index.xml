@@ -10,6 +10,24 @@
     
     
     <item>
+      <title>Jackson使用解析</title>
+      <link>http://www.mingaccount.com/2017/04/jackson/</link>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/04/jackson/</guid>
+      <description>Jackson简介 Spring在@RequestBody和@ResponseBody中对对象的反序列化和序列化，都是借助Jackson来实现</description>
+    </item>
+    
+    <item>
+      <title>修改SpringBoot日志打印时候的标志</title>
+      <link>http://www.mingaccount.com/2017/04/%E4%BF%AE%E6%94%B9springboot%E7%9A%84banner/</link>
+      <pubDate>Sat, 15 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/04/%E4%BF%AE%E6%94%B9springboot%E7%9A%84banner/</guid>
+      <description>1.新建banner.txt在resources目录下 _/_/_/ _/ _/ _/_/_/ _/ _/ _/_/ _/ _/ _/ _/ _/_/ _/ _/ _/ _/ _/_/_/_/ _/ _/ _/ _/ _/_/_/_/ _/ _/ _/ _/ _/ _/_/ _/ _/ _/_/_/ _/ _/ _/_/_/ _/ _/ _/ _/ 文本图形生</description>
+    </item>
+    
+    <item>
       <title>Spring Application配置文件通用参数</title>
       <link>http://www.mingaccount.com/2017/04/spring%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E9%80%9A%E7%94%A8%E5%8F%82%E6%95%B0/</link>
       <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>

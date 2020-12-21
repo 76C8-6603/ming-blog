@@ -227,6 +227,27 @@
   </url>
   
   <url>
+    <loc>http://www.mingaccount.com/tags/db2/</loc>
+    <lastmod>2019-11-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2019/11/db2-cast-decimal-exception/</loc>
+    <lastmod>2019-11-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2019/11/db2sumerror/</loc>
+    <lastmod>2019-11-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mingaccount.com/2019/10/mysql%E8%A1%A8%E8%AE%BE%E8%AE%A1%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</loc>
     <lastmod>2019-10-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
