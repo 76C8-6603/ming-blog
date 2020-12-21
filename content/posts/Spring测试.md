@@ -1444,7 +1444,85 @@ class ExtendedTest extends BaseTest {
 ### Context Configuration with Dynamic Property Sources
 从Spring Framework 5.2.5版本开始，TestContext 框架通过`@DynamicPropertySource`注解提供了动态属性的支持。这个注解可以在继承测试类需要动态资源属性的时候提供帮助。
 
-相对于
+相对于作用在类级别的`@TestPropertySource`，`@DynamicPropertySource`只能作用在静态方法上，并且该方法必须有一个`DynamicPropertyRegistry`参数，这个参数被用来向`Environment`添加 name-value 格式的数据。这些动态的参数值都是通过一个`Supplier`来提供的，它只有在属性被解析的时候才会调用。通常来说，方法引用就是被用来提供参数的，就像下面的例子一样，使用TestContainers项目去管理一个在Spring `ApplicationContext`之外的Redis container。通过`redis.host`和`redis.port`属性，让redis容器管理的ip和host也对test`ApplicationContext`的组件可用。这些属性可以通过Spring的`Environment`抽象访问或者直接在Spring管理的组件中注入-举个例子，分别通过`@Value("${redis.host}")`和`@Value("${redis.port}")`赋值  
+
+> 如果你的`@DynamicPropertySource`声明在基类，并且子类测试失败，因为属性值在子类之中已经被改变。那么你需要在基类上声明`@DirtiesContext`，以确保每个子类的`ApplcationContext`都有正确的属性值  
+
+```java
+@SpringJUnitConfig(/* ... */)
+@Testcontainers
+class ExampleIntegrationTests {
+
+    @Container
+    static RedisContainer redis = new RedisContainer();
+
+    @DynamicPropertySource
+    static void redisProperties(DynamicPropertyRegistry registry) {
+        registry.add("redis.host", redis::getContainerIpAddress);
+        registry.add("redis.port", redis::getMappedPort);
+    }
+
+    // tests ...
+
+}
+```
+
+#### 优先级
+动态属性拥有最高的优先级，意思就是会覆盖来自`@TestPropertySource`、操作系统环境、java系统属性、或者通过`@PropertySource`和编码方式申明的属性。因为他的高优先级特性，可以用来覆盖指定的属性值。  
+
+### Loading a WebApplicationContext
+如果你需要的上下文对象是`WebApplcationContext`而不是`ApplicationContext`，那你需要在每个测试类上声明`@WebAppConfiguration`注解。  
+
+在TestContext框架为你的测试类生成`WebApplicationContext`时，会在后台为你的`WebApplicationContext`提供一个`MockServletContext`。默认情况下，`MockServletContext`的基础资源路径被设定为`src/main/webapp`。这个相对路径跟JVM的根路径关联（一般来说就是你的项目路径）。如果你熟悉maven项目的Web应用目录结构，你肯定知道WAR根目录的默认位置就是`src/main/webapp`。你可以提供自定义路径去覆盖默认的（`@WebAppConfiguration("src/test/webapp")`）。如果你想引用的基础资源路径是来自classpath而不是文件系统，可以使用Spring的`classpath:`前缀。  
+
+注意Spring测试对`WebApplicationContext`实现的支持等同于对`ApplicationContext`实现的支持。这句话的意思就是`ApplicationContext`可用的注解，`WebaApplicationContext`同样可用，并且使用方式也一样-例如：`@Configuration`、`@ContextConfiguration`、`@ActiveProfiles`、`@TestExecutionListeners`、`@Sql`、`@Rollback`，等等其他注解。  
+
+下面例子展示如果加载`WebApplicationContext`。第一个例子展示默认配置：  
+```java
+@ExtendWith(SpringExtension.class)
+
+// defaults to "file:src/main/webapp"
+@WebAppConfiguration
+
+// detects "WacTests-context.xml" in the same package
+// or static nested @Configuration classes
+@ContextConfiguration
+class WacTests {
+    //...
+}
+```
+如果`@WebAppConfiguration`没有指定一个基础资源路径，那么默认的`file:src/main/webapp`路径将会使用。同样的，如果申明`@ContextConfiguration`没有指定资源`locations`，组件类，或者context`initializers`，Spring会尝试在当前测试类的所在路径检测`WacTests-context.xml`文件，或者静态集成的`@Configuration`类。  
+
+下面的例子展示了如何清晰的声明一个`@WebAppConfiguration`基础资源路径，和`@ContextConfiguration`的XML资源路径：  
+```java
+@ExtendWith(SpringExtension.class)
+
+// file system resource
+@WebAppConfiguration("webapp")
+
+// classpath resource
+@ContextConfiguration("/spring/test-servlet-config.xml")
+class WacTests {
+    //...
+}
+```
+这里有个重要的事情需要注意，默认情况下，`@WebAppConfiguration`资源路径是以文件系统为基础的，然而`@ContextConfiguration`资源路径是以classpath为基础的。  
+
+下面展示了如果通过Spring前缀改变默认的路径语法：  
+```java
+@ExtendWith(SpringExtension.class)
+
+// classpath resource
+@WebAppConfiguration("classpath:test-web-resources")
+
+// file system resource
+@ContextConfiguration("file:src/main/webapp/WEB-INF/servlet-config.xml")
+class WacTests {
+    //...
+}
+```
+
+#### Web Mocks
 
 
 
