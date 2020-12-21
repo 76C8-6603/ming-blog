@@ -512,7 +512,7 @@ class XmlJUnitJupiterSpringTests{
 详情参考[Context Management](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-ctx-management) 和[@SpringJUnitConfig](https://docs.spring.io/spring-framework/docs/5.3.1/javadoc-api/org/springframework/test/context/junit/jupiter/SpringJUnitConfig.html) ，`@ContextConfiguration`的API文档
 
 ### `@SpringJUnitWebConfig`
-它是一个复合注解，是由来自JUnit Jupiter的`@ExtendWith(SprintExtension.class)`与来自Spring TestContext框架的`ContextConfiguration`、`@WebAppConfiguration`构成。你可以将他申明在类上，它可以用来代替`@ContextConfiguration`和`@WebAppConfiguration`。关于配置选项，`@ContextConfiguration`和`@SpringJUnitWebConfig`的唯一区别是`@SpringJUnitWebConfig`可以同使用`value`属性来声明组件类。另外你可以覆盖`@WebAppConfiguration`的`value`属性，通过`@SpringJUnitWebConfig`的`resourcePath`属性。  
+它是一个复合注解，是由来自JUnit Jupiter的`@ExtendWith(SprintExtension.class)`与来自Spring TestContext框架的`ContextConfiguration`、`@WebAppConfiguration`构成。你可以将他申明在类上，它可以用来代替`@ContextConfiguration`和`@WebAppConfiguration`。关于配置选项，`@ContextConfiguration`和`@SpringJUnitWebConfig`的唯一区别是`@SpringJUnitWebConfig`可以使用`value`属性来声明组件类。另外你可以覆盖`@WebAppConfiguration`的`value`属性，通过`@SpringJUnitWebConfig`的`resourcePath`属性。  
 
 下面的例子展示了如何指定一个配置类：
 ```java
@@ -1523,8 +1523,65 @@ class WacTests {
 ```
 
 #### Web Mocks
+为了提供完整的测试支持，TestContext框架默认启用了`ServletTestExecutionListener`。当在测试一个`WebApplcationContext`时，`TestExecutionListener`在每个测试方法之前，通过Spring Web的`RequestContextHolder`配置好默认的线程本地状态，并且基于`@WebAppConfiguration`配置的基础资源路径创建`MockHttpServletRequest`，`MockHttpServletResponse`，和`ServletWebRequest`。`ServletTestExecutionListener`同时也确保了`MockHttpServletRequest`和`MockHttpServletResponse`能够注入到测试实例当中，当测试完毕，他会清空线程本地状态。  
 
+下面的实例展示了那些mock对象可以注入到你的测试实例当中。注意`WebApplicationContext`和`MockServletContext`都是被缓存起来的通用测试对象，然而其他的mock对象都是每个测试方法维护一个，其中的逻辑是通过`ServletTestExecutionListener`来实现的。  
 
+```java
+@SpringJUnitWebConfig
+class WacTests {
+
+    @Autowired
+    WebApplicationContext wac; // cached
+
+    @Autowired
+    MockServletContext servletContext; // cached
+
+    @Autowired
+    MockHttpSession session;
+
+    @Autowired
+    MockHttpServletRequest request;
+
+    @Autowired
+    MockHttpServletResponse response;
+
+    @Autowired
+    ServletWebRequest webRequest;
+
+    //...
+}
+```
+
+### Context Caching
+一旦TestContext框架为一个测试加载了`ApplicationContext`(或者`WebApplicationContext`)，这个上下文对象会被缓存并且在接下来的测试中复用。测试的上下文对象是否从缓存中读取，要看他是否申明了相同`唯一`的上下文配置，并且是在同一个`测试套件`中。要了解测试框架的缓存机制，就必须知道`唯一`和`测试套件`分别代表了什么。  
+
+Spring测试框架会根据context的配置参数生成一个唯一的key值。下面是影响这个key值的配置参数：  
+* locations (from @ContextConfiguration)
+* classes (from @ContextConfiguration)
+* contextInitializerClasses (from @ContextConfiguration)
+* contextCustomizers (from ContextCustomizerFactory) – 这个包含了`@DynamicPropertySource`的方法以及Spring Boot支持的测试特性，比如`@MockBean`和`@SpyBean`  
+* contextLoader (from @ContextConfiguration)
+* parent (from @ContextHierarchy)
+* activeProfiles (from @ActiveProfiles)
+* propertySourceLocations (from @TestPropertySource)
+* propertySourceProperties (from @TestPropertySource)
+* resourceBasePath (from @WebAppConfiguration)  
+
+举个例子，`TestClassA`根据`@ContextConfiguration`的属性`{"app-config.xml", "test-config.xml"}`初始化了context，接下来测试框架会加载该`ApplicationContext`并且根据前面的路径生成一个key，保存到`static`上下文缓存中。如果`TestClassB`同样申明了`{"app-config.xml", "test-config.xml"}`，并且没有`@WebAppConfiguration`，不一样的`ContextLoader`，不一样的启用配置， 不一样的上下文初始化程序，不一样的测试属性资源，或者不一样的父上下文类，那么这两个类就会共享同一个`ApplicationContext`。  
+
+> **测试套件和分支进程**  
+> Spring测试框架缓存上下文对象在一个静态的参数里，意思就是如果测试类来自两个不同的进程，就算满足上面两个条件，缓存机制也不可能生效。  
+> 
+> 因此如果想利用Spring测试的上下文缓存机制，必须确保在同一个进程或者同一个测试套件中。同样，如果通过build框架执行的测试，比如Ant，Maven，或者Gradle，必须确保build框架在测试之间没有fork。比如说，Maven Surefire插件的`forkMode`如果设置为`always`或者`pertest`，那么上下文缓存就不会生效。  
+
+上下文缓存的最大个数是32个。当达到最大值时，一个`最近使用最少`(LRU)的驱逐策略将会被使用来驱逐和关闭陈旧的上下文。想配置缓存的最大数量，可以通过命令行或者JVM系统属性的构建脚本，名字叫`spring.test.context.cache.maxSize`。或者通过编程的方式使用`SpringProperties`设置相同的属性。  
+
+缓存多个应用上下文在给定测试套件中会造成测试套件无意义的长时间运行，当然最好是能知道目前有多少个上下文缓存。通过设置`org.springframework.test.context.cache`的log等级为`DEBUG`即可实现。  
+
+极少数情况测试会污染上下文对象（比如修改bean的定义或者上下文对象的状态），你可以使用`@DirtiesContext`注解来表示下次测试运行之前重载上下文。这个注解是`DirtiesContextBeforeModesTestExecutionListener`和`DirtiesContextTestExecutionListener`提供的，他们两个都是默认启用。  
+
+### Context Hierarchies
 
 
 
