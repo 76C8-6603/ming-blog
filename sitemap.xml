@@ -220,6 +220,20 @@
   </url>
   
   <url>
+    <loc>http://www.mingaccount.com/2019/12/fieldinjectionnotrecommended/</loc>
+    <lastmod>2019-12-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/tags/spring/</loc>
+    <lastmod>2019-12-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mingaccount.com/2019/12/hadoopsshlocalhost%E6%97%A0%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95/</loc>
     <lastmod>2019-12-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -278,13 +292,6 @@
   <url>
     <loc>http://www.mingaccount.com/2019/09/sparksession.read.csv%E6%97%A0%E6%B3%95%E5%AE%9A%E4%BD%8D%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6/</loc>
     <lastmod>2019-09-18T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.mingaccount.com/tags/spring/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

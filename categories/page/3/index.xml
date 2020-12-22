@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>为服务开启BBR加速</title>
+      <link>http://www.mingaccount.com/2019/05/%E4%B8%BA%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%90%AFbbr%E5%8A%A0%E9%80%9F/</link>
+      <pubDate>Fri, 31 May 2019 19:03:55 +0800</pubDate>
+      
+      <guid>http://www.mingaccount.com/2019/05/%E4%B8%BA%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%90%AFbbr%E5%8A%A0%E9%80%9F/</guid>
+      <description>脚本： wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;amp;&amp;amp; chmod +x bbr.sh &amp;amp;&amp;amp; ./bbr.sh 查看结果： sysctl net.ipv4.tcp_available_congestion_control</description>
+    </item>
+    
+    <item>
       <title>Scala基础类结构图</title>
       <link>http://www.mingaccount.com/2019/05/scala%E5%9F%BA%E7%A1%80%E7%B1%BB%E7%BB%93%E6%9E%84%E5%9B%BE/</link>
       <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>http://www.mingaccount.com/2018/08/%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E4%B8%AD%E7%9A%84-%E5%8F%B7%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E4%B8%A2%E5%A4%B1/</guid>
       <description>最近在开发中碰见一个问题，后端代码调用接口，在请求端参数没有任何问题，但是当接口接收到参数时，其中的加号全部变为了空格。 在查阅资料后发现是U</description>
-    </item>
-    
-    <item>
-      <title>Maven package完整依赖jar包</title>
-      <link>http://www.mingaccount.com/2018/07/mavenpackage%E5%AE%8C%E6%95%B4%E4%BE%9D%E8%B5%96jar%E5%8C%85/</link>
-      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2018/07/mavenpackage%E5%AE%8C%E6%95%B4%E4%BE%9D%E8%B5%96jar%E5%8C%85/</guid>
-      <description>maven package生成的jar包默认是没有项目依赖的 需要导出的jar包包含项目所有的依赖，需要配置pom： &amp;lt;build&amp;gt; &amp;lt;finalName&amp;gt;yourApp&amp;lt;/finalName&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-shade-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;shadedArtifactAttached&amp;gt;true&amp;lt;/shadedArtifactAttached&amp;gt; &amp;lt;shadedClassifierName&amp;gt;jar-with-dependencies&amp;lt;/shadedClassifierName&amp;gt; &amp;lt;!-- Any name that makes sense --&amp;gt; &amp;lt;outputDirectory&amp;gt;../output/jar-with-dependencies&amp;lt;/outputDirectory&amp;gt; &amp;lt;/configuration&amp;gt;</description>
     </item>
     
   </channel>

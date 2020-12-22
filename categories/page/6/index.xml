@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>Springboot Jackson全局日期格式处理</title>
+      <link>http://www.mingaccount.com/2017/04/jackson%E5%85%A8%E5%B1%80%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/04/jackson%E5%85%A8%E5%B1%80%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</guid>
+      <description>通过修改springboot application.properties spring.jackson.date-format=yyyy-MM-dd HH:mm:ss spring.jackson.time-zone=GMT+8</description>
+    </item>
+    
+    <item>
       <title>Jackson使用解析</title>
       <link>http://www.mingaccount.com/2017/04/jackson/</link>
       <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>

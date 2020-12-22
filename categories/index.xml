@@ -154,6 +154,15 @@
     </item>
     
     <item>
+      <title>@Autowired注解直接修饰在成员变量时提醒Field injection is not recommended</title>
+      <link>http://www.mingaccount.com/2019/12/fieldinjectionnotrecommended/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2019/12/fieldinjectionnotrecommended/</guid>
+      <description>Spring依赖注入方式 直接修饰成员变量，也就是提醒不推荐的情况 @RestController public class TestController{ @Autowired private TestService testService; } 修饰构造函数，@Autowired可省略 @RestController public class TestController{ private TestService testService; public TestController(TestService</description>
+    </item>
+    
+    <item>
       <title>Hadoop ssh localhost 无密码登录</title>
       <link>http://www.mingaccount.com/2019/12/hadoopsshlocalhost%E6%97%A0%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95/</link>
       <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>http://www.mingaccount.com/2019/11/db2sumerror/</guid>
       <description>完整异常 Arithmetic overflow or other arithmetic exception occurred.. SQLCODE=-802, SQLSTATE=22003, DRIVER=4.26.14 报错sql SELECT SUM(C_1788) FROM table c_1788列是integer类型 报错原因 c_1788列数值长度为9，sum值肯定溢出</description>
-    </item>
-    
-    <item>
-      <title>[转]Mysql表设计注意事项</title>
-      <link>http://www.mingaccount.com/2019/10/mysql%E8%A1%A8%E8%AE%BE%E8%AE%A1%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
-      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2019/10/mysql%E8%A1%A8%E8%AE%BE%E8%AE%A1%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
-      <description>作者：孤独烟 链接：https://zhuanlan.zhihu.com/p/73260510 来源：知乎 著作权归作者所有。商业转载请联系作者获</description>
     </item>
     
   </channel>

@@ -5,10 +5,19 @@
     <link>http://www.mingaccount.com/tags/spring/</link>
     <description>Recent content in spring on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 05 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Dec 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://www.mingaccount.com/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Springboot Jackson全局日期格式处理</title>
+      <link>http://www.mingaccount.com/2017/04/jackson%E5%85%A8%E5%B1%80%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/04/jackson%E5%85%A8%E5%B1%80%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</guid>
+      <description>通过修改springboot application.properties spring.jackson.date-format=yyyy-MM-dd HH:mm:ss spring.jackson.time-zone=GMT+8</description>
+    </item>
     
     <item>
       <title>Jackson使用解析</title>

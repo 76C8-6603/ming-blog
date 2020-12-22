@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>
-        Java注释引用类和其成员 - Ming Blog
+        @Autowired注解直接修饰在成员变量时提醒Field injection is not recommended - Ming Blog
       </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -20,33 +20,33 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    <meta name="description" content="注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类" />
+    <meta name="description" content="Spring依赖注入方式 直接修饰成员变量，也就是提醒不推荐的情况 @RestController public class TestController{ @Autowired private TestService testService; } 修饰构造函数，@Autowired可省略 @RestController public class TestController{ private TestService testService; public TestController(TestService" />
     <meta name="generator" content="Hugo 0.74.3 with theme pure" />
-    <title>Java注释引用类和其成员 - Ming Blog</title>
+    <title>@Autowired注解直接修饰在成员变量时提醒Field injection is not recommended - Ming Blog</title>
     
     
     <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="Java注释引用类和其成员" />
-<meta property="og:description" content="注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类" />
+    <meta property="og:title" content="@Autowired注解直接修饰在成员变量时提醒Field injection is not recommended" />
+<meta property="og:description" content="Spring依赖注入方式 直接修饰成员变量，也就是提醒不推荐的情况 @RestController public class TestController{ @Autowired private TestService testService; } 修饰构造函数，@Autowired可省略 @RestController public class TestController{ private TestService testService; public TestController(TestService" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/" />
-<meta property="article:published_time" content="2016-04-05T00:00:00+00:00" />
-<meta property="article:modified_time" content="2016-04-05T00:00:00+00:00" />
-<meta itemprop="name" content="Java注释引用类和其成员">
-<meta itemprop="description" content="注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类">
-<meta itemprop="datePublished" content="2016-04-05T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2016-04-05T00:00:00+00:00" />
-<meta itemprop="wordCount" content="84">
+<meta property="og:url" content="http://www.mingaccount.com/2019/12/fieldinjectionnotrecommended/" />
+<meta property="article:published_time" content="2019-12-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-12-13T00:00:00+00:00" />
+<meta itemprop="name" content="@Autowired注解直接修饰在成员变量时提醒Field injection is not recommended">
+<meta itemprop="description" content="Spring依赖注入方式 直接修饰成员变量，也就是提醒不推荐的情况 @RestController public class TestController{ @Autowired private TestService testService; } 修饰构造函数，@Autowired可省略 @RestController public class TestController{ private TestService testService; public TestController(TestService">
+<meta itemprop="datePublished" content="2019-12-13T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-12-13T00:00:00+00:00" />
+<meta itemprop="wordCount" content="266">
 
 
 
-<meta itemprop="keywords" content="java," />
+<meta itemprop="keywords" content="spring," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Java注释引用类和其成员"/>
-<meta name="twitter:description" content="注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类"/>
+<meta name="twitter:title" content="@Autowired注解直接修饰在成员变量时提醒Field injection is not recommended"/>
+<meta name="twitter:description" content="Spring依赖注入方式 直接修饰成员变量，也就是提醒不推荐的情况 @RestController public class TestController{ @Autowired private TestService testService; } 修饰构造函数，@Autowired可省略 @RestController public class TestController{ private TestService testService; public TestController(TestService"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -336,8 +336,8 @@
       <h1 itemprop="name">
   <a
     class="article-title"
-    href="/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/"
-    >Java注释引用类和其成员</a
+    href="/2019/12/fieldinjectionnotrecommended/"
+    >@Autowired注解直接修饰在成员变量时提醒Field injection is not recommended</a
   >
 </h1>
 
@@ -345,32 +345,63 @@
         
 <span class="article-date">
   <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/" class="article-date">
-  <time datetime="2016-04-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-04-05</time>
+<a href="http://www.mingaccount.com/2019/12/fieldinjectionnotrecommended/" class="article-date">
+  <time datetime="2019-12-13 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-12-13</time>
 </a>
 </span>
   
   <span class="article-tag">
     <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/java/"> java </a>
+    <a class="article-tag-link" href="/tags/spring/"> spring </a>
   </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/#comments"
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2019/12/fieldinjectionnotrecommended/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 84words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 266words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <p>注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用</p>
-<hr>
-<pre><code class="language-java">/**
-* {@link String#toString()} }
-* 在类后面追加#号，可以指向类的成员方法或者变量
-**/
-public class Test{
+      <h1 id="spring依赖注入方式">Spring依赖注入方式</h1>
+<ol>
+<li>直接修饰成员变量，也就是提醒不推荐的情况</li>
+</ol>
+<pre><code class="language-java">@RestController
+public class TestController{
+    @Autowired
+    private TestService testService;
 }
 </code></pre>
+<ol start="2">
+<li>修饰构造函数，@Autowired可省略</li>
+</ol>
+<pre><code class="language-java">@RestController
+public class TestController{
+    private TestService testService;
+
+    public TestController(TestService testService) {
+        this.testService = testService;
+    }
+}
+</code></pre>
+<ol start="3">
+<li>修饰setter函数，@Autowired可省略</li>
+</ol>
+<pre><code class="language-java">@RestController
+public class TestController{
+    private TestService testService;
+
+    public void SetTestService(TestService testService) {
+        this.testService = testService;
+    }
+}
+</code></pre>
+<h1 id="不推荐直接修饰的原因">不推荐直接修饰的原因</h1>
+<ul>
+<li><code>@Autowired</code>不能作用在final的成员变量上</li>
+<li>直接修饰成员变量会导致变量直接依赖Spring容器，脱离Spring容器就无法初始化，然而通过构造函数或setter函数的方式都是可以脱离Spring容器的使用的</li>
+<li>直接修饰的方式会让你忽略当前类有多少依赖，不利于代码重构和优化</li>
+</ul>
 
     </div>
     <div class="article-footer">
@@ -378,7 +409,7 @@ public class Test{
   <ul class="post-copyright list-unstyled">
     <li class="post-copyright-link hidden-xs">
       <strong>Permalink: </strong>
-      <a href="http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/" title="Java注释引用类和其成员" target="_blank" rel="external">http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/</a>
+      <a href="http://www.mingaccount.com/2019/12/fieldinjectionnotrecommended/" title="@Autowired注解直接修饰在成员变量时提醒Field injection is not recommended" target="_blank" rel="external">http://www.mingaccount.com/2019/12/fieldinjectionnotrecommended/</a>
     </li>
     <li class="post-copyright-license">
       <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
@@ -408,13 +439,13 @@ public class Test{
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="http://www.mingaccount.com/2016/01/javafinal%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96/" title="Java final成员变量初始化"><i
+                <a href="http://www.mingaccount.com/2019/12/hadoopsshlocalhost%E6%97%A0%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95/" title="Hadoop ssh localhost 无密码登录"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
             </li>
             <li class="next">
-                <a href="http://www.mingaccount.com/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/"
-                    title="Assert常用方法"><span>Newer&nbsp;&nbsp;</span><i
+                <a href="http://www.mingaccount.com/2019/12/hadoop%E5%AE%89%E8%A3%85%E8%B8%A9%E5%9D%91/"
+                    title="Hadoop安装踩坑"><span>Newer&nbsp;&nbsp;</span><i
                         class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             

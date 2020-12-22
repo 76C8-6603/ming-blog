@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>全局获取request</title>
+      <link>http://www.mingaccount.com/2018/01/%E5%85%A8%E5%B1%80%E8%8E%B7%E5%8F%96request/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/01/%E5%85%A8%E5%B1%80%E8%8E%B7%E5%8F%96request/</guid>
+      <description>交于Spring管理的类，通过注解调用 @Component public class Test{ @Autowired private HttpServletRequest httpServletRequest; } 通过静态方法调用 HttpServletRequest httpServletRequest = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();</description>
+    </item>
+    
+    <item>
       <title>Java获取当前类名和方法名</title>
       <link>http://www.mingaccount.com/2018/01/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B1%BB%E5%90%8D%E5%92%8C%E6%96%B9%E6%B3%95%E5%90%8D/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
@@ -179,15 +188,6 @@
       
       <guid>http://www.mingaccount.com/2017/05/springboot%E5%85%A5%E5%8F%A3%E7%B1%BB%E7%9A%84%E6%B3%A8%E8%A7%A3/</guid>
       <description>@SpringBootApplication(scanBasePackages=&amp;quot;com.*.*&amp;quot;) @EnableScheduling @EnableTransactionManagement @MapperScan(&amp;quot;com.*.**.*mapper&amp;quot;) @EnableConfigurationProperties({CustomConfiguration.class}) public class Application {} SpringBootApplication Spring注解的扫描路径 EnableScheduling 开启Spring的定时任务 EnableTransactionManagement 开始Spring的事务管理 MapperScan 扫描MyBatis Mapper类的路</description>
-    </item>
-    
-    <item>
-      <title>Springboot Jackson全局日期格式处理</title>
-      <link>http://www.mingaccount.com/2017/04/jackson%E5%85%A8%E5%B1%80%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</link>
-      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/04/jackson%E5%85%A8%E5%B1%80%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</guid>
-      <description>通过修改springboot application.properties spring.jackson.date-format=yyyy-MM-dd HH:mm:ss spring.jackson.time-zone=GMT+8</description>
     </item>
     
   </channel>
