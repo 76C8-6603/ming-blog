@@ -1563,7 +1563,7 @@ Spring测试框架会根据context的配置参数生成一个唯一的key值。�
 * contextCustomizers (from ContextCustomizerFactory) – 这个包含了`@DynamicPropertySource`的方法以及Spring Boot支持的测试特性，比如`@MockBean`和`@SpyBean`  
 * contextLoader (from @ContextConfiguration)
 * parent (from @ContextHierarchy)
-* activeProfiles (from @ActiveProfiles)
+* activeProfiles (from @ActiveProfiles) 
 * propertySourceLocations (from @TestPropertySource)
 * propertySourceProperties (from @TestPropertySource)
 * resourceBasePath (from @WebAppConfiguration)  
@@ -1582,6 +1582,31 @@ Spring测试框架会根据context的配置参数生成一个唯一的key值。�
 极少数情况测试会污染上下文对象（比如修改bean的定义或者上下文对象的状态），你可以使用`@DirtiesContext`注解来表示下次测试运行之前重载上下文。这个注解是`DirtiesContextBeforeModesTestExecutionListener`和`DirtiesContextTestExecutionListener`提供的，他们两个都是默认启用。  
 
 ### Context Hierarchies
+有时候需要用到上下文的层次结构，比如说在开发Spring MVC Web应用的时候，你需要一个由Spring`ContextLoaderListener`加载的根`WebApplicationContext`，和一个由Spring`DispatcherServlet`加载的子`WebApplicationContext`。由根对象的申明的组件和基础配置会在子对象中通过web指定的组件去调用。  
+
+`@ContextHierarchy`注解可以申明context的层次结构。如果一个层次结构中的多个类都有该注解，那么你可以合并或者覆盖指定的并已命名的层级。当需要合并一个给定层级的配置时，他们的资源类型必须一样（XML，或者组件类），否则将会被视为两个层级。  
+
+下面的例子是以JUnit Jupiter为基础的，展示了需要使用上下文层次的常见场景。
+#### 单个类有上下文层次
+`ControllerIntegrationTests`展示了一个典型的Spring MVC web应用的测试场景，申明的上下文层次包含两个层级，一个是根`WebApplicaitonContext`，另外一个是dispatcher servlet`WebApplicationContext`。测试类中的`wac`参数，注入的是上下文层次结构中最后的那一个。  
+```java
+@ExtendWith(SpringExtension.class)
+@WebAppConfiguration
+@ContextHierarchy({
+    @ContextConfiguration(classes = TestAppConfig.class),
+    @ContextConfiguration(classes = WebConfig.class)
+})
+class ControllerIntegrationTests {
+
+    @Autowired
+    WebApplicationContext wac;
+
+    // ...
+}
+```
+
+#### 类层次中有隐式的父context
+
 
 
 
