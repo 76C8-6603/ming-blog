@@ -479,6 +479,20 @@
   </url>
   
   <url>
+    <loc>http://www.mingaccount.com/tags/h2/</loc>
+    <lastmod>2018-10-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2018/10/h2dropexception/</loc>
+    <lastmod>2018-10-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mingaccount.com/2018/09/hiveoutofsequence/</loc>
     <lastmod>2018-09-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -789,6 +803,13 @@
   <url>
     <loc>http://www.mingaccount.com/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2017-10-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2017/09/mapandflatmap/</loc>
+    <lastmod>2017-09-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

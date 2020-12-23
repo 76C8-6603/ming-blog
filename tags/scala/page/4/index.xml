@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>请求参数中的&#43;号为什么会丢失,如何保证参数完整</title>
+      <link>http://www.mingaccount.com/2018/08/%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E4%B8%AD%E7%9A%84-%E5%8F%B7%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E4%B8%A2%E5%A4%B1/</link>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/08/%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E4%B8%AD%E7%9A%84-%E5%8F%B7%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E4%B8%A2%E5%A4%B1/</guid>
+      <description>最近在开发中碰见一个问题，后端代码调用接口，在请求端参数没有任何问题，但是当接口接收到参数时，其中的加号全部变为了空格。 在查阅资料后发现是U</description>
+    </item>
+    
+    <item>
       <title>Maven package完整依赖jar包</title>
       <link>http://www.mingaccount.com/2018/07/mavenpackage%E5%AE%8C%E6%95%B4%E4%BE%9D%E8%B5%96jar%E5%8C%85/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
@@ -179,15 +188,6 @@
       
       <guid>http://www.mingaccount.com/2018/03/request%E7%9A%84body%E5%8F%AA%E8%83%BD%E8%AF%BB%E5%8F%96%E4%B8%80%E6%AC%A1%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
       <description>一、需要一个类继承HttpServletRequestWrapper，该类继承了ServletRequestWrapper并实现了HttpS</description>
-    </item>
-    
-    <item>
-      <title>统一异常处理和返回结果处理</title>
-      <link>http://www.mingaccount.com/2018/03/%E7%BB%9F%E4%B8%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E5%A4%84%E7%90%86/</link>
-      <pubDate>Mon, 05 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2018/03/%E7%BB%9F%E4%B8%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E5%A4%84%E7%90%86/</guid>
-      <description>1. 问题背景 @RestController public class TestController{ @Autowired private UserService userService; @GetMapping(&amp;quot;/user/all&amp;quot;) public ResultEntity getAllUser(){ try{ ResultEntity resultEntity = new ResultEntity(); List&amp;lt;User&amp;gt; users = userService.getAll(); resultEntity.setCode(200); resultEntity.setMessage(&amp;quot;success&amp;quot;); resultEntity.setData(users); return resultEntity; }catch(UserException e){ ResultEntity resultEntity = new ResultEntity(); resultEntity.setCode(666); resultEntity.setMessage(e.getMessage()); return resultEntity; }catch (Exception e){ ResultEntity resultEntity = new ResultEntity(); resultEntity.setCode(888); resultEntity.setMe</description>
     </item>
     
   </channel>

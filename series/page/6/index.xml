@@ -10,6 +10,24 @@
     
     
     <item>
+      <title>关于mysql和oracle的大小写敏感</title>
+      <link>http://www.mingaccount.com/2017/05/%E5%85%B3%E4%BA%8Emysql%E5%92%8Coracle%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/05/%E5%85%B3%E4%BA%8Emysql%E5%92%8Coracle%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F/</guid>
+      <description>表名 mysql 每一个表至少对应一个服务器文件，而且名字对应，因此表名的大小写敏感跟系统有关系，windows不区分，linux区分 oracle 所有不在双引号里</description>
+    </item>
+    
+    <item>
+      <title>SpringBoot入口类常用注解</title>
+      <link>http://www.mingaccount.com/2017/05/springboot%E5%85%A5%E5%8F%A3%E7%B1%BB%E7%9A%84%E6%B3%A8%E8%A7%A3/</link>
+      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/05/springboot%E5%85%A5%E5%8F%A3%E7%B1%BB%E7%9A%84%E6%B3%A8%E8%A7%A3/</guid>
+      <description>@SpringBootApplication(scanBasePackages=&amp;quot;com.*.*&amp;quot;) @EnableScheduling @EnableTransactionManagement @MapperScan(&amp;quot;com.*.**.*mapper&amp;quot;) @EnableConfigurationProperties({CustomConfiguration.class}) public class Application {} SpringBootApplication Spring注解的扫描路径 EnableScheduling 开启Spring的定时任务 EnableTransactionManagement 开始Spring的事务管理 MapperScan 扫描MyBatis Mapper类的路</description>
+    </item>
+    
+    <item>
       <title>Springboot Jackson全局日期格式处理</title>
       <link>http://www.mingaccount.com/2017/04/jackson%E5%85%A8%E5%B1%80%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</link>
       <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
