@@ -82,6 +82,15 @@
     </item>
     
     <item>
+      <title>java8 lambda reduce&amp;collect</title>
+      <link>http://www.mingaccount.com/2017/09/lambdareduce/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/09/lambdareduce/</guid>
+      <description>Reduction 首先看一个例子： double average = roster .stream() .filter(p -&amp;gt; p.getGender() == Person.Sex.MALE) .mapToInt(Person::getAge) .average() .getAsDouble(); 像上面的例子一样，JDK还包含很多其他的终端操作（比如说average,sum,min,max,</description>
+    </item>
+    
+    <item>
       <title>java lambda表达式map和flatMap</title>
       <link>http://www.mingaccount.com/2017/09/mapandflatmap/</link>
       <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>http://www.mingaccount.com/2017/05/javastring%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7%E7%B1%BB/</guid>
       <description>Java, Java Script, HTML, JSON, CSV and XML org.apache.commons.lang3.StringEscapeUtils //使用示例 StringEscapeUtils.escapeCsv(&amp;quot;&amp;quot;); SqtringEscapeUtils.escapeXml(&amp;quot;&amp;quot;); api文档 Regexp 正则表达式转义所有特殊符号 其他 com.google.common.escape.Escapers Escaper build = Escapers.builder().addEscape(&#39;$&#39;, &amp;quot; &amp;quot;).build(); String str = build.escape(&amp;quot;$$$$&amp;quot;); api文档</description>
-    </item>
-    
-    <item>
-      <title>正则表达式转义所有特殊符号</title>
-      <link>http://www.mingaccount.com/2017/05/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E4%B9%89%E6%89%80%E6%9C%89%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7/</link>
-      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/05/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E4%B9%89%E6%89%80%E6%9C%89%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7/</guid>
-      <description>正则表达式的特殊符号包括 \ $ ( ) * + . [ ] ? ^ { } | - 实现代码(java) public class RegexUtils { private static final String[] SPECIAL_SYMBOLS = new String[]{&amp;quot;\\&amp;quot;, &amp;quot;$&amp;quot;, &amp;quot;(&amp;quot;, &amp;quot;)&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;[&amp;quot;, &amp;quot;]&amp;quot;, &amp;quot;?&amp;quot;, &amp;quot;^&amp;quot;, &amp;quot;{&amp;quot;, &amp;quot;}&amp;quot;, &amp;quot;|&amp;quot;, &amp;quot;-&amp;quot;}; /** * 转义目标正</description>
     </item>
     
   </channel>

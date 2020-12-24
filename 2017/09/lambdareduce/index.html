@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>
-        Java反射常用API汇总 - Ming Blog
+        java8 lambda reduce&amp;collect - Ming Blog
       </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -20,33 +20,33 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    <meta name="description" content="“JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性” 一、类对" />
+    <meta name="description" content="Reduction 首先看一个例子： double average = roster .stream() .filter(p -&amp;gt; p.getGender() == Person.Sex.MALE) .mapToInt(Person::getAge) .average() .getAsDouble(); 像上面的例子一样，JDK还包含很多其他的终端操作（比如说average,sum,min,max," />
     <meta name="generator" content="Hugo 0.74.3 with theme pure" />
-    <title>Java反射常用API汇总 - Ming Blog</title>
+    <title>java8 lambda reduce&amp;collect - Ming Blog</title>
     
     
     <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="Java反射常用API汇总" />
-<meta property="og:description" content="“JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性” 一、类对" />
+    <meta property="og:title" content="java8 lambda reduce&amp;collect" />
+<meta property="og:description" content="Reduction 首先看一个例子： double average = roster .stream() .filter(p -&gt; p.getGender() == Person.Sex.MALE) .mapToInt(Person::getAge) .average() .getAsDouble(); 像上面的例子一样，JDK还包含很多其他的终端操作（比如说average,sum,min,max," />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.mingaccount.com/2018/06/java%E5%8F%8D%E5%B0%84%E5%B8%B8%E7%94%A8api%E6%B1%87%E6%80%BB/" />
-<meta property="article:published_time" content="2018-06-13T00:00:00+00:00" />
-<meta property="article:modified_time" content="2018-06-13T00:00:00+00:00" />
-<meta itemprop="name" content="Java反射常用API汇总">
-<meta itemprop="description" content="“JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性” 一、类对">
-<meta itemprop="datePublished" content="2018-06-13T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2018-06-13T00:00:00+00:00" />
-<meta itemprop="wordCount" content="535">
+<meta property="og:url" content="http://www.mingaccount.com/2017/09/lambdareduce/" />
+<meta property="article:published_time" content="2017-09-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-09-25T00:00:00+00:00" />
+<meta itemprop="name" content="java8 lambda reduce&amp;collect">
+<meta itemprop="description" content="Reduction 首先看一个例子： double average = roster .stream() .filter(p -&gt; p.getGender() == Person.Sex.MALE) .mapToInt(Person::getAge) .average() .getAsDouble(); 像上面的例子一样，JDK还包含很多其他的终端操作（比如说average,sum,min,max,">
+<meta itemprop="datePublished" content="2017-09-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2017-09-25T00:00:00+00:00" />
+<meta itemprop="wordCount" content="2740">
 
 
 
 <meta itemprop="keywords" content="java," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Java反射常用API汇总"/>
-<meta name="twitter:description" content="“JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性” 一、类对"/>
+<meta name="twitter:title" content="java8 lambda reduce&amp;collect"/>
+<meta name="twitter:description" content="Reduction 首先看一个例子： double average = roster .stream() .filter(p -&gt; p.getGender() == Person.Sex.MALE) .mapToInt(Person::getAge) .average() .getAsDouble(); 像上面的例子一样，JDK还包含很多其他的终端操作（比如说average,sum,min,max,"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -340,8 +340,8 @@
       <h1 itemprop="name">
   <a
     class="article-title"
-    href="/2018/06/java%E5%8F%8D%E5%B0%84%E5%B8%B8%E7%94%A8api%E6%B1%87%E6%80%BB/"
-    >Java反射常用API汇总</a
+    href="/2017/09/lambdareduce/"
+    >java8 lambda reduce&amp;collect</a
   >
 </h1>
 
@@ -349,8 +349,8 @@
         
 <span class="article-date">
   <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="http://www.mingaccount.com/2018/06/java%E5%8F%8D%E5%B0%84%E5%B8%B8%E7%94%A8api%E6%B1%87%E6%80%BB/" class="article-date">
-  <time datetime="2018-06-13 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-13</time>
+<a href="http://www.mingaccount.com/2017/09/lambdareduce/" class="article-date">
+  <time datetime="2017-09-25 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-09-25</time>
 </a>
 </span>
   
@@ -359,82 +359,147 @@
     <a class="article-tag-link" href="/tags/java/"> java </a>
   </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2018/06/java%E5%8F%8D%E5%B0%84%E5%B8%B8%E7%94%A8api%E6%B1%87%E6%80%BB/#comments"
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2017/09/lambdareduce/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 535words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 2740words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 6minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <p>“JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性”</p>
-<h2 id="一类对象的获取">一、类对象的获取</h2>
-<h3 id="1通过对象获取">1.通过对象获取</h3>
-<pre><code class="language-java">Object obj = new Object();
-obj.getClass();
+      <h1 id="reduction">Reduction</h1>
+<p>首先看一个例子：</p>
+<pre><code class="language-java">double average = roster
+    .stream()
+    .filter(p -&gt; p.getGender() == Person.Sex.MALE)
+    .mapToInt(Person::getAge)
+    .average()
+    .getAsDouble();
 </code></pre>
-<h3 id="2通过类名获取">2.通过类名获取</h3>
-<pre><code class="language-java">Object.class;
+<p>像上面的例子一样，JDK还包含很多其他的终端操作（比如说average,sum,min,max,和count），他们合并了stream中的内容并返回单一的结果。这些操作被统一称为<code>Reduction operations</code>。JDK同样包含可以返回集合而不是一个值的reduction操作.大多数reduction操作针对的都是特定情况，比如找平均值或者按照目录分组等。但是，JDK同样也提供了通用的reduction操作，他们是<code>reduce</code>和<code>collect</code>。</p>
+<h1 id="streamreduce">Stream.reduce</h1>
+<p>下面的例子目的是求名册中男性成员的年龄总和<br>
+首先使用Stream.sum的方式</p>
+<pre><code class="language-java">Integer totalAge = roster
+    .stream()
+    .mapToInt(Person::getAge)
+    .sum();
 </code></pre>
-<h3 id="3通过类的路径名获取">3.通过类的路径名获取</h3>
-<pre><code class="language-java">Class.forName(&quot;com.metadata.Student&quot;);
+<p>下面用Stream.reduce计算同样的结果</p>
+<pre><code class="language-java">Integer totalAgeReduce = roster
+    .stream()
+    .map(Person::getAge)
+    .reduce(
+            0,
+        (a,b) -&gt; a + b);
+        )
 </code></pre>
-<h2 id="二类的实例化和构造函数">二、类的实例化和构造函数</h2>
-<p>获取到的class对象可以直接通过clazz.newInstance()方法实例化，但是需要目标类有默认无参构造函数，不然会抛出异常。</p>
-<p>在类没有默认无参构造函数，或者需要某个具体的构造函数来实例化的情况，需要通过Constructor类的newInstance()来完成。</p>
-<h3 id="1获取公有构造函数不包括父类">1.获取公有构造函数，不包括父类</h3>
-<pre><code class="language-java">//Class
-public Constructor&lt;?&gt;[] getConstructors() 
-public Constructor&lt;T&gt; getConstructor(Class&lt;?&gt;... parameterTypes)
-</code></pre>
-<h3 id="2获取当前类构造函数忽略修饰符">2.获取当前类构造函数，忽略修饰符</h3>
-<pre><code class="language-java">//Class
-public Constructor&lt;?&gt;[] getDeclaredConstructors()
-public Constructor&lt;T&gt; getDeclaredConstructor(Class&lt;?&gt;... parameterTypes)
-</code></pre>
-<p>构造函数调用</p>
-<pre><code class="language-java">//Constructor
-public T newInstance(Object... initargs)
-//忽略修饰符，强制调用
-public void setAccessible(boolean flag)
-</code></pre>
-<h2 id="三类成员变量的获取">三、类成员变量的获取</h2>
-<h3 id="1获取公有变量包括父类">1.获取公有变量，包括父类</h3>
-<pre><code class="language-java">//Class
-public Field[] getFields()
-public Field getField(String name)
-</code></pre>
-<h3 id="2获取当前类成员变量忽略修饰符">2.获取当前类成员变量，忽略修饰符</h3>
-<pre><code class="language-java">//Class
-public Field[] getDeclaredFields()
-public Field getDeclaredField(String name)
-</code></pre>
-<p>成员变量赋值</p>
-<pre><code class="language-java">//Field
-//obj为实例对象
-public void set(Object obj,Object value)
-//忽略修饰符，强制调用
-public void setAccessible(boolean flag)
-</code></pre>
-<h2 id="四类方法的获取">四、类方法的获取</h2>
-<h3 id="1获取公有方法包括父类">1.获取公有方法，包括父类</h3>
-<pre><code class="language-java">//Class
-public Method[] getMethods()
-public Method getMethod(String name,
-                        Class&lt;?&gt;... parameterTypes)
-</code></pre>
-<h3 id="2获取当前类方法忽略修饰符">2.获取当前类方法，忽略修饰符</h3>
-<pre><code class="language-java">//Class
-public Method[] getDeclaredMethods()
-public Method getDeclaredMethod(String name,
-                                Class&lt;?&gt;... parameterTypes)
-</code></pre>
-<p>方法调用</p>
-<pre><code class="language-java">//Method
-//obj为类实例化对象，如果为静态方法obj为Null
-invoke(Object obj, Object... args)
+<p>这个reduce操作有两个参数：</p>
+<ul>
+<li><code>identity</code>：它既是reduction计算的初始值也是在流没有任何元素的时候的默认值。这个例子中<code>identity</code>的值是0，也就是求和的初始化值是0，并且如果roster流中没有任何元素，最后返回的结果也是0。</li>
+<li><code>accumulator</code>：这个<code>accumulator</code>方法有两个参数：一个是reduction的部分结果（在这个例子里面，就是到目前为止所有年龄的和），另外一个是流的下一个元素（在这个例子中就是下一个年龄数）。它返回了一个新的部分结果。在这个例子中，<code>accumulator</code>方法是一个将两个<code>Integer</code>相加并返回<code>Integer</code>相加结果的lambda表达式：<br>
+(a,b) -&gt; a + b</li>
+</ul>
+<p>这个<code>reduce</code>操作始终返回一个新的值。但是，这个<code>accumulator</code>方法在每次处理流中的一个元素后，也返回一个新的值。假定你想处理的stream更复杂，比如内部都是集合。这样可能对性能造成影响。比如你的reduce操作是合并集合，那么每次你的<code>accumulator</code>方法在处理一个元素时，都会创建一个新的集合去执行合并操作，这样毫无效率可言。在这种情况下，更适合使用<code>Stream.collect</code>方法。</p>
+<h1 id="streamcollect">Stream.collect</h1>
+<p>不像<code>reduce</code>方法每次处理元素都会创建一个新的值，<code>collect</code>方法是修改或者改变一个已经存在的值。</p>
+<p>思考一下你要怎样求出stream中元素的平均值。你需要的是元素总数和元素的总和。但是，像<code>reduce</code>方法和所有其他的reduction方法一样，<code>collect</code>方法也只能返回一个值。你可以创建一个新的数据类型包含追踪总数和总和的成员变量，就像下面的类<code>Averager</code>：</p>
+<pre><code class="language-java">import java.util.function.IntConsumer;
 
-//忽略修饰符，强制调用
-public void setAccessible(boolean flag)
+class Averager implements IntConsumer {
+  private int total = 0;
+  private int count = 0;
+
+  public double average() {
+    return count &gt; 0 ? (double) total / count : 0;
+  }
+
+
+  @Override
+  public void accept(int value) {
+    total += value;
+    count++;
+  }
+
+  public void combine(Averager that) {
+    total += that.total;
+    count += that.count;
+  }
+}
+</code></pre>
+<p>下面的例子使用<code>Averager</code>类和<code>collect</code>方法去获取所有男性的平均年龄：</p>
+<pre><code class="language-java">Averager averager = roster.stream()
+    .filter(p -&gt; p.getGender() == Person.Sex.MALE)
+    .map(Person::getAge)
+    .collect(Averager::new, Averager::accept, Averager::combine);
+double averageNum = averager.average();
+</code></pre>
+<p>这个例子中的collect有三个参数：</p>
+<ul>
+<li><code>supplier</code>：它是一个工厂方法，构建一个新的实例。<code>supplier</code>为collect操作提供一个实例作为结果容器。在这个例子中，就是<code>Averager</code>类的实例。</li>
+<li><code>accumulator</code>：它将一个stream的成员合并到结果容器中。在这个例子中，它通过每次给count+1和给total加上当前流中的年龄数值来<code>修改</code>Averager`结果容器。</li>
+<li><code>combiner</code>：它代表了你要如何合并两个结果容器。在这个例子中，就是合并两个结果容器中的count和total。</li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li><code>supplier</code>是一个lambda表达式（或者一个方法引用），而不是像<code>reduce</code>操作中的identity元素。</li>
+<li><code>accumulator</code>和<code>combiner</code>方法都不返回值。</li>
+<li>可以在并发流上使用<code>collect</code>操作，详情参考<a href="https://docs.oracle.com/javase/tutorial/collections/streams/parallelism.html">Parallelism</a> 。如果你在并发流上运行collect方法，那么每当<code>combiner</code>方法创建一个新的对象，就像上面例子的<code>Averager</code>对象，JDK就会创建一个新的线程。因此，你不需要担心同步的问题。</li>
+</ul>
+<p>虽然JDK已经提供了<code>average</code>操作计算流元素的平均值，但是如果你需要计算多个结果值的时候，可以通过<code>collect</code>和一个自定义类来获得。</p>
+<p><code>collect</code>操作完美适配集合。下面的例子展示了如何通过collect获取男性成员的所有名称集合：</p>
+<pre><code class="language-java">List&lt;String&gt; names = roster.stream()
+      .filter(p -&gt; p.getGender() == Person.Sex.MALE)
+    .map(p -&gt; p.getName())
+    .collect(Collectors.toList());
+</code></pre>
+<p>上面的<code>collect</code>方法只有一个<code>Collector</code>参数。这个<code>Collector</code>方法内部其实就是封装了之前三个参数的collect方法。</p>
+<p><code>Collectors</code>除了toList还封装了很多常用的reduction操作，比如累加元素到集合中和根据各种条件汇总元素。这些reduction操作返回<code>Collector</code>类的实例，所以你可以将他们作为<code>collect</code>操作的参数。</p>
+<p>上面例子中的<code>Collectors.toList</code>操作是将流中所有的元素添加到一个新的<code>List</code>中。像大多数<code>Collectors</code>中的操作一样，<code>toList</code>返回的是一个<code>Collector</code>的实例，而不是一个集合。</p>
+<p>下面的例子是根据<code>roster</code>的性别分组：</p>
+<pre><code class="language-java">Map&lt;Person.Sex, List&lt;Person&gt;&gt; byGender =
+    roster
+        .stream()
+        .collect(
+            Collectors.groupingBy(Person::getGender));
+</code></pre>
+<p><code>groupingBy</code>操作，根据参数中的lambda表达式分类，并将它作为结果Map的Key值。像这个例子中，Key值就是<code>Person.Sex.Male</code>和<code>Person.Sex.Female</code>。</p>
+<p>下面的例子检索流元素的所有名称，并根据性别分类：</p>
+<pre><code class="language-java">Map&lt;Person.Sex, List&lt;String&gt;&gt; namesByGender =
+    roster
+        .stream()
+        .collect(
+            Collectors.groupingBy(
+                Person::getGender,                      
+                Collectors.mapping(
+                    Person::getName,
+                    Collectors.toList())));
+</code></pre>
+<p>这个groupingBy操作有两个参数，一个分类方法和一个<code>Collector</code>实例。这个<code>Collector</code>参数叫做<code>downstream collector</code>。这个collector会在Java运行时应用到另外一个collector的结果上。因此这个<code>groupingBy</code>操作让你可以应用一个<code>collect</code>方法到由<code>groupingBy</code>操作创建的<code>List</code>值上。在这个例子中，应用了<code>mapping</code> collector，它将<code>Person::getName</code>方法应用到stream的每个元素上。隐私，结果会得到一个由成员名称组成的流。一个管道流包含一个或者多个<code>downstream collectors</code>，向上面例子这样，被叫做<code>multilevel reduction</code>。</p>
+<p>下面的例子检索每个性别的年龄总和：</p>
+<pre><code class="language-java">Map&lt;Person.Sex, Integer&gt; totalAgeByGender =
+        roster
+        .stream()
+        .collect(
+          Collectors.groupingBy(
+            Person::getGender,
+            Collectors.reducing(
+              0,
+              Person::getAge,
+              Integer::sum)));
+</code></pre>
+<p>这个<code>reducing</code>操作有三个参数：</p>
+<ul>
+<li><code>identity</code>：就像<code>Stream.reduce</code>操作中声明的一样，可以作为初始化值，或者流为空时的默认值。</li>
+<li><code>mapper</code>：<code>reducing</code>操作会将这个mapper应用到每个stream元素。在这个例子中，mapper就是为了检索所有的成员的年龄。</li>
+<li><code>operation</code>：这个操作方法是用来reduce由mapper处理的值的。在这个例子中，就是Integer的加法操作。</li>
+</ul>
+<p>下面的例子检索每个性别的平均年龄：</p>
+<pre><code class="language-java">Map&lt;Person.Sex, Double&gt; averageAgeByGender = roster
+    .stream()
+    .collect(
+        Collectors.groupingBy(
+            Person::getGender,                      
+            Collectors.averagingInt(Person::getAge)));
 </code></pre>
 
     </div>
@@ -443,7 +508,7 @@ public void setAccessible(boolean flag)
   <ul class="post-copyright list-unstyled">
     <li class="post-copyright-link hidden-xs">
       <strong>Permalink: </strong>
-      <a href="http://www.mingaccount.com/2018/06/java%E5%8F%8D%E5%B0%84%E5%B8%B8%E7%94%A8api%E6%B1%87%E6%80%BB/" title="Java反射常用API汇总" target="_blank" rel="external">http://www.mingaccount.com/2018/06/java%E5%8F%8D%E5%B0%84%E5%B8%B8%E7%94%A8api%E6%B1%87%E6%80%BB/</a>
+      <a href="http://www.mingaccount.com/2017/09/lambdareduce/" title="java8 lambda reduce&amp;collect" target="_blank" rel="external">http://www.mingaccount.com/2017/09/lambdareduce/</a>
     </li>
     <li class="post-copyright-license">
       <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
@@ -473,13 +538,13 @@ public void setAccessible(boolean flag)
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="http://www.mingaccount.com/2018/06/mysql%E5%AE%89%E8%A3%85%E5%90%8Eroot%E6%97%A0%E6%B3%95%E7%99%BB%E9%99%86/" title="Mysql安装后root无法登陆(Access denied for user &#39;root&#39;@&#39;localhost&#39;)"><i
+                <a href="http://www.mingaccount.com/2017/09/mapandflatmap/" title="java lambda表达式map和flatMap"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
             </li>
             <li class="next">
-                <a href="http://www.mingaccount.com/2018/06/npm%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F/"
-                    title="Npm淘宝镜像"><span>Newer&nbsp;&nbsp;</span><i
+                <a href="http://www.mingaccount.com/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/"
+                    title="Java编码,乱码问题详解"><span>Newer&nbsp;&nbsp;</span><i
                         class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             
