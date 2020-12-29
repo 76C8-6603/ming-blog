@@ -38,4 +38,22 @@ public class Test{
 ```
 注意第二种写法，this必须是第一个参数并且不能修改参数名和类型  
 
-那也就可以理解为什么一个参数的方法，可以包装为两个参数的BiFunction
+那也就可以理解为什么一个参数的方法，可以包装为两个参数的BiFunction：
+
+```java
+import java.util.function.BiFunction;
+
+public class User {
+    public String test(String msg) {
+        System.out.println(msg);
+    }
+}
+
+public class UnitTest {
+    @Test
+    public void test1() {
+        //第一个User参数，代表了默认的this
+        BiFunction<User, String, String> test = User::test;
+    }
+}
+```
