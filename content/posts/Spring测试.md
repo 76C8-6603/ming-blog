@@ -1606,9 +1606,150 @@ class ControllerIntegrationTests {
 ```
 
 #### 类层次中有隐式的父context
+下面的例子展示了父子类的层次结构，一共会加载三个上下文对象， 每个子类上下文都是基于父类上下文：  
+```java
+@ExtendWith(SpringExtension.class)
+@WebAppConfiguration
+@ContextConfiguration("file:src/main/webapp/WEB-INF/applicationContext.xml")
+public abstract class AbstractWebTests {}
 
+@ContextHierarchy(@ContextConfiguration("/spring/soap-ws-config.xml"))
+public class SoapWebServiceTests extends AbstractWebTests {}
 
+@ContextHierarchy(@ContextConfiguration("/spring/rest-ws-config.xml"))
+public class RestWebServiceTests extends AbstractWebTests {}
+```
 
+#### 类层次中有合并的上下文层次配置
+下面的例子展示了如何通过指定层级名称去合并上下文配置。一共会加载三个上下文对象，一个是`parent`，一个是父类`child`，还有一个是父类和子类`child`层级之和。  
+```java
+@ExtendWith(SpringExtension.class)
+@ContextHierarchy({
+    @ContextConfiguration(name = "parent", locations = "/app-config.xml"),
+    @ContextConfiguration(name = "child", locations = "/user-config.xml")
+})
+class BaseTests {}
 
+@ContextHierarchy(
+    @ContextConfiguration(name = "child", locations = "/order-config.xml")
+)
+class ExtendedTests extends BaseTests {}
+```
+
+#### 类层次中有覆盖上下文层次配置
+相对于上一个例子，下面要展示的是如果覆盖父类的层级配置。通过设定`@ContextConfiguration`的参数`inheritLocations`为`false`，即可让子类覆盖`child`层级的配置，并同时继承`parent`层级。  
+```java
+@ExtendWith(SpringExtension.class)
+@ContextHierarchy({
+    @ContextConfiguration(name = "parent", locations = "/app-config.xml"),
+    @ContextConfiguration(name = "child", locations = "/user-config.xml")
+})
+class BaseTests {}
+
+@ContextHierarchy(
+    @ContextConfiguration(
+        name = "child",
+        locations = "/test-user-config.xml",
+        inheritLocations = false
+))
+class ExtendedTests extends BaseTests {}
+```
+
+> 如果你在测试中使用`@DirtiesContext`，并且对应的上下文对象还在一个上下文层级结构中，那么你可以通过`hierarchyMode`去控制上下文缓存如何清理，详情参考[@DirtiesContext in Spring Testing Annotations](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#spring-testing-annotation-dirtiescontext) 和[@DirtiesContext](https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/test/annotation/DirtiesContext.html)  
+
+## 5.6. 测试资源的依赖注入
+当你使用`DependencyInjectionTestExecutionListener`（默认配置），测试实例中的依赖会从上下文中的bean中注入。你可以使用setter注入，字段注入，或者两者同时存在，取决于你选择哪个注解和你是否要将他们放进setter方法。如果使用JUnit Jupiter你还可以选择构造器注入。为了跟Spring的基于注解的注入支持保持一致，你还可以使用`@Autowired`注解或者`@Inject`注解来自JSR-330申明在字段或者setter上。  
+
+> 对于JUnit Jupiter以外的测试框架，TestContext框架是不参与测试类的初始化的。因此，如果使用`@Autowired`或者`@Inject`在构造器上，将不会有任何效果  
+
+> 虽然生产代码不鼓励使用字段注入，但是在测试代码中没有这个提议。其中差别的原理是因为你永远不会直接实例化你的测试类。因此，没必要保证能够调用测试类的`public`构造或者setter方法。  
+
+因为`@Autowired`是根据类型的自动装配，如果你有多个bean定义了相同的类型，那么你就无法通过这种方式获取正确的bean。 这种情况下，你可以搭配`@Qualifier`使用`@Autowired`。或者使用`@Inject`搭配`@Named`使用。另外，如果你的测试可以访问他的`ApplicationContext`，你可以直接查找对应bean：`applicationContext.getBean("titleRepository",TitleRepository.class)`。  
+
+如果你不想依赖注入应用到你的测试实例上，不在字段或者setter方法上使用`@Autowired`或者`@Inject`。你可以整个关掉依赖注入，通过直接配置`@TestExecutionListeners`，并且在监听器集合中省略`DependencyInjectionTestExecutionListener.class`。  
+
+考虑测试类中调用`HibernateTitleRepository`类访问数据库的场景，下面的例子通过依赖注入实现了测试。他们的上下文配置在所有的样例代码之后。  
+
+> 下面的依赖注入行为不是JUnit Jupiter特有的，所有支持的测试框架都能适配。  
+> 
+> 下面例子中调用的静态断言方法，省略了`import`  
+
+`@Autowired` field
+```java
+@ExtendWith(SpringExtension.class)
+// specifies the Spring configuration to load for this test fixture
+@ContextConfiguration("repository-config.xml")
+class HibernateTitleRepositoryTests {
+
+    // this instance will be dependency injected by type
+    @Autowired
+    HibernateTitleRepository titleRepository;
+
+    @Test
+    void findById() {
+        Title title = titleRepository.findById(new Long(10));
+        assertNotNull(title);
+    }
+}
+```
+
+`@Autowired` setter
+```java
+@ExtendWith(SpringExtension.class)
+// specifies the Spring configuration to load for this test fixture
+@ContextConfiguration("repository-config.xml")
+class HibernateTitleRepositoryTests {
+
+    // this instance will be dependency injected by type
+    HibernateTitleRepository titleRepository;
+
+    @Autowired
+    void setTitleRepository(HibernateTitleRepository titleRepository) {
+        this.titleRepository = titleRepository;
+    }
+
+    @Test
+    void findById() {
+        Title title = titleRepository.findById(new Long(10));
+        assertNotNull(title);
+    }
+}
+```
+
+上面的测试类用了相同的XML上下文文件（repository-config.xml）：
+```java
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- this bean will be injected into the HibernateTitleRepositoryTests class -->
+    <bean id="titleRepository" class="com.foo.repository.hibernate.HibernateTitleRepository">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <!-- configuration elided for brevity -->
+    </bean>
+
+</beans>
+```
+
+> 如果你继承了一个Spring提供的测试基类，刚好它使用了`@Autowired`在一个setter方法上，那么影响的类型可能有多个bean定义在你的应用上下文中（举个例子，多个`DataSource`bean）。在这种情况下，你可以重写setter方法并且使用`@Qualiifier`注解去指明一个特定的目标bean，就像下面的例子一样（但也确保委托给超类中的重写方法）：
+> ```java
+> @Autowired
+> @Override
+> public void setDataSource(@Qualifier("myDataSource") DataSource dataSource) {
+>   super.setDataSource(dataSource);
+> }
+> ```  
+> 
+> 指定的qualifier值代表要注入的那个目标`DataSource`bean。它的值匹配的是<bean>定义中的<qualifier>申明。Bean的名称被用作后备的`qualifier`值，因此也可以用来有效的指向特定的Bean（Bean id）。  
+
+## 5.7. 测试Request和Session范围的bean
+从早期开始Spring就一直支持Request和Session范围的bean，你可以根据下面的步骤来测试你的request范围和session范围的bean：  
+* 确保你的测试类被`@WebAppConfiguration`注解修饰。  
+* 
 
 
