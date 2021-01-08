@@ -752,6 +752,20 @@
   </url>
   
   <url>
+    <loc>http://www.mingaccount.com/tags/python/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2018/01/python-method-define/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mingaccount.com/2018/01/%E5%85%A8%E5%B1%80%E8%8E%B7%E5%8F%96request/</loc>
     <lastmod>2018-01-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -829,7 +843,35 @@
   </url>
   
   <url>
+    <loc>http://www.mingaccount.com/tags/junit4/</loc>
+    <lastmod>2017-09-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/tags/junit5/</loc>
+    <lastmod>2017-09-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/tags/mockmvc/</loc>
+    <lastmod>2017-09-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mingaccount.com/2017/09/spring%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2017-09-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/tags/testng/</loc>
     <lastmod>2017-09-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -999,6 +1041,13 @@
   <url>
     <loc>http://www.mingaccount.com/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2016-05-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2016/05/mysqllikeunderline/</loc>
+    <lastmod>2016-05-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -19,6 +19,15 @@
     </item>
     
     <item>
+      <title>Python方法定义</title>
+      <link>http://www.mingaccount.com/2018/01/python-method-define/</link>
+      <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/01/python-method-define/</guid>
+      <description># 一般声明 def printUser(id,name,sex,age,email,phone,group): printUser(1,&#39;ming&#39;,&#39;male&#39;,18,&#39;&#39;,110,&#39;default&#39;) # 默认值 def printUser(id,name,sex,age,email=&#39;&#39;,phone=110,group=&#39;default&#39;): printUser(1,&#39;ming&#39;,&#39;male&#39;,18) # 位置参数和关键字参数 def printUser(id,name,sex,/,age,email,*,phone,group): # 位置参数就是调用的时候直接赋值 # 关键字参数就是调用的时候通过 key=value 的形式赋值 # 斜杠之前</description>
+    </item>
+    
+    <item>
       <title>全局获取request</title>
       <link>http://www.mingaccount.com/2018/01/%E5%85%A8%E5%B1%80%E8%8E%B7%E5%8F%96request/</link>
       <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>http://www.mingaccount.com/2017/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88/</guid>
       <description>1.什么叫依赖倒转，里氏替换？ 所谓依赖倒转就是抽象类不应该依赖于子类，子类应该依赖于抽象类，并且子类之间不应该互相依赖。依赖倒转是面对对象的</description>
-    </item>
-    
-    <item>
-      <title>JavaString 特殊符号处理工具类</title>
-      <link>http://www.mingaccount.com/2017/05/javastring%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
-      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/05/javastring%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7%E7%B1%BB/</guid>
-      <description>Java, Java Script, HTML, JSON, CSV and XML org.apache.commons.lang3.StringEscapeUtils //使用示例 StringEscapeUtils.escapeCsv(&amp;quot;&amp;quot;); SqtringEscapeUtils.escapeXml(&amp;quot;&amp;quot;); api文档 Regexp 正则表达式转义所有特殊符号 其他 com.google.common.escape.Escapers Escaper build = Escapers.builder().addEscape(&#39;$&#39;, &amp;quot; &amp;quot;).build(); String str = build.escape(&amp;quot;$$$$&amp;quot;); api文档</description>
     </item>
     
   </channel>

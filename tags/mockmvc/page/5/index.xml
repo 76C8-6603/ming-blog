@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mockmvc on Ming Blog</title>
+    <link>http://www.mingaccount.com/tags/mockmvc/</link>
+    <description>Recent content in mockmvc on Ming Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 15 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://www.mingaccount.com/tags/mockmvc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>统一异常处理和返回结果处理</title>
+      <link>http://www.mingaccount.com/2018/03/%E7%BB%9F%E4%B8%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E5%A4%84%E7%90%86/</link>
+      <pubDate>Mon, 05 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/03/%E7%BB%9F%E4%B8%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E5%A4%84%E7%90%86/</guid>
+      <description>1. 问题背景 @RestController public class TestController{ @Autowired private UserService userService; @GetMapping(&amp;quot;/user/all&amp;quot;) public ResultEntity getAllUser(){ try{ ResultEntity resultEntity = new ResultEntity(); List&amp;lt;User&amp;gt; users = userService.getAll(); resultEntity.setCode(200); resultEntity.setMessage(&amp;quot;success&amp;quot;); resultEntity.setData(users); return resultEntity; }catch(UserException e){ ResultEntity resultEntity = new ResultEntity(); resultEntity.setCode(666); resultEntity.setMessage(e.getMessage()); return resultEntity; }catch (Exception e){ ResultEntity resultEntity = new ResultEntity(); resultEntity.setCode(888); resultEntity.setMe</description>
+    </item>
+    
+    <item>
+      <title>Python方法定义</title>
+      <link>http://www.mingaccount.com/2018/01/python-method-define/</link>
+      <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/01/python-method-define/</guid>
+      <description># 一般声明 def printUser(id,name,sex,age,email,phone,group): printUser(1,&#39;ming&#39;,&#39;male&#39;,18,&#39;&#39;,110,&#39;default&#39;) # 默认值 def printUser(id,name,sex,age,email=&#39;&#39;,phone=110,group=&#39;default&#39;): printUser(1,&#39;ming&#39;,&#39;male&#39;,18) # 位置参数和关键字参数 def printUser(id,name,sex,/,age,email,*,phone,group): # 位置参数就是调用的时候直接赋值 # 关键字参数就是调用的时候通过 key=value 的形式赋值 # 斜杠之前</description>
+    </item>
+    
+    <item>
+      <title>全局获取request</title>
+      <link>http://www.mingaccount.com/2018/01/%E5%85%A8%E5%B1%80%E8%8E%B7%E5%8F%96request/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/01/%E5%85%A8%E5%B1%80%E8%8E%B7%E5%8F%96request/</guid>
+      <description>交于Spring管理的类，通过注解调用 @Component public class Test{ @Autowired private HttpServletRequest httpServletRequest; } 通过静态方法调用 HttpServletRequest httpServletRequest = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();</description>
+    </item>
+    
+    <item>
+      <title>Java获取当前类名和方法名</title>
+      <link>http://www.mingaccount.com/2018/01/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B1%BB%E5%90%8D%E5%92%8C%E6%96%B9%E6%B3%95%E5%90%8D/</link>
+      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/01/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B1%BB%E5%90%8D%E5%92%8C%E6%96%B9%E6%B3%95%E5%90%8D/</guid>
+      <description>Description Below I present you two different ways to get the current Class: Using Thread Using getClass() The simplest way to get the name of the class where your code is being executed in is using the getClass() method present in every java object. Like here: String clazz = this.getClass().getName(); This works only if executed in an Object, namely an instanciated class. If you try to execute the code above</description>
+    </item>
+    
+    <item>
+      <title>观察者模式和java委托</title>
+      <link>http://www.mingaccount.com/2018/01/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8Cjava%E5%A7%94%E6%89%98/</link>
+      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/01/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8Cjava%E5%A7%94%E6%89%98/</guid>
+      <description>所谓观察者模式，指的某个状态信息的改变，会影响其他一系列的操作，这时就可以将这些操作抽象化，同时创建一个类统一的管理和执行这些操作。把这些抽</description>
+    </item>
+    
+    <item>
+      <title>[转]Class.forName()用法详解</title>
+      <link>http://www.mingaccount.com/2017/11/class.forname%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/11/class.forname%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/</guid>
+      <description>转自:http://blog.csdn.net/kaiwii/article/details/7405761 主要功能 Class.forNam</description>
+    </item>
+    
+    <item>
+      <title>List addAll产生异常java.lang.UnsupportedOperationException</title>
+      <link>http://www.mingaccount.com/2017/11/list_add_all%E5%BC%82%E5%B8%B8/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/11/list_add_all%E5%BC%82%E5%B8%B8/</guid>
+      <description>原因是因为list是由Arrays.asList生成的 根据Arrays源码，asList方法生成的ArrayList，并不是java.uti</description>
+    </item>
+    
+    <item>
+      <title>[转]谈谈Java中的语法糖</title>
+      <link>http://www.mingaccount.com/2017/10/%E8%BD%AC%E8%B0%88%E8%B0%88java%E4%B8%AD%E7%9A%84%E8%AF%AD%E6%B3%95%E7%B3%96/</link>
+      <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/10/%E8%BD%AC%E8%B0%88%E8%B0%88java%E4%B8%AD%E7%9A%84%E8%AF%AD%E6%B3%95%E7%B3%96/</guid>
+      <description>*该博客转自 http://blog.csdn.net/danchu/article/details/54986442 语法糖（Syntactic Sugar），也称糖衣语法，指在计算机语言中添加的某种语法，这种语法对语言本身功能来说没有什么影响，</description>
+    </item>
+    
+    <item>
+      <title>Java编码,乱码问题详解</title>
+      <link>http://www.mingaccount.com/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</guid>
+      <description>一、常见的编码格式 1.ASCII 基础编码，英文和西欧字符。 用一个字节的低7位表示，一共128个。 0~13是控制字符如换行、回车、删除等，32~126是打</description>
+    </item>
+    
+    <item>
+      <title>java8 lambda reduce&amp;collect</title>
+      <link>http://www.mingaccount.com/2017/09/lambdareduce/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/09/lambdareduce/</guid>
+      <description>Reduction 首先看一个例子： double average = roster .stream() .filter(p -&amp;gt; p.getGender() == Person.Sex.MALE) .mapToInt(Person::getAge) .average() .getAsDouble(); 像上面的例子一样，JDK还包含很多其他的终端操作（比如说average,sum,min,max,</description>
+    </item>
+    
+    <item>
+      <title>java lambda表达式map和flatMap</title>
+      <link>http://www.mingaccount.com/2017/09/mapandflatmap/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/09/mapandflatmap/</guid>
+      <description>资源类 User @Data public User{ private String name; private List&amp;lt;String&amp;gt; tags; } map&amp;amp;flatmap map将每个参数对象映射为返回类型，一个参数对应一个返回值 List&amp;lt;User&amp;gt; userList = new ArrayList&amp;lt;User&amp;gt;(); //...省略赋值 List&amp;lt;String&amp;gt; userNames = userList.stream().map(user -&amp;gt; user.getName()).collect(Collectors.toList()); flatMa</description>
+    </item>
+    
+    <item>
+      <title>Mysql 创建视图报错：View&#39;s SELECT contains a subquery in the FROM clause</title>
+      <link>http://www.mingaccount.com/2017/09/mysqlcreateviewexception/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/09/mysqlcreateviewexception/</guid>
+      <description>问题背景 使用sql: create view test_view as select a.column_1, b.column_2 from (select column_1 from table_1) a left join (select column_2 from table_2) b on a.column_1 = b.column_2 报错信息： View&#39;s SELECT contains a subquery in the FROM clause 问题原因 根据mysql官方文档，版本5.7之</description>
+    </item>
+    
+    <item>
+      <title>Spring集成测试</title>
+      <link>http://www.mingaccount.com/2017/09/spring%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/09/spring%E6%B5%8B%E8%AF%95/</guid>
+      <description>1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成</description>
+    </item>
+    
+    <item>
+      <title>QPS、TPS、PV等网站业务关键字释义</title>
+      <link>http://www.mingaccount.com/2017/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</link>
+      <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</guid>
+      <description>QPS：Query Per Second TPS：Transaction Per Second PV：Page View RT：Response Time UV：Unique Visitor DAU：Daily Actived Users M</description>
+    </item>
+    
+    <item>
+      <title>Mysql表名忽略大小写</title>
+      <link>http://www.mingaccount.com/2017/08/mysql%E8%A1%A8%E5%90%8D%E5%BF%BD%E7%95%A5%E5%A4%A7%E5%B0%8F%E5%86%99/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/08/mysql%E8%A1%A8%E5%90%8D%E5%BF%BD%E7%95%A5%E5%A4%A7%E5%B0%8F%E5%86%99/</guid>
+      <description>跟参数lower_case_table_names相关 执行语句，查询该参数值 SHOW VARIABLES LIKE ‘%case%’ lower_case_table_name</description>
+    </item>
+    
+    <item>
+      <title>通过request获取客户端IP</title>
+      <link>http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/</link>
+      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/</guid>
+      <description>请求头枚举类 public enum HttpHeader { AUTHORIZATION(&amp;quot;Authorization&amp;quot;), AUTHENTICATION_TYPE_BASIC(&amp;quot;Basic&amp;quot;), X_AUTH_TOKEN(&amp;quot;X-AUTH-TOKEN&amp;quot;), WWW_Authenticate(&amp;quot;WWW-Authenticate&amp;quot;), X_FORWARDED_FOR(&amp;quot;X-Forwarded-For&amp;quot;), PROXY_CLIENT_IP(&amp;quot;Proxy-Client-IP&amp;quot;), WL_PROXY_CLIENT_IP(&amp;quot;WL-Proxy-Client-IP&amp;quot;), HTTP_CLIENT_IP(&amp;quot;HTTP_CLIENT_IP&amp;quot;), HTTP_X_FORWARDED_FOR(&amp;quot;HTTP_X_FORWARDED_FOR&amp;quot;); private String key; private HttpHeader(String key) { this.key = key; } public String key() { return this.key; } } 工具类 public class RemoteIpHelper { private static final String UNKNOWN = &amp;quot;unknown&amp;quot;; public static String getRemoteIpFrom(HttpServletRequest request) { String ip = null; int tryCount = 1; while (!isIpFound(ip) &amp;amp;&amp;amp; tryCount</description>
+    </item>
+    
+    <item>
+      <title>Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied</title>
+      <link>http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</link>
+      <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</guid>
+      <description>usermod -d /var/lib/mysql/ mysql ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock chown -R mysql:mysql /var/lib/mysql</description>
+    </item>
+    
+    <item>
+      <title>Spring切面编程</title>
+      <link>http://www.mingaccount.com/2017/06/spring%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8Baop/</link>
+      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/06/spring%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8Baop/</guid>
+      <description>1.切面编程核心概念 切面编程Aspect-oriented Programming (AOP) AOP只是一个概念，跟Spring是独立关系 最典型的AOP实现框架Aspect</description>
+    </item>
+    
+    <item>
+      <title>根据Method获取所有参数名</title>
+      <link>http://www.mingaccount.com/2017/06/%E6%A0%B9%E6%8D%AEmethod%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E5%8F%82%E6%95%B0%E5%90%8D/</link>
+      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/06/%E6%A0%B9%E6%8D%AEmethod%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E5%8F%82%E6%95%B0%E5%90%8D/</guid>
+      <description>LocalVariableTableParameterNameDiscoverer discoverer = new LocalVariableTableParameterNameDiscoverer(); discoverer.getParameterNames(method); 详情参考API文档</description>
+    </item>
+    
+    <item>
+      <title>设计模式总览</title>
+      <link>http://www.mingaccount.com/2017/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88/</link>
+      <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88/</guid>
+      <description>1.什么叫依赖倒转，里氏替换？ 所谓依赖倒转就是抽象类不应该依赖于子类，子类应该依赖于抽象类，并且子类之间不应该互相依赖。依赖倒转是面对对象的</description>
+    </item>
+    
+  </channel>
+</rss>

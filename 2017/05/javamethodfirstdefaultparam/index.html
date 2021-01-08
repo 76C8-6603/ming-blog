@@ -39,7 +39,7 @@
 <meta itemprop="description" content="Java方法如何编译 int add12and13() { return addTwo(12, 13); } 将会编译为： Method int add12and13() 0 aload_0 // Push local variable 0 (this) 1 bipush 12 // Push int constant 12 3 bipush 13 // Push int constant 13 5 invokevirtual #4 // Method Example.addtwo(II)I 8 ireturn // Return int on top of operand stack; // it is the">
 <meta itemprop="datePublished" content="2017-05-20T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2017-05-20T00:00:00+00:00" />
-<meta itemprop="wordCount" content="266">
+<meta itemprop="wordCount" content="320">
 
 
 
@@ -194,6 +194,14 @@
                     class="tag-list-count">2</span></li>
             
             
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/junit4/" class="tag-list-link">junit4</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/junit5/" class="tag-list-link">junit5</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/linux/" class="tag-list-link">linux</a><span
                     class="tag-list-count">3</span></li>
             
@@ -210,12 +218,16 @@
                     class="tag-list-count">3</span></li>
             
             
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mockmvc/" class="tag-list-link">mockmvc</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mybatis/" class="tag-list-link">mybatis</a><span
                     class="tag-list-count">2</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mysql/" class="tag-list-link">mysql</a><span
-                    class="tag-list-count">16</span></li>
+                    class="tag-list-count">17</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/npm/" class="tag-list-link">npm</a><span
@@ -224,6 +236,10 @@
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/oracle/" class="tag-list-link">oracle</a><span
                     class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/redis/" class="tag-list-link">redis</a><span
@@ -244,6 +260,10 @@
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
                     class="tag-list-count">21</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/unit-test/" class="tag-list-link">unit-test</a><span
@@ -361,7 +381,7 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2017/05/javamethodfirstdefaultparam/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 266words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 320words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </div>
     </div>
@@ -396,7 +416,23 @@
 }
 </code></pre>
 <p>注意第二种写法，this必须是第一个参数并且不能修改参数名和类型</p>
-<p>那也就可以理解为什么一个参数的方法，可以包装为两个参数的BiFunction</p>
+<p>那也就可以理解为什么一个参数的方法，可以包装为两个参数的BiFunction：</p>
+<pre><code class="language-java">import java.util.function.BiFunction;
+
+public class User {
+    public String test(String msg) {
+        System.out.println(msg);
+    }
+}
+
+public class UnitTest {
+    @Test
+    public void test1() {
+        //第一个User参数，代表了默认的this
+        BiFunction&lt;User, String, String&gt; test = User::test;
+    }
+}
+</code></pre>
 
     </div>
     <div class="article-footer">
@@ -468,7 +504,7 @@
 </ul>
   <div class="copyright">
     &copy;2015  -
-    2020
+    2021
   </div>
 </footer>
 

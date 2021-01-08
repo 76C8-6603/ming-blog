@@ -39,11 +39,11 @@
 <meta itemprop="description" content="1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成">
 <meta itemprop="datePublished" content="2017-09-15T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2017-09-15T00:00:00+00:00" />
-<meta itemprop="wordCount" content="32396">
+<meta itemprop="wordCount" content="57856">
 
 
 
-<meta itemprop="keywords" content="spring,unit-test," />
+<meta itemprop="keywords" content="spring,unit-test,junit4,junit5,testng,mockmvc," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Spring集成测试"/>
 <meta name="twitter:description" content="1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成"/>
@@ -194,6 +194,14 @@
                     class="tag-list-count">2</span></li>
             
             
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/junit4/" class="tag-list-link">junit4</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/junit5/" class="tag-list-link">junit5</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/linux/" class="tag-list-link">linux</a><span
                     class="tag-list-count">3</span></li>
             
@@ -210,12 +218,16 @@
                     class="tag-list-count">3</span></li>
             
             
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mockmvc/" class="tag-list-link">mockmvc</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mybatis/" class="tag-list-link">mybatis</a><span
                     class="tag-list-count">2</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mysql/" class="tag-list-link">mysql</a><span
-                    class="tag-list-count">16</span></li>
+                    class="tag-list-count">17</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/npm/" class="tag-list-link">npm</a><span
@@ -224,6 +236,10 @@
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/oracle/" class="tag-list-link">oracle</a><span
                     class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/redis/" class="tag-list-link">redis</a><span
@@ -244,6 +260,10 @@
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
                     class="tag-list-count">21</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/unit-test/" class="tag-list-link">unit-test</a><span
@@ -358,12 +378,16 @@
     <i class="icon icon-tags"></i>&nbsp;
     <a class="article-tag-link" href="/tags/spring/"> spring </a>
     <a class="article-tag-link" href="/tags/unit-test/"> unit-test </a>
+    <a class="article-tag-link" href="/tags/junit4/"> junit4 </a>
+    <a class="article-tag-link" href="/tags/junit5/"> junit5 </a>
+    <a class="article-tag-link" href="/tags/testng/"> testng </a>
+    <a class="article-tag-link" href="/tags/mockmvc/"> mockmvc </a>
   </span>
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2017/09/spring%E6%B5%8B%E8%AF%95/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 32396words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 65minutes </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 57856words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 116minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -1741,6 +1765,1213 @@ class ControllerIntegrationTests {
 }
 </code></pre>
 <h4 id="类层次中有隐式的父context">类层次中有隐式的父context</h4>
+<p>下面的例子展示了父子类的层次结构，一共会加载三个上下文对象， 每个子类上下文都是基于父类上下文：</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+@WebAppConfiguration
+@ContextConfiguration(&quot;file:src/main/webapp/WEB-INF/applicationContext.xml&quot;)
+public abstract class AbstractWebTests {}
+
+@ContextHierarchy(@ContextConfiguration(&quot;/spring/soap-ws-config.xml&quot;))
+public class SoapWebServiceTests extends AbstractWebTests {}
+
+@ContextHierarchy(@ContextConfiguration(&quot;/spring/rest-ws-config.xml&quot;))
+public class RestWebServiceTests extends AbstractWebTests {}
+</code></pre>
+<h4 id="类层次中有合并的上下文层次配置">类层次中有合并的上下文层次配置</h4>
+<p>下面的例子展示了如何通过指定层级名称去合并上下文配置。一共会加载三个上下文对象，一个是<code>parent</code>，一个是父类<code>child</code>，还有一个是父类和子类<code>child</code>层级之和。</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+@ContextHierarchy({
+    @ContextConfiguration(name = &quot;parent&quot;, locations = &quot;/app-config.xml&quot;),
+    @ContextConfiguration(name = &quot;child&quot;, locations = &quot;/user-config.xml&quot;)
+})
+class BaseTests {}
+
+@ContextHierarchy(
+    @ContextConfiguration(name = &quot;child&quot;, locations = &quot;/order-config.xml&quot;)
+)
+class ExtendedTests extends BaseTests {}
+</code></pre>
+<h4 id="类层次中有覆盖上下文层次配置">类层次中有覆盖上下文层次配置</h4>
+<p>相对于上一个例子，下面要展示的是如果覆盖父类的层级配置。通过设定<code>@ContextConfiguration</code>的参数<code>inheritLocations</code>为<code>false</code>，即可让子类覆盖<code>child</code>层级的配置，并同时继承<code>parent</code>层级。</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+@ContextHierarchy({
+    @ContextConfiguration(name = &quot;parent&quot;, locations = &quot;/app-config.xml&quot;),
+    @ContextConfiguration(name = &quot;child&quot;, locations = &quot;/user-config.xml&quot;)
+})
+class BaseTests {}
+
+@ContextHierarchy(
+    @ContextConfiguration(
+        name = &quot;child&quot;,
+        locations = &quot;/test-user-config.xml&quot;,
+        inheritLocations = false
+))
+class ExtendedTests extends BaseTests {}
+</code></pre>
+<blockquote>
+<p>如果你在测试中使用<code>@DirtiesContext</code>，并且对应的上下文对象还在一个上下文层级结构中，那么你可以通过<code>hierarchyMode</code>去控制上下文缓存如何清理，详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#spring-testing-annotation-dirtiescontext">@DirtiesContext in Spring Testing Annotations</a> 和<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/test/annotation/DirtiesContext.html">@DirtiesContext</a></p>
+</blockquote>
+<h2 id="56-测试资源的依赖注入">5.6. 测试资源的依赖注入</h2>
+<p>当你使用<code>DependencyInjectionTestExecutionListener</code>（默认配置），测试实例中的依赖会从上下文中的bean中注入。你可以使用setter注入，字段注入，或者两者同时存在，取决于你选择哪个注解和你是否要将他们放进setter方法。如果使用JUnit Jupiter你还可以选择构造器注入。为了跟Spring的基于注解的注入支持保持一致，你还可以使用<code>@Autowired</code>注解或者<code>@Inject</code>注解来自JSR-330申明在字段或者setter上。</p>
+<blockquote>
+<p>对于JUnit Jupiter以外的测试框架，TestContext框架是不参与测试类的初始化的。因此，如果使用<code>@Autowired</code>或者<code>@Inject</code>在构造器上，将不会有任何效果</p>
+</blockquote>
+<blockquote>
+<p>虽然生产代码不鼓励使用字段注入，但是在测试代码中没有这个提议。其中差别的原理是因为你永远不会直接实例化你的测试类。因此，没必要保证能够调用测试类的<code>public</code>构造或者setter方法。</p>
+</blockquote>
+<p>因为<code>@Autowired</code>是根据类型的自动装配，如果你有多个bean定义了相同的类型，那么你就无法通过这种方式获取正确的bean。 这种情况下，你可以搭配<code>@Qualifier</code>使用<code>@Autowired</code>。或者使用<code>@Inject</code>搭配<code>@Named</code>使用。另外，如果你的测试可以访问他的<code>ApplicationContext</code>，你可以直接查找对应bean：<code>applicationContext.getBean(&quot;titleRepository&quot;,TitleRepository.class)</code>。</p>
+<p>如果你不想依赖注入应用到你的测试实例上，不在字段或者setter方法上使用<code>@Autowired</code>或者<code>@Inject</code>。你可以整个关掉依赖注入，通过直接配置<code>@TestExecutionListeners</code>，并且在监听器集合中省略<code>DependencyInjectionTestExecutionListener.class</code>。</p>
+<p>考虑测试类中调用<code>HibernateTitleRepository</code>类访问数据库的场景，下面的例子通过依赖注入实现了测试。他们的上下文配置在所有的样例代码之后。</p>
+<blockquote>
+<p>下面的依赖注入行为不是JUnit Jupiter特有的，所有支持的测试框架都能适配。</p>
+<p>下面例子中调用的静态断言方法，省略了<code>import</code></p>
+</blockquote>
+<p><code>@Autowired</code> field</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+// specifies the Spring configuration to load for this test fixture
+@ContextConfiguration(&quot;repository-config.xml&quot;)
+class HibernateTitleRepositoryTests {
+
+    // this instance will be dependency injected by type
+    @Autowired
+    HibernateTitleRepository titleRepository;
+
+    @Test
+    void findById() {
+        Title title = titleRepository.findById(new Long(10));
+        assertNotNull(title);
+    }
+}
+</code></pre>
+<p><code>@Autowired</code> setter</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+// specifies the Spring configuration to load for this test fixture
+@ContextConfiguration(&quot;repository-config.xml&quot;)
+class HibernateTitleRepositoryTests {
+
+    // this instance will be dependency injected by type
+    HibernateTitleRepository titleRepository;
+
+    @Autowired
+    void setTitleRepository(HibernateTitleRepository titleRepository) {
+        this.titleRepository = titleRepository;
+    }
+
+    @Test
+    void findById() {
+        Title title = titleRepository.findById(new Long(10));
+        assertNotNull(title);
+    }
+}
+</code></pre>
+<p>上面的测试类用了相同的XML上下文文件（repository-config.xml）：</p>
+<pre><code class="language-java">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+    &lt;!-- this bean will be injected into the HibernateTitleRepositoryTests class --&gt;
+    &lt;bean id=&quot;titleRepository&quot; class=&quot;com.foo.repository.hibernate.HibernateTitleRepository&quot;&gt;
+        &lt;property name=&quot;sessionFactory&quot; ref=&quot;sessionFactory&quot;/&gt;
+    &lt;/bean&gt;
+
+    &lt;bean id=&quot;sessionFactory&quot; class=&quot;org.springframework.orm.hibernate5.LocalSessionFactoryBean&quot;&gt;
+        &lt;!-- configuration elided for brevity --&gt;
+    &lt;/bean&gt;
+
+&lt;/beans&gt;
+</code></pre>
+<blockquote>
+<p>如果你继承了一个Spring提供的测试基类，刚好它使用了<code>@Autowired</code>在一个setter方法上，那么影响的类型可能有多个bean定义在你的应用上下文中（举个例子，多个<code>DataSource</code>bean）。在这种情况下，你可以重写setter方法并且使用<code>@Qualiifier</code>注解去指明一个特定的目标bean，就像下面的例子一样（但也确保委托给超类中的重写方法）：</p>
+<pre><code class="language-java">@Autowired
+@Override
+public void setDataSource(@Qualifier(&quot;myDataSource&quot;) DataSource dataSource) {
+  super.setDataSource(dataSource);
+}
+</code></pre>
+<p>指定的qualifier值代表要注入的那个目标<code>DataSource</code>bean。它的值匹配的是<!-- raw HTML omitted -->定义中的<!-- raw HTML omitted -->申明。Bean的名称被用作后备的<code>qualifier</code>值，因此也可以用来有效的指向特定的Bean（Bean id）。</p>
+</blockquote>
+<h2 id="57-测试request和session范围的bean">5.7. 测试Request和Session范围的bean</h2>
+<p>从早期开始Spring就一直支持Request和Session范围的bean，你可以根据下面的步骤来测试你的request范围和session范围的bean：</p>
+<ul>
+<li>确保你的测试类被<code>@WebAppConfiguration</code>注解修饰。</li>
+<li>注入模拟request或者session到你的测试实例中，并且根据需要准备你的测试资源。</li>
+<li>通过依赖注入调用<code>WebApplicationContext</code>中配置的web组件。</li>
+<li>对模拟对象进行断言。</li>
+</ul>
+<p>下面的代码片段是一个用户登录案例的XML配置。注意<code>userService</code>bean有一个request范围的<code>loginAction</code>bean依赖。并且，<code>LoginAction</code>通过使用<code>SpEL</code>表达式初始化，表达式从HTTP请求中获取用户名和密码。在我们的测试中，我们希望通过TestContext框架的mock管理来配置这些请求参数。下面首先是配置xml：</p>
+<pre><code class="language-xml">&lt;beans&gt;
+    &lt;bean id=&quot;userService&quot; class=&quot;com.example.SimpleUserService&quot;
+            c:loginAction-ref=&quot;loginAction&quot;/&gt;
+    &lt;bean id=&quot;loginAction&quot; class=&quot;com.example.LoginAction&quot;
+            c:username=&quot;#{request.getParameter('user')}&quot;
+            c:password=&quot;#{request.getParameter('pswd')}&quot;
+            scope=&quot;request&quot;&gt;
+        &lt;aop:scoped-proxy/&gt;
+    &lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre>
+<p>在下面的<code>RequestScopedBeanTests</code>类中，我们同时注入了<code>UserService</code>和<code>MockHttpServletRequest</code>到我们的测试实例中。在<code>requestScope()</code>测试方法中，我们通过设置<code>MockHttpServletRequest</code>中的request参数来配置我们的测试资源。当<code>userService</code>的<code>loginUser()</code>方法被调用时，我们可以确定service中访问的<code>loginAction</code>是当前<code>MockHttpServletRequest</code>范围中的。</p>
+<pre><code class="language-java">@SpringJUnitWebConfig
+class RequestScopedBeanTests {
+
+    @Autowired UserService userService;
+    @Autowired MockHttpServletRequest request;
+
+    @Test
+    void requestScope() {
+        request.setParameter(&quot;user&quot;, &quot;enigma&quot;);
+        request.setParameter(&quot;pswd&quot;, &quot;$pr!ng&quot;);
+
+        LoginResults results = userService.loginUser();
+        // assert results
+    }
+}
+</code></pre>
+<p>下面的代码片段跟之前的请求范围的bean类似。但是，这次<code>userService</code>bean有了一个session范围的依赖<code>userPreferences</code>bean。注意这个<code>UserPreferences</code>bean通过一个SpEL表达式初始化，它从HTTP session中获取了主题参数。在我们的测试中，需要配置mock session的主题参数。</p>
+<pre><code class="language-xml">&lt;beans&gt;
+
+    &lt;bean id=&quot;userService&quot; class=&quot;com.example.SimpleUserService&quot;
+            c:userPreferences-ref=&quot;userPreferences&quot; /&gt;
+
+    &lt;bean id=&quot;userPreferences&quot; class=&quot;com.example.UserPreferences&quot;
+            c:theme=&quot;#{session.getAttribute('theme')}&quot;
+            scope=&quot;session&quot;&gt;
+        &lt;aop:scoped-proxy/&gt;
+    &lt;/bean&gt;
+
+&lt;/beans&gt;
+</code></pre>
+<p>在下面的<code>SessionScopedBeanTests</code>类中，我们同时注入<code>UserService</code>和<code>MockHttpService</code>到我们的测试实例当中。在<code>sessionScope()</code>方法中，我们通过设置<code>MockHttpSession</code>中的<code>theme</code>属性来配置我们的测试资源，我们可以确定service内部调用的<code>userPreferences</code>是当前<code>MockHttpSession</code>范围中的。</p>
+<pre><code class="language-java">@SpringJUnitWebConfig
+class SessionScopedBeanTests {
+
+    @Autowired UserService userService;
+    @Autowired MockHttpSession session;
+
+    @Test
+    void sessionScope() throws Exception {
+        session.setAttribute(&quot;theme&quot;, &quot;blue&quot;);
+
+        Results results = userService.processUserPreferences();
+        // assert results
+    }
+}
+</code></pre>
+<h2 id="58-事务管理">5.8. 事务管理</h2>
+<p>在TestContext框架中，事务管理是在<code>TransactionalTestExecutionListener</code>中的，并且它是默认配置，即使你不显式的在你的测试类上申明<code>@TestExecutionListeners</code>。为了开启事务支持，你必须配置一个<code>PlatformTransactionManager</code>bean在<code>ApplicationContext</code>中，它是随着<code>@ContextConfiguration</code>语法加载的（详情参考下文）。另外，你必须申明<code>@Transactional</code>注解在测试类或者方法上。</p>
+<h3 id="581-测试管理的事务">5.8.1. 测试管理的事务</h3>
+<p>测试管理的是事务指的是通过使用<code>TransactionalTestExecutionListener</code>申明管理的或者是编程方式通过<code>TestTransaction</code>。你不应该将它和Spring管理的事务混淆（直接由Spring管理的在测试类的<code>ApplicationContext</code>中的事务），或者应用管理的事务混淆（测试中调用的通过编码方式直接管理的在应用代码中的事务）。Spring管理的事务和应用管理的事务通常都可以参与到测试管理的事务当中。但是，当Spring管理或者应用管理的事务配置的是任何传播类型，而不是<code>REQUIRED</code>或者<code>SUPPORTS</code>类型时，需要特别小心（详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#tx-propagation"> transaction propagation</a></p>
+<blockquote>
+<p><strong>抢占式超时和测试管理的事务</strong><br>
+当使用来自测试框架任何形式的抢占式超时和Spring的测试管理事务配合使用时一定要小心。 <br>
+典型的就是，Spring测试支持绑定事务状态到当前的线程上（通过一个<code>java.lang.ThreadLocal</code>参数）在当前的测试方法执行之前。如果测试框架为了支持抢占式超时，在一个新的线程调用当前的测试方法，那么在当前测试方法中的任何action都不会在测试管理的事务当中被调用。结果就是，测试管理的事务不会回滚任何action。相对的，这些action会被提交到持久储存中。</p>
+<p>下面就是可能引起这种问题的情形，但并不是全部：</p>
+<ul>
+<li>JUnit 4的<code>@Test(timeout = ...)</code>支持和<code>TimeOut</code>规则。</li>
+<li>JUnit Jupiter 在<code>org.junit.jupiter.api.Assertions</code>类中的<code>assertTimeoutPreemptively(...)</code>方法。</li>
+<li>TestNG的<code>@Test(timeOut=...)</code>支持</li>
+</ul>
+</blockquote>
+<h3 id="582-启用和关闭事务">5.8.2 启用和关闭事务</h3>
+<p>用<code>@Transactional</code>修饰一个测试方法，可以让测试在事务中运行，默认情况下，该事务会在测试完成后自动回滚。如果测试类被<code>@Transactional</code>修饰，类层次结构中的所有方法都会在事务中运行。测试方法如果没有被<code>@Transactional</code>注解修饰（在类或者方法上），那么测试就不会在事务中运行。注意<code>@Transactional</code>不支持测试生命周期方法——比如说，方法有Jupiter的<code>@BeforeAll</code>，<code>@BeforeEach</code>，等等。此外，测试有<code>@Transactional</code>注解但是<code>propagation</code>属性是<code>NOT_SUPPORTED</code>或者<code>NEVER</code>，方法也不会在事务中运行。</p>
+<p><code>@Transactional</code>属性支持</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>是否支持测试管理的事务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code>和<code>transactionManager</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>propagation</code></td>
+<td>只有<code>Propagation.NOT_SUPPORTED</code>和<code>Propagation.NEVER</code>支持</td>
+</tr>
+<tr>
+<td><code>isolation</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>timeout</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>readOnly</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>rollbackFor</code>和<code>rollbackForClassName</code></td>
+<td>no:使用<code>TestTransaction.flagForRollback()</code>替代</td>
+</tr>
+<tr>
+<td><code>noRollbackFor</code>和<code>noRollbackForClassName</code></td>
+<td>no:使用<code>TestTransaction.flagForCommit()</code>代替</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>方法级别的生命周期函数——举个例子，被JUnit jupiter的<code>@BeforeEach</code>或者<code>@AfterEach</code>注解修饰的——是运行在测试管理的事务中的。另一方法，suite级别和类级别的生命周期方法——举个例子，被JUnit Jupiter的<code>@BeforeAll</code>或者<code>AfterAll</code>注解修饰的和被TestNG的<code>@BeforeSuite</code>，<code>@AfterSuite</code>，<code>@BeforeClass</code>，或者<code>@AfterClass</code>注解修饰的方法——是不会运行在测试管理的事务当中的。</p>
+<p>如果你需要在事务中运行suit级别或者类级别的生命周期方法，你可以注入对应的<code>PlatformTransactionManager</code>到你的测试类中，然后和<code>TransactionTempalte</code>一起使用，通过编码的方式实现事务管理。</p>
+</blockquote>
+<p>注意，<code>AbstractTransactionalJUnit4SpringContextTests</code>和<code>AbstractTransactionalTestNGSpringContextTests</code>在类级别已经预配置了事务的支持。</p>
+<p>下面的例子展示了一个常用的场景：为一个Hibernate为基础的<code>UserRepository</code>写一个集成测试。</p>
+<pre><code class="language-java">@SpringJUnitConfig(TestConfig.class)
+@Transactional
+class HibernateUserRepositoryTests {
+
+    @Autowired
+    HibernateUserRepository repository;
+
+    @Autowired
+    SessionFactory sessionFactory;
+
+    JdbcTemplate jdbcTemplate;
+
+    @Autowired
+    void setDataSource(DataSource dataSource) {
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    }
+
+    @Test
+    void createUser() {
+        // track initial state in test database:
+        final int count = countRowsInTable(&quot;user&quot;);
+
+        User user = new User(...);
+        repository.save(user);
+
+        // Manual flush is required to avoid false positive in test
+        sessionFactory.getCurrentSession().flush();
+        assertNumUsers(count + 1);
+    }
+
+    private int countRowsInTable(String tableName) {
+        return JdbcTestUtils.countRowsInTable(this.jdbcTemplate, tableName);
+    }
+
+    private void assertNumUsers(int expected) {
+        assertEquals(&quot;Number of rows in the [user] table.&quot;, expected, countRowsInTable(&quot;user&quot;));
+    }
+}
+</code></pre>
+<p>这里是不需要在createUser()方法执行后再去清理数据库的，因为任何改变都会通过<code>TransactionalTestExecutionListener</code>自动回滚。</p>
+<h3 id="583-事务回滚和提交行为">5.8.3. 事务回滚和提交行为</h3>
+<p>默认情况下，测试执行完成后会默认回滚；但是事务提交和回滚是可以配置的，通过<code>@Commit</code>和<code>@Rollback</code>注解。</p>
+<h3 id="584-手写事务管理">5.8.4. 手写事务管理</h3>
+<p>你可以通过在<code>TestTransaction</code>中的静态方法来以编码的方式管理事务。举个例子，你可以在测试方法，before方法，和after方法中start或者end当前测试管理的事务或者说rollback或者commit当前测试管理的事务。每当<code>TransactionalTestExecutionListener</code>启用，<code>TestTransaction</code>就是自动支持的。</p>
+<p>下面的例子展示了<code>TestTransaction</code>的部分特征，详情参考<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/test/context/transaction/TestTransaction.html">TestTransaction</a></p>
+<pre><code class="language-java">@ContextConfiguration(classes = TestConfig.class)
+public class ProgrammaticTransactionManagementTests extends
+        AbstractTransactionalJUnit4SpringContextTests {
+
+    @Test
+    public void transactionalTest() {
+        // assert initial state in test database:
+        assertNumUsers(2);
+
+        deleteFromTables(&quot;user&quot;);
+
+        // changes to the database will be committed!
+        TestTransaction.flagForCommit();
+        TestTransaction.end();
+        assertFalse(TestTransaction.isActive());
+        assertNumUsers(0);
+
+        TestTransaction.start();
+        // perform other actions against the database that will
+        // be automatically rolled back after the test completes...
+    }
+
+    protected void assertNumUsers(int expected) {
+        assertEquals(&quot;Number of rows in the [user] table.&quot;, expected, countRowsInTable(&quot;user&quot;));
+    }
+}
+</code></pre>
+<h3 id="585-在一个事务之外运行代码">5.8.5. 在一个事务之外运行代码</h3>
+<p>有些时候，你可能需要在事务测试方法之前或者之后运行代码，并且在事务上下文之外——举个例子，在运行测试之前验证初始化数据库的状态，或者在运行测试之后验证预期的事务提交行为。<code>TransactionalTestExecutionListener</code>为这种场景提供了<code>@BeforeTransaction</code>和<code>@AfterTransaction</code>注解。你可以把他们中的一个用在测试类的<code>void</code>方法上，或者测试接口的任何default<code>void</code>方法，然后<code>TransactionalTestExecutionListener</code>确保方法在合适的时间运行。</p>
+<blockquote>
+<p>任何before方法(比如JUnit Jupiter的<code>@BeforeEach</code>)和任何after方法（比如JUnit Jupiter的<code>@AfterEach</code>）是运行在一个事务中的。此外，被<code>@BeforeTransaction</code>或者<code>@AfterTransaction</code>修饰的方法，不会在没有事务的测试方法执行流程中运行。</p>
+</blockquote>
+<h3 id="586-配置一个事务管理器">5.8.6. 配置一个事务管理器</h3>
+<p><code>TransactionalTestExecutionListener</code>是期望在测试的<code>ApplicationContext</code>中有一个<code>PlatformTransactionManager</code>的。如果在测试的<code>ApplicationContext</code>中有多个<code>PlatformTransactionManager</code>bean，你可以通过<code>@Transactional(&quot;myTxMgr&quot;)</code>申明qualifier，或者<code>@Transactional(transactionManager = &quot;myTxMgr&quot;)</code>，或者<code>TransactionManagementConfigurer</code>的<code>@Configuration</code>类实现。详情参考<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/test/context/transaction/TestContextTransactionUtils.html#retrieveTransactionManager-org.springframework.test.context.TestContext-java.lang.String-">javadoc for TestContextTransactionUtils.retrieveTransactionManager()</a></p>
+<h3 id="587-展示所有事务相关的注解">5.8.7. 展示所有事务相关的注解</h3>
+<p>下面展示了所有支持的事务相关的注解：</p>
+<pre><code class="language-java">@SpringJUnitConfig
+@Transactional(transactionManager = &quot;txMgr&quot;)
+@Commit
+class FictitiousTransactionalTest {
+
+    @BeforeTransaction
+    void verifyInitialDatabaseState() {
+        // logic to verify the initial state before a transaction is started
+    }
+
+    @BeforeEach
+    void setUpTestDataWithinTransaction() {
+        // set up test data within the transaction
+    }
+
+    @Test
+    // overrides the class-level @Commit setting
+    @Rollback
+    void modifyDatabaseWithinTransaction() {
+        // logic which uses the test data and modifies database state
+    }
+
+    @AfterEach
+    void tearDownWithinTransaction() {
+        // run &quot;tear down&quot; logic within the transaction
+    }
+
+    @AfterTransaction
+    void verifyFinalDatabaseState() {
+        // logic to verify the final state after transaction has rolled back
+    }
+
+}
+</code></pre>
+<blockquote>
+<p><strong>当测试ORM代码时避免误报</strong>
+当你的测试应用代码修改Hibernate session或者JPA持久上下文状态时，确保刷新底层的工作单元。未能刷新底层的工作单元可能产生误报：你的测试通过，但是相同的代码在线上生产环境抛异常。注意，这可以适用于任何在内存中维护工作单元的ORM框架。<br>
+下面的Hibernate为基础的测试实例，一个方法展示了误报，另外一个方法正确的暴露了刷新session的结果：</p>
+<pre><code class="language-java">// ...
+
+@Autowired
+SessionFactory sessionFactory;
+
+@Transactional
+@Test // no expected exception!
+public void falsePositive() {
+  updateEntityInHibernateSession();
+  // False positive: an exception will be thrown once the Hibernate
+  // Session is finally flushed (i.e., in production code)
+}
+
+@Transactional
+@Test(expected = ...)
+public void updateWithSessionFlush() {
+  updateEntityInHibernateSession();
+  // Manual flush is required to avoid false positive in test
+  sessionFactory.getCurrentSession().flush();
+}
+
+// ...
+</code></pre>
+<p>下面的例子展示的是JPA的：</p>
+<pre><code class="language-java">// ...
+
+@PersistenceContext
+EntityManager entityManager;
+
+@Transactional
+@Test // no expected exception!
+public void falsePositive() {
+  updateEntityInJpaPersistenceContext();
+  // False positive: an exception will be thrown once the JPA
+  // EntityManager is finally flushed (i.e., in production code)
+}
+
+@Transactional
+@Test(expected = ...)
+public void updateWithEntityManagerFlush() {
+  updateEntityInJpaPersistenceContext();
+  // Manual flush is required to avoid false positive in test
+  entityManager.flush();
+}
+
+// ...
+</code></pre>
+</blockquote>
+<h2 id="59-执行sql脚本">5.9. 执行SQL脚本</h2>
+<p>在对一个关系数据库写集成测试的时候，经常需要运行SQL脚本去修改数据库的schema或者插入测试数据到表中。<code>spring-jdbc</code>模块提供了初始化集成或者已存在数据库的支持，通过在<code>ApplicationContext</code>加载时执行SQL脚本。</p>
+<p>下面的章节是如何以编码的形式和申明的形式运行SQL脚本</p>
+<h3 id="591-编码形式执行sql脚本">5.9.1. 编码形式执行SQL脚本</h3>
+<p>Spring提供了下面的选项，以在集成测试方法中编码的形式执行SQL脚本。</p>
+<ul>
+<li>org.springframework.jdbc.datasource.init.ScriptUtils</li>
+<li>org.springframework.jdbc.datasource.init.ResourceDatabasePopulator</li>
+<li>org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests</li>
+<li>org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests</li>
+</ul>
+<p><code>ScriptUtils</code>提供了一个有关SQL脚本的静态实用方法集合，并且他主要是为框架内部使用的。但是，如果你需要完全的控制SQL脚本的解析和运行，<code>ScriptUtils</code>可能比之后提到的工具更符合你的需求。详情参考他的<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/jdbc/datasource/init/ScriptUtils.html">javadoc</a></p>
+<p><code>ResourceDatabasePopulator</code>提供了一个对象基础的API通过定义在外部的SQL脚本，手动编码执行填充，初始化，或者清除数据库。<code>ResourceDatabasePopulator</code>提供许多参数，包括：配置字符编码，语句分隔符，注释分隔符，和异常处理。每个配置参数都有一个合理的默认值。详情参考<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/jdbc/datasource/init/ResourceDatabasePopulator.html">javadoc</a> 。要运行<code>ResourceDatabasePopulator</code>配置的脚本，针对<code>java.sql.Connection</code>你可以调用<code>populate(Connection)</code>方法，针对<code>javax.sql.DataSource</code>你可以调用<code>execute(DataSource)</code>方法。<br>
+下面的例子指定了一个有关测试schema和测试数据的SQL叫阿苯，设置了语句分隔符为<code>@@</code>，并且针对<code>DataSource</code>运行脚本。</p>
+<pre><code class="language-java">@Test
+void databaseTest() {
+    ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
+    populator.addScripts(
+            new ClassPathResource(&quot;test-schema.sql&quot;),
+            new ClassPathResource(&quot;test-data.sql&quot;));
+    populator.setSeparator(&quot;@@&quot;);
+    populator.execute(this.dataSource);
+    // run code that uses the test schema and data
+}
+</code></pre>
+<p>注意<code>ResourceDatabasePopulator</code>内部委托了<code>ScriptUtils</code>去解析和运行SQL脚本。类似的是，在<code>AbstractTransactionalJUnit4SpringContextTests</code>和<code>AbstractTransactionalTestNGSpringContextTests</code>中的<code>executeSqlScript(..)</code>方法，内部使用的是<code>ResourceDatabasePopulator</code>去运行SQL脚本。</p>
+<h3 id="592-通过注解sql执行脚本">5.9.2. 通过注解<code>@Sql</code>执行脚本</h3>
+<p>除了前面提到过的通过编程的方式实现脚本执行，Spring TestContext框架还支持通过注解执行脚本，通过注解你可以在测试方法之前或者之后执行脚本。<code>@Sql</code>可以修饰到类或者方法上，可以配置独立的sql脚本或者sql脚本的资源路径，他的支持由<code>SqlScriptsTestExecutionListener</code>提供，这个listener是默认启用的。</p>
+<blockquote>
+<p>方法级别的<code>@Sql</code>申明会默认覆盖类级别的声明。从Spring Framework 5.2开始，是否覆盖可以通过<code>@SqlMergeMode</code>来配置，他可以在类级别或者方法级别配置，详情参考之前提到的<code>@SqlMergeMode</code></p>
+</blockquote>
+<h3 id="593-路径资源语法">5.9.3. 路径资源语法</h3>
+<p>每个path都会被翻译为Spring的<code>Resource</code>。一个相对路径（比如，<code>&quot;schema.sql&quot;</code>）会被当做classpath资源，他会跟测试类所在的包相关联。路径以斜杠开头会被当做绝对路径（比如<code>&quot;/org/example/schema.sql&quot;</code>）。一个路径引用了一个URL（比如，一个path以<code>classpath:</code>，<code>file:</code>，<code>http:</code>开头）会按照指定的资源协议来加载。</p>
+<p>下面的例子展示了在一个以JUnit Jupiter为基础的测试类中，类和方法都被<code>@Sql</code>修饰的例子：</p>
+<pre><code class="language-java">@SpringJUnitConfig
+@Sql(&quot;/test-schema.sql&quot;)
+class DatabaseTests {
+
+    @Test
+    void emptySchemaTest() {
+        // run code that uses the test schema without any test data
+    }
+
+    @Test
+    @Sql({&quot;/test-schema.sql&quot;, &quot;/test-user-data.sql&quot;})
+    void userTest() {
+        // run code that uses the test schema and test data
+    }
+}
+</code></pre>
+<h3 id="594-默认脚本检测">5.9.4. 默认脚本检测</h3>
+<p>如果<code>@Sql</code>注解没有声明任何脚本或者资源位置，那么会去检测默认的脚本位置，具体默认位置取决于注解申明位置，在类和方法上略有区别。如果没有在默认位置找到对应的sql脚本，会抛出<code>IllegalStateException</code>异常。</p>
+<ul>
+<li>类级别的申明：如果注解的测试类是<code>com.example.MyTest</code>，那么对应的默认脚本就是<code>classpath:com/example/MyTest.sql</code>。</li>
+<li>方法级别的申明：如果注解的方法叫做<code>testMethod()</code>并且它是定义在<code>com.example.MyTest</code>类中，那么对应的默认脚本是<code>classpath:com/example/MyTest.testMethod.sql</code>。</li>
+</ul>
+<h3 id="595-申明多个sql集">5.9.5. 申明多个<code>@Sql</code>集</h3>
+<p>如果你需要对一个测试类或者测试方法配置多个SQL脚本集合，他们可能有不同的语法配置，不同的异常处理规则，或者不同的执行阶段，你可以申明多个<code>@Sql</code>实例。如果是Java 8 ，那么你可以重复使用<code>@Sql</code>注解。否则，你需要使用<code>@SqlGroup</code>注解去包含多个<code>@Sql</code>实例。</p>
+<p>下面的例子是Java 8的重复注解申明：</p>
+<pre><code class="language-java">@Test
+@Sql(scripts = &quot;/test-schema.sql&quot;, config = @SqlConfig(commentPrefix = &quot;`&quot;))
+@Sql(&quot;/test-user-data.sql&quot;)
+void userTest() {
+    // run code that uses the test schema and test data
+}
+</code></pre>
+<p>在上面的例子中，<code>test-schema.sql</code>脚本使用了一个不同的语法：单行注释。</p>
+<p>下面的例子跟之前的例子相同，只不过是<code>@Sql</code>被<code>@SqlGroup</code>包装了一下。上面的例子在Java8的背景下，<code>@SqlGroup</code>是可选的，但是为了兼容性，比如需要兼容<code>Kotlin</code>，那么你只能选择<code>@SqlGroup</code>。</p>
+<pre><code class="language-java">@Test
+@SqlGroup({
+    @Sql(scripts = &quot;/test-schema.sql&quot;, config = @SqlConfig(commentPrefix = &quot;`&quot;)),
+    @Sql(&quot;/test-user-data.sql&quot;)
+)}
+void userTest() {
+    // run code that uses the test schema and test data
+}
+</code></pre>
+<h3 id="596-脚本执行阶段">5.9.6. 脚本执行阶段</h3>
+<p>默认情况下<code>@Sql</code>的脚本都是在测试方法之前执行的，如果你需要在测试方法之后执行（比如，清楚数据库状态），那么<code>@Sql</code>的属性<code>executionPhase</code>可以帮到你。</p>
+<pre><code class="language-java">@Test
+@Sql(
+    scripts = &quot;create-test-data.sql&quot;,
+    config = @SqlConfig(transactionMode = ISOLATED)
+)
+@Sql(
+    scripts = &quot;delete-test-data.sql&quot;,
+    config = @SqlConfig(transactionMode = ISOLATED),
+    executionPhase = AFTER_TEST_METHOD
+)
+void userTest() {
+    // run code that needs the test data to be committed
+    // to the database outside of the test's transaction
+}
+</code></pre>
+<p>注意<code>ISOLATED</code>和<code>AFTER_TEST_METHOD</code>是分别从<code>Sql.TransactionMode</code>和<code>Sql.ExecutionPhase</code>静态导入的。</p>
+<h3 id="597-通过sqlconfig进行脚本配置">5.9.7. 通过<code>@SqlConfig</code>进行脚本配置</h3>
+<p>你可以配置脚本解析或者异常处理通过使用<code>@SqlConfig</code>注解。当作为一个类级别的注解申明时，<code>@SqlConfig</code>服务于整个测试类的层次结构，对其中的所有SQL脚本生效。当通过<code>config</code>属性直接申明到<code>@Sql</code>注解里的时候，<code>@SqlConfig</code>作为一个本地配置服务，只对<code>@Sql</code>注解范围内的SQL脚本生效。每个<code>@SqlConfig</code>的属性都有一个隐性的默认值。因为Java语言规范中定义的注解属性规则，注解属性是不能分配<code>null</code>值的。因此，为了支持覆盖继承的全局属性，<code>@SqlConfig</code>属性有一个显性的默认值为 &ldquo;&quot;(字符串)，{}(数组)，或者<code>DEFAULT</code>(枚举)。这种方法允许本地的<code>@SqlConfig</code>提供除了&rdquo;&quot;，{}，或者<code>DEFAULT</code>以外的值来选择性的覆盖来自全局的每个属性。只要本地<code>@SqlConfig</code>没有提供一个显性的属性值（&quot;&rdquo;,{},DEFAULT除外），那么对应属性仍然从全局继承。</p>
+<p><code>@Sql</code>和<code>@SqlConfig</code>提供的配置选项跟<code>ScriptUtils</code>和<code>ResourceDatabasePopulator</code>提供的相等，但是是<code>&lt;jdbc:initialize-database/&gt;</code>提供的XML命名空间元素的超集。详情参考<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/test/context/jdbc/Sql.html">@Sql</a> 和<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/test/context/jdbc/SqlConfig.html">@SqlConfig</a></p>
+<h3 id="598-sql的事务管理">5.9.8. <code>@Sql</code>的事务管理</h3>
+<p>默认情况下，<code>SqlScriptsTestExecutionListener</code>会推断<code>@Sql</code>配置的脚本期望的事务语义。具体来说，SQL脚本没有运行在一个事务中，但在一个Spring管理的事务中（举个例子，一个由<code>TransactionalTestExecutionListener</code>管理的事务，当测试被<code>@Transactional</code>注解修饰时），或者在一个隔离的事务当中，取决于<code>@SqlConfig</code>属性<code>transactionMode</code>的取值和测试<code>ApplicationContext</code>中是否有<code>PlatformTransactionManager</code>存在。就算最低的要求，也需要一个<code>javax.sql.DataSource</code>在测试<code>ApplicationContext</code>中存在。</p>
+<p>如果<code>SqlScriptsTestExecutionListener</code>使用的算法通过检测<code>DataSource</code>和<code>PlatformTransactionManager</code>来推断的事务语义不符合你的需求，你可以指定显式名称通过设置<code>@SqlConfig</code>的属性<code>dataSource</code>和<code>transactionManager</code>。此外，你可以空值事务的传播方式通过设置<code>@SqlConfig</code>的<code>transactionMode</code>属性（比如，是否脚本应该运行在一个隔离的事务中）。详情参考<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/test/context/jdbc/SqlConfig.html">@SqlConfig</a> 和 <a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/test/context/jdbc/SqlScriptsTestExecutionListener.html">SqlScriptsTestExecutionListener</a></p>
+<pre><code class="language-java">@SpringJUnitConfig(TestDatabaseConfig.class)
+@Transactional
+class TransactionalSqlScriptsTests {
+
+    final JdbcTemplate jdbcTemplate;
+
+    @Autowired
+    TransactionalSqlScriptsTests(DataSource dataSource) {
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    }
+
+    @Test
+    @Sql(&quot;/test-data.sql&quot;)
+    void usersTest() {
+        // verify state in test database:
+        assertNumUsers(2);
+        // run code that uses the test data...
+    }
+
+    int countRowsInTable(String tableName) {
+        return JdbcTestUtils.countRowsInTable(this.jdbcTemplate, tableName);
+    }
+
+    void assertNumUsers(int expected) {
+        assertEquals(expected, countRowsInTable(&quot;user&quot;),
+            &quot;Number of rows in the [user] table.&quot;);
+    }
+}
+</code></pre>
+<p>注意这里不需要在执行完<code>userTest()</code>方法后清理数据库，因为所有对数据库的修改（不管是测试方法中的，还是<code>/test-data.sql</code>脚本中的）都会由<code>TransactionalTestExecutionListener</code>自动回滚。</p>
+<h3 id="599-sqlmergemode合并或者覆盖配置">5.9.9. <code>@SqlMergeMode</code>合并或者覆盖配置</h3>
+<p>从Spring Framework 5.2开始，合并方法级别的和类级别的<code>@Sql</code>申明成为可能。比如说，这能让你为每个测试类提供一次数据库schema配置或者提供一些常见的测试数据，然后在每个测试方法提供指定的测试数据。要开启<code>@Sql</code>合并，在你的测试类或者方法上修饰<code>@SqlMergeMode(MERGE)</code>。要为指定的方法或者子类关闭合，你可以设置模式为<code>@SqlMergeMode(OVERRIDE)</code>。</p>
+<h2 id="510-并发测试执行">5.10. 并发测试执行</h2>
+<p>Spring Framework 5.0引入了在单个JVM中并发执行测试的基础支持，当然是使用Spring TestContext框架前提下。一般来说，这意味着大多数测试类或者测试方法都可以在不修改任何测试代码或者配置的前提下并发的执行。</p>
+<blockquote>
+<p>怎样设置并发测试执行，详情可以参考你使用的测试框架，构建工具，或者IDE。</p>
+</blockquote>
+<p>记住在你的测试套件中引入并发可能会导致一些意想不到的副作用，奇怪的运行时行为，和间歇的测试失败或者产生随机性。因此Spring团队对于何时不适于使用并发测试有以下总结：</p>
+<ul>
+<li>使用Spring框架的<code>@DirtiesContext</code>。</li>
+<li>使用Spring Boot的<code>@MockBean</code>或者<code>@SpyBean</code>。</li>
+<li>使用JUnit 4的<code>@FixMethodOrder</code>或者任何是设计来确保测试方法按照指定顺序执行的框架特征。注意，当整个测试类是并发运行的时候，并不适用。</li>
+<li>改变共享服务或者系统的状态（比如数据库，消息代理，文件系统等等）。这适用于集成或者外部系统。</li>
+</ul>
+<blockquote>
+<p>如果并发测试执行失败过后，当前测试的<code>ApplicationContext</code>不再可用，这通常意味着<code>ApplicationContext</code>在另一个线程中被从<code>ContextCache</code>中移除了。</p>
+<p>这可能是因为<code>@DirtiesContext</code>或者是<code>ContextCache</code>自动清除的。如果<code>@DirtiesContext</code>是罪魁祸首，你要么避免使用<code>@DirtiesContext</code>，要么避免使用并发测试。如果是由于<code>ContextCache</code>已经超过最大容量，你可以增加缓存数量的最大值。</p>
+</blockquote>
+<blockquote>
+<p>在Spring TestContext框架中测试要并发执行，只有底层<code>TestContext</code>实现提供了一个 <code>copy constructor</code>时才有效(参考<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/test/context/TestContext.html">javadoc</a> )。但是，如果使用第三方提供的自定义<code>TestContext</code>实现，你需要验证它是否适配并发测试的执行。</p>
+</blockquote>
+<h2 id="511-testcontext-框架支持类">5.11. TestContext 框架支持类</h2>
+<p>这个章节描述了Spring TestContext框架支持的各种类。</p>
+<h3 id="5111-spring-junit-4-runner">5.11.1. Spring JUnit 4 Runner</h3>
+<p>TestContext框架提供了完整的JUnit 4集成，通过一个自定义的runner（在JUnit4.12或者更高版本支持）。通过修饰测试<code>@RunWith(SpringJUnit4ClassRunner.class)</code>或者更短的变体<code>@RunWith(SpringRunner.class)</code>，开发者可以实现JUnit 4为基础的单元和集成测试并且同事获得TestContext框架带来的好处，比如加载ApplicationContext，测试示例的依赖注入，测试方法的事务管理等等。如果你想使用其他的runner（比如JUnit 4的<code>Parameterized</code>runner）或者第三方的runner（比如<code>MockitoJUnitRunner</code>），更多参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-junit4-rules"> Spring’s support for JUnit rules</a></p>
+<p>下面的代码展示了配置一个测试类运行自定义Spring<code>Runner</code>的最低需求：</p>
+<pre><code class="language-java">@RunWith(SpringRunner.class)
+@TestExecutionListeners({})
+public class SimpleTest {
+
+    @Test
+    public void testMethod() {
+        // test logic...
+    }
+}
+</code></pre>
+<p>上面的例子中<code>@TestExecutionListeners</code>被配置为一个空的list，这样会关闭所有默认的listener，否则需要通过<code>@ContextConfiguration</code>配置一个<code>ApplicationContext</code>。</p>
+<h3 id="5112-spring-junit-规则">5.11.2. Spring JUnit 规则</h3>
+<p><code>org.springframework.test.context.junit4.rules</code>包提供了以下JUnit 4规则（在JUnit4.12或者更高版本支持）：</p>
+<ul>
+<li>SpringClassRule</li>
+<li>SpringMethodRule</li>
+</ul>
+<p><code>SpringClassRule</code>是一个JUnit<code>TestRule</code>，他支持TestContext框架类级别的特征，但是<code>SpringMethodRule</code>是一个JUnit<code>MethodRule</code>，他支持TestContext框架实例级别或者方法级别的特征。</p>
+<p>相对于<code>SpringRunner</code>，Spring规则基础的Junit支持具有独立于任何<code>org.junit.runner.Runner</code>实现的有点，因此，可以和已存在的runner（比如JUnit4的<code>Parameterized</code>）或者第三方的runner结合使用（<code>MockitoJUnitRunner</code>）。</p>
+<p>为了支持TestContext框架的完整功能，你必须结合一个<code>SpringClassRule</code>和一个<code>SpringMethodRule</code>。下面的例子展示了在继承测试中如何正确的申明这些规则：</p>
+<pre><code class="language-java">
+// Optionally specify a non-Spring Runner via @RunWith(...)
+@ContextConfiguration
+public class IntegrationTest {
+
+    @ClassRule
+    public static final SpringClassRule springClassRule = new SpringClassRule();
+
+    @Rule
+    public final SpringMethodRule springMethodRule = new SpringMethodRule();
+
+    @Test
+    public void testMethod() {
+        // test logic...
+    }
+}
+</code></pre>
+<h3 id="5113-junit-4-支持类">5.11.3. JUnit 4 支持类</h3>
+<p><code>org.springframework.test.context.junit4</code>为JUnit4(在JUnit4.12或者更高版本支持)为基础的测试案例提供了以下支持类：</p>
+<ul>
+<li>AbstractJUnit4SpringContextTests</li>
+<li>AbstractTransactionalJUnit4SpringContextTests</li>
+</ul>
+<p><code>AbstractJUnit4SpringContextTests</code>是一个抽象测试基类，他集成了在JUnit 4环境的TestContext框架带有显式的<code>ApplicationContext</code>测试支持。当你extend<code>AbstractJUnit4SpringContextTests</code>，你可以访问一个<code>protected``applicationContext</code>实例参数，用它来执行显式的bean查找或者测试整个上下文的状态。</p>
+<p><code>AbstractTransactionalJUnit4SpringContextTests</code>是对<code>AbstractJUnit4SpringContextTests</code>的一个抽象事物的扩展，它新增了一些有关JDBC的便捷访问。这个类需要<code>ApplicationContext</code>中定义了一个<code>javax.sql.DataSource</code>bean和一个<code>PlatformTransactionManager</code>bean。当你extend<code>AbstractTransactionalJUnit4SpringContextTests</code>，你可以访问一个<code>protected``jdbcTemplate</code>实例参数，你可以用它来跑SQL语句。你可以在数据库相关代码运行前后确定数据库的状态，Spring会确保应用代码的query在相同的事务中。当配合ORM工具使用时，需要确保避免<code>false positives</code>，之前提到过。<code>AbstractTransactionalJUnit4SpringContextTests</code>也提供了快捷方法，他们都是委托<code>JdbcTestUtils</code>的方法完成的通过前面提到的<code>jdbcTemplate</code>。此外，<code>AbstractTransactionalJUnit4SpringContextTests</code>提供了一个<code>executeSqlScript(..)</code>方法可以运行SQL脚本。</p>
+<blockquote>
+<p>这些类方便了扩展。但是如果你不像你的测试类跟Spring指定的类结构绑定，那么你可以通过<code>@RunWith(SpringRunner.class)</code>或者 Spring’s JUnit rules。</p>
+</blockquote>
+<h3 id="5114-springextension-for-junit-jupiter">5.11.4. SpringExtension for JUnit Jupiter</h3>
+<p>TestContext框架为JUnit5引入的JUnit Jupiter测试框架提供了完整的集成。通过注解测试类<code>@ExtendWith(SpringExtension.class)</code>，你可以实现标准的JUnit Jupiter为基础的单元或者集成测试同事也可以从TestContext框架中受益。</p>
+<p>此外，多亏了JUnit Jupiter丰富的扩展，Spring提供了以下特征，它比Spring对JUnit4和TestNG特征的支持要更多更完善：</p>
+<ul>
+<li>测试构造方法，测试方法，和测试声明周期回调方法的依赖注入。详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-junit-jupiter-di">Dependency Injection with SpringExtension</a></li>
+<li>强力支持基于SpEL表达式的<a href="https://junit.org/junit5/docs/current/user-guide/#extensions-conditions">条件化测试执行</a> ，环境变量，系统属性等等。参考<code>@EnabledIf</code>和<code>@DisabledIf</code>在<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#integration-testing-annotations-junit-jupiter"> Spring JUnit Jupiter Testing Annotations</a> 中</li>
+<li>自定义复合注解由Spring和JUnit Jupiter的注解组成。参考<code>@TransactionalDevTestConfig</code>和<code>@TransactionalIntegrationTest</code>的例子在<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#integration-testing-annotations-meta"> Meta-Annotation Support for Testing</a></li>
+</ul>
+<p>下面的例子是一个使用实例：</p>
+<pre><code class="language-java">// Instructs JUnit Jupiter to extend the test with Spring support.
+@ExtendWith(SpringExtension.class)
+// Instructs Spring to load an ApplicationContext from TestConfig.class
+@ContextConfiguration(classes = TestConfig.class)
+class SimpleTests {
+
+    @Test
+    void testMethod() {
+        // test logic...
+    }
+}
+</code></pre>
+<p>因为你也可以使用JUnit 5的注解作为元注解，所以Spring提供了<code>@SpringJUnitConfig</code>和<code>@SpringJUnitWebConfig</code>他们组合了必要的注解。</p>
+<p>下面是一个<code>@SpringJUnitConfig</code>的例子：</p>
+<pre><code class="language-java">// Instructs Spring to register the SpringExtension with JUnit
+// Jupiter and load an ApplicationContext from TestConfig.class
+@SpringJUnitConfig(TestConfig.class)
+class SimpleTests {
+
+    @Test
+    void testMethod() {
+        // test logic...
+    }
+}
+</code></pre>
+<p>同样的，下面是一个<code>@SpringJUnitWebConfig</code>例子，为JUnit Jupiter创建了一个<code>WebApplicationContext</code>：</p>
+<pre><code class="language-java">// Instructs Spring to register the SpringExtension with JUnit
+// Jupiter and load a WebApplicationContext from TestWebConfig.class
+@SpringJUnitWebConfig(TestWebConfig.class)
+class SimpleWebTests {
+
+    @Test
+    void testMethod() {
+        // test logic...
+    }
+}
+</code></pre>
+<p>详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#integration-testing-annotations-junit-jupiter"> Spring JUnit Jupiter Testing Annotations</a></p>
+<h3 id="5115-dependency-injection-with-springextension">5.11.5. Dependency Injection with <code>SpringExtension</code></h3>
+<p><code>SpringExtension</code>实现了来自JUnit Jupiter的<code>ParameterResoler</code>扩展API，它让Spring为测试构造函数，测试方法，和测试生命周期回调函数提供了依赖注入。</p>
+<p>具体来说，<code>SpringExtension</code>你可以注入来自测试的<code>ApplicationContext</code>中的依赖到测试构造函数和被<code>@BeforeAll,</code> <code>@AfterAll</code>, <code>@BeforeEach</code>, <code>@AfterEach</code>, <code>@Test</code>, <code>@RepeatedTest</code>, <code>@ParameterizedTest</code>，和其他注解修饰的方法中。</p>
+<h4 id="构造函数注入">构造函数注入</h4>
+<p>如果构造器中的指定参数是<code>ApplicationContext</code>类型（或者其子类型）或者是其被以下注解或者元注解修饰：@Autowired，@Qualifier，或者@Value，Spring会根据来自测试<code>ApplicationContext</code>中对应bean或者value来注入值。</p>
+<p>Spring可以为测试类的构造函数配置自动装配所有的参数，如果构造函数是考虑成为自动装配化的。一个构造函数是否考虑自动装配化，下面的条件有一个满足就可以（按优先顺序）。</p>
+<ul>
+<li>构造函数被<code>@Autowired</code>修饰。</li>
+<li><code>@TestConstructor</code>注解在测试类上存在或者他的元注解，并且<code>autowireMode</code>属性要为<code>ALL</code>。</li>
+<li>默认的测试构造函数自动装配模式改为了<code>ALL</code>。</li>
+</ul>
+<p>详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#integration-testing-annotations-testconstructor">@TestConstructor</a></p>
+<blockquote>
+<p>如果测试类的构造函数考虑成为自动装配化的，Spring会承担构造函数所有参数的解析工作。这会导致，这样的构造函数不会有其他通过JUnit Jupiter注册的<code>ParameterResolver</code>能够解析他的参数。</p>
+</blockquote>
+<blockquote>
+<p>如果测试方法申明了<code>@DirtiesContext</code>来在方法执行前或者执行后关闭<code>ApplicationContext</code>，那么就不能将构造器注入和JUnit Jupiter的<code>@TestInstance(PER_CLASS)</code>配合使用。</p>
+<p>原因是因为<code>@TestInstance(PER_CLASS)</code>让JUnit Jupiter去缓存了测试方法调用之间的测试实例。因此，测试实例将会保留即将被关闭的<code>ApplicationContext</code>中的bean引用。因为在这种场景下，测试类的构造器只会被调用一次，依赖注入不会再次执行，接下来的测试交互的都是一个关闭的<code>ApplicationContext</code>，会直接抛出异常。</p>
+<p>要配合<code>@TestInstance(PER_CLASS)</code>使用<code>before test method</code>或者<code>after test method</code>模式的<code>@DirtiesContext</code>，必须要通过字段或者setter方式的依赖注入，这样就能在测试方法调用之间重新注入。</p>
+</blockquote>
+<p>下面的例子中，Spring注入来自<code>ApplicationContext</code>的<code>OrderService</code>bean到<code>OrderServiceIntegrationTests</code>构造方法中。</p>
+<pre><code class="language-java">@SpringJUnitConfig(TestConfig.class)
+class OrderServiceIntegrationTests {
+
+    private final OrderService orderService;
+
+    @Autowired
+    OrderServiceIntegrationTests(OrderService orderService) {
+        this.orderService = orderService;
+    }
+
+    // tests that use the injected OrderService
+}
+</code></pre>
+<p>注意这个特征让测试依赖成为<code>final</code>，因此不能更改。</p>
+<p>如果<code>spring.test.constructor.autowire.mode</code>属性值是<code>all</code>(详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#integration-testing-annotations-testconstructor">@TestConstructor</a> )，我们可以忽略之前例子中构造方法上的<code>@Autowired</code>，结果如下：</p>
+<pre><code class="language-java">@SpringJUnitConfig(TestConfig.class)
+class OrderServiceIntegrationTests {
+
+    private final OrderService orderService;
+
+    OrderServiceIntegrationTests(OrderService orderService) {
+        this.orderService = orderService;
+    }
+
+    // tests that use the injected OrderService
+}
+</code></pre>
+<h4 id="方法注入">方法注入</h4>
+<p>如果JUnit Jupiter测试方法或者测试声明周期回调方法的一个参数是<code>ApplicationContext</code>类型（或者是其子类型）或者是被一下注解或元注解修饰的：<code>@Autowird</code>，<code>@Qualifier</code>，或者<code>@Value</code>，Spring会为指定的参数注入<code>ApplicationContext</code>中对应的bean。</p>
+<p>下面的就是一个方法注入的实例：</p>
+<pre><code class="language-java">@SpringJUnitConfig(TestConfig.class)
+class OrderServiceIntegrationTests {
+
+    @Test
+    void deleteOrder(@Autowired OrderService orderService) {
+        // use orderService from the test's ApplicationContext
+    }
+}
+</code></pre>
+<p>因为在JUnit Jupiter中对<code>ParameterResolver</code>支持的稳健性，你可以有多个依赖注入到单个方法中，不仅是来自Spring，也可以是来自JUnit Jupiter或者其他第三方的扩展。</p>
+<p>下面的例子展示如何同时有Spring和JUnit Jupiter的注入到同一个测试方法中：</p>
+<pre><code class="language-java">@SpringJUnitConfig(TestConfig.class)
+class OrderServiceIntegrationTests {
+
+    @RepeatedTest(10)
+    void placeOrderRepeatedly(RepetitionInfo repetitionInfo,
+            @Autowired OrderService orderService) {
+
+        // use orderService from the test's ApplicationContext
+        // and repetitionInfo from JUnit Jupiter
+    }
+}
+</code></pre>
+<p>注意使用来自JUnit Jupiter的<code>@RepeatedTest</code>，可以让方法有权限访问<code>RepetitionInfo</code>。</p>
+<h3 id="5116-nested测试类配置">5.11.6. <code>@Nested</code>测试类配置</h3>
+<p>从Spring Framework 5.0开始，Spring TestContext框架支持在JUnit Jupiter的<code>@Nested</code>测试类上使用测试相关的注解；但是，直到Spring Framework5.3，类级别的测试配置注解才从封闭类继承而来，就像他们继承来自父类的一样。</p>
+<p>Spring Framework 5.3 引入了良好的内部类配置继承支持，并且将会默认启用。要改变默认的<code>INHERIT</code>模式为<code>OVERRIDE</code>模式，你可以给每个<code>@Nested</code>测试类添加一个<code>@NestedTestConfiguration(EnclosingConfiguration.OVERRIDE)</code>。一个显式<code>@NestedTestConfiguration</code>申明不仅对注解修饰的测试类有效也对其子类和集成的类有效。因此，你可以用<code>@NestedTestConfiguration</code>注解修饰顶级测试类，让后递归应用到其所有集成的测试类上。</p>
+<p>为了允许开发团队修改默认的模型为<code>OVERRIDE</code>——举个例子，为了兼容Spring Framework 5.0到5.2——默认的模型可以全局修改通过JVM系统属性或者一个在classpath根路径下的<code>spring.properties</code>文件。详情参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#integration-testing-annotations-nestedtestconfiguration">&ldquo;Changing the default enclosing configuration inheritance mode&rdquo;</a></p>
+<p>下面的<code>Hello World</code>例子是非常简单的，他展示了怎样申明常用的配置到顶级类上，方便它的集成类能够继承这些配置。在这个例子中，只有<code>TestConfig</code>配置类是继承的。每个集成测试类提供了它自己的激活配置文件，结果就是每个继承测试类都有一个不同的<code>ApplicationContext</code>。</p>
+<pre><code class="language-java">@SpringJUnitConfig(TestConfig.class)
+class GreetingServiceTests {
+
+    @Nested
+    @ActiveProfiles(&quot;lang_en&quot;)
+    class EnglishGreetings {
+
+        @Test
+        void hello(@Autowired GreetingService service) {
+            assertThat(service.greetWorld()).isEqualTo(&quot;Hello World&quot;);
+        }
+    }
+
+    @Nested
+    @ActiveProfiles(&quot;lang_de&quot;)
+    class GermanGreetings {
+
+        @Test
+        void hello(@Autowired GreetingService service) {
+            assertThat(service.greetWorld()).isEqualTo(&quot;Hallo Welt&quot;);
+        }
+    }
+}
+</code></pre>
+<h3 id="5117-testng支持类">5.11.7. TestNG支持类</h3>
+<p><code>org.springframework.test.context.testng</code>为TestNG为基础的测试案例提供了以下支持类：</p>
+<ul>
+<li>AbstractTestNGSpringContextTests</li>
+<li>AbstractTransactionalTestNGSpringContextTests</li>
+</ul>
+<p><code>AbstractTestNGSpringContextTests</code>是一个抽象测试基类，他集成了在TestNG环境的TestContext框架带有显式的<code>ApplicationContext</code>测试支持。当你extend<code>AbstractTestNGSpringContextTests</code>，你可以访问一个<code>protected``applicationContext</code>实例参数，用它来执行显式的bean查找或者测试整个上下文的状态。</p>
+<p><code>AbstractTransactionalTestNGSpringContextTests</code>是对<code>AbstractTestNGSpringContextTests</code>的一个抽象事物的扩展，它新增了一些有关JDBC的便捷访问。这个类需要<code>ApplicationContext</code>中定义一个<code>javax.sql.DataSource</code>bean和一个<code>PlatformTransactionManager</code>bean。当你extend<code>AbstractTransactionalTestNGSpringContextTests</code>，你可以访问一个<code>protected``jdbcTemplate</code>实例参数，你可以用它来跑SQL语句。你可以在数据库相关代码运行前后确定数据库的状态，Spring会确保应用代码的query在相同的事务中。当配合ORM工具使用时，需要确保避免<code>false positives</code>，之前提到过。<code>AbstractTransactionalTestNGSpringContextTests</code>也提供了快捷方法，他们都是委托<code>JdbcTestUtils</code>的方法完成的通过前面提到的<code>jdbcTemplate</code>。此外，<code>AbstractTransactionalTestNGSpringContextTests</code>提供了一个<code>executeSqlScript(..)</code>方法可以运行SQL脚本。</p>
+<blockquote>
+<p>这些类方便了扩展。如果你不想你的测试类和Spring指定的类结构绑定，你可以配置你自己的自定义测试类，通过使用<code>@ContextConfiguration</code>,<code>@TestExecutionListeners</code>等，并且通过<code>TestContextManager</code>手动检测你的测试类。关于如何检测你的测试类，参考<code>AbstractTestNGSpringContextTests</code>源码。</p>
+</blockquote>
+<h1 id="6-webtestclient">6. WebTestClient</h1>
+<p><code>WebTestClient</code>是一个设计用于测试服务应用的HTTP客户端。它包装了Spring的<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-client">WebClient</a> ，并且用它来执行请求，并且暴露一个验证response的测试门面。<code>WebTestClient</code>可以用来执行端对端的HTTP测试。它也可以用来测试Spring MVC和Spring WebFlux应用，而且不需要运行服务，通过模拟请求和返回对象。</p>
+<blockquote>
+<p>Kotlin用户：查看<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/languages.html#kotlin-webtestclient-issue">this section</a> 相关的<code>WebTestClient</code>使用。</p>
+</blockquote>
+<h2 id="61-配置">6.1. 配置</h2>
+<p>要配置一个<code>WebTestClient</code>，你需要选择一个服务配置来绑定。这可以是众多模拟服务器配置中的一个或者一个实时线上服务器的连接。</p>
+<h3 id="绑定到controller">绑定到Controller</h3>
+<p>这个配置允许你测试指定的controller通过虚拟的request和response对象，并且不需要运行服务。</p>
+<p>对于WebFlux应用，使用下面的代码加载基础框架等于<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-config">WebFlux Java config</a> ，注册给定的controller，然后创建一个<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-web-handler-api">WebHandler chain</a> 去处理request：</p>
+<pre><code class="language-java">WebTestClient client =
+        WebTestClient.bindToController(new TestController()).build();
+</code></pre>
+<p>对于Spring MVC，使用下面的代码委托<code>StandaloneMockMvcBuilder</code>去加载与<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-config">WebMvc Java config</a>  等效的基础架构，注册给定的controller，并且创建一个<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#spring-mvc-test-framework">MockMvc</a> 实例去处理request：</p>
+<pre><code class="language-java">WebTestClient client =
+        MockMvcWebTestClient.bindToController(new TestController()).build();
+</code></pre>
+<h3 id="绑定到-applicationcontext">绑定到 ApplicationContext</h3>
+<p>这个配置允许你通过Spring MVC或者Spring WebFlux基础框架和controller申明来加载Spring配置，并且通过模拟的request和response对象处理去处理请求，而无需运行服务。</p>
+<p>对于WebFlux，使用以下内容传递Spring<code>ApplicationContext</code>到<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/web/server/adapter/WebHttpHandlerBuilder.html#applicationContext-org.springframework.context.ApplicationContext-">WebHttpHandlerBuilder</a> 中去创建<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-web-handler-api">WebHandler chain</a> 以处理请求：</p>
+<pre><code class="language-java">@SpringJUnitConfig(WebConfig.class) 
+class MyTests {
+
+    WebTestClient client;
+
+    @BeforeEach
+    void setUp(ApplicationContext context) {  
+        client = WebTestClient.bindToApplicationContext(context).build(); 
+    }
+}
+</code></pre>
+<p>对于Spring MVC，使用以下内容传递Spring<code>ApplicationContext</code>到<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/test/web/servlet/setup/MockMvcBuilders.html#webAppContextSetup-org.springframework.web.context.WebApplicationContext-">MockMvcBuilders.webAppContextSetup</a> 去创建一个<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#spring-mvc-test-framework">MockMvc</a> 实例以处理请求：</p>
+<pre><code class="language-java">@ExtendWith(SpringExtension.class)
+@WebAppConfiguration(&quot;classpath:META-INF/web-resources&quot;) 
+@ContextHierarchy({
+    @ContextConfiguration(classes = RootConfig.class),
+    @ContextConfiguration(classes = WebConfig.class)
+})
+class MyTests {
+
+    @Autowired
+    WebApplicationContext wac; 
+
+    WebTestClient client;
+
+    @BeforeEach
+    void setUp() {
+        client = MockMvcWebTestClient.bindToApplicationContext(this.wac).build(); 
+    }
+}
+</code></pre>
+<h3 id="绑定到-router-function">绑定到 Router Function</h3>
+<p>这个配置允许你在不启动服务的情况下通过模拟request和response对象测试<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-fn">functional endpoints</a></p>
+<p>对于WebFlux，使用下面内容委托给<code>RouterFunctions.toWebHandler</code>去创建一个服务配置以处理请求：</p>
+<pre><code class="language-java">RouterFunction&lt;?&gt; route = ...
+client = WebTestClient.bindToRouterFunction(route).build();
+</code></pre>
+<p>对于Spring MVC，目前还没有测试<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#webmvc-fn"> WebMvc functional endpoints</a> 的选项。</p>
+<h3 id="绑定到服务器">绑定到服务器</h3>
+<p>这个配置连接到一个运行的服务上以进行完整的，端对端的HTTP测试：</p>
+<pre><code class="language-java">client = WebTestClient.bindToServer().baseUrl(&quot;http://localhost:8080&quot;).build();
+</code></pre>
+<h3 id="客户端配置">客户端配置</h3>
+<p>除了之前梯级的服务配置以外，你还可以配置客户端选项，包括 base URL，默认 headers，客户端过滤器等等。这些选项在<code>bindToServcer()</code>之后都是很容易获得的。对于其他配置选项，你可以使用<code>configureClient()</code>将服务转为客户端配置：</p>
+<pre><code class="language-java">client = WebTestClient.bindToController(new TestController())
+        .configureClient()
+        .baseUrl(&quot;/test&quot;)
+        .build();
+</code></pre>
+<h2 id="62-写测试">6.2. 写测试</h2>
+<p>直到通过<code>exchange()</code>执行请求为止，<code>WebTestClient</code>提供和<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-client">WebClient</a> 相同的API。参考<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-client-body">WebClient</a> 文档以查找如何准备一个有任何内容的请求，包括 form data， multipart data，等等。</p>
+<p>在调用<code>exchange()</code>之后，<code>WebTestClient</code>从<code>WebClient</code>偏离，转变工作流的方向去验证response。</p>
+<p>使用下面内容去断言response的状态和header：</p>
+<pre><code class="language-java">client.get().uri(&quot;/persons/1&quot;)
+            .accept(MediaType.APPLICATION_JSON)
+            .exchange()
+            .expectStatus().isOk()
+            .expectHeader().contentType(MediaType.APPLICATION_JSON)
+</code></pre>
+<p>然后你可以通过下面任何一种方法去解码reponse的body：</p>
+<ul>
+<li>expectBody(Class<!-- raw HTML omitted -->)：解码为单个对象。</li>
+<li>expectBodyList(Class<!-- raw HTML omitted -->)：解码并收集对象到List<!-- raw HTML omitted -->。</li>
+<li>expectBody()：解码到<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#webtestclient-json">JSON Content</a> 或者一个空的body <code>byte[]</code></li>
+</ul>
+<p>然后在高等级的结果对象上执行断言：</p>
+<pre><code class="language-java">client.get().uri(&quot;/persons&quot;)
+        .exchange()
+        .expectStatus().isOk()
+        .expectBodyList(Person.class).hasSize(3).contains(person);
+</code></pre>
+<p>如果内置的断言效率太低，你还可以用其他的断言代替：</p>
+<pre><code class="language-java">import org.springframework.test.web.reactive.server.expectBody
+
+client.get().uri(&quot;/persons/1&quot;)
+        .exchange()
+        .expectStatus().isOk()
+        .expectBody(Person.class)
+        .consumeWith(result -&gt; {
+            // custom assertions (e.g. AssertJ)...
+        });
+</code></pre>
+<p>或者你可以退出工作流，并获取一个<code>EntityExchangeResult</code>：</p>
+<pre><code class="language-java">EntityExchangeResult&lt;Person&gt; result = client.get().uri(&quot;/persons/1&quot;)
+        .exchange()
+        .expectStatus().isOk()
+        .expectBody(Person.class)
+        .returnResult();
+</code></pre>
+<blockquote>
+<p>当你需要解码的目标类型是一个泛型时，请寻找接受<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/core/ParameterizedTypeReference.html">ParameterizedTypeReference</a> 而不是<code>Class&lt;T&gt;</code>的重载方法</p>
+</blockquote>
+<h3 id="no-content">No Content</h3>
+<p>如果不期待response会返回任何内容，你可以这样断言：</p>
+<pre><code class="language-java">client.post().uri(&quot;/persons&quot;)
+        .body(personMono, Person.class)
+        .exchange()
+        .expectStatus().isCreated()
+        .expectBody().isEmpty();
+</code></pre>
+<p>如果需要忽略response内容，下面就是是释放内容并不需要任何断言：</p>
+<pre><code class="language-java">client.get().uri(&quot;/persons/123&quot;)
+        .exchange()
+        .expectStatus().isNotFound()
+        .expectBody(Void.class);
+</code></pre>
+<h3 id="json-content">JSON Content</h3>
+<p>你可以使用<code>expectBody()</code>，他没有目标类型，他断言的目标是为加工的内容而不是高等级的对象。</p>
+<p>用<a href="https://jsonassert.skyscreamer.org/">JSONAssert</a> 验证完整的JSON内容：</p>
+<pre><code class="language-java">client.get().uri(&quot;/persons/1&quot;)
+        .exchange()
+        .expectStatus().isOk()
+        .expectBody()
+        .json(&quot;{\&quot;name\&quot;:\&quot;Jane\&quot;}&quot;)
+</code></pre>
+<p>用<a href="https://github.com/json-path/JsonPath">JSONPath</a> 验证JSON内容：</p>
+<pre><code class="language-java">client.get().uri(&quot;/persons&quot;)
+        .exchange()
+        .expectStatus().isOk()
+        .expectBody()
+        .jsonPath(&quot;$[0].name&quot;).isEqualTo(&quot;Jane&quot;)
+        .jsonPath(&quot;$[1].name&quot;).isEqualTo(&quot;Jason&quot;);
+</code></pre>
+<h3 id="streaming-responses">Streaming Responses</h3>
+<p>要测试一个可能无穷尽的流，比如说<code>&quot;text/event-stream&quot;</code>或者<code>&quot;application/x-ndjson&quot;</code>，通过验证response状态和header开始，然后获取一个<code>FluxExchangeResult</code>：</p>
+<pre><code class="language-java">FluxExchangeResult&lt;MyEvent&gt; result = client.get().uri(&quot;/events&quot;)
+        .accept(TEXT_EVENT_STREAM)
+        .exchange()
+        .expectStatus().isOk()
+        .returnResult(MyEvent.class);
+</code></pre>
+<p>现在你已经准备好通过来自<code>reactor-test</code>的<code>StepVerifier</code>去消耗response流了：</p>
+<pre><code class="language-java">Flux&lt;Event&gt; eventFlux = result.getResponseBody();
+
+StepVerifier.create(eventFlux)
+        .expectNext(person)
+        .expectNextCount(4)
+        .consumeNextWith(p -&gt; ...)
+        .thenCancel()
+        .verify(); 
+</code></pre>
+<h3 id="mockmvc断言">MockMvc断言</h3>
+<p><code>WebTestClient</code>是一个HTTP客户端，因此他只能验证客户端的response，包括状态，head,和body。</p>
+<p>当用一个MockMVC服务配置测试一个Spring MVC应用时，你有一个额外的选择可以在服务response上执行更多的断言。通过在断言body后获取一个<code>ExchangeResult</code>来实现：</p>
+<pre><code class="language-java">// For a response with a body
+EntityExchangeResult&lt;Person&gt; result = client.get().uri(&quot;/persons/1&quot;)
+        .exchange()
+        .expectStatus().isOk()
+        .expectBody(Person.class)
+        .returnResult();
+
+// For a response without a body
+EntityExchangeResult&lt;Void&gt; result = client.get().uri(&quot;/path&quot;)
+        .exchange()
+        .expectBody().isEmpty();
+</code></pre>
+<p>然后切换到MockMvc服务response断言：</p>
+<pre><code class="language-java">MockMvcWebTestClient.resultActionsFor(result)
+        .andExpect(model().attribute(&quot;integer&quot;, 3))
+        .andExpect(model().attribute(&quot;string&quot;, &quot;a string value&quot;));
+</code></pre>
+<h1 id="7-mockmvc">7. <code>MockMvc</code></h1>
+<p>Spring MVC Test 框架，也叫作MockMvc，为测试Spring MVC应用提供了支持。他执行了完整的Spring MVC请求处理，但是是通过模拟的request和response对象从而代替一个运行的服务。</p>
+<p>MockMvc可以用在它自己身上去支持请求和response验证。它也可以通过<code>WebTestClient</code>来使用，他是通过插入到<code>WebTestClient</code>中作为处理请求的服务。<code>WebTestClient</code>带来的好处是可以不用再看着未加工的数据，可以将response body解码到高等级对象中，并且还可以切换到完整的端对端的HTTP测试，并且使用的是相同的测试API。</p>
+<h2 id="71-大纲">7.1. 大纲</h2>
+<p>你可以在普通的单元测试中使用controller，通过初始化一个controller，注入他的依赖，并调用他的方法。 但是，这样的测试不能验证 request mappings, data binding, message conversion, type conversion, validation, 并且不能涉及任何支持<code>@InitBinder</code>，<code>@ModelAttribute</code>，或者<code>@ExceptionHandler</code>的方法。</p>
+<p>Spring MVC Test框架，也叫<code>MockMVC</code>，旨在不需要运行服务的情况下提供更完整的Spring MVC controller测试支持。这是通过调用<code>DispacherServlet</code>并且传递了一个来自<code>spring-test</code>模组的<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#mock-objects-servlet">模拟的Servlet API实现</a> ，它复制了完整的Spring MVC请求处理逻辑，并且不需要启动服务。</p>
+<p>MockMvc 是一个服务端的测试框架，他通过使用轻量和目标性的测试可以让你验证Spring MVC应用的大多数功能。</p>
+<h3 id="静态导入">静态导入</h3>
+<p>当使用MockMvc直接执行请求时，你会需要静态导入：</p>
+<ul>
+<li>MockMvcBuilders.*</li>
+<li>MockMvcRequestBuilders.*</li>
+<li>MockMvcResultMatchers.*</li>
+<li>MockMvcResultHandlers.*</li>
+</ul>
+<p>一个简单的方法去记住这些类，可以通过ide搜索<code>MockMvc*</code>。</p>
+<p>当通过<code>WebTestClient</code>使用MockMvc时，你不需要静态导入。<code>WebTestClient</code>提供了流畅的API并且不需要静态导入。</p>
+<h3 id="配置选择">配置选择</h3>
+<p>MockMvc可以有两个方法可以配置。一个是直接指出你想要测试的controller，并且以编程的方式配置Spring MVC基础结构。另外一个是指出带有Spring MVC和controller基础结构的Spring配置。</p>
+<p>配置MockMvc去测试一个指定的controller：</p>
+<pre><code class="language-java">class MyWebTests {
+
+    MockMvc mockMvc;
+
+    @BeforeEach
+    void setup() {
+        this.mockMvc = MockMvcBuilders.standaloneSetup(new AccountController()).build();
+    }
+
+    // ...
+
+}
+</code></pre>
+<p>当通过<code>WebTestClient</code>使用时，也可以使用这个配置，它会委托给跟上面相同的构造器。</p>
+<p>通过Spring配置来初始化MockMvc：</p>
+<pre><code class="language-java">@SpringJUnitWebConfig(locations = &quot;my-servlet-context.xml&quot;)
+class MyWebTests {
+
+    MockMvc mockMvc;
+
+    @BeforeEach
+    void setup(WebApplicationContext wac) {
+        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
+    }
+
+    // ...
+
+}
+</code></pre>
+<p>或者在通过<code>WebTestClient</code>使用时仍然可以使用上面的配置，<code>WebTestClient</code>委托给跟上面相同的builder来完成。</p>
+<p>你应该使用哪个配置选项？</p>
+<p><code>webAppContextSetup</code>加载你实际的Spring MVC配置，生成一个更加完整的集成测试。因为TestContext框架加载了Spring配置，它帮助测试更快的运行，即使你在你的测试套件中引入了更多的测试。此外，你可以通过Spring配置注入模拟service到controller中以在web层测试上保持专注。下面的例子通过Mockito申明了一个模拟的service：</p>
+<pre><code class="language-xml">&lt;bean id=&quot;accountService&quot; class=&quot;org.mockito.Mockito&quot; factory-method=&quot;mock&quot;&gt;
+    &lt;constructor-arg value=&quot;org.example.AccountService&quot;/&gt;
+&lt;/bean&gt;
+</code></pre>
+<p>然后你可以将这个模拟service注入到测试中，配置并验证你的期望结果：</p>
+<pre><code class="language-java">@SpringJUnitWebConfig(locations = &quot;test-servlet-context.xml&quot;)
+class AccountTests {
+
+    @Autowired
+    AccountService accountService;
+
+    MockMvc mockMvc;
+
+    @BeforeEach
+    void setup(WebApplicationContext wac) {
+        this.mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
+    }
+
+    // ...
+
+}
+</code></pre>
+<p>另一方面，<code>standaloneSetup</code>更接近于单元测试。他一次测试一个controller。你可以通过模拟依赖手动注入controller，并且不会涉及加载Spring配置。这样的测试更专注于样式，使得查看被测试的controller，或是任何指定的Spring MVC配置是否是运行的必要条件等等操作更加容易。用<code>standaloneSetup</code>写临时的测试去验证指定的操作或者debug一个问题都非常方便。</p>
+<p>像大多数的“集成测试和单元测试对比”的讨论，都没有完全正确或者错误的答案。但是，使用<code>standaloneSetup</code>确实会需要一些额外的<code>webAppContextSetup</code>测试，这是为了验证你的Spring MVC配置。当然，你也可以把所有的测试都用<code>webAppContextSetup</code>来写，可以让你的测试都是基于实际的Spring MVC配置进行。</p>
+<h3 id="配置特征">配置特征</h3>
+<p>不管使用哪种MockMvc构建方法，所有的<code>MockMvcBuilder</code>实现都提供了一些常用并且非常有用的特征。比如，你可以为所有的request申明一个<code>Accept</code>header并且假定所有response的状态都是200并且还带一个<code>Content-type</code>header：</p>
+<pre><code class="language-java">// static import of MockMvcBuilders.standaloneSetup
+
+MockMvc mockMvc = standaloneSetup(new MusicController())
+    .defaultRequest(get(&quot;/&quot;).accept(MediaType.APPLICATION_JSON))
+    .alwaysExpect(status().isOk())
+    .alwaysExpect(content().contentType(&quot;application/json;charset=UTF-8&quot;))
+    .build();
+</code></pre>
+<p>此外，第三方框架（和应用）可以预包装配置指令，就像<code>MockMvcConfigurer</code>中的一样。Spring框架也有一个继承的实现，可以帮助你在request之间保存和复用HTTP session：</p>
+<pre><code class="language-java">// static import of SharedHttpSessionConfigurer.sharedHttpSession
+
+MockMvc mockMvc = MockMvcBuilders.standaloneSetup(new TestController())
+        .apply(sharedHttpSession())
+        .build();
+
+// Use mockMvc to perform requests...
+</code></pre>
+<p>详情参考<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/test/web/servlet/setup/ConfigurableMockMvcBuilder.html">ConfigurableMockMvcBuilder</a> 列出了所有MockMvc builder的特征。</p>
+<h3 id="执行请求">执行请求</h3>
+<p>这个章节讲述MockMvc自身怎样执行请求和验证response。如果是通过<code>WebTestClient</code>使用，可以参考之前的章节。</p>
+<p>使用任何HTTP方法执行请求：</p>
+<pre><code class="language-java">mockMvc.perform(post(&quot;/hotels/{id}&quot;, 42).accept(MediaType.APPLICATION_JSON));
+</code></pre>
+<p>你也可以执行文件上传请求，它内部使用的是<code>MockMultipartHttpServletRequest</code>，没有实际解析一个multipart request：</p>
+<pre><code class="language-java">mockMvc.perform(multipart(&quot;/doc&quot;).file(&quot;a1&quot;, &quot;ABC&quot;.getBytes(&quot;UTF-8&quot;)));
+</code></pre>
+<p>你可以在URI模板样式中指定请求参数：</p>
+<pre><code class="language-java">mockMvc.perform(get(&quot;/hotels?thing={thing}&quot;, &quot;somewhere&quot;));
+</code></pre>
+<p>你可以通过下面的方式呈现参数：</p>
+<pre><code class="language-java">mockMvc.perform(get(&quot;/hotels&quot;).param(&quot;thing&quot;, &quot;somewhere&quot;));
+</code></pre>
+<p>如果应用代码依赖Servlet请求参数，并且没有清晰的检查请求string(大多数情况都是这样)，那么你选择那个方法都没有关系。但是，请记住，URI模板提供的请求参数是已经解码的，但是通过<code>param(...)</code>提供的请求参数 <code>are expected to already be decoded</code>。</p>
+<p>在大多数情况下，更偏向于将context path和Servlet path从请求URI中分离。如果你必须测试一个完整的请求URI，那么请确保<code>contextPath</code>和<code>servletPath</code>的准确性：</p>
+<pre><code class="language-java">mockMvc.perform(get(&quot;/app/main/hotels/{id}&quot;).contextPath(&quot;/app&quot;).servletPath(&quot;/main&quot;))
+</code></pre>
+<p>在上面的例子中，如果每个请求都附带<code>contextPath</code>和<code>servletPath</code>是十分笨重的。相对的，你可以提前设置好默认属性：</p>
+<pre><code class="language-java">class MyWebTests {
+
+    MockMvc mockMvc;
+
+    @BeforeEach
+    void setup() {
+        mockMvc = standaloneSetup(new AccountController())
+            .defaultRequest(get(&quot;/&quot;)
+            .contextPath(&quot;/app&quot;).servletPath(&quot;/main&quot;)
+            .accept(MediaType.APPLICATION_JSON)).build();
+    }
+}
+</code></pre>
+<p>上面的属性通过<code>MockMvc</code>影响每一个请求执行。如果给定的请求指定了同样的属性，那么它会覆盖默认值。这就是为什么默认请求中的HTTP方法和URI无关紧要的原因，因为他们都必须在每个请求中指定。</p>
+<h3 id="定义预期结果">定义预期结果</h3>
+<p>你可以通过一个或者多个<code>.andExpect(..)</code>定义预期结果：</p>
+<pre><code class="language-java">mockMvc.perform(get(&quot;/accounts/1&quot;)).andExpect(status().isOk());
+</code></pre>
+<p><code>MockMvcResultMatchers.*</code>提供了很多预期结果，他们中的一些可以嵌套为更详情的结果。</p>
+<p>预期结果可以划分为两个大致的种类。一个是验证response的属性（比如，response status,header,和内容）。这是要断言的最重要的结果内容。</p>
+<p>第二个断言的分类超出了response的范围。这些断言让你检查Spring MVC指定的切面，比如哪个controller方法处理了这个请求，是否有异常出现并被处理，model的具体内容，那个view被选中，什么flash属性被添加等等。他们也能让你检查Servlet指定的切面，比如说request和session属性。</p>
+<p>下面的测试断言了绑定或者验证失败：</p>
+<pre><code class="language-java">mockMvc.perform(post(&quot;/persons&quot;))
+    .andExpect(status().isOk())
+    .andExpect(model().attributeHasErrors(&quot;person&quot;));
+</code></pre>
+<p>许多时候，转存执行测试请求后的结果都是非常有用的。你可以像下边这样做，<code>print()</code>是由<code>MockMvcResultHandlers</code>静态导入的：</p>
+<pre><code class="language-java">mockMvc.perform(post(&quot;/persons&quot;))
+.andDo(print())
+.andExpect(status().isOk())
+.andExpect(model().attributeHasErrors(&quot;person&quot;));
+</code></pre>
+<p>只要请求进程不会产生一个不能处理的异常，<code>print()</code>方法就会打印所有可用的结果数据到<code>System.out</code>中。这里有一个<code>log()</code>方法和两个额外的<code>print()</code>方法的变体，一个接收<code>OutputStream</code>，另外一个接收<code>Writer</code>。举个例子，调用<code>print(System.err)</code>打印结果到<code>System.err</code>，当调用<code>print(myWriter)</code>打印结果到一个自定义的writer。如果你想用log的形式而不是print，那么你可以调用<code>log()</code>方法，他会将结果数据作为一条单一的<code>DEUBG</code>信息在<code>org.springframework.test.web.servlet.result</code>logging目录下。</p>
+<p>某些情况你可能想直接获得结果对象进行验证，你可以通过<code>.andReturn()</code>，在所有的expect方法之后调用：</p>
+<pre><code class="language-java">MvcResult mvcResult = mockMvc.perform(post(&quot;/persons&quot;)).andExpect(status().isOk()).andReturn();
+// ...
+</code></pre>
+<p>如果所有的测试都检测一个预期结果，那么你可以在构建<code>MockMvc</code>时就设置默认的预期结果：</p>
+<pre><code class="language-java">standaloneSetup(new SimpleController())
+    .alwaysExpect(status().isOk())
+    .alwaysExpect(content().contentType(&quot;application/json;charset=UTF-8&quot;))
+    .build()
+</code></pre>
+<p>注意这些通用的预期结果始终都是可用的，并且不能够被覆盖，除非创建一个单独的<code>MockMvc</code>实例。</p>
+<p>当一个JSON response内容包含一个由<a href="https://github.com/spring-projects/spring-hateoas">Spring HATEOAS</a> 创建的多媒体连接，你可以通过使用JsonPath表达式来验证结果连接：</p>
+<pre><code class="language-java">mockMvc.perform(get(&quot;/people&quot;).accept(MediaType.APPLICATION_JSON))
+    .andExpect(jsonPath(&quot;$.links[?(@.rel == 'self')].href&quot;).value(&quot;http://localhost:8080/people&quot;));
+</code></pre>
+<p>当XML response内容包含一个由<a href="https://github.com/spring-projects/spring-hateoas">Spring HATEOAS</a> 创建的多媒体连接，你可以通过使用XPath表达式验证结果连接。</p>
+<pre><code class="language-java">Map&lt;String, String&gt; ns = Collections.singletonMap(&quot;ns&quot;, &quot;http://www.w3.org/2005/Atom&quot;);
+mockMvc.perform(get(&quot;/handle&quot;).accept(MediaType.APPLICATION_XML))
+    .andExpect(xpath(&quot;/person/ns:link[@rel='self']/@href&quot;, ns).string(&quot;http://localhost:8080/people&quot;));
+</code></pre>
+<h3 id="异步请求">异步请求</h3>
+<p>这个章节展示怎样使用MockMvc进行异步请求处理。如果通过<code>WebTestClient</code>使用MockMvc，那么是不需要特别处理的，因为默认就是异步请求。</p>
+<p><a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-async">Spring MVC支持Servlet 3.0 异步请求</a> ，是通过退出Servlet容器线程，并允许应用异步计算response，然后通过异步调度去完成对Servlet容器线程的处理。</p>
+<p>在Spring MVC测试中，异步请求可以通过先断言产生的异步value开始，然后手动执行异步调度，并且最终验证response。下面的例子测试的controller方法返回的<code>deferredResult</code>，<code>Callable</code>，或者交互类型比如Reactor<code>Mono</code>：</p>
+<pre><code class="language-java">@Test
+void test() throws Exception {
+    MvcResult mvcResult = this.mockMvc.perform(get(&quot;/path&quot;))
+            //检测response状态是仍然未改变的
+            .andExpect(status().isOk()) 
+            //异步处理必须有一个started
+            .andExpect(request().asyncStarted())
+            //等待并断言异步结果
+            .andExpect(request().asyncResult(&quot;body&quot;)) 
+            .andReturn();
+
+    //手动执行异步调度（因为没有运行的容器）
+    this.mockMvc.perform(asyncDispatch(mvcResult))
+            //验证最终response    
+            .andExpect(status().isOk()) 
+            .andExpect(content().string(&quot;body&quot;));
+}
+</code></pre>
+<h3 id="streaming-response">Streaming Response</h3>
+<p>在Spring MVC测试中是有没有选项去测试无容器的返回流的。但是你可以通过<code>WebTestClient</code>请求去测试流。在Spring Boot中你可以<a href="https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-testing-spring-boot-applications-testing-with-running-server">测试一个运行的服务</a> 通过<code>WebTestClient</code>。另外一个优势是他有能力使用来自项目Reactor的<code>StepVerifier</code>，可以允许在流数据上申明预期结果。</p>
+<h3 id="过滤器注册">过滤器注册</h3>
+<p>当配置一个<code>MockMvc</code>实例时，你可以注册一个或者多个Servlet<code>Filter</code>实例：</p>
+<pre><code class="language-java">mockMvc = standaloneSetup(new PersonController()).addFilters(new CharacterEncodingFilter()).build();
+</code></pre>
+<p>注册的过滤器是通过来自<code>spring-test</code>的<code>MockFilterChain</code>来调用的，并且最后一个过滤器委托给了<code>DispacherServlet</code>。</p>
+<h3 id="更多代码实例">更多代码实例</h3>
+<p><a href="https://github.com/spring-projects/spring-framework/tree/master/spring-test/src/test/java/org/springframework/test/web/servlet/samples">MockMvc</a> ，<a href="https://github.com/spring-projects/spring-framework/tree/master/spring-test/src/test/java/org/springframework/test/web/servlet/samples/client">WebTestClient</a></p>
+<h1 id="8-测试客户端应用">8. 测试客户端应用</h1>
+<p>你可以使用客户端测试，它内部使用的是<code>RestTemplate</code>。这个逻辑是申明期待的请求和提供&quot;stub&quot;response，所以你可以在不运行服务的情况下检测代码。</p>
+<pre><code class="language-java">RestTemplate restTemplate = new RestTemplate();
+
+MockRestServiceServer mockServer = MockRestServiceServer.bindTo(restTemplate).build();
+mockServer.expect(requestTo(&quot;/greeting&quot;)).andRespond(withSuccess());
+
+// Test code that uses the above RestTemplate ...
+
+mockServer.verify();
+</code></pre>
+<p>在之前的例子中，<code>MockRestServiceServer</code>（客户端REST测试的核心类）用一个自定义的<code>ClientHttpRequestFactory</code>配置了<code>RestTemplate</code>，并断言了一个预期的真实请求和返回&quot;stub&quot;response。在这个案例中，我们期待一个到<code>/greeting</code>的请求，并且希望返回一个200 response，并带着<code>text/plain</code>内容。我们可以根据需要定义其他的请求和stub response。当我们定义期待的request和stub response时，restTemplate可以照常在客户端代码中使用。在测试结束时，<code>mockServer.verify()</code>可以用来验证所有的期望结果是否都被满足了。</p>
+<p>默认情况下，请求应按照expect申明期望的顺序执行。当构建服务时你可以设置<code>ignoreExpectOrder</code>选项，在这种情况下会检测所有的expect以找到一个跟给定request匹配。这意味着请求可以以任何顺序进入：</p>
+<pre><code class="language-java">server = MockRestServiceServer.bindTo(restTemplate).ignoreExpectOrder(true).build();
+</code></pre>
+<p>即使改为无序请求，每个请求也只允许运行一次。expect方法提供一个重载变体，可以接受一个<code>ExpectedCount</code>参数以指定一个数量范围（比如说，一次，多次，max,min,between,等等）。下面的例子使用了<code>times</code>：</p>
+<pre><code class="language-java">RestTemplate restTemplate = new RestTemplate();
+
+MockRestServiceServer mockServer = MockRestServiceServer.bindTo(restTemplate).build();
+mockServer.expect(times(2), requestTo(&quot;/something&quot;)).andRespond(withSuccess());
+mockServer.expect(times(3), requestTo(&quot;/somewhere&quot;)).andRespond(withSuccess());
+
+// ...
+
+mockServer.verify();
+</code></pre>
+<p>注意，当<code>ignoreExpectOrder</code>没有设置的时候（默认情况），请求会按照expect申明期望的顺序，并且这个顺序只会对第一次出现的期望请求有效。举个例子，如果<code>/something</code>期待出现两次接下来是三次<code>/somewhere</code>，这里应该有一个<code>/something</code>请求是在<code>/somewhere</code>请求之前的，但是剩下的请求可以在任何时间进入。</p>
+<p>对于上面的所有内容，还有另外一个实现方式，客户端的测试支持也提供了一个<code>ClientHttpRequestFactory</code>实现，你可以配置到一个<code>RestTemplate</code>中去将它绑定到<code>MockMvc</code>实例上。它允许你使用服务端的逻辑处理请求并且不需要运行一个服务：</p>
+<pre><code class="language-java">MockMvc mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
+this.restTemplate = new RestTemplate(new MockMvcClientHttpRequestFactory(mockMvc));
+
+// Test code that uses the above RestTemplate ...
+</code></pre>
+<h2 id="81-静态导入">8.1. 静态导入</h2>
+<p>作为服务端的测试，要流畅测试客户端需要一些静态导入。只要搜索<code>MockRest*</code>即可。</p>
+<h2 id="82-更多代码实例">8.2. 更多代码实例</h2>
+<p><a href="https://github.com/spring-projects/spring-framework/tree/master/spring-test/src/test/java/org/springframework/test/web/client/samples">Client-side test</a></p>
 
     </div>
     <div class="article-footer">
@@ -1812,7 +3043,7 @@ class ControllerIntegrationTests {
 </ul>
   <div class="copyright">
     &copy;2015  -
-    2020
+    2021
   </div>
 </footer>
 
