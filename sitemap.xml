@@ -486,6 +486,13 @@
   </url>
   
   <url>
+    <loc>http://www.mingaccount.com/tags/postgresql/</loc>
+    <lastmod>2018-10-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mingaccount.com/2018/10/h2dropexception/</loc>
     <lastmod>2018-10-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -733,6 +740,13 @@
   <url>
     <loc>http://www.mingaccount.com/2018/03/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2018-03-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2018/03/java%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E7%A9%BA%E6%8C%87%E9%92%88/</loc>
+    <lastmod>2018-03-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

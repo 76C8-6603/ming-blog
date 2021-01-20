@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>设计模式总览</title>
+      <link>http://www.mingaccount.com/2017/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88/</link>
+      <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88/</guid>
+      <description>1.什么叫依赖倒转，里氏替换？ 所谓依赖倒转就是抽象类不应该依赖于子类，子类应该依赖于抽象类，并且子类之间不应该互相依赖。依赖倒转是面对对象的</description>
+    </item>
+    
+    <item>
       <title>JavaString 特殊符号处理工具类</title>
       <link>http://www.mingaccount.com/2017/05/javastring%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
       <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>

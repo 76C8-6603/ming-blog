@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>postgresql on Ming Blog</title>
+    <link>http://www.mingaccount.com/tags/postgresql/</link>
+    <description>Recent content in postgresql on Ming Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 05 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://www.mingaccount.com/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>为服务开启BBR加速</title>
+      <link>http://www.mingaccount.com/2019/05/%E4%B8%BA%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%90%AFbbr%E5%8A%A0%E9%80%9F/</link>
+      <pubDate>Fri, 31 May 2019 19:03:55 +0800</pubDate>
+      
+      <guid>http://www.mingaccount.com/2019/05/%E4%B8%BA%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%90%AFbbr%E5%8A%A0%E9%80%9F/</guid>
+      <description>脚本： wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;amp;&amp;amp; chmod +x bbr.sh &amp;amp;&amp;amp; ./bbr.sh 查看结果： sysctl net.ipv4.tcp_available_congestion_control</description>
+    </item>
+    
+    <item>
+      <title>Scala基础类结构图</title>
+      <link>http://www.mingaccount.com/2019/05/scala%E5%9F%BA%E7%A1%80%E7%B1%BB%E7%BB%93%E6%9E%84%E5%9B%BE/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2019/05/scala%E5%9F%BA%E7%A1%80%E7%B1%BB%E7%BB%93%E6%9E%84%E5%9B%BE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scala运算符优先顺序</title>
+      <link>http://www.mingaccount.com/2019/05/scala%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E9%A1%BA%E5%BA%8F/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2019/05/scala%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E9%A1%BA%E5%BA%8F/</guid>
+      <description>运算符的优先级由其第一个字符决定 以下列出的字符按优先级从高到低的顺序排列 (all letters) | ^ &amp;amp; &amp;lt; &amp;gt; = ! + - * / % (all other special characters)</description>
+    </item>
+    
+    <item>
+      <title>Java上传文件格式判断</title>
+      <link>http://www.mingaccount.com/2019/03/java%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E5%88%A4%E6%96%AD/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2019/03/java%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E5%88%A4%E6%96%AD/</guid>
+      <description>判断用户上传文件的合法性仅仅通过后缀名是完全不够的，谁也不知道后缀名是否被更改，服务器保存一个不知道真实类型的文件有极大的风险。 因此需要后台</description>
+    </item>
+    
+    <item>
+      <title>Scala实现的尾递归</title>
+      <link>http://www.mingaccount.com/2019/02/scala%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%B0%BE%E9%80%92%E5%BD%92/</link>
+      <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2019/02/scala%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%B0%BE%E9%80%92%E5%BD%92/</guid>
+      <description>最大公约数： @tailrec def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b) 阶乘: def factorial(n: Int): Int = { @tailrec def iter(x: Int, result: Int): Int = if (x == 0) result else iter(x - 1, result * x) iter(n, 1) } @tailrec注解可以检测</description>
+    </item>
+    
+    <item>
+      <title>Markdown常用语法备忘</title>
+      <link>http://www.mingaccount.com/2019/01/markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2019/01/markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%A4%87%E5%BF%98/</guid>
+      <description>markdown语法大多数符号需要加一个空格和正式内容区分开才会生效 横线 -&amp;ndash; *** ___ 标题 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标</description>
+    </item>
+    
+    <item>
+      <title>删除视图失败，提示有其他视图依赖于该视图</title>
+      <link>http://www.mingaccount.com/2018/10/h2dropexception/</link>
+      <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/10/h2dropexception/</guid>
+      <description>问题背景 DROP VIEW temp_view; 报错信息： Can&#39;t drop temp_view,because *** depend on it 解决方案 DROP VIEW temp_view CASCADE ; 该sql会删除所有依赖的视图</description>
+    </item>
+    
+    <item>
+      <title>hive 执行sql时报错out of sequence</title>
+      <link>http://www.mingaccount.com/2018/09/hiveoutofsequence/</link>
+      <pubDate>Sun, 23 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/09/hiveoutofsequence/</guid>
+      <description>问题背景 错误日志： org.apache.thrift.TApplicationException: [?] : out of sequence response 问题原因 hive连接在连接池中，同时两个线程去获取并执行，两个都有close操作。 参考hive jira</description>
+    </item>
+    
+    <item>
+      <title>SpringBoot Mybatis配置多数据源</title>
+      <link>http://www.mingaccount.com/2018/09/springbootmybatis%E9%85%8D%E7%BD%AE%E5%A4%9A%E6%95%B0%E6%8D%AE%E6%BA%90/</link>
+      <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/09/springbootmybatis%E9%85%8D%E7%BD%AE%E5%A4%9A%E6%95%B0%E6%8D%AE%E6%BA%90/</guid>
+      <description>@Configuration @MapperScan(basePackages = MysqlDatasourceConfig.PACKAGE, sqlSessionFactoryRef = &amp;quot;mysqlSessionFactory&amp;quot;) public class MysqlDatasourceConfig { public static final String PACKAGE = &amp;quot;com.ming.mapper.mysql1&amp;quot;; public static final String MAPPER_LOCATION = &amp;quot;classpath:mapper/mysql1/*.xml&amp;quot;; @Primary @Bean(name = &amp;quot;mysqlDatasource&amp;quot;) @ConfigurationProperties(&amp;quot;spring.datasource.druid.mysql1&amp;quot;) public DataSource mysqlDataSource(){ return DruidDataSourceBuilder.create().build(); } @Bean(name = &amp;quot;mysqlTransactionManager&amp;quot;) @Primary public DataSourceTransactionManager mysqlTransactionManager() { return new DataSourceTransactionManager(mysqlDataSource()); } @Bean(name = &amp;quot;mysqlSessionFactory&amp;quot;) @Primary public SqlSessionFactory mysqlSessionFactory(@Qualifier(&amp;quot;mysqlDatasource&amp;quot;) DataSource dataSource) throws Exception { final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean(); sessionFactory.setDataSource(dataSource); sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MysqlDatasourceConfig.MAPPER_LOCATION)); return</description>
+    </item>
+    
+    <item>
+      <title>SpringBoot Ehcache集成</title>
+      <link>http://www.mingaccount.com/2018/09/springbootehcache%E9%9B%86%E6%88%90/</link>
+      <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/09/springbootehcache%E9%9B%86%E6%88%90/</guid>
+      <description>ehcache.xml &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;ehcache xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:noNamespaceSchemaLocation=&amp;quot;http://ehcache.org/ehcache.xsd&amp;quot;&amp;gt; &amp;lt;defaultCache maxElementsInMemory=&amp;quot;10000&amp;quot; eternal=&amp;quot;false&amp;quot; timeToIdleSeconds=&amp;quot;3600&amp;quot; timeToLiveSeconds=&amp;quot;0&amp;quot; overflowToDisk=&amp;quot;false&amp;quot; diskPersistent=&amp;quot;false&amp;quot; diskExpiryThreadIntervalSeconds=&amp;quot;120&amp;quot; /&amp;gt; &amp;lt;cache name=&amp;quot;myCache&amp;quot; maxEntriesLocalHeap=&amp;quot;2000&amp;quot; eternal=&amp;quot;false&amp;quot; timeToIdleSeconds=&amp;quot;3600&amp;quot; timeToLiveSeconds=&amp;quot;0&amp;quot; overflowToDisk=&amp;quot;false&amp;quot; statistics=&amp;quot;true&amp;quot;/&amp;gt; &amp;lt;/ehcache&amp;gt; 属性简介： name：缓存名称。 maxElementsInMemory：缓存最大数目 maxE</description>
+    </item>
+    
+    <item>
+      <title>SpringBoot Redis集成</title>
+      <link>http://www.mingaccount.com/2018/09/springbootredis%E9%9B%86%E6%88%90/</link>
+      <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/09/springbootredis%E9%9B%86%E6%88%90/</guid>
+      <description>application.yml spring: redis: database: 0 host: localhost prot: 6379 pool: max-active: 8 max-wait: -1 max-idle: 8 min-idle: 0 timeout: 0 更多配置参考Spring官网配置参数 RedisConfig @Configuration @EnableCaching public class RedisConfig extends CachingConfigurerSupport { @Bean @Override public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) { return RedisCacheManager.create(redisConnectionFactory); } }</description>
+    </item>
+    
+    <item>
+      <title>Spring缓存集成</title>
+      <link>http://www.mingaccount.com/2018/09/spring%E7%BC%93%E5%AD%98%E5%A4%84%E7%90%86/</link>
+      <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/09/spring%E7%BC%93%E5%AD%98%E5%A4%84%E7%90%86/</guid>
+      <description>1.了解缓存概念 缓存和缓冲(Cache vs Buffer) 缓存和缓冲一般来说都是交替使用的，需要知道的是他们是两个完全不同的东西。 buffer(缓冲)是用在</description>
+    </item>
+    
+    <item>
+      <title>大型网站架构演化概论</title>
+      <link>http://www.mingaccount.com/2018/09/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96%E6%A6%82%E8%AE%BA/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/09/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96%E6%A6%82%E8%AE%BA/</guid>
+      <description>1.大型网站的特点： 相比传统企业应用系统，大型互联网应用系统有以下特点： 高并发、大流量：需要面对高并发用户，大流量访问。 高可用：系统需要7*</description>
+    </item>
+    
+    <item>
+      <title>[译]Java8：循环与函数式编程</title>
+      <link>http://www.mingaccount.com/2018/08/%E8%AF%91java8%E5%BE%AA%E7%8E%AF%E4%B8%8E%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/08/%E8%AF%91java8%E5%BE%AA%E7%8E%AF%E4%B8%8E%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</guid>
+      <description>Java8函数式编程的加入彻底改变了游戏规则。对Java开发者来说这是一个全新的世界，我们也需要做出相应的改变。 在这篇文章中我们将找寻传统循</description>
+    </item>
+    
+    <item>
+      <title>[译]Java8的函数式接口</title>
+      <link>http://www.mingaccount.com/2018/08/%E8%AF%91java8%E7%9A%84%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/08/%E8%AF%91java8%E7%9A%84%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/</guid>
+      <description>Java8引入了 java.util.function 包，他包含了函数式接口，具体的描述在以下api说明文档中： 函数式接口为lambda表达式和方法引用提供目标类型。每个函数式</description>
+    </item>
+    
+    <item>
+      <title>Spring boot 文件路径读取异常</title>
+      <link>http://www.mingaccount.com/2018/08/springboot%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E8%AF%BB%E5%8F%96%E5%BC%82%E5%B8%B8/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/08/springboot%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E8%AF%BB%E5%8F%96%E5%BC%82%E5%B8%B8/</guid>
+      <description>在开发代码中，有一段需要获取resources目录下的一个配置文件（这里写作test.xml）。 这段代码在ide中没有任何问题，但是一打成j</description>
+    </item>
+    
+    <item>
+      <title>Linux常用命令备忘</title>
+      <link>http://www.mingaccount.com/2018/08/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/08/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</guid>
+      <description>文档查看和修改 cd - #查看上一次所在的目录 cat /etc/hosts #文档查看 ls #查看当前目录下所有文件 pwd #查看当前目录的绝对路径 ll #查看目录下文件的详细信息，包括</description>
+    </item>
+    
+    <item>
+      <title>vim命令备忘</title>
+      <link>http://www.mingaccount.com/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</guid>
+      <description>vi /etc/hosts i 修改模式 esc 退出修改 :q 正常退出(文件没有修改 :q! 不保存退出 :wq 保存退出 G 跳到末尾行 dd 删除当前行 gg 跳到第一行第一个字符 $ 跳到当前行的最后一个字</description>
+    </item>
+    
+    <item>
+      <title>SpringBoot定时任务</title>
+      <link>http://www.mingaccount.com/2018/08/springboot%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</link>
+      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/08/springboot%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</guid>
+      <description>开启定时任务 @Configuration @EnableScheduling @ComponentScan(basePackages=&amp;quot;com.myco.tasks&amp;quot;) public class AppConfig { } 如果需要对定时任务的生命周期有其他的操作，可以实现接口SchedulingConfigurer @Configuration @EnableScheduling public class AppConfig implements SchedulingConfigurer { @Override</description>
+    </item>
+    
+    <item>
+      <title>大浏览量系统的静态化架构设计</title>
+      <link>http://www.mingaccount.com/2018/08/%E5%A4%A7%E6%B5%8F%E8%A7%88%E9%87%8F%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9D%99%E6%80%81%E5%8C%96%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/08/%E5%A4%A7%E6%B5%8F%E8%A7%88%E9%87%8F%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9D%99%E6%80%81%E5%8C%96%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</guid>
+      <description>本篇文章着重整理什么是静态化系统架构，以及静态化架构的几种方案。 首先先贴一个淘宝系统升级的历程(09~13)： 09年，系统拆分，静态文件合并</description>
+    </item>
+    
+  </channel>
+</rss>

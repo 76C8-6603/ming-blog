@@ -182,12 +182,12 @@
     </item>
     
     <item>
-      <title>Request的Body只能读取一次解决方法</title>
-      <link>http://www.mingaccount.com/2018/03/request%E7%9A%84body%E5%8F%AA%E8%83%BD%E8%AF%BB%E5%8F%96%E4%B8%80%E6%AC%A1%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+      <title>Java合理避免空指针</title>
+      <link>http://www.mingaccount.com/2018/03/java%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E7%A9%BA%E6%8C%87%E9%92%88/</link>
+      <pubDate>Fri, 09 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/03/request%E7%9A%84body%E5%8F%AA%E8%83%BD%E8%AF%BB%E5%8F%96%E4%B8%80%E6%AC%A1%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
-      <description>一、需要一个类继承HttpServletRequestWrapper，该类继承了ServletRequestWrapper并实现了HttpS</description>
+      <guid>http://www.mingaccount.com/2018/03/java%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E7%A9%BA%E6%8C%87%E9%92%88/</guid>
+      <description>关于如何有效避免空指针，并减少空指针的重复申明。 参考stackoverflow的讨论</description>
     </item>
     
   </channel>
