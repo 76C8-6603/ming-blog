@@ -179,7 +179,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/java/" class="tag-list-link">java</a><span
-                    class="tag-list-count">34</span></li>
+                    class="tag-list-count">35</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/jooq/" class="tag-list-link">jooq</a><span
@@ -255,7 +255,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
-                    class="tag-list-count">21</span></li>
+                    class="tag-list-count">22</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
@@ -347,6 +347,78 @@
     
     
     
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/"
+    >通过request获取客户端IP</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        请求头枚举类 public enum HttpHeader { AUTHORIZATION(&quot;Authorization&quot;), AUTHENTICATION_TYPE_BASIC(&quot;Basic&quot;), X_AUTH_TOKEN(&quot;X-AUTH-TOKEN&quot;), WWW_Authenticate(&quot;WWW-Authenticate&quot;), X_FORWARDED_FOR(&quot;X-Forwarded-For&quot;), PROXY_CLIENT_IP(&quot;Proxy-Client-IP&quot;), WL_PROXY_CLIENT_IP(&quot;WL-Proxy-Client-IP&quot;), HTTP_CLIENT_IP(&quot;HTTP_CLIENT_IP&quot;), HTTP_X_FORWARDED_FOR(&quot;HTTP_X_FORWARDED_FOR&quot;); private String key; private HttpHeader(String key) { this.key = key; } public String key() { return this.key; } } 工具类 public class RemoteIpHelper { private static final String UNKNOWN = &quot;unknown&quot;; public static String getRemoteIpFrom(HttpServletRequest request) { String ip = null; int tryCount = 1; while (!isIpFound(ip) &amp;&amp; tryCount
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/" class="">
+  <time datetime="2017-08-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-08-05</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/java/"> java </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 151words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/"
+    >Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        usermod -d /var/lib/mysql/ mysql ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock chown -R mysql:mysql /var/lib/mysql
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/" class="">
+  <time datetime="2017-07-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-07-11</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/mysql/"> mysql </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 12words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
     <article
       class="article article-type-page"
       itemscope
@@ -526,79 +598,6 @@
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 115words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/05/javamethodfirstdefaultparam/"
-    >Java方法的默认参数</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        Java方法如何编译 int add12and13() { return addTwo(12, 13); } 将会编译为： Method int add12and13() 0 aload_0 // Push local variable 0 (this) 1 bipush 12 // Push int constant 12 3 bipush 13 // Push int constant 13 5 invokevirtual #4 // Method Example.addtwo(II)I 8 ireturn // Return int on top of operand stack; // it is the
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="http://www.mingaccount.com/2017/05/javamethodfirstdefaultparam/" class="">
-  <time datetime="2017-05-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-05-20</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/java/"> java </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/05/javamethodfirstdefaultparam/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 320words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/05/%E5%85%B3%E4%BA%8Emysql%E5%92%8Coracle%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F/"
-    >关于mysql和oracle的大小写敏感</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        表名 mysql 每一个表至少对应一个服务器文件，而且名字对应，因此表名的大小写敏感跟系统有关系，windows不区分，linux区分 oracle 所有不在双引号里
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="http://www.mingaccount.com/2017/05/%E5%85%B3%E4%BA%8Emysql%E5%92%8Coracle%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F/" class="">
-  <time datetime="2017-05-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-05-10</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/mysql/"> mysql </a>
-    <a class="article-tag-link" href="/tags/oracle/"> oracle </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/05/%E5%85%B3%E4%BA%8Emysql%E5%92%8Coracle%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 252words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
-      </p>
     </article></div>
   
 <nav class="bar bar-footer clearfix" data-stick-bottom>
@@ -616,7 +615,7 @@
       </li>
     </ul>
     <div class="total-article bar-right">
-      Page:15/17
+      Page:15/18
     </div>
   </div>
 </nav>
