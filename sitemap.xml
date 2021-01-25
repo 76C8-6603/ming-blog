@@ -920,6 +920,13 @@
   </url>
   
   <url>
+    <loc>http://www.mingaccount.com/2017/08/exceptionwithfrontendmsg/</loc>
+    <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mingaccount.com/2017/08/mysql%E8%A1%A8%E5%90%8D%E5%BF%BD%E7%95%A5%E5%A4%A7%E5%B0%8F%E5%86%99/</loc>
     <lastmod>2017-08-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1083,6 +1090,13 @@
   <url>
     <loc>http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/</loc>
     <lastmod>2016-04-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2016/03/annotation/</loc>
+    <lastmod>2016-03-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
