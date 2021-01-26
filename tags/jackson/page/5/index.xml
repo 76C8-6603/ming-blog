@@ -5,7 +5,7 @@
     <link>http://www.mingaccount.com/tags/jackson/</link>
     <description>Recent content in jackson on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 28 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Aug 2017 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://www.mingaccount.com/tags/jackson/index.xml" rel="self" type="application/rss+xml" />
     
@@ -173,21 +173,21 @@
     </item>
     
     <item>
+      <title>Jackson反序列化的时候忽略实体中不存在的元素</title>
+      <link>http://www.mingaccount.com/2017/08/jackson-deserialize-ignore-absence-element/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/08/jackson-deserialize-ignore-absence-element/</guid>
+      <description>objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);</description>
+    </item>
+    
+    <item>
       <title>Mysql表名忽略大小写</title>
       <link>http://www.mingaccount.com/2017/08/mysql%E8%A1%A8%E5%90%8D%E5%BF%BD%E7%95%A5%E5%A4%A7%E5%B0%8F%E5%86%99/</link>
       <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.mingaccount.com/2017/08/mysql%E8%A1%A8%E5%90%8D%E5%BF%BD%E7%95%A5%E5%A4%A7%E5%B0%8F%E5%86%99/</guid>
       <description>跟参数lower_case_table_names相关 执行语句，查询该参数值 SHOW VARIABLES LIKE ‘%case%’ lower_case_table_name</description>
-    </item>
-    
-    <item>
-      <title>通过request获取客户端IP</title>
-      <link>http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/</link>
-      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/</guid>
-      <description>请求头枚举类 public enum HttpHeader { AUTHORIZATION(&amp;quot;Authorization&amp;quot;), AUTHENTICATION_TYPE_BASIC(&amp;quot;Basic&amp;quot;), X_AUTH_TOKEN(&amp;quot;X-AUTH-TOKEN&amp;quot;), WWW_Authenticate(&amp;quot;WWW-Authenticate&amp;quot;), X_FORWARDED_FOR(&amp;quot;X-Forwarded-For&amp;quot;), PROXY_CLIENT_IP(&amp;quot;Proxy-Client-IP&amp;quot;), WL_PROXY_CLIENT_IP(&amp;quot;WL-Proxy-Client-IP&amp;quot;), HTTP_CLIENT_IP(&amp;quot;HTTP_CLIENT_IP&amp;quot;), HTTP_X_FORWARDED_FOR(&amp;quot;HTTP_X_FORWARDED_FOR&amp;quot;); private String key; private HttpHeader(String key) { this.key = key; } public String key() { return this.key; } } 工具类 public class RemoteIpHelper { private static final String UNKNOWN = &amp;quot;unknown&amp;quot;; public static String getRemoteIpFrom(HttpServletRequest request) { String ip = null; int tryCount = 1; while (!isIpFound(ip) &amp;amp;&amp;amp; tryCount</description>
     </item>
     
   </channel>

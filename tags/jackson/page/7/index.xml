@@ -5,10 +5,55 @@
     <link>http://www.mingaccount.com/tags/jackson/</link>
     <description>Recent content in jackson on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 28 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Aug 2017 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://www.mingaccount.com/tags/jackson/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mysql Like语句匹配下划线时无法得到正确数据</title>
+      <link>http://www.mingaccount.com/2016/05/mysqllikeunderline/</link>
+      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/05/mysqllikeunderline/</guid>
+      <description>示例sql SELECT * FROM table WHERE field LIKE &#39;%_%&#39; 目的是获取中间有下划线的field，但是这样的sql无法获取到期望的结果 问题原因 like语句中除了百分号是通配符，</description>
+    </item>
+    
+    <item>
+      <title>所有HTTP头字段(header fields)</title>
+      <link>http://www.mingaccount.com/2016/05/http-heards/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/05/http-heards/</guid>
+      <description>wiki List of HTTP header fields</description>
+    </item>
+    
+    <item>
+      <title>所有HTTP状态码(status code)</title>
+      <link>http://www.mingaccount.com/2016/05/status-code/</link>
+      <pubDate>Sun, 08 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/05/status-code/</guid>
+      <description>常见状态码 所有状态码iana all HTTP status code 常用状态码及说明wiki List of HTTP status code 状态码 状态码英文名称 中文描述 100 Continue 继续。客户端应继续其请求 101 Switching Protocols 切换协议</description>
+    </item>
+    
+    <item>
+      <title>所有Content-type(content type)</title>
+      <link>http://www.mingaccount.com/2016/05/content-type/</link>
+      <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/05/content-type/</guid>
+      <description>所有的Content-type 完整列表iana media type 常用的Content-type 常用列表及说明runoob content type ** application application/java-archive application/EDI-X12 application/EDIFACT application/javascript application/octet-stream application/ogg application/pdf application/xhtml+xml application/x-shockwave-flash application/json application/ld+json application/xml application/zip</description>
+    </item>
+    
+    <item>
+      <title>Java注释引用类和其成员</title>
+      <link>http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/</link>
+      <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/</guid>
+      <description>注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类</description>
+    </item>
     
     <item>
       <title>Java注解说明</title>

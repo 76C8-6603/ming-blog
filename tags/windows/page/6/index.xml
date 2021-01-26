@@ -11,12 +11,30 @@
     
     
     <item>
+      <title>通过request获取客户端IP</title>
+      <link>http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/</link>
+      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/</guid>
+      <description>请求头枚举类 public enum HttpHeader { AUTHORIZATION(&amp;quot;Authorization&amp;quot;), AUTHENTICATION_TYPE_BASIC(&amp;quot;Basic&amp;quot;), X_AUTH_TOKEN(&amp;quot;X-AUTH-TOKEN&amp;quot;), WWW_Authenticate(&amp;quot;WWW-Authenticate&amp;quot;), X_FORWARDED_FOR(&amp;quot;X-Forwarded-For&amp;quot;), PROXY_CLIENT_IP(&amp;quot;Proxy-Client-IP&amp;quot;), WL_PROXY_CLIENT_IP(&amp;quot;WL-Proxy-Client-IP&amp;quot;), HTTP_CLIENT_IP(&amp;quot;HTTP_CLIENT_IP&amp;quot;), HTTP_X_FORWARDED_FOR(&amp;quot;HTTP_X_FORWARDED_FOR&amp;quot;); private String key; private HttpHeader(String key) { this.key = key; } public String key() { return this.key; } } 工具类 public class RemoteIpHelper { private static final String UNKNOWN = &amp;quot;unknown&amp;quot;; public static String getRemoteIpFrom(HttpServletRequest request) { String ip = null; int tryCount = 1; while (!isIpFound(ip) &amp;amp;&amp;amp; tryCount</description>
+    </item>
+    
+    <item>
       <title>Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied</title>
       <link>http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</link>
       <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</guid>
       <description>usermod -d /var/lib/mysql/ mysql ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock chown -R mysql:mysql /var/lib/mysql</description>
+    </item>
+    
+    <item>
+      <title>阻止Gson将long类型的字段转为科学计数法</title>
+      <link>http://www.mingaccount.com/2017/06/gson-scientific-notation/</link>
+      <pubDate>Thu, 08 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/06/gson-scientific-notation/</guid>
+      <description>GsonBuilder gsonBuilder = new GsonBuilder(); gsonBuilder.setLongSerializationPolicy( LongSerializationPolicy.STRING ); Gson gson = gsonBuilder.create();</description>
     </item>
     
     <item>
@@ -170,24 +188,6 @@
       
       <guid>http://www.mingaccount.com/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
       <description>org.junit.Assert assertEquals 判断对象是否相等，equals方法判断 assertSame 判断对象是否相等，==判断 assertTrue 判断条件是否为真 assertFalse 判断条件是否为假 assertNotNull 判断对象是否不为null assertArrayEquals 判断数</description>
-    </item>
-    
-    <item>
-      <title>Mysql Like语句匹配下划线时无法得到正确数据</title>
-      <link>http://www.mingaccount.com/2016/05/mysqllikeunderline/</link>
-      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/05/mysqllikeunderline/</guid>
-      <description>示例sql SELECT * FROM table WHERE field LIKE &#39;%_%&#39; 目的是获取中间有下划线的field，但是这样的sql无法获取到期望的结果 问题原因 like语句中除了百分号是通配符，</description>
-    </item>
-    
-    <item>
-      <title>Java注释引用类和其成员</title>
-      <link>http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/</link>
-      <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/</guid>
-      <description>注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类</description>
     </item>
     
   </channel>
