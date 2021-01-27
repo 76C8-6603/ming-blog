@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>
-        Ming Blog</title>
+        java7特性try-with-resources - Ming Blog
+      </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -19,26 +20,33 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    
+    <meta name="description" content="概览 try-with-resources表达式可以自动关闭申明在表达式中的资源，但前提是这些资源类要实现java.lang.AutoClos" />
     <meta name="generator" content="Hugo 0.74.3 with theme pure" />
-    <title>Ming Blog</title>
+    <title>java7特性try-with-resources - Ming Blog</title>
     
-    <link rel="alternate" type="application/rss+xml" href="http://www.mingaccount.com/tags/druid/index.xml" title="Ming Blog" />
     
     <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="druid" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://www.mingaccount.com/tags/druid/" />
-<meta property="og:updated_time" content="2020-06-16T15:38:20+08:00" />
-<meta itemprop="name" content="druid">
-<meta itemprop="description" content="">
+    <meta property="og:title" content="java7特性try-with-resources" />
+<meta property="og:description" content="概览 try-with-resources表达式可以自动关闭申明在表达式中的资源，但前提是这些资源类要实现java.lang.AutoClos" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.mingaccount.com/2016/08/try-with-resources/" />
+<meta property="article:published_time" content="2016-08-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-08-09T00:00:00+00:00" />
+<meta itemprop="name" content="java7特性try-with-resources">
+<meta itemprop="description" content="概览 try-with-resources表达式可以自动关闭申明在表达式中的资源，但前提是这些资源类要实现java.lang.AutoClos">
+<meta itemprop="datePublished" content="2016-08-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-08-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1364">
+
+
+
+<meta itemprop="keywords" content="java," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="druid"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="java7特性try-with-resources"/>
+<meta name="twitter:description" content="概览 try-with-resources表达式可以自动关闭申明在表达式中的资源，但前提是这些资源类要实现java.lang.AutoClos"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -344,70 +352,197 @@
 
     
     
-<main class="main" role="main">
-    <article class="content article article-tags post-type-list" itemscope="">
-        <header class="article-header">
-            <h1 itemprop="name" class="hidden-xs">druid</h1>
-            <p class="text-muted hidden-xs">Total 34 tags</p>
-            <nav role="navigation" id="nav-main" class="okayNav">
-                <ul>
-                    <li><a href="http://www.mingaccount.com/tags">All</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/db2/">db2</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/design-pattern/">design pattern</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/druid/">druid</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/ehcache/">ehcache</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/git/">git</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/h2/">h2</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/hadoop/">hadoop</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/hive/">hive</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/jackson/">jackson</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/java/">java</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/jooq/">jooq</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/junit4/">junit4</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/junit5/">junit5</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/linux/">linux</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/lombok/">lombok</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/markdown/">markdown</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/maven/">maven</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/mockmvc/">mockmvc</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/mybatis/">mybatis</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/mysql/">mysql</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/npm/">npm</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/oracle/">oracle</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/postgresql/">postgresql</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/protocol/">protocol</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/python/">python</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/redis/">redis</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/regexp/">regexp</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/scala/">scala</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/spark/">spark</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/spring/">spring</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/testng/">testng</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/unit-test/">unit-test</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/website-build/">website build</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/windows/">windows</a></li>
-                </ul>
-            </nav>
-        </header>
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2016/08/try-with-resources/"
+    >java7特性try-with-resources</a
+  >
+</h1>
+
+      <div class="article-meta">
         
-        <div class="article-body">
-            <div class="col-md-6"><article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-    <div class="panel-body">
-        <div class="article-meta">
-            <time datetime="2020-06-16 15:38:20 &#43;0800 CST"
-                itemprop="datePublished">2020-06-16</time>
-        </div>
-        <h3 class="article-title" itemprop="name">
-            <a class="article-link" href="http://www.mingaccount.com/2020/06/druid%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E6%97%A0%E9%99%90%E5%B0%9D%E8%AF%95%E9%97%AE%E9%A2%98/">Druid数据库连接失败，无限尝试问题</a>
-        </h3>
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="http://www.mingaccount.com/2016/08/try-with-resources/" class="article-date">
+  <time datetime="2016-08-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-08-09</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/java/"> java </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2016/08/try-with-resources/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1364words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3minutes </span>
+      </div>
     </div>
-    <div class="panel-footer">
-        <a href="http://www.mingaccount.com/tags/druid" class="label label-default mb">druid</a>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h1 id="概览">概览</h1>
+<p>try-with-resources表达式可以自动关闭申明在表达式中的资源，但前提是这些资源类要实现<code>java.lang.AutoCloseable</code>或者<code>java.io.Closeable</code>。</p>
+<p>下面的例子使用<code>BufferedReader</code>的实例读取了文件的第一行：</p>
+<pre><code class="language-java">static String readFirstLineFromFile(String path)throws IOException{
+    try(BufferedReader br=
+            new BufferedReader(new FileReader(path))){
+        return br.readLine();
+    }
+}
+</code></pre>
+<p>因为<code>BufferedReader</code>在try-with-resources表达式中，并且他实现了<code>AutoCloseable</code>，意味着不管程序运行结果如何，他都会自动关闭。</p>
+<p>但在java7之前，你只有通过finally来完成资源的关闭：</p>
+<pre><code class="language-java">static String readFirstLineFromFileWithFinallyBlock(String path)
+                                                     throws IOException {
+    BufferedReader br = new BufferedReader(new FileReader(path));
+    try {
+        return br.readLine();
+    } finally {
+        if (br != null) br.close();
+    }
+}
+</code></pre>
+<p>虽然能够达到try-with-resources表达式同样的目的，但是如果try的代码块和finally都同时抛出异常，那么finally的异常就会覆盖掉try的异常。<br>
+但在之前的<code>readFirstLineFromFile</code>方法例子中，使用try-with-resources表达式时，如果try-with-resources表达式和try的代码块同时抛出异常，最终抛出的会是try代码块的。</p>
+<p>你有可能同时在try-with-resources表达式中申明多个资源，下面就是一个例子，他解析zip包中的所有文件名，并将他们写入到一个文件中。</p>
+<pre><code class="language-java">public static void writeToFileZipFileContents(String zipFileName,
+                                           String outputFileName)
+                                           throws java.io.IOException {
+
+    java.nio.charset.Charset charset =
+         java.nio.charset.StandardCharsets.US_ASCII;
+    java.nio.file.Path outputFilePath =
+         java.nio.file.Paths.get(outputFileName);
+
+    // Open zip file and create output file with 
+    // try-with-resources statement
+
+    try (
+        java.util.zip.ZipFile zf =
+             new java.util.zip.ZipFile(zipFileName);
+        java.io.BufferedWriter writer = 
+            java.nio.file.Files.newBufferedWriter(outputFilePath, charset)
+    ) {
+        // Enumerate each entry
+        for (java.util.Enumeration entries =
+                                zf.entries(); entries.hasMoreElements();) {
+            // Get the entry name and write it to the output file
+            String newLine = System.getProperty(&quot;line.separator&quot;);
+            String zipEntryName =
+                 ((java.util.zip.ZipEntry)entries.nextElement()).getName() +
+                 newLine;
+            writer.write(zipEntryName, 0, zipEntryName.length());
+        }
+    }
+}
+</code></pre>
+<p>在这个例子中，同时申明了两个资源<code>ZipFile</code>和<code>BufferedWriter</code>，他们通过分号分隔。一旦代码块执行完毕，他们会按照<code>BufferedWriter</code>，<code>ZipFile</code>的顺序进行关闭。注意，资源创建的顺序和他们被关闭的顺序是相反的。</p>
+<p>下面的例子使用try-with-resources去关闭一个<code>java.sql.Statement</code>资源：</p>
+<pre><code class="language-java">public static void viewTable(Connection con) throws SQLException {
+
+    String query = &quot;select COF_NAME, SUP_ID, PRICE, SALES, TOTAL from COFFEES&quot;;
+
+    try (Statement stmt = con.createStatement()) {
+        ResultSet rs = stmt.executeQuery(query);
+
+        while (rs.next()) {
+            String coffeeName = rs.getString(&quot;COF_NAME&quot;);
+            int supplierID = rs.getInt(&quot;SUP_ID&quot;); 
+            float price = rs.getFloat(&quot;PRICE&quot;);
+            int sales = rs.getInt(&quot;SALES&quot;);
+            int total = rs.getInt(&quot;TOTAL&quot;);
+
+            System.out.println(coffeeName + &quot;, &quot; + supplierID + &quot;, &quot; + 
+                               price + &quot;, &quot; + sales + &quot;, &quot; + total);
+        }
+    } catch (SQLException e) {
+        JDBCTutorialUtilities.printSQLException(e);
+    }
+}
+</code></pre>
+<p>注意： try-with-resources表达式也能像一般try表达式一样申明catch和finally，只不过他们都会在try-with-resources资源关闭之后才会进行</p>
+<h1 id="被压制的异常">被压制的异常</h1>
+<p>在方法<code>writeToFileZipFileContents</code>中，try-with-resources表达式申明了两个资源，在尝试关闭这两个资源的时候可能会抛出两个异常。但如果try的代码块本身也有异常抛出，那么try-with-resources表达式产生的异常就会被压制，想查看这些被压制的异常，可以通过代码块异常的<code>throwable.getSuppressed</code>方法来获取。</p>
+<h1 id="实现closeable和autocloseable的类">实现<code>Closeable</code>和<code>AutoCloseable</code>的类</h1>
+<p>参考<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html">AutoCloseable</a> 和<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html">Closeable</a>  分别查看他们的实现类。<code>Closeable</code>继承了<code>AutoCloseable</code>。当<code>Closeable</code>中的<code>close</code>方法出错时抛出的是<code>IOException</code>，但是<code>AutoCloseable</code>的<code>close</code>方法抛出的却是<code>Exception</code>。因此<code>AutoCloseable</code>的实现可以根据具体情况调整抛出的异常。</p>
+
     </div>
-</article>
-            </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="http://www.mingaccount.com/2016/08/try-with-resources/" title="java7特性try-with-resources" target="_blank" rel="external">http://www.mingaccount.com/2016/08/try-with-resources/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="http://www.mingaccount.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="" target="_blank"><span class="text-dark">Ming</span><small class="ml-1x">tianshiming5@outlook.com</small></a></h3>
+        <div>Finally</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="http://www.mingaccount.com/2016/07/mysqlwhere%E6%AF%94%E5%AF%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E7%9A%84%E9%97%AE%E9%A2%98/" title="Mysql Where条件判断 字符串和数字 是否相等时存在的问题"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="http://www.mingaccount.com/2017/01/springboot%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%B9%B6%E6%98%A0%E5%B0%84%E5%88%B0%E6%8C%87%E5%AE%9A%E7%B1%BB%E4%B8%AD/"
+                    title="Spring自定义配置文件并映射到指定类中"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
         </div>
-    </article>
+    </div>
+</nav>
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="http://www.mingaccount.com/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
@@ -477,6 +612,7 @@
         hasInnerContainers: true,
     });
 </script>
+
 
   </body>
 </html>

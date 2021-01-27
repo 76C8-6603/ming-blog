@@ -154,6 +154,15 @@
     </item>
     
     <item>
+      <title>java7特性try-with-resources</title>
+      <link>http://www.mingaccount.com/2016/08/try-with-resources/</link>
+      <pubDate>Tue, 09 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/08/try-with-resources/</guid>
+      <description>概览 try-with-resources表达式可以自动关闭申明在表达式中的资源，但前提是这些资源类要实现java.lang.AutoClos</description>
+    </item>
+    
+    <item>
       <title>Mysql Where条件判断 字符串和数字 是否相等时存在的问题</title>
       <link>http://www.mingaccount.com/2016/07/mysqlwhere%E6%AF%94%E5%AF%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E7%9A%84%E9%97%AE%E9%A2%98/</link>
       <pubDate>Fri, 08 Jul 2016 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>http://www.mingaccount.com/2016/05/mybatis%E8%8E%B7%E5%8F%96%E8%87%AA%E5%A2%9Eid/</guid>
       <description>示例代码 public void insert(User user){ mapper.insert(user); String id = user.getId(); } id会赋值到传进来的user对象中 xml &amp;lt;insert keyProperty=&amp;quot;id&amp;quot; keyColumn=&amp;quot;id&amp;quot; useGeneratedKeys=&amp;quot;true&amp;quot;&amp;gt; INSERT INTO ... &amp;lt;/insert&amp;gt; keyProperty代表实体类中主键对应的成员变量名称 ke</description>
-    </item>
-    
-    <item>
-      <title>Assert常用方法</title>
-      <link>http://www.mingaccount.com/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
-      <description>org.junit.Assert assertEquals 判断对象是否相等，equals方法判断 assertSame 判断对象是否相等，==判断 assertTrue 判断条件是否为真 assertFalse 判断条件是否为假 assertNotNull 判断对象是否不为null assertArrayEquals 判断数</description>
     </item>
     
   </channel>

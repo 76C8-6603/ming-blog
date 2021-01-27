@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Assert常用方法</title>
+      <link>http://www.mingaccount.com/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/05/assert%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>org.junit.Assert assertEquals 判断对象是否相等，equals方法判断 assertSame 判断对象是否相等，==判断 assertTrue 判断条件是否为真 assertFalse 判断条件是否为假 assertNotNull 判断对象是否不为null assertArrayEquals 判断数</description>
+    </item>
+    
+    <item>
       <title>Mysql Like语句匹配下划线时无法得到正确数据</title>
       <link>http://www.mingaccount.com/2016/05/mysqllikeunderline/</link>
       <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
