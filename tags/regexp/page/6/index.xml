@@ -11,15 +11,6 @@
     
     
     <item>
-      <title>通过request获取客户端IP</title>
-      <link>http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/</link>
-      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/</guid>
-      <description>请求头枚举类 public enum HttpHeader { AUTHORIZATION(&amp;quot;Authorization&amp;quot;), AUTHENTICATION_TYPE_BASIC(&amp;quot;Basic&amp;quot;), X_AUTH_TOKEN(&amp;quot;X-AUTH-TOKEN&amp;quot;), WWW_Authenticate(&amp;quot;WWW-Authenticate&amp;quot;), X_FORWARDED_FOR(&amp;quot;X-Forwarded-For&amp;quot;), PROXY_CLIENT_IP(&amp;quot;Proxy-Client-IP&amp;quot;), WL_PROXY_CLIENT_IP(&amp;quot;WL-Proxy-Client-IP&amp;quot;), HTTP_CLIENT_IP(&amp;quot;HTTP_CLIENT_IP&amp;quot;), HTTP_X_FORWARDED_FOR(&amp;quot;HTTP_X_FORWARDED_FOR&amp;quot;); private String key; private HttpHeader(String key) { this.key = key; } public String key() { return this.key; } } 工具类 public class RemoteIpHelper { private static final String UNKNOWN = &amp;quot;unknown&amp;quot;; public static String getRemoteIpFrom(HttpServletRequest request) { String ip = null; int tryCount = 1; while (!isIpFound(ip) &amp;amp;&amp;amp; tryCount</description>
-    </item>
-    
-    <item>
       <title>Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied</title>
       <link>http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</link>
       <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
@@ -188,6 +179,15 @@
       
       <guid>http://www.mingaccount.com/2016/06/%E5%AE%9E%E4%BD%93%E7%B1%BBbuild/</guid>
       <description>现在可以通过lombok注解@Builder一步实现 1.调用效果 public class Test{ public static void main(String[] args){ Student student = Student.builder().name(&amp;quo</description>
+    </item>
+    
+    <item>
+      <title>Mybatis insert完成后获取自增主键</title>
+      <link>http://www.mingaccount.com/2016/05/mybatis%E8%8E%B7%E5%8F%96%E8%87%AA%E5%A2%9Eid/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/05/mybatis%E8%8E%B7%E5%8F%96%E8%87%AA%E5%A2%9Eid/</guid>
+      <description>示例代码 public void insert(User user){ mapper.insert(user); String id = user.getId(); } id会赋值到传进来的user对象中 xml &amp;lt;insert keyProperty=&amp;quot;id&amp;quot; keyColumn=&amp;quot;id&amp;quot; useGeneratedKeys=&amp;quot;true&amp;quot;&amp;gt; INSERT INTO ... &amp;lt;/insert&amp;gt; keyProperty代表实体类中主键对应的成员变量名称 ke</description>
     </item>
     
   </channel>

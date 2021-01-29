@@ -179,7 +179,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/java/" class="tag-list-link">java</a><span
-                    class="tag-list-count">39</span></li>
+                    class="tag-list-count">38</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/jooq/" class="tag-list-link">jooq</a><span
@@ -259,7 +259,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
-                    class="tag-list-count">23</span></li>
+                    class="tag-list-count">22</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
@@ -540,43 +540,6 @@
         <h1 itemprop="name">
   <a
     class="article-title"
-    href="/2018/03/%E7%BB%9F%E4%B8%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E5%A4%84%E7%90%86/"
-    >统一异常处理和返回结果处理</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        1. 问题背景 @RestController public class TestController{ @Autowired private UserService userService; @GetMapping(&quot;/user/all&quot;) public ResultEntity getAllUser(){ try{ ResultEntity resultEntity = new ResultEntity(); List&lt;User&gt; users = userService.getAll(); resultEntity.setCode(200); resultEntity.setMessage(&quot;success&quot;); resultEntity.setData(users); return resultEntity; }catch(UserException e){ ResultEntity resultEntity = new ResultEntity(); resultEntity.setCode(666); resultEntity.setMessage(e.getMessage()); return resultEntity; }catch (Exception e){ ResultEntity resultEntity = new ResultEntity(); resultEntity.setCode(888); resultEntity.setMe
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="http://www.mingaccount.com/2018/03/%E7%BB%9F%E4%B8%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E5%A4%84%E7%90%86/" class="">
-  <time datetime="2018-03-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-03-05</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/spring/"> spring </a>
-    <a class="article-tag-link" href="/tags/java/"> java </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2018/03/%E7%BB%9F%E4%B8%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E5%A4%84%E7%90%86/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1342words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
     href="/2018/01/python-method-define/"
     >Python方法定义</a
   >
@@ -601,6 +564,42 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2018/01/python-method-define/#comments" class="article-comment-link">Comments</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 274words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2018/01/%E5%85%A8%E5%B1%80%E8%8E%B7%E5%8F%96request/"
+    >全局获取request</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        交于Spring管理的类，通过注解调用 @Component public class Test{ @Autowired private HttpServletRequest httpServletRequest; } 通过静态方法调用 HttpServletRequest httpServletRequest = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="http://www.mingaccount.com/2018/01/%E5%85%A8%E5%B1%80%E8%8E%B7%E5%8F%96request/" class="">
+  <time datetime="2018-01-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-01-09</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/java/"> java </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2018/01/%E5%85%A8%E5%B1%80%E8%8E%B7%E5%8F%96request/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 40words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </p>
     </article></div>
