@@ -1025,6 +1025,13 @@
   </url>
   
   <url>
+    <loc>http://www.mingaccount.com/2017/05/mysql-compare-sensitive/</loc>
+    <lastmod>2017-05-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mingaccount.com/2017/05/springboot%E5%85%A5%E5%8F%A3%E7%B1%BB%E7%9A%84%E6%B3%A8%E8%A7%A3/</loc>
     <lastmod>2017-05-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1139,6 +1146,13 @@
   <url>
     <loc>http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/</loc>
     <lastmod>2016-04-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2016/03/mysql-modify-and-change/</loc>
+    <lastmod>2016-03-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

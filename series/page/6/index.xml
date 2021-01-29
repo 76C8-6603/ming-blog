@@ -100,6 +100,15 @@
     </item>
     
     <item>
+      <title>Mysql条件对比大小写敏感</title>
+      <link>http://www.mingaccount.com/2017/05/mysql-compare-sensitive/</link>
+      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/05/mysql-compare-sensitive/</guid>
+      <description>默认情况下mysql的对比条件是大小写不敏感的（latin1_general_ci)，所有不敏感的collate都以_ci结尾。 要让对比条件</description>
+    </item>
+    
+    <item>
       <title>SpringBoot入口类常用注解</title>
       <link>http://www.mingaccount.com/2017/05/springboot%E5%85%A5%E5%8F%A3%E7%B1%BB%E7%9A%84%E6%B3%A8%E8%A7%A3/</link>
       <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>http://www.mingaccount.com/2016/06/%E5%AE%9E%E4%BD%93%E7%B1%BBbuild/</guid>
       <description>现在可以通过lombok注解@Builder一步实现 1.调用效果 public class Test{ public static void main(String[] args){ Student student = Student.builder().name(&amp;quo</description>
-    </item>
-    
-    <item>
-      <title>Mybatis insert完成后获取自增主键</title>
-      <link>http://www.mingaccount.com/2016/05/mybatis%E8%8E%B7%E5%8F%96%E8%87%AA%E5%A2%9Eid/</link>
-      <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/05/mybatis%E8%8E%B7%E5%8F%96%E8%87%AA%E5%A2%9Eid/</guid>
-      <description>示例代码 public void insert(User user){ mapper.insert(user); String id = user.getId(); } id会赋值到传进来的user对象中 xml &amp;lt;insert keyProperty=&amp;quot;id&amp;quot; keyColumn=&amp;quot;id&amp;quot; useGeneratedKeys=&amp;quot;true&amp;quot;&amp;gt; INSERT INTO ... &amp;lt;/insert&amp;gt; keyProperty代表实体类中主键对应的成员变量名称 ke</description>
     </item>
     
   </channel>
