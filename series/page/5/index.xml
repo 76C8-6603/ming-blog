@@ -163,12 +163,12 @@
     </item>
     
     <item>
-      <title>业务异常Exception包装</title>
-      <link>http://www.mingaccount.com/2017/08/exceptionwithfrontendmsg/</link>
+      <title>统一结果处理和业务异常包装</title>
+      <link>http://www.mingaccount.com/2017/08/exceptionandresulthandler/</link>
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/08/exceptionwithfrontendmsg/</guid>
-      <description>包装工后的Exception public class TestController{ public ResultEntity test(String arg) { if(StringUtils.isEmpty(arg)){ throw new TestException(&amp;quot;参数arg不能为空&amp;quot;); } } } 统一Exc</description>
+      <guid>http://www.mingaccount.com/2017/08/exceptionandresulthandler/</guid>
+      <description>完全处理后的controller @RestController public class TestController{ @GetMapping @UnknownExceptionHandler(msg = &amp;quot;test1 exception&amp;quot;, baseException = TestException.class) public String test(String arg) { if(StringUtils.isEmpty(arg)){ throw new TestException(&amp;quot;参数arg不能为空&amp;quot</description>
     </item>
     
     <item>

@@ -39,7 +39,7 @@
 <meta itemprop="description" content="1. 问题背景 @RestController public class TestController{ @Autowired private UserService userService; @GetMapping(&quot;/user/all&quot;) public ResultEntity getAllUser(){ try{ ResultEntity resultEntity = new ResultEntity(); List&lt;User&gt; users = userService.getAll(); resultEntity.setCode(200); resultEntity.setMessage(&quot;success&quot;); resultEntity.setData(users); return resultEntity; }catch(UserException e){ ResultEntity resultEntity = new ResultEntity(); resultEntity.setCode(666); resultEntity.setMessage(e.getMessage()); return resultEntity; }catch (Exception e){ ResultEntity resultEntity = new ResultEntity(); resultEntity.setCode(888); resultEntity.setMe">
 <meta itemprop="datePublished" content="2018-03-05T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2018-03-05T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1340">
+<meta itemprop="wordCount" content="1342">
 
 
 
@@ -267,7 +267,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
-                    class="tag-list-count">22</span></li>
+                    class="tag-list-count">23</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
@@ -390,7 +390,7 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2018/03/%E7%BB%9F%E4%B8%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E5%A4%84%E7%90%86/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1340words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1342words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3minutes </span>
       </div>
     </div>
@@ -644,13 +644,15 @@ public class TestController{
 <pre><code class="language-java">@Slf4j
 @RestControllerAdvice
 public  class ResponseResultBodyAdvice implements ResponseBodyAdvice&lt;Object&gt; {
-    //要包装返回值的目标方法，目前设定是被@ResponseBody注解修饰的方法(也就是所有controller类的方法)。
-    //如果只想局部调整，不想影响全局controller，可以自定义一个注解
-    private static final Class&lt;? extends Annotation&gt; ANNOTATION_TYPE = ResponseBody.class;
+    /**
+     * 要包装返回值的目标方法，目前设定是被@RequestMapping注解修饰的方法(也就是所有controller类的方法)。
+     * 如果只想局部调整，不想影响全局controller，可以自定义一个注解
+     */
+    private static final Class&lt;? extends Annotation&gt; ANNOTATION_TYPE = RequestMapping.class;
 
     @Override
-    public boolean supports(MethodParameter returnType, Class&lt;? extends HttpMessageConverter&lt;?&gt;&gt; converterType) {
-        return AnnotatedElementUtils.hasAnnotation(returnType.getContainingClass(),ANNOTATION_TYPE);
+    public boolean supports(MethodParameter methodParameter, Class&lt;? extends HttpMessageConverter&lt;?&gt;&gt; converterType) {
+        return AnnotatedElementUtils.hasMetaAnnotationTypes(methodParameter.getMethod(),ANNOTATION_TYPE);
     }
 
     @Override
