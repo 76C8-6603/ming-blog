@@ -47,6 +47,7 @@ public class TestController{
 
 ```java
 @RestControllerAdvice
+@Slf4j
 public class CustomResponseBodyAdvice implements ResponseBodyAdvice<Object> {
     
     private static final Class<? extends Annotation> ANNOTATION_TYPE = RequestMapping.class;
@@ -84,6 +85,7 @@ public class CustomResponseBodyAdvice implements ResponseBodyAdvice<Object> {
      */
     @ExceptionHandler(value = BaseException.class)
     public ResultEntity baseExceptionHandler(BaseException baseException) {
+        log.error(baseException.getMessage(), baseException);
         return baseException.getResultEntity();
     }
 
@@ -94,6 +96,7 @@ public class CustomResponseBodyAdvice implements ResponseBodyAdvice<Object> {
      */
     @ExceptionHandler(value = Exception.class)
     public ResultEntity unknownExceptionHandler(Exception e) {
+        log.error(e.getMessage(), e);
         return new BaseException() {
             @Override
             protected ResponseInfoEnum getInfoEnum() {
