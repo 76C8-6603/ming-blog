@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>
-        Ming Blog</title>
+        常用正则表达式 - Ming Blog
+      </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -19,26 +20,33 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    
+    <meta name="description" content="纯数字 /^\d&#43;$/ 小数 /^\d*\.\d&#43;$/ 整数或者小数 /^\d*(\.\d&#43;)?$/ 正负整数或者小数 /^-?\d*(\.\d&#43;)?$/ 整数小数或者分数 /[-]?[0-9]&#43;[,.]?[0-9]*([\/][0-9]&#43;[,.]?[0-9]*)*/ 数字字母 /^[a-zA-Z0-9]*$/ 单词 /^[a-zA-Z \-]*$/ MM/DD/YYYY 1900-2099 兼容的分隔符：空格 - / . /^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$/ YYYY/MM/DD 1900-2099 兼容的分隔符：空格 -" />
     <meta name="generator" content="Hugo 0.74.3 with theme pure" />
-    <title>Ming Blog</title>
+    <title>常用正则表达式 - Ming Blog</title>
     
-    <link rel="alternate" type="application/rss+xml" href="http://www.mingaccount.com/tags/ehcache/index.xml" title="Ming Blog" />
     
     <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="ehcache" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://www.mingaccount.com/tags/ehcache/" />
-<meta property="og:updated_time" content="2018-09-05T00:00:00+00:00" />
-<meta itemprop="name" content="ehcache">
-<meta itemprop="description" content="">
+    <meta property="og:title" content="常用正则表达式" />
+<meta property="og:description" content="纯数字 /^\d&#43;$/ 小数 /^\d*\.\d&#43;$/ 整数或者小数 /^\d*(\.\d&#43;)?$/ 正负整数或者小数 /^-?\d*(\.\d&#43;)?$/ 整数小数或者分数 /[-]?[0-9]&#43;[,.]?[0-9]*([\/][0-9]&#43;[,.]?[0-9]*)*/ 数字字母 /^[a-zA-Z0-9]*$/ 单词 /^[a-zA-Z \-]*$/ MM/DD/YYYY 1900-2099 兼容的分隔符：空格 - / . /^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$/ YYYY/MM/DD 1900-2099 兼容的分隔符：空格 -" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.mingaccount.com/2017/09/common-regexp/" />
+<meta property="article:published_time" content="2017-09-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-09-21T00:00:00+00:00" />
+<meta itemprop="name" content="常用正则表达式">
+<meta itemprop="description" content="纯数字 /^\d&#43;$/ 小数 /^\d*\.\d&#43;$/ 整数或者小数 /^\d*(\.\d&#43;)?$/ 正负整数或者小数 /^-?\d*(\.\d&#43;)?$/ 整数小数或者分数 /[-]?[0-9]&#43;[,.]?[0-9]*([\/][0-9]&#43;[,.]?[0-9]*)*/ 数字字母 /^[a-zA-Z0-9]*$/ 单词 /^[a-zA-Z \-]*$/ MM/DD/YYYY 1900-2099 兼容的分隔符：空格 - / . /^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$/ YYYY/MM/DD 1900-2099 兼容的分隔符：空格 -">
+<meta itemprop="datePublished" content="2017-09-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2017-09-21T00:00:00+00:00" />
+<meta itemprop="wordCount" content="215">
+
+
+
+<meta itemprop="keywords" content="regexp," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ehcache"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="常用正则表达式"/>
+<meta name="twitter:description" content="纯数字 /^\d&#43;$/ 小数 /^\d*\.\d&#43;$/ 整数或者小数 /^\d*(\.\d&#43;)?$/ 正负整数或者小数 /^-?\d*(\.\d&#43;)?$/ 整数小数或者分数 /[-]?[0-9]&#43;[,.]?[0-9]*([\/][0-9]&#43;[,.]?[0-9]*)*/ 数字字母 /^[a-zA-Z0-9]*$/ 单词 /^[a-zA-Z \-]*$/ MM/DD/YYYY 1900-2099 兼容的分隔符：空格 - / . /^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$/ YYYY/MM/DD 1900-2099 兼容的分隔符：空格 -"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -344,71 +352,195 @@
 
     
     
-<main class="main" role="main">
-    <article class="content article article-tags post-type-list" itemscope="">
-        <header class="article-header">
-            <h1 itemprop="name" class="hidden-xs">ehcache</h1>
-            <p class="text-muted hidden-xs">Total 34 tags</p>
-            <nav role="navigation" id="nav-main" class="okayNav">
-                <ul>
-                    <li><a href="http://www.mingaccount.com/tags">All</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/db2/">db2</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/design-pattern/">design pattern</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/druid/">druid</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/ehcache/">ehcache</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/git/">git</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/h2/">h2</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/hadoop/">hadoop</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/hive/">hive</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/jackson/">jackson</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/java/">java</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/jooq/">jooq</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/junit4/">junit4</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/junit5/">junit5</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/linux/">linux</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/lombok/">lombok</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/markdown/">markdown</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/maven/">maven</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/mockmvc/">mockmvc</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/mybatis/">mybatis</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/mysql/">mysql</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/npm/">npm</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/oracle/">oracle</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/postgresql/">postgresql</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/protocol/">protocol</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/python/">python</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/redis/">redis</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/regexp/">regexp</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/scala/">scala</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/spark/">spark</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/spring/">spring</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/testng/">testng</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/unit-test/">unit-test</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/website-build/">website build</a></li>
-                    <li><a href="http://www.mingaccount.com/tags/windows/">windows</a></li>
-                </ul>
-            </nav>
-        </header>
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2017/09/common-regexp/"
+    >常用正则表达式</a
+  >
+</h1>
+
+      <div class="article-meta">
         
-        <div class="article-body">
-            <div class="col-md-6"><article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-    <div class="panel-body">
-        <div class="article-meta">
-            <time datetime="2018-09-05 00:00:00 &#43;0000 UTC"
-                itemprop="datePublished">2018-09-05</time>
-        </div>
-        <h3 class="article-title" itemprop="name">
-            <a class="article-link" href="http://www.mingaccount.com/2018/09/springbootehcache%E9%9B%86%E6%88%90/">SpringBoot Ehcache集成</a>
-        </h3>
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="http://www.mingaccount.com/2017/09/common-regexp/" class="article-date">
+  <time datetime="2017-09-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-09-21</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/regexp/"> regexp </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2017/09/common-regexp/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 215words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </div>
     </div>
-    <div class="panel-footer">
-        <a href="http://www.mingaccount.com/tags/ehcache" class="label label-default mb">ehcache</a>
-        <a href="http://www.mingaccount.com/tags/spring" class="label label-default mb">spring</a>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h3 id="纯数字">纯数字</h3>
+<pre><code class="language-regexp">/^\d+$/
+</code></pre>
+<h3 id="小数">小数</h3>
+<pre><code class="language-regexp">/^\d*\.\d+$/
+</code></pre>
+<h3 id="整数或者小数">整数或者小数</h3>
+<pre><code class="language-regexp">/^\d*(\.\d+)?$/
+</code></pre>
+<h3 id="正负整数或者小数">正负整数或者小数</h3>
+<pre><code class="language-regexp">/^-?\d*(\.\d+)?$/
+</code></pre>
+<h3 id="整数小数或者分数">整数小数或者分数</h3>
+<pre><code class="language-regexp">/[-]?[0-9]+[,.]?[0-9]*([\/][0-9]+[,.]?[0-9]*)*/
+</code></pre>
+<h3 id="数字字母">数字字母</h3>
+<pre><code class="language-regexp">/^[a-zA-Z0-9]*$/
+</code></pre>
+<h3 id="单词">单词</h3>
+<pre><code class="language-regexp">/^[a-zA-Z \-]*$/
+</code></pre>
+<h3 id="mmddyyyy">MM/DD/YYYY</h3>
+<p>1900-2099<br>
+兼容的分隔符：空格 <code>-</code> <code>/</code> <code>.</code></p>
+<pre><code class="language-regexp">/^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$/
+</code></pre>
+<h3 id="yyyymmdd">YYYY/MM/DD</h3>
+<p>1900-2099<br>
+兼容的分隔符：空格 <code>-</code> <code>/</code> <code>.</code></p>
+<pre><code class="language-regexp">#^((19|20)?[0-9]{2}[- /.](0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01]))*$#
+</code></pre>
+<h3 id="hhmmss">HH:mm:ss</h3>
+<p>24小时制</p>
+<pre><code class="language-regexp">/(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)/
+</code></pre>
+<h3 id="手机号">手机号</h3>
+<pre><code class="language-regexp">/^1[3-9]\d{9}$/
+</code></pre>
+<h3 id="身份证">身份证</h3>
+<pre><code class="language-regexp">/(^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$)|(^[1-9]\d{5}\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}$)/
+</code></pre>
+<h3 id="email">email</h3>
+<pre><code class="language-regexp">/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/
+</code></pre>
+<h3 id="mastercard">masterCard</h3>
+<pre><code class="language-regexp">/^(5[1-5][0-9]{14})*$/'
+</code></pre>
+<h3 id="visa">visa</h3>
+<pre><code class="language-regexp">/^(4[0-9]{12}(?:[0-9]{3})?)*$/
+</code></pre>
+<h3 id="复杂八位密码">复杂八位密码</h3>
+<p>必须包含大写，小写，数字和特殊符号</p>
+<pre><code class="language-regexp">/(?=(.*[0-9]))(?=.*[\!@#$%^&amp;*()\\[\]{}\-_+=~`|:;&quot;'&lt;&gt;,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/ 
+</code></pre>
+<h3 id="一般八位密码">一般八位密码</h3>
+<p>必须包含大写，小写，数字</p>
+<pre><code class="language-regexp">/(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/
+</code></pre>
+<h3 id="用户名">用户名</h3>
+<p>数字字母字符串，可能包含<code>_</code>和<code>-</code>，长度在3到16之间</p>
+<pre><code class="language-regexp">/^[a-z0-9_-]{3,16}$/
+</code></pre>
+<h3 id="ipv4">IPv4</h3>
+<pre><code class="language-regexp">/^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/ 
+</code></pre>
+<h3 id="ipv6">IPv6</h3>
+<pre><code class="language-regexp">/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/
+</code></pre>
+<h3 id="ipv4和ipv6">IPv4和IPv6</h3>
+<pre><code class="language-regexp">/((^\s*((([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))\s*$)|(^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))(%.+)?\s*$))/
+</code></pre>
+<h3 id="url">URL</h3>
+<pre><code class="language-regexp">/^(((http|https|ftp):\/\/)?([[a-zA-Z0-9]\-\.])+(\.)([[a-zA-Z0-9]]){2,4}([[a-zA-Z0-9]\/+=%&amp;_\.~?\-]*))*$/
+</code></pre>
+<h3 id="html标签">HTML标签</h3>
+<pre><code class="language-regexp">/&lt;\/?[\w\s]*&gt;|&lt;.+[\W]&gt;/
+</code></pre>
+<h3 id="匹配字符串中的重复内容">匹配字符串中的重复内容</h3>
+<pre><code class="language-regexp">/&lt;\/?[\w\s]*&gt;|&lt;.+[\W]&gt;/
+</code></pre>
+<h3 id="匹配线上文件资源路径">匹配线上文件资源路径</h3>
+<pre><code class="language-regexp">/((\/|\\|\/\/|https?:\\\\|https?:\/\/)[a-z0-9 _@\-^!#$%&amp;+={}.\/\\\[\]]+)+\.[a-z]+$/
+</code></pre>
+
     </div>
-</article>
-            </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="http://www.mingaccount.com/2017/09/common-regexp/" title="常用正则表达式" target="_blank" rel="external">http://www.mingaccount.com/2017/09/common-regexp/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="http://www.mingaccount.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="" target="_blank"><span class="text-dark">Ming</span><small class="ml-1x">tianshiming5@outlook.com</small></a></h3>
+        <div>Finally</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="http://www.mingaccount.com/2017/09/mysqlcreateviewexception/" title="Mysql 创建视图报错：View&#39;s SELECT contains a subquery in the FROM clause"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="http://www.mingaccount.com/2017/09/mapandflatmap/"
+                    title="java lambda表达式map和flatMap"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
         </div>
-    </article>
+    </div>
+</nav>
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="http://www.mingaccount.com/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
@@ -478,6 +610,7 @@
         hasInnerContainers: true,
     });
 </script>
+
 
   </body>
 </html>
