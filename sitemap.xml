@@ -234,7 +234,7 @@
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/12/hadoopsshlocalhost%E6%97%A0%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95/</loc>
+    <loc>http://www.mingaccount.com/2019/12/hadoopssh-local-host-no-paw/</loc>
     <lastmod>2019-12-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -668,13 +668,6 @@
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/05/%E8%AF%91java8%E6%96%B0%E7%89%B9%E6%80%A7%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9/</loc>
-    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://www.mingaccount.com/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</loc>
     <lastmod>2018-05-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -831,6 +824,13 @@
   <url>
     <loc>http://www.mingaccount.com/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2017-10-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mingaccount.com/2017/10/split-regexp/</loc>
+    <lastmod>2017-10-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

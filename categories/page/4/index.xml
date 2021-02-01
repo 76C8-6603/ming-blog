@@ -91,15 +91,6 @@
     </item>
     
     <item>
-      <title>[译]java8新特性：函数式编程（functional programming）的优点</title>
-      <link>http://www.mingaccount.com/2018/05/%E8%AF%91java8%E6%96%B0%E7%89%B9%E6%80%A7%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9/</link>
-      <pubDate>Thu, 10 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2018/05/%E8%AF%91java8%E6%96%B0%E7%89%B9%E6%80%A7%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9/</guid>
-      <description>Java8引入了函数式编程，他对java是一个极大的扩展。Java从此不在是一个单纯的面向对象语言，现在他同时混合了函数式编程。这是巨大的改</description>
-    </item>
-    
-    <item>
       <title>[译]java9新特性：在接口中用pirvate方法让default(java8接口特性)更简练</title>
       <link>http://www.mingaccount.com/2018/05/%E8%AF%91java9%E6%96%B0%E7%89%B9%E6%80%A7default/</link>
       <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
@@ -187,6 +178,15 @@
       
       <guid>http://www.mingaccount.com/2018/03/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0/</guid>
       <description>1. ASCII码 我们知道，在计算机内部，所有的信息最终都表示为一个二进制的字符串。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就</description>
+    </item>
+    
+    <item>
+      <title>Java合理避免空指针</title>
+      <link>http://www.mingaccount.com/2018/03/java%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E7%A9%BA%E6%8C%87%E9%92%88/</link>
+      <pubDate>Fri, 09 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/03/java%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E7%A9%BA%E6%8C%87%E9%92%88/</guid>
+      <description>关于如何有效避免空指针，并减少空指针的重复申明。 参考stackoverflow的讨论</description>
     </item>
     
   </channel>

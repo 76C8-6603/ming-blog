@@ -165,10 +165,10 @@
     
     <item>
       <title>Hadoop ssh localhost 无密码登录</title>
-      <link>http://www.mingaccount.com/2019/12/hadoopsshlocalhost%E6%97%A0%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95/</link>
+      <link>http://www.mingaccount.com/2019/12/hadoopssh-local-host-no-paw/</link>
       <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/12/hadoopsshlocalhost%E6%97%A0%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95/</guid>
+      <guid>http://www.mingaccount.com/2019/12/hadoopssh-local-host-no-paw/</guid>
       <description>首先确保安装SSH server： sudo apt-get install openssh-server 启动SSH server: sudo service ssh start #检查ssh是否正常启动 ssh localhost 安装后，可以使用如下命令登陆本机： ssh localhost 此时会有SSH</description>
     </item>
     

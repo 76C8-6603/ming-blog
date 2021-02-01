@@ -39,7 +39,7 @@
 <meta itemprop="description" content="完全处理后的controller @RestController public class TestController{ @GetMapping @UnknownExceptionHandler(msg = &quot;test1 exception&quot;, baseException = TestException.class) public String test(String arg) { if(StringUtils.isEmpty(arg)){ throw new TestException(&quot;参数arg不能为空&quot">
 <meta itemprop="datePublished" content="2017-08-21T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2017-08-21T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1124">
+<meta itemprop="wordCount" content="1129">
 
 
 
@@ -187,7 +187,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/java/" class="tag-list-link">java</a><span
-                    class="tag-list-count">38</span></li>
+                    class="tag-list-count">37</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/jooq/" class="tag-list-link">jooq</a><span
@@ -255,7 +255,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/regexp/" class="tag-list-link">regexp</a><span
-                    class="tag-list-count">2</span></li>
+                    class="tag-list-count">3</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/scala/" class="tag-list-link">scala</a><span
@@ -390,7 +390,7 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2017/08/exceptionandresulthandler/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1124words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1129words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3minutes </span>
       </div>
     </div>
@@ -432,6 +432,7 @@ public class TestController{
 </code></pre>
 <h1 id="统一exception处理和结果处理">统一Exception处理和结果处理</h1>
 <pre><code class="language-java">@RestControllerAdvice
+@Slf4j
 public class CustomResponseBodyAdvice implements ResponseBodyAdvice&lt;Object&gt; {
     
     private static final Class&lt;? extends Annotation&gt; ANNOTATION_TYPE = RequestMapping.class;
@@ -469,6 +470,7 @@ public class CustomResponseBodyAdvice implements ResponseBodyAdvice&lt;Object&gt
      */
     @ExceptionHandler(value = BaseException.class)
     public ResultEntity baseExceptionHandler(BaseException baseException) {
+        log.error(baseException.getMessage(), baseException);
         return baseException.getResultEntity();
     }
 
@@ -479,6 +481,7 @@ public class CustomResponseBodyAdvice implements ResponseBodyAdvice&lt;Object&gt
      */
     @ExceptionHandler(value = Exception.class)
     public ResultEntity unknownExceptionHandler(Exception e) {
+        log.error(e.getMessage(), e);
         return new BaseException() {
             @Override
             protected ResponseInfoEnum getInfoEnum() {
