@@ -11,6 +11,33 @@
     
     
     <item>
+      <title>java7特性try-with-resources</title>
+      <link>http://www.mingaccount.com/2016/08/try-with-resources/</link>
+      <pubDate>Tue, 09 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/08/try-with-resources/</guid>
+      <description>概览 try-with-resources表达式可以自动关闭申明在表达式中的资源，但前提是这些资源类要实现java.lang.AutoClos</description>
+    </item>
+    
+    <item>
+      <title>Mysql Where条件判断 字符串和数字 是否相等时存在的问题</title>
+      <link>http://www.mingaccount.com/2016/07/mysqlwhere%E6%AF%94%E5%AF%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 08 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/07/mysqlwhere%E6%AF%94%E5%AF%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>测试数据 random 24 24uixcvkjklwer 查询sql1 SELECT random FROM table WHERE random = 24 该sql会把两条记录都查出来 查询sql2 SELECT random FROM table WHERE random = &#39;24&#39; 该sql只会匹配第一条记录 总结 条件列为字符</description>
+    </item>
+    
+    <item>
+      <title>实体类通过建造者模式创建</title>
+      <link>http://www.mingaccount.com/2016/06/%E5%AE%9E%E4%BD%93%E7%B1%BBbuild/</link>
+      <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/06/%E5%AE%9E%E4%BD%93%E7%B1%BBbuild/</guid>
+      <description>现在可以通过lombok注解@Builder一步实现 1.调用效果 public class Test{ public static void main(String[] args){ Student student = Student.builder().name(&amp;quo</description>
+    </item>
+    
+    <item>
       <title>Mybatis insert完成后获取自增主键</title>
       <link>http://www.mingaccount.com/2016/05/mybatis%E8%8E%B7%E5%8F%96%E8%87%AA%E5%A2%9Eid/</link>
       <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>

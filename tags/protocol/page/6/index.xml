@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Mysql表名忽略大小写</title>
+      <link>http://www.mingaccount.com/2017/08/mysql%E8%A1%A8%E5%90%8D%E5%BF%BD%E7%95%A5%E5%A4%A7%E5%B0%8F%E5%86%99/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/08/mysql%E8%A1%A8%E5%90%8D%E5%BF%BD%E7%95%A5%E5%A4%A7%E5%B0%8F%E5%86%99/</guid>
+      <description>跟参数lower_case_table_names相关 执行语句，查询该参数值 SHOW VARIABLES LIKE ‘%case%’ lower_case_table_name</description>
+    </item>
+    
+    <item>
       <title>通过request获取客户端IP</title>
       <link>http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/</link>
       <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
@@ -26,6 +35,15 @@
       
       <guid>http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</guid>
       <description>usermod -d /var/lib/mysql/ mysql ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock chown -R mysql:mysql /var/lib/mysql</description>
+    </item>
+    
+    <item>
+      <title>Maven命令备忘</title>
+      <link>http://www.mingaccount.com/2017/06/maven-common-command/</link>
+      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/06/maven-common-command/</guid>
+      <description># 编译项目 mvn compile # 执行项目中的单元测试 # 查找单元测试类的默认规则：**/*Test.java;**/Test*.java;**/*TestCa</description>
     </item>
     
     <item>
@@ -89,6 +107,15 @@
       
       <guid>http://www.mingaccount.com/2017/05/javamethodfirstdefaultparam/</guid>
       <description>Java方法如何编译 int add12and13() { return addTwo(12, 13); } 将会编译为： Method int add12and13() 0 aload_0 // Push local variable 0 (this) 1 bipush 12 // Push int constant 12 3 bipush 13 // Push int constant 13 5 invokevirtual #4 // Method Example.addtwo(II)I 8 ireturn // Return int on top of operand stack; // it is the</description>
+    </item>
+    
+    <item>
+      <title>pom元素说明</title>
+      <link>http://www.mingaccount.com/2017/05/pom-tag/</link>
+      <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/05/pom-tag/</guid>
+      <description>project pom.xml文件的顶级元素 modelVersion POM使用的对象模型版本。这个模型的版本几乎不更新，作为必要元素的原因是确保稳定性。 groupId 这个元素代表创建这个项</description>
     </item>
     
     <item>
@@ -161,33 +188,6 @@
       
       <guid>http://www.mingaccount.com/2017/01/springboot%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%B9%B6%E6%98%A0%E5%B0%84%E5%88%B0%E6%8C%87%E5%AE%9A%E7%B1%BB%E4%B8%AD/</guid>
       <description>新建指定配置类TestConfiguration 该类需要的注解： @Configuration @ConfigurationProperties(prefix=&amp;quot;test&amp;quot;) @PropertySource(&amp;quot;classpath:test.properties&amp;quot;) 同时启动类上需要增加注解： @EnableConfigurationProperties({TestConfiguration.class})</description>
-    </item>
-    
-    <item>
-      <title>java7特性try-with-resources</title>
-      <link>http://www.mingaccount.com/2016/08/try-with-resources/</link>
-      <pubDate>Tue, 09 Aug 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/08/try-with-resources/</guid>
-      <description>概览 try-with-resources表达式可以自动关闭申明在表达式中的资源，但前提是这些资源类要实现java.lang.AutoClos</description>
-    </item>
-    
-    <item>
-      <title>Mysql Where条件判断 字符串和数字 是否相等时存在的问题</title>
-      <link>http://www.mingaccount.com/2016/07/mysqlwhere%E6%AF%94%E5%AF%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E7%9A%84%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Fri, 08 Jul 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/07/mysqlwhere%E6%AF%94%E5%AF%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
-      <description>测试数据 random 24 24uixcvkjklwer 查询sql1 SELECT random FROM table WHERE random = 24 该sql会把两条记录都查出来 查询sql2 SELECT random FROM table WHERE random = &#39;24&#39; 该sql只会匹配第一条记录 总结 条件列为字符</description>
-    </item>
-    
-    <item>
-      <title>实体类通过建造者模式创建</title>
-      <link>http://www.mingaccount.com/2016/06/%E5%AE%9E%E4%BD%93%E7%B1%BBbuild/</link>
-      <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/06/%E5%AE%9E%E4%BD%93%E7%B1%BBbuild/</guid>
-      <description>现在可以通过lombok注解@Builder一步实现 1.调用效果 public class Test{ public static void main(String[] args){ Student student = Student.builder().name(&amp;quo</description>
     </item>
     
   </channel>

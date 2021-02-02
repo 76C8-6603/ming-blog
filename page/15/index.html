@@ -207,7 +207,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/maven/" class="tag-list-link">maven</a><span
-                    class="tag-list-count">3</span></li>
+                    class="tag-list-count">6</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mockmvc/" class="tag-list-link">mockmvc</a><span
@@ -351,6 +351,43 @@
     
     
     
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2017/08/exceptionandresulthandler/"
+    >统一结果处理和业务异常包装</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        完全处理后的controller @RestController public class TestController{ @GetMapping @UnknownExceptionHandler(msg = &quot;test1 exception&quot;, baseException = TestException.class) public String test(String arg) { if(StringUtils.isEmpty(arg)){ throw new TestException(&quot;参数arg不能为空&quot
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="http://www.mingaccount.com/2017/08/exceptionandresulthandler/" class="">
+  <time datetime="2017-08-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-08-21</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/java/"> java </a>
+    <a class="article-tag-link" href="/tags/spring/"> spring </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/08/exceptionandresulthandler/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1129words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3minutes </span>
+      </p>
+    </article>
     <article
       class="article article-type-page"
       itemscope
@@ -504,6 +541,42 @@
         <h1 itemprop="name">
   <a
     class="article-title"
+    href="/2017/06/maven-common-command/"
+    >Maven命令备忘</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        # 编译项目 mvn compile # 执行项目中的单元测试 # 查找单元测试类的默认规则：**/*Test.java;**/Test*.java;**/*TestCa
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="http://www.mingaccount.com/2017/06/maven-common-command/" class="">
+  <time datetime="2017-06-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-06-15</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/maven/"> maven </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/06/maven-common-command/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 322words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
     href="/2017/06/gson-scientific-notation/"
     >阻止Gson将long类型的字段转为科学计数法</a
   >
@@ -530,78 +603,6 @@
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 12words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/06/spring%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8Baop/"
-    >Spring切面编程</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        1.切面编程核心概念 切面编程Aspect-oriented Programming (AOP) AOP只是一个概念，跟Spring是独立关系 最典型的AOP实现框架Aspect
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="http://www.mingaccount.com/2017/06/spring%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8Baop/" class="">
-  <time datetime="2017-06-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-06-06</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/spring/"> spring </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/06/spring%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8Baop/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 10027words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 21minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/06/%E6%A0%B9%E6%8D%AEmethod%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E5%8F%82%E6%95%B0%E5%90%8D/"
-    >根据Method获取所有参数名</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        LocalVariableTableParameterNameDiscoverer discoverer = new LocalVariableTableParameterNameDiscoverer(); discoverer.getParameterNames(method); 详情参考API文档
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="http://www.mingaccount.com/2017/06/%E6%A0%B9%E6%8D%AEmethod%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E5%8F%82%E6%95%B0%E5%90%8D/" class="">
-  <time datetime="2017-06-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-06-06</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/java/"> java </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/06/%E6%A0%B9%E6%8D%AEmethod%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E5%8F%82%E6%95%B0%E5%90%8D/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 15words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
-      </p>
     </article></div>
   
 <nav class="bar bar-footer clearfix" data-stick-bottom>
@@ -619,7 +620,7 @@
       </li>
     </ul>
     <div class="total-article bar-right">
-      Page:15/19
+      Page:15/20
     </div>
   </div>
 </nav>
