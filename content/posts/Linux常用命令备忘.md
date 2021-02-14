@@ -5,7 +5,6 @@
     
 ---
 
-## 文档查看和修改
 
 ```shell script
 cd - #查看上一次所在的目录
@@ -35,11 +34,7 @@ cat [目录1]  >> [目录2] #把目录1的文件内容输入到目录2中
 chmod a+x filename #让执行文件能被./filename调用
 
 mv #文件移动或者重命名
-```
 
-## 修改系统配置
-
-```shell script
 vi /etc/hosts #HOST修改需重启
 
 vi /etc/resolv.conf #DNS修改即时生效
@@ -49,11 +44,7 @@ vi /etc/sysconfig/network-scripts/ifcfg-eth0 #IP修改需重启
 cat /etc/os-release #查看当前系统版本信息
 
 unset #删除对应的环境变量
-```
 
-## 网络相关
-
-```shell script
 nslookup [ip/域名] #通过域名查找ip和dns，或者通过ip查找域名
 
 wget 域名  #通过指定域名下载文件到当前目录
@@ -62,11 +53,6 @@ scp -r ~/data root@127.0.0.1:~/data #指定服务上传
 
 scp -r root@127.0.0.1:~/data ~/data #指定服务下载
 
-```
-
-## 后台进程
-
-```shell script
 ctrl+z #进程暂停
 
 ctrl+c #进程终止
@@ -83,22 +69,14 @@ jobs [选项] [JobID] #该命令生效之前需执行find / -name password &
 ps -ef  #查询所有正在运行的service
     ps -ef | grep mysql #查询mysql相关的进程
 service --status-all  #查询所有已安装的service
-```
 
-## 启动重启相关
-
-```shell script
 reboot
     #-d重新开机时不把数据写入记录文件/var/tmp/wtmp。具有-n效果
     #-f强制重新开机，不调用shutdow指令
     #-i重新开机之前，关闭所有网络界面
     #-n重新开机之前不检查是否有程序未结束
     #-w仅做测试，不真正重启，只会在/var/log/wtmp写入记录
-```
-
-## 用户权限相关
-
-```shell script
+    
 su - [用户名] #完全切换到指定用户，需要指定用户的密码
 
 sudo  -i #暂时切换到root账户，logout命令可退出root，需要sudoers权限
@@ -108,21 +86,13 @@ sudo passwd root #设置root密码　
 sudo useradd -m hadoop -s /bin/bash #添加用户
 
 sudo adduser hadoop sudo #给用户追加管理员权限
-```
 
-## 数据指标相关
-
-```shell script
 top #表示1分钟，5分钟，15分钟的运行队列平均进程数
 
 while true;do ps -u your-user-name -L | wc -l;sleep 1;done #查看当前用户开启的线程数
 
 ulimit -u #查看当前用户所能开启的线程数
-```
 
-## 软件安装相关
-
-```shell script
 echo $JAVA_HOME #查询环境变量
 
 which java #获取java执行路径
@@ -138,16 +108,10 @@ unzip #解压zip文件
 vi /etc/apt/sources.list #编辑环境变量
 
 dpkg *.deb #ubuntu体系加载软件包命令
-```
 
-进程相关
+apt-get upgrade [软件名] #ubuntu更新软件
 
-```shell script
 jps #查看当前所有的java进程，并显示进程id
-```
 
-安全相关
-
-```shell script
 ssh-keygen #生成SSH key
 ```

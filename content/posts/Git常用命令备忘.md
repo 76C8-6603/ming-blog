@@ -7,6 +7,9 @@
 
 ```shell script
 
+# git更新当前分支
+git pull
+
 #拉线上代码
 git clone https://***.git.com
 
