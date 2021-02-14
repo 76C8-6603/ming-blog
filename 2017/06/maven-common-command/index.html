@@ -39,7 +39,7 @@
 <meta itemprop="description" content="# 编译项目 mvn compile # 执行项目中的单元测试 # 查找单元测试类的默认规则：**/*Test.java;**/Test*.java;**/*TestCa">
 <meta itemprop="datePublished" content="2017-06-15T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2017-06-15T00:00:00+00:00" />
-<meta itemprop="wordCount" content="322">
+<meta itemprop="wordCount" content="451">
 
 
 
@@ -215,7 +215,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/maven/" class="tag-list-link">maven</a><span
-                    class="tag-list-count">6</span></li>
+                    class="tag-list-count">12</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mockmvc/" class="tag-list-link">mockmvc</a><span
@@ -389,7 +389,7 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2017/06/maven-common-command/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 322words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 451words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </div>
     </div>
@@ -408,6 +408,9 @@ mvn test-compile
 # 生成JAR文件，在${basedir}/target 目录下
 mvn package
 
+# 官方默认推荐命令。代表执行集成测试或者一些质量验证，除了对应的当前阶段，还执行了validate，compile，test，package
+mvn verify
+
 # 将生成JAR文件安装到本地仓库，本地仓库默认路径：${user.home}/.m2/repository
 mvn install
 
@@ -417,14 +420,20 @@ mvn site
 # 删除 target 目录下的所有构建数据
 mvn clean
 
-# 初始化项目
-mvn -B archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
+# 根据模板创建maven项目
+mvn archetype:generate
 
 # 构建完整依赖，能够独立运行的jar包
 mvn clean package
 
 # 运行Spring-boot项目
 mvn spring-boot:run
+
+# 删除target目录内容，重新编译测试构建，然后部署到远程共享仓库
+mvn clean deploy
+
+# 从本地仓库删除指定jar
+mvn dependency:purge-local-repository -DmanualInclude=&quot;groupId:artifactId, ...&quot;
 </code></pre>
 
     </div>
@@ -468,8 +477,8 @@ mvn spring-boot:run
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
             </li>
             <li class="next">
-                <a href="http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/"
-                    title="Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied"><span>Newer&nbsp;&nbsp;</span><i
+                <a href="http://www.mingaccount.com/2017/07/markdown-lifecycle/"
+                    title="Markdown生命周期"><span>Newer&nbsp;&nbsp;</span><i
                         class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             
