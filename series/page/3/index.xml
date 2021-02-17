@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>Maven如何正确导入本地包，保证在线上正常运行</title>
+      <link>http://www.mingaccount.com/2019/06/maven%E5%A6%82%E6%9E%9C%E6%AD%A3%E7%A1%AE%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%8C%85/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2019/06/maven%E5%A6%82%E6%9E%9C%E6%AD%A3%E7%A1%AE%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%8C%85/</guid>
+      <description>pom设置 &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-install-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.5.1&amp;lt;/version&amp;gt; &amp;lt;executions&amp;gt; &amp;lt;execution&amp;gt; &amp;lt;id&amp;gt;install-jar-lib&amp;lt;/id&amp;gt; &amp;lt;goals&amp;gt; &amp;lt;goal&amp;gt;install-file&amp;lt;/goal&amp;gt; &amp;lt;/goals&amp;gt; &amp;lt;!--在mvn package的时候将jar包追加到本地仓库，可修改为validate，以线上容器编译</description>
+    </item>
+    
+    <item>
       <title>为服务开启BBR加速</title>
       <link>http://www.mingaccount.com/2019/05/%E4%B8%BA%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%90%AFbbr%E5%8A%A0%E9%80%9F/</link>
       <pubDate>Fri, 31 May 2019 19:03:55 +0800</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>http://www.mingaccount.com/2018/08/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</guid>
       <description>cd - #查看上一次所在的目录 cat /etc/hosts #文档查看 ls #查看当前目录下所有文件 pwd #查看当前目录的绝对路径 ll #查看目录下文件的详细信息，包括权限属组等信息</description>
-    </item>
-    
-    <item>
-      <title>vim命令备忘</title>
-      <link>http://www.mingaccount.com/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</link>
-      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</guid>
-      <description>vi /etc/hosts i 修改模式 esc 退出修改 :q 正常退出(文件没有修改 :q! 不保存退出 :wq 保存退出 G 跳到末尾行 dd 删除当前行 gg 跳到第一行第一个字符 $ 跳到当前行的最后一个字</description>
     </item>
     
   </channel>

@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>vim命令备忘</title>
+      <link>http://www.mingaccount.com/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/08/vim%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</guid>
+      <description>vi /etc/hosts i 修改模式 esc 退出修改 :q 正常退出(文件没有修改 :q! 不保存退出 :wq 保存退出 G 跳到末尾行 dd 删除当前行 gg 跳到第一行第一个字符 $ 跳到当前行的最后一个字</description>
+    </item>
+    
+    <item>
       <title>SpringBoot定时任务</title>
       <link>http://www.mingaccount.com/2018/08/springboot%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</link>
       <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
@@ -155,10 +164,10 @@
     
     <item>
       <title>Git常用命令备忘</title>
-      <link>http://www.mingaccount.com/2018/05/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</link>
+      <link>http://www.mingaccount.com/2018/05/git-common-command/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/05/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</guid>
+      <guid>http://www.mingaccount.com/2018/05/git-common-command/</guid>
       <description># git更新当前分支 git pull #拉线上代码 git clone https://***.git.com #查看工作区状态 git status -s #撤回上一次的commit内容 git reset --hard HEAD~ #查看当前分支 git branch #切换到对应分支 git checkout</description>
     </item>
     
@@ -178,15 +187,6 @@
       
       <guid>http://www.mingaccount.com/2018/05/spring%E4%BA%8B%E5%8A%A1%E5%A4%B1%E6%95%88/</guid>
       <description>问题代码 service方法抛出了异常，但是没有rollback @Transactional public void batchInsert() throws CommonException{} 抛出的自定义异常继承于Exception public class CommonException extends Exception{} 问题原因 @Tra</description>
-    </item>
-    
-    <item>
-      <title>[转]quartz cron表达式详解</title>
-      <link>http://www.mingaccount.com/2018/05/quartzcron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/</link>
-      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2018/05/quartzcron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/</guid>
-      <description>Cron表达式是一个字符串，字符串以5或6个空格隔开，分为6或7个域，每一个域代表一个含义，Cron有如下两种语法格式： （1） Seconds Minutes Hours DayofMonth Month DayofWeek Year</description>
     </item>
     
   </channel>

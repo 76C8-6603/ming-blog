@@ -20,12 +20,12 @@
     
     
     
-    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
+    <meta name="generator" content="Hugo 0.80.0 with theme pure" />
     <title>Ming Blog</title>
     
     <link rel="alternate" type="application/rss+xml" href="http://www.mingaccount.com/index.xml" title="Ming Blog" />
     
-    <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
+    <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
@@ -207,7 +207,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/maven/" class="tag-list-link">maven</a><span
-                    class="tag-list-count">12</span></li>
+                    class="tag-list-count">16</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mockmvc/" class="tag-list-link">mockmvc</a><span
@@ -220,6 +220,10 @@
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mysql/" class="tag-list-link">mysql</a><span
                     class="tag-list-count">19</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/nexus/" class="tag-list-link">nexus</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/npm/" class="tag-list-link">npm</a><span
@@ -351,6 +355,78 @@
     
     
     
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2017/09/java8parallel/"
+    >Java8 lamda表达式中的parallel</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        概览 Java8为集合流处理提供了并发支持。并且就算集合不是线程安全的，你也可以在不修改集合的状态下，对集合进行并发汇总操作。但是这里面仍有一
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="http://www.mingaccount.com/2017/09/java8parallel/" class="">
+  <time datetime="2017-09-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-09-27</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/java/"> java </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/09/java8parallel/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1834words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 4minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2017/09/lambdareduce/"
+    >java8 lambda reduce&amp;collect</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        Reduction 首先看一个例子： double average = roster .stream() .filter(p -&gt; p.getGender() == Person.Sex.MALE) .mapToInt(Person::getAge) .average() .getAsDouble(); 像上面的例子一样，JDK还包含很多其他的终端操作（比如说average,sum,min,max,
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="http://www.mingaccount.com/2017/09/lambdareduce/" class="">
+  <time datetime="2017-09-25 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-09-25</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/java/"> java </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/09/lambdareduce/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 2740words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 6minutes </span>
+      </p>
+    </article>
     <article
       class="article article-type-page"
       itemscope
@@ -496,7 +572,7 @@
   </span>
 
         <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/09/spring%E6%B5%8B%E8%AF%95/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 57856words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 57855words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 116minutes </span>
       </p>
     </article>
@@ -535,79 +611,6 @@
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 82words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/08/exceptionandresulthandler/"
-    >统一结果处理和业务异常包装</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        完全处理后的controller @RestController public class TestController{ @GetMapping @UnknownExceptionHandler(msg = &quot;test1 exception&quot;, baseException = TestException.class) public String test(String arg) { if(StringUtils.isEmpty(arg)){ throw new TestException(&quot;参数arg不能为空&quot
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="http://www.mingaccount.com/2017/08/exceptionandresulthandler/" class="">
-  <time datetime="2017-08-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-08-21</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/java/"> java </a>
-    <a class="article-tag-link" href="/tags/spring/"> spring </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/08/exceptionandresulthandler/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1129words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/08/jackson-deserialize-ignore-absence-element/"
-    >Jackson反序列化的时候忽略实体中不存在的元素</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="http://www.mingaccount.com/2017/08/jackson-deserialize-ignore-absence-element/" class="">
-  <time datetime="2017-08-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-08-12</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/jackson/"> jackson </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/08/jackson-deserialize-ignore-absence-element/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 2words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
-      </p>
     </article></div>
   
 <nav class="bar bar-footer clearfix" data-stick-bottom>
@@ -625,7 +628,7 @@
       </li>
     </ul>
     <div class="total-article bar-right">
-      Page:15/20
+      Page:15/21
     </div>
   </div>
 </nav>

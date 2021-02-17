@@ -10,6 +10,24 @@
     
     
     <item>
+      <title>java lambda表达式map和flatMap</title>
+      <link>http://www.mingaccount.com/2017/09/mapandflatmap/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/09/mapandflatmap/</guid>
+      <description>资源类 User @Data public User{ private String name; private List&amp;lt;String&amp;gt; tags; } map&amp;amp;flatmap map将每个参数对象映射为返回类型，一个参数对应一个返回值 List&amp;lt;User&amp;gt; userList = new ArrayList&amp;lt;User&amp;gt;(); //...省略赋值 List&amp;lt;String&amp;gt; userNames = userList.stream().map(user -&amp;gt; user.getName()).collect(Collectors.toList()); flatMa</description>
+    </item>
+    
+    <item>
+      <title>常用正则表达式</title>
+      <link>http://www.mingaccount.com/2017/09/common-regexp/</link>
+      <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/09/common-regexp/</guid>
+      <description>纯数字 /^\d+$/ 小数 /^\d*\.\d+$/ 整数或者小数 /^\d*(\.\d+)?$/ 正负整数或者小数 /^-?\d*(\.\d+)?$/ 整数小数或者分数 /[-]?[0-9]+[,.]?[0-9]*([\/][0-9]+[,.]?[0-9]*)*/ 数字字母 /^[a-zA-Z0-9]*$/ 单词 /^[a-zA-Z \-]{1,50}$/ MM/DD/YYYY 1900-2099 兼容的分隔符：空格 - / . /^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$/ YYYY/MM/DD 1900-2099 兼容的分隔符：空格 -</description>
+    </item>
+    
+    <item>
       <title>Mysql 创建视图报错：View&#39;s SELECT contains a subquery in the FROM clause</title>
       <link>http://www.mingaccount.com/2017/09/mysqlcreateviewexception/</link>
       <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
@@ -73,6 +91,15 @@
     </item>
     
     <item>
+      <title>Maven release</title>
+      <link>http://www.mingaccount.com/2017/07/maven-release/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/07/maven-release/</guid>
+      <description>简介 Maven release不在maven默认生命周期内，需要通过plugin来实现。Maven release可以自动管理pom.xml中的版本号，</description>
+    </item>
+    
+    <item>
       <title>Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied</title>
       <link>http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</link>
       <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
@@ -88,6 +115,15 @@
       
       <guid>http://www.mingaccount.com/2017/07/markdown-lifecycle/</guid>
       <description>lifecycle-phase maven有三个内部生命周期：default，clean，和site。 每个生命周期由多个阶段(phase)组成 clean Phase Description pre-clean execute processes needed prior to the actual project cleaning clean</description>
+    </item>
+    
+    <item>
+      <title>Maven依赖scope属性</title>
+      <link>http://www.mingaccount.com/2017/06/maven-dependency-scope/</link>
+      <pubDate>Fri, 16 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/06/maven-dependency-scope/</guid>
+      <description>compile This is the default scope, used if none is specified. Compile dependencies are available in all classpaths of a project. Furthermore, those dependencies are propagated to dependent projects. provided This is much like compile, but indicates you expect the JDK or a container to provide the dependency at runtime. For example, when building a web application for the Java Enterprise Edition, you would set the dependency on the Servlet</description>
     </item>
     
     <item>
@@ -151,42 +187,6 @@
       
       <guid>http://www.mingaccount.com/2017/05/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E4%B9%89%E6%89%80%E6%9C%89%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7/</guid>
       <description>正则表达式的特殊符号包括 \ $ ( ) * + . [ ] ? ^ { } | - 实现代码(java) public class RegexUtils { private static final String[] SPECIAL_SYMBOLS = new String[]{&amp;quot;\\&amp;quot;, &amp;quot;$&amp;quot;, &amp;quot;(&amp;quot;, &amp;quot;)&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;[&amp;quot;, &amp;quot;]&amp;quot;, &amp;quot;?&amp;quot;, &amp;quot;^&amp;quot;, &amp;quot;{&amp;quot;, &amp;quot;}&amp;quot;, &amp;quot;|&amp;quot;, &amp;quot;-&amp;quot;}; /** * 转义目标正</description>
-    </item>
-    
-    <item>
-      <title>Java方法的默认参数</title>
-      <link>http://www.mingaccount.com/2017/05/javamethodfirstdefaultparam/</link>
-      <pubDate>Sat, 20 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/05/javamethodfirstdefaultparam/</guid>
-      <description>Java方法如何编译 int add12and13() { return addTwo(12, 13); } 将会编译为： Method int add12and13() 0 aload_0 // Push local variable 0 (this) 1 bipush 12 // Push int constant 12 3 bipush 13 // Push int constant 13 5 invokevirtual #4 // Method Example.addtwo(II)I 8 ireturn // Return int on top of operand stack; // it is the</description>
-    </item>
-    
-    <item>
-      <title>pom元素说明</title>
-      <link>http://www.mingaccount.com/2017/05/pom-tag/</link>
-      <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/05/pom-tag/</guid>
-      <description>project pom.xml文件的顶级元素 modelVersion POM使用的对象模型版本。这个模型的版本几乎不更新，作为必要元素的原因是确保稳定性。 groupId 这个元素代表创建这个项</description>
-    </item>
-    
-    <item>
-      <title>关于mysql和oracle的大小写敏感</title>
-      <link>http://www.mingaccount.com/2017/05/%E5%85%B3%E4%BA%8Emysql%E5%92%8Coracle%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F/</link>
-      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/05/%E5%85%B3%E4%BA%8Emysql%E5%92%8Coracle%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F/</guid>
-      <description>表名 mysql 每一个表至少对应一个服务器文件，而且名字对应，因此表名的大小写敏感跟系统有关系，windows不区分，linux区分 oracle 所有不在双引号里</description>
-    </item>
-    
-    <item>
-      <title>Mysql条件对比大小写敏感</title>
-      <link>http://www.mingaccount.com/2017/05/mysql-compare-sensitive/</link>
-      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/05/mysql-compare-sensitive/</guid>
-      <description>默认情况下mysql的对比条件是大小写不敏感的（latin1_general_ci)，所有不敏感的collate都以_ci结尾。 要让对比条件</description>
     </item>
     
   </channel>

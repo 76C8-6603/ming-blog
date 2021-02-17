@@ -5,7 +5,7 @@
     <link>http://www.mingaccount.com/tags/maven/</link>
     <description>Recent content in maven on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 06 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://www.mingaccount.com/tags/maven/index.xml" rel="self" type="application/rss+xml" />
     
@@ -70,7 +70,7 @@
       <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.mingaccount.com/2020/05/spark%E5%86%99csv%E6%8A%8Anull%E5%80%BC%E5%86%99%E4%B8%BA%E7%A9%BA%E4%B8%B2/</guid>
-      <description>用spark写csv的时候碰见一个问题，join后未匹配的单元应该是null，但是spark写出来全部都为&amp;rdquo;&amp;rdquo; F23338994668,F23338994669,F23338995220 12,1,1 1,7,&amp;quot;&amp;quot;</description>
+      <description>用spark写csv的时候碰见一个问题，join后未匹配的单元应该是null，但是spark写出来全部都为&amp;quot;&amp;quot; F23338994668,F23338994669,F23338995220 12,1,1 1,7,&amp;quot;&amp;quot; 13,1,1 6,1,1</description>
     </item>
     
     <item>

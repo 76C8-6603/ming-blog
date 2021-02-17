@@ -21,11 +21,11 @@
     
     
     <meta name="description" content="# 编译项目 mvn compile # 执行项目中的单元测试 # 查找单元测试类的默认规则：**/*Test.java;**/Test*.java;**/*TestCa" />
-    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
+    <meta name="generator" content="Hugo 0.80.0 with theme pure" />
     <title>Maven命令备忘 - Ming Blog</title>
     
     
-    <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
+    <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
@@ -39,7 +39,7 @@
 <meta itemprop="description" content="# 编译项目 mvn compile # 执行项目中的单元测试 # 查找单元测试类的默认规则：**/*Test.java;**/Test*.java;**/*TestCa">
 <meta itemprop="datePublished" content="2017-06-15T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2017-06-15T00:00:00+00:00" />
-<meta itemprop="wordCount" content="451">
+<meta itemprop="wordCount" content="622">
 
 
 
@@ -215,7 +215,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/maven/" class="tag-list-link">maven</a><span
-                    class="tag-list-count">12</span></li>
+                    class="tag-list-count">16</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mockmvc/" class="tag-list-link">mockmvc</a><span
@@ -228,6 +228,10 @@
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mysql/" class="tag-list-link">mysql</a><span
                     class="tag-list-count">19</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/nexus/" class="tag-list-link">nexus</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/npm/" class="tag-list-link">npm</a><span
@@ -389,8 +393,8 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2017/06/maven-common-command/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 451words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 622words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -434,6 +438,36 @@ mvn clean deploy
 
 # 从本地仓库删除指定jar
 mvn dependency:purge-local-repository -DmanualInclude=&quot;groupId:artifactId, ...&quot;
+
+# 项目依赖结构
+mvn dependency:tree
+
+# 项目依赖分析
+mvn dependency:analyze
+
+# plugin详情，加上-Dgoal可以查看指定goal的详情
+mvn release:help -Ddetail -Dgoal=stage
+
+# 安装jar包到本地仓库
+mvn install:install-file \
+   -Dfile=&lt;path-to-file&gt; \
+   -DgroupId=&lt;group-id&gt; \
+   -DartifactId=&lt;artifact-id&gt; \
+   -Dversion=&lt;version&gt; \
+   -Dpackaging=&lt;packaging&gt; \
+   -DgeneratePom=true
+
+# 离线打包
+mvn -o package
+
+# 指定自定义settings.xml运行命令
+mvn -s YourOwnSettings.xml clean install
+
+# 加密密码，用于settings.xml中的服务密码等
+mvn --encrypt-password &lt;password&gt;
+
+# 加载资源文件，通常用于检查指定${}是否正常赋值
+mvn process-resources
 </code></pre>
 
     </div>
@@ -477,8 +511,8 @@ mvn dependency:purge-local-repository -DmanualInclude=&quot;groupId:artifactId, 
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
             </li>
             <li class="next">
-                <a href="http://www.mingaccount.com/2017/07/markdown-lifecycle/"
-                    title="Markdown生命周期"><span>Newer&nbsp;&nbsp;</span><i
+                <a href="http://www.mingaccount.com/2017/06/maven-dependency-scope/"
+                    title="Maven依赖scope属性"><span>Newer&nbsp;&nbsp;</span><i
                         class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             

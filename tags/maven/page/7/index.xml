@@ -5,10 +5,46 @@
     <link>http://www.mingaccount.com/tags/maven/</link>
     <description>Recent content in maven on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 06 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://www.mingaccount.com/tags/maven/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java方法的默认参数</title>
+      <link>http://www.mingaccount.com/2017/05/javamethodfirstdefaultparam/</link>
+      <pubDate>Sat, 20 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/05/javamethodfirstdefaultparam/</guid>
+      <description>Java方法如何编译 int add12and13() { return addTwo(12, 13); } 将会编译为： Method int add12and13() 0 aload_0 // Push local variable 0 (this) 1 bipush 12 // Push int constant 12 3 bipush 13 // Push int constant 13 5 invokevirtual #4 // Method Example.addtwo(II)I 8 ireturn // Return int on top of operand stack; // it is the</description>
+    </item>
+    
+    <item>
+      <title>pom元素说明</title>
+      <link>http://www.mingaccount.com/2017/05/pom-tag/</link>
+      <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/05/pom-tag/</guid>
+      <description>project pom.xml文件的顶级元素 modelVersion POM使用的对象模型版本。这个模型的版本几乎不更新，作为必要元素的原因是确保稳定性。 groupId 这个元素代表创建这个项</description>
+    </item>
+    
+    <item>
+      <title>关于mysql和oracle的大小写敏感</title>
+      <link>http://www.mingaccount.com/2017/05/%E5%85%B3%E4%BA%8Emysql%E5%92%8Coracle%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/05/%E5%85%B3%E4%BA%8Emysql%E5%92%8Coracle%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F/</guid>
+      <description>表名 mysql 每一个表至少对应一个服务器文件，而且名字对应，因此表名的大小写敏感跟系统有关系，windows不区分，linux区分 oracle 所有不在双引号里</description>
+    </item>
+    
+    <item>
+      <title>Mysql条件对比大小写敏感</title>
+      <link>http://www.mingaccount.com/2017/05/mysql-compare-sensitive/</link>
+      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/05/mysql-compare-sensitive/</guid>
+      <description>默认情况下mysql的对比条件是大小写不敏感的（latin1_general_ci)，所有不敏感的collate都以_ci结尾。 要让对比条件</description>
+    </item>
     
     <item>
       <title>SpringBoot入口类常用注解</title>
@@ -152,42 +188,6 @@
       
       <guid>http://www.mingaccount.com/2016/04/java%E6%B3%A8%E9%87%8A%E5%BC%95%E7%94%A8%E7%B1%BB%E5%92%8C%E5%85%B6%E6%88%90%E5%91%98/</guid>
       <description>注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类</description>
-    </item>
-    
-    <item>
-      <title>Mysql modify和change的区别</title>
-      <link>http://www.mingaccount.com/2016/03/mysql-modify-and-change/</link>
-      <pubDate>Mon, 21 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/03/mysql-modify-and-change/</guid>
-      <description>他们之间的区别就是是否能够同时修改列名和列的定义。 CHANGE 你可以修改列名和列定义 ALTER TABLE t1 CHANGE a b BIGINT NOT NULL MODIFY 可以修改列定义，但是不能修改列名 ALTER TABLE t1 MODIFY b INT NOT</description>
-    </item>
-    
-    <item>
-      <title>Java注解说明</title>
-      <link>http://www.mingaccount.com/2016/03/annotation/</link>
-      <pubDate>Sat, 05 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/03/annotation/</guid>
-      <description>标准申明 /** * Describes the Request-For-Enhancement(RFE) that led * to the presence of the annotated API element. */ public @interface RequestForEnhancement { int id(); String synopsis(); String engineer() default &amp;quot;[unassigned]&amp;quot;; String date(); default &amp;quot;[unimplemented]&amp;quot;; } RequestForEnhancement注解包含的成员参数，需</description>
-    </item>
-    
-    <item>
-      <title>Java final成员变量初始化</title>
-      <link>http://www.mingaccount.com/2016/01/javafinal%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96/</link>
-      <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/01/javafinal%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96/</guid>
-      <description>public class Test{ /** ** 一种是直接指定初始值 **/ final String msg = &amp;quot;&amp;quot;; /** ** 另一种是不指定初始值，在构造方法里面指定 ** 但不允许无参构造的存在，并且每一个构造方法都要对该变</description>
-    </item>
-    
-    <item>
-      <title>Oracle limit 问题</title>
-      <link>http://www.mingaccount.com/2016/01/oraclelimit/</link>
-      <pubDate>Wed, 06 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/01/oraclelimit/</guid>
-      <description>1.Oracle 12c R1 (12.1)支持limit语句 从Oracle 12c R1 (12.1)版本开始，oracle开始支持limit语句，但是跟熟悉的limit(1,</description>
     </item>
     
   </channel>

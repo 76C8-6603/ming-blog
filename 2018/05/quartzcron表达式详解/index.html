@@ -21,11 +21,11 @@
     
     
     <meta name="description" content="Cron表达式是一个字符串，字符串以5或6个空格隔开，分为6或7个域，每一个域代表一个含义，Cron有如下两种语法格式： （1） Seconds Minutes Hours DayofMonth Month DayofWeek Year" />
-    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
+    <meta name="generator" content="Hugo 0.80.0 with theme pure" />
     <title>[转]quartz cron表达式详解 - Ming Blog</title>
     
     
-    <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
+    <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
@@ -215,7 +215,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/maven/" class="tag-list-link">maven</a><span
-                    class="tag-list-count">12</span></li>
+                    class="tag-list-count">16</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mockmvc/" class="tag-list-link">mockmvc</a><span
@@ -228,6 +228,10 @@
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mysql/" class="tag-list-link">mysql</a><span
                     class="tag-list-count">19</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/nexus/" class="tag-list-link">nexus</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/npm/" class="tag-list-link">npm</a><span
@@ -404,46 +408,46 @@
 <table>
 <thead>
 <tr>
-<th align="left">字段</th>
-<th align="left">允许值</th>
-<th align="left">允许的特殊字符</th>
+<th style="text-align:left">字段</th>
+<th style="text-align:left">允许值</th>
+<th style="text-align:left">允许的特殊字符</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">秒（Seconds）</td>
-<td align="left">0~59的整数</td>
-<td align="left">, - * /    四个字符</td>
+<td style="text-align:left">秒（Seconds）</td>
+<td style="text-align:left">0~59的整数</td>
+<td style="text-align:left">, - * /    四个字符</td>
 </tr>
 <tr>
-<td align="left">分（Minutes）</td>
-<td align="left">0~59的整数</td>
-<td align="left">, - * /    四个字符</td>
+<td style="text-align:left">分（Minutes）</td>
+<td style="text-align:left">0~59的整数</td>
+<td style="text-align:left">, - * /    四个字符</td>
 </tr>
 <tr>
-<td align="left">小时（Hours）</td>
-<td align="left">0~23的整数</td>
-<td align="left">, - * /    四个字符</td>
+<td style="text-align:left">小时（Hours）</td>
+<td style="text-align:left">0~23的整数</td>
+<td style="text-align:left">, - * /    四个字符</td>
 </tr>
 <tr>
-<td align="left">日期（DayofMonth）</td>
-<td align="left">1~31的整数（但是你需要考虑你月的天数）</td>
-<td align="left">,- * ? / L W C     八个字符</td>
+<td style="text-align:left">日期（DayofMonth）</td>
+<td style="text-align:left">1~31的整数（但是你需要考虑你月的天数）</td>
+<td style="text-align:left">,- * ? / L W C     八个字符</td>
 </tr>
 <tr>
-<td align="left">月份（Month）</td>
-<td align="left">1~12的整数或者 JAN-DEC</td>
-<td align="left">, - * /    四个字符</td>
+<td style="text-align:left">月份（Month）</td>
+<td style="text-align:left">1~12的整数或者 JAN-DEC</td>
+<td style="text-align:left">, - * /    四个字符</td>
 </tr>
 <tr>
-<td align="left">星期（DayofWeek）</td>
-<td align="left">1~7的整数或者 SUN-SAT （1=SUN）</td>
-<td align="left">, - * ? / L C #     八个字符</td>
+<td style="text-align:left">星期（DayofWeek）</td>
+<td style="text-align:left">1~7的整数或者 SUN-SAT （1=SUN）</td>
+<td style="text-align:left">, - * ? / L C #     八个字符</td>
 </tr>
 <tr>
-<td align="left">年(可选，留空)（Year）</td>
-<td align="left">1970~2099</td>
-<td align="left">, - * /    四个字符</td>
+<td style="text-align:left">年(可选，留空)（Year）</td>
+<td style="text-align:left">1970~2099</td>
+<td style="text-align:left">, - * /    四个字符</td>
 </tr>
 </tbody>
 </table>

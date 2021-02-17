@@ -21,11 +21,11 @@
     
     
     <meta name="description" content="在协作开发时，从接口获取到的json实体部分为空，但是在调试时发现原对象没有任何问题，但是经过解析成为json后，部分属性变为： &amp;ldquo" />
-    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
+    <meta name="generator" content="Hugo 0.80.0 with theme pure" />
     <title>FastJson解析结果部分属性为null的问题 - Ming Blog</title>
     
     
-    <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
+    <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
@@ -39,7 +39,7 @@
 <meta itemprop="description" content="在协作开发时，从接口获取到的json实体部分为空，但是在调试时发现原对象没有任何问题，但是经过解析成为json后，部分属性变为： &ldquo">
 <meta itemprop="datePublished" content="2019-07-02T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2019-07-02T00:00:00+00:00" />
-<meta itemprop="wordCount" content="235">
+<meta itemprop="wordCount" content="234">
 
 
 
@@ -215,7 +215,7 @@
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/maven/" class="tag-list-link">maven</a><span
-                    class="tag-list-count">12</span></li>
+                    class="tag-list-count">16</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mockmvc/" class="tag-list-link">mockmvc</a><span
@@ -228,6 +228,10 @@
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/mysql/" class="tag-list-link">mysql</a><span
                     class="tag-list-count">19</span></li>
+            
+            
+            <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/nexus/" class="tag-list-link">nexus</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="http://www.mingaccount.com/tags/npm/" class="tag-list-link">npm</a><span
@@ -389,13 +393,13 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2019/07/json%E8%A7%A3%E6%9E%90%E7%BB%93%E6%9E%9C%E9%83%A8%E5%88%86%E5%B1%9E%E6%80%A7%E4%B8%BAnull%E7%9A%84%E9%97%AE%E9%A2%98/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 235words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 234words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
       <p>在协作开发时，从接口获取到的json实体部分为空，但是在调试时发现原对象没有任何问题，但是经过解析成为json后，部分属性变为：</p>
-<p>&ldquo;$ref&rdquo;:&ldquo;$.*******“</p>
+<p>&ldquo;$ref&rdquo;:&quot;$.*******“</p>
 <p>改变解析方式为Gson问题解决，经查是fastjson在解析json时，会将json中相同的内容改为引用导致</p>
 <p>这么做的原因是防止实体类中有自引用，解析的时候出现死循环，从而导致栈内存溢出</p>
 <p>可以通过设置取消fastjson的引用，但是可能出现内存溢出风险，需要自行评估</p>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mockmvc on Ming Blog</title>
+    <link>http://www.mingaccount.com/tags/mockmvc/</link>
+    <description>Recent content in mockmvc on Ming Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 15 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://www.mingaccount.com/tags/mockmvc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mysql modify和change的区别</title>
+      <link>http://www.mingaccount.com/2016/03/mysql-modify-and-change/</link>
+      <pubDate>Mon, 21 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/03/mysql-modify-and-change/</guid>
+      <description>他们之间的区别就是是否能够同时修改列名和列的定义。 CHANGE 你可以修改列名和列定义 ALTER TABLE t1 CHANGE a b BIGINT NOT NULL MODIFY 可以修改列定义，但是不能修改列名 ALTER TABLE t1 MODIFY b INT NOT</description>
+    </item>
+    
+    <item>
+      <title>Java注解说明</title>
+      <link>http://www.mingaccount.com/2016/03/annotation/</link>
+      <pubDate>Sat, 05 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/03/annotation/</guid>
+      <description>标准申明 /** * Describes the Request-For-Enhancement(RFE) that led * to the presence of the annotated API element. */ public @interface RequestForEnhancement { int id(); String synopsis(); String engineer() default &amp;quot;[unassigned]&amp;quot;; String date(); default &amp;quot;[unimplemented]&amp;quot;; } RequestForEnhancement注解包含的成员参数，需</description>
+    </item>
+    
+    <item>
+      <title>Java final成员变量初始化</title>
+      <link>http://www.mingaccount.com/2016/01/javafinal%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96/</link>
+      <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/01/javafinal%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96/</guid>
+      <description>public class Test{ /** ** 一种是直接指定初始值 **/ final String msg = &amp;quot;&amp;quot;; /** ** 另一种是不指定初始值，在构造方法里面指定 ** 但不允许无参构造的存在，并且每一个构造方法都要对该变</description>
+    </item>
+    
+    <item>
+      <title>Oracle limit 问题</title>
+      <link>http://www.mingaccount.com/2016/01/oraclelimit/</link>
+      <pubDate>Wed, 06 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/01/oraclelimit/</guid>
+      <description>1.Oracle 12c R1 (12.1)支持limit语句 从Oracle 12c R1 (12.1)版本开始，oracle开始支持limit语句，但是跟熟悉的limit(1,</description>
+    </item>
+    
+  </channel>
+</rss>

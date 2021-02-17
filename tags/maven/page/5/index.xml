@@ -5,10 +5,19 @@
     <link>http://www.mingaccount.com/tags/maven/</link>
     <description>Recent content in maven on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 06 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://www.mingaccount.com/tags/maven/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[转]quartz cron表达式详解</title>
+      <link>http://www.mingaccount.com/2018/05/quartzcron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2018/05/quartzcron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/</guid>
+      <description>Cron表达式是一个字符串，字符串以5或6个空格隔开，分为6或7个域，每一个域代表一个含义，Cron有如下两种语法格式： （1） Seconds Minutes Hours DayofMonth Month DayofWeek Year</description>
+    </item>
     
     <item>
       <title>Windows IP DNS批处理</title>
@@ -110,6 +119,15 @@
     </item>
     
     <item>
+      <title>Maven构建项目描述网页</title>
+      <link>http://www.mingaccount.com/2017/11/maven-site/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/11/maven-site/</guid>
+      <description>通过以下命令，即可创建项目描述网页 mvn site 跟网页展示资源相关的目录 +- src/ +- site/ +- apt/ | +- index.apt ! +- markdown/ | +- content.md | +- fml/ | +- general.fml | +- faq.fml | +- xdoc/ | +- other.xml | +- site.xml site.x</description>
+    </item>
+    
+    <item>
       <title>包含多个模块的项目如何配置maven</title>
       <link>http://www.mingaccount.com/2017/11/maven-multiple-module/</link>
       <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
@@ -170,24 +188,6 @@
       
       <guid>http://www.mingaccount.com/2017/09/lambdareduce/</guid>
       <description>Reduction 首先看一个例子： double average = roster .stream() .filter(p -&amp;gt; p.getGender() == Person.Sex.MALE) .mapToInt(Person::getAge) .average() .getAsDouble(); 像上面的例子一样，JDK还包含很多其他的终端操作（比如说average,sum,min,max,</description>
-    </item>
-    
-    <item>
-      <title>java lambda表达式map和flatMap</title>
-      <link>http://www.mingaccount.com/2017/09/mapandflatmap/</link>
-      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/09/mapandflatmap/</guid>
-      <description>资源类 User @Data public User{ private String name; private List&amp;lt;String&amp;gt; tags; } map&amp;amp;flatmap map将每个参数对象映射为返回类型，一个参数对应一个返回值 List&amp;lt;User&amp;gt; userList = new ArrayList&amp;lt;User&amp;gt;(); //...省略赋值 List&amp;lt;String&amp;gt; userNames = userList.stream().map(user -&amp;gt; user.getName()).collect(Collectors.toList()); flatMa</description>
-    </item>
-    
-    <item>
-      <title>常用正则表达式</title>
-      <link>http://www.mingaccount.com/2017/09/common-regexp/</link>
-      <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/09/common-regexp/</guid>
-      <description>纯数字 /^\d+$/ 小数 /^\d*\.\d+$/ 整数或者小数 /^\d*(\.\d+)?$/ 正负整数或者小数 /^-?\d*(\.\d+)?$/ 整数小数或者分数 /[-]?[0-9]+[,.]?[0-9]*([\/][0-9]+[,.]?[0-9]*)*/ 数字字母 /^[a-zA-Z0-9]*$/ 单词 /^[a-zA-Z \-]{1,50}$/ MM/DD/YYYY 1900-2099 兼容的分隔符：空格 - / . /^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$/ YYYY/MM/DD 1900-2099 兼容的分隔符：空格 -</description>
     </item>
     
   </channel>
