@@ -74,6 +74,15 @@
     </item>
     
     <item>
+      <title>maven profile</title>
+      <link>http://www.mingaccount.com/2017/08/maven-profile/</link>
+      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/08/maven-profile/</guid>
+      <description>简介 maven profile插件可以根据环境参数，系统os，文件是否存在，和JDK版本等条件决定是否激活配置。激活的配置可以是环境参数的赋值，对应版</description>
+    </item>
+    
+    <item>
       <title>Mysql表名忽略大小写</title>
       <link>http://www.mingaccount.com/2017/08/mysql-table-name-case-insensitive/</link>
       <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
@@ -179,15 +188,6 @@
       
       <guid>http://www.mingaccount.com/2017/05/java-string-special-symbol-handler/</guid>
       <description>Java, Java Script, HTML, JSON, CSV and XML org.apache.commons.lang3.StringEscapeUtils //使用示例 StringEscapeUtils.escapeCsv(&amp;quot;&amp;quot;); SqtringEscapeUtils.escapeXml(&amp;quot;&amp;quot;); api文档 Regexp 正则表达式转义所有特殊符号 其他 com.google.common.escape.Escapers Escaper build = Escapers.builder().addEscape(&#39;$&#39;, &amp;quot; &amp;quot;).build(); String str = build.escape(&amp;quot;$$$$&amp;quot;); api文档</description>
-    </item>
-    
-    <item>
-      <title>正则表达式转义所有特殊符号</title>
-      <link>http://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</link>
-      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</guid>
-      <description>正则表达式的特殊符号包括 \ $ ( ) * + . [ ] ? ^ { } | - 实现代码(java) public class RegexUtils { private static final String[] SPECIAL_SYMBOLS = new String[]{&amp;quot;\\&amp;quot;, &amp;quot;$&amp;quot;, &amp;quot;(&amp;quot;, &amp;quot;)&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;[&amp;quot;, &amp;quot;]&amp;quot;, &amp;quot;?&amp;quot;, &amp;quot;^&amp;quot;, &amp;quot;{&amp;quot;, &amp;quot;}&amp;quot;, &amp;quot;|&amp;quot;, &amp;quot;-&amp;quot;}; /** * 转义目标正</description>
     </item>
     
   </channel>

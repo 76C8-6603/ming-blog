@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>Java注释引用类和其成员</title>
+      <link>http://www.mingaccount.com/2016/04/java-comment-refere-class/</link>
+      <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2016/04/java-comment-refere-class/</guid>
+      <description>注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类</description>
+    </item>
+    
+    <item>
       <title>Mysql modify和change的区别</title>
       <link>http://www.mingaccount.com/2016/03/mysql-modify-and-change/</link>
       <pubDate>Mon, 21 Mar 2016 00:00:00 +0000</pubDate>

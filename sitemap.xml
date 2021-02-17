@@ -1011,6 +1011,13 @@
   </url>
   
   <url>
+    <loc>http://www.mingaccount.com/2017/08/maven-profile/</loc>
+    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mingaccount.com/2017/08/mysql-table-name-case-insensitive/</loc>
     <lastmod>2017-08-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>

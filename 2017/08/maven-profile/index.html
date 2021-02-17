@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>
-        Mysql Like语句匹配下划线时无法得到正确数据 - Ming Blog
+        maven profile - Ming Blog
       </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -20,33 +20,33 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    <meta name="description" content="示例sql SELECT * FROM table WHERE field LIKE &#39;%_%&#39; 目的是获取中间有下划线的field，但是这样的sql无法获取到期望的结果 问题原因 like语句中除了百分号是通配符，" />
+    <meta name="description" content="简介 maven profile插件可以根据环境参数，系统os，文件是否存在，和JDK版本等条件决定是否激活配置。激活的配置可以是环境参数的赋值，对应版" />
     <meta name="generator" content="Hugo 0.80.0 with theme pure" />
-    <title>Mysql Like语句匹配下划线时无法得到正确数据 - Ming Blog</title>
+    <title>maven profile - Ming Blog</title>
     
     
     <link rel="stylesheet" href="http://www.mingaccount.com/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="Mysql Like语句匹配下划线时无法得到正确数据" />
-<meta property="og:description" content="示例sql SELECT * FROM table WHERE field LIKE &#39;%_%&#39; 目的是获取中间有下划线的field，但是这样的sql无法获取到期望的结果 问题原因 like语句中除了百分号是通配符，" />
+    <meta property="og:title" content="maven profile" />
+<meta property="og:description" content="简介 maven profile插件可以根据环境参数，系统os，文件是否存在，和JDK版本等条件决定是否激活配置。激活的配置可以是环境参数的赋值，对应版" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.mingaccount.com/2016/05/mysql-like-underline/" />
-<meta property="article:published_time" content="2016-05-11T00:00:00+00:00" />
-<meta property="article:modified_time" content="2016-05-11T00:00:00+00:00" />
-<meta itemprop="name" content="Mysql Like语句匹配下划线时无法得到正确数据">
-<meta itemprop="description" content="示例sql SELECT * FROM table WHERE field LIKE &#39;%_%&#39; 目的是获取中间有下划线的field，但是这样的sql无法获取到期望的结果 问题原因 like语句中除了百分号是通配符，">
-<meta itemprop="datePublished" content="2016-05-11T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2016-05-11T00:00:00+00:00" />
-<meta itemprop="wordCount" content="167">
+<meta property="og:url" content="http://www.mingaccount.com/2017/08/maven-profile/" />
+<meta property="article:published_time" content="2017-08-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-08-11T00:00:00+00:00" />
+<meta itemprop="name" content="maven profile">
+<meta itemprop="description" content="简介 maven profile插件可以根据环境参数，系统os，文件是否存在，和JDK版本等条件决定是否激活配置。激活的配置可以是环境参数的赋值，对应版">
+<meta itemprop="datePublished" content="2017-08-11T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2017-08-11T00:00:00+00:00" />
+<meta itemprop="wordCount" content="704">
 
 
 
-<meta itemprop="keywords" content="mysql," />
+<meta itemprop="keywords" content="maven," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Mysql Like语句匹配下划线时无法得到正确数据"/>
-<meta name="twitter:description" content="示例sql SELECT * FROM table WHERE field LIKE &#39;%_%&#39; 目的是获取中间有下划线的field，但是这样的sql无法获取到期望的结果 问题原因 like语句中除了百分号是通配符，"/>
+<meta name="twitter:title" content="maven profile"/>
+<meta name="twitter:description" content="简介 maven profile插件可以根据环境参数，系统os，文件是否存在，和JDK版本等条件决定是否激活配置。激活的配置可以是环境参数的赋值，对应版"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -372,8 +372,8 @@
       <h1 itemprop="name">
   <a
     class="article-title"
-    href="/2016/05/mysql-like-underline/"
-    >Mysql Like语句匹配下划线时无法得到正确数据</a
+    href="/2017/08/maven-profile/"
+    >maven profile</a
   >
 </h1>
 
@@ -381,31 +381,109 @@
         
 <span class="article-date">
   <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="http://www.mingaccount.com/2016/05/mysql-like-underline/" class="article-date">
-  <time datetime="2016-05-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-05-11</time>
+<a href="http://www.mingaccount.com/2017/08/maven-profile/" class="article-date">
+  <time datetime="2017-08-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-08-11</time>
 </a>
 </span>
   
   <span class="article-tag">
     <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/mysql/"> mysql </a>
+    <a class="article-tag-link" href="/tags/maven/"> maven </a>
   </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2016/05/mysql-like-underline/#comments"
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2017/08/maven-profile/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 167words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 704words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <h1 id="示例sql">示例sql</h1>
-<pre><code class="language-sql">SELECT * FROM table WHERE field LIKE '%_%'
+      <h1 id="简介">简介</h1>
+<p>maven profile插件可以根据环境参数，系统os，文件是否存在，和JDK版本等条件决定是否激活配置。激活的配置可以是环境参数的赋值，对应版本的依赖，部分pom标签的替换或者是整个pom的替换。</p>
+<blockquote>
+<p>详情参考<a href="https://maven.apache.org/guides/introduction/introduction-to-profiles.html">maven profile</a></p>
+</blockquote>
+<h1 id="实例">实例</h1>
+<p>下面的例子是通过profile对不同环境的配置文件进行筛选，首先是文件结构：</p>
+<pre><code>-src.main.resources
+    -env
+        -dev.properties
+        -test.properties
+        -prod.properties
+        
+    -application.properties
 </code></pre>
-<p>目的是获取中间有下划线的field，但是这样的sql无法获取到期望的结果</p>
-<h1 id="问题原因">问题原因</h1>
-<p>like语句中除了百分号是通配符，下划线也是通配符。只是百分号代表一个或者多个字符，下划线代表一个字符（比如<code>hello</code>，可以通过<code>__llo</code>匹配）。如果要把百分号或者下划线作为匹配内容，那么需要在前面加上斜杠：<code>\</code>：</p>
-<pre><code class="language-sql">SELECT * FROM table WHERE field LIKE '%\_%'
+<h2 id="applicationproperties">application.properties</h2>
+<pre><code class="language-properties">spring.datasource.username=@datasource.username@
+spring.datasource.password=@datasource.password@
 </code></pre>
+<p>可以看到文件中只包含了数据库的用户名密码，根据环境的不同，对应的数据库用户名和密码不同。<br>
+这里用了Spring-boot框架，参数的引用需要用@包裹，如果是yml文件，除了@还需要把整个引用用引号括起来，比如：<code>&quot;@datasource.password@&quot;</code></p>
+<h2 id="envproperties">env/*.properties</h2>
+<pre><code class="language-properties">datasource.username=dev
+datasource.password=123
+</code></pre>
+<p>env下每个环境对应的properties文件，都对<code>datasource.username</code>和<code>datasource.password</code>有明确赋值。下一步就是要将这些文件跟环境变量相关联。</p>
+<h2 id="pomxml">pom.xml</h2>
+<pre><code class="language-xml">
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;&gt;
+    ...
+    &lt;profiles&gt;
+        &lt;profile&gt;
+            &lt;id&gt;dev&lt;/id&gt;
+            &lt;activation&gt;
+                &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;
+            &lt;/activation&gt;
+            &lt;properties&gt;
+                &lt;env&gt;dev&lt;/env&gt;
+            &lt;/properties&gt;
+        &lt;/profile&gt;
+        &lt;profile&gt;
+            &lt;id&gt;test&lt;/id&gt;
+            &lt;properties&gt;
+                &lt;env&gt;test&lt;/env&gt;
+            &lt;/properties&gt;
+        &lt;/profile&gt;
+        &lt;profile&gt;
+            &lt;id&gt;prod&lt;/id&gt;
+            &lt;properties&gt;
+                &lt;env&gt;prod&lt;/env&gt;
+            &lt;/properties&gt;
+        &lt;/profile&gt;
+    &lt;/profiles&gt;
+    
+    &lt;build&gt;
+        &lt;!-- filters用于将环境文件的参数导入到pom中，让pom可以通过${}方式调用文件中的属性 --&gt;
+        &lt;filters&gt;
+            &lt;filter&gt;src/main/resources/env/${env}.properties&lt;/filter&gt;
+        &lt;/filters&gt;
+    &lt;/build&gt;
+    &lt;!-- resources让指定目录下的属性文件可以通过${}方式访问pom中的属性值(spring boot用@包围) --&gt;
+    &lt;resources&gt;
+        &lt;resource&gt;
+            &lt;directory&gt;src/main/resources&lt;/directory&gt;
+            &lt;filtering&gt;true&lt;/filtering&gt;
+            &lt;includes&gt;
+                &lt;include&gt;*.properties&lt;/include&gt;
+            &lt;/includes&gt;
+        &lt;/resource&gt;
+    &lt;/resources&gt;
+&lt;/project&gt;
+</code></pre>
+<p>上面的配置缺一不可。在profiles中，dev是默认激活的，而其他两个profile没有默认触发条件，只有通过命令行参数直接激活。</p>
+<pre><code class="language-shell"># 替换测试环境配置
+mvn clean verify -Ptest
+
+# 替换生产环境配置
+mvn clean verify -Pprod
+</code></pre>
+<pre><code class="language-shell"># 替换测试环境配置
+mvn clean verify -Denv=test
+
+# 替换生产环境配置
+mvn clean verify -Denv=prod
+</code></pre>
+<p>上面两种方式达到的效果是一样的，不过一个是通过profile触发的，另外一个是直接给env变量赋值触发的</p>
 
     </div>
     <div class="article-footer">
@@ -413,7 +491,7 @@
   <ul class="post-copyright list-unstyled">
     <li class="post-copyright-link hidden-xs">
       <strong>Permalink: </strong>
-      <a href="http://www.mingaccount.com/2016/05/mysql-like-underline/" title="Mysql Like语句匹配下划线时无法得到正确数据" target="_blank" rel="external">http://www.mingaccount.com/2016/05/mysql-like-underline/</a>
+      <a href="http://www.mingaccount.com/2017/08/maven-profile/" title="maven profile" target="_blank" rel="external">http://www.mingaccount.com/2017/08/maven-profile/</a>
     </li>
     <li class="post-copyright-license">
       <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
@@ -443,13 +521,13 @@
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="http://www.mingaccount.com/2016/05/http-heads/" title="所有HTTP头字段(header fields)"><i
+                <a href="http://www.mingaccount.com/2017/08/mysql-table-name-case-insensitive/" title="Mysql表名忽略大小写"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
             </li>
             <li class="next">
-                <a href="http://www.mingaccount.com/2016/05/assert-common-method/"
-                    title="Assert常用方法"><span>Newer&nbsp;&nbsp;</span><i
+                <a href="http://www.mingaccount.com/2017/08/jackson-deserialize-ignore-absence-element/"
+                    title="Jackson反序列化的时候忽略实体中不存在的元素"><span>Newer&nbsp;&nbsp;</span><i
                         class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             

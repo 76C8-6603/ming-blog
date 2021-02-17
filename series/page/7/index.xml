@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>正则表达式转义所有特殊符号</title>
+      <link>http://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</link>
+      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</guid>
+      <description>正则表达式的特殊符号包括 \ $ ( ) * + . [ ] ? ^ { } | - 实现代码(java) public class RegexUtils { private static final String[] SPECIAL_SYMBOLS = new String[]{&amp;quot;\\&amp;quot;, &amp;quot;$&amp;quot;, &amp;quot;(&amp;quot;, &amp;quot;)&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;[&amp;quot;, &amp;quot;]&amp;quot;, &amp;quot;?&amp;quot;, &amp;quot;^&amp;quot;, &amp;quot;{&amp;quot;, &amp;quot;}&amp;quot;, &amp;quot;|&amp;quot;, &amp;quot;-&amp;quot;}; /** * 转义目标正</description>
+    </item>
+    
+    <item>
       <title>Java方法的默认参数</title>
       <link>http://www.mingaccount.com/2017/05/java-method-first-default-param/</link>
       <pubDate>Sat, 20 May 2017 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>http://www.mingaccount.com/2016/05/content-type/</guid>
       <description>所有的Content-type 完整列表iana media type 常用的Content-type 常用列表及说明runoob content type ** application application/java-archive application/EDI-X12 application/EDIFACT application/javascript application/octet-stream application/ogg application/pdf application/xhtml+xml application/x-shockwave-flash application/json application/ld+json application/xml application/zip</description>
-    </item>
-    
-    <item>
-      <title>Java注释引用类和其成员</title>
-      <link>http://www.mingaccount.com/2016/04/java-comment-refere-class/</link>
-      <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/04/java-comment-refere-class/</guid>
-      <description>注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类</description>
     </item>
     
   </channel>
