@@ -6,12 +6,18 @@
     draft: true
 
 ---
-* maven
-* maven release
+
+
 * maven profile
+* maven common plugin
 
 * gradle
 * failsafe
 * Docker
 * k8s
 * jenkins
+* pg
+
+* scp
+* ftp
+* webdav

@@ -47,7 +47,7 @@ java.version=1.8
 
 除了系统中已经定义好的属性，你还可以自定义属性
 
-# 外部文件属性
+## 外部文件属性
 定义一个外部属性文件`src/main/filters/filter.properties`：
 ```properties
 # filter.properties
@@ -76,7 +76,7 @@ java.version=@java.version@
 my.filter.value=@my.filter.value@
 ```
 
-# pom properties
+## pom properties
 pom文件中的properties属性，不仅在pom文件中能调用，在外部资源文件中也能像前面那样调用。
 ```xml
 <project>
@@ -108,7 +108,7 @@ my.filter.value=@my.filter.value@
 my.property=@my.property@
 ```
 
-# 命令行属性
+## 命令行属性
 跟在mvn后面的属性参数，也能在`src/main/resources`目录中的资源文件中调用：
 ```shell
 mvn package "-Dmy.command.property=commandProperty"
@@ -124,4 +124,36 @@ my.filter.value=@my.filter.value@
 my.property=@my.property@
 my.command.property=@my.command.property@
 ```
+
+# 加载外部文件的属性
+可以通过加载外部属性文件，扩展Maven可用的属性值。  
+```xml
+<project>
+  ...
+  <name>My Resources Plugin Practice Project</name>
+  ...
+  <build>
+    ...
+    <filters>
+      <filter>[a filter property]</filter>
+    </filters>
+    ...
+  </build>
+  ...
+</project>
+```
+
+`my-filter-values.properties`包含以下属性：  
+```xml
+your.name = world
+```
+可以加载到pom.xml中：  
+```xml
+ ...
+    <filters>
+      <filter>my-filter-values.properties</filter>
+    </filters>
+ ...
+```
+这样就可以通过`${your.name}`来访问该属性值
 

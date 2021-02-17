@@ -48,4 +48,7 @@ git cherry-pick --abort
 #在指定路径添加子模块
 git submodule add <url> [path] 
 
+# 撤回git add操作
+git reset <file>
+
 ```

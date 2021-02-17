@@ -107,7 +107,7 @@ unzip #解压zip文件
 
 vi /etc/apt/sources.list #编辑环境变量
 
-dpkg *.deb #ubuntu体系加载软件包命令
+dpkg -i *.deb #ubuntu体系安装软件包命令
 
 apt-get upgrade [软件名] #ubuntu更新软件
 

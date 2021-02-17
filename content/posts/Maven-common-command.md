@@ -46,4 +46,34 @@ mvn clean deploy
 
 # 从本地仓库删除指定jar
 mvn dependency:purge-local-repository -DmanualInclude="groupId:artifactId, ..."
+
+# 项目依赖结构
+mvn dependency:tree
+
+# 项目依赖分析
+mvn dependency:analyze
+
+# plugin详情，加上-Dgoal可以查看指定goal的详情
+mvn release:help -Ddetail -Dgoal=stage
+
+# 安装jar包到本地仓库
+mvn install:install-file \
+   -Dfile=<path-to-file> \
+   -DgroupId=<group-id> \
+   -DartifactId=<artifact-id> \
+   -Dversion=<version> \
+   -Dpackaging=<packaging> \
+   -DgeneratePom=true
+
+# 离线打包
+mvn -o package
+
+# 指定自定义settings.xml运行命令
+mvn -s YourOwnSettings.xml clean install
+
+# 加密密码，用于settings.xml中的服务密码等
+mvn --encrypt-password <password>
+
+# 加载资源文件，通常用于检查指定${}是否正常赋值
+mvn process-resources
 ```
