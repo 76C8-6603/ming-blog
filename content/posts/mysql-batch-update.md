@@ -1,6 +1,6 @@
 ---
     title: "Mysql批量更新"
-    date:  2019-07-19 
+    date:  2017-07-19 
     tags: ["mysql"]
     
 ---

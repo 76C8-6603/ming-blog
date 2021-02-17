@@ -1,5 +1,5 @@
 ---
-    title: "字符编码笔记：ASCII、Unicode、UTF-8 和 Base64"
+    title: "[转]字符编码笔记：ASCII、Unicode、UTF-8 和 Base64"
     date: 2018-03-12 
     tags: ["java"]
     

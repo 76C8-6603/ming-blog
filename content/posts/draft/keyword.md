@@ -9,8 +9,8 @@
 
 
 * maven profile
-* maven common plugin
 
+* mvnw
 * gradle
 * failsafe
 * Docker
@@ -21,3 +21,11 @@
 * scp
 * ftp
 * webdav
+* 分库分表
+* mycat
+* Sharding-JDBC
+* binlog
+* java agent
+* java assist
+* redis
+* spel
