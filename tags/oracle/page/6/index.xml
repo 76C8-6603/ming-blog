@@ -5,19 +5,10 @@
     <link>http://www.mingaccount.com/tags/oracle/</link>
     <description>Recent content in oracle on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 10 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2020 17:42:55 +0800</lastBuildDate>
     
         <atom:link href="http://www.mingaccount.com/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>java lambda表达式map和flatMap</title>
-      <link>http://www.mingaccount.com/2017/09/mapandflatmap/</link>
-      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/09/mapandflatmap/</guid>
-      <description>资源类 User @Data public User{ private String name; private List&amp;lt;String&amp;gt; tags; } map&amp;amp;flatmap map将每个参数对象映射为返回类型，一个参数对应一个返回值 List&amp;lt;User&amp;gt; userList = new ArrayList&amp;lt;User&amp;gt;(); //...省略赋值 List&amp;lt;String&amp;gt; userNames = userList.stream().map(user -&amp;gt; user.getName()).collect(Collectors.toList()); flatMa</description>
-    </item>
     
     <item>
       <title>常用正则表达式</title>
@@ -30,37 +21,46 @@
     
     <item>
       <title>Mysql 创建视图报错：View&#39;s SELECT contains a subquery in the FROM clause</title>
-      <link>http://www.mingaccount.com/2017/09/mysqlcreateviewexception/</link>
+      <link>http://www.mingaccount.com/2017/09/mysql-create-view-exception/</link>
       <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/09/mysqlcreateviewexception/</guid>
+      <guid>http://www.mingaccount.com/2017/09/mysql-create-view-exception/</guid>
       <description>问题背景 使用sql: create view test_view as select a.column_1, b.column_2 from (select column_1 from table_1) a left join (select column_2 from table_2) b on a.column_1 = b.column_2 报错信息： View&#39;s SELECT contains a subquery in the FROM clause 问题原因 根据mysql官方文档，版本5.7之</description>
     </item>
     
     <item>
       <title>Spring集成测试</title>
-      <link>http://www.mingaccount.com/2017/09/spring%E6%B5%8B%E8%AF%95/</link>
+      <link>http://www.mingaccount.com/2017/09/spring-test/</link>
       <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/09/spring%E6%B5%8B%E8%AF%95/</guid>
+      <guid>http://www.mingaccount.com/2017/09/spring-test/</guid>
       <description>1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成</description>
     </item>
     
     <item>
+      <title>linux sh文件运行异常，出现异常文件结尾或者乱码字符</title>
+      <link>http://www.mingaccount.com/2017/09/linux-sh-exception/</link>
+      <pubDate>Mon, 11 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/09/linux-sh-exception/</guid>
+      <description>vi run.sh # 查看当前脚本格式，如果结果是:fileformat=dos，则需要改为unix :set ff # 更改脚本格式为unix :set ff=unix</description>
+    </item>
+    
+    <item>
       <title>QPS、TPS、PV等网站业务关键字释义</title>
-      <link>http://www.mingaccount.com/2017/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</link>
+      <link>http://www.mingaccount.com/2017/09/qps-tps-pv-andsoon/</link>
       <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/09/qpstpspv%E7%AD%89%E7%BD%91%E7%AB%99%E4%B8%9A%E5%8A%A1%E5%85%B3%E9%94%AE%E5%AD%97%E9%87%8A%E4%B9%89/</guid>
+      <guid>http://www.mingaccount.com/2017/09/qps-tps-pv-andsoon/</guid>
       <description>QPS：Query Per Second TPS：Transaction Per Second PV：Page View RT：Response Time UV：Unique Visitor DAU：Daily Actived Users M</description>
     </item>
     
     <item>
       <title>统一结果处理和业务异常包装</title>
-      <link>http://www.mingaccount.com/2017/08/exceptionandresulthandler/</link>
+      <link>http://www.mingaccount.com/2017/08/exception-and-result-handler/</link>
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/08/exceptionandresulthandler/</guid>
+      <guid>http://www.mingaccount.com/2017/08/exception-and-result-handler/</guid>
       <description>完全处理后的controller @RestController public class TestController{ @GetMapping @UnknownExceptionHandler(msg = &amp;quot;test1 exception&amp;quot;, baseException = TestException.class) public String test(String arg) { if(StringUtils.isEmpty(arg)){ throw new TestException(&amp;quot;参数arg不能为空&amp;quot</description>
     </item>
     
@@ -75,19 +75,19 @@
     
     <item>
       <title>Mysql表名忽略大小写</title>
-      <link>http://www.mingaccount.com/2017/08/mysql%E8%A1%A8%E5%90%8D%E5%BF%BD%E7%95%A5%E5%A4%A7%E5%B0%8F%E5%86%99/</link>
+      <link>http://www.mingaccount.com/2017/08/mysql-table-name-case-insensitive/</link>
       <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/08/mysql%E8%A1%A8%E5%90%8D%E5%BF%BD%E7%95%A5%E5%A4%A7%E5%B0%8F%E5%86%99/</guid>
+      <guid>http://www.mingaccount.com/2017/08/mysql-table-name-case-insensitive/</guid>
       <description>跟参数lower_case_table_names相关 执行语句，查询该参数值 SHOW VARIABLES LIKE ‘%case%’ lower_case_table_name</description>
     </item>
     
     <item>
       <title>通过request获取客户端IP</title>
-      <link>http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/</link>
+      <link>http://www.mingaccount.com/2017/08/request-get-client-id/</link>
       <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/08/%E9%80%9A%E8%BF%87request%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AFip/</guid>
+      <guid>http://www.mingaccount.com/2017/08/request-get-client-id/</guid>
       <description>请求头枚举类 public enum HttpHeader { AUTHORIZATION(&amp;quot;Authorization&amp;quot;), AUTHENTICATION_TYPE_BASIC(&amp;quot;Basic&amp;quot;), X_AUTH_TOKEN(&amp;quot;X-AUTH-TOKEN&amp;quot;), WWW_Authenticate(&amp;quot;WWW-Authenticate&amp;quot;), X_FORWARDED_FOR(&amp;quot;X-Forwarded-For&amp;quot;), PROXY_CLIENT_IP(&amp;quot;Proxy-Client-IP&amp;quot;), WL_PROXY_CLIENT_IP(&amp;quot;WL-Proxy-Client-IP&amp;quot;), HTTP_CLIENT_IP(&amp;quot;HTTP_CLIENT_IP&amp;quot;), HTTP_X_FORWARDED_FOR(&amp;quot;HTTP_X_FORWARDED_FOR&amp;quot;); private String key; private HttpHeader(String key) { this.key = key; } public String key() { return this.key; } } 工具类 public class RemoteIpHelper { private static final String UNKNOWN = &amp;quot;unknown&amp;quot;; public static String getRemoteIpFrom(HttpServletRequest request) { String ip = null; int tryCount = 1; while (!isIpFound(ip) &amp;amp;&amp;amp; tryCount</description>
     </item>
     
@@ -101,11 +101,20 @@
     </item>
     
     <item>
+      <title>Mysql批量更新</title>
+      <link>http://www.mingaccount.com/2017/07/mysql-batch-update/</link>
+      <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/07/mysql-batch-update/</guid>
+      <description>多个where条件，每个条件对应的更新值不同，需要mysql批量更新 UPDATE test_table SET test_target = test_id CASE WHEN &amp;quot;123&amp;quot; THEN &amp;quot;456&amp;quot; WHEN &amp;quot;789&amp;quot; THEN &amp;quot;101&amp;quot; END WHERE test_id in [&#39;123&#39;,&#39;789&#39;] 但是在程序中，直接写常量的情况太</description>
+    </item>
+    
+    <item>
       <title>Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied</title>
-      <link>http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</link>
+      <link>http://www.mingaccount.com/2017/07/mysql-startup-exception/</link>
       <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/07/mysql%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/</guid>
+      <guid>http://www.mingaccount.com/2017/07/mysql-startup-exception/</guid>
       <description>usermod -d /var/lib/mysql/ mysql ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock chown -R mysql:mysql /var/lib/mysql</description>
     </item>
     
@@ -147,46 +156,37 @@
     
     <item>
       <title>Spring切面编程</title>
-      <link>http://www.mingaccount.com/2017/06/spring%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8Baop/</link>
+      <link>http://www.mingaccount.com/2017/06/spring-aop/</link>
       <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/06/spring%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8Baop/</guid>
+      <guid>http://www.mingaccount.com/2017/06/spring-aop/</guid>
       <description>1.切面编程核心概念 切面编程Aspect-oriented Programming (AOP) AOP只是一个概念，跟Spring是独立关系 最典型的AOP实现框架Aspect</description>
     </item>
     
     <item>
       <title>根据Method获取所有参数名</title>
-      <link>http://www.mingaccount.com/2017/06/%E6%A0%B9%E6%8D%AEmethod%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E5%8F%82%E6%95%B0%E5%90%8D/</link>
+      <link>http://www.mingaccount.com/2017/06/method-get-all-argnames/</link>
       <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/06/%E6%A0%B9%E6%8D%AEmethod%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E5%8F%82%E6%95%B0%E5%90%8D/</guid>
+      <guid>http://www.mingaccount.com/2017/06/method-get-all-argnames/</guid>
       <description>LocalVariableTableParameterNameDiscoverer discoverer = new LocalVariableTableParameterNameDiscoverer(); discoverer.getParameterNames(method); 详情参考API文档</description>
     </item>
     
     <item>
-      <title>设计模式总览</title>
-      <link>http://www.mingaccount.com/2017/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88/</link>
-      <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2017/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88/</guid>
-      <description>1.什么叫依赖倒转，里氏替换？ 所谓依赖倒转就是抽象类不应该依赖于子类，子类应该依赖于抽象类，并且子类之间不应该互相依赖。依赖倒转是面对对象的</description>
-    </item>
-    
-    <item>
       <title>JavaString 特殊符号处理工具类</title>
-      <link>http://www.mingaccount.com/2017/05/javastring%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
+      <link>http://www.mingaccount.com/2017/05/java-string-special-symbol-handler/</link>
       <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/05/javastring%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7%E7%B1%BB/</guid>
+      <guid>http://www.mingaccount.com/2017/05/java-string-special-symbol-handler/</guid>
       <description>Java, Java Script, HTML, JSON, CSV and XML org.apache.commons.lang3.StringEscapeUtils //使用示例 StringEscapeUtils.escapeCsv(&amp;quot;&amp;quot;); SqtringEscapeUtils.escapeXml(&amp;quot;&amp;quot;); api文档 Regexp 正则表达式转义所有特殊符号 其他 com.google.common.escape.Escapers Escaper build = Escapers.builder().addEscape(&#39;$&#39;, &amp;quot; &amp;quot;).build(); String str = build.escape(&amp;quot;$$$$&amp;quot;); api文档</description>
     </item>
     
     <item>
       <title>正则表达式转义所有特殊符号</title>
-      <link>http://www.mingaccount.com/2017/05/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E4%B9%89%E6%89%80%E6%9C%89%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7/</link>
+      <link>http://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</link>
       <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/05/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E4%B9%89%E6%89%80%E6%9C%89%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7/</guid>
+      <guid>http://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</guid>
       <description>正则表达式的特殊符号包括 \ $ ( ) * + . [ ] ? ^ { } | - 实现代码(java) public class RegexUtils { private static final String[] SPECIAL_SYMBOLS = new String[]{&amp;quot;\\&amp;quot;, &amp;quot;$&amp;quot;, &amp;quot;(&amp;quot;, &amp;quot;)&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;[&amp;quot;, &amp;quot;]&amp;quot;, &amp;quot;?&amp;quot;, &amp;quot;^&amp;quot;, &amp;quot;{&amp;quot;, &amp;quot;}&amp;quot;, &amp;quot;|&amp;quot;, &amp;quot;-&amp;quot;}; /** * 转义目标正</description>
     </item>
     

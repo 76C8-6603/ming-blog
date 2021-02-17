@@ -5,62 +5,53 @@
     <link>http://www.mingaccount.com/tags/oracle/</link>
     <description>Recent content in oracle on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 10 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2020 17:42:55 +0800</lastBuildDate>
     
         <atom:link href="http://www.mingaccount.com/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>[转]quartz cron表达式详解</title>
-      <link>http://www.mingaccount.com/2018/05/quartzcron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/</link>
-      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2018/05/quartzcron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/</guid>
-      <description>Cron表达式是一个字符串，字符串以5或6个空格隔开，分为6或7个域，每一个域代表一个含义，Cron有如下两种语法格式： （1） Seconds Minutes Hours DayofMonth Month DayofWeek Year</description>
-    </item>
-    
-    <item>
       <title>Windows IP DNS批处理</title>
-      <link>http://www.mingaccount.com/2018/03/windowsdnsbatch/</link>
+      <link>http://www.mingaccount.com/2018/03/windows-dns/</link>
       <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/03/windowsdnsbatch/</guid>
+      <guid>http://www.mingaccount.com/2018/03/windows-dns/</guid>
       <description>指定ip信息，只需要修改set参数 name是控制面板\网络和 Internet\网络连接中对应的连接名称 @echo off set name=&amp;quot;Wi-Fi&amp;quot; set ipaddress=172.16.61.216 set mask=255.255.255.0 set gateway=172.16.61.254 set dns1=172.16.3.38 set dns2=172.16.3.41 netsh interface ip set address</description>
     </item>
     
     <item>
       <title>判断int和Integer类型是否相等时，空指针异常</title>
-      <link>http://www.mingaccount.com/2018/03/%E5%88%A4%E6%96%ADint%E5%92%8Cinteger%E7%B1%BB%E5%9E%8B%E6%98%AF%E5%90%A6%E7%9B%B8%E7%AD%89%E6%97%B6%E7%A9%BA%E6%8C%87%E9%92%88%E5%BC%82%E5%B8%B8/</link>
+      <link>http://www.mingaccount.com/2018/03/int-equals-integer/</link>
       <pubDate>Mon, 19 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/03/%E5%88%A4%E6%96%ADint%E5%92%8Cinteger%E7%B1%BB%E5%9E%8B%E6%98%AF%E5%90%A6%E7%9B%B8%E7%AD%89%E6%97%B6%E7%A9%BA%E6%8C%87%E9%92%88%E5%BC%82%E5%B8%B8/</guid>
+      <guid>http://www.mingaccount.com/2018/03/int-equals-integer/</guid>
       <description>需要注意在判断int和Integer是否相等时，会先将Integer拆箱，如果Integer为null，会报空指针异常。 因此需要提前处理好I</description>
     </item>
     
     <item>
-      <title>字符编码笔记：ASCII、Unicode、UTF-8 和 Base64</title>
-      <link>http://www.mingaccount.com/2018/03/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0/</link>
+      <title>[转]字符编码笔记：ASCII、Unicode、UTF-8 和 Base64</title>
+      <link>http://www.mingaccount.com/2018/03/char-encode/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/03/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0/</guid>
+      <guid>http://www.mingaccount.com/2018/03/char-encode/</guid>
       <description>1. ASCII码 我们知道，在计算机内部，所有的信息最终都表示为一个二进制的字符串。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就</description>
     </item>
     
     <item>
       <title>Java合理避免空指针</title>
-      <link>http://www.mingaccount.com/2018/03/java%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E7%A9%BA%E6%8C%87%E9%92%88/</link>
+      <link>http://www.mingaccount.com/2018/03/java-avoid-null-pointer/</link>
       <pubDate>Fri, 09 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/03/java%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E7%A9%BA%E6%8C%87%E9%92%88/</guid>
+      <guid>http://www.mingaccount.com/2018/03/java-avoid-null-pointer/</guid>
       <description>关于如何有效避免空指针，并减少空指针的重复申明。 参考stackoverflow的讨论</description>
     </item>
     
     <item>
       <title>Request的Body只能读取一次解决方法</title>
-      <link>http://www.mingaccount.com/2018/03/request%E7%9A%84body%E5%8F%AA%E8%83%BD%E8%AF%BB%E5%8F%96%E4%B8%80%E6%AC%A1%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+      <link>http://www.mingaccount.com/2018/03/request-body-read-twice/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/03/request%E7%9A%84body%E5%8F%AA%E8%83%BD%E8%AF%BB%E5%8F%96%E4%B8%80%E6%AC%A1%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+      <guid>http://www.mingaccount.com/2018/03/request-body-read-twice/</guid>
       <description>一、需要一个类继承HttpServletRequestWrapper，该类继承了ServletRequestWrapper并实现了HttpS</description>
     </item>
     
@@ -75,46 +66,46 @@
     
     <item>
       <title>全局获取request</title>
-      <link>http://www.mingaccount.com/2018/01/%E5%85%A8%E5%B1%80%E8%8E%B7%E5%8F%96request/</link>
+      <link>http://www.mingaccount.com/2018/01/get-request-global/</link>
       <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/01/%E5%85%A8%E5%B1%80%E8%8E%B7%E5%8F%96request/</guid>
+      <guid>http://www.mingaccount.com/2018/01/get-request-global/</guid>
       <description>交于Spring管理的类，通过注解调用 @Component public class Test{ @Autowired private HttpServletRequest httpServletRequest; } 通过静态方法调用 HttpServletRequest httpServletRequest = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();</description>
     </item>
     
     <item>
       <title>Java获取当前类名和方法名</title>
-      <link>http://www.mingaccount.com/2018/01/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B1%BB%E5%90%8D%E5%92%8C%E6%96%B9%E6%B3%95%E5%90%8D/</link>
+      <link>http://www.mingaccount.com/2018/01/java-fetch-current-classname-methodname/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/01/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B1%BB%E5%90%8D%E5%92%8C%E6%96%B9%E6%B3%95%E5%90%8D/</guid>
+      <guid>http://www.mingaccount.com/2018/01/java-fetch-current-classname-methodname/</guid>
       <description>Description Below I present you two different ways to get the current Class: Using Thread Using getClass() The simplest way to get the name of the class where your code is being executed in is using the getClass() method present in every java object. Like here: String clazz = this.getClass().getName(); This works only if executed in an Object, namely an instanciated class. If you try to execute the code above</description>
     </item>
     
     <item>
       <title>观察者模式和java委托</title>
-      <link>http://www.mingaccount.com/2018/01/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8Cjava%E5%A7%94%E6%89%98/</link>
+      <link>http://www.mingaccount.com/2018/01/observe-patter-and-java-agent/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/01/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8Cjava%E5%A7%94%E6%89%98/</guid>
+      <guid>http://www.mingaccount.com/2018/01/observe-patter-and-java-agent/</guid>
       <description>所谓观察者模式，指的某个状态信息的改变，会影响其他一系列的操作，这时就可以将这些操作抽象化，同时创建一个类统一的管理和执行这些操作。把这些抽</description>
     </item>
     
     <item>
       <title>[转]Class.forName()用法详解</title>
-      <link>http://www.mingaccount.com/2017/11/class.forname%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/</link>
+      <link>http://www.mingaccount.com/2017/11/class-forname/</link>
       <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/11/class.forname%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>http://www.mingaccount.com/2017/11/class-forname/</guid>
       <description>转自:http://blog.csdn.net/kaiwii/article/details/7405761 主要功能 Class.forNam</description>
     </item>
     
     <item>
       <title>List addAll产生异常java.lang.UnsupportedOperationException</title>
-      <link>http://www.mingaccount.com/2017/11/list_add_all%E5%BC%82%E5%B8%B8/</link>
+      <link>http://www.mingaccount.com/2017/11/list-addall-exception/</link>
       <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/11/list_add_all%E5%BC%82%E5%B8%B8/</guid>
+      <guid>http://www.mingaccount.com/2017/11/list-addall-exception/</guid>
       <description>原因是因为list是由Arrays.asList生成的 根据Arrays源码，asList方法生成的ArrayList，并不是java.uti</description>
     </item>
     
@@ -138,19 +129,19 @@
     
     <item>
       <title>[转]谈谈Java中的语法糖</title>
-      <link>http://www.mingaccount.com/2017/10/%E8%BD%AC%E8%B0%88%E8%B0%88java%E4%B8%AD%E7%9A%84%E8%AF%AD%E6%B3%95%E7%B3%96/</link>
+      <link>http://www.mingaccount.com/2017/10/java-syntatic-sugar/</link>
       <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/10/%E8%BD%AC%E8%B0%88%E8%B0%88java%E4%B8%AD%E7%9A%84%E8%AF%AD%E6%B3%95%E7%B3%96/</guid>
+      <guid>http://www.mingaccount.com/2017/10/java-syntatic-sugar/</guid>
       <description>*该博客转自 http://blog.csdn.net/danchu/article/details/54986442 语法糖（Syntactic Sugar），也称糖衣语法，指在计算机语言中添加的某种语法，这种语法对语言本身功能来说没有什么影响，</description>
     </item>
     
     <item>
       <title>Java编码,乱码问题详解</title>
-      <link>http://www.mingaccount.com/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</link>
+      <link>http://www.mingaccount.com/2017/10/java-encode/</link>
       <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/10/java%E7%BC%96%E7%A0%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>http://www.mingaccount.com/2017/10/java-encode/</guid>
       <description>一、常见的编码格式 1.ASCII 基础编码，英文和西欧字符。 用一个字节的低7位表示，一共128个。 0~13是控制字符如换行、回车、删除等，32~126是打</description>
     </item>
     
@@ -174,20 +165,29 @@
     
     <item>
       <title>Java8 lamda表达式中的parallel</title>
-      <link>http://www.mingaccount.com/2017/09/java8parallel/</link>
+      <link>http://www.mingaccount.com/2017/09/java8-parallel/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/09/java8parallel/</guid>
+      <guid>http://www.mingaccount.com/2017/09/java8-parallel/</guid>
       <description>概览 Java8为集合流处理提供了并发支持。并且就算集合不是线程安全的，你也可以在不修改集合的状态下，对集合进行并发汇总操作。但是这里面仍有一</description>
     </item>
     
     <item>
       <title>java8 lambda reduce&amp;collect</title>
-      <link>http://www.mingaccount.com/2017/09/lambdareduce/</link>
+      <link>http://www.mingaccount.com/2017/09/lambda-reduce/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/09/lambdareduce/</guid>
+      <guid>http://www.mingaccount.com/2017/09/lambda-reduce/</guid>
       <description>Reduction 首先看一个例子： double average = roster .stream() .filter(p -&amp;gt; p.getGender() == Person.Sex.MALE) .mapToInt(Person::getAge) .average() .getAsDouble(); 像上面的例子一样，JDK还包含很多其他的终端操作（比如说average,sum,min,max,</description>
+    </item>
+    
+    <item>
+      <title>java lambda表达式map和flatMap</title>
+      <link>http://www.mingaccount.com/2017/09/map-and-flatmap/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.mingaccount.com/2017/09/map-and-flatmap/</guid>
+      <description>资源类 User @Data public User{ private String name; private List&amp;lt;String&amp;gt; tags; } map&amp;amp;flatmap map将每个参数对象映射为返回类型，一个参数对应一个返回值 List&amp;lt;User&amp;gt; userList = new ArrayList&amp;lt;User&amp;gt;(); //...省略赋值 List&amp;lt;String&amp;gt; userNames = userList.stream().map(user -&amp;gt; user.getName()).collect(Collectors.toList()); flatMa</description>
     </item>
     
   </channel>
