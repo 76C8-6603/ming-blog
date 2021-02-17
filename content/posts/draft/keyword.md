@@ -8,7 +8,6 @@
 ---
 
 
-* maven profile
 
 * mvnw
 * gradle
