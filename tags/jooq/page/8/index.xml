@@ -2,57 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>jooq on Ming Blog</title>
-    <link>http://www.mingaccount.com/tags/jooq/</link>
+    <link>https://www.mingaccount.com/tags/jooq/</link>
     <description>Recent content in jooq on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 14 Jul 2020 11:16:55 +0800</lastBuildDate>
     
-        <atom:link href="http://www.mingaccount.com/tags/jooq/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.mingaccount.com/tags/jooq/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>所有HTTP状态码(status code)</title>
+      <link>https://www.mingaccount.com/2016/05/status-code/</link>
+      <pubDate>Sun, 08 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/05/status-code/</guid>
+      <description>常见状态码 所有状态码iana all HTTP status code 常用状态码及说明wiki List of HTTP status code 状态码 状态码英文名称 中文描述 100 Continue 继续。客户端应继续其请求 101 Switching Protocols 切换协议</description>
+    </item>
+    
+    <item>
+      <title>所有Content-type(content type)</title>
+      <link>https://www.mingaccount.com/2016/05/content-type/</link>
+      <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/05/content-type/</guid>
+      <description>所有的Content-type 完整列表iana media type 常用的Content-type 常用列表及说明runoob content type ** application application/java-archive application/EDI-X12 application/EDIFACT application/javascript application/octet-stream application/ogg application/pdf application/xhtml+xml application/x-shockwave-flash application/json application/ld+json application/xml application/zip</description>
+    </item>
+    
+    <item>
       <title>Java注释引用类和其成员</title>
-      <link>http://www.mingaccount.com/2016/04/java-comment-refere-class/</link>
+      <link>https://www.mingaccount.com/2016/04/java-comment-refere-class/</link>
       <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2016/04/java-comment-refere-class/</guid>
+      <guid>https://www.mingaccount.com/2016/04/java-comment-refere-class/</guid>
       <description>注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类</description>
     </item>
     
     <item>
       <title>Mysql modify和change的区别</title>
-      <link>http://www.mingaccount.com/2016/03/mysql-modify-and-change/</link>
+      <link>https://www.mingaccount.com/2016/03/mysql-modify-and-change/</link>
       <pubDate>Mon, 21 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2016/03/mysql-modify-and-change/</guid>
+      <guid>https://www.mingaccount.com/2016/03/mysql-modify-and-change/</guid>
       <description>他们之间的区别就是是否能够同时修改列名和列的定义。 CHANGE 你可以修改列名和列定义 ALTER TABLE t1 CHANGE a b BIGINT NOT NULL MODIFY 可以修改列定义，但是不能修改列名 ALTER TABLE t1 MODIFY b INT NOT</description>
     </item>
     
     <item>
       <title>Java注解说明</title>
-      <link>http://www.mingaccount.com/2016/03/annotation/</link>
+      <link>https://www.mingaccount.com/2016/03/annotation/</link>
       <pubDate>Sat, 05 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2016/03/annotation/</guid>
+      <guid>https://www.mingaccount.com/2016/03/annotation/</guid>
       <description>标准申明 /** * Describes the Request-For-Enhancement(RFE) that led * to the presence of the annotated API element. */ public @interface RequestForEnhancement { int id(); String synopsis(); String engineer() default &amp;quot;[unassigned]&amp;quot;; String date(); default &amp;quot;[unimplemented]&amp;quot;; } RequestForEnhancement注解包含的成员参数，需</description>
     </item>
     
     <item>
       <title>Java final成员变量初始化</title>
-      <link>http://www.mingaccount.com/2016/01/java-final-constructor/</link>
+      <link>https://www.mingaccount.com/2016/01/java-final-constructor/</link>
       <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2016/01/java-final-constructor/</guid>
+      <guid>https://www.mingaccount.com/2016/01/java-final-constructor/</guid>
       <description>public class Test{ /** ** 一种是直接指定初始值 **/ final String msg = &amp;quot;&amp;quot;; /** ** 另一种是不指定初始值，在构造方法里面指定 ** 但不允许无参构造的存在，并且每一个构造方法都要对该变</description>
     </item>
     
     <item>
       <title>Oracle limit 问题</title>
-      <link>http://www.mingaccount.com/2016/01/oracle-limit/</link>
+      <link>https://www.mingaccount.com/2016/01/oracle-limit/</link>
       <pubDate>Wed, 06 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2016/01/oracle-limit/</guid>
+      <guid>https://www.mingaccount.com/2016/01/oracle-limit/</guid>
       <description>1.Oracle 12c R1 (12.1)支持limit语句 从Oracle 12c R1 (12.1)版本开始，oracle开始支持limit语句，但是跟熟悉的limit(1,</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.mingaccount.com/1/01/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/1/01/resume/</guid>
+      <description>项目经历 1. 交互式探索项目 2015/12 - 2016/12 交互式探索项目 项目简介 数据挖掘项目，覆盖一个从未加工数据到意向图表的完整流程 技术栈 Struts2 + Spring + iBatis Oracle、My</description>
     </item>
     
   </channel>

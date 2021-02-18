@@ -2,192 +2,192 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>npm on Ming Blog</title>
-    <link>http://www.mingaccount.com/tags/npm/</link>
+    <link>https://www.mingaccount.com/tags/npm/</link>
     <description>Recent content in npm on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 18 Oct 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://www.mingaccount.com/tags/npm/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.mingaccount.com/tags/npm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>正则表达式转义所有特殊符号</title>
-      <link>http://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</link>
+      <title>根据Method获取所有参数名</title>
+      <link>https://www.mingaccount.com/2017/06/method-get-all-argnames/</link>
+      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/06/method-get-all-argnames/</guid>
+      <description>LocalVariableTableParameterNameDiscoverer discoverer = new LocalVariableTableParameterNameDiscoverer(); discoverer.getParameterNames(method); 详情参考API文档</description>
+    </item>
+    
+    <item>
+      <title>JavaString 特殊符号处理工具类</title>
+      <link>https://www.mingaccount.com/2017/05/java-string-special-symbol-handler/</link>
       <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</guid>
+      <guid>https://www.mingaccount.com/2017/05/java-string-special-symbol-handler/</guid>
+      <description>Java, Java Script, HTML, JSON, CSV and XML org.apache.commons.lang3.StringEscapeUtils //使用示例 StringEscapeUtils.escapeCsv(&amp;quot;&amp;quot;); SqtringEscapeUtils.escapeXml(&amp;quot;&amp;quot;); api文档 Regexp 正则表达式转义所有特殊符号 其他 com.google.common.escape.Escapers Escaper build = Escapers.builder().addEscape(&#39;$&#39;, &amp;quot; &amp;quot;).build(); String str = build.escape(&amp;quot;$$$$&amp;quot;); api文档</description>
+    </item>
+    
+    <item>
+      <title>正则表达式转义所有特殊符号</title>
+      <link>https://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</link>
+      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</guid>
       <description>正则表达式的特殊符号包括 \ $ ( ) * + . [ ] ? ^ { } | - 实现代码(java) public class RegexUtils { private static final String[] SPECIAL_SYMBOLS = new String[]{&amp;quot;\\&amp;quot;, &amp;quot;$&amp;quot;, &amp;quot;(&amp;quot;, &amp;quot;)&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;[&amp;quot;, &amp;quot;]&amp;quot;, &amp;quot;?&amp;quot;, &amp;quot;^&amp;quot;, &amp;quot;{&amp;quot;, &amp;quot;}&amp;quot;, &amp;quot;|&amp;quot;, &amp;quot;-&amp;quot;}; /** * 转义目标正</description>
     </item>
     
     <item>
       <title>Java方法的默认参数</title>
-      <link>http://www.mingaccount.com/2017/05/java-method-first-default-param/</link>
+      <link>https://www.mingaccount.com/2017/05/java-method-first-default-param/</link>
       <pubDate>Sat, 20 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/05/java-method-first-default-param/</guid>
+      <guid>https://www.mingaccount.com/2017/05/java-method-first-default-param/</guid>
       <description>Java方法如何编译 int add12and13() { return addTwo(12, 13); } 将会编译为： Method int add12and13() 0 aload_0 // Push local variable 0 (this) 1 bipush 12 // Push int constant 12 3 bipush 13 // Push int constant 13 5 invokevirtual #4 // Method Example.addtwo(II)I 8 ireturn // Return int on top of operand stack; // it is the</description>
     </item>
     
     <item>
       <title>pom元素说明</title>
-      <link>http://www.mingaccount.com/2017/05/pom-tag/</link>
+      <link>https://www.mingaccount.com/2017/05/pom-tag/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/05/pom-tag/</guid>
+      <guid>https://www.mingaccount.com/2017/05/pom-tag/</guid>
       <description>project pom.xml文件的顶级元素 modelVersion POM使用的对象模型版本。这个模型的版本几乎不更新，作为必要元素的原因是确保稳定性。 groupId 这个元素代表创建这个项</description>
     </item>
     
     <item>
       <title>关于mysql和oracle的大小写敏感</title>
-      <link>http://www.mingaccount.com/2017/05/mysql-oracle-case-sensitive/</link>
+      <link>https://www.mingaccount.com/2017/05/mysql-oracle-case-sensitive/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/05/mysql-oracle-case-sensitive/</guid>
+      <guid>https://www.mingaccount.com/2017/05/mysql-oracle-case-sensitive/</guid>
       <description>表名 mysql 每一个表至少对应一个服务器文件，而且名字对应，因此表名的大小写敏感跟系统有关系，windows不区分，linux区分 oracle 所有不在双引号里</description>
     </item>
     
     <item>
       <title>Mysql条件对比大小写敏感</title>
-      <link>http://www.mingaccount.com/2017/05/mysql-compare-sensitive/</link>
+      <link>https://www.mingaccount.com/2017/05/mysql-compare-sensitive/</link>
       <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/05/mysql-compare-sensitive/</guid>
+      <guid>https://www.mingaccount.com/2017/05/mysql-compare-sensitive/</guid>
       <description>默认情况下mysql的对比条件是大小写不敏感的（latin1_general_ci)，所有不敏感的collate都以_ci结尾。 要让对比条件</description>
     </item>
     
     <item>
       <title>SpringBoot入口类常用注解</title>
-      <link>http://www.mingaccount.com/2017/05/spring-boot-entry-anno/</link>
+      <link>https://www.mingaccount.com/2017/05/spring-boot-entry-anno/</link>
       <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/05/spring-boot-entry-anno/</guid>
+      <guid>https://www.mingaccount.com/2017/05/spring-boot-entry-anno/</guid>
       <description>@SpringBootApplication(scanBasePackages=&amp;quot;com.*.*&amp;quot;) @EnableScheduling @EnableTransactionManagement @MapperScan(&amp;quot;com.*.**.*mapper&amp;quot;) @EnableConfigurationProperties({CustomConfiguration.class}) public class Application {} SpringBootApplication Spring注解的扫描路径 EnableScheduling 开启Spring的定时任务 EnableTransactionManagement 开始Spring的事务管理 MapperScan 扫描MyBatis Mapper类的路</description>
     </item>
     
     <item>
       <title>Springboot Jackson全局日期格式处理</title>
-      <link>http://www.mingaccount.com/2017/04/jackson-global-date-format/</link>
+      <link>https://www.mingaccount.com/2017/04/jackson-global-date-format/</link>
       <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/04/jackson-global-date-format/</guid>
+      <guid>https://www.mingaccount.com/2017/04/jackson-global-date-format/</guid>
       <description>通过修改springboot application.properties spring.jackson.date-format=yyyy-MM-dd HH:mm:ss spring.jackson.time-zone=GMT+8</description>
     </item>
     
     <item>
       <title>Jackson使用解析</title>
-      <link>http://www.mingaccount.com/2017/04/jackson/</link>
+      <link>https://www.mingaccount.com/2017/04/jackson/</link>
       <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/04/jackson/</guid>
+      <guid>https://www.mingaccount.com/2017/04/jackson/</guid>
       <description>Jackson简介 Spring在@RequestBody和@ResponseBody中对对象的反序列化和序列化，都是借助Jackson来实现</description>
     </item>
     
     <item>
       <title>修改SpringBoot日志打印时候的标志</title>
-      <link>http://www.mingaccount.com/2017/04/modify-spring-boot-banner/</link>
+      <link>https://www.mingaccount.com/2017/04/modify-spring-boot-banner/</link>
       <pubDate>Sat, 15 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/04/modify-spring-boot-banner/</guid>
+      <guid>https://www.mingaccount.com/2017/04/modify-spring-boot-banner/</guid>
       <description>1.新建banner.txt在resources目录下 _/_/_/ _/ _/ _/_/_/ _/ _/ _/_/ _/ _/ _/ _/ _/_/ _/ _/ _/ _/ _/_/_/_/ _/ _/ _/ _/ _/_/_/_/ _/ _/ _/ _/ _/ _/_/ _/ _/ _/_/_/ _/ _/ _/_/_/ _/ _/ _/ _/ 文本图形生</description>
     </item>
     
     <item>
       <title>Spring Application配置文件通用参数</title>
-      <link>http://www.mingaccount.com/2017/04/spring-properties-common-key/</link>
+      <link>https://www.mingaccount.com/2017/04/spring-properties-common-key/</link>
       <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/04/spring-properties-common-key/</guid>
+      <guid>https://www.mingaccount.com/2017/04/spring-properties-common-key/</guid>
       <description>参考Spring官网配置参数 完整列出了所有application配置文件中可用的参数</description>
     </item>
     
     <item>
       <title>Spring自定义配置文件并映射到指定类中</title>
-      <link>http://www.mingaccount.com/2017/01/spring-boot-external-properties/</link>
+      <link>https://www.mingaccount.com/2017/01/spring-boot-external-properties/</link>
       <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2017/01/spring-boot-external-properties/</guid>
+      <guid>https://www.mingaccount.com/2017/01/spring-boot-external-properties/</guid>
       <description>新建指定配置类TestConfiguration 该类需要的注解： @Configuration @ConfigurationProperties(prefix=&amp;quot;test&amp;quot;) @PropertySource(&amp;quot;classpath:test.properties&amp;quot;) 同时启动类上需要增加注解： @EnableConfigurationProperties({TestConfiguration.class})</description>
     </item>
     
     <item>
       <title>java7特性try-with-resources</title>
-      <link>http://www.mingaccount.com/2016/08/try-with-resources/</link>
+      <link>https://www.mingaccount.com/2016/08/try-with-resources/</link>
       <pubDate>Tue, 09 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2016/08/try-with-resources/</guid>
+      <guid>https://www.mingaccount.com/2016/08/try-with-resources/</guid>
       <description>概览 try-with-resources表达式可以自动关闭申明在表达式中的资源，但前提是这些资源类要实现java.lang.AutoClos</description>
     </item>
     
     <item>
       <title>Mysql Where条件判断 字符串和数字 是否相等时存在的问题</title>
-      <link>http://www.mingaccount.com/2016/07/mysql-compare-string-and-number/</link>
+      <link>https://www.mingaccount.com/2016/07/mysql-compare-string-and-number/</link>
       <pubDate>Fri, 08 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2016/07/mysql-compare-string-and-number/</guid>
+      <guid>https://www.mingaccount.com/2016/07/mysql-compare-string-and-number/</guid>
       <description>测试数据 random 24 24uixcvkjklwer 查询sql1 SELECT random FROM table WHERE random = 24 该sql会把两条记录都查出来 查询sql2 SELECT random FROM table WHERE random = &#39;24&#39; 该sql只会匹配第一条记录 总结 条件列为字符</description>
     </item>
     
     <item>
       <title>实体类通过建造者模式创建</title>
-      <link>http://www.mingaccount.com/2016/06/pojo-builder/</link>
+      <link>https://www.mingaccount.com/2016/06/pojo-builder/</link>
       <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2016/06/pojo-builder/</guid>
+      <guid>https://www.mingaccount.com/2016/06/pojo-builder/</guid>
       <description>现在可以通过lombok注解@Builder一步实现 1.调用效果 public class Test{ public static void main(String[] args){ Student student = Student.builder().name(&amp;quo</description>
     </item>
     
     <item>
       <title>Mybatis insert完成后获取自增主键</title>
-      <link>http://www.mingaccount.com/2016/05/mybatis-get-auto-increment-id/</link>
+      <link>https://www.mingaccount.com/2016/05/mybatis-get-auto-increment-id/</link>
       <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2016/05/mybatis-get-auto-increment-id/</guid>
+      <guid>https://www.mingaccount.com/2016/05/mybatis-get-auto-increment-id/</guid>
       <description>示例代码 public void insert(User user){ mapper.insert(user); String id = user.getId(); } id会赋值到传进来的user对象中 xml &amp;lt;insert keyProperty=&amp;quot;id&amp;quot; keyColumn=&amp;quot;id&amp;quot; useGeneratedKeys=&amp;quot;true&amp;quot;&amp;gt; INSERT INTO ... &amp;lt;/insert&amp;gt; keyProperty代表实体类中主键对应的成员变量名称 ke</description>
     </item>
     
     <item>
       <title>Assert常用方法</title>
-      <link>http://www.mingaccount.com/2016/05/assert-common-method/</link>
+      <link>https://www.mingaccount.com/2016/05/assert-common-method/</link>
       <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2016/05/assert-common-method/</guid>
+      <guid>https://www.mingaccount.com/2016/05/assert-common-method/</guid>
       <description>org.junit.Assert assertEquals 判断对象是否相等，equals方法判断 assertSame 判断对象是否相等，==判断 assertTrue 判断条件是否为真 assertFalse 判断条件是否为假 assertNotNull 判断对象是否不为null assertArrayEquals 判断数</description>
     </item>
     
     <item>
       <title>Mysql Like语句匹配下划线时无法得到正确数据</title>
-      <link>http://www.mingaccount.com/2016/05/mysql-like-underline/</link>
+      <link>https://www.mingaccount.com/2016/05/mysql-like-underline/</link>
       <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2016/05/mysql-like-underline/</guid>
+      <guid>https://www.mingaccount.com/2016/05/mysql-like-underline/</guid>
       <description>示例sql SELECT * FROM table WHERE field LIKE &#39;%_%&#39; 目的是获取中间有下划线的field，但是这样的sql无法获取到期望的结果 问题原因 like语句中除了百分号是通配符，</description>
     </item>
     
     <item>
       <title>所有HTTP头字段(header fields)</title>
-      <link>http://www.mingaccount.com/2016/05/http-heads/</link>
+      <link>https://www.mingaccount.com/2016/05/http-heads/</link>
       <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2016/05/http-heads/</guid>
+      <guid>https://www.mingaccount.com/2016/05/http-heads/</guid>
       <description>wiki List of HTTP header fields</description>
-    </item>
-    
-    <item>
-      <title>所有HTTP状态码(status code)</title>
-      <link>http://www.mingaccount.com/2016/05/status-code/</link>
-      <pubDate>Sun, 08 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/05/status-code/</guid>
-      <description>常见状态码 所有状态码iana all HTTP status code 常用状态码及说明wiki List of HTTP status code 状态码 状态码英文名称 中文描述 100 Continue 继续。客户端应继续其请求 101 Switching Protocols 切换协议</description>
-    </item>
-    
-    <item>
-      <title>所有Content-type(content type)</title>
-      <link>http://www.mingaccount.com/2016/05/content-type/</link>
-      <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2016/05/content-type/</guid>
-      <description>所有的Content-type 完整列表iana media type 常用的Content-type 常用列表及说明runoob content type ** application application/java-archive application/EDI-X12 application/EDIFACT application/javascript application/octet-stream application/ogg application/pdf application/xhtml+xml application/x-shockwave-flash application/json application/ld+json application/xml application/zip</description>
     </item>
     
   </channel>

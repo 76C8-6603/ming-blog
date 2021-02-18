@@ -2,192 +2,192 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>markdown on Ming Blog</title>
-    <link>http://www.mingaccount.com/tags/markdown/</link>
+    <link>https://www.mingaccount.com/tags/markdown/</link>
     <description>Recent content in markdown on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 18 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://www.mingaccount.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.mingaccount.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>db2 sum函数报错Arithmetic overflow...</title>
+      <link>https://www.mingaccount.com/2019/11/db2sumerror/</link>
+      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/11/db2sumerror/</guid>
+      <description>完整异常 Arithmetic overflow or other arithmetic exception occurred.. SQLCODE=-802, SQLSTATE=22003, DRIVER=4.26.14 报错sql SELECT SUM(C_1788) FROM table c_1788列是integer类型 报错原因 c_1788列数值长度为9，sum值肯定溢出</description>
+    </item>
+    
+    <item>
       <title>[转]Mysql表设计注意事项</title>
-      <link>http://www.mingaccount.com/2019/10/mysql-table-design/</link>
+      <link>https://www.mingaccount.com/2019/10/mysql-table-design/</link>
       <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/10/mysql-table-design/</guid>
+      <guid>https://www.mingaccount.com/2019/10/mysql-table-design/</guid>
       <description>作者：孤独烟 链接：https://zhuanlan.zhihu.com/p/73260510 来源：知乎 著作权归作者所有。商业转载请联系作者获</description>
     </item>
     
     <item>
       <title>[转]分库分表如何部署上线</title>
-      <link>http://www.mingaccount.com/2019/10/divide-table-how-to-deploy/</link>
+      <link>https://www.mingaccount.com/2019/10/divide-table-how-to-deploy/</link>
       <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/10/divide-table-how-to-deploy/</guid>
+      <guid>https://www.mingaccount.com/2019/10/divide-table-how-to-deploy/</guid>
       <description>转自公众号“孤独烟” 引言 我们先来讲一个段子 面试官：“有并发的经验没？” 应聘者：“有一点。” 面试官：“那你们为了处理并发，做了哪些优化？” 应聘</description>
     </item>
     
     <item>
       <title>[转]自增主键用完了该怎么办</title>
-      <link>http://www.mingaccount.com/2019/10/auto-increment-id-is-dry/</link>
+      <link>https://www.mingaccount.com/2019/10/auto-increment-id-is-dry/</link>
       <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/10/auto-increment-id-is-dry/</guid>
+      <guid>https://www.mingaccount.com/2019/10/auto-increment-id-is-dry/</guid>
       <description>转自微信公众号“孤独烟” 简单版 我们先明白一点，在mysql中，Int整型的范围如下 我们以无符号整型为例，存储范围为0～4294967295，</description>
     </item>
     
     <item>
+      <title>Maven项目转为Gradle</title>
+      <link>https://www.mingaccount.com/2019/09/gradle-init/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/09/gradle-init/</guid>
+      <description>执行转换命令 gradle init 问题 idea构建控制台乱码 菜单 Help-&amp;gt;Edit Custom VM Options 添加以下VM参数 -Dfile.encoding=utf-8 gradle build失败 idea清除所有失效缓存 File-&amp;gt;invalidate caches/restart gradle输出目录默认</description>
+    </item>
+    
+    <item>
       <title>Java读取文件内容文件头有﻿</title>
-      <link>http://www.mingaccount.com/2019/09/java-stream-bom/</link>
+      <link>https://www.mingaccount.com/2019/09/java-stream-bom/</link>
       <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/09/java-stream-bom/</guid>
+      <guid>https://www.mingaccount.com/2019/09/java-stream-bom/</guid>
       <description>&amp;ldquo;\ufeff&amp;quot;是UTF-8 BOM编码的文件头，代表该文件按照什么字节顺序排序 调用java的工具类 [UnicodeIn</description>
     </item>
     
     <item>
       <title>SparkSession.read().csv()无法定位本地文件的问题</title>
-      <link>http://www.mingaccount.com/2019/09/spark-session-cant-read-local-file/</link>
+      <link>https://www.mingaccount.com/2019/09/spark-session-cant-read-local-file/</link>
       <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/09/spark-session-cant-read-local-file/</guid>
+      <guid>https://www.mingaccount.com/2019/09/spark-session-cant-read-local-file/</guid>
       <description>原因是spark有两个文件头 [file://]代表本地 [hdfs://]代表hdfs路径 如果路径没有文件头，spark会将该路径默认添加上&amp;</description>
     </item>
     
     <item>
       <title>Spring @Value注解无法正确赋值问题</title>
-      <link>http://www.mingaccount.com/2019/09/spring-value-anno-cant-set-value/</link>
+      <link>https://www.mingaccount.com/2019/09/spring-value-anno-cant-set-value/</link>
       <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/09/spring-value-anno-cant-set-value/</guid>
+      <guid>https://www.mingaccount.com/2019/09/spring-value-anno-cant-set-value/</guid>
       <description>正确的调用方式为： @Component public class IconProperties { @Value(&amp;quot;${icon.url}&amp;quot;) private String url; } public class test{ @Autowired IconProperties icon; public void test(){ String url = icon.url; } } 这里有三个需要注意的点： 1.@Value赋值是否正确 2.IconProp</description>
     </item>
     
     <item>
       <title>JOOQ事务处理</title>
-      <link>http://www.mingaccount.com/2019/08/jooq-transaction/</link>
+      <link>https://www.mingaccount.com/2019/08/jooq-transaction/</link>
       <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/08/jooq-transaction/</guid>
+      <guid>https://www.mingaccount.com/2019/08/jooq-transaction/</guid>
       <description>基于Spring 的@Transactional注解，JOOQ可以非常简单的实现事务管理，详细参考JOOQ-Spring Transactional Management 这里主要讨论如Sp</description>
     </item>
     
     <item>
       <title>Mysql循环语句，死循环解决办法</title>
-      <link>http://www.mingaccount.com/2019/08/mysql-dead-cycle/</link>
+      <link>https://www.mingaccount.com/2019/08/mysql-dead-cycle/</link>
       <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/08/mysql-dead-cycle/</guid>
+      <guid>https://www.mingaccount.com/2019/08/mysql-dead-cycle/</guid>
       <description>delimiter // #定义标识符为双斜杠 drop procedure if exists test; #如果存在test存储过程则删除 create procedure test() #创建无参存储过程,名称为test begin declare i int; #申明变量 set i = 0; #变量赋</description>
     </item>
     
     <item>
       <title>[转]Spring中使用@Autowired注解静态实例对象</title>
-      <link>http://www.mingaccount.com/2019/07/spring-autowired-static-object/</link>
+      <link>https://www.mingaccount.com/2019/07/spring-autowired-static-object/</link>
       <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/07/spring-autowired-static-object/</guid>
+      <guid>https://www.mingaccount.com/2019/07/spring-autowired-static-object/</guid>
       <description>问题 最近项目小组在重新规划工程的业务缓存，其中涉及到部分代码重构，过程中发现有些工具类中的静态方法需要依赖别的对象实例（该实例已配置在xml</description>
     </item>
     
     <item>
       <title>Mysql 日期TIMESTAMP类型插入，与系统时间有差异</title>
-      <link>http://www.mingaccount.com/2019/07/mysql-timestamp-time-zone/</link>
+      <link>https://www.mingaccount.com/2019/07/mysql-timestamp-time-zone/</link>
       <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/07/mysql-timestamp-time-zone/</guid>
+      <guid>https://www.mingaccount.com/2019/07/mysql-timestamp-time-zone/</guid>
       <description>1.数据库url后追加 &amp;amp;serverTimezone=Asia/Shanghai 2.修改数据库默认时区 show variables like &amp;quot;%time_zone%&amp;quot;;#查询当前时区 set global time_zone = &#39;+8:00&#39;; #修改mysql</description>
     </item>
     
     <item>
       <title>Java加密类Cipher的使用</title>
-      <link>http://www.mingaccount.com/2019/07/java-cipher/</link>
+      <link>https://www.mingaccount.com/2019/07/java-cipher/</link>
       <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/07/java-cipher/</guid>
+      <guid>https://www.mingaccount.com/2019/07/java-cipher/</guid>
       <description>public class EncryptUtils { private static final String SECRET_KEY_1 = &amp;quot;YIORGA4dBYp6y7u8&amp;quot;; private static final String SECRET_KEY_2 = &amp;quot;C6B8r5y7u7Uh37Sy&amp;quot;; private IvParameterSpec ivParameterSpec; private SecretKeySpec secretKeySpec; private Cipher cipher; public EncryptUtils() throws UnsupportedEncodingException, NoSuchPaddingException, NoSuchAlgorithmException { ivParameterSpec = new IvParameterSpec(SECRET_KEY_1.getBytes(&amp;quot;UTF-8&amp;quot;)); secretKeySpec = new SecretKeySpec(SECRET_KEY_2.getBytes(&amp;quot;UTF-8&amp;quot;), &amp;quot;AES&amp;quot;); cipher = Cipher.getInstance(&amp;quot;AES/CBC/PKCS5PADDING&amp;quot;); } /** * Encrypt the string with this internal algorithm. * * @param toBeEncrypt string object to be encrypt. * @return returns encrypted string.</description>
     </item>
     
     <item>
       <title>spring boot configuration annotation processor not found in classpath</title>
-      <link>http://www.mingaccount.com/2019/07/spring-boot-configuration-exception/</link>
+      <link>https://www.mingaccount.com/2019/07/spring-boot-configuration-exception/</link>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/07/spring-boot-configuration-exception/</guid>
+      <guid>https://www.mingaccount.com/2019/07/spring-boot-configuration-exception/</guid>
       <description>配置有@ConfigurationProperties 注解的类，有如下提示 spring boot configuration annotation processor not found in classpath pom追加配置如下依赖即可 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-configuration-processor&amp;lt;/artifactId&amp;gt; &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; &amp;lt;/dependency&amp;gt;</description>
     </item>
     
     <item>
       <title>Mybatis Generator配置</title>
-      <link>http://www.mingaccount.com/2019/07/mybatis-generator/</link>
+      <link>https://www.mingaccount.com/2019/07/mybatis-generator/</link>
       <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/07/mybatis-generator/</guid>
+      <guid>https://www.mingaccount.com/2019/07/mybatis-generator/</guid>
       <description>配置复杂，比较臃肿，推荐使用idea的插件easyCode pom.xml配置： &amp;lt;!-- mybatis自动生成 start --&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis.generator&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-generator-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.3.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;!--配置文件的</description>
     </item>
     
     <item>
       <title>mySql 插入中文异常 Incorrect string value: &#39;***&#39; for column</title>
-      <link>http://www.mingaccount.com/2019/07/mysql-insert-chinese-exception/</link>
+      <link>https://www.mingaccount.com/2019/07/mysql-insert-chinese-exception/</link>
       <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/07/mysql-insert-chinese-exception/</guid>
+      <guid>https://www.mingaccount.com/2019/07/mysql-insert-chinese-exception/</guid>
       <description>问题是由mysql的编码问题造成，因为建表的时候没有指定utf-8作为字符集 建议重新建表，或者直接调整对应字段的字符集 1.修改mysql编码</description>
     </item>
     
     <item>
       <title>nexus简介</title>
-      <link>http://www.mingaccount.com/2019/07/nexus/</link>
+      <link>https://www.mingaccount.com/2019/07/nexus/</link>
       <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/07/nexus/</guid>
+      <guid>https://www.mingaccount.com/2019/07/nexus/</guid>
       <description>简介 Nexus repository Manager可以作为Maven的私服，意味着在Maven中央仓库和你本地项目之间多了一层代理。在本地访问已经加载过的jar包时，私</description>
     </item>
     
     <item>
       <title>lombok详解</title>
-      <link>http://www.mingaccount.com/2019/07/lombok/</link>
+      <link>https://www.mingaccount.com/2019/07/lombok/</link>
       <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/07/lombok/</guid>
+      <guid>https://www.mingaccount.com/2019/07/lombok/</guid>
       <description>val 精简变量修饰，类似Scala，但是默认追加了final修饰符 val list = new ArrayList&amp;lt;String&amp;gt;(); //等同于 final ArrayList&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(); var 精简变量修饰，类似Scala，修饰变量 val list =</description>
     </item>
     
     <item>
       <title>Maven jar包冲突导致NoClassDefFoundError</title>
-      <link>http://www.mingaccount.com/2019/07/maven-jar-clash/</link>
+      <link>https://www.mingaccount.com/2019/07/maven-jar-clash/</link>
       <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/07/maven-jar-clash/</guid>
+      <guid>https://www.mingaccount.com/2019/07/maven-jar-clash/</guid>
       <description>问题背景 项目的两个依赖，包含了同一个路径，然而因为项目原因还不能删除其中任何一个 代码在本地和线上都能正常通过编译 但是一执行到对应代码就会抛出</description>
     </item>
     
     <item>
       <title>FastJson解析结果部分属性为null的问题</title>
-      <link>http://www.mingaccount.com/2019/07/fastjson-undes-property-isnull/</link>
+      <link>https://www.mingaccount.com/2019/07/fastjson-undes-property-isnull/</link>
       <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/07/fastjson-undes-property-isnull/</guid>
+      <guid>https://www.mingaccount.com/2019/07/fastjson-undes-property-isnull/</guid>
       <description>在协作开发时，从接口获取到的json实体部分为空，但是在调试时发现原对象没有任何问题，但是经过解析成为json后，部分属性变为： &amp;ldquo</description>
-    </item>
-    
-    <item>
-      <title>SparkSql函数文档</title>
-      <link>http://www.mingaccount.com/2019/07/spark-sql-api/</link>
-      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2019/07/spark-sql-api/</guid>
-      <description>spark sql也支持函数，但与通常的数据库函数有些区别，附上官方api文档，以作备忘： http://spark.apache.org/docs/latest/api/sql/index.html#acos</description>
-    </item>
-    
-    <item>
-      <title>Maven如何正确导入本地包，保证在线上正常运行</title>
-      <link>http://www.mingaccount.com/2019/06/maven-how-to-import-local-jar/</link>
-      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2019/06/maven-how-to-import-local-jar/</guid>
-      <description>pom设置 &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-install-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.5.1&amp;lt;/version&amp;gt; &amp;lt;executions&amp;gt; &amp;lt;execution&amp;gt; &amp;lt;id&amp;gt;install-jar-lib&amp;lt;/id&amp;gt; &amp;lt;goals&amp;gt; &amp;lt;goal&amp;gt;install-file&amp;lt;/goal&amp;gt; &amp;lt;/goals&amp;gt; &amp;lt;!--在mvn package的时候将jar包追加到本地仓库，可修改为validate，以线上容器编译</description>
     </item>
     
   </channel>

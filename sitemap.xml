@@ -3,1294 +3,1321 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.mingaccount.com/</loc>
+    <loc>https://www.mingaccount.com/</loc>
     <lastmod>2020-10-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/npm/</loc>
+    <loc>https://www.mingaccount.com/tags/npm/</loc>
     <lastmod>2020-10-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/posts/</loc>
+    <loc>https://www.mingaccount.com/posts/</loc>
     <lastmod>2020-10-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/</loc>
+    <loc>https://www.mingaccount.com/tags/</loc>
     <lastmod>2020-10-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/windows/</loc>
+    <loc>https://www.mingaccount.com/tags/windows/</loc>
     <lastmod>2020-10-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2020/10/windows-npm-exception/</loc>
+    <loc>https://www.mingaccount.com/2020/10/windows-npm-exception/</loc>
     <lastmod>2020-10-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2020/08/wsl-exception/</loc>
+    <loc>https://www.mingaccount.com/2020/08/wsl-exception/</loc>
     <lastmod>2020-08-10T13:37:30+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/oracle/</loc>
+    <loc>https://www.mingaccount.com/tags/oracle/</loc>
     <lastmod>2020-07-30T17:42:55+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2020/07/oracle-extract/</loc>
+    <loc>https://www.mingaccount.com/2020/07/oracle-extract/</loc>
     <lastmod>2020-07-30T17:42:55+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/jooq/</loc>
+    <loc>https://www.mingaccount.com/tags/jooq/</loc>
     <lastmod>2020-07-14T11:16:55+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2020/07/jooq-default-schema/</loc>
+    <loc>https://www.mingaccount.com/2020/07/jooq-default-schema/</loc>
     <lastmod>2020-07-14T11:16:55+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/druid/</loc>
+    <loc>https://www.mingaccount.com/2020/07/wsl-restart/</loc>
+    <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/tags/druid/</loc>
     <lastmod>2020-06-16T15:38:20+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2020/06/druid-connection-retry/</loc>
+    <loc>https://www.mingaccount.com/2020/06/druid-connection-retry/</loc>
     <lastmod>2020-06-16T15:38:20+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/hive/</loc>
+    <loc>https://www.mingaccount.com/tags/hive/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2020/05/hive-cast-exception/</loc>
+    <loc>https://www.mingaccount.com/2020/05/hive-cast-exception/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/spark/</loc>
+    <loc>https://www.mingaccount.com/tags/spark/</loc>
     <lastmod>2020-05-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2020/05/spark-write-null-to-empty-str/</loc>
+    <loc>https://www.mingaccount.com/2020/05/spark-write-null-to-empty-str/</loc>
     <lastmod>2020-05-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2020/04/spark-precision-loss/</loc>
+    <loc>https://www.mingaccount.com/2020/04/spark-precision-loss/</loc>
     <lastmod>2020-04-30T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/mysql/</loc>
+    <loc>https://www.mingaccount.com/tags/mysql/</loc>
     <lastmod>2020-04-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2020/04/mysql-duplicate-value-add-appendix/</loc>
+    <loc>https://www.mingaccount.com/2020/04/mysql-duplicate-value-add-appendix/</loc>
     <lastmod>2020-04-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2020/02/sbt-repository-mirror/</loc>
+    <loc>https://www.mingaccount.com/2020/02/sbt-repository-mirror/</loc>
     <lastmod>2020-02-24T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/scala/</loc>
+    <loc>https://www.mingaccount.com/tags/scala/</loc>
     <lastmod>2020-02-24T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/website-build/</loc>
+    <loc>https://www.mingaccount.com/tags/website-build/</loc>
     <lastmod>2020-02-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2020/02/how-to-bind-ip-to-domain/</loc>
+    <loc>https://www.mingaccount.com/2020/02/how-to-bind-ip-to-domain/</loc>
     <lastmod>2020-02-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2020/02/hive-ratio-implement/</loc>
+    <loc>https://www.mingaccount.com/2020/02/hive-ratio-implement/</loc>
     <lastmod>2020-02-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2020/02/hive-todate-tochar/</loc>
+    <loc>https://www.mingaccount.com/2020/02/hive-todate-tochar/</loc>
     <lastmod>2020-02-03T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/regexp/</loc>
+    <loc>https://www.mingaccount.com/tags/regexp/</loc>
     <lastmod>2020-01-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2020/01/regex-match-words-like-idea/</loc>
+    <loc>https://www.mingaccount.com/2020/01/regex-match-words-like-idea/</loc>
     <lastmod>2020-01-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/12/mysql-explain/</loc>
+    <loc>https://www.mingaccount.com/2019/12/mysql-explain/</loc>
     <lastmod>2019-12-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/hadoop/</loc>
+    <loc>https://www.mingaccount.com/tags/hadoop/</loc>
     <lastmod>2019-12-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/12/hadoop-shit/</loc>
+    <loc>https://www.mingaccount.com/2019/12/hadoop-shit/</loc>
     <lastmod>2019-12-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/12/field-injection-not-recommended/</loc>
+    <loc>https://www.mingaccount.com/2019/12/field-injection-not-recommended/</loc>
     <lastmod>2019-12-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/spring/</loc>
+    <loc>https://www.mingaccount.com/tags/spring/</loc>
     <lastmod>2019-12-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/12/hadoop-ssh-local-host-no-paw/</loc>
+    <loc>https://www.mingaccount.com/2019/12/hadoop-ssh-local-host-no-paw/</loc>
     <lastmod>2019-12-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/db2/</loc>
+    <loc>https://www.mingaccount.com/tags/db2/</loc>
     <lastmod>2019-11-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/11/db2-cast-decimal-exception/</loc>
+    <loc>https://www.mingaccount.com/2019/11/db2-cast-decimal-exception/</loc>
     <lastmod>2019-11-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/11/db2sumerror/</loc>
+    <loc>https://www.mingaccount.com/2019/11/db2sumerror/</loc>
     <lastmod>2019-11-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/10/mysql-table-design/</loc>
+    <loc>https://www.mingaccount.com/2019/10/mysql-table-design/</loc>
     <lastmod>2019-10-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/10/divide-table-how-to-deploy/</loc>
+    <loc>https://www.mingaccount.com/2019/10/divide-table-how-to-deploy/</loc>
     <lastmod>2019-10-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/10/auto-increment-id-is-dry/</loc>
+    <loc>https://www.mingaccount.com/2019/10/auto-increment-id-is-dry/</loc>
     <lastmod>2019-10-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/java/</loc>
+    <loc>https://www.mingaccount.com/tags/gradle/</loc>
+    <lastmod>2019-09-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/2019/09/gradle-init/</loc>
+    <lastmod>2019-09-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/tags/java/</loc>
     <lastmod>2019-09-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/09/java-stream-bom/</loc>
+    <loc>https://www.mingaccount.com/2019/09/java-stream-bom/</loc>
     <lastmod>2019-09-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/09/spark-session-cant-read-local-file/</loc>
+    <loc>https://www.mingaccount.com/2019/09/spark-session-cant-read-local-file/</loc>
     <lastmod>2019-09-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/09/spring-value-anno-cant-set-value/</loc>
+    <loc>https://www.mingaccount.com/2019/09/spring-value-anno-cant-set-value/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/08/jooq-transaction/</loc>
+    <loc>https://www.mingaccount.com/2019/08/jooq-transaction/</loc>
     <lastmod>2019-08-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/08/mysql-dead-cycle/</loc>
+    <loc>https://www.mingaccount.com/2019/08/mysql-dead-cycle/</loc>
     <lastmod>2019-08-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/07/spring-autowired-static-object/</loc>
+    <loc>https://www.mingaccount.com/2019/07/spring-autowired-static-object/</loc>
     <lastmod>2019-07-24T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/07/mysql-timestamp-time-zone/</loc>
+    <loc>https://www.mingaccount.com/2019/07/mysql-timestamp-time-zone/</loc>
     <lastmod>2019-07-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/07/java-cipher/</loc>
+    <loc>https://www.mingaccount.com/2019/07/java-cipher/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/07/spring-boot-configuration-exception/</loc>
+    <loc>https://www.mingaccount.com/2019/07/spring-boot-configuration-exception/</loc>
     <lastmod>2019-07-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/mybatis/</loc>
+    <loc>https://www.mingaccount.com/tags/mybatis/</loc>
     <lastmod>2019-07-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/07/mybatis-generator/</loc>
+    <loc>https://www.mingaccount.com/2019/07/mybatis-generator/</loc>
     <lastmod>2019-07-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/07/mysql-insert-chinese-exception/</loc>
+    <loc>https://www.mingaccount.com/2019/07/mysql-insert-chinese-exception/</loc>
     <lastmod>2019-07-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/maven/</loc>
+    <loc>https://www.mingaccount.com/tags/maven/</loc>
     <lastmod>2019-07-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/nexus/</loc>
+    <loc>https://www.mingaccount.com/tags/nexus/</loc>
     <lastmod>2019-07-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/07/nexus/</loc>
+    <loc>https://www.mingaccount.com/2019/07/nexus/</loc>
     <lastmod>2019-07-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/lombok/</loc>
+    <loc>https://www.mingaccount.com/tags/lombok/</loc>
     <lastmod>2019-07-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/07/lombok/</loc>
+    <loc>https://www.mingaccount.com/2019/07/lombok/</loc>
     <lastmod>2019-07-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/07/maven-jar-clash/</loc>
+    <loc>https://www.mingaccount.com/2019/07/maven-jar-clash/</loc>
     <lastmod>2019-07-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/07/fastjson-undes-property-isnull/</loc>
+    <loc>https://www.mingaccount.com/2019/07/fastjson-undes-property-isnull/</loc>
     <lastmod>2019-07-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/07/spark-sql-api/</loc>
+    <loc>https://www.mingaccount.com/2019/07/spark-sql-api/</loc>
     <lastmod>2019-07-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/06/maven-how-to-import-local-jar/</loc>
+    <loc>https://www.mingaccount.com/2019/06/maven-how-to-import-local-jar/</loc>
     <lastmod>2019-06-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/linux/</loc>
+    <loc>https://www.mingaccount.com/tags/linux/</loc>
     <lastmod>2019-05-31T19:03:55+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/05/server-bbr/</loc>
+    <loc>https://www.mingaccount.com/2019/05/server-bbr/</loc>
     <lastmod>2019-05-31T19:03:55+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/05/scala-base-class-stucture/</loc>
+    <loc>https://www.mingaccount.com/2019/05/scala-base-class-stucture/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/05/scala-operation-order/</loc>
+    <loc>https://www.mingaccount.com/2019/05/scala-operation-order/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/03/java-upload-file-verify-format/</loc>
+    <loc>https://www.mingaccount.com/2019/03/java-upload-file-verify-format/</loc>
     <lastmod>2019-03-25T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/03/markdown-compile-error/</loc>
+    <loc>https://www.mingaccount.com/2019/03/markdown-compile-error/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/02/scala-tail-recursive/</loc>
+    <loc>https://www.mingaccount.com/2019/02/scala-tail-recursive/</loc>
     <lastmod>2019-02-25T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/markdown/</loc>
+    <loc>https://www.mingaccount.com/tags/markdown/</loc>
     <lastmod>2019-01-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2019/01/markdown-common-symbol/</loc>
+    <loc>https://www.mingaccount.com/2019/01/markdown-common-symbol/</loc>
     <lastmod>2019-01-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/11/maven-plugin/</loc>
+    <loc>https://www.mingaccount.com/2018/11/maven-plugin/</loc>
     <lastmod>2018-11-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/h2/</loc>
+    <loc>https://www.mingaccount.com/tags/h2/</loc>
     <lastmod>2018-10-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/postgresql/</loc>
+    <loc>https://www.mingaccount.com/tags/postgresql/</loc>
     <lastmod>2018-10-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/10/h2-drop-exception/</loc>
+    <loc>https://www.mingaccount.com/2018/10/h2-drop-exception/</loc>
     <lastmod>2018-10-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/09/hive-out-of-sequence/</loc>
+    <loc>https://www.mingaccount.com/2018/09/hive-out-of-sequence/</loc>
     <lastmod>2018-09-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/09/spring-boot-mybatis-multi-source/</loc>
+    <loc>https://www.mingaccount.com/2018/09/spring-boot-mybatis-multi-source/</loc>
     <lastmod>2018-09-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/ehcache/</loc>
+    <loc>https://www.mingaccount.com/tags/ehcache/</loc>
     <lastmod>2018-09-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/redis/</loc>
+    <loc>https://www.mingaccount.com/tags/redis/</loc>
     <lastmod>2018-09-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/09/spring-boot-ehcache/</loc>
+    <loc>https://www.mingaccount.com/2018/09/spring-boot-ehcache/</loc>
     <lastmod>2018-09-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/09/spring-boot-redis/</loc>
+    <loc>https://www.mingaccount.com/2018/09/spring-boot-redis/</loc>
     <lastmod>2018-09-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/09/spring-cache/</loc>
+    <loc>https://www.mingaccount.com/2018/09/spring-cache/</loc>
     <lastmod>2018-09-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/09/big-web-bala-bala/</loc>
+    <loc>https://www.mingaccount.com/2018/09/big-web-bala-bala/</loc>
     <lastmod>2018-09-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/08/java8-for-functional/</loc>
+    <loc>https://www.mingaccount.com/2018/08/java8-for-functional/</loc>
     <lastmod>2018-08-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/08/java8-lamda-interface/</loc>
+    <loc>https://www.mingaccount.com/2018/08/java8-lamda-interface/</loc>
     <lastmod>2018-08-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/08/spring-boot-get-file-path/</loc>
+    <loc>https://www.mingaccount.com/2018/08/spring-boot-get-file-path/</loc>
     <lastmod>2018-08-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/08/linux-common-command/</loc>
+    <loc>https://www.mingaccount.com/2018/08/linux-common-command/</loc>
     <lastmod>2018-08-14T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/08/vim-common-command/</loc>
+    <loc>https://www.mingaccount.com/2018/08/vim-common-command/</loc>
     <lastmod>2018-08-14T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/08/spring-boot-schedule/</loc>
+    <loc>https://www.mingaccount.com/2018/08/spring-boot-schedule/</loc>
     <lastmod>2018-08-12T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/08/static-sturcture-design/</loc>
+    <loc>https://www.mingaccount.com/2018/08/static-sturcture-design/</loc>
     <lastmod>2018-08-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/08/request-param-lost-add-symbol/</loc>
+    <loc>https://www.mingaccount.com/2018/08/request-param-lost-add-symbol/</loc>
     <lastmod>2018-08-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/07/maven-package-complete-dependency/</loc>
+    <loc>https://www.mingaccount.com/2018/07/maven-package-complete-dependency/</loc>
     <lastmod>2018-07-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/07/windows-delete-disk-partition/</loc>
+    <loc>https://www.mingaccount.com/2018/07/windows-delete-disk-partition/</loc>
     <lastmod>2018-07-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/06/lambda-sam/</loc>
+    <loc>https://www.mingaccount.com/2018/06/lambda-sam/</loc>
     <lastmod>2018-06-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/06/npm-taobao-mirror/</loc>
+    <loc>https://www.mingaccount.com/2018/06/npm-taobao-mirror/</loc>
     <lastmod>2018-06-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/06/java-reflection-common-api/</loc>
+    <loc>https://www.mingaccount.com/2018/06/java-reflection-common-api/</loc>
     <lastmod>2018-06-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/06/mysql-cant-login-with-root/</loc>
+    <loc>https://www.mingaccount.com/2018/06/mysql-cant-login-with-root/</loc>
     <lastmod>2018-06-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/06/maven-deploy-jar-to-remote-repository/</loc>
+    <loc>https://www.mingaccount.com/2018/06/maven-deploy-jar-to-remote-repository/</loc>
     <lastmod>2018-06-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/06/avg-ignore-null/</loc>
+    <loc>https://www.mingaccount.com/2018/06/avg-ignore-null/</loc>
     <lastmod>2018-06-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/05/spring-boot-test/</loc>
+    <loc>https://www.mingaccount.com/2018/05/spring-boot-test/</loc>
     <lastmod>2018-05-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/05/maven-stadard-dir-layout/</loc>
+    <loc>https://www.mingaccount.com/2018/05/maven-stadard-dir-layout/</loc>
     <lastmod>2018-05-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/05/java9-new-feature/</loc>
+    <loc>https://www.mingaccount.com/2018/05/java9-new-feature/</loc>
     <lastmod>2018-05-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/git/</loc>
+    <loc>https://www.mingaccount.com/tags/git/</loc>
     <lastmod>2018-05-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/05/git-push-exception-no-anonymous/</loc>
+    <loc>https://www.mingaccount.com/2018/05/git-push-exception-no-anonymous/</loc>
     <lastmod>2018-05-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/05/git-upload-local-project/</loc>
+    <loc>https://www.mingaccount.com/2018/05/git-upload-local-project/</loc>
     <lastmod>2018-05-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/05/git-common-command/</loc>
+    <loc>https://www.mingaccount.com/2018/05/git-common-command/</loc>
     <lastmod>2018-05-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/05/hutool/</loc>
+    <loc>https://www.mingaccount.com/2018/05/hutool/</loc>
     <lastmod>2018-05-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/05/spring-transaction-invalid/</loc>
+    <loc>https://www.mingaccount.com/2018/05/spring-transaction-invalid/</loc>
     <lastmod>2018-05-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/05/quartz-cron/</loc>
+    <loc>https://www.mingaccount.com/2018/05/quartz-cron/</loc>
     <lastmod>2018-05-03T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/03/windows-dns/</loc>
+    <loc>https://www.mingaccount.com/2018/03/windows-dns/</loc>
     <lastmod>2018-03-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/03/int-equals-integer/</loc>
+    <loc>https://www.mingaccount.com/2018/03/int-equals-integer/</loc>
     <lastmod>2018-03-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/03/char-encode/</loc>
+    <loc>https://www.mingaccount.com/2018/03/char-encode/</loc>
     <lastmod>2018-03-12T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/03/java-avoid-null-pointer/</loc>
+    <loc>https://www.mingaccount.com/2018/03/java-avoid-null-pointer/</loc>
     <lastmod>2018-03-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/03/request-body-read-twice/</loc>
+    <loc>https://www.mingaccount.com/2018/03/request-body-read-twice/</loc>
     <lastmod>2018-03-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/python/</loc>
+    <loc>https://www.mingaccount.com/tags/python/</loc>
     <lastmod>2018-01-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/01/python-method-define/</loc>
+    <loc>https://www.mingaccount.com/2018/01/python-method-define/</loc>
     <lastmod>2018-01-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/01/get-request-global/</loc>
+    <loc>https://www.mingaccount.com/2018/01/get-request-global/</loc>
     <lastmod>2018-01-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/design-pattern/</loc>
+    <loc>https://www.mingaccount.com/tags/design-pattern/</loc>
     <lastmod>2018-01-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/01/java-fetch-current-classname-methodname/</loc>
+    <loc>https://www.mingaccount.com/2018/01/java-fetch-current-classname-methodname/</loc>
     <lastmod>2018-01-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2018/01/observe-patter-and-java-agent/</loc>
+    <loc>https://www.mingaccount.com/2018/01/observe-patter-and-java-agent/</loc>
     <lastmod>2018-01-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/11/class-forname/</loc>
+    <loc>https://www.mingaccount.com/2017/11/class-forname/</loc>
     <lastmod>2017-11-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/11/list-addall-exception/</loc>
+    <loc>https://www.mingaccount.com/2017/11/list-addall-exception/</loc>
     <lastmod>2017-11-12T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/11/maven-site/</loc>
+    <loc>https://www.mingaccount.com/2017/11/maven-site/</loc>
     <lastmod>2017-11-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/11/maven-multiple-module/</loc>
+    <loc>https://www.mingaccount.com/2017/11/maven-multiple-module/</loc>
     <lastmod>2017-11-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/10/java-syntatic-sugar/</loc>
+    <loc>https://www.mingaccount.com/2017/10/java-syntatic-sugar/</loc>
     <lastmod>2017-10-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/10/java-encode/</loc>
+    <loc>https://www.mingaccount.com/2017/10/java-encode/</loc>
     <lastmod>2017-10-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/10/maven-filter-resources-file/</loc>
+    <loc>https://www.mingaccount.com/2017/10/maven-filter-resources-file/</loc>
     <lastmod>2017-10-12T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/10/split-regexp/</loc>
+    <loc>https://www.mingaccount.com/2017/10/split-regexp/</loc>
     <lastmod>2017-10-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/09/java8-parallel/</loc>
+    <loc>https://www.mingaccount.com/2017/09/java8-parallel/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/09/lambda-reduce/</loc>
+    <loc>https://www.mingaccount.com/2017/09/lambda-reduce/</loc>
     <lastmod>2017-09-25T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/09/map-and-flatmap/</loc>
+    <loc>https://www.mingaccount.com/2017/09/map-and-flatmap/</loc>
     <lastmod>2017-09-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/09/common-regexp/</loc>
+    <loc>https://www.mingaccount.com/2017/09/common-regexp/</loc>
     <lastmod>2017-09-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/09/mysql-create-view-exception/</loc>
+    <loc>https://www.mingaccount.com/2017/09/mysql-create-view-exception/</loc>
     <lastmod>2017-09-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/junit4/</loc>
+    <loc>https://www.mingaccount.com/tags/junit4/</loc>
     <lastmod>2017-09-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/junit5/</loc>
+    <loc>https://www.mingaccount.com/tags/junit5/</loc>
     <lastmod>2017-09-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/mockmvc/</loc>
+    <loc>https://www.mingaccount.com/tags/mockmvc/</loc>
     <lastmod>2017-09-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/09/spring-test/</loc>
+    <loc>https://www.mingaccount.com/2017/09/spring-test/</loc>
     <lastmod>2017-09-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/testng/</loc>
+    <loc>https://www.mingaccount.com/tags/testng/</loc>
     <lastmod>2017-09-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/unit-test/</loc>
+    <loc>https://www.mingaccount.com/tags/unit-test/</loc>
     <lastmod>2017-09-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/09/linux-sh-exception/</loc>
+    <loc>https://www.mingaccount.com/2017/09/linux-sh-exception/</loc>
     <lastmod>2017-09-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/09/qps-tps-pv-andsoon/</loc>
+    <loc>https://www.mingaccount.com/2017/09/qps-tps-pv-andsoon/</loc>
     <lastmod>2017-09-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/08/exception-and-result-handler/</loc>
+    <loc>https://www.mingaccount.com/2017/08/exception-and-result-handler/</loc>
     <lastmod>2017-08-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/jackson/</loc>
+    <loc>https://www.mingaccount.com/tags/jackson/</loc>
     <lastmod>2017-08-12T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/08/jackson-deserialize-ignore-absence-element/</loc>
+    <loc>https://www.mingaccount.com/2017/08/jackson-deserialize-ignore-absence-element/</loc>
     <lastmod>2017-08-12T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/08/maven-profile/</loc>
+    <loc>https://www.mingaccount.com/2017/08/maven-profile/</loc>
     <lastmod>2017-08-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/08/mysql-table-name-case-insensitive/</loc>
+    <loc>https://www.mingaccount.com/2017/08/mysql-table-name-case-insensitive/</loc>
     <lastmod>2017-08-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/08/request-get-client-id/</loc>
+    <loc>https://www.mingaccount.com/2017/08/request-get-client-id/</loc>
     <lastmod>2017-08-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/07/maven-release/</loc>
+    <loc>https://www.mingaccount.com/2017/07/maven-release/</loc>
     <lastmod>2017-07-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/07/mysql-batch-update/</loc>
+    <loc>https://www.mingaccount.com/2017/07/mysql-batch-update/</loc>
     <lastmod>2017-07-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/07/mysql-startup-exception/</loc>
+    <loc>https://www.mingaccount.com/2017/07/mysql-startup-exception/</loc>
     <lastmod>2017-07-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/07/markdown-lifecycle/</loc>
+    <loc>https://www.mingaccount.com/2017/07/markdown-lifecycle/</loc>
     <lastmod>2017-07-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/06/maven-dependency-scope/</loc>
+    <loc>https://www.mingaccount.com/2017/06/maven-dependency-scope/</loc>
     <lastmod>2017-06-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/06/maven-common-command/</loc>
+    <loc>https://www.mingaccount.com/2017/06/maven-common-command/</loc>
     <lastmod>2017-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/06/gson-scientific-notation/</loc>
+    <loc>https://www.mingaccount.com/2017/06/gson-scientific-notation/</loc>
     <lastmod>2017-06-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/06/spring-aop/</loc>
+    <loc>https://www.mingaccount.com/2017/06/spring-aop/</loc>
     <lastmod>2017-06-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/06/method-get-all-argnames/</loc>
+    <loc>https://www.mingaccount.com/2017/06/method-get-all-argnames/</loc>
     <lastmod>2017-06-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/05/java-string-special-symbol-handler/</loc>
+    <loc>https://www.mingaccount.com/2017/05/java-string-special-symbol-handler/</loc>
     <lastmod>2017-05-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</loc>
+    <loc>https://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</loc>
     <lastmod>2017-05-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/05/java-method-first-default-param/</loc>
+    <loc>https://www.mingaccount.com/2017/05/java-method-first-default-param/</loc>
     <lastmod>2017-05-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/05/pom-tag/</loc>
+    <loc>https://www.mingaccount.com/2017/05/pom-tag/</loc>
     <lastmod>2017-05-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/05/mysql-oracle-case-sensitive/</loc>
+    <loc>https://www.mingaccount.com/2017/05/mysql-oracle-case-sensitive/</loc>
     <lastmod>2017-05-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/05/mysql-compare-sensitive/</loc>
+    <loc>https://www.mingaccount.com/2017/05/mysql-compare-sensitive/</loc>
     <lastmod>2017-05-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/05/spring-boot-entry-anno/</loc>
+    <loc>https://www.mingaccount.com/2017/05/spring-boot-entry-anno/</loc>
     <lastmod>2017-05-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/04/jackson-global-date-format/</loc>
+    <loc>https://www.mingaccount.com/2017/04/jackson-global-date-format/</loc>
     <lastmod>2017-04-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/04/jackson/</loc>
+    <loc>https://www.mingaccount.com/2017/04/jackson/</loc>
     <lastmod>2017-04-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/04/modify-spring-boot-banner/</loc>
+    <loc>https://www.mingaccount.com/2017/04/modify-spring-boot-banner/</loc>
     <lastmod>2017-04-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/04/spring-properties-common-key/</loc>
+    <loc>https://www.mingaccount.com/2017/04/spring-properties-common-key/</loc>
     <lastmod>2017-04-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2017/01/spring-boot-external-properties/</loc>
+    <loc>https://www.mingaccount.com/2017/01/spring-boot-external-properties/</loc>
     <lastmod>2017-01-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2016/08/try-with-resources/</loc>
+    <loc>https://www.mingaccount.com/2016/08/try-with-resources/</loc>
     <lastmod>2016-08-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2016/07/mysql-compare-string-and-number/</loc>
+    <loc>https://www.mingaccount.com/2016/07/mysql-compare-string-and-number/</loc>
     <lastmod>2016-07-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2016/06/pojo-builder/</loc>
+    <loc>https://www.mingaccount.com/2016/06/pojo-builder/</loc>
     <lastmod>2016-06-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2016/05/mybatis-get-auto-increment-id/</loc>
+    <loc>https://www.mingaccount.com/2016/05/mybatis-get-auto-increment-id/</loc>
     <lastmod>2016-05-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2016/05/assert-common-method/</loc>
+    <loc>https://www.mingaccount.com/2016/05/assert-common-method/</loc>
     <lastmod>2016-05-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2016/05/mysql-like-underline/</loc>
+    <loc>https://www.mingaccount.com/2016/05/mysql-like-underline/</loc>
     <lastmod>2016-05-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/tags/protocol/</loc>
+    <loc>https://www.mingaccount.com/tags/protocol/</loc>
     <lastmod>2016-05-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2016/05/http-heads/</loc>
+    <loc>https://www.mingaccount.com/2016/05/http-heads/</loc>
     <lastmod>2016-05-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2016/05/status-code/</loc>
+    <loc>https://www.mingaccount.com/2016/05/status-code/</loc>
     <lastmod>2016-05-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2016/05/content-type/</loc>
+    <loc>https://www.mingaccount.com/2016/05/content-type/</loc>
     <lastmod>2016-05-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2016/04/java-comment-refere-class/</loc>
+    <loc>https://www.mingaccount.com/2016/04/java-comment-refere-class/</loc>
     <lastmod>2016-04-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2016/03/mysql-modify-and-change/</loc>
+    <loc>https://www.mingaccount.com/2016/03/mysql-modify-and-change/</loc>
     <lastmod>2016-03-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2016/03/annotation/</loc>
+    <loc>https://www.mingaccount.com/2016/03/annotation/</loc>
     <lastmod>2016-03-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2016/01/java-final-constructor/</loc>
+    <loc>https://www.mingaccount.com/2016/01/java-final-constructor/</loc>
     <lastmod>2016-01-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/2016/01/oracle-limit/</loc>
+    <loc>https://www.mingaccount.com/2016/01/oracle-limit/</loc>
     <lastmod>2016-01-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/categories/</loc>
+    <loc>https://www.mingaccount.com/1/01/resume/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.mingaccount.com/series/</loc>
+    <loc>https://www.mingaccount.com/categories/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/series/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

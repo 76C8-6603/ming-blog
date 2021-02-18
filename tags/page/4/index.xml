@@ -2,192 +2,192 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Ming Blog</title>
-    <link>http://www.mingaccount.com/tags/</link>
+    <link>https://www.mingaccount.com/tags/</link>
     <description>Recent content in Tags on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 18 Oct 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://www.mingaccount.com/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.mingaccount.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Linux常用命令备忘</title>
+      <link>https://www.mingaccount.com/2018/08/linux-common-command/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/08/linux-common-command/</guid>
+      <description>cd - #查看上一次所在的目录 cat /etc/hosts #文档查看 ls #查看当前目录下所有文件 pwd #查看当前目录的绝对路径 ll #查看目录下文件的详细信息，包括权限属组等信息</description>
+    </item>
+    
+    <item>
+      <title>vim命令备忘</title>
+      <link>https://www.mingaccount.com/2018/08/vim-common-command/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/08/vim-common-command/</guid>
+      <description>vi /etc/hosts i 修改模式 esc 退出修改 :q 正常退出(文件没有修改 :q! 不保存退出 :wq 保存退出 G 跳到末尾行 dd 删除当前行 gg 跳到第一行第一个字符 $ 跳到当前行的最后一个字</description>
+    </item>
+    
+    <item>
       <title>SpringBoot定时任务</title>
-      <link>http://www.mingaccount.com/2018/08/spring-boot-schedule/</link>
+      <link>https://www.mingaccount.com/2018/08/spring-boot-schedule/</link>
       <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/08/spring-boot-schedule/</guid>
+      <guid>https://www.mingaccount.com/2018/08/spring-boot-schedule/</guid>
       <description>开启定时任务 @Configuration @EnableScheduling @ComponentScan(basePackages=&amp;quot;com.myco.tasks&amp;quot;) public class AppConfig { } 如果需要对定时任务的生命周期有其他的操作，可以实现接口SchedulingConfigurer @Configuration @EnableScheduling public class AppConfig implements SchedulingConfigurer { @Override</description>
     </item>
     
     <item>
       <title>大浏览量系统的静态化架构设计</title>
-      <link>http://www.mingaccount.com/2018/08/static-sturcture-design/</link>
+      <link>https://www.mingaccount.com/2018/08/static-sturcture-design/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/08/static-sturcture-design/</guid>
+      <guid>https://www.mingaccount.com/2018/08/static-sturcture-design/</guid>
       <description>本篇文章着重整理什么是静态化系统架构，以及静态化架构的几种方案。 首先先贴一个淘宝系统升级的历程(09~13)： 09年，系统拆分，静态文件合并</description>
     </item>
     
     <item>
       <title>请求参数中的&#43;号为什么会丢失,如何保证参数完整</title>
-      <link>http://www.mingaccount.com/2018/08/request-param-lost-add-symbol/</link>
+      <link>https://www.mingaccount.com/2018/08/request-param-lost-add-symbol/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/08/request-param-lost-add-symbol/</guid>
+      <guid>https://www.mingaccount.com/2018/08/request-param-lost-add-symbol/</guid>
       <description>最近在开发中碰见一个问题，后端代码调用接口，在请求端参数没有任何问题，但是当接口接收到参数时，其中的加号全部变为了空格。 在查阅资料后发现是U</description>
     </item>
     
     <item>
       <title>Maven package完整依赖jar包</title>
-      <link>http://www.mingaccount.com/2018/07/maven-package-complete-dependency/</link>
+      <link>https://www.mingaccount.com/2018/07/maven-package-complete-dependency/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/07/maven-package-complete-dependency/</guid>
+      <guid>https://www.mingaccount.com/2018/07/maven-package-complete-dependency/</guid>
       <description>maven package生成的jar包默认是没有项目依赖的 需要导出的jar包包含项目所有的依赖，需要配置pom： &amp;lt;build&amp;gt; &amp;lt;finalName&amp;gt;yourApp&amp;lt;/finalName&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-shade-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;shadedArtifactAttached&amp;gt;true&amp;lt;/shadedArtifactAttached&amp;gt; &amp;lt;shadedClassifierName&amp;gt;jar-with-dependencies&amp;lt;/shadedClassifierName&amp;gt; &amp;lt;!-- Any name that makes sense --&amp;gt; &amp;lt;outputDirectory&amp;gt;../output/jar-with-dependencies&amp;lt;/outputDirectory&amp;gt; &amp;lt;/configuration&amp;gt;</description>
     </item>
     
     <item>
       <title>Windows删除启动盘的所有分区</title>
-      <link>http://www.mingaccount.com/2018/07/windows-delete-disk-partition/</link>
+      <link>https://www.mingaccount.com/2018/07/windows-delete-disk-partition/</link>
       <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/07/windows-delete-disk-partition/</guid>
+      <guid>https://www.mingaccount.com/2018/07/windows-delete-disk-partition/</guid>
       <description>win10右键徽标-&amp;gt;Windows Powershell(管理员) dispark list disk 展示所有磁盘 select disk # 确认好所选目标磁盘，#号为id clean 删除选中磁盘</description>
     </item>
     
     <item>
       <title>[译]lambda表达式对 SAM （单个抽象方法类）type的处理方式</title>
-      <link>http://www.mingaccount.com/2018/06/lambda-sam/</link>
+      <link>https://www.mingaccount.com/2018/06/lambda-sam/</link>
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/06/lambda-sam/</guid>
+      <guid>https://www.mingaccount.com/2018/06/lambda-sam/</guid>
       <description>在阅读Venkat Subramaniam的著作《Functional Programming in Java》 之后，方法模式和lambda完美结合让我印象深刻。 这种模式</description>
     </item>
     
     <item>
       <title>Npm淘宝镜像</title>
-      <link>http://www.mingaccount.com/2018/06/npm-taobao-mirror/</link>
+      <link>https://www.mingaccount.com/2018/06/npm-taobao-mirror/</link>
       <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/06/npm-taobao-mirror/</guid>
+      <guid>https://www.mingaccount.com/2018/06/npm-taobao-mirror/</guid>
       <description>npm config set registry https://registry.npm.taobao.org</description>
     </item>
     
     <item>
       <title>Java反射常用API汇总</title>
-      <link>http://www.mingaccount.com/2018/06/java-reflection-common-api/</link>
+      <link>https://www.mingaccount.com/2018/06/java-reflection-common-api/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/06/java-reflection-common-api/</guid>
+      <guid>https://www.mingaccount.com/2018/06/java-reflection-common-api/</guid>
       <description>“JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性” 一、类对</description>
     </item>
     
     <item>
       <title>Mysql安装后root无法登陆(Access denied for user &#39;root&#39;@&#39;localhost&#39;)</title>
-      <link>http://www.mingaccount.com/2018/06/mysql-cant-login-with-root/</link>
+      <link>https://www.mingaccount.com/2018/06/mysql-cant-login-with-root/</link>
       <pubDate>Fri, 08 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/06/mysql-cant-login-with-root/</guid>
+      <guid>https://www.mingaccount.com/2018/06/mysql-cant-login-with-root/</guid>
       <description>复杂密码才能通过 sudo mysql -u root -p mysql&amp;gt; select user, plugin from mysql.user; mysql&amp;gt; update mysql.user set authentication_string=PASSWORD(&#39;xcvds_32GDS&#39;), plugin=&#39;mysql_native_password&#39; where user=&#39;root&#39;; mysql8.0不能用上边的语句： ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &amp;quot;svewe_123&amp;quot;;</description>
     </item>
     
     <item>
       <title>Maven怎样把jar部署到远程仓库</title>
-      <link>http://www.mingaccount.com/2018/06/maven-deploy-jar-to-remote-repository/</link>
+      <link>https://www.mingaccount.com/2018/06/maven-deploy-jar-to-remote-repository/</link>
       <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/06/maven-deploy-jar-to-remote-repository/</guid>
+      <guid>https://www.mingaccount.com/2018/06/maven-deploy-jar-to-remote-repository/</guid>
       <description>distributionManagement 需要在pom.xml文件中新增标签&amp;lt;distributionManagement&amp;gt; &amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;com.mycompany.app&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;my-app&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt; &amp;lt;name&amp;gt;Maven Quick Start Archetype&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.apache.org&amp;lt;/url&amp;gt; &amp;lt;!-- | | | --&amp;gt; &amp;lt;distributionManagement&amp;gt; &amp;lt;repository&amp;gt;</description>
     </item>
     
     <item>
       <title>avg函数忽略null值</title>
-      <link>http://www.mingaccount.com/2018/06/avg-ignore-null/</link>
+      <link>https://www.mingaccount.com/2018/06/avg-ignore-null/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/06/avg-ignore-null/</guid>
+      <guid>https://www.mingaccount.com/2018/06/avg-ignore-null/</guid>
       <description>avg函数对值为null的行，会忽略不计 解决方案 avg((coalesce(column,0))</description>
     </item>
     
     <item>
       <title>Srping Boot测试</title>
-      <link>http://www.mingaccount.com/2018/05/spring-boot-test/</link>
+      <link>https://www.mingaccount.com/2018/05/spring-boot-test/</link>
       <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/05/spring-boot-test/</guid>
+      <guid>https://www.mingaccount.com/2018/05/spring-boot-test/</guid>
       <description>参考官方文档Spring Boot Test</description>
     </item>
     
     <item>
       <title>Maven标准文件夹结构</title>
-      <link>http://www.mingaccount.com/2018/05/maven-stadard-dir-layout/</link>
+      <link>https://www.mingaccount.com/2018/05/maven-stadard-dir-layout/</link>
       <pubDate>Sun, 13 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/05/maven-stadard-dir-layout/</guid>
+      <guid>https://www.mingaccount.com/2018/05/maven-stadard-dir-layout/</guid>
       <description>目录 描述 src/main/java Application/Library sources src/main/resources Application/Library resources src/main/filters Resource filter files src/main/webapp Web application sources src/test/java Test sources src/test/resources Test resources src/test/filters Test resource filter files src/it Integration Tests (primarily for plugins) src/assembly Assembly descriptors src/site Site LICENSE.txt Project&amp;rsquo;s license NOTICE.txt Notices and attributions required by libraries that the project depends on README.txt Project&amp;rsquo;s readme</description>
     </item>
     
     <item>
       <title>[译]java9新特性：在接口中用pirvate方法让default(java8接口特性)更简练</title>
-      <link>http://www.mingaccount.com/2018/05/java9-new-feature/</link>
+      <link>https://www.mingaccount.com/2018/05/java9-new-feature/</link>
       <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/05/java9-new-feature/</guid>
+      <guid>https://www.mingaccount.com/2018/05/java9-new-feature/</guid>
       <description>Java8 带来了许多改变，其中之一就是default修饰的接口方法。 这些方法改变了我们已知的接口，现在我们能够在接口中定义默认实现方法。默认实现方法</description>
     </item>
     
     <item>
       <title>Git push 异常：remote: No anonymous write access</title>
-      <link>http://www.mingaccount.com/2018/05/git-push-exception-no-anonymous/</link>
+      <link>https://www.mingaccount.com/2018/05/git-push-exception-no-anonymous/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/05/git-push-exception-no-anonymous/</guid>
+      <guid>https://www.mingaccount.com/2018/05/git-push-exception-no-anonymous/</guid>
       <description>异常信息 No anonymous write access. Authentication failed for 解决方案 提交的时候设置UserName和email 或者重新设置全局git用户名和邮箱 git config --global user.name &amp;quot;username&amp;quot; git config --global user.email &amp;quot;email&amp;quot;</description>
     </item>
     
     <item>
       <title>Git上传本地项目</title>
-      <link>http://www.mingaccount.com/2018/05/git-upload-local-project/</link>
+      <link>https://www.mingaccount.com/2018/05/git-upload-local-project/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/05/git-upload-local-project/</guid>
+      <guid>https://www.mingaccount.com/2018/05/git-upload-local-project/</guid>
       <description>1.在git上创建仓库，记下clone地址 2.把线上仓库拉到本地 git clone https://github.com/*/*.git 3.把要上传的本地项目文件全部放入本地仓库中 4.把所有文件提交到线上 git</description>
     </item>
     
     <item>
       <title>Git常用命令备忘</title>
-      <link>http://www.mingaccount.com/2018/05/git-common-command/</link>
+      <link>https://www.mingaccount.com/2018/05/git-common-command/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/05/git-common-command/</guid>
+      <guid>https://www.mingaccount.com/2018/05/git-common-command/</guid>
       <description># git更新当前分支 git pull #拉线上代码 git clone https://***.git.com #查看工作区状态 git status -s #撤回上一次的commit内容 git reset --hard HEAD~ #查看当前分支 git branch #切换到对应分支 git checkout</description>
     </item>
     
     <item>
       <title>Hutool工具包</title>
-      <link>http://www.mingaccount.com/2018/05/hutool/</link>
+      <link>https://www.mingaccount.com/2018/05/hutool/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/05/hutool/</guid>
+      <guid>https://www.mingaccount.com/2018/05/hutool/</guid>
       <description>Hutool封装大量java工具类 maven配置： &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;cn.hutool&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;hutool-all&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.4.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; API文档 官方首页</description>
-    </item>
-    
-    <item>
-      <title>Spring @Transactional事务失效</title>
-      <link>http://www.mingaccount.com/2018/05/spring-transaction-invalid/</link>
-      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2018/05/spring-transaction-invalid/</guid>
-      <description>问题代码 service方法抛出了异常，但是没有rollback @Transactional public void batchInsert() throws CommonException{} 抛出的自定义异常继承于Exception public class CommonException extends Exception{} 问题原因 @Tra</description>
-    </item>
-    
-    <item>
-      <title>quartz cron表达式详解</title>
-      <link>http://www.mingaccount.com/2018/05/quartz-cron/</link>
-      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2018/05/quartz-cron/</guid>
-      <description>Cron表达式是一个字符串，字符串以5或6个空格隔开，分为6或7个域，每一个域代表一个含义，Cron有如下两种语法格式： （1） Seconds Minutes Hours DayofMonth Month DayofWeek Year</description>
     </item>
     
   </channel>

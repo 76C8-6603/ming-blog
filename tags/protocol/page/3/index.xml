@@ -2,192 +2,192 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>protocol on Ming Blog</title>
-    <link>http://www.mingaccount.com/tags/protocol/</link>
+    <link>https://www.mingaccount.com/tags/protocol/</link>
     <description>Recent content in protocol on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 09 May 2016 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://www.mingaccount.com/tags/protocol/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.mingaccount.com/tags/protocol/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>SparkSql函数文档</title>
+      <link>https://www.mingaccount.com/2019/07/spark-sql-api/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/spark-sql-api/</guid>
+      <description>spark sql也支持函数，但与通常的数据库函数有些区别，附上官方api文档，以作备忘： http://spark.apache.org/docs/latest/api/sql/index.html#acos</description>
+    </item>
+    
+    <item>
+      <title>Maven如何正确导入本地包，保证在线上正常运行</title>
+      <link>https://www.mingaccount.com/2019/06/maven-how-to-import-local-jar/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/06/maven-how-to-import-local-jar/</guid>
+      <description>pom设置 &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-install-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.5.1&amp;lt;/version&amp;gt; &amp;lt;executions&amp;gt; &amp;lt;execution&amp;gt; &amp;lt;id&amp;gt;install-jar-lib&amp;lt;/id&amp;gt; &amp;lt;goals&amp;gt; &amp;lt;goal&amp;gt;install-file&amp;lt;/goal&amp;gt; &amp;lt;/goals&amp;gt; &amp;lt;!--在mvn package的时候将jar包追加到本地仓库，可修改为validate，以线上容器编译</description>
+    </item>
+    
+    <item>
       <title>为服务开启BBR加速</title>
-      <link>http://www.mingaccount.com/2019/05/server-bbr/</link>
+      <link>https://www.mingaccount.com/2019/05/server-bbr/</link>
       <pubDate>Fri, 31 May 2019 19:03:55 +0800</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/05/server-bbr/</guid>
+      <guid>https://www.mingaccount.com/2019/05/server-bbr/</guid>
       <description>脚本： wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;amp;&amp;amp; chmod +x bbr.sh &amp;amp;&amp;amp; ./bbr.sh 查看结果： sysctl net.ipv4.tcp_available_congestion_control</description>
     </item>
     
     <item>
       <title>Scala基础类结构图</title>
-      <link>http://www.mingaccount.com/2019/05/scala-base-class-stucture/</link>
+      <link>https://www.mingaccount.com/2019/05/scala-base-class-stucture/</link>
       <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/05/scala-base-class-stucture/</guid>
+      <guid>https://www.mingaccount.com/2019/05/scala-base-class-stucture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scala运算符优先顺序</title>
-      <link>http://www.mingaccount.com/2019/05/scala-operation-order/</link>
+      <link>https://www.mingaccount.com/2019/05/scala-operation-order/</link>
       <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/05/scala-operation-order/</guid>
+      <guid>https://www.mingaccount.com/2019/05/scala-operation-order/</guid>
       <description>运算符的优先级由其第一个字符决定 以下列出的字符按优先级从高到低的顺序排列 (all letters) | ^ &amp;amp; &amp;lt; &amp;gt; = ! + - * / % (all other special characters)</description>
     </item>
     
     <item>
       <title>Java上传文件格式判断</title>
-      <link>http://www.mingaccount.com/2019/03/java-upload-file-verify-format/</link>
+      <link>https://www.mingaccount.com/2019/03/java-upload-file-verify-format/</link>
       <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/03/java-upload-file-verify-format/</guid>
+      <guid>https://www.mingaccount.com/2019/03/java-upload-file-verify-format/</guid>
       <description>判断用户上传文件的合法性仅仅通过后缀名是完全不够的，谁也不知道后缀名是否被更改，服务器保存一个不知道真实类型的文件有极大的风险。 因此需要后台</description>
     </item>
     
     <item>
       <title>Maven compile异常 Failed to execute goal maven-resources-plugin:3.2.0:resources  Input length = 1 </title>
-      <link>http://www.mingaccount.com/2019/03/markdown-compile-error/</link>
+      <link>https://www.mingaccount.com/2019/03/markdown-compile-error/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/03/markdown-compile-error/</guid>
+      <guid>https://www.mingaccount.com/2019/03/markdown-compile-error/</guid>
       <description>原因 编码问题，可能是application.properties和类似的属性文件中有非UTF-8字符（参考spring-boot-issue</description>
     </item>
     
     <item>
       <title>Scala实现的尾递归</title>
-      <link>http://www.mingaccount.com/2019/02/scala-tail-recursive/</link>
+      <link>https://www.mingaccount.com/2019/02/scala-tail-recursive/</link>
       <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/02/scala-tail-recursive/</guid>
+      <guid>https://www.mingaccount.com/2019/02/scala-tail-recursive/</guid>
       <description>最大公约数： @tailrec def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b) 阶乘: def factorial(n: Int): Int = { @tailrec def iter(x: Int, result: Int): Int = if (x == 0) result else iter(x - 1, result * x) iter(n, 1) } @tailrec注解可以检测</description>
     </item>
     
     <item>
       <title>Markdown常用语法备忘</title>
-      <link>http://www.mingaccount.com/2019/01/markdown-common-symbol/</link>
+      <link>https://www.mingaccount.com/2019/01/markdown-common-symbol/</link>
       <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2019/01/markdown-common-symbol/</guid>
+      <guid>https://www.mingaccount.com/2019/01/markdown-common-symbol/</guid>
       <description>markdown语法大多数符号需要加一个空格和正式内容区分开才会生效 横线 -&amp;ndash; *** ___ 标题 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标</description>
     </item>
     
     <item>
       <title>Maven Plugins</title>
-      <link>http://www.mingaccount.com/2018/11/maven-plugin/</link>
+      <link>https://www.mingaccount.com/2018/11/maven-plugin/</link>
       <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/11/maven-plugin/</guid>
+      <guid>https://www.mingaccount.com/2018/11/maven-plugin/</guid>
       <description>参照官方文档，有详细说明和使用实例 Maven plugins</description>
     </item>
     
     <item>
       <title>删除视图失败，提示有其他视图依赖于该视图</title>
-      <link>http://www.mingaccount.com/2018/10/h2-drop-exception/</link>
+      <link>https://www.mingaccount.com/2018/10/h2-drop-exception/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/10/h2-drop-exception/</guid>
+      <guid>https://www.mingaccount.com/2018/10/h2-drop-exception/</guid>
       <description>问题背景 DROP VIEW temp_view; 报错信息： Can&#39;t drop temp_view,because *** depend on it 解决方案 DROP VIEW temp_view CASCADE ; 该sql会删除所有依赖的视图</description>
     </item>
     
     <item>
       <title>hive 执行sql时报错out of sequence</title>
-      <link>http://www.mingaccount.com/2018/09/hive-out-of-sequence/</link>
+      <link>https://www.mingaccount.com/2018/09/hive-out-of-sequence/</link>
       <pubDate>Sun, 23 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/09/hive-out-of-sequence/</guid>
+      <guid>https://www.mingaccount.com/2018/09/hive-out-of-sequence/</guid>
       <description>问题背景 错误日志： org.apache.thrift.TApplicationException: [?] : out of sequence response 问题原因 hive连接在连接池中，同时两个线程去获取并执行，两个都有close操作。 参考hive jira</description>
     </item>
     
     <item>
       <title>SpringBoot Mybatis配置多数据源</title>
-      <link>http://www.mingaccount.com/2018/09/spring-boot-mybatis-multi-source/</link>
+      <link>https://www.mingaccount.com/2018/09/spring-boot-mybatis-multi-source/</link>
       <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/09/spring-boot-mybatis-multi-source/</guid>
+      <guid>https://www.mingaccount.com/2018/09/spring-boot-mybatis-multi-source/</guid>
       <description>@Configuration @MapperScan(basePackages = MysqlDatasourceConfig.PACKAGE, sqlSessionFactoryRef = &amp;quot;mysqlSessionFactory&amp;quot;) public class MysqlDatasourceConfig { public static final String PACKAGE = &amp;quot;com.ming.mapper.mysql1&amp;quot;; public static final String MAPPER_LOCATION = &amp;quot;classpath:mapper/mysql1/*.xml&amp;quot;; @Primary @Bean(name = &amp;quot;mysqlDatasource&amp;quot;) @ConfigurationProperties(&amp;quot;spring.datasource.druid.mysql1&amp;quot;) public DataSource mysqlDataSource(){ return DruidDataSourceBuilder.create().build(); } @Bean(name = &amp;quot;mysqlTransactionManager&amp;quot;) @Primary public DataSourceTransactionManager mysqlTransactionManager() { return new DataSourceTransactionManager(mysqlDataSource()); } @Bean(name = &amp;quot;mysqlSessionFactory&amp;quot;) @Primary public SqlSessionFactory mysqlSessionFactory(@Qualifier(&amp;quot;mysqlDatasource&amp;quot;) DataSource dataSource) throws Exception { final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean(); sessionFactory.setDataSource(dataSource); sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MysqlDatasourceConfig.MAPPER_LOCATION)); return</description>
     </item>
     
     <item>
       <title>SpringBoot Ehcache集成</title>
-      <link>http://www.mingaccount.com/2018/09/spring-boot-ehcache/</link>
+      <link>https://www.mingaccount.com/2018/09/spring-boot-ehcache/</link>
       <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/09/spring-boot-ehcache/</guid>
+      <guid>https://www.mingaccount.com/2018/09/spring-boot-ehcache/</guid>
       <description>ehcache.xml &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;ehcache xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:noNamespaceSchemaLocation=&amp;quot;http://ehcache.org/ehcache.xsd&amp;quot;&amp;gt; &amp;lt;defaultCache maxElementsInMemory=&amp;quot;10000&amp;quot; eternal=&amp;quot;false&amp;quot; timeToIdleSeconds=&amp;quot;3600&amp;quot; timeToLiveSeconds=&amp;quot;0&amp;quot; overflowToDisk=&amp;quot;false&amp;quot; diskPersistent=&amp;quot;false&amp;quot; diskExpiryThreadIntervalSeconds=&amp;quot;120&amp;quot; /&amp;gt; &amp;lt;cache name=&amp;quot;myCache&amp;quot; maxEntriesLocalHeap=&amp;quot;2000&amp;quot; eternal=&amp;quot;false&amp;quot; timeToIdleSeconds=&amp;quot;3600&amp;quot; timeToLiveSeconds=&amp;quot;0&amp;quot; overflowToDisk=&amp;quot;false&amp;quot; statistics=&amp;quot;true&amp;quot;/&amp;gt; &amp;lt;/ehcache&amp;gt; 属性简介： name：缓存名称。 maxElementsInMemory：缓存最大数目 maxE</description>
     </item>
     
     <item>
       <title>SpringBoot Redis集成</title>
-      <link>http://www.mingaccount.com/2018/09/spring-boot-redis/</link>
+      <link>https://www.mingaccount.com/2018/09/spring-boot-redis/</link>
       <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/09/spring-boot-redis/</guid>
+      <guid>https://www.mingaccount.com/2018/09/spring-boot-redis/</guid>
       <description>application.yml spring: redis: database: 0 host: localhost prot: 6379 pool: max-active: 8 max-wait: -1 max-idle: 8 min-idle: 0 timeout: 0 更多配置参考Spring官网配置参数 RedisConfig @Configuration @EnableCaching public class RedisConfig extends CachingConfigurerSupport { @Bean @Override public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) { return RedisCacheManager.create(redisConnectionFactory); } }</description>
     </item>
     
     <item>
       <title>Spring缓存集成</title>
-      <link>http://www.mingaccount.com/2018/09/spring-cache/</link>
+      <link>https://www.mingaccount.com/2018/09/spring-cache/</link>
       <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/09/spring-cache/</guid>
+      <guid>https://www.mingaccount.com/2018/09/spring-cache/</guid>
       <description>1.了解缓存概念 缓存和缓冲(Cache vs Buffer) 缓存和缓冲一般来说都是交替使用的，需要知道的是他们是两个完全不同的东西。 buffer(缓冲)是用在</description>
     </item>
     
     <item>
       <title>大型网站架构演化概论</title>
-      <link>http://www.mingaccount.com/2018/09/big-web-bala-bala/</link>
+      <link>https://www.mingaccount.com/2018/09/big-web-bala-bala/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/09/big-web-bala-bala/</guid>
+      <guid>https://www.mingaccount.com/2018/09/big-web-bala-bala/</guid>
       <description>1.大型网站的特点： 相比传统企业应用系统，大型互联网应用系统有以下特点： 高并发、大流量：需要面对高并发用户，大流量访问。 高可用：系统需要7*</description>
     </item>
     
     <item>
       <title>[译]Java8：循环与函数式编程</title>
-      <link>http://www.mingaccount.com/2018/08/java8-for-functional/</link>
+      <link>https://www.mingaccount.com/2018/08/java8-for-functional/</link>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/08/java8-for-functional/</guid>
+      <guid>https://www.mingaccount.com/2018/08/java8-for-functional/</guid>
       <description>Java8函数式编程的加入彻底改变了游戏规则。对Java开发者来说这是一个全新的世界，我们也需要做出相应的改变。 在这篇文章中我们将找寻传统循</description>
     </item>
     
     <item>
       <title>[译]Java8的函数式接口</title>
-      <link>http://www.mingaccount.com/2018/08/java8-lamda-interface/</link>
+      <link>https://www.mingaccount.com/2018/08/java8-lamda-interface/</link>
       <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/08/java8-lamda-interface/</guid>
+      <guid>https://www.mingaccount.com/2018/08/java8-lamda-interface/</guid>
       <description>Java8引入了 java.util.function 包，他包含了函数式接口，具体的描述在以下api说明文档中： 函数式接口为lambda表达式和方法引用提供目标类型。每个函数式</description>
     </item>
     
     <item>
       <title>Spring boot 文件路径读取异常</title>
-      <link>http://www.mingaccount.com/2018/08/spring-boot-get-file-path/</link>
+      <link>https://www.mingaccount.com/2018/08/spring-boot-get-file-path/</link>
       <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.mingaccount.com/2018/08/spring-boot-get-file-path/</guid>
+      <guid>https://www.mingaccount.com/2018/08/spring-boot-get-file-path/</guid>
       <description>在开发代码中，有一段需要获取resources目录下的一个配置文件（这里写作test.xml）。 这段代码在ide中没有任何问题，但是一打成j</description>
-    </item>
-    
-    <item>
-      <title>Linux常用命令备忘</title>
-      <link>http://www.mingaccount.com/2018/08/linux-common-command/</link>
-      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2018/08/linux-common-command/</guid>
-      <description>cd - #查看上一次所在的目录 cat /etc/hosts #文档查看 ls #查看当前目录下所有文件 pwd #查看当前目录的绝对路径 ll #查看目录下文件的详细信息，包括权限属组等信息</description>
-    </item>
-    
-    <item>
-      <title>vim命令备忘</title>
-      <link>http://www.mingaccount.com/2018/08/vim-common-command/</link>
-      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.mingaccount.com/2018/08/vim-common-command/</guid>
-      <description>vi /etc/hosts i 修改模式 esc 退出修改 :q 正常退出(文件没有修改 :q! 不保存退出 :wq 保存退出 G 跳到末尾行 dd 删除当前行 gg 跳到第一行第一个字符 $ 跳到当前行的最后一个字</description>
     </item>
     
   </channel>
