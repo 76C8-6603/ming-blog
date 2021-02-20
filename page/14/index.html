@@ -33,7 +33,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.mingaccount.com/" />
-<meta property="og:updated_time" content="2020-10-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-02-20T00:00:00+00:00" />
 <meta itemprop="name" content="Ming Blog">
 <meta itemprop="description" content="">
 <meta name="twitter:card" content="summary"/>
@@ -243,7 +243,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/protocol/" class="tag-list-link">protocol</a><span
-                    class="tag-list-count">3</span></li>
+                    class="tag-list-count">4</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/python/" class="tag-list-link">python</a><span
@@ -267,7 +267,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
-                    class="tag-list-count">22</span></li>
+                    class="tag-list-count">26</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
@@ -279,7 +279,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/website-build/" class="tag-list-link">website-build</a><span
-                    class="tag-list-count">4</span></li>
+                    class="tag-list-count">5</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/windows/" class="tag-list-link">windows</a><span
@@ -294,6 +294,16 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget-body">
         <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.mingaccount.com/2021/02/duration-format/" class="title">Duration format PnDTnHnMn.nS ISO-8601</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-02-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-02-20</time>
+                    </p>
+                </div>
+            </li>
             <li>
                 <div class="item-inner">
                     <p class="item-title">
@@ -334,16 +344,6 @@
                     </p>
                 </div>
             </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://www.mingaccount.com/2020/07/wsl-restart/" class="title">win10 linux子系统如何重启</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2020-07-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-07-05</time>
-                    </p>
-                </div>
-            </li>
         </ul>
     </div>
 </div>
@@ -359,6 +359,186 @@
     
     
     
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2018/01/python-method-define/"
+    >Python方法定义</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        # 一般声明 def printUser(id,name,sex,age,email,phone,group): printUser(1,'ming','male',18,'',110,'default') # 默认值 def printUser(id,name,sex,age,email='',phone=110,group='default'): printUser(1,'ming','male',18) # 位置参数和关键字参数 def printUser(id,name,sex,/,age,email,*,phone,group): # 位置参数就是调用的时候直接赋值 # 关键字参数就是调用的时候通过 key=value 的形式赋值 # 斜杠之前
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2018/01/python-method-define/" class="">
+  <time datetime="2018-01-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-01-21</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/python/"> python </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2018/01/python-method-define/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 274words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2018/01/spring-boot-filter/"
+    >Spring boot filter</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        全局filter @Component @Order(1) public class FirstFilter extends Filter { @Override public void doFilter( ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException { ... chain.doFilter(request, response); } } 全局过滤直接实现Filter即可，如需设定顺序，使用@Order注解 URL
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2018/01/spring-boot-filter/" class="">
+  <time datetime="2018-01-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-01-16</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/spring/"> spring </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2018/01/spring-boot-filter/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 192words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2018/01/get-request-global/"
+    >全局获取request</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        交于Spring管理的类，通过注解调用 @Component public class Test{ @Autowired private HttpServletRequest httpServletRequest; } 通过静态方法调用 HttpServletRequest httpServletRequest = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2018/01/get-request-global/" class="">
+  <time datetime="2018-01-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-01-09</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/java/"> java </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2018/01/get-request-global/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 40words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2018/01/java-fetch-current-classname-methodname/"
+    >Java获取当前类名和方法名</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        Description Below I present you two different ways to get the current Class: Using Thread Using getClass() The simplest way to get the name of the class where your code is being executed in is using the getClass() method present in every java object. Like here: String clazz = this.getClass().getName(); This works only if executed in an Object, namely an instanciated class. If you try to execute the code above
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2018/01/java-fetch-current-classname-methodname/" class="">
+  <time datetime="2018-01-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-01-08</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/java/"> java </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2018/01/java-fetch-current-classname-methodname/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 307words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2018/01/observe-patter-and-java-agent/"
+    >观察者模式和java委托</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        所谓观察者模式，指的某个状态信息的改变，会影响其他一系列的操作，这时就可以将这些操作抽象化，同时创建一个类统一的管理和执行这些操作。把这些抽
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2018/01/observe-patter-and-java-agent/" class="">
+  <time datetime="2018-01-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-01-08</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/design-pattern/"> design pattern </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2018/01/observe-patter-and-java-agent/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 703words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
+      </p>
+    </article>
     <article
       class="article article-type-page"
       itemscope
@@ -429,186 +609,6 @@
         <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/11/list-addall-exception/#comments" class="article-comment-link">Comments</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 226words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/11/maven-site/"
-    >Maven构建项目描述网页</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        通过以下命令，即可创建项目描述网页 mvn site 跟网页展示资源相关的目录 +- src/ +- site/ +- apt/ | +- index.apt ! +- markdown/ | +- content.md | +- fml/ | +- general.fml | +- faq.fml | +- xdoc/ | +- other.xml | +- site.xml site.x
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2017/11/maven-site/" class="">
-  <time datetime="2017-11-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-11-09</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/maven/"> maven </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/11/maven-site/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 170words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/11/maven-multiple-module/"
-    >包含多个模块的项目如何配置maven</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        项目结构 +- pom.xml +- my-app | +- pom.xml | +- src | +- main | +- java +- my-webapp | +- pom.xml | +- src | +- main | +- webapp 可以看到该项目下包含两个module:my-app、my-webapp。
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2017/11/maven-multiple-module/" class="">
-  <time datetime="2017-11-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-11-07</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/maven/"> maven </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/11/maven-multiple-module/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 653words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/10/java-syntatic-sugar/"
-    >[转]谈谈Java中的语法糖</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        *该博客转自 http://blog.csdn.net/danchu/article/details/54986442 语法糖（Syntactic Sugar），也称糖衣语法，指在计算机语言中添加的某种语法，这种语法对语言本身功能来说没有什么影响，
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2017/10/java-syntatic-sugar/" class="">
-  <time datetime="2017-10-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-10-18</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/java/"> java </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/10/java-syntatic-sugar/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 2144words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 5minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/10/java-encode/"
-    >Java编码,乱码问题详解</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        一、常见的编码格式 1.ASCII 基础编码，英文和西欧字符。 用一个字节的低7位表示，一共128个。 0~13是控制字符如换行、回车、删除等，32~126是打
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2017/10/java-encode/" class="">
-  <time datetime="2017-10-13 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-10-13</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/java/"> java </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/10/java-encode/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 2837words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 6minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/10/maven-filter-resources-file/"
-    >如何在资源文件中读取Maven相关的参数</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        pom resources 首先要为pom文件新添一个resources标签 &lt;project&gt; &lt;name&gt;...&lt;/name&gt; &lt;groupId&gt;...&lt;/groupId&gt; &lt;version&gt;...&lt;/version&gt; ... &lt;build&gt; &lt;resources&gt; &lt;resource&gt; &lt;directory&gt;src/main/resources&lt;/directory&gt; &lt;/resource&gt; &lt;filtering&gt;true&lt;/filtering&gt; &lt;/resources&gt; &lt;/build&gt; &lt;/project&gt; 默认情况下&lt;filtering&gt;的属性为fals
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2017/10/maven-filter-resources-file/" class="">
-  <time datetime="2017-10-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-10-12</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/maven/"> maven </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/10/maven-filter-resources-file/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 865words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
       </p>
     </article></div>
   

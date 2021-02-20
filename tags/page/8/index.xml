@@ -5,10 +5,64 @@
     <link>https://www.mingaccount.com/tags/</link>
     <description>Recent content in Tags on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 18 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mysql Where条件判断 字符串和数字 是否相等时存在的问题</title>
+      <link>https://www.mingaccount.com/2016/07/mysql-compare-string-and-number/</link>
+      <pubDate>Fri, 08 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/07/mysql-compare-string-and-number/</guid>
+      <description>测试数据 random 24 24uixcvkjklwer 查询sql1 SELECT random FROM table WHERE random = 24 该sql会把两条记录都查出来 查询sql2 SELECT random FROM table WHERE random = &#39;24&#39; 该sql只会匹配第一条记录 总结 条件列为字符</description>
+    </item>
+    
+    <item>
+      <title>实体类通过建造者模式创建</title>
+      <link>https://www.mingaccount.com/2016/06/pojo-builder/</link>
+      <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/06/pojo-builder/</guid>
+      <description>现在可以通过lombok注解@Builder一步实现 1.调用效果 public class Test{ public static void main(String[] args){ Student student = Student.builder().name(&amp;quo</description>
+    </item>
+    
+    <item>
+      <title>Mybatis insert完成后获取自增主键</title>
+      <link>https://www.mingaccount.com/2016/05/mybatis-get-auto-increment-id/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/05/mybatis-get-auto-increment-id/</guid>
+      <description>示例代码 public void insert(User user){ mapper.insert(user); String id = user.getId(); } id会赋值到传进来的user对象中 xml &amp;lt;insert keyProperty=&amp;quot;id&amp;quot; keyColumn=&amp;quot;id&amp;quot; useGeneratedKeys=&amp;quot;true&amp;quot;&amp;gt; INSERT INTO ... &amp;lt;/insert&amp;gt; keyProperty代表实体类中主键对应的成员变量名称 ke</description>
+    </item>
+    
+    <item>
+      <title>Assert常用方法</title>
+      <link>https://www.mingaccount.com/2016/05/assert-common-method/</link>
+      <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/05/assert-common-method/</guid>
+      <description>org.junit.Assert assertEquals 判断对象是否相等，equals方法判断 assertSame 判断对象是否相等，==判断 assertTrue 判断条件是否为真 assertFalse 判断条件是否为假 assertNotNull 判断对象是否不为null assertArrayEquals 判断数</description>
+    </item>
+    
+    <item>
+      <title>Mysql Like语句匹配下划线时无法得到正确数据</title>
+      <link>https://www.mingaccount.com/2016/05/mysql-like-underline/</link>
+      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/05/mysql-like-underline/</guid>
+      <description>示例sql SELECT * FROM table WHERE field LIKE &#39;%_%&#39; 目的是获取中间有下划线的field，但是这样的sql无法获取到期望的结果 问题原因 like语句中除了百分号是通配符，</description>
+    </item>
+    
+    <item>
+      <title>所有HTTP头字段(header fields)</title>
+      <link>https://www.mingaccount.com/2016/05/http-heads/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/05/http-heads/</guid>
+      <description>wiki List of HTTP header fields</description>
+    </item>
     
     <item>
       <title>所有HTTP状态码(status code)</title>

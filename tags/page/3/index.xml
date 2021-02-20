@@ -5,10 +5,19 @@
     <link>https://www.mingaccount.com/tags/</link>
     <description>Recent content in Tags on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 18 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>FastJson解析结果部分属性为null的问题</title>
+      <link>https://www.mingaccount.com/2019/07/fastjson-undes-property-isnull/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/fastjson-undes-property-isnull/</guid>
+      <description>在协作开发时，从接口获取到的json实体部分为空，但是在调试时发现原对象没有任何问题，但是经过解析成为json后，部分属性变为： &amp;ldquo</description>
+    </item>
     
     <item>
       <title>SparkSql函数文档</title>
@@ -56,6 +65,15 @@
     </item>
     
     <item>
+      <title>Bucket4j 实例</title>
+      <link>https://www.mingaccount.com/2019/04/bucket4j-example/</link>
+      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/04/bucket4j-example/</guid>
+      <description>简介 Bucket4j 是一个基于令牌桶算法的限流工具 官网git hub 实例 下面实例的场景是，限制被第三方调用的频率，每个app在一个秒钟之内只能有10次请求，但是</description>
+    </item>
+    
+    <item>
       <title>Java上传文件格式判断</title>
       <link>https://www.mingaccount.com/2019/03/java-upload-file-verify-format/</link>
       <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
@@ -89,6 +107,15 @@
       
       <guid>https://www.mingaccount.com/2019/01/markdown-common-symbol/</guid>
       <description>markdown语法大多数符号需要加一个空格和正式内容区分开才会生效 横线 -&amp;ndash; *** ___ 标题 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标</description>
+    </item>
+    
+    <item>
+      <title>Springboot filter异常全局处理</title>
+      <link>https://www.mingaccount.com/2019/01/spring-boot-filter-exception-global-handler/</link>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/01/spring-boot-filter-exception-global-handler/</guid>
+      <description>背景 controller的全局异常处理可以通过@RestControllerAdvice @ExceptionHandler来处理。但是如果f</description>
     </item>
     
     <item>
@@ -161,33 +188,6 @@
       
       <guid>https://www.mingaccount.com/2018/09/big-web-bala-bala/</guid>
       <description>1.大型网站的特点： 相比传统企业应用系统，大型互联网应用系统有以下特点： 高并发、大流量：需要面对高并发用户，大流量访问。 高可用：系统需要7*</description>
-    </item>
-    
-    <item>
-      <title>[译]Java8：循环与函数式编程</title>
-      <link>https://www.mingaccount.com/2018/08/java8-for-functional/</link>
-      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/08/java8-for-functional/</guid>
-      <description>Java8函数式编程的加入彻底改变了游戏规则。对Java开发者来说这是一个全新的世界，我们也需要做出相应的改变。 在这篇文章中我们将找寻传统循</description>
-    </item>
-    
-    <item>
-      <title>[译]Java8的函数式接口</title>
-      <link>https://www.mingaccount.com/2018/08/java8-lamda-interface/</link>
-      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/08/java8-lamda-interface/</guid>
-      <description>Java8引入了 java.util.function 包，他包含了函数式接口，具体的描述在以下api说明文档中： 函数式接口为lambda表达式和方法引用提供目标类型。每个函数式</description>
-    </item>
-    
-    <item>
-      <title>Spring boot 文件路径读取异常</title>
-      <link>https://www.mingaccount.com/2018/08/spring-boot-get-file-path/</link>
-      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/08/spring-boot-get-file-path/</guid>
-      <description>在开发代码中，有一段需要获取resources目录下的一个配置文件（这里写作test.xml）。 这段代码在ide中没有任何问题，但是一打成j</description>
     </item>
     
   </channel>

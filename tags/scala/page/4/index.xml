@@ -11,6 +11,33 @@
     
     
     <item>
+      <title>[译]Java8：循环与函数式编程</title>
+      <link>https://www.mingaccount.com/2018/08/java8-for-functional/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/08/java8-for-functional/</guid>
+      <description>Java8函数式编程的加入彻底改变了游戏规则。对Java开发者来说这是一个全新的世界，我们也需要做出相应的改变。 在这篇文章中我们将找寻传统循</description>
+    </item>
+    
+    <item>
+      <title>[译]Java8的函数式接口</title>
+      <link>https://www.mingaccount.com/2018/08/java8-lamda-interface/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/08/java8-lamda-interface/</guid>
+      <description>Java8引入了 java.util.function 包，他包含了函数式接口，具体的描述在以下api说明文档中： 函数式接口为lambda表达式和方法引用提供目标类型。每个函数式</description>
+    </item>
+    
+    <item>
+      <title>Spring boot 文件路径读取异常</title>
+      <link>https://www.mingaccount.com/2018/08/spring-boot-get-file-path/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/08/spring-boot-get-file-path/</guid>
+      <description>在开发代码中，有一段需要获取resources目录下的一个配置文件（这里写作test.xml）。 这段代码在ide中没有任何问题，但是一打成j</description>
+    </item>
+    
+    <item>
       <title>Linux常用命令备忘</title>
       <link>https://www.mingaccount.com/2018/08/linux-common-command/</link>
       <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
@@ -62,6 +89,15 @@
       
       <guid>https://www.mingaccount.com/2018/07/maven-package-complete-dependency/</guid>
       <description>maven package生成的jar包默认是没有项目依赖的 需要导出的jar包包含项目所有的依赖，需要配置pom： &amp;lt;build&amp;gt; &amp;lt;finalName&amp;gt;yourApp&amp;lt;/finalName&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-shade-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;shadedArtifactAttached&amp;gt;true&amp;lt;/shadedArtifactAttached&amp;gt; &amp;lt;shadedClassifierName&amp;gt;jar-with-dependencies&amp;lt;/shadedClassifierName&amp;gt; &amp;lt;!-- Any name that makes sense --&amp;gt; &amp;lt;outputDirectory&amp;gt;../output/jar-with-dependencies&amp;lt;/outputDirectory&amp;gt; &amp;lt;/configuration&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring boot @Value设定默认值 配置文件中没有也不会报错</title>
+      <link>https://www.mingaccount.com/2018/07/spring-boot-properties-default-value/</link>
+      <pubDate>Wed, 11 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/07/spring-boot-properties-default-value/</guid>
+      <description>背景 默认情况下@Value注解如果没有在properties文件中存在对应值，那么启动项目的时候会直接报错。 解决方案 可以给@Value注解设</description>
     </item>
     
     <item>
@@ -152,42 +188,6 @@
       
       <guid>https://www.mingaccount.com/2018/05/java9-new-feature/</guid>
       <description>Java8 带来了许多改变，其中之一就是default修饰的接口方法。 这些方法改变了我们已知的接口，现在我们能够在接口中定义默认实现方法。默认实现方法</description>
-    </item>
-    
-    <item>
-      <title>Git push 异常：remote: No anonymous write access</title>
-      <link>https://www.mingaccount.com/2018/05/git-push-exception-no-anonymous/</link>
-      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/05/git-push-exception-no-anonymous/</guid>
-      <description>异常信息 No anonymous write access. Authentication failed for 解决方案 提交的时候设置UserName和email 或者重新设置全局git用户名和邮箱 git config --global user.name &amp;quot;username&amp;quot; git config --global user.email &amp;quot;email&amp;quot;</description>
-    </item>
-    
-    <item>
-      <title>Git上传本地项目</title>
-      <link>https://www.mingaccount.com/2018/05/git-upload-local-project/</link>
-      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/05/git-upload-local-project/</guid>
-      <description>1.在git上创建仓库，记下clone地址 2.把线上仓库拉到本地 git clone https://github.com/*/*.git 3.把要上传的本地项目文件全部放入本地仓库中 4.把所有文件提交到线上 git</description>
-    </item>
-    
-    <item>
-      <title>Git常用命令备忘</title>
-      <link>https://www.mingaccount.com/2018/05/git-common-command/</link>
-      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/05/git-common-command/</guid>
-      <description># git更新当前分支 git pull #拉线上代码 git clone https://***.git.com #查看工作区状态 git status -s #撤回上一次的commit内容 git reset --hard HEAD~ #查看当前分支 git branch #切换到对应分支 git checkout</description>
-    </item>
-    
-    <item>
-      <title>Hutool工具包</title>
-      <link>https://www.mingaccount.com/2018/05/hutool/</link>
-      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/05/hutool/</guid>
-      <description>Hutool封装大量java工具类 maven配置： &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;cn.hutool&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;hutool-all&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.4.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; API文档 官方首页</description>
     </item>
     
   </channel>

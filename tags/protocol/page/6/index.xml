@@ -5,10 +5,64 @@
     <link>https://www.mingaccount.com/tags/protocol/</link>
     <description>Recent content in protocol on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 09 May 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/protocol/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>包含多个模块的项目如何配置maven</title>
+      <link>https://www.mingaccount.com/2017/11/maven-multiple-module/</link>
+      <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/11/maven-multiple-module/</guid>
+      <description>项目结构 +- pom.xml +- my-app | +- pom.xml | +- src | +- main | +- java +- my-webapp | +- pom.xml | +- src | +- main | +- webapp 可以看到该项目下包含两个module:my-app、my-webapp。</description>
+    </item>
+    
+    <item>
+      <title>[转]谈谈Java中的语法糖</title>
+      <link>https://www.mingaccount.com/2017/10/java-syntatic-sugar/</link>
+      <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/10/java-syntatic-sugar/</guid>
+      <description>*该博客转自 http://blog.csdn.net/danchu/article/details/54986442 语法糖（Syntactic Sugar），也称糖衣语法，指在计算机语言中添加的某种语法，这种语法对语言本身功能来说没有什么影响，</description>
+    </item>
+    
+    <item>
+      <title>Java编码,乱码问题详解</title>
+      <link>https://www.mingaccount.com/2017/10/java-encode/</link>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/10/java-encode/</guid>
+      <description>一、常见的编码格式 1.ASCII 基础编码，英文和西欧字符。 用一个字节的低7位表示，一共128个。 0~13是控制字符如换行、回车、删除等，32~126是打</description>
+    </item>
+    
+    <item>
+      <title>如何在资源文件中读取Maven相关的参数</title>
+      <link>https://www.mingaccount.com/2017/10/maven-filter-resources-file/</link>
+      <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/10/maven-filter-resources-file/</guid>
+      <description>pom resources 首先要为pom文件新添一个resources标签 &amp;lt;project&amp;gt; &amp;lt;name&amp;gt;...&amp;lt;/name&amp;gt; &amp;lt;groupId&amp;gt;...&amp;lt;/groupId&amp;gt; &amp;lt;version&amp;gt;...&amp;lt;/version&amp;gt; ... &amp;lt;build&amp;gt; &amp;lt;resources&amp;gt; &amp;lt;resource&amp;gt; &amp;lt;directory&amp;gt;src/main/resources&amp;lt;/directory&amp;gt; &amp;lt;/resource&amp;gt; &amp;lt;filtering&amp;gt;true&amp;lt;/filtering&amp;gt; &amp;lt;/resources&amp;gt; &amp;lt;/build&amp;gt; &amp;lt;/project&amp;gt; 默认情况下&amp;lt;filtering&amp;gt;的属性为fals</description>
+    </item>
+    
+    <item>
+      <title>excel拆分(split)功能实现</title>
+      <link>https://www.mingaccount.com/2017/10/split-regexp/</link>
+      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/10/split-regexp/</guid>
+      <description>excel拆分规则 固定长度拆分 指定符号拆分 忽略重复拆分符号 带文本识别符号的拆分（比如&amp;quot;1,2,3,4,5&amp;quot;现在按照逗号分</description>
+    </item>
+    
+    <item>
+      <title>Java8 lamda表达式中的parallel</title>
+      <link>https://www.mingaccount.com/2017/09/java8-parallel/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/09/java8-parallel/</guid>
+      <description>概览 Java8为集合流处理提供了并发支持。并且就算集合不是线程安全的，你也可以在不修改集合的状态下，对集合进行并发汇总操作。但是这里面仍有一</description>
+    </item>
     
     <item>
       <title>java8 lambda reduce&amp;collect</title>
@@ -134,60 +188,6 @@
       
       <guid>https://www.mingaccount.com/2017/07/mysql-batch-update/</guid>
       <description>多个where条件，每个条件对应的更新值不同，需要mysql批量更新 UPDATE test_table SET test_target = test_id CASE WHEN &amp;quot;123&amp;quot; THEN &amp;quot;456&amp;quot; WHEN &amp;quot;789&amp;quot; THEN &amp;quot;101&amp;quot; END WHERE test_id in [&#39;123&#39;,&#39;789&#39;] 但是在程序中，直接写常量的情况太</description>
-    </item>
-    
-    <item>
-      <title>Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied</title>
-      <link>https://www.mingaccount.com/2017/07/mysql-startup-exception/</link>
-      <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/07/mysql-startup-exception/</guid>
-      <description>usermod -d /var/lib/mysql/ mysql ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock chown -R mysql:mysql /var/lib/mysql</description>
-    </item>
-    
-    <item>
-      <title>Markdown生命周期</title>
-      <link>https://www.mingaccount.com/2017/07/markdown-lifecycle/</link>
-      <pubDate>Sun, 09 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/07/markdown-lifecycle/</guid>
-      <description>lifecycle-phase maven有三个内部生命周期：default，clean，和site。 每个生命周期由多个阶段(phase)组成 clean Phase Description pre-clean execute processes needed prior to the actual project cleaning clean</description>
-    </item>
-    
-    <item>
-      <title>Maven依赖scope属性</title>
-      <link>https://www.mingaccount.com/2017/06/maven-dependency-scope/</link>
-      <pubDate>Fri, 16 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/06/maven-dependency-scope/</guid>
-      <description>compile This is the default scope, used if none is specified. Compile dependencies are available in all classpaths of a project. Furthermore, those dependencies are propagated to dependent projects. provided This is much like compile, but indicates you expect the JDK or a container to provide the dependency at runtime. For example, when building a web application for the Java Enterprise Edition, you would set the dependency on the Servlet</description>
-    </item>
-    
-    <item>
-      <title>Maven命令备忘</title>
-      <link>https://www.mingaccount.com/2017/06/maven-common-command/</link>
-      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/06/maven-common-command/</guid>
-      <description># 编译项目 mvn compile # 执行项目中的单元测试 # 查找单元测试类的默认规则：**/*Test.java;**/Test*.java;**/*TestCa</description>
-    </item>
-    
-    <item>
-      <title>阻止Gson将long类型的字段转为科学计数法</title>
-      <link>https://www.mingaccount.com/2017/06/gson-scientific-notation/</link>
-      <pubDate>Thu, 08 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/06/gson-scientific-notation/</guid>
-      <description>GsonBuilder gsonBuilder = new GsonBuilder(); gsonBuilder.setLongSerializationPolicy( LongSerializationPolicy.STRING ); Gson gson = gsonBuilder.create();</description>
-    </item>
-    
-    <item>
-      <title>Spring切面编程</title>
-      <link>https://www.mingaccount.com/2017/06/spring-aop/</link>
-      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/06/spring-aop/</guid>
-      <description>1.切面编程核心概念 切面编程Aspect-oriented Programming (AOP) AOP只是一个概念，跟Spring是独立关系 最典型的AOP实现框架Aspect</description>
     </item>
     
   </channel>

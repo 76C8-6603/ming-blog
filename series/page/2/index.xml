@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>db2 cast decimal异常</title>
+      <link>https://www.mingaccount.com/2019/11/db2-cast-decimal-exception/</link>
+      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/11/db2-cast-decimal-exception/</guid>
+      <description>完整异常 [42611][-604] The length, precision, or scale attribute for column, distinct type, structured type, array type, attribute of structured type, routine, cast target type, type mapping, or global variable &amp;quot;decimal(38, 2)&amp;quot; is not valid.. SQLCODE=-604, SQLSTATE=42611, DRIVER=4.26.14 [56098][-727] An error occurred during implicit system action type &amp;quot;2&amp;quot;. Information returned for the error includes SQLCODE &amp;quot;-604&amp;quot;, SQLSTATE &amp;quot;42611&amp;quot; and message tokens &amp;quot;decimal(38, 2)&amp;quot;.. SQLCODE=-727, SQLSTATE=56098, DRIVER=4.26.14 报错</description>
+    </item>
+    
+    <item>
       <title>db2 sum函数报错Arithmetic overflow...</title>
       <link>https://www.mingaccount.com/2019/11/db2sumerror/</link>
       <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>https://www.mingaccount.com/2019/07/maven-jar-clash/</guid>
       <description>问题背景 项目的两个依赖，包含了同一个路径，然而因为项目原因还不能删除其中任何一个 代码在本地和线上都能正常通过编译 但是一执行到对应代码就会抛出</description>
-    </item>
-    
-    <item>
-      <title>FastJson解析结果部分属性为null的问题</title>
-      <link>https://www.mingaccount.com/2019/07/fastjson-undes-property-isnull/</link>
-      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/07/fastjson-undes-property-isnull/</guid>
-      <description>在协作开发时，从接口获取到的json实体部分为空，但是在调试时发现原对象没有任何问题，但是经过解析成为json后，部分属性变为： &amp;ldquo</description>
     </item>
     
   </channel>

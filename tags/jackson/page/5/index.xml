@@ -11,6 +11,42 @@
     
     
     <item>
+      <title>Git push 异常：remote: No anonymous write access</title>
+      <link>https://www.mingaccount.com/2018/05/git-push-exception-no-anonymous/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/git-push-exception-no-anonymous/</guid>
+      <description>异常信息 No anonymous write access. Authentication failed for 解决方案 提交的时候设置UserName和email 或者重新设置全局git用户名和邮箱 git config --global user.name &amp;quot;username&amp;quot; git config --global user.email &amp;quot;email&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>Git上传本地项目</title>
+      <link>https://www.mingaccount.com/2018/05/git-upload-local-project/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/git-upload-local-project/</guid>
+      <description>1.在git上创建仓库，记下clone地址 2.把线上仓库拉到本地 git clone https://github.com/*/*.git 3.把要上传的本地项目文件全部放入本地仓库中 4.把所有文件提交到线上 git</description>
+    </item>
+    
+    <item>
+      <title>Git常用命令备忘</title>
+      <link>https://www.mingaccount.com/2018/05/git-common-command/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/git-common-command/</guid>
+      <description># git更新当前分支 git pull #拉线上代码 git clone https://***.git.com #查看工作区状态 git status -s #撤回上一次的commit内容 git reset --hard HEAD~ #查看当前分支 git branch #切换到对应分支 git checkout</description>
+    </item>
+    
+    <item>
+      <title>Hutool工具包</title>
+      <link>https://www.mingaccount.com/2018/05/hutool/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/hutool/</guid>
+      <description>Hutool封装大量java工具类 maven配置： &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;cn.hutool&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;hutool-all&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.4.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; API文档 官方首页</description>
+    </item>
+    
+    <item>
       <title>Spring @Transactional事务失效</title>
       <link>https://www.mingaccount.com/2018/05/spring-transaction-invalid/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
@@ -83,6 +119,15 @@
     </item>
     
     <item>
+      <title>Spring boot filter</title>
+      <link>https://www.mingaccount.com/2018/01/spring-boot-filter/</link>
+      <pubDate>Tue, 16 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/01/spring-boot-filter/</guid>
+      <description>全局filter @Component @Order(1) public class FirstFilter extends Filter { @Override public void doFilter( ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException { ... chain.doFilter(request, response); } } 全局过滤直接实现Filter即可，如需设定顺序，使用@Order注解 URL</description>
+    </item>
+    
+    <item>
       <title>全局获取request</title>
       <link>https://www.mingaccount.com/2018/01/get-request-global/</link>
       <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
@@ -137,57 +182,12 @@
     </item>
     
     <item>
-      <title>包含多个模块的项目如何配置maven</title>
-      <link>https://www.mingaccount.com/2017/11/maven-multiple-module/</link>
-      <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
+      <title>Spring bean为null启动报错</title>
+      <link>https://www.mingaccount.com/2017/11/spring-bean-null/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://www.mingaccount.com/2017/11/maven-multiple-module/</guid>
-      <description>项目结构 +- pom.xml +- my-app | +- pom.xml | +- src | +- main | +- java +- my-webapp | +- pom.xml | +- src | +- main | +- webapp 可以看到该项目下包含两个module:my-app、my-webapp。</description>
-    </item>
-    
-    <item>
-      <title>[转]谈谈Java中的语法糖</title>
-      <link>https://www.mingaccount.com/2017/10/java-syntatic-sugar/</link>
-      <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/10/java-syntatic-sugar/</guid>
-      <description>*该博客转自 http://blog.csdn.net/danchu/article/details/54986442 语法糖（Syntactic Sugar），也称糖衣语法，指在计算机语言中添加的某种语法，这种语法对语言本身功能来说没有什么影响，</description>
-    </item>
-    
-    <item>
-      <title>Java编码,乱码问题详解</title>
-      <link>https://www.mingaccount.com/2017/10/java-encode/</link>
-      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/10/java-encode/</guid>
-      <description>一、常见的编码格式 1.ASCII 基础编码，英文和西欧字符。 用一个字节的低7位表示，一共128个。 0~13是控制字符如换行、回车、删除等，32~126是打</description>
-    </item>
-    
-    <item>
-      <title>如何在资源文件中读取Maven相关的参数</title>
-      <link>https://www.mingaccount.com/2017/10/maven-filter-resources-file/</link>
-      <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/10/maven-filter-resources-file/</guid>
-      <description>pom resources 首先要为pom文件新添一个resources标签 &amp;lt;project&amp;gt; &amp;lt;name&amp;gt;...&amp;lt;/name&amp;gt; &amp;lt;groupId&amp;gt;...&amp;lt;/groupId&amp;gt; &amp;lt;version&amp;gt;...&amp;lt;/version&amp;gt; ... &amp;lt;build&amp;gt; &amp;lt;resources&amp;gt; &amp;lt;resource&amp;gt; &amp;lt;directory&amp;gt;src/main/resources&amp;lt;/directory&amp;gt; &amp;lt;/resource&amp;gt; &amp;lt;filtering&amp;gt;true&amp;lt;/filtering&amp;gt; &amp;lt;/resources&amp;gt; &amp;lt;/build&amp;gt; &amp;lt;/project&amp;gt; 默认情况下&amp;lt;filtering&amp;gt;的属性为fals</description>
-    </item>
-    
-    <item>
-      <title>excel拆分(split)功能实现</title>
-      <link>https://www.mingaccount.com/2017/10/split-regexp/</link>
-      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/10/split-regexp/</guid>
-      <description>excel拆分规则 固定长度拆分 指定符号拆分 忽略重复拆分符号 带文本识别符号的拆分（比如&amp;quot;1,2,3,4,5&amp;quot;现在按照逗号分</description>
-    </item>
-    
-    <item>
-      <title>Java8 lamda表达式中的parallel</title>
-      <link>https://www.mingaccount.com/2017/09/java8-parallel/</link>
-      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/09/java8-parallel/</guid>
-      <description>概览 Java8为集合流处理提供了并发支持。并且就算集合不是线程安全的，你也可以在不修改集合的状态下，对集合进行并发汇总操作。但是这里面仍有一</description>
+      <guid>https://www.mingaccount.com/2017/11/spring-bean-null/</guid>
+      <description>背景 如果配置bean的时候出现null值，并且被其他bean所引用。那么启动的时候就有可能出现失败的情况。 @Configuration public class BeanConfiguration{ @Bean public Other getOther() { return null } } 因为配置</description>
     </item>
     
   </channel>

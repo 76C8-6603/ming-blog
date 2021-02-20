@@ -10,6 +10,17 @@
     
     
     <item>
+      <title>Duration format PnDTnHnMn.nS ISO-8601</title>
+      <link>https://www.mingaccount.com/2021/02/duration-format/</link>
+      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2021/02/duration-format/</guid>
+      <description>The ASCII letter &amp;ldquo;P&amp;rdquo; is next in upper or lower case. There are then four sections, each consisting of a number and a suffix.
+The sections have suffixes in ASCII of &amp;ldquo;D&amp;rdquo;, &amp;ldquo;H&amp;rdquo;, &amp;ldquo;M&amp;rdquo; and &amp;ldquo;S&amp;rdquo; for days, hours, minutes and seconds, accepted in upper or lower case. The suffixes must occur in order.
+The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence, if any, of an hour, minute or second section.</description>
+    </item>
+    
+    <item>
       <title>Windows CMD 错误pngquant failed to build, make sure that libpng-dev is installed</title>
       <link>https://www.mingaccount.com/2020/10/windows-npm-exception/</link>
       <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
@@ -178,15 +189,6 @@
       
       <guid>https://www.mingaccount.com/2019/12/hadoop-ssh-local-host-no-paw/</guid>
       <description>首先确保安装SSH server： sudo apt-get install openssh-server 启动SSH server: sudo service ssh start #检查ssh是否正常启动 ssh localhost 安装后，可以使用如下命令登陆本机： ssh localhost 此时会有SSH</description>
-    </item>
-    
-    <item>
-      <title>db2 cast decimal异常</title>
-      <link>https://www.mingaccount.com/2019/11/db2-cast-decimal-exception/</link>
-      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/11/db2-cast-decimal-exception/</guid>
-      <description>完整异常 [42611][-604] The length, precision, or scale attribute for column, distinct type, structured type, array type, attribute of structured type, routine, cast target type, type mapping, or global variable &amp;quot;decimal(38, 2)&amp;quot; is not valid.. SQLCODE=-604, SQLSTATE=42611, DRIVER=4.26.14 [56098][-727] An error occurred during implicit system action type &amp;quot;2&amp;quot;. Information returned for the error includes SQLCODE &amp;quot;-604&amp;quot;, SQLSTATE &amp;quot;42611&amp;quot; and message tokens &amp;quot;decimal(38, 2)&amp;quot;.. SQLCODE=-727, SQLSTATE=56098, DRIVER=4.26.14 报错</description>
     </item>
     
   </channel>

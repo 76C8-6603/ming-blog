@@ -33,7 +33,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.mingaccount.com/" />
-<meta property="og:updated_time" content="2020-10-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-02-20T00:00:00+00:00" />
 <meta itemprop="name" content="Ming Blog">
 <meta itemprop="description" content="">
 <meta name="twitter:card" content="summary"/>
@@ -243,7 +243,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/protocol/" class="tag-list-link">protocol</a><span
-                    class="tag-list-count">3</span></li>
+                    class="tag-list-count">4</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/python/" class="tag-list-link">python</a><span
@@ -267,7 +267,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
-                    class="tag-list-count">22</span></li>
+                    class="tag-list-count">26</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
@@ -279,7 +279,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/website-build/" class="tag-list-link">website-build</a><span
-                    class="tag-list-count">4</span></li>
+                    class="tag-list-count">5</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/windows/" class="tag-list-link">windows</a><span
@@ -294,6 +294,16 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget-body">
         <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.mingaccount.com/2021/02/duration-format/" class="title">Duration format PnDTnHnMn.nS ISO-8601</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-02-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-02-20</time>
+                    </p>
+                </div>
+            </li>
             <li>
                 <div class="item-inner">
                     <p class="item-title">
@@ -334,16 +344,6 @@
                     </p>
                 </div>
             </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://www.mingaccount.com/2020/07/wsl-restart/" class="title">win10 linux子系统如何重启</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2020-07-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-07-05</time>
-                    </p>
-                </div>
-            </li>
         </ul>
     </div>
 </div>
@@ -359,6 +359,222 @@
     
     
     
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2017/07/mysql-batch-update/"
+    >Mysql批量更新</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        多个where条件，每个条件对应的更新值不同，需要mysql批量更新 UPDATE test_table SET test_target = test_id CASE WHEN &quot;123&quot; THEN &quot;456&quot; WHEN &quot;789&quot; THEN &quot;101&quot; END WHERE test_id in ['123','789'] 但是在程序中，直接写常量的情况太
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2017/07/mysql-batch-update/" class="">
+  <time datetime="2017-07-19 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-07-19</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/mysql/"> mysql </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/07/mysql-batch-update/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 126words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2017/07/mysql-startup-exception/"
+    >Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        usermod -d /var/lib/mysql/ mysql ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock chown -R mysql:mysql /var/lib/mysql
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2017/07/mysql-startup-exception/" class="">
+  <time datetime="2017-07-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-07-11</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/mysql/"> mysql </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/07/mysql-startup-exception/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 12words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2017/07/markdown-lifecycle/"
+    >Markdown生命周期</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        lifecycle-phase maven有三个内部生命周期：default，clean，和site。 每个生命周期由多个阶段(phase)组成 clean Phase Description pre-clean execute processes needed prior to the actual project cleaning clean
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2017/07/markdown-lifecycle/" class="">
+  <time datetime="2017-07-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-07-09</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/maven/"> maven </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/07/markdown-lifecycle/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 653words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2017/06/maven-dependency-scope/"
+    >Maven依赖scope属性</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        compile This is the default scope, used if none is specified. Compile dependencies are available in all classpaths of a project. Furthermore, those dependencies are propagated to dependent projects. provided This is much like compile, but indicates you expect the JDK or a container to provide the dependency at runtime. For example, when building a web application for the Java Enterprise Edition, you would set the dependency on the Servlet
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2017/06/maven-dependency-scope/" class="">
+  <time datetime="2017-06-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-06-16</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/maven/"> maven </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/06/maven-dependency-scope/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 314words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2017/06/maven-common-command/"
+    >Maven命令备忘</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        # 编译项目 mvn compile # 执行项目中的单元测试 # 查找单元测试类的默认规则：**/*Test.java;**/Test*.java;**/*TestCa
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2017/06/maven-common-command/" class="">
+  <time datetime="2017-06-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-06-15</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/maven/"> maven </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/06/maven-common-command/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 622words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2017/06/gson-scientific-notation/"
+    >阻止Gson将long类型的字段转为科学计数法</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        GsonBuilder gsonBuilder = new GsonBuilder(); gsonBuilder.setLongSerializationPolicy( LongSerializationPolicy.STRING ); Gson gson = gsonBuilder.create();
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2017/06/gson-scientific-notation/" class="">
+  <time datetime="2017-06-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-06-08</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/java/"> java </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/06/gson-scientific-notation/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 12words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
     <article
       class="article article-type-page"
       itemscope
@@ -393,223 +609,6 @@
         <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/06/spring-aop/#comments" class="article-comment-link">Comments</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 10027words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 21minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/06/method-get-all-argnames/"
-    >根据Method获取所有参数名</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        LocalVariableTableParameterNameDiscoverer discoverer = new LocalVariableTableParameterNameDiscoverer(); discoverer.getParameterNames(method); 详情参考API文档
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2017/06/method-get-all-argnames/" class="">
-  <time datetime="2017-06-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-06-06</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/java/"> java </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/06/method-get-all-argnames/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 15words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/05/java-string-special-symbol-handler/"
-    >JavaString 特殊符号处理工具类</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        Java, Java Script, HTML, JSON, CSV and XML org.apache.commons.lang3.StringEscapeUtils //使用示例 StringEscapeUtils.escapeCsv(&quot;&quot;); SqtringEscapeUtils.escapeXml(&quot;&quot;); api文档 Regexp 正则表达式转义所有特殊符号 其他 com.google.common.escape.Escapers Escaper build = Escapers.builder().addEscape('$', &quot; &quot;).build(); String str = build.escape(&quot;$$$$&quot;); api文档
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2017/05/java-string-special-symbol-handler/" class="">
-  <time datetime="2017-05-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-05-26</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/java/"> java </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/05/java-string-special-symbol-handler/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 54words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/05/regex-escape-all-special-symbol/"
-    >正则表达式转义所有特殊符号</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        正则表达式的特殊符号包括 \ $ ( ) * + . [ ] ? ^ { } | - 实现代码(java) public class RegexUtils { private static final String[] SPECIAL_SYMBOLS = new String[]{&quot;\\&quot;, &quot;$&quot;, &quot;(&quot;, &quot;)&quot;, &quot;*&quot;, &quot;+&quot;, &quot;.&quot;, &quot;[&quot;, &quot;]&quot;, &quot;?&quot;, &quot;^&quot;, &quot;{&quot;, &quot;}&quot;, &quot;|&quot;, &quot;-&quot;}; /** * 转义目标正
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/" class="">
-  <time datetime="2017-05-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-05-26</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/regexp/"> regexp </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/05/regex-escape-all-special-symbol/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 115words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/05/java-method-first-default-param/"
-    >Java方法的默认参数</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        Java方法如何编译 int add12and13() { return addTwo(12, 13); } 将会编译为： Method int add12and13() 0 aload_0 // Push local variable 0 (this) 1 bipush 12 // Push int constant 12 3 bipush 13 // Push int constant 13 5 invokevirtual #4 // Method Example.addtwo(II)I 8 ireturn // Return int on top of operand stack; // it is the
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2017/05/java-method-first-default-param/" class="">
-  <time datetime="2017-05-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-05-20</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/java/"> java </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/05/java-method-first-default-param/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 320words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/05/pom-tag/"
-    >pom元素说明</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        project pom.xml文件的顶级元素 modelVersion POM使用的对象模型版本。这个模型的版本几乎不更新，作为必要元素的原因是确保稳定性。 groupId 这个元素代表创建这个项
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2017/05/pom-tag/" class="">
-  <time datetime="2017-05-19 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-05-19</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/maven/"> maven </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/05/pom-tag/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 545words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/05/mysql-oracle-case-sensitive/"
-    >关于mysql和oracle的大小写敏感</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        表名 mysql 每一个表至少对应一个服务器文件，而且名字对应，因此表名的大小写敏感跟系统有关系，windows不区分，linux区分 oracle 所有不在双引号里
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2017/05/mysql-oracle-case-sensitive/" class="">
-  <time datetime="2017-05-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-05-10</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/mysql/"> mysql </a>
-    <a class="article-tag-link" href="/tags/oracle/"> oracle </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/05/mysql-oracle-case-sensitive/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 252words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </p>
     </article></div>
   
