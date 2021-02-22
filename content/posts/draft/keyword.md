@@ -6,15 +6,27 @@
     draft: true
 
 ---
+* ~~限流~~
+* ~~maven~~
+* ~~h2~~
+  
 
-* BIO, NIO, APR
-* Guava
-* junit 5
-* 垃圾回收，out of memory
-* failsafe
 * Docker
 * k8s
 * jenkins
+* nginx
+* Harbor
+* rabbitmq
+  
+* junit 5
+* h2
+* sqlLite
+
+* BIO, NIO, APR
+* Guava
+* 垃圾回收，out of memory
+* failsafe
+
 * pg
 * AtomicInteger
 * undertow
@@ -71,7 +83,7 @@
   vert.x
   nio
   concurrent
-  cache mq react 服务治理 削峰填谷 限流降级 分布式hash 分布式锁
+  cache mq react 服务治理 削峰填谷 降级 分布式hash 分布式锁
   Dubbo zk一致性
   Spring Cloud eureka一致性
   AtomicLong
@@ -80,3 +92,4 @@
 * dubbo
 * jetty
 * cassandra
+
