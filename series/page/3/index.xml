@@ -10,6 +10,24 @@
     
     
     <item>
+      <title>lombok详解</title>
+      <link>https://www.mingaccount.com/2019/07/lombok/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/lombok/</guid>
+      <description>val 精简变量修饰，类似Scala，但是默认追加了final修饰符 val list = new ArrayList&amp;lt;String&amp;gt;(); //等同于 final ArrayList&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(); var 精简变量修饰，类似Scala，修饰变量 val list =</description>
+    </item>
+    
+    <item>
+      <title>Maven jar包冲突导致NoClassDefFoundError</title>
+      <link>https://www.mingaccount.com/2019/07/maven-jar-clash/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/maven-jar-clash/</guid>
+      <description>问题背景 项目的两个依赖，包含了同一个路径，然而因为项目原因还不能删除其中任何一个 代码在本地和线上都能正常通过编译 但是一执行到对应代码就会抛出</description>
+    </item>
+    
+    <item>
       <title>FastJson解析结果部分属性为null的问题</title>
       <link>https://www.mingaccount.com/2019/07/fastjson-undes-property-isnull/</link>
       <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
@@ -118,6 +136,33 @@
     </item>
     
     <item>
+      <title>h2兼容模式</title>
+      <link>https://www.mingaccount.com/2018/12/h2-compatible/</link>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/12/h2-compatible/</guid>
+      <description>h2有多种数据库兼容模式，例如Mysql：jdbc:h2:mem:testdb;MODE=MYSQL。 但是兼容模式并不可靠，还是有部分特有语</description>
+    </item>
+    
+    <item>
+      <title>h2 url参数</title>
+      <link>https://www.mingaccount.com/2018/12/h2-url/</link>
+      <pubDate>Tue, 11 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/12/h2-url/</guid>
+      <description>参考h2 feature</description>
+    </item>
+    
+    <item>
+      <title>Junit5常用注解</title>
+      <link>https://www.mingaccount.com/2018/11/junit5-common-annotation/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/11/junit5-common-annotation/</guid>
+      <description>@BeforeAll @BeforeEach @AfterAll @AfterEach @DisplayName 自定义的展示名称 @IndicativeSentencesGeneration(separator = &amp;quot; -&amp;gt; &amp;ldquo;, generator = DisplayNameGenerator.ReplaceUnderscores.class) 更改生成测试名称规则，根据类名和方法名生成，并可以指定替换策略，比如上面的替换下划线为空格 @Disabled 屏蔽整</description>
+    </item>
+    
+    <item>
       <title>Maven Plugins</title>
       <link>https://www.mingaccount.com/2018/11/maven-plugin/</link>
       <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
@@ -127,66 +172,21 @@
     </item>
     
     <item>
+      <title>Spring boot h2集成数据库进行测试</title>
+      <link>https://www.mingaccount.com/2018/10/spring-boot-h2-test/</link>
+      <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/10/spring-boot-h2-test/</guid>
+      <description>背景 使用AutoConfigure*或者SpringBootTest进行测试的时候，如果不手动设置@AutoConfigureTestDat</description>
+    </item>
+    
+    <item>
       <title>删除视图失败，提示有其他视图依赖于该视图</title>
       <link>https://www.mingaccount.com/2018/10/h2-drop-exception/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.mingaccount.com/2018/10/h2-drop-exception/</guid>
       <description>问题背景 DROP VIEW temp_view; 报错信息： Can&#39;t drop temp_view,because *** depend on it 解决方案 DROP VIEW temp_view CASCADE ; 该sql会删除所有依赖的视图</description>
-    </item>
-    
-    <item>
-      <title>hive 执行sql时报错out of sequence</title>
-      <link>https://www.mingaccount.com/2018/09/hive-out-of-sequence/</link>
-      <pubDate>Sun, 23 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/09/hive-out-of-sequence/</guid>
-      <description>问题背景 错误日志： org.apache.thrift.TApplicationException: [?] : out of sequence response 问题原因 hive连接在连接池中，同时两个线程去获取并执行，两个都有close操作。 参考hive jira</description>
-    </item>
-    
-    <item>
-      <title>SpringBoot Mybatis配置多数据源</title>
-      <link>https://www.mingaccount.com/2018/09/spring-boot-mybatis-multi-source/</link>
-      <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/09/spring-boot-mybatis-multi-source/</guid>
-      <description>@Configuration @MapperScan(basePackages = MysqlDatasourceConfig.PACKAGE, sqlSessionFactoryRef = &amp;quot;mysqlSessionFactory&amp;quot;) public class MysqlDatasourceConfig { public static final String PACKAGE = &amp;quot;com.ming.mapper.mysql1&amp;quot;; public static final String MAPPER_LOCATION = &amp;quot;classpath:mapper/mysql1/*.xml&amp;quot;; @Primary @Bean(name = &amp;quot;mysqlDatasource&amp;quot;) @ConfigurationProperties(&amp;quot;spring.datasource.druid.mysql1&amp;quot;) public DataSource mysqlDataSource(){ return DruidDataSourceBuilder.create().build(); } @Bean(name = &amp;quot;mysqlTransactionManager&amp;quot;) @Primary public DataSourceTransactionManager mysqlTransactionManager() { return new DataSourceTransactionManager(mysqlDataSource()); } @Bean(name = &amp;quot;mysqlSessionFactory&amp;quot;) @Primary public SqlSessionFactory mysqlSessionFactory(@Qualifier(&amp;quot;mysqlDatasource&amp;quot;) DataSource dataSource) throws Exception { final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean(); sessionFactory.setDataSource(dataSource); sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MysqlDatasourceConfig.MAPPER_LOCATION)); return</description>
-    </item>
-    
-    <item>
-      <title>SpringBoot Ehcache集成</title>
-      <link>https://www.mingaccount.com/2018/09/spring-boot-ehcache/</link>
-      <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/09/spring-boot-ehcache/</guid>
-      <description>ehcache.xml &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;ehcache xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:noNamespaceSchemaLocation=&amp;quot;http://ehcache.org/ehcache.xsd&amp;quot;&amp;gt; &amp;lt;defaultCache maxElementsInMemory=&amp;quot;10000&amp;quot; eternal=&amp;quot;false&amp;quot; timeToIdleSeconds=&amp;quot;3600&amp;quot; timeToLiveSeconds=&amp;quot;0&amp;quot; overflowToDisk=&amp;quot;false&amp;quot; diskPersistent=&amp;quot;false&amp;quot; diskExpiryThreadIntervalSeconds=&amp;quot;120&amp;quot; /&amp;gt; &amp;lt;cache name=&amp;quot;myCache&amp;quot; maxEntriesLocalHeap=&amp;quot;2000&amp;quot; eternal=&amp;quot;false&amp;quot; timeToIdleSeconds=&amp;quot;3600&amp;quot; timeToLiveSeconds=&amp;quot;0&amp;quot; overflowToDisk=&amp;quot;false&amp;quot; statistics=&amp;quot;true&amp;quot;/&amp;gt; &amp;lt;/ehcache&amp;gt; 属性简介： name：缓存名称。 maxElementsInMemory：缓存最大数目 maxE</description>
-    </item>
-    
-    <item>
-      <title>SpringBoot Redis集成</title>
-      <link>https://www.mingaccount.com/2018/09/spring-boot-redis/</link>
-      <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/09/spring-boot-redis/</guid>
-      <description>application.yml spring: redis: database: 0 host: localhost prot: 6379 pool: max-active: 8 max-wait: -1 max-idle: 8 min-idle: 0 timeout: 0 更多配置参考Spring官网配置参数 RedisConfig @Configuration @EnableCaching public class RedisConfig extends CachingConfigurerSupport { @Bean @Override public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) { return RedisCacheManager.create(redisConnectionFactory); } }</description>
-    </item>
-    
-    <item>
-      <title>Spring缓存集成</title>
-      <link>https://www.mingaccount.com/2018/09/spring-cache/</link>
-      <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/09/spring-cache/</guid>
-      <description>1.了解缓存概念 缓存和缓冲(Cache vs Buffer) 缓存和缓冲一般来说都是交替使用的，需要知道的是他们是两个完全不同的东西。 buffer(缓冲)是用在</description>
-    </item>
-    
-    <item>
-      <title>大型网站架构演化概论</title>
-      <link>https://www.mingaccount.com/2018/09/big-web-bala-bala/</link>
-      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/09/big-web-bala-bala/</guid>
-      <description>1.大型网站的特点： 相比传统企业应用系统，大型互联网应用系统有以下特点： 高并发、大流量：需要面对高并发用户，大流量访问。 高可用：系统需要7*</description>
     </item>
     
   </channel>

@@ -21,6 +21,15 @@ The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence,
     </item>
     
     <item>
+      <title>启用Windows Hyper-v和containers</title>
+      <link>https://www.mingaccount.com/2020/10/windows-hyper-v-and-container/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2020/10/windows-hyper-v-and-container/</guid>
+      <description>Hyper-v powershell admin Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All Install Hyper-V on Windows 10 Containers Prep windows for containers</description>
+    </item>
+    
+    <item>
       <title>Windows CMD 错误pngquant failed to build, make sure that libpng-dev is installed</title>
       <link>https://www.mingaccount.com/2020/10/windows-npm-exception/</link>
       <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
@@ -180,15 +189,6 @@ The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence,
       
       <guid>https://www.mingaccount.com/2019/12/field-injection-not-recommended/</guid>
       <description>Spring依赖注入方式 直接修饰成员变量，也就是提醒不推荐的情况 @RestController public class TestController{ @Autowired private TestService testService; } 修饰构造函数，@Autowired可省略 @RestController public class TestController{ private TestService testService; public TestController(TestService</description>
-    </item>
-    
-    <item>
-      <title>Hadoop ssh localhost 无密码登录</title>
-      <link>https://www.mingaccount.com/2019/12/hadoop-ssh-local-host-no-paw/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/12/hadoop-ssh-local-host-no-paw/</guid>
-      <description>首先确保安装SSH server： sudo apt-get install openssh-server 启动SSH server: sudo service ssh start #检查ssh是否正常启动 ssh localhost 安装后，可以使用如下命令登陆本机： ssh localhost 此时会有SSH</description>
     </item>
     
   </channel>

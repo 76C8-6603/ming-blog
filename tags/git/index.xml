@@ -5,7 +5,7 @@
     <link>https://www.mingaccount.com/tags/git/</link>
     <description>Recent content in git on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 06 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,15 @@
       <description>The ASCII letter &amp;ldquo;P&amp;rdquo; is next in upper or lower case. There are then four sections, each consisting of a number and a suffix.
 The sections have suffixes in ASCII of &amp;ldquo;D&amp;rdquo;, &amp;ldquo;H&amp;rdquo;, &amp;ldquo;M&amp;rdquo; and &amp;ldquo;S&amp;rdquo; for days, hours, minutes and seconds, accepted in upper or lower case. The suffixes must occur in order.
 The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence, if any, of an hour, minute or second section.</description>
+    </item>
+    
+    <item>
+      <title>启用Windows Hyper-v和containers</title>
+      <link>https://www.mingaccount.com/2020/10/windows-hyper-v-and-container/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2020/10/windows-hyper-v-and-container/</guid>
+      <description>Hyper-v powershell admin Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All Install Hyper-V on Windows 10 Containers Prep windows for containers</description>
     </item>
     
     <item>
@@ -181,15 +190,6 @@ The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence,
       
       <guid>https://www.mingaccount.com/2019/12/field-injection-not-recommended/</guid>
       <description>Spring依赖注入方式 直接修饰成员变量，也就是提醒不推荐的情况 @RestController public class TestController{ @Autowired private TestService testService; } 修饰构造函数，@Autowired可省略 @RestController public class TestController{ private TestService testService; public TestController(TestService</description>
-    </item>
-    
-    <item>
-      <title>Hadoop ssh localhost 无密码登录</title>
-      <link>https://www.mingaccount.com/2019/12/hadoop-ssh-local-host-no-paw/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/12/hadoop-ssh-local-host-no-paw/</guid>
-      <description>首先确保安装SSH server： sudo apt-get install openssh-server 启动SSH server: sudo service ssh start #检查ssh是否正常启动 ssh localhost 安装后，可以使用如下命令登陆本机： ssh localhost 此时会有SSH</description>
     </item>
     
   </channel>

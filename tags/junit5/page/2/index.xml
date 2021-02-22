@@ -5,10 +5,19 @@
     <link>https://www.mingaccount.com/tags/junit5/</link>
     <description>Recent content in junit5 on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 15 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Nov 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/junit5/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hadoop ssh localhost 无密码登录</title>
+      <link>https://www.mingaccount.com/2019/12/hadoop-ssh-local-host-no-paw/</link>
+      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/12/hadoop-ssh-local-host-no-paw/</guid>
+      <description>首先确保安装SSH server： sudo apt-get install openssh-server 启动SSH server: sudo service ssh start #检查ssh是否正常启动 ssh localhost 安装后，可以使用如下命令登陆本机： ssh localhost 此时会有SSH</description>
+    </item>
     
     <item>
       <title>db2 cast decimal异常</title>
@@ -110,6 +119,15 @@
     </item>
     
     <item>
+      <title>jenkins sh permission denied</title>
+      <link>https://www.mingaccount.com/2019/08/jenkins-sh-permission-denied/</link>
+      <pubDate>Sun, 11 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/08/jenkins-sh-permission-denied/</guid>
+      <description>Jenkinsfile pipeline { agent any stages { stage(&#39;Test&#39;) { steps { sh &#39;./mvnw test&#39; } } } post { always { junit &#39;target/surefire-reports/*.xml&#39; } } } 异常 ./mvnw: Permission denied 解决方案 git update-index --chmod +x mvnw</description>
+    </item>
+    
+    <item>
       <title>[转]Spring中使用@Autowired注解静态实例对象</title>
       <link>https://www.mingaccount.com/2019/07/spring-autowired-static-object/</link>
       <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
@@ -170,24 +188,6 @@
       
       <guid>https://www.mingaccount.com/2019/07/nexus/</guid>
       <description>简介 Nexus repository Manager可以作为Maven的私服，意味着在Maven中央仓库和你本地项目之间多了一层代理。在本地访问已经加载过的jar包时，私</description>
-    </item>
-    
-    <item>
-      <title>lombok详解</title>
-      <link>https://www.mingaccount.com/2019/07/lombok/</link>
-      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/07/lombok/</guid>
-      <description>val 精简变量修饰，类似Scala，但是默认追加了final修饰符 val list = new ArrayList&amp;lt;String&amp;gt;(); //等同于 final ArrayList&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(); var 精简变量修饰，类似Scala，修饰变量 val list =</description>
-    </item>
-    
-    <item>
-      <title>Maven jar包冲突导致NoClassDefFoundError</title>
-      <link>https://www.mingaccount.com/2019/07/maven-jar-clash/</link>
-      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/07/maven-jar-clash/</guid>
-      <description>问题背景 项目的两个依赖，包含了同一个路径，然而因为项目原因还不能删除其中任何一个 代码在本地和线上都能正常通过编译 但是一执行到对应代码就会抛出</description>
     </item>
     
   </channel>

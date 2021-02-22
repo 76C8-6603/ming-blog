@@ -5,10 +5,64 @@
     <link>https://www.mingaccount.com/tags/h2/</link>
     <description>Recent content in h2 on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Dec 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/h2/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Springboot Jackson全局日期格式处理</title>
+      <link>https://www.mingaccount.com/2017/04/jackson-global-date-format/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/04/jackson-global-date-format/</guid>
+      <description>通过修改springboot application.properties spring.jackson.date-format=yyyy-MM-dd HH:mm:ss spring.jackson.time-zone=GMT+8</description>
+    </item>
+    
+    <item>
+      <title>Jackson使用解析</title>
+      <link>https://www.mingaccount.com/2017/04/jackson/</link>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/04/jackson/</guid>
+      <description>Jackson简介 Spring在@RequestBody和@ResponseBody中对对象的反序列化和序列化，都是借助Jackson来实现</description>
+    </item>
+    
+    <item>
+      <title>修改SpringBoot日志打印时候的标志</title>
+      <link>https://www.mingaccount.com/2017/04/modify-spring-boot-banner/</link>
+      <pubDate>Sat, 15 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/04/modify-spring-boot-banner/</guid>
+      <description>1.新建banner.txt在resources目录下 _/_/_/ _/ _/ _/_/_/ _/ _/ _/_/ _/ _/ _/ _/ _/_/ _/ _/ _/ _/ _/_/_/_/ _/ _/ _/ _/ _/_/_/_/ _/ _/ _/ _/ _/ _/_/ _/ _/ _/_/_/ _/ _/ _/_/_/ _/ _/ _/ _/ 文本图形生</description>
+    </item>
+    
+    <item>
+      <title>Spring Application配置文件通用参数</title>
+      <link>https://www.mingaccount.com/2017/04/spring-properties-common-key/</link>
+      <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/04/spring-properties-common-key/</guid>
+      <description>参考Spring官网配置参数 完整列出了所有application配置文件中可用的参数</description>
+    </item>
+    
+    <item>
+      <title>Spring自定义配置文件并映射到指定类中</title>
+      <link>https://www.mingaccount.com/2017/01/spring-boot-external-properties/</link>
+      <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/01/spring-boot-external-properties/</guid>
+      <description>新建指定配置类TestConfiguration 该类需要的注解： @Configuration @ConfigurationProperties(prefix=&amp;quot;test&amp;quot;) @PropertySource(&amp;quot;classpath:test.properties&amp;quot;) 同时启动类上需要增加注解： @EnableConfigurationProperties({TestConfiguration.class})</description>
+    </item>
+    
+    <item>
+      <title>java7特性try-with-resources</title>
+      <link>https://www.mingaccount.com/2016/08/try-with-resources/</link>
+      <pubDate>Tue, 09 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/08/try-with-resources/</guid>
+      <description>概览 try-with-resources表达式可以自动关闭申明在表达式中的资源，但前提是这些资源类要实现java.lang.AutoClos</description>
+    </item>
     
     <item>
       <title>Mysql Where条件判断 字符串和数字 是否相等时存在的问题</title>

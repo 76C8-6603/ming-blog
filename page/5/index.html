@@ -159,7 +159,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/git/" class="tag-list-link">git</a><span
-                    class="tag-list-count">3</span></li>
+                    class="tag-list-count">4</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/gradle/" class="tag-list-link">gradle</a><span
@@ -167,7 +167,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/h2/" class="tag-list-link">h2</a><span
-                    class="tag-list-count">1</span></li>
+                    class="tag-list-count">4</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/hadoop/" class="tag-list-link">hadoop</a><span
@@ -186,6 +186,10 @@
                     class="tag-list-count">36</span></li>
             
             
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/jenkins/" class="tag-list-link">jenkins</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/jooq/" class="tag-list-link">jooq</a><span
                     class="tag-list-count">2</span></li>
             
@@ -195,7 +199,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/junit5/" class="tag-list-link">junit5</a><span
-                    class="tag-list-count">1</span></li>
+                    class="tag-list-count">2</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/linux/" class="tag-list-link">linux</a><span
@@ -267,7 +271,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
-                    class="tag-list-count">26</span></li>
+                    class="tag-list-count">27</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
@@ -283,7 +287,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/windows/" class="tag-list-link">windows</a><span
-                    class="tag-list-count">5</span></li>
+                    class="tag-list-count">6</span></li>
             
         </ul>
 
@@ -301,6 +305,16 @@
                     </p>
                     <p class="item-date">
                         <time datetime="2021-02-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-02-20</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.mingaccount.com/2020/10/windows-hyper-v-and-container/" class="title">启用Windows Hyper-v和containers</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-10-19 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-10-19</time>
                     </p>
                 </div>
             </li>
@@ -334,16 +348,6 @@
                     </p>
                 </div>
             </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://www.mingaccount.com/2020/07/jooq-default-schema/" class="title">JOOQ默认schema</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2020-07-14 11:16:55 &#43;0800 CST" itemprop="datePublished">2020-07-14</time>
-                    </p>
-                </div>
-            </li>
         </ul>
     </div>
 </div>
@@ -359,6 +363,42 @@
     
     
     
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2019/09/spark-session-cant-read-local-file/"
+    >SparkSession.read().csv()无法定位本地文件的问题</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        原因是spark有两个文件头 [file://]代表本地 [hdfs://]代表hdfs路径 如果路径没有文件头，spark会将该路径默认添加上&
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2019/09/spark-session-cant-read-local-file/" class="">
+  <time datetime="2019-09-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-09-18</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/spark/"> spark </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2019/09/spark-session-cant-read-local-file/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 156words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
     <article
       class="article article-type-page"
       itemscope
@@ -476,6 +516,43 @@
         <h1 itemprop="name">
   <a
     class="article-title"
+    href="/2019/08/jenkins-sh-permission-denied/"
+    >jenkins sh permission denied</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        Jenkinsfile pipeline { agent any stages { stage('Test') { steps { sh './mvnw test' } } } post { always { junit 'target/surefire-reports/*.xml' } } } 异常 ./mvnw: Permission denied 解决方案 git update-index --chmod +x mvnw
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2019/08/jenkins-sh-permission-denied/" class="">
+  <time datetime="2019-08-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-08-11</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/jenkins/"> jenkins </a>
+    <a class="article-tag-link" href="/tags/git/"> git </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2019/08/jenkins-sh-permission-denied/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 40words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
     href="/2019/07/spring-autowired-static-object/"
     >[转]Spring中使用@Autowired注解静态实例对象</a
   >
@@ -538,78 +615,6 @@
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 109words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2019/07/java-cipher/"
-    >Java加密类Cipher的使用</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        public class EncryptUtils { private static final String SECRET_KEY_1 = &quot;YIORGA4dBYp6y7u8&quot;; private static final String SECRET_KEY_2 = &quot;C6B8r5y7u7Uh37Sy&quot;; private IvParameterSpec ivParameterSpec; private SecretKeySpec secretKeySpec; private Cipher cipher; public EncryptUtils() throws UnsupportedEncodingException, NoSuchPaddingException, NoSuchAlgorithmException { ivParameterSpec = new IvParameterSpec(SECRET_KEY_1.getBytes(&quot;UTF-8&quot;)); secretKeySpec = new SecretKeySpec(SECRET_KEY_2.getBytes(&quot;UTF-8&quot;), &quot;AES&quot;); cipher = Cipher.getInstance(&quot;AES/CBC/PKCS5PADDING&quot;); } /** * Encrypt the string with this internal algorithm. * * @param toBeEncrypt string object to be encrypt. * @return returns encrypted string.
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2019/07/java-cipher/" class="">
-  <time datetime="2019-07-19 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-07-19</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/java/"> java </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2019/07/java-cipher/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 188words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2019/07/spring-boot-configuration-exception/"
-    >spring boot configuration annotation processor not found in classpath</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        配置有@ConfigurationProperties 注解的类，有如下提示 spring boot configuration annotation processor not found in classpath pom追加配置如下依赖即可 &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-configuration-processor&lt;/artifactId&gt; &lt;optional&gt;true&lt;/optional&gt; &lt;/dependency&gt;
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2019/07/spring-boot-configuration-exception/" class="">
-  <time datetime="2019-07-17 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-07-17</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/spring/"> spring </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2019/07/spring-boot-configuration-exception/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 64words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
-      </p>
     </article></div>
   
 <nav class="bar bar-footer clearfix" data-stick-bottom>
@@ -627,7 +632,7 @@
       </li>
     </ul>
     <div class="total-article bar-right">
-      Page:5/22
+      Page:5/23
     </div>
   </div>
 </nav>

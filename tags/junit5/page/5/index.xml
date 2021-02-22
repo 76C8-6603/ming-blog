@@ -5,10 +5,64 @@
     <link>https://www.mingaccount.com/tags/junit5/</link>
     <description>Recent content in junit5 on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 15 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Nov 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/junit5/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mysql安装后root无法登陆(Access denied for user &#39;root&#39;@&#39;localhost&#39;)</title>
+      <link>https://www.mingaccount.com/2018/06/mysql-cant-login-with-root/</link>
+      <pubDate>Fri, 08 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/06/mysql-cant-login-with-root/</guid>
+      <description>复杂密码才能通过 sudo mysql -u root -p mysql&amp;gt; select user, plugin from mysql.user; mysql&amp;gt; update mysql.user set authentication_string=PASSWORD(&#39;xcvds_32GDS&#39;), plugin=&#39;mysql_native_password&#39; where user=&#39;root&#39;; mysql8.0不能用上边的语句： ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &amp;quot;svewe_123&amp;quot;;</description>
+    </item>
+    
+    <item>
+      <title>Maven怎样把jar部署到远程仓库</title>
+      <link>https://www.mingaccount.com/2018/06/maven-deploy-jar-to-remote-repository/</link>
+      <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/06/maven-deploy-jar-to-remote-repository/</guid>
+      <description>distributionManagement 需要在pom.xml文件中新增标签&amp;lt;distributionManagement&amp;gt; &amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;com.mycompany.app&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;my-app&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt; &amp;lt;name&amp;gt;Maven Quick Start Archetype&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.apache.org&amp;lt;/url&amp;gt; &amp;lt;!-- | | | --&amp;gt; &amp;lt;distributionManagement&amp;gt; &amp;lt;repository&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>avg函数忽略null值</title>
+      <link>https://www.mingaccount.com/2018/06/avg-ignore-null/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/06/avg-ignore-null/</guid>
+      <description>avg函数对值为null的行，会忽略不计 解决方案 avg((coalesce(column,0))</description>
+    </item>
+    
+    <item>
+      <title>Srping Boot测试</title>
+      <link>https://www.mingaccount.com/2018/05/spring-boot-test/</link>
+      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/spring-boot-test/</guid>
+      <description>参考官方文档Spring Boot Test</description>
+    </item>
+    
+    <item>
+      <title>Maven标准文件夹结构</title>
+      <link>https://www.mingaccount.com/2018/05/maven-stadard-dir-layout/</link>
+      <pubDate>Sun, 13 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/maven-stadard-dir-layout/</guid>
+      <description>目录 描述 src/main/java Application/Library sources src/main/resources Application/Library resources src/main/filters Resource filter files src/main/webapp Web application sources src/test/java Test sources src/test/resources Test resources src/test/filters Test resource filter files src/it Integration Tests (primarily for plugins) src/assembly Assembly descriptors src/site Site LICENSE.txt Project&amp;rsquo;s license NOTICE.txt Notices and attributions required by libraries that the project depends on README.txt Project&amp;rsquo;s readme</description>
+    </item>
+    
+    <item>
+      <title>[译]java9新特性：在接口中用pirvate方法让default(java8接口特性)更简练</title>
+      <link>https://www.mingaccount.com/2018/05/java9-new-feature/</link>
+      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/java9-new-feature/</guid>
+      <description>Java8 带来了许多改变，其中之一就是default修饰的接口方法。 这些方法改变了我们已知的接口，现在我们能够在接口中定义默认实现方法。默认实现方法</description>
+    </item>
     
     <item>
       <title>Git push 异常：remote: No anonymous write access</title>
@@ -134,60 +188,6 @@
       
       <guid>https://www.mingaccount.com/2018/01/get-request-global/</guid>
       <description>交于Spring管理的类，通过注解调用 @Component public class Test{ @Autowired private HttpServletRequest httpServletRequest; } 通过静态方法调用 HttpServletRequest httpServletRequest = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();</description>
-    </item>
-    
-    <item>
-      <title>Java获取当前类名和方法名</title>
-      <link>https://www.mingaccount.com/2018/01/java-fetch-current-classname-methodname/</link>
-      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/01/java-fetch-current-classname-methodname/</guid>
-      <description>Description Below I present you two different ways to get the current Class: Using Thread Using getClass() The simplest way to get the name of the class where your code is being executed in is using the getClass() method present in every java object. Like here: String clazz = this.getClass().getName(); This works only if executed in an Object, namely an instanciated class. If you try to execute the code above</description>
-    </item>
-    
-    <item>
-      <title>观察者模式和java委托</title>
-      <link>https://www.mingaccount.com/2018/01/observe-patter-and-java-agent/</link>
-      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/01/observe-patter-and-java-agent/</guid>
-      <description>所谓观察者模式，指的某个状态信息的改变，会影响其他一系列的操作，这时就可以将这些操作抽象化，同时创建一个类统一的管理和执行这些操作。把这些抽</description>
-    </item>
-    
-    <item>
-      <title>[转]Class.forName()用法详解</title>
-      <link>https://www.mingaccount.com/2017/11/class-forname/</link>
-      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/11/class-forname/</guid>
-      <description>转自:http://blog.csdn.net/kaiwii/article/details/7405761 主要功能 Class.forNam</description>
-    </item>
-    
-    <item>
-      <title>List addAll产生异常java.lang.UnsupportedOperationException</title>
-      <link>https://www.mingaccount.com/2017/11/list-addall-exception/</link>
-      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/11/list-addall-exception/</guid>
-      <description>原因是因为list是由Arrays.asList生成的 根据Arrays源码，asList方法生成的ArrayList，并不是java.uti</description>
-    </item>
-    
-    <item>
-      <title>Maven构建项目描述网页</title>
-      <link>https://www.mingaccount.com/2017/11/maven-site/</link>
-      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/11/maven-site/</guid>
-      <description>通过以下命令，即可创建项目描述网页 mvn site 跟网页展示资源相关的目录 +- src/ +- site/ +- apt/ | +- index.apt ! +- markdown/ | +- content.md | +- fml/ | +- general.fml | +- faq.fml | +- xdoc/ | +- other.xml | +- site.xml site.x</description>
-    </item>
-    
-    <item>
-      <title>Spring bean为null启动报错</title>
-      <link>https://www.mingaccount.com/2017/11/spring-bean-null/</link>
-      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/11/spring-bean-null/</guid>
-      <description>背景 如果配置bean的时候出现null值，并且被其他bean所引用。那么启动的时候就有可能出现失败的情况。 @Configuration public class BeanConfiguration{ @Bean public Other getOther() { return null } } 因为配置</description>
     </item>
     
   </channel>

@@ -5,10 +5,64 @@
     <link>https://www.mingaccount.com/tags/h2/</link>
     <description>Recent content in h2 on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Dec 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/h2/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hive 执行sql时报错out of sequence</title>
+      <link>https://www.mingaccount.com/2018/09/hive-out-of-sequence/</link>
+      <pubDate>Sun, 23 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/09/hive-out-of-sequence/</guid>
+      <description>问题背景 错误日志： org.apache.thrift.TApplicationException: [?] : out of sequence response 问题原因 hive连接在连接池中，同时两个线程去获取并执行，两个都有close操作。 参考hive jira</description>
+    </item>
+    
+    <item>
+      <title>SpringBoot Mybatis配置多数据源</title>
+      <link>https://www.mingaccount.com/2018/09/spring-boot-mybatis-multi-source/</link>
+      <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/09/spring-boot-mybatis-multi-source/</guid>
+      <description>@Configuration @MapperScan(basePackages = MysqlDatasourceConfig.PACKAGE, sqlSessionFactoryRef = &amp;quot;mysqlSessionFactory&amp;quot;) public class MysqlDatasourceConfig { public static final String PACKAGE = &amp;quot;com.ming.mapper.mysql1&amp;quot;; public static final String MAPPER_LOCATION = &amp;quot;classpath:mapper/mysql1/*.xml&amp;quot;; @Primary @Bean(name = &amp;quot;mysqlDatasource&amp;quot;) @ConfigurationProperties(&amp;quot;spring.datasource.druid.mysql1&amp;quot;) public DataSource mysqlDataSource(){ return DruidDataSourceBuilder.create().build(); } @Bean(name = &amp;quot;mysqlTransactionManager&amp;quot;) @Primary public DataSourceTransactionManager mysqlTransactionManager() { return new DataSourceTransactionManager(mysqlDataSource()); } @Bean(name = &amp;quot;mysqlSessionFactory&amp;quot;) @Primary public SqlSessionFactory mysqlSessionFactory(@Qualifier(&amp;quot;mysqlDatasource&amp;quot;) DataSource dataSource) throws Exception { final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean(); sessionFactory.setDataSource(dataSource); sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MysqlDatasourceConfig.MAPPER_LOCATION)); return</description>
+    </item>
+    
+    <item>
+      <title>SpringBoot Ehcache集成</title>
+      <link>https://www.mingaccount.com/2018/09/spring-boot-ehcache/</link>
+      <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/09/spring-boot-ehcache/</guid>
+      <description>ehcache.xml &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;ehcache xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:noNamespaceSchemaLocation=&amp;quot;http://ehcache.org/ehcache.xsd&amp;quot;&amp;gt; &amp;lt;defaultCache maxElementsInMemory=&amp;quot;10000&amp;quot; eternal=&amp;quot;false&amp;quot; timeToIdleSeconds=&amp;quot;3600&amp;quot; timeToLiveSeconds=&amp;quot;0&amp;quot; overflowToDisk=&amp;quot;false&amp;quot; diskPersistent=&amp;quot;false&amp;quot; diskExpiryThreadIntervalSeconds=&amp;quot;120&amp;quot; /&amp;gt; &amp;lt;cache name=&amp;quot;myCache&amp;quot; maxEntriesLocalHeap=&amp;quot;2000&amp;quot; eternal=&amp;quot;false&amp;quot; timeToIdleSeconds=&amp;quot;3600&amp;quot; timeToLiveSeconds=&amp;quot;0&amp;quot; overflowToDisk=&amp;quot;false&amp;quot; statistics=&amp;quot;true&amp;quot;/&amp;gt; &amp;lt;/ehcache&amp;gt; 属性简介： name：缓存名称。 maxElementsInMemory：缓存最大数目 maxE</description>
+    </item>
+    
+    <item>
+      <title>SpringBoot Redis集成</title>
+      <link>https://www.mingaccount.com/2018/09/spring-boot-redis/</link>
+      <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/09/spring-boot-redis/</guid>
+      <description>application.yml spring: redis: database: 0 host: localhost prot: 6379 pool: max-active: 8 max-wait: -1 max-idle: 8 min-idle: 0 timeout: 0 更多配置参考Spring官网配置参数 RedisConfig @Configuration @EnableCaching public class RedisConfig extends CachingConfigurerSupport { @Bean @Override public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) { return RedisCacheManager.create(redisConnectionFactory); } }</description>
+    </item>
+    
+    <item>
+      <title>Spring缓存集成</title>
+      <link>https://www.mingaccount.com/2018/09/spring-cache/</link>
+      <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/09/spring-cache/</guid>
+      <description>1.了解缓存概念 缓存和缓冲(Cache vs Buffer) 缓存和缓冲一般来说都是交替使用的，需要知道的是他们是两个完全不同的东西。 buffer(缓冲)是用在</description>
+    </item>
+    
+    <item>
+      <title>大型网站架构演化概论</title>
+      <link>https://www.mingaccount.com/2018/09/big-web-bala-bala/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/09/big-web-bala-bala/</guid>
+      <description>1.大型网站的特点： 相比传统企业应用系统，大型互联网应用系统有以下特点： 高并发、大流量：需要面对高并发用户，大流量访问。 高可用：系统需要7*</description>
+    </item>
     
     <item>
       <title>[译]Java8：循环与函数式编程</title>
@@ -134,60 +188,6 @@
       
       <guid>https://www.mingaccount.com/2018/06/java-reflection-common-api/</guid>
       <description>“JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性” 一、类对</description>
-    </item>
-    
-    <item>
-      <title>Mysql安装后root无法登陆(Access denied for user &#39;root&#39;@&#39;localhost&#39;)</title>
-      <link>https://www.mingaccount.com/2018/06/mysql-cant-login-with-root/</link>
-      <pubDate>Fri, 08 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/06/mysql-cant-login-with-root/</guid>
-      <description>复杂密码才能通过 sudo mysql -u root -p mysql&amp;gt; select user, plugin from mysql.user; mysql&amp;gt; update mysql.user set authentication_string=PASSWORD(&#39;xcvds_32GDS&#39;), plugin=&#39;mysql_native_password&#39; where user=&#39;root&#39;; mysql8.0不能用上边的语句： ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &amp;quot;svewe_123&amp;quot;;</description>
-    </item>
-    
-    <item>
-      <title>Maven怎样把jar部署到远程仓库</title>
-      <link>https://www.mingaccount.com/2018/06/maven-deploy-jar-to-remote-repository/</link>
-      <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/06/maven-deploy-jar-to-remote-repository/</guid>
-      <description>distributionManagement 需要在pom.xml文件中新增标签&amp;lt;distributionManagement&amp;gt; &amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;com.mycompany.app&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;my-app&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt; &amp;lt;name&amp;gt;Maven Quick Start Archetype&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.apache.org&amp;lt;/url&amp;gt; &amp;lt;!-- | | | --&amp;gt; &amp;lt;distributionManagement&amp;gt; &amp;lt;repository&amp;gt;</description>
-    </item>
-    
-    <item>
-      <title>avg函数忽略null值</title>
-      <link>https://www.mingaccount.com/2018/06/avg-ignore-null/</link>
-      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/06/avg-ignore-null/</guid>
-      <description>avg函数对值为null的行，会忽略不计 解决方案 avg((coalesce(column,0))</description>
-    </item>
-    
-    <item>
-      <title>Srping Boot测试</title>
-      <link>https://www.mingaccount.com/2018/05/spring-boot-test/</link>
-      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/05/spring-boot-test/</guid>
-      <description>参考官方文档Spring Boot Test</description>
-    </item>
-    
-    <item>
-      <title>Maven标准文件夹结构</title>
-      <link>https://www.mingaccount.com/2018/05/maven-stadard-dir-layout/</link>
-      <pubDate>Sun, 13 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/05/maven-stadard-dir-layout/</guid>
-      <description>目录 描述 src/main/java Application/Library sources src/main/resources Application/Library resources src/main/filters Resource filter files src/main/webapp Web application sources src/test/java Test sources src/test/resources Test resources src/test/filters Test resource filter files src/it Integration Tests (primarily for plugins) src/assembly Assembly descriptors src/site Site LICENSE.txt Project&amp;rsquo;s license NOTICE.txt Notices and attributions required by libraries that the project depends on README.txt Project&amp;rsquo;s readme</description>
-    </item>
-    
-    <item>
-      <title>[译]java9新特性：在接口中用pirvate方法让default(java8接口特性)更简练</title>
-      <link>https://www.mingaccount.com/2018/05/java9-new-feature/</link>
-      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/05/java9-new-feature/</guid>
-      <description>Java8 带来了许多改变，其中之一就是default修饰的接口方法。 这些方法改变了我们已知的接口，现在我们能够在接口中定义默认实现方法。默认实现方法</description>
     </item>
     
   </channel>

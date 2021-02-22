@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+        Junit5常用注解 - Ming Blog
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="@BeforeAll @BeforeEach @AfterAll @AfterEach @DisplayName 自定义的展示名称 @IndicativeSentencesGeneration(separator = &amp;quot; -&amp;gt; &amp;ldquo;, generator = DisplayNameGenerator.ReplaceUnderscores.class) 更改生成测试名称规则，根据类名和方法名生成，并可以指定替换策略，比如上面的替换下划线为空格 @Disabled 屏蔽整" />
+    <meta name="generator" content="Hugo 0.80.0 with theme pure" />
+    <title>Junit5常用注解 - Ming Blog</title>
+    
+    
+    <link rel="stylesheet" href="https://www.mingaccount.com/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="Junit5常用注解" />
+<meta property="og:description" content="@BeforeAll @BeforeEach @AfterAll @AfterEach @DisplayName 自定义的展示名称 @IndicativeSentencesGeneration(separator = &quot; -&gt; &ldquo;, generator = DisplayNameGenerator.ReplaceUnderscores.class) 更改生成测试名称规则，根据类名和方法名生成，并可以指定替换策略，比如上面的替换下划线为空格 @Disabled 屏蔽整" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.mingaccount.com/2018/11/junit5-common-annotation/" />
+<meta property="article:published_time" content="2018-11-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-11-13T00:00:00+00:00" />
+<meta itemprop="name" content="Junit5常用注解">
+<meta itemprop="description" content="@BeforeAll @BeforeEach @AfterAll @AfterEach @DisplayName 自定义的展示名称 @IndicativeSentencesGeneration(separator = &quot; -&gt; &ldquo;, generator = DisplayNameGenerator.ReplaceUnderscores.class) 更改生成测试名称规则，根据类名和方法名生成，并可以指定替换策略，比如上面的替换下划线为空格 @Disabled 屏蔽整">
+<meta itemprop="datePublished" content="2018-11-13T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-11-13T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1422">
+
+
+
+<meta itemprop="keywords" content="junit5," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Junit5常用注解"/>
+<meta name="twitter:description" content="@BeforeAll @BeforeEach @AfterAll @AfterEach @DisplayName 自定义的展示名称 @IndicativeSentencesGeneration(separator = &quot; -&gt; &ldquo;, generator = DisplayNameGenerator.ReplaceUnderscores.class) 更改生成测试名称规则，根据类名和方法名生成，并可以指定替换策略，比如上面的替换下划线为空格 @Disabled 屏蔽整"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-green" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="" target="_blank">
+            <img class="img-circle img-rotate" src="https://www.mingaccount.com/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Ming</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">tianshiming5@outlook.com</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>BeiJing, China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Archives</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Categories</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/db2/" class="tag-list-link">db2</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/design-pattern/" class="tag-list-link">design-pattern</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/druid/" class="tag-list-link">druid</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/ehcache/" class="tag-list-link">ehcache</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/git/" class="tag-list-link">git</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/gradle/" class="tag-list-link">gradle</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/h2/" class="tag-list-link">h2</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/hadoop/" class="tag-list-link">hadoop</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/hive/" class="tag-list-link">hive</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/jackson/" class="tag-list-link">jackson</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/java/" class="tag-list-link">java</a><span
+                    class="tag-list-count">36</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/jenkins/" class="tag-list-link">jenkins</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/jooq/" class="tag-list-link">jooq</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/junit4/" class="tag-list-link">junit4</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/junit5/" class="tag-list-link">junit5</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/linux/" class="tag-list-link">linux</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/lombok/" class="tag-list-link">lombok</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/markdown/" class="tag-list-link">markdown</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/maven/" class="tag-list-link">maven</a><span
+                    class="tag-list-count">17</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/mockmvc/" class="tag-list-link">mockmvc</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/mybatis/" class="tag-list-link">mybatis</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/mysql/" class="tag-list-link">mysql</a><span
+                    class="tag-list-count">19</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/nexus/" class="tag-list-link">nexus</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/npm/" class="tag-list-link">npm</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/oracle/" class="tag-list-link">oracle</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/postgresql/" class="tag-list-link">postgresql</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/protocol/" class="tag-list-link">protocol</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/redis/" class="tag-list-link">redis</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/regexp/" class="tag-list-link">regexp</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/scala/" class="tag-list-link">scala</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/spark/" class="tag-list-link">spark</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
+                    class="tag-list-count">27</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/unit-test/" class="tag-list-link">unit-test</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/website-build/" class="tag-list-link">website-build</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/windows/" class="tag-list-link">windows</a><span
+                    class="tag-list-count">6</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.mingaccount.com/2021/02/duration-format/" class="title">Duration format PnDTnHnMn.nS ISO-8601</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-02-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-02-20</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.mingaccount.com/2020/10/windows-hyper-v-and-container/" class="title">启用Windows Hyper-v和containers</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-10-19 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-10-19</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.mingaccount.com/2020/10/windows-npm-exception/" class="title">Windows CMD 错误pngquant failed to build, make sure that libpng-dev is installed</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-10-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-10-18</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.mingaccount.com/2020/08/wsl-exception/" class="title">WIN10 UBUNTU 异常：sleep: cannot read realtime clock: Invalid argument</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-10 13:37:30 &#43;0800 CST" itemprop="datePublished">2020-08-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.mingaccount.com/2020/07/oracle-extract/" class="title">Oracle extract函数提取时分秒的问题</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-07-30 17:42:55 &#43;0800 CST" itemprop="datePublished">2020-07-30</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2018/11/junit5-common-annotation/"
+    >Junit5常用注解</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2018/11/junit5-common-annotation/" class="article-date">
+  <time datetime="2018-11-13 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-11-13</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/junit5/"> junit5 </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2018/11/junit5-common-annotation/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1422words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h3 id="beforeall">@BeforeAll</h3>
+<h3 id="beforeeach">@BeforeEach</h3>
+<h3 id="afterall">@AfterAll</h3>
+<h3 id="aftereach">@AfterEach</h3>
+<h3 id="displayname">@DisplayName</h3>
+<p>自定义的展示名称</p>
+<h3 id="indicativesentencesgenerationseparator------generator--displaynamegeneratorreplaceunderscoresclass">@IndicativeSentencesGeneration(separator = &quot; -&gt; &ldquo;, generator = DisplayNameGenerator.ReplaceUnderscores.class)</h3>
+<p>更改生成测试名称规则，根据类名和方法名生成，并可以指定替换策略，比如上面的替换下划线为空格</p>
+<h3 id="disabled">@Disabled</h3>
+<p>屏蔽整个类的测试，或者单个测试方法</p>
+<h3 id="enabledonosdisabledonos">@EnabledOnOs/@DisabledOnOs</h3>
+<p>根据系统启用或者弃用</p>
+<h3 id="enabledonjredisabledonjreenabledforjrerangedisabledforjrerange">@EnabledOnJre/@DisabledOnJre/@EnabledForJreRange/@DisabledForJreRange</h3>
+<p>指定jre版本或者范围启用或者弃用</p>
+<h3 id="enabledifsystempropertydisabledifsystemproperty">@EnabledIfSystemProperty/@DisabledIfSystemProperty</h3>
+<p>根据JVM系统参数启用或者弃用</p>
+<pre><code class="language-java">@Test
+@EnabledIfSystemProperty(named = &quot;os.arch&quot;, matches = &quot;.*64.*&quot;)
+void onlyOn64BitArchitectures() {
+    // ...
+}
+
+@Test
+@DisabledIfSystemProperty(named = &quot;ci-server&quot;, matches = &quot;true&quot;)
+void notOnCiServer() {
+    // ...
+}
+</code></pre>
+<h3 id="enabledifenvironmentvariabledisabledifenvironmentvariable">@EnabledIfEnvironmentVariable/@DisabledIfEnvironmentVariable</h3>
+<p>根据底层操作系统参数启用或者弃用</p>
+<pre><code class="language-java">@Test
+@EnabledIfEnvironmentVariable(named = &quot;ENV&quot;, matches = &quot;staging-server&quot;)
+void onlyOnStagingServer() {
+    // ...
+}
+
+@Test
+@DisabledIfEnvironmentVariable(named = &quot;ENV&quot;, matches = &quot;.*development.*&quot;)
+void notOnDeveloperWorkstation() {
+    // ...
+}
+</code></pre>
+<h3 id="enabledifdisabledif">@EnabledIf/@DisabledIf</h3>
+<pre><code class="language-java">@Test
+@EnabledIf(&quot;customCondition&quot;)
+void enabled() {
+    // ...
+}
+
+@Test
+@DisabledIf(&quot;customCondition&quot;)
+void disabled() {
+    // ...
+}
+
+boolean customCondition() {
+    return true;
+}
+</code></pre>
+<h3 id="tag">@Tag</h3>
+<p>打标签跟<code>@Filter</code>配合使用</p>
+<h3 id="testmethodorder">@TestMethodOrder</h3>
+<p>指定测试方法执行顺序</p>
+<pre><code class="language-java">import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+
+@TestMethodOrder(OrderAnnotation.class)
+class OrderedTestsDemo {
+
+    @Test
+    @Order(1)
+    void nullValues() {
+        // perform assertions against null values
+    }
+
+    @Test
+    @Order(2)
+    void emptyValues() {
+        // perform assertions against empty values
+    }
+
+    @Test
+    @Order(3)
+    void validValues() {
+        // perform assertions against valid values
+    }
+
+}
+</code></pre>
+<h3 id="testinstancelifecycleper_class">@TestInstance(Lifecycle.PER_CLASS)</h3>
+<p>默认Junit5是一个方法对应一个实例，意思就是实例中的参数被任何方法改变也不会影响其他方法。但通过上面的注解可以将其改为一个类对应一个实例，这样可能造成实例中的参数污染，可以通过<code>@BeforeEach</code>和<code>@AfterEach</code>来解决。<br>
+改为一个类对应一个实例，可以让<code>@BeforeAll</code> <code>@AfterAll</code>声明在非static方法上，也可以在<code>@Nested</code>集成类中声明<code>@BeforeAll</code> <code>@AfterAll</code></p>
+<h3 id="nested">@Nested</h3>
+<p>内部测试类</p>
+<h3 id="repeatedtest">@RepeatedTest</h3>
+<p>重复测试</p>
+<h3 id="parameterizedtest">@ParameterizedTest</h3>
+<p>以给定的参数列表重复执行测试</p>
+<pre><code class="language-java">@ParameterizedTest
+@ValueSource(strings = { &quot;racecar&quot;, &quot;radar&quot;, &quot;able was I ere I saw elba&quot; })
+void palindromes(String candidate) {
+    assertTrue(StringUtils.isPalindrome(candidate));
+}
+</code></pre>
+<h4 id="valuesource">@ValueSource</h4>
+<p>测试方法只有单个参数，并且参数是以下类型：</p>
+<ul>
+<li>
+<p>short</p>
+</li>
+<li>
+<p>byte</p>
+</li>
+<li>
+<p>int</p>
+</li>
+<li>
+<p>long</p>
+</li>
+<li>
+<p>float</p>
+</li>
+<li>
+<p>double</p>
+</li>
+<li>
+<p>char</p>
+</li>
+<li>
+<p>boolean</p>
+</li>
+<li>
+<p>java.lang.String</p>
+</li>
+<li>
+<p>java.lang.Class</p>
+</li>
+</ul>
+<h4 id="nullsource">@NullSource</h4>
+<p>单个参数，并且不能是原始类型</p>
+<h4 id="emptysource">@EmptySource</h4>
+<p>单个参数，并且类型是数组，集合，String，Set，Map<br>
+注意以上类型的子类型不受支持</p>
+<h4 id="nullandemptysource">@NullAndEmptySource</h4>
+<p><code>@NullSource</code>和<code>@EmptySource</code>的复合注解</p>
+<p>下面的测试方法接受了所有类型的空值</p>
+<pre><code class="language-java">@ParameterizedTest
+@NullAndEmptySource
+@ValueSource(strings = { &quot; &quot;, &quot;   &quot;, &quot;\t&quot;, &quot;\n&quot; })
+void nullEmptyAndBlankStrings(String text) {
+    assertTrue(text == null || text.trim().isEmpty());
+}
+</code></pre>
+<h4 id="enumsource">@EnumSource</h4>
+<p>忽略<code>names</code>枚举的所有常量都会作为参数</p>
+<pre><code class="language-java">@ParameterizedTest
+@EnumSource
+void testWithEnumSourceWithAutoDetection(ChronoUnit unit) {
+        assertNotNull(unit);
+}
+</code></pre>
+<pre><code class="language-java">@ParameterizedTest
+@EnumSource(names = { &quot;DAYS&quot;, &quot;HOURS&quot; })
+void testWithEnumSourceInclude(ChronoUnit unit) {
+    assertTrue(EnumSet.of(ChronoUnit.DAYS, ChronoUnit.HOURS).contains(unit));
+}
+</code></pre>
+<p>除了明确指定<code>names</code>还可以通过<code>mode</code>属性去匹配常量</p>
+<pre><code class="language-java">@ParameterizedTest
+@EnumSource(mode = EXCLUDE, names = { &quot;ERAS&quot;, &quot;FOREVER&quot; })
+void testWithEnumSourceExclude(ChronoUnit unit) {
+    assertFalse(EnumSet.of(ChronoUnit.ERAS, ChronoUnit.FOREVER).contains(unit));
+}
+</code></pre>
+<pre><code class="language-java">@ParameterizedTest
+@EnumSource(mode = MATCH_ALL, names = &quot;^.*DAYS$&quot;)
+void testWithEnumSourceRegex(ChronoUnit unit) {
+    assertTrue(unit.name().endsWith(&quot;DAYS&quot;));
+}
+</code></pre>
+<h4 id="methodsource">@MethodSource</h4>
+<pre><code class="language-java">@ParameterizedTest
+@MethodSource(&quot;stringProvider&quot;)
+void testWithExplicitLocalMethodSource(String argument) {
+    assertNotNull(argument);
+}
+
+static Stream&lt;String&gt; stringProvider() {
+    return Stream.of(&quot;apple&quot;, &quot;banana&quot;);
+}
+</code></pre>
+<p>MethodSource如果没有明确指定方法名称，会自动定位跟当前方法名相同的工厂方法（没有参数，并返回Stream&lt;?&gt;）</p>
+<pre><code class="language-java">@ParameterizedTest
+@MethodSource
+void testWithDefaultLocalMethodSource(String argument) {
+    assertNotNull(argument);
+}
+
+static Stream&lt;String&gt; testWithDefaultLocalMethodSource() {
+    return Stream.of(&quot;apple&quot;, &quot;banana&quot;);
+}
+</code></pre>
+<p>下面的例子是一个原始类型的例子</p>
+<pre><code class="language-java">@ParameterizedTest
+@MethodSource(&quot;range&quot;)
+void testWithRangeMethodSource(int argument) {
+    assertNotEquals(9, argument);
+}
+
+static IntStream range() {
+    return IntStream.range(0, 20).skip(10);
+}
+</code></pre>
+<p>上面都是一个参数的例子，下面的实例展示的是多个参数时的情况：</p>
+<pre><code class="language-java">@ParameterizedTest
+@MethodSource(&quot;stringIntAndListProvider&quot;)
+void testWithMultiArgMethodSource(String str, int num, List&lt;String&gt; list) {
+    assertEquals(5, str.length());
+    assertTrue(num &gt;=1 &amp;&amp; num &lt;=2);
+    assertEquals(2, list.size());
+}
+
+static Stream&lt;Arguments&gt; stringIntAndListProvider() {
+    return Stream.of(
+        arguments(&quot;apple&quot;, 1, Arrays.asList(&quot;a&quot;, &quot;b&quot;)),
+        arguments(&quot;lemon&quot;, 2, Arrays.asList(&quot;x&quot;, &quot;y&quot;))
+    );
+}
+</code></pre>
+<p>如果引用的是外部方法，那么就需要该方法的完全限定名</p>
+<pre><code class="language-java">package example;
+
+import java.util.stream.Stream;
+
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+
+class ExternalMethodSourceDemo {
+
+    @ParameterizedTest
+    @MethodSource(&quot;example.StringsProviders#tinyStrings&quot;)
+    void testWithExternalMethodSource(String tinyString) {
+        // test with tiny string
+    }
+}
+
+class StringsProviders {
+
+    static Stream&lt;String&gt; tinyStrings() {
+        return Stream.of(&quot;.&quot;, &quot;oo&quot;, &quot;OOO&quot;);
+    }
+}
+</code></pre>
+<h4 id="csvsource">@CsvSource</h4>
+<p>多个参数的另一个解决方案：</p>
+<pre><code class="language-java">@ParameterizedTest
+@CsvSource({
+    &quot;apple,         1&quot;,
+    &quot;banana,        2&quot;,
+    &quot;'lemon, lime', 0xF1&quot;
+})
+void testWithCsvSource(String fruit, int rank) {
+    assertNotNull(fruit);
+    assertNotEquals(0, rank);
+}
+</code></pre>
+<p><code>@CsvSource</code>可以自定义空值的别名，下面是一些<code>@CsvSource</code>使用的具体实例</p>
+<table>
+<thead>
+<tr>
+<th>Example Input</th>
+<th>Resulting Argument List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@CsvSource({ &ldquo;apple, banana&rdquo; })</td>
+<td>&ldquo;apple&rdquo;, &ldquo;banana&rdquo;</td>
+</tr>
+<tr>
+<td>@CsvSource({ &ldquo;apple, &lsquo;lemon, lime&rsquo;&rdquo; })</td>
+<td>&ldquo;apple&rdquo;, &ldquo;lemon, lime&rdquo;</td>
+</tr>
+<tr>
+<td>@CsvSource({ &ldquo;apple, &lsquo;'&rdquo; })</td>
+<td>&ldquo;apple&rdquo;, &quot;&rdquo;</td>
+</tr>
+<tr>
+<td>@CsvSource({ &ldquo;apple, &quot; })</td>
+<td>&ldquo;apple&rdquo;, null</td>
+</tr>
+<tr>
+<td>@CsvSource(value = { &ldquo;apple, banana, NIL&rdquo; }, nullValues = &ldquo;NIL&rdquo;)</td>
+<td>&ldquo;apple&rdquo;, &ldquo;banana&rdquo;, null</td>
+</tr>
+</tbody>
+</table>
+<h4 id="csvfilesource">CsvFileSource</h4>
+<p>根据csv文件内容生成测试参数，注意任何以#开头的行都会被视作为注释</p>
+<pre><code class="language-java">@ParameterizedTest
+@CsvFileSource(resources = &quot;/two-column.csv&quot;, numLinesToSkip = 1)
+void testWithCsvFileSourceFromClasspath(String country, int reference) {
+    assertNotNull(country);
+    assertNotEquals(0, reference);
+}
+
+@ParameterizedTest
+@CsvFileSource(files = &quot;src/test/resources/two-column.csv&quot;, numLinesToSkip = 1)
+void testWithCsvFileSourceFromFile(String country, int reference) {
+    assertNotNull(country);
+    assertNotEquals(0, reference);
+}
+</code></pre>
+<p>two-column.csv</p>
+<pre><code class="language-java">Country, reference
+Sweden, 1
+Poland, 2
+&quot;United States of America&quot;, 3
+</code></pre>
+<p>跟<code>@CsvSource</code>不同，这里的分隔符是双引号，不是之前的单引号。<br>
+这里判空的方式跟<code>@CsvSource</code>类似，并且也有<code>nullValues</code>作为控制别名。</p>
+<h4 id="argumentssource">@ArgumentsSource</h4>
+<p>可以用来制定一个自定义的看，可重用的<code>ArgumentsProvider</code>注意这个注解只能修饰顶级类，或者静态的集成类。</p>
+<pre><code class="language-java">@ParameterizedTest
+@ArgumentsSource(MyArgumentsProvider.class)
+void testWithArgumentsSource(String argument) {
+    assertNotNull(argument);
+}
+</code></pre>
+<pre><code class="language-java">public class MyArgumentsProvider implements ArgumentsProvider {
+
+    @Override
+    public Stream&lt;? extends Arguments&gt; provideArguments(ExtensionContext context) {
+        return Stream.of(&quot;apple&quot;, &quot;banana&quot;).map(Arguments::of);
+    }
+}
+</code></pre>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://www.mingaccount.com/2018/11/junit5-common-annotation/" title="Junit5常用注解" target="_blank" rel="external">https://www.mingaccount.com/2018/11/junit5-common-annotation/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://www.mingaccount.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="" target="_blank"><span class="text-dark">Ming</span><small class="ml-1x">tianshiming5@outlook.com</small></a></h3>
+        <div>Finally</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://www.mingaccount.com/2018/11/maven-plugin/" title="Maven Plugins"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="https://www.mingaccount.com/2018/12/h2-url/"
+                    title="h2 url参数"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://www.mingaccount.com/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2015  -
+    2021
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://www.mingaccount.com/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
+<script src="https://www.mingaccount.com/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/www.mingaccount.com',
+            CONTENT_URL: 'https:\/\/www.mingaccount.com\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://www.mingaccount.com/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+
+  </body>
+</html>

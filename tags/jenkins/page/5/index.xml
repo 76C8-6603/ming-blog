@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jenkins on Ming Blog</title>
+    <link>https://www.mingaccount.com/tags/jenkins/</link>
+    <description>Recent content in jenkins on Ming Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 11 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://www.mingaccount.com/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mysql安装后root无法登陆(Access denied for user &#39;root&#39;@&#39;localhost&#39;)</title>
+      <link>https://www.mingaccount.com/2018/06/mysql-cant-login-with-root/</link>
+      <pubDate>Fri, 08 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/06/mysql-cant-login-with-root/</guid>
+      <description>复杂密码才能通过 sudo mysql -u root -p mysql&amp;gt; select user, plugin from mysql.user; mysql&amp;gt; update mysql.user set authentication_string=PASSWORD(&#39;xcvds_32GDS&#39;), plugin=&#39;mysql_native_password&#39; where user=&#39;root&#39;; mysql8.0不能用上边的语句： ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &amp;quot;svewe_123&amp;quot;;</description>
+    </item>
+    
+    <item>
+      <title>Maven怎样把jar部署到远程仓库</title>
+      <link>https://www.mingaccount.com/2018/06/maven-deploy-jar-to-remote-repository/</link>
+      <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/06/maven-deploy-jar-to-remote-repository/</guid>
+      <description>distributionManagement 需要在pom.xml文件中新增标签&amp;lt;distributionManagement&amp;gt; &amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;com.mycompany.app&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;my-app&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt; &amp;lt;name&amp;gt;Maven Quick Start Archetype&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.apache.org&amp;lt;/url&amp;gt; &amp;lt;!-- | | | --&amp;gt; &amp;lt;distributionManagement&amp;gt; &amp;lt;repository&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>avg函数忽略null值</title>
+      <link>https://www.mingaccount.com/2018/06/avg-ignore-null/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/06/avg-ignore-null/</guid>
+      <description>avg函数对值为null的行，会忽略不计 解决方案 avg((coalesce(column,0))</description>
+    </item>
+    
+    <item>
+      <title>Srping Boot测试</title>
+      <link>https://www.mingaccount.com/2018/05/spring-boot-test/</link>
+      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/spring-boot-test/</guid>
+      <description>参考官方文档Spring Boot Test</description>
+    </item>
+    
+    <item>
+      <title>Maven标准文件夹结构</title>
+      <link>https://www.mingaccount.com/2018/05/maven-stadard-dir-layout/</link>
+      <pubDate>Sun, 13 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/maven-stadard-dir-layout/</guid>
+      <description>目录 描述 src/main/java Application/Library sources src/main/resources Application/Library resources src/main/filters Resource filter files src/main/webapp Web application sources src/test/java Test sources src/test/resources Test resources src/test/filters Test resource filter files src/it Integration Tests (primarily for plugins) src/assembly Assembly descriptors src/site Site LICENSE.txt Project&amp;rsquo;s license NOTICE.txt Notices and attributions required by libraries that the project depends on README.txt Project&amp;rsquo;s readme</description>
+    </item>
+    
+    <item>
+      <title>[译]java9新特性：在接口中用pirvate方法让default(java8接口特性)更简练</title>
+      <link>https://www.mingaccount.com/2018/05/java9-new-feature/</link>
+      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/java9-new-feature/</guid>
+      <description>Java8 带来了许多改变，其中之一就是default修饰的接口方法。 这些方法改变了我们已知的接口，现在我们能够在接口中定义默认实现方法。默认实现方法</description>
+    </item>
+    
+    <item>
+      <title>Git push 异常：remote: No anonymous write access</title>
+      <link>https://www.mingaccount.com/2018/05/git-push-exception-no-anonymous/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/git-push-exception-no-anonymous/</guid>
+      <description>异常信息 No anonymous write access. Authentication failed for 解决方案 提交的时候设置UserName和email 或者重新设置全局git用户名和邮箱 git config --global user.name &amp;quot;username&amp;quot; git config --global user.email &amp;quot;email&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>Git上传本地项目</title>
+      <link>https://www.mingaccount.com/2018/05/git-upload-local-project/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/git-upload-local-project/</guid>
+      <description>1.在git上创建仓库，记下clone地址 2.把线上仓库拉到本地 git clone https://github.com/*/*.git 3.把要上传的本地项目文件全部放入本地仓库中 4.把所有文件提交到线上 git</description>
+    </item>
+    
+    <item>
+      <title>Git常用命令备忘</title>
+      <link>https://www.mingaccount.com/2018/05/git-common-command/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/git-common-command/</guid>
+      <description># git更新当前分支 git pull #拉线上代码 git clone https://***.git.com #查看工作区状态 git status -s #撤回上一次的commit内容 git reset --hard HEAD~ #查看当前分支 git branch #切换到对应分支 git checkout</description>
+    </item>
+    
+    <item>
+      <title>Hutool工具包</title>
+      <link>https://www.mingaccount.com/2018/05/hutool/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/hutool/</guid>
+      <description>Hutool封装大量java工具类 maven配置： &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;cn.hutool&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;hutool-all&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.4.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; API文档 官方首页</description>
+    </item>
+    
+    <item>
+      <title>Spring @Transactional事务失效</title>
+      <link>https://www.mingaccount.com/2018/05/spring-transaction-invalid/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/spring-transaction-invalid/</guid>
+      <description>问题代码 service方法抛出了异常，但是没有rollback @Transactional public void batchInsert() throws CommonException{} 抛出的自定义异常继承于Exception public class CommonException extends Exception{} 问题原因 @Tra</description>
+    </item>
+    
+    <item>
+      <title>quartz cron表达式详解</title>
+      <link>https://www.mingaccount.com/2018/05/quartz-cron/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/quartz-cron/</guid>
+      <description>Cron表达式是一个字符串，字符串以5或6个空格隔开，分为6或7个域，每一个域代表一个含义，Cron有如下两种语法格式： （1） Seconds Minutes Hours DayofMonth Month DayofWeek Year</description>
+    </item>
+    
+    <item>
+      <title>Windows IP DNS批处理</title>
+      <link>https://www.mingaccount.com/2018/03/windows-dns/</link>
+      <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/03/windows-dns/</guid>
+      <description>指定ip信息，只需要修改set参数 name是控制面板\网络和 Internet\网络连接中对应的连接名称 @echo off set name=&amp;quot;Wi-Fi&amp;quot; set ipaddress=172.16.61.216 set mask=255.255.255.0 set gateway=172.16.61.254 set dns1=172.16.3.38 set dns2=172.16.3.41 netsh interface ip set address</description>
+    </item>
+    
+    <item>
+      <title>判断int和Integer类型是否相等时，空指针异常</title>
+      <link>https://www.mingaccount.com/2018/03/int-equals-integer/</link>
+      <pubDate>Mon, 19 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/03/int-equals-integer/</guid>
+      <description>需要注意在判断int和Integer是否相等时，会先将Integer拆箱，如果Integer为null，会报空指针异常。 因此需要提前处理好I</description>
+    </item>
+    
+    <item>
+      <title>[转]字符编码笔记：ASCII、Unicode、UTF-8 和 Base64</title>
+      <link>https://www.mingaccount.com/2018/03/char-encode/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/03/char-encode/</guid>
+      <description>1. ASCII码 我们知道，在计算机内部，所有的信息最终都表示为一个二进制的字符串。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就</description>
+    </item>
+    
+    <item>
+      <title>Java合理避免空指针</title>
+      <link>https://www.mingaccount.com/2018/03/java-avoid-null-pointer/</link>
+      <pubDate>Fri, 09 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/03/java-avoid-null-pointer/</guid>
+      <description>关于如何有效避免空指针，并减少空指针的重复申明。 参考stackoverflow的讨论</description>
+    </item>
+    
+    <item>
+      <title>Request的Body只能读取一次解决方法</title>
+      <link>https://www.mingaccount.com/2018/03/request-body-read-twice/</link>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/03/request-body-read-twice/</guid>
+      <description>一、需要一个类继承HttpServletRequestWrapper，该类继承了ServletRequestWrapper并实现了HttpS</description>
+    </item>
+    
+    <item>
+      <title>Python方法定义</title>
+      <link>https://www.mingaccount.com/2018/01/python-method-define/</link>
+      <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/01/python-method-define/</guid>
+      <description># 一般声明 def printUser(id,name,sex,age,email,phone,group): printUser(1,&#39;ming&#39;,&#39;male&#39;,18,&#39;&#39;,110,&#39;default&#39;) # 默认值 def printUser(id,name,sex,age,email=&#39;&#39;,phone=110,group=&#39;default&#39;): printUser(1,&#39;ming&#39;,&#39;male&#39;,18) # 位置参数和关键字参数 def printUser(id,name,sex,/,age,email,*,phone,group): # 位置参数就是调用的时候直接赋值 # 关键字参数就是调用的时候通过 key=value 的形式赋值 # 斜杠之前</description>
+    </item>
+    
+    <item>
+      <title>Spring boot filter</title>
+      <link>https://www.mingaccount.com/2018/01/spring-boot-filter/</link>
+      <pubDate>Tue, 16 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/01/spring-boot-filter/</guid>
+      <description>全局filter @Component @Order(1) public class FirstFilter extends Filter { @Override public void doFilter( ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException { ... chain.doFilter(request, response); } } 全局过滤直接实现Filter即可，如需设定顺序，使用@Order注解 URL</description>
+    </item>
+    
+    <item>
+      <title>全局获取request</title>
+      <link>https://www.mingaccount.com/2018/01/get-request-global/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/01/get-request-global/</guid>
+      <description>交于Spring管理的类，通过注解调用 @Component public class Test{ @Autowired private HttpServletRequest httpServletRequest; } 通过静态方法调用 HttpServletRequest httpServletRequest = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jenkins on Ming Blog</title>
+    <link>https://www.mingaccount.com/tags/jenkins/</link>
+    <description>Recent content in jenkins on Ming Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 11 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://www.mingaccount.com/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jackson反序列化的时候忽略实体中不存在的元素</title>
+      <link>https://www.mingaccount.com/2017/08/jackson-deserialize-ignore-absence-element/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/08/jackson-deserialize-ignore-absence-element/</guid>
+      <description>objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);</description>
+    </item>
+    
+    <item>
+      <title>maven profile</title>
+      <link>https://www.mingaccount.com/2017/08/maven-profile/</link>
+      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/08/maven-profile/</guid>
+      <description>简介 maven profile插件可以根据环境参数，系统os，文件是否存在，和JDK版本等条件决定是否激活配置。激活的配置可以是环境参数的赋值，对应版</description>
+    </item>
+    
+    <item>
+      <title>Mysql表名忽略大小写</title>
+      <link>https://www.mingaccount.com/2017/08/mysql-table-name-case-insensitive/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/08/mysql-table-name-case-insensitive/</guid>
+      <description>跟参数lower_case_table_names相关 执行语句，查询该参数值 SHOW VARIABLES LIKE ‘%case%’ lower_case_table_name</description>
+    </item>
+    
+    <item>
+      <title>通过request获取客户端IP</title>
+      <link>https://www.mingaccount.com/2017/08/request-get-client-id/</link>
+      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/08/request-get-client-id/</guid>
+      <description>请求头枚举类 public enum HttpHeader { AUTHORIZATION(&amp;quot;Authorization&amp;quot;), AUTHENTICATION_TYPE_BASIC(&amp;quot;Basic&amp;quot;), X_AUTH_TOKEN(&amp;quot;X-AUTH-TOKEN&amp;quot;), WWW_Authenticate(&amp;quot;WWW-Authenticate&amp;quot;), X_FORWARDED_FOR(&amp;quot;X-Forwarded-For&amp;quot;), PROXY_CLIENT_IP(&amp;quot;Proxy-Client-IP&amp;quot;), WL_PROXY_CLIENT_IP(&amp;quot;WL-Proxy-Client-IP&amp;quot;), HTTP_CLIENT_IP(&amp;quot;HTTP_CLIENT_IP&amp;quot;), HTTP_X_FORWARDED_FOR(&amp;quot;HTTP_X_FORWARDED_FOR&amp;quot;); private String key; private HttpHeader(String key) { this.key = key; } public String key() { return this.key; } } 工具类 public class RemoteIpHelper { private static final String UNKNOWN = &amp;quot;unknown&amp;quot;; public static String getRemoteIpFrom(HttpServletRequest request) { String ip = null; int tryCount = 1; while (!isIpFound(ip) &amp;amp;&amp;amp; tryCount</description>
+    </item>
+    
+    <item>
+      <title>Maven release</title>
+      <link>https://www.mingaccount.com/2017/07/maven-release/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/07/maven-release/</guid>
+      <description>简介 Maven release不在maven默认生命周期内，需要通过plugin来实现。Maven release可以自动管理pom.xml中的版本号，</description>
+    </item>
+    
+    <item>
+      <title>Mysql批量更新</title>
+      <link>https://www.mingaccount.com/2017/07/mysql-batch-update/</link>
+      <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/07/mysql-batch-update/</guid>
+      <description>多个where条件，每个条件对应的更新值不同，需要mysql批量更新 UPDATE test_table SET test_target = test_id CASE WHEN &amp;quot;123&amp;quot; THEN &amp;quot;456&amp;quot; WHEN &amp;quot;789&amp;quot; THEN &amp;quot;101&amp;quot; END WHERE test_id in [&#39;123&#39;,&#39;789&#39;] 但是在程序中，直接写常量的情况太</description>
+    </item>
+    
+    <item>
+      <title>Mysql启动报错mkdir: cannot create directory ‘//.cache’: Permission denied</title>
+      <link>https://www.mingaccount.com/2017/07/mysql-startup-exception/</link>
+      <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/07/mysql-startup-exception/</guid>
+      <description>usermod -d /var/lib/mysql/ mysql ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock chown -R mysql:mysql /var/lib/mysql</description>
+    </item>
+    
+    <item>
+      <title>Markdown生命周期</title>
+      <link>https://www.mingaccount.com/2017/07/markdown-lifecycle/</link>
+      <pubDate>Sun, 09 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/07/markdown-lifecycle/</guid>
+      <description>lifecycle-phase maven有三个内部生命周期：default，clean，和site。 每个生命周期由多个阶段(phase)组成 clean Phase Description pre-clean execute processes needed prior to the actual project cleaning clean</description>
+    </item>
+    
+    <item>
+      <title>Maven依赖scope属性</title>
+      <link>https://www.mingaccount.com/2017/06/maven-dependency-scope/</link>
+      <pubDate>Fri, 16 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/06/maven-dependency-scope/</guid>
+      <description>compile This is the default scope, used if none is specified. Compile dependencies are available in all classpaths of a project. Furthermore, those dependencies are propagated to dependent projects. provided This is much like compile, but indicates you expect the JDK or a container to provide the dependency at runtime. For example, when building a web application for the Java Enterprise Edition, you would set the dependency on the Servlet</description>
+    </item>
+    
+    <item>
+      <title>Maven命令备忘</title>
+      <link>https://www.mingaccount.com/2017/06/maven-common-command/</link>
+      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/06/maven-common-command/</guid>
+      <description># 编译项目 mvn compile # 执行项目中的单元测试 # 查找单元测试类的默认规则：**/*Test.java;**/Test*.java;**/*TestCa</description>
+    </item>
+    
+    <item>
+      <title>阻止Gson将long类型的字段转为科学计数法</title>
+      <link>https://www.mingaccount.com/2017/06/gson-scientific-notation/</link>
+      <pubDate>Thu, 08 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/06/gson-scientific-notation/</guid>
+      <description>GsonBuilder gsonBuilder = new GsonBuilder(); gsonBuilder.setLongSerializationPolicy( LongSerializationPolicy.STRING ); Gson gson = gsonBuilder.create();</description>
+    </item>
+    
+    <item>
+      <title>Spring切面编程</title>
+      <link>https://www.mingaccount.com/2017/06/spring-aop/</link>
+      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/06/spring-aop/</guid>
+      <description>1.切面编程核心概念 切面编程Aspect-oriented Programming (AOP) AOP只是一个概念，跟Spring是独立关系 最典型的AOP实现框架Aspect</description>
+    </item>
+    
+    <item>
+      <title>根据Method获取所有参数名</title>
+      <link>https://www.mingaccount.com/2017/06/method-get-all-argnames/</link>
+      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/06/method-get-all-argnames/</guid>
+      <description>LocalVariableTableParameterNameDiscoverer discoverer = new LocalVariableTableParameterNameDiscoverer(); discoverer.getParameterNames(method); 详情参考API文档</description>
+    </item>
+    
+    <item>
+      <title>JavaString 特殊符号处理工具类</title>
+      <link>https://www.mingaccount.com/2017/05/java-string-special-symbol-handler/</link>
+      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/05/java-string-special-symbol-handler/</guid>
+      <description>Java, Java Script, HTML, JSON, CSV and XML org.apache.commons.lang3.StringEscapeUtils //使用示例 StringEscapeUtils.escapeCsv(&amp;quot;&amp;quot;); SqtringEscapeUtils.escapeXml(&amp;quot;&amp;quot;); api文档 Regexp 正则表达式转义所有特殊符号 其他 com.google.common.escape.Escapers Escaper build = Escapers.builder().addEscape(&#39;$&#39;, &amp;quot; &amp;quot;).build(); String str = build.escape(&amp;quot;$$$$&amp;quot;); api文档</description>
+    </item>
+    
+    <item>
+      <title>正则表达式转义所有特殊符号</title>
+      <link>https://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</link>
+      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</guid>
+      <description>正则表达式的特殊符号包括 \ $ ( ) * + . [ ] ? ^ { } | - 实现代码(java) public class RegexUtils { private static final String[] SPECIAL_SYMBOLS = new String[]{&amp;quot;\\&amp;quot;, &amp;quot;$&amp;quot;, &amp;quot;(&amp;quot;, &amp;quot;)&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;[&amp;quot;, &amp;quot;]&amp;quot;, &amp;quot;?&amp;quot;, &amp;quot;^&amp;quot;, &amp;quot;{&amp;quot;, &amp;quot;}&amp;quot;, &amp;quot;|&amp;quot;, &amp;quot;-&amp;quot;}; /** * 转义目标正</description>
+    </item>
+    
+    <item>
+      <title>Java方法的默认参数</title>
+      <link>https://www.mingaccount.com/2017/05/java-method-first-default-param/</link>
+      <pubDate>Sat, 20 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/05/java-method-first-default-param/</guid>
+      <description>Java方法如何编译 int add12and13() { return addTwo(12, 13); } 将会编译为： Method int add12and13() 0 aload_0 // Push local variable 0 (this) 1 bipush 12 // Push int constant 12 3 bipush 13 // Push int constant 13 5 invokevirtual #4 // Method Example.addtwo(II)I 8 ireturn // Return int on top of operand stack; // it is the</description>
+    </item>
+    
+    <item>
+      <title>pom元素说明</title>
+      <link>https://www.mingaccount.com/2017/05/pom-tag/</link>
+      <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/05/pom-tag/</guid>
+      <description>project pom.xml文件的顶级元素 modelVersion POM使用的对象模型版本。这个模型的版本几乎不更新，作为必要元素的原因是确保稳定性。 groupId 这个元素代表创建这个项</description>
+    </item>
+    
+    <item>
+      <title>关于mysql和oracle的大小写敏感</title>
+      <link>https://www.mingaccount.com/2017/05/mysql-oracle-case-sensitive/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/05/mysql-oracle-case-sensitive/</guid>
+      <description>表名 mysql 每一个表至少对应一个服务器文件，而且名字对应，因此表名的大小写敏感跟系统有关系，windows不区分，linux区分 oracle 所有不在双引号里</description>
+    </item>
+    
+    <item>
+      <title>Mysql条件对比大小写敏感</title>
+      <link>https://www.mingaccount.com/2017/05/mysql-compare-sensitive/</link>
+      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/05/mysql-compare-sensitive/</guid>
+      <description>默认情况下mysql的对比条件是大小写不敏感的（latin1_general_ci)，所有不敏感的collate都以_ci结尾。 要让对比条件</description>
+    </item>
+    
+    <item>
+      <title>SpringBoot入口类常用注解</title>
+      <link>https://www.mingaccount.com/2017/05/spring-boot-entry-anno/</link>
+      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/05/spring-boot-entry-anno/</guid>
+      <description>@SpringBootApplication(scanBasePackages=&amp;quot;com.*.*&amp;quot;) @EnableScheduling @EnableTransactionManagement @MapperScan(&amp;quot;com.*.**.*mapper&amp;quot;) @EnableConfigurationProperties({CustomConfiguration.class}) public class Application {} SpringBootApplication Spring注解的扫描路径 EnableScheduling 开启Spring的定时任务 EnableTransactionManagement 开始Spring的事务管理 MapperScan 扫描MyBatis Mapper类的路</description>
+    </item>
+    
+  </channel>
+</rss>
