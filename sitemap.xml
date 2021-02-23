@@ -1396,12 +1396,6 @@
   </url>
   
   <url>
-    <loc>https://www.mingaccount.com/1/01/resume/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.mingaccount.com/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

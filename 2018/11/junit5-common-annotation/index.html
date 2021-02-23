@@ -39,7 +39,7 @@
 <meta itemprop="description" content="@BeforeAll @BeforeEach @AfterAll @AfterEach @DisplayName 自定义的展示名称 @IndicativeSentencesGeneration(separator = &quot; -&gt; &ldquo;, generator = DisplayNameGenerator.ReplaceUnderscores.class) 更改生成测试名称规则，根据类名和方法名生成，并可以指定替换策略，比如上面的替换下划线为空格 @Disabled 屏蔽整">
 <meta itemprop="datePublished" content="2018-11-13T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2018-11-13T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1422">
+<meta itemprop="wordCount" content="2517">
 
 
 
@@ -401,8 +401,8 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2018/11/junit5-common-annotation/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1422words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3minutes </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 2517words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 6minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -745,6 +745,240 @@ void testWithArgumentsSource(String argument) {
     }
 }
 </code></pre>
+<h4 id="多对象映射">多对象映射</h4>
+<p>除了前面提到的<code>@MethodSource</code>注解可以进行自定义多对象映射意外，还可以通过<code>ArgumentAccessor</code>作为参数，然后手动映射到指定的对象：</p>
+<pre><code class="language-java">@ParameterizedTest
+@CsvSource({
+    &quot;Jane, Doe, F, 1990-05-20&quot;,
+    &quot;John, Doe, M, 1990-10-22&quot;
+})
+void testWithArgumentsAccessor(ArgumentsAccessor arguments) {
+    Person person = new Person(arguments.getString(0),
+                               arguments.getString(1),
+                               arguments.get(2, Gender.class),
+                               arguments.get(3, LocalDate.class));
+
+    if (person.getFirstName().equals(&quot;Jane&quot;)) {
+        assertEquals(Gender.F, person.getGender());
+    }
+    else {
+        assertEquals(Gender.M, person.getGender());
+    }
+    assertEquals(&quot;Doe&quot;, person.getLastName());
+    assertEquals(1990, person.getDateOfBirth().getYear());
+}
+</code></pre>
+<p>除了<code>ArgumentAccessor</code>以外，你还可以自定义<code>Aggregator</code>。需要通过实现<code>ArgumentsAggregator</code>接口，并且将<code>@AggregateWith</code>注解放到对应参数上。</p>
+<pre><code class="language-java">@ParameterizedTest
+@CsvSource({
+    &quot;Jane, Doe, F, 1990-05-20&quot;,
+    &quot;John, Doe, M, 1990-10-22&quot;
+})
+void testWithArgumentsAggregator(@AggregateWith(PersonAggregator.class) Person person) {
+    // perform assertions against person
+}
+</code></pre>
+<pre><code class="language-java">public class PersonAggregator implements ArgumentsAggregator {
+    @Override
+    public Person aggregateArguments(ArgumentsAccessor arguments, ParameterContext context) {
+        return new Person(arguments.getString(0),
+                          arguments.getString(1),
+                          arguments.get(2, Gender.class),
+                          arguments.get(3, LocalDate.class));
+    }
+}
+</code></pre>
+<h3 id="testfactory">@TestFactory</h3>
+<p>不同于Junit4的<code>@Test</code>，<code>@TestFactory</code>是动态的，也就是每次测试的结果可能不相同。他所修饰的方法必须返回<code>DynamicNode or a Stream, Collection, Iterable, Iterator, or array of DynamicNode instances</code><br>
+之所以叫<code>TestFactory</code>，就是因为他返回的是一个或者多个测试，并且他们的测试结果可能不是一定的。<br>
+下面的例子中，第一个是错误示范，返回的不是<code>@TestFactory</code>指定的返回类型会在运行时报错。之后的五个是对可能的返回类型的展示。最后几个就是真正的动态实例。</p>
+<pre><code class="language-java">import static example.util.StringUtils.isPalindrome;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.DynamicContainer.dynamicContainer;
+import static org.junit.jupiter.api.DynamicTest.dynamicTest;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
+import java.util.function.Function;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+import example.util.Calculator;
+
+import org.junit.jupiter.api.DynamicNode;
+import org.junit.jupiter.api.DynamicTest;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.TestFactory;
+import org.junit.jupiter.api.function.ThrowingConsumer;
+
+class DynamicTestsDemo {
+
+    private final Calculator calculator = new Calculator();
+
+    // This will result in a JUnitException!
+    @TestFactory
+    List&lt;String&gt; dynamicTestsWithInvalidReturnType() {
+        return Arrays.asList(&quot;Hello&quot;);
+    }
+
+    @TestFactory
+    Collection&lt;DynamicTest&gt; dynamicTestsFromCollection() {
+        return Arrays.asList(
+            dynamicTest(&quot;1st dynamic test&quot;, () -&gt; assertTrue(isPalindrome(&quot;madam&quot;))),
+            dynamicTest(&quot;2nd dynamic test&quot;, () -&gt; assertEquals(4, calculator.multiply(2, 2)))
+        );
+    }
+
+    @TestFactory
+    Iterable&lt;DynamicTest&gt; dynamicTestsFromIterable() {
+        return Arrays.asList(
+            dynamicTest(&quot;3rd dynamic test&quot;, () -&gt; assertTrue(isPalindrome(&quot;madam&quot;))),
+            dynamicTest(&quot;4th dynamic test&quot;, () -&gt; assertEquals(4, calculator.multiply(2, 2)))
+        );
+    }
+
+    @TestFactory
+    Iterator&lt;DynamicTest&gt; dynamicTestsFromIterator() {
+        return Arrays.asList(
+            dynamicTest(&quot;5th dynamic test&quot;, () -&gt; assertTrue(isPalindrome(&quot;madam&quot;))),
+            dynamicTest(&quot;6th dynamic test&quot;, () -&gt; assertEquals(4, calculator.multiply(2, 2)))
+        ).iterator();
+    }
+
+    @TestFactory
+    DynamicTest[] dynamicTestsFromArray() {
+        return new DynamicTest[] {
+            dynamicTest(&quot;7th dynamic test&quot;, () -&gt; assertTrue(isPalindrome(&quot;madam&quot;))),
+            dynamicTest(&quot;8th dynamic test&quot;, () -&gt; assertEquals(4, calculator.multiply(2, 2)))
+        };
+    }
+
+    @TestFactory
+    Stream&lt;DynamicTest&gt; dynamicTestsFromStream() {
+        return Stream.of(&quot;racecar&quot;, &quot;radar&quot;, &quot;mom&quot;, &quot;dad&quot;)
+            .map(text -&gt; dynamicTest(text, () -&gt; assertTrue(isPalindrome(text))));
+    }
+
+    @TestFactory
+    Stream&lt;DynamicTest&gt; dynamicTestsFromIntStream() {
+        // Generates tests for the first 10 even integers.
+        return IntStream.iterate(0, n -&gt; n + 2).limit(10)
+            .mapToObj(n -&gt; dynamicTest(&quot;test&quot; + n, () -&gt; assertTrue(n % 2 == 0)));
+    }
+
+    @TestFactory
+    Stream&lt;DynamicTest&gt; generateRandomNumberOfTestsFromIterator() {
+
+        // Generates random positive integers between 0 and 100 until
+        // a number evenly divisible by 7 is encountered.
+        Iterator&lt;Integer&gt; inputGenerator = new Iterator&lt;Integer&gt;() {
+
+            Random random = new Random();
+            int current;
+
+            @Override
+            public boolean hasNext() {
+                current = random.nextInt(100);
+                return current % 7 != 0;
+            }
+
+            @Override
+            public Integer next() {
+                return current;
+            }
+        };
+
+        // Generates display names like: input:5, input:37, input:85, etc.
+        Function&lt;Integer, String&gt; displayNameGenerator = (input) -&gt; &quot;input:&quot; + input;
+
+        // Executes tests based on the current input value.
+        ThrowingConsumer&lt;Integer&gt; testExecutor = (input) -&gt; assertTrue(input % 7 != 0);
+
+        // Returns a stream of dynamic tests.
+        return DynamicTest.stream(inputGenerator, displayNameGenerator, testExecutor);
+    }
+
+    @TestFactory
+    Stream&lt;DynamicTest&gt; dynamicTestsFromStreamFactoryMethod() {
+        // Stream of palindromes to check
+        Stream&lt;String&gt; inputStream = Stream.of(&quot;racecar&quot;, &quot;radar&quot;, &quot;mom&quot;, &quot;dad&quot;);
+
+        // Generates display names like: racecar is a palindrome
+        Function&lt;String, String&gt; displayNameGenerator = text -&gt; text + &quot; is a palindrome&quot;;
+
+        // Executes tests based on the current input value.
+        ThrowingConsumer&lt;String&gt; testExecutor = text -&gt; assertTrue(isPalindrome(text));
+
+        // Returns a stream of dynamic tests.
+        return DynamicTest.stream(inputStream, displayNameGenerator, testExecutor);
+    }
+
+    @TestFactory
+    Stream&lt;DynamicNode&gt; dynamicTestsWithContainers() {
+        return Stream.of(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
+            .map(input -&gt; dynamicContainer(&quot;Container &quot; + input, Stream.of(
+                dynamicTest(&quot;not null&quot;, () -&gt; assertNotNull(input)),
+                dynamicContainer(&quot;properties&quot;, Stream.of(
+                    dynamicTest(&quot;length &gt; 0&quot;, () -&gt; assertTrue(input.length() &gt; 0)),
+                    dynamicTest(&quot;not empty&quot;, () -&gt; assertFalse(input.isEmpty()))
+                ))
+            )));
+    }
+
+    @TestFactory
+    DynamicNode dynamicNodeSingleTest() {
+        return dynamicTest(&quot;'pop' is a palindrome&quot;, () -&gt; assertTrue(isPalindrome(&quot;pop&quot;)));
+    }
+
+    @TestFactory
+    DynamicNode dynamicNodeSingleContainer() {
+        return dynamicContainer(&quot;palindromes&quot;,
+            Stream.of(&quot;racecar&quot;, &quot;radar&quot;, &quot;mom&quot;, &quot;dad&quot;)
+                .map(text -&gt; dynamicTest(text, () -&gt; assertTrue(isPalindrome(text)))
+        ));
+    }
+
+}
+</code></pre>
+<p>动态测试还可以根据<code>java.net.URI</code>提供的资源生成：</p>
+<ul>
+<li><code>DynamicTest.dynamicTest(String, URI, Executable)</code></li>
+<li><code>DynamicContainer.dynamicContainer(String, URI, Stream)</code></li>
+</ul>
+<p>这里的URI会被转为以下<code>TestSource</code>实现：</p>
+<ul>
+<li>
+<p><code>ClasspathResourceSource</code><br>
+If the URI contains the classpath scheme — for example, classpath:/test/foo.xml?line=20,column=2.</p>
+</li>
+<li>
+<p><code>DirectorySource</code><br>
+If the URI represents a directory present in the file system.</p>
+</li>
+<li>
+<p><code>FileSource</code><br>
+If the URI represents a file present in the file system.</p>
+</li>
+<li>
+<p><code>MethodSource</code><br>
+If the URI contains the method scheme and the fully qualified method name (FQMN) — for example, method:org.junit.Foo#bar(java.lang.String, java.lang.String[]). Please refer to the Javadoc for DiscoverySelectors.selectMethod(String) for the supported formats for a FQMN.</p>
+</li>
+<li>
+<p><code>UriSource</code><br>
+If none of the above TestSource implementations are applicable.</p>
+</li>
+</ul>
+<h3 id="timeout">@Timeout</h3>
+<h3 id="并发测试">并发测试</h3>
+<blockquote>
+<p>试验功能，详情参考<a href="https://junit.org/junit5/docs/current/user-guide/#writing-tests-parallel-execution">parallel execution</a></p>
+</blockquote>
 
     </div>
     <div class="article-footer">

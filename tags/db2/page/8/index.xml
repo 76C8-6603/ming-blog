@@ -181,14 +181,5 @@
       <description>1.Oracle 12c R1 (12.1)支持limit语句 从Oracle 12c R1 (12.1)版本开始，oracle开始支持limit语句，但是跟熟悉的limit(1,</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://www.mingaccount.com/1/01/resume/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/1/01/resume/</guid>
-      <description>项目经历 1. 交互式探索项目 2015/12 - 2016/12 交互式探索项目 项目简介 数据挖掘项目，覆盖一个从未加工数据到意向图表的完整流程 技术栈 Struts2 + Spring + iBatis Oracle、My</description>
-    </item>
-    
   </channel>
 </rss>
