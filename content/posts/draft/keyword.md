@@ -16,8 +16,10 @@
 * jenkins
 * nginx
 * Harbor
-* rabbitmq
-  
+* rabbitmq 
+
+* CountDownLatch
+
 * junit 5
 * h2
 * sqlLite

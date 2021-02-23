@@ -343,3 +343,232 @@ public class MyArgumentsProvider implements ArgumentsProvider {
     }
 }
 ```
+#### 多对象映射
+除了前面提到的`@MethodSource`注解可以进行自定义多对象映射意外，还可以通过`ArgumentAccessor`作为参数，然后手动映射到指定的对象：  
+```java
+@ParameterizedTest
+@CsvSource({
+    "Jane, Doe, F, 1990-05-20",
+    "John, Doe, M, 1990-10-22"
+})
+void testWithArgumentsAccessor(ArgumentsAccessor arguments) {
+    Person person = new Person(arguments.getString(0),
+                               arguments.getString(1),
+                               arguments.get(2, Gender.class),
+                               arguments.get(3, LocalDate.class));
+
+    if (person.getFirstName().equals("Jane")) {
+        assertEquals(Gender.F, person.getGender());
+    }
+    else {
+        assertEquals(Gender.M, person.getGender());
+    }
+    assertEquals("Doe", person.getLastName());
+    assertEquals(1990, person.getDateOfBirth().getYear());
+}
+```
+除了`ArgumentAccessor`以外，你还可以自定义`Aggregator`。需要通过实现`ArgumentsAggregator`接口，并且将`@AggregateWith`注解放到对应参数上。  
+```java
+@ParameterizedTest
+@CsvSource({
+    "Jane, Doe, F, 1990-05-20",
+    "John, Doe, M, 1990-10-22"
+})
+void testWithArgumentsAggregator(@AggregateWith(PersonAggregator.class) Person person) {
+    // perform assertions against person
+}
+```
+```java
+public class PersonAggregator implements ArgumentsAggregator {
+    @Override
+    public Person aggregateArguments(ArgumentsAccessor arguments, ParameterContext context) {
+        return new Person(arguments.getString(0),
+                          arguments.getString(1),
+                          arguments.get(2, Gender.class),
+                          arguments.get(3, LocalDate.class));
+    }
+}
+```
+### @TestFactory
+不同于Junit4的`@Test`，`@TestFactory`是动态的，也就是每次测试的结果可能不相同。他所修饰的方法必须返回`DynamicNode or a Stream, Collection, Iterable, Iterator, or array of DynamicNode instances`  
+之所以叫`TestFactory`，就是因为他返回的是一个或者多个测试，并且他们的测试结果可能不是一定的。  
+下面的例子中，第一个是错误示范，返回的不是`@TestFactory`指定的返回类型会在运行时报错。之后的五个是对可能的返回类型的展示。最后几个就是真正的动态实例。
+```java
+import static example.util.StringUtils.isPalindrome;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.DynamicContainer.dynamicContainer;
+import static org.junit.jupiter.api.DynamicTest.dynamicTest;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
+import java.util.function.Function;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+import example.util.Calculator;
+
+import org.junit.jupiter.api.DynamicNode;
+import org.junit.jupiter.api.DynamicTest;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.TestFactory;
+import org.junit.jupiter.api.function.ThrowingConsumer;
+
+class DynamicTestsDemo {
+
+    private final Calculator calculator = new Calculator();
+
+    // This will result in a JUnitException!
+    @TestFactory
+    List<String> dynamicTestsWithInvalidReturnType() {
+        return Arrays.asList("Hello");
+    }
+
+    @TestFactory
+    Collection<DynamicTest> dynamicTestsFromCollection() {
+        return Arrays.asList(
+            dynamicTest("1st dynamic test", () -> assertTrue(isPalindrome("madam"))),
+            dynamicTest("2nd dynamic test", () -> assertEquals(4, calculator.multiply(2, 2)))
+        );
+    }
+
+    @TestFactory
+    Iterable<DynamicTest> dynamicTestsFromIterable() {
+        return Arrays.asList(
+            dynamicTest("3rd dynamic test", () -> assertTrue(isPalindrome("madam"))),
+            dynamicTest("4th dynamic test", () -> assertEquals(4, calculator.multiply(2, 2)))
+        );
+    }
+
+    @TestFactory
+    Iterator<DynamicTest> dynamicTestsFromIterator() {
+        return Arrays.asList(
+            dynamicTest("5th dynamic test", () -> assertTrue(isPalindrome("madam"))),
+            dynamicTest("6th dynamic test", () -> assertEquals(4, calculator.multiply(2, 2)))
+        ).iterator();
+    }
+
+    @TestFactory
+    DynamicTest[] dynamicTestsFromArray() {
+        return new DynamicTest[] {
+            dynamicTest("7th dynamic test", () -> assertTrue(isPalindrome("madam"))),
+            dynamicTest("8th dynamic test", () -> assertEquals(4, calculator.multiply(2, 2)))
+        };
+    }
+
+    @TestFactory
+    Stream<DynamicTest> dynamicTestsFromStream() {
+        return Stream.of("racecar", "radar", "mom", "dad")
+            .map(text -> dynamicTest(text, () -> assertTrue(isPalindrome(text))));
+    }
+
+    @TestFactory
+    Stream<DynamicTest> dynamicTestsFromIntStream() {
+        // Generates tests for the first 10 even integers.
+        return IntStream.iterate(0, n -> n + 2).limit(10)
+            .mapToObj(n -> dynamicTest("test" + n, () -> assertTrue(n % 2 == 0)));
+    }
+
+    @TestFactory
+    Stream<DynamicTest> generateRandomNumberOfTestsFromIterator() {
+
+        // Generates random positive integers between 0 and 100 until
+        // a number evenly divisible by 7 is encountered.
+        Iterator<Integer> inputGenerator = new Iterator<Integer>() {
+
+            Random random = new Random();
+            int current;
+
+            @Override
+            public boolean hasNext() {
+                current = random.nextInt(100);
+                return current % 7 != 0;
+            }
+
+            @Override
+            public Integer next() {
+                return current;
+            }
+        };
+
+        // Generates display names like: input:5, input:37, input:85, etc.
+        Function<Integer, String> displayNameGenerator = (input) -> "input:" + input;
+
+        // Executes tests based on the current input value.
+        ThrowingConsumer<Integer> testExecutor = (input) -> assertTrue(input % 7 != 0);
+
+        // Returns a stream of dynamic tests.
+        return DynamicTest.stream(inputGenerator, displayNameGenerator, testExecutor);
+    }
+
+    @TestFactory
+    Stream<DynamicTest> dynamicTestsFromStreamFactoryMethod() {
+        // Stream of palindromes to check
+        Stream<String> inputStream = Stream.of("racecar", "radar", "mom", "dad");
+
+        // Generates display names like: racecar is a palindrome
+        Function<String, String> displayNameGenerator = text -> text + " is a palindrome";
+
+        // Executes tests based on the current input value.
+        ThrowingConsumer<String> testExecutor = text -> assertTrue(isPalindrome(text));
+
+        // Returns a stream of dynamic tests.
+        return DynamicTest.stream(inputStream, displayNameGenerator, testExecutor);
+    }
+
+    @TestFactory
+    Stream<DynamicNode> dynamicTestsWithContainers() {
+        return Stream.of("A", "B", "C")
+            .map(input -> dynamicContainer("Container " + input, Stream.of(
+                dynamicTest("not null", () -> assertNotNull(input)),
+                dynamicContainer("properties", Stream.of(
+                    dynamicTest("length > 0", () -> assertTrue(input.length() > 0)),
+                    dynamicTest("not empty", () -> assertFalse(input.isEmpty()))
+                ))
+            )));
+    }
+
+    @TestFactory
+    DynamicNode dynamicNodeSingleTest() {
+        return dynamicTest("'pop' is a palindrome", () -> assertTrue(isPalindrome("pop")));
+    }
+
+    @TestFactory
+    DynamicNode dynamicNodeSingleContainer() {
+        return dynamicContainer("palindromes",
+            Stream.of("racecar", "radar", "mom", "dad")
+                .map(text -> dynamicTest(text, () -> assertTrue(isPalindrome(text)))
+        ));
+    }
+
+}
+```
+动态测试还可以根据`java.net.URI`提供的资源生成：  
+* `DynamicTest.dynamicTest(String, URI, Executable)`
+* `DynamicContainer.dynamicContainer(String, URI, Stream)`  
+
+这里的URI会被转为以下`TestSource`实现：  
+* `ClasspathResourceSource`  
+If the URI contains the classpath scheme — for example, classpath:/test/foo.xml?line=20,column=2.  
+
+* `DirectorySource`  
+If the URI represents a directory present in the file system.  
+
+* `FileSource`  
+If the URI represents a file present in the file system.
+
+* `MethodSource`  
+If the URI contains the method scheme and the fully qualified method name (FQMN) — for example, method:org.junit.Foo#bar(java.lang.String, java.lang.String[]). Please refer to the Javadoc for DiscoverySelectors.selectMethod(String) for the supported formats for a FQMN.
+
+* `UriSource`  
+If none of the above TestSource implementations are applicable.
+  
+### @Timeout
+
+### 并发测试
+> 试验功能，详情参考[parallel execution](https://junit.org/junit5/docs/current/user-guide/#writing-tests-parallel-execution)
