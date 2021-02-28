@@ -35,6 +35,9 @@ chmod a+x filename #让执行文件能被./filename调用
 
 mv #文件移动或者重命名
 
+#将当前目录下的所有文件移到上层目录，以便删除上级目录
+mv * ../
+
 vi /etc/hosts #HOST修改需重启
 
 vi /etc/resolv.conf #DNS修改即时生效
