@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Hadoop安装踩坑</title>
+      <link>https://www.mingaccount.com/2019/12/hadoop-shit/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/12/hadoop-shit/</guid>
+      <description>切记！！！！！ 没有比官网教程更详细，更靠谱的教程！！！！！ 其他的基本都是官网的翻译，但是官网的教程是实时更新的，要是不注意版本，坑根本就踩不</description>
+    </item>
+    
+    <item>
       <title>@Autowired注解直接修饰在成员变量时提醒Field injection is not recommended</title>
       <link>https://www.mingaccount.com/2019/12/field-injection-not-recommended/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
@@ -179,15 +188,6 @@
       
       <guid>https://www.mingaccount.com/2019/07/java-cipher/</guid>
       <description>public class EncryptUtils { private static final String SECRET_KEY_1 = &amp;quot;YIORGA4dBYp6y7u8&amp;quot;; private static final String SECRET_KEY_2 = &amp;quot;C6B8r5y7u7Uh37Sy&amp;quot;; private IvParameterSpec ivParameterSpec; private SecretKeySpec secretKeySpec; private Cipher cipher; public EncryptUtils() throws UnsupportedEncodingException, NoSuchPaddingException, NoSuchAlgorithmException { ivParameterSpec = new IvParameterSpec(SECRET_KEY_1.getBytes(&amp;quot;UTF-8&amp;quot;)); secretKeySpec = new SecretKeySpec(SECRET_KEY_2.getBytes(&amp;quot;UTF-8&amp;quot;), &amp;quot;AES&amp;quot;); cipher = Cipher.getInstance(&amp;quot;AES/CBC/PKCS5PADDING&amp;quot;); } /** * Encrypt the string with this internal algorithm. * * @param toBeEncrypt string object to be encrypt. * @return returns encrypted string.</description>
-    </item>
-    
-    <item>
-      <title>spring boot configuration annotation processor not found in classpath</title>
-      <link>https://www.mingaccount.com/2019/07/spring-boot-configuration-exception/</link>
-      <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/07/spring-boot-configuration-exception/</guid>
-      <description>配置有@ConfigurationProperties 注解的类，有如下提示 spring boot configuration annotation processor not found in classpath pom追加配置如下依赖即可 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-configuration-processor&amp;lt;/artifactId&amp;gt; &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; &amp;lt;/dependency&amp;gt;</description>
     </item>
     
   </channel>

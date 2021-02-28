@@ -48,6 +48,15 @@ The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence,
     </item>
     
     <item>
+      <title>git push 异常SSL_connect: SSL_ERROR_SYSCALL</title>
+      <link>https://www.mingaccount.com/2020/09/git-push-exception-ssl-error/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2020/09/git-push-exception-ssl-error/</guid>
+      <description>完整异常 OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 解决方案 git config --global --unset http.proxy 上面的解决方案如果行不通建议重启，多尝试几次push👏</description>
+    </item>
+    
+    <item>
       <title>WIN10 UBUNTU 异常：sleep: cannot read realtime clock: Invalid argument</title>
       <link>https://www.mingaccount.com/2020/08/wsl-exception/</link>
       <pubDate>Mon, 10 Aug 2020 13:37:30 +0800</pubDate>
@@ -180,15 +189,6 @@ The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence,
       
       <guid>https://www.mingaccount.com/2019/12/mysql-explain/</guid>
       <description>根据版本不同，官方文档有详细说明 使用参照文档 查询结果对照文档</description>
-    </item>
-    
-    <item>
-      <title>Hadoop安装踩坑</title>
-      <link>https://www.mingaccount.com/2019/12/hadoop-shit/</link>
-      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/12/hadoop-shit/</guid>
-      <description>切记！！！！！ 没有比官网教程更详细，更靠谱的教程！！！！！ 其他的基本都是官网的翻译，但是官网的教程是实时更新的，要是不注意版本，坑根本就踩不</description>
     </item>
     
   </channel>

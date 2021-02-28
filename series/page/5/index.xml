@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>Spring boot @Value设定默认值 配置文件中没有也不会报错</title>
+      <link>https://www.mingaccount.com/2018/07/spring-boot-properties-default-value/</link>
+      <pubDate>Wed, 11 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/07/spring-boot-properties-default-value/</guid>
+      <description>背景 默认情况下@Value注解如果没有在properties文件中存在对应值，那么启动项目的时候会直接报错。 解决方案 可以给@Value注解设</description>
+    </item>
+    
+    <item>
       <title>Windows删除启动盘的所有分区</title>
       <link>https://www.mingaccount.com/2018/07/windows-delete-disk-partition/</link>
       <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>https://www.mingaccount.com/2018/03/char-encode/</guid>
       <description>1. ASCII码 我们知道，在计算机内部，所有的信息最终都表示为一个二进制的字符串。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就</description>
-    </item>
-    
-    <item>
-      <title>Java合理避免空指针</title>
-      <link>https://www.mingaccount.com/2018/03/java-avoid-null-pointer/</link>
-      <pubDate>Fri, 09 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/03/java-avoid-null-pointer/</guid>
-      <description>关于如何有效避免空指针，并减少空指针的重复申明。 参考stackoverflow的讨论</description>
     </item>
     
   </channel>

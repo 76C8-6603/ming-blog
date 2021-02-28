@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>Java合理避免空指针</title>
+      <link>https://www.mingaccount.com/2018/03/java-avoid-null-pointer/</link>
+      <pubDate>Fri, 09 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/03/java-avoid-null-pointer/</guid>
+      <description>关于如何有效避免空指针，并减少空指针的重复申明。 参考stackoverflow的讨论</description>
+    </item>
+    
+    <item>
       <title>Request的Body只能读取一次解决方法</title>
       <link>https://www.mingaccount.com/2018/03/request-body-read-twice/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>https://www.mingaccount.com/2017/09/common-regexp/</guid>
       <description>纯数字 /^\d+$/ 小数 /^\d*\.\d+$/ 整数或者小数 /^\d*(\.\d+)?$/ 正负整数或者小数 /^-?\d*(\.\d+)?$/ 整数小数或者分数 /[-]?[0-9]+[,.]?[0-9]*([\/][0-9]+[,.]?[0-9]*)*/ 数字字母 /^[a-zA-Z0-9]*$/ 单词 /^[a-zA-Z \-]{1,50}$/ MM/DD/YYYY 1900-2099 兼容的分隔符：空格 - / . /^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$/ YYYY/MM/DD 1900-2099 兼容的分隔符：空格 -</description>
-    </item>
-    
-    <item>
-      <title>Mysql 创建视图报错：View&#39;s SELECT contains a subquery in the FROM clause</title>
-      <link>https://www.mingaccount.com/2017/09/mysql-create-view-exception/</link>
-      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/09/mysql-create-view-exception/</guid>
-      <description>问题背景 使用sql: create view test_view as select a.column_1, b.column_2 from (select column_1 from table_1) a left join (select column_2 from table_2) b on a.column_1 = b.column_2 报错信息： View&#39;s SELECT contains a subquery in the FROM clause 问题原因 根据mysql官方文档，版本5.7之</description>
     </item>
     
   </channel>

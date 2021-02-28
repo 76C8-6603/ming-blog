@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Mysql 创建视图报错：View&#39;s SELECT contains a subquery in the FROM clause</title>
+      <link>https://www.mingaccount.com/2017/09/mysql-create-view-exception/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/09/mysql-create-view-exception/</guid>
+      <description>问题背景 使用sql: create view test_view as select a.column_1, b.column_2 from (select column_1 from table_1) a left join (select column_2 from table_2) b on a.column_1 = b.column_2 报错信息： View&#39;s SELECT contains a subquery in the FROM clause 问题原因 根据mysql官方文档，版本5.7之</description>
+    </item>
+    
+    <item>
       <title>Spring集成测试</title>
       <link>https://www.mingaccount.com/2017/09/spring-test/</link>
       <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
@@ -179,15 +188,6 @@
       
       <guid>https://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</guid>
       <description>正则表达式的特殊符号包括 \ $ ( ) * + . [ ] ? ^ { } | - 实现代码(java) public class RegexUtils { private static final String[] SPECIAL_SYMBOLS = new String[]{&amp;quot;\\&amp;quot;, &amp;quot;$&amp;quot;, &amp;quot;(&amp;quot;, &amp;quot;)&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;[&amp;quot;, &amp;quot;]&amp;quot;, &amp;quot;?&amp;quot;, &amp;quot;^&amp;quot;, &amp;quot;{&amp;quot;, &amp;quot;}&amp;quot;, &amp;quot;|&amp;quot;, &amp;quot;-&amp;quot;}; /** * 转义目标正</description>
-    </item>
-    
-    <item>
-      <title>Java方法的默认参数</title>
-      <link>https://www.mingaccount.com/2017/05/java-method-first-default-param/</link>
-      <pubDate>Sat, 20 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/05/java-method-first-default-param/</guid>
-      <description>Java方法如何编译 int add12and13() { return addTwo(12, 13); } 将会编译为： Method int add12and13() 0 aload_0 // Push local variable 0 (this) 1 bipush 12 // Push int constant 12 3 bipush 13 // Push int constant 13 5 invokevirtual #4 // Method Example.addtwo(II)I 8 ireturn // Return int on top of operand stack; // it is the</description>
     </item>
     
   </channel>
