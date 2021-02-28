@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>api on Ming Blog</title>
+    <link>https://www.mingaccount.com/tags/api/</link>
+    <description>Recent content in api on Ming Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://www.mingaccount.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mybatis Generator配置</title>
+      <link>https://www.mingaccount.com/2019/07/mybatis-generator/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/mybatis-generator/</guid>
+      <description>配置复杂，比较臃肿，推荐使用idea的插件easyCode pom.xml配置： &amp;lt;!-- mybatis自动生成 start --&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis.generator&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-generator-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.3.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;!--配置文件的</description>
+    </item>
+    
+    <item>
+      <title>mySql 插入中文异常 Incorrect string value: &#39;***&#39; for column</title>
+      <link>https://www.mingaccount.com/2019/07/mysql-insert-chinese-exception/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/mysql-insert-chinese-exception/</guid>
+      <description>问题是由mysql的编码问题造成，因为建表的时候没有指定utf-8作为字符集 建议重新建表，或者直接调整对应字段的字符集 1.修改mysql编码</description>
+    </item>
+    
+    <item>
+      <title>nexus简介</title>
+      <link>https://www.mingaccount.com/2019/07/nexus/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/nexus/</guid>
+      <description>简介 Nexus repository Manager可以作为Maven的私服，意味着在Maven中央仓库和你本地项目之间多了一层代理。在本地访问已经加载过的jar包时，私</description>
+    </item>
+    
+    <item>
+      <title>lombok详解</title>
+      <link>https://www.mingaccount.com/2019/07/lombok/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/lombok/</guid>
+      <description>val 精简变量修饰，类似Scala，但是默认追加了final修饰符 val list = new ArrayList&amp;lt;String&amp;gt;(); //等同于 final ArrayList&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(); var 精简变量修饰，类似Scala，修饰变量 val list =</description>
+    </item>
+    
+    <item>
+      <title>Maven jar包冲突导致NoClassDefFoundError</title>
+      <link>https://www.mingaccount.com/2019/07/maven-jar-clash/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/maven-jar-clash/</guid>
+      <description>问题背景 项目的两个依赖，包含了同一个路径，然而因为项目原因还不能删除其中任何一个 代码在本地和线上都能正常通过编译 但是一执行到对应代码就会抛出</description>
+    </item>
+    
+    <item>
+      <title>FastJson解析结果部分属性为null的问题</title>
+      <link>https://www.mingaccount.com/2019/07/fastjson-undes-property-isnull/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/fastjson-undes-property-isnull/</guid>
+      <description>在协作开发时，从接口获取到的json实体部分为空，但是在调试时发现原对象没有任何问题，但是经过解析成为json后，部分属性变为： &amp;ldquo</description>
+    </item>
+    
+    <item>
+      <title>SparkSql函数文档</title>
+      <link>https://www.mingaccount.com/2019/07/spark-sql-api/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/spark-sql-api/</guid>
+      <description>spark sql也支持函数，但与通常的数据库函数有些区别，附上官方api文档，以作备忘： http://spark.apache.org/docs/latest/api/sql/index.html#acos</description>
+    </item>
+    
+    <item>
+      <title>Maven如何正确导入本地包，保证在线上正常运行</title>
+      <link>https://www.mingaccount.com/2019/06/maven-how-to-import-local-jar/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/06/maven-how-to-import-local-jar/</guid>
+      <description>pom设置 &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-install-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.5.1&amp;lt;/version&amp;gt; &amp;lt;executions&amp;gt; &amp;lt;execution&amp;gt; &amp;lt;id&amp;gt;install-jar-lib&amp;lt;/id&amp;gt; &amp;lt;goals&amp;gt; &amp;lt;goal&amp;gt;install-file&amp;lt;/goal&amp;gt; &amp;lt;/goals&amp;gt; &amp;lt;!--在mvn package的时候将jar包追加到本地仓库，可修改为validate，以线上容器编译</description>
+    </item>
+    
+    <item>
+      <title>为服务开启BBR加速</title>
+      <link>https://www.mingaccount.com/2019/05/server-bbr/</link>
+      <pubDate>Fri, 31 May 2019 19:03:55 +0800</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/05/server-bbr/</guid>
+      <description>脚本： wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;amp;&amp;amp; chmod +x bbr.sh &amp;amp;&amp;amp; ./bbr.sh 查看结果： sysctl net.ipv4.tcp_available_congestion_control</description>
+    </item>
+    
+    <item>
+      <title>Scala基础类结构图</title>
+      <link>https://www.mingaccount.com/2019/05/scala-base-class-stucture/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/05/scala-base-class-stucture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scala运算符优先顺序</title>
+      <link>https://www.mingaccount.com/2019/05/scala-operation-order/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/05/scala-operation-order/</guid>
+      <description>运算符的优先级由其第一个字符决定 以下列出的字符按优先级从高到低的顺序排列 (all letters) | ^ &amp;amp; &amp;lt; &amp;gt; = ! + - * / % (all other special characters)</description>
+    </item>
+    
+    <item>
+      <title>Bucket4j 实例</title>
+      <link>https://www.mingaccount.com/2019/04/bucket4j-example/</link>
+      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/04/bucket4j-example/</guid>
+      <description>简介 Bucket4j 是一个基于令牌桶算法的限流工具 官网git hub 实例 下面实例的场景是，限制被第三方调用的频率，每个app在一个秒钟之内只能有10次请求，但是</description>
+    </item>
+    
+    <item>
+      <title>Java上传文件格式判断</title>
+      <link>https://www.mingaccount.com/2019/03/java-upload-file-verify-format/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/03/java-upload-file-verify-format/</guid>
+      <description>判断用户上传文件的合法性仅仅通过后缀名是完全不够的，谁也不知道后缀名是否被更改，服务器保存一个不知道真实类型的文件有极大的风险。 因此需要后台</description>
+    </item>
+    
+    <item>
+      <title>Maven compile异常 Failed to execute goal maven-resources-plugin:3.2.0:resources  Input length = 1 </title>
+      <link>https://www.mingaccount.com/2019/03/markdown-compile-error/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/03/markdown-compile-error/</guid>
+      <description>原因 编码问题，可能是application.properties和类似的属性文件中有非UTF-8字符（参考spring-boot-issue</description>
+    </item>
+    
+    <item>
+      <title>Scala实现的尾递归</title>
+      <link>https://www.mingaccount.com/2019/02/scala-tail-recursive/</link>
+      <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/02/scala-tail-recursive/</guid>
+      <description>最大公约数： @tailrec def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b) 阶乘: def factorial(n: Int): Int = { @tailrec def iter(x: Int, result: Int): Int = if (x == 0) result else iter(x - 1, result * x) iter(n, 1) } @tailrec注解可以检测</description>
+    </item>
+    
+    <item>
+      <title>Markdown常用语法备忘</title>
+      <link>https://www.mingaccount.com/2019/01/markdown-common-symbol/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/01/markdown-common-symbol/</guid>
+      <description>markdown语法大多数符号需要加一个空格和正式内容区分开才会生效 横线 -&amp;ndash; *** ___ 标题 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标</description>
+    </item>
+    
+    <item>
+      <title>Springboot filter异常全局处理</title>
+      <link>https://www.mingaccount.com/2019/01/spring-boot-filter-exception-global-handler/</link>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/01/spring-boot-filter-exception-global-handler/</guid>
+      <description>背景 controller的全局异常处理可以通过@RestControllerAdvice @ExceptionHandler来处理。但是如果f</description>
+    </item>
+    
+    <item>
+      <title>Docker常用命令</title>
+      <link>https://www.mingaccount.com/2019/01/docker-common-command/</link>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/01/docker-common-command/</guid>
+      <description># 列出所有container docker container ls -a # 通过指定名称查询container docker container ls -f name=mysql # 删除所有停止的container docker container prune # 列出所有dock</description>
+    </item>
+    
+    <item>
+      <title>h2兼容模式</title>
+      <link>https://www.mingaccount.com/2018/12/h2-compatible/</link>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/12/h2-compatible/</guid>
+      <description>h2有多种数据库兼容模式，例如Mysql：jdbc:h2:mem:testdb;MODE=MYSQL。 但是兼容模式并不可靠，还是有部分特有语</description>
+    </item>
+    
+    <item>
+      <title>h2 url参数</title>
+      <link>https://www.mingaccount.com/2018/12/h2-url/</link>
+      <pubDate>Tue, 11 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/12/h2-url/</guid>
+      <description>参考h2 feature</description>
+    </item>
+    
+  </channel>
+</rss>

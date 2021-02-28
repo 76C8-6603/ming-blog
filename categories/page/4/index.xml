@@ -10,6 +10,42 @@
     
     
     <item>
+      <title>Junit5常用注解</title>
+      <link>https://www.mingaccount.com/2018/11/junit5-common-annotation/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/11/junit5-common-annotation/</guid>
+      <description>@BeforeAll @BeforeEach @AfterAll @AfterEach @DisplayName 自定义的展示名称 @IndicativeSentencesGeneration(separator = &amp;quot; -&amp;gt; &amp;ldquo;, generator = DisplayNameGenerator.ReplaceUnderscores.class) 更改生成测试名称规则，根据类名和方法名生成，并可以指定替换策略，比如上面的替换下划线为空格 @Disabled 屏蔽整</description>
+    </item>
+    
+    <item>
+      <title>Maven Plugins</title>
+      <link>https://www.mingaccount.com/2018/11/maven-plugin/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/11/maven-plugin/</guid>
+      <description>参照官方文档，有详细说明和使用实例 Maven plugins</description>
+    </item>
+    
+    <item>
+      <title>Spring boot h2集成数据库进行测试</title>
+      <link>https://www.mingaccount.com/2018/10/spring-boot-h2-test/</link>
+      <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/10/spring-boot-h2-test/</guid>
+      <description>背景 使用AutoConfigure*或者SpringBootTest进行测试的时候，如果不手动设置@AutoConfigureTestDat</description>
+    </item>
+    
+    <item>
+      <title>删除视图失败，提示有其他视图依赖于该视图</title>
+      <link>https://www.mingaccount.com/2018/10/h2-drop-exception/</link>
+      <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/10/h2-drop-exception/</guid>
+      <description>问题背景 DROP VIEW temp_view; 报错信息： Can&#39;t drop temp_view,because *** depend on it 解决方案 DROP VIEW temp_view CASCADE ; 该sql会删除所有依赖的视图</description>
+    </item>
+    
+    <item>
       <title>hive 执行sql时报错out of sequence</title>
       <link>https://www.mingaccount.com/2018/09/hive-out-of-sequence/</link>
       <pubDate>Sun, 23 Sep 2018 00:00:00 +0000</pubDate>
@@ -151,42 +187,6 @@
       
       <guid>https://www.mingaccount.com/2018/07/spring-boot-properties-default-value/</guid>
       <description>背景 默认情况下@Value注解如果没有在properties文件中存在对应值，那么启动项目的时候会直接报错。 解决方案 可以给@Value注解设</description>
-    </item>
-    
-    <item>
-      <title>Windows删除启动盘的所有分区</title>
-      <link>https://www.mingaccount.com/2018/07/windows-delete-disk-partition/</link>
-      <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/07/windows-delete-disk-partition/</guid>
-      <description>win10右键徽标-&amp;gt;Windows Powershell(管理员) dispark list disk 展示所有磁盘 select disk # 确认好所选目标磁盘，#号为id clean 删除选中磁盘</description>
-    </item>
-    
-    <item>
-      <title>[译]lambda表达式对 SAM （单个抽象方法类）type的处理方式</title>
-      <link>https://www.mingaccount.com/2018/06/lambda-sam/</link>
-      <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/06/lambda-sam/</guid>
-      <description>在阅读Venkat Subramaniam的著作《Functional Programming in Java》 之后，方法模式和lambda完美结合让我印象深刻。 这种模式</description>
-    </item>
-    
-    <item>
-      <title>Npm淘宝镜像</title>
-      <link>https://www.mingaccount.com/2018/06/npm-taobao-mirror/</link>
-      <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/06/npm-taobao-mirror/</guid>
-      <description>npm config set registry https://registry.npm.taobao.org</description>
-    </item>
-    
-    <item>
-      <title>Java反射常用API汇总</title>
-      <link>https://www.mingaccount.com/2018/06/java-reflection-common-api/</link>
-      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/06/java-reflection-common-api/</guid>
-      <description>“JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性” 一、类对</description>
     </item>
     
   </channel>

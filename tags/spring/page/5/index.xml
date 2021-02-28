@@ -5,10 +5,46 @@
     <link>https://www.mingaccount.com/tags/spring/</link>
     <description>Recent content in spring on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 13 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windows删除启动盘的所有分区</title>
+      <link>https://www.mingaccount.com/2018/07/windows-delete-disk-partition/</link>
+      <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/07/windows-delete-disk-partition/</guid>
+      <description>win10右键徽标-&amp;gt;Windows Powershell(管理员) dispark list disk 展示所有磁盘 select disk # 确认好所选目标磁盘，#号为id clean 删除选中磁盘</description>
+    </item>
+    
+    <item>
+      <title>[译]lambda表达式对 SAM （单个抽象方法类）type的处理方式</title>
+      <link>https://www.mingaccount.com/2018/06/lambda-sam/</link>
+      <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/06/lambda-sam/</guid>
+      <description>在阅读Venkat Subramaniam的著作《Functional Programming in Java》 之后，方法模式和lambda完美结合让我印象深刻。 这种模式</description>
+    </item>
+    
+    <item>
+      <title>Npm淘宝镜像</title>
+      <link>https://www.mingaccount.com/2018/06/npm-taobao-mirror/</link>
+      <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/06/npm-taobao-mirror/</guid>
+      <description>npm config set registry https://registry.npm.taobao.org</description>
+    </item>
+    
+    <item>
+      <title>Java反射常用API汇总</title>
+      <link>https://www.mingaccount.com/2018/06/java-reflection-common-api/</link>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/06/java-reflection-common-api/</guid>
+      <description>“JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性” 一、类对</description>
+    </item>
     
     <item>
       <title>Mysql安装后root无法登陆(Access denied for user &#39;root&#39;@&#39;localhost&#39;)</title>
@@ -152,42 +188,6 @@
       
       <guid>https://www.mingaccount.com/2018/03/java-avoid-null-pointer/</guid>
       <description>关于如何有效避免空指针，并减少空指针的重复申明。 参考stackoverflow的讨论</description>
-    </item>
-    
-    <item>
-      <title>Request的Body只能读取一次解决方法</title>
-      <link>https://www.mingaccount.com/2018/03/request-body-read-twice/</link>
-      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/03/request-body-read-twice/</guid>
-      <description>一、需要一个类继承HttpServletRequestWrapper，该类继承了ServletRequestWrapper并实现了HttpS</description>
-    </item>
-    
-    <item>
-      <title>Python方法定义</title>
-      <link>https://www.mingaccount.com/2018/01/python-method-define/</link>
-      <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/01/python-method-define/</guid>
-      <description># 一般声明 def printUser(id,name,sex,age,email,phone,group): printUser(1,&#39;ming&#39;,&#39;male&#39;,18,&#39;&#39;,110,&#39;default&#39;) # 默认值 def printUser(id,name,sex,age,email=&#39;&#39;,phone=110,group=&#39;default&#39;): printUser(1,&#39;ming&#39;,&#39;male&#39;,18) # 位置参数和关键字参数 def printUser(id,name,sex,/,age,email,*,phone,group): # 位置参数就是调用的时候直接赋值 # 关键字参数就是调用的时候通过 key=value 的形式赋值 # 斜杠之前</description>
-    </item>
-    
-    <item>
-      <title>Spring boot filter</title>
-      <link>https://www.mingaccount.com/2018/01/spring-boot-filter/</link>
-      <pubDate>Tue, 16 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/01/spring-boot-filter/</guid>
-      <description>全局filter @Component @Order(1) public class FirstFilter extends Filter { @Override public void doFilter( ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException { ... chain.doFilter(request, response); } } 全局过滤直接实现Filter即可，如需设定顺序，使用@Order注解 URL</description>
-    </item>
-    
-    <item>
-      <title>全局获取request</title>
-      <link>https://www.mingaccount.com/2018/01/get-request-global/</link>
-      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/01/get-request-global/</guid>
-      <description>交于Spring管理的类，通过注解调用 @Component public class Test{ @Autowired private HttpServletRequest httpServletRequest; } 通过静态方法调用 HttpServletRequest httpServletRequest = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();</description>
     </item>
     
   </channel>

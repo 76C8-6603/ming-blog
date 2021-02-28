@@ -5,7 +5,7 @@
     <link>https://www.mingaccount.com/tags/spring/</link>
     <description>Recent content in spring on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 13 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,15 @@
       <description>The ASCII letter &amp;ldquo;P&amp;rdquo; is next in upper or lower case. There are then four sections, each consisting of a number and a suffix.
 The sections have suffixes in ASCII of &amp;ldquo;D&amp;rdquo;, &amp;ldquo;H&amp;rdquo;, &amp;ldquo;M&amp;rdquo; and &amp;ldquo;S&amp;rdquo; for days, hours, minutes and seconds, accepted in upper or lower case. The suffixes must occur in order.
 The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence, if any, of an hour, minute or second section.</description>
+    </item>
+    
+    <item>
+      <title>Spring boot 启动时自动初始化sql脚本</title>
+      <link>https://www.mingaccount.com/2020/11/spring-boot-schema/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2020/11/spring-boot-schema/</guid>
+      <description>最简单的方式，是直接在资源目录下新建schema.sql和data.sql schema.sql代表DDL data.sql代表DML 默认情况下</description>
     </item>
     
     <item>
@@ -181,15 +190,6 @@ The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence,
       
       <guid>https://www.mingaccount.com/2019/12/hadoop-shit/</guid>
       <description>切记！！！！！ 没有比官网教程更详细，更靠谱的教程！！！！！ 其他的基本都是官网的翻译，但是官网的教程是实时更新的，要是不注意版本，坑根本就踩不</description>
-    </item>
-    
-    <item>
-      <title>@Autowired注解直接修饰在成员变量时提醒Field injection is not recommended</title>
-      <link>https://www.mingaccount.com/2019/12/field-injection-not-recommended/</link>
-      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/12/field-injection-not-recommended/</guid>
-      <description>Spring依赖注入方式 直接修饰成员变量，也就是提醒不推荐的情况 @RestController public class TestController{ @Autowired private TestService testService; } 修饰构造函数，@Autowired可省略 @RestController public class TestController{ private TestService testService; public TestController(TestService</description>
     </item>
     
   </channel>

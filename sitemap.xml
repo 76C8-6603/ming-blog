@@ -38,6 +38,20 @@
   </url>
   
   <url>
+    <loc>https://www.mingaccount.com/tags/spring/</loc>
+    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/2020/11/spring-boot-schema/</loc>
+    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.mingaccount.com/tags/windows/</loc>
     <lastmod>2020-10-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -255,13 +269,6 @@
   </url>
   
   <url>
-    <loc>https://www.mingaccount.com/tags/spring/</loc>
-    <lastmod>2019-12-13T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.mingaccount.com/2019/12/hadoop-ssh-local-host-no-paw/</loc>
     <lastmod>2019-12-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -306,6 +313,20 @@
   <url>
     <loc>https://www.mingaccount.com/2019/10/auto-increment-id-is-dry/</loc>
     <lastmod>2019-10-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/tags/docker/</loc>
+    <lastmod>2019-09-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/2019/09/docker-registry/</loc>
+    <lastmod>2019-09-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -395,7 +416,21 @@
   </url>
   
   <url>
+    <loc>https://www.mingaccount.com/tags/api/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.mingaccount.com/2019/07/mysql-timestamp-time-zone/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/2019/07/free-translate-api/</loc>
     <lastmod>2019-07-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -572,6 +607,13 @@
   <url>
     <loc>https://www.mingaccount.com/2019/01/spring-boot-filter-exception-global-handler/</loc>
     <lastmod>2019-01-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/2019/01/docker-common-command/</loc>
+    <lastmod>2019-01-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1242,6 +1284,13 @@
   </url>
   
   <url>
+    <loc>https://www.mingaccount.com/2017/05/ca-free/</loc>
+    <lastmod>2017-05-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.mingaccount.com/2017/05/mysql-oracle-case-sensitive/</loc>
     <lastmod>2017-05-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1293,6 +1342,27 @@
   <url>
     <loc>https://www.mingaccount.com/2017/01/spring-boot-external-properties/</loc>
     <lastmod>2017-01-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/2017/01/proxy-pattern/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/2017/01/strategy-pattern/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/2017/01/decorator-pattern/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

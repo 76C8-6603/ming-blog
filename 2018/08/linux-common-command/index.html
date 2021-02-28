@@ -39,7 +39,7 @@
 <meta itemprop="description" content="cd - #查看上一次所在的目录 cat /etc/hosts #文档查看 ls #查看当前目录下所有文件 pwd #查看当前目录的绝对路径 ll #查看目录下文件的详细信息，包括权限属组等信息">
 <meta itemprop="datePublished" content="2018-08-14T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2018-08-14T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1060">
+<meta itemprop="wordCount" content="1090">
 
 
 
@@ -150,11 +150,19 @@
         <ul class="tag-list">
             
             
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/api/" class="tag-list-link">api</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/db2/" class="tag-list-link">db2</a><span
                     class="tag-list-count">2</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/design-pattern/" class="tag-list-link">design-pattern</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/docker/" class="tag-list-link">docker</a><span
                     class="tag-list-count">2</span></li>
             
             
@@ -191,7 +199,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/java/" class="tag-list-link">java</a><span
-                    class="tag-list-count">36</span></li>
+                    class="tag-list-count">37</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/jenkins/" class="tag-list-link">jenkins</a><span
@@ -279,7 +287,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/spring/" class="tag-list-link">spring</a><span
-                    class="tag-list-count">27</span></li>
+                    class="tag-list-count">28</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
@@ -291,7 +299,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/website-build/" class="tag-list-link">website-build</a><span
-                    class="tag-list-count">5</span></li>
+                    class="tag-list-count">6</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/windows/" class="tag-list-link">windows</a><span
@@ -313,6 +321,16 @@
                     </p>
                     <p class="item-date">
                         <time datetime="2021-02-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-02-20</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.mingaccount.com/2020/11/spring-boot-schema/" class="title">Spring boot 启动时自动初始化sql脚本</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-11-13 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-11-13</time>
                     </p>
                 </div>
             </li>
@@ -343,16 +361,6 @@
                     </p>
                     <p class="item-date">
                         <time datetime="2020-08-10 13:37:30 &#43;0800 CST" itemprop="datePublished">2020-08-10</time>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://www.mingaccount.com/2020/07/oracle-extract/" class="title">Oracle extract函数提取时分秒的问题</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2020-07-30 17:42:55 &#43;0800 CST" itemprop="datePublished">2020-07-30</time>
                     </p>
                 </div>
             </li>
@@ -401,7 +409,7 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2018/08/linux-common-command/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1060words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1090words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3minutes </span>
       </div>
     </div>
@@ -433,6 +441,9 @@ cat [目录1]  &gt;&gt; [目录2] #把目录1的文件内容输入到目录2中
 chmod a+x filename #让执行文件能被./filename调用
 
 mv #文件移动或者重命名
+
+#将当前目录下的所有文件移到上层目录，以便删除上级目录
+mv * ../
 
 vi /etc/hosts #HOST修改需重启
 
