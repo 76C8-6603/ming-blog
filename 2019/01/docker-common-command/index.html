@@ -39,7 +39,7 @@
 <meta itemprop="description" content="# 列出所有container docker container ls -a # 通过指定名称查询container docker container ls -f name=mysql # 删除所有停止的container docker container prune # 列出所有dock">
 <meta itemprop="datePublished" content="2019-01-05T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2019-01-05T00:00:00+00:00" />
-<meta itemprop="wordCount" content="363">
+<meta itemprop="wordCount" content="471">
 
 
 
@@ -159,7 +159,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/design-pattern/" class="tag-list-link">design-pattern</a><span
-                    class="tag-list-count">5</span></li>
+                    class="tag-list-count">6</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/docker/" class="tag-list-link">docker</a><span
@@ -409,7 +409,7 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2019/01/docker-common-command/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 363words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 471words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </div>
     </div>
@@ -464,6 +464,15 @@ docker tag [镜像名称] [tag名称]
 
 # push之前需要tag
 docker push [tag名称]
+
+# 实时查看容器日志
+docker logs -f [容器名称]
+
+# 查看registry中的镜像
+curl &lt;仓库地址&gt;/v2/_catalog
+
+# 查询镜像tag(版本）
+curl &lt;仓库地址&gt;/h2/&lt;镜像名&gt;/tags/list
 </code></pre>
 
     </div>

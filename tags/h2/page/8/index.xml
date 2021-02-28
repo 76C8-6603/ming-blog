@@ -119,6 +119,15 @@
     </item>
     
     <item>
+      <title>原型模式</title>
+      <link>https://www.mingaccount.com/2017/01/prototype-pattern/</link>
+      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/01/prototype-pattern/</guid>
+      <description>简介 用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。[DP] 原型模式要表达的意思就是克隆。当多个对象只有个别属性值不一样时，</description>
+    </item>
+    
+    <item>
       <title>策略模式</title>
       <link>https://www.mingaccount.com/2017/01/strategy-pattern/</link>
       <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
@@ -179,15 +188,6 @@
       
       <guid>https://www.mingaccount.com/2016/05/assert-common-method/</guid>
       <description>org.junit.Assert assertEquals 判断对象是否相等，equals方法判断 assertSame 判断对象是否相等，==判断 assertTrue 判断条件是否为真 assertFalse 判断条件是否为假 assertNotNull 判断对象是否不为null assertArrayEquals 判断数</description>
-    </item>
-    
-    <item>
-      <title>Mysql Like语句匹配下划线时无法得到正确数据</title>
-      <link>https://www.mingaccount.com/2016/05/mysql-like-underline/</link>
-      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2016/05/mysql-like-underline/</guid>
-      <description>示例sql SELECT * FROM table WHERE field LIKE &#39;%_%&#39; 目的是获取中间有下划线的field，但是这样的sql无法获取到期望的结果 问题原因 like语句中除了百分号是通配符，</description>
     </item>
     
   </channel>

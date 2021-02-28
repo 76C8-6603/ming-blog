@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Mysql Like语句匹配下划线时无法得到正确数据</title>
+      <link>https://www.mingaccount.com/2016/05/mysql-like-underline/</link>
+      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/05/mysql-like-underline/</guid>
+      <description>示例sql SELECT * FROM table WHERE field LIKE &#39;%_%&#39; 目的是获取中间有下划线的field，但是这样的sql无法获取到期望的结果 问题原因 like语句中除了百分号是通配符，</description>
+    </item>
+    
+    <item>
       <title>所有HTTP头字段(header fields)</title>
       <link>https://www.mingaccount.com/2016/05/http-heads/</link>
       <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
