@@ -14,3 +14,4 @@ OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
 ```shell
 git config --global --unset http.proxy
 ```
+上面的解决方案如果行不通建议重启，多尝试几次push👏
