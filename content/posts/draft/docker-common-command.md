@@ -56,4 +56,13 @@ docker tag [镜像名称] [tag名称]
 
 # push之前需要tag
 docker push [tag名称]
+
+# 实时查看容器日志
+docker logs -f [容器名称]
+
+# 查看registry中的镜像
+curl <仓库地址>/v2/_catalog
+
+# 查询镜像tag(版本）
+curl <仓库地址>/h2/<镜像名>/tags/list
 ```
