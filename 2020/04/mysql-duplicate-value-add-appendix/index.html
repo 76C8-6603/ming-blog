@@ -21,7 +21,7 @@
     
     
     <meta name="description" content="实现方式是自定义触发器 drop trigger if exists trigger_name; delimiter | CREATE TRIGGER trigger_name BEFORE INSERT ON table_name FOR EACH ROW BEGIN declare original_column_name varchar(255); declare column_name_counter int; set original_column_name = new.column_name; set column_name_counter = 1; while exists (select true from pc_volumes where name = new.column_name) do set new.column_name = concat(original_column_name, &#39;-&#39;, column_name_counter); set column_name_counter = column_name_counter &#43; 1; end while; END; |" />
-    <meta name="generator" content="Hugo 0.80.0 with theme pure" />
+    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
     <title>Mysql插入重复值追加后缀 - Ming Blog</title>
     
     

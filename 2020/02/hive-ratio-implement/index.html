@@ -21,7 +21,7 @@
     
     
     <meta name="description" content="select a.date , a.measure , case when b.measure is null or b.measure=0 then null else concat( cast( cast((if(a.measure is null, 0, a.measure)-if(b.measure is null,0,b.measure))*100/b.measure as decimal(10,2)) as string) ,&#39;%&#39;) end as ratio_column from test_table a left join test_table b on ( to_date(from_unixtime(unix_timestamp(concat(a.date,&#39;&#39;),&#39;yyyyMM&#39;),&#39;yyyy-MM-dd HH:mm:ss&#39;)) = add_months(to_date(from_unixtime(unix_timestamp(concat(b.date,&#39;&#39;),&#39;yyyyMM&#39;),&#39;yyyy-MM-dd HH:mm:ss&#39;)),&#43;1) and 1 = 1 ) 提醒： 1. 第一个join条件的&amp;rsqu" />
-    <meta name="generator" content="Hugo 0.80.0 with theme pure" />
+    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
     <title>Hive同环比实现 - Ming Blog</title>
     
     

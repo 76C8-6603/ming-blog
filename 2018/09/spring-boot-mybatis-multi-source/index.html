@@ -21,7 +21,7 @@
     
     
     <meta name="description" content="@Configuration @MapperScan(basePackages = MysqlDatasourceConfig.PACKAGE, sqlSessionFactoryRef = &amp;quot;mysqlSessionFactory&amp;quot;) public class MysqlDatasourceConfig { public static final String PACKAGE = &amp;quot;com.ming.mapper.mysql1&amp;quot;; public static final String MAPPER_LOCATION = &amp;quot;classpath:mapper/mysql1/*.xml&amp;quot;; @Primary @Bean(name = &amp;quot;mysqlDatasource&amp;quot;) @ConfigurationProperties(&amp;quot;spring.datasource.druid.mysql1&amp;quot;) public DataSource mysqlDataSource(){ return DruidDataSourceBuilder.create().build(); } @Bean(name = &amp;quot;mysqlTransactionManager&amp;quot;) @Primary public DataSourceTransactionManager mysqlTransactionManager() { return new DataSourceTransactionManager(mysqlDataSource()); } @Bean(name = &amp;quot;mysqlSessionFactory&amp;quot;) @Primary public SqlSessionFactory mysqlSessionFactory(@Qualifier(&amp;quot;mysqlDatasource&amp;quot;) DataSource dataSource) throws Exception { final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean(); sessionFactory.setDataSource(dataSource); sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MysqlDatasourceConfig.MAPPER_LOCATION)); return" />
-    <meta name="generator" content="Hugo 0.80.0 with theme pure" />
+    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
     <title>SpringBoot Mybatis配置多数据源 - Ming Blog</title>
     
     

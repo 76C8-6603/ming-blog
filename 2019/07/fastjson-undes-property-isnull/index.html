@@ -21,7 +21,7 @@
     
     
     <meta name="description" content="在协作开发时，从接口获取到的json实体部分为空，但是在调试时发现原对象没有任何问题，但是经过解析成为json后，部分属性变为： &amp;ldquo" />
-    <meta name="generator" content="Hugo 0.80.0 with theme pure" />
+    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
     <title>FastJson解析结果部分属性为null的问题 - Ming Blog</title>
     
     
@@ -39,7 +39,7 @@
 <meta itemprop="description" content="在协作开发时，从接口获取到的json实体部分为空，但是在调试时发现原对象没有任何问题，但是经过解析成为json后，部分属性变为： &ldquo">
 <meta itemprop="datePublished" content="2019-07-02T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2019-07-02T00:00:00+00:00" />
-<meta itemprop="wordCount" content="234">
+<meta itemprop="wordCount" content="235">
 
 
 
@@ -409,13 +409,13 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2019/07/fastjson-undes-property-isnull/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 234words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 235words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
       <p>在协作开发时，从接口获取到的json实体部分为空，但是在调试时发现原对象没有任何问题，但是经过解析成为json后，部分属性变为：</p>
-<p>&ldquo;$ref&rdquo;:&quot;$.*******“</p>
+<p>&ldquo;$ref&rdquo;:&ldquo;$.*******“</p>
 <p>改变解析方式为Gson问题解决，经查是fastjson在解析json时，会将json中相同的内容改为引用导致</p>
 <p>这么做的原因是防止实体类中有自引用，解析的时候出现死循环，从而导致栈内存溢出</p>
 <p>可以通过设置取消fastjson的引用，但是可能出现内存溢出风险，需要自行评估</p>

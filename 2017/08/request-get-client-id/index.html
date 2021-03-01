@@ -21,7 +21,7 @@
     
     
     <meta name="description" content="请求头枚举类 public enum HttpHeader { AUTHORIZATION(&amp;quot;Authorization&amp;quot;), AUTHENTICATION_TYPE_BASIC(&amp;quot;Basic&amp;quot;), X_AUTH_TOKEN(&amp;quot;X-AUTH-TOKEN&amp;quot;), WWW_Authenticate(&amp;quot;WWW-Authenticate&amp;quot;), X_FORWARDED_FOR(&amp;quot;X-Forwarded-For&amp;quot;), PROXY_CLIENT_IP(&amp;quot;Proxy-Client-IP&amp;quot;), WL_PROXY_CLIENT_IP(&amp;quot;WL-Proxy-Client-IP&amp;quot;), HTTP_CLIENT_IP(&amp;quot;HTTP_CLIENT_IP&amp;quot;), HTTP_X_FORWARDED_FOR(&amp;quot;HTTP_X_FORWARDED_FOR&amp;quot;); private String key; private HttpHeader(String key) { this.key = key; } public String key() { return this.key; } } 工具类 public class RemoteIpHelper { private static final String UNKNOWN = &amp;quot;unknown&amp;quot;; public static String getRemoteIpFrom(HttpServletRequest request) { String ip = null; int tryCount = 1; while (!isIpFound(ip) &amp;amp;&amp;amp; tryCount" />
-    <meta name="generator" content="Hugo 0.80.0 with theme pure" />
+    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
     <title>通过request获取客户端IP - Ming Blog</title>
     
     

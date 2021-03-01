@@ -53,7 +53,7 @@ The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence,
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.mingaccount.com/2020/09/git-push-exception-ssl-error/</guid>
-      <description>完整异常 OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 解决方案 git config --global --unset http.proxy 上面的解决方案如果行不通建议重启，多尝试几次push👏</description>
+      <description>完整异常 OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 解决方案 如果挂着tz，需要设置一下代理 git config --global http.proxy &amp;quot;127.0.0.1:1080&amp;quot; git config --global https.proxy &amp;quot;127.0.0.1:1080&amp;quot; 关掉tz的话，需要取消代理 git config --global --unset http.proxy git config --global --unset https.proxy 上面的解决方案</description>
     </item>
     
     <item>
@@ -116,7 +116,7 @@ The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence,
       <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.mingaccount.com/2020/05/spark-write-null-to-empty-str/</guid>
-      <description>用spark写csv的时候碰见一个问题，join后未匹配的单元应该是null，但是spark写出来全部都为&amp;quot;&amp;quot; F23338994668,F23338994669,F23338995220 12,1,1 1,7,&amp;quot;&amp;quot; 13,1,1 6,1,1</description>
+      <description>用spark写csv的时候碰见一个问题，join后未匹配的单元应该是null，但是spark写出来全部都为&amp;rdquo;&amp;rdquo; F23338994668,F23338994669,F23338995220 12,1,1 1,7,&amp;quot;&amp;quot;</description>
     </item>
     
     <item>
