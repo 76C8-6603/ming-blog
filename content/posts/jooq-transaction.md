@@ -1,7 +1,7 @@
 ---
     title: "JOOQ事务处理"
     date: 2019-08-22
-    tags: ["jooq"]
+    tags: ["jooq","transactional"]
     
 ---
 
