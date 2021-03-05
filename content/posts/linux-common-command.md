@@ -46,6 +46,12 @@ vi /etc/sysconfig/network-scripts/ifcfg-eth0 #IP修改需重启
 
 cat /etc/os-release #查看当前系统版本信息
 
+# 把dir1完整复制到dir2
+cp -r dir1 dir2
+
+# 把dir1下的所有子文件复制到dir2，不包括目录自身
+cp -r dir1/. dir2
+
 unset #删除对应的环境变量
 
 nslookup [ip/域名] #通过域名查找ip和dns，或者通过ip查找域名

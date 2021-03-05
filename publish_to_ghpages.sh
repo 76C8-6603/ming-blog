@@ -1,4 +1,5 @@
 echo "push all changes"
+git config remote.origin.url https://github.com/76C8-6603/ming-blog.git
 git add .
 git commit -m "New Articles"
 git push --all
