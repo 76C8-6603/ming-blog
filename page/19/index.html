@@ -285,10 +285,6 @@
                     class="tag-list-count">28</span></li>
             
             
-            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/test/" class="tag-list-link">test</a><span
-                    class="tag-list-count">1</span></li>
-            
-            
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
                     class="tag-list-count">1</span></li>
             
@@ -317,16 +313,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget-body">
         <ul class="recent-post-list list-unstyled no-thumbnail">
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://www.mingaccount.com/2021/03/test-article/" class="title">测试文章</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2021-03-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-03-05</time>
-                    </p>
-                </div>
-            </li>
             <li>
                 <div class="item-inner">
                     <p class="item-title">
@@ -367,6 +353,16 @@
                     </p>
                 </div>
             </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.mingaccount.com/2020/10/windows-hyper-v-and-container/" class="title">启用Windows Hyper-v和containers</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-10-19 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-10-19</time>
+                    </p>
+                </div>
+            </li>
         </ul>
     </div>
 </div>
@@ -382,47 +378,6 @@
     
     
     
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2017/09/spring-test/"
-    >Spring集成测试</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2017/09/spring-test/" class="">
-  <time datetime="2017-09-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-09-15</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/spring/"> spring </a>
-    <a class="article-tag-link" href="/tags/unit-test/"> unit-test </a>
-    <a class="article-tag-link" href="/tags/junit4/"> junit4 </a>
-    <a class="article-tag-link" href="/tags/junit5/"> junit5 </a>
-    <a class="article-tag-link" href="/tags/testng/"> testng </a>
-    <a class="article-tag-link" href="/tags/mockmvc/"> mockmvc </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/09/spring-test/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 57855words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 116minutes </span>
-      </p>
-    </article>
     <article
       class="article article-type-page"
       itemscope
@@ -637,6 +592,42 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/08/mysql-table-name-case-insensitive/#comments" class="article-comment-link">Comments</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 167words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2017/08/request-get-client-id/"
+    >通过request获取客户端IP</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        请求头枚举类 public enum HttpHeader { AUTHORIZATION(&quot;Authorization&quot;), AUTHENTICATION_TYPE_BASIC(&quot;Basic&quot;), X_AUTH_TOKEN(&quot;X-AUTH-TOKEN&quot;), WWW_Authenticate(&quot;WWW-Authenticate&quot;), X_FORWARDED_FOR(&quot;X-Forwarded-For&quot;), PROXY_CLIENT_IP(&quot;Proxy-Client-IP&quot;), WL_PROXY_CLIENT_IP(&quot;WL-Proxy-Client-IP&quot;), HTTP_CLIENT_IP(&quot;HTTP_CLIENT_IP&quot;), HTTP_X_FORWARDED_FOR(&quot;HTTP_X_FORWARDED_FOR&quot;); private String key; private HttpHeader(String key) { this.key = key; } public String key() { return this.key; } } 工具类 public class RemoteIpHelper { private static final String UNKNOWN = &quot;unknown&quot;; public static String getRemoteIpFrom(HttpServletRequest request) { String ip = null; int tryCount = 1; while (!isIpFound(ip) &amp;&amp; tryCount
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2017/08/request-get-client-id/" class="">
+  <time datetime="2017-08-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2017-08-05</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/java/"> java </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2017/08/request-get-client-id/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 151words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </p>
     </article></div>

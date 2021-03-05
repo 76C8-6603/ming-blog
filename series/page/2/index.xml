@@ -10,15 +10,6 @@
     
     
     <item>
-      <title>Hive中的to_date和to_char</title>
-      <link>https://www.mingaccount.com/2020/02/hive-todate-tochar/</link>
-      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2020/02/hive-todate-tochar/</guid>
-      <description>hive的日期格式可由String类型保存，只能识别两种格式yyyy-MM-dd和yyyy-MM-dd HH:mm:ss。 只要将日期转为这两种</description>
-    </item>
-    
-    <item>
       <title>像IDEA一样匹配一个WORDS</title>
       <link>https://www.mingaccount.com/2020/01/regex-match-words-like-idea/</link>
       <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
@@ -187,6 +178,15 @@
       
       <guid>https://www.mingaccount.com/2019/08/jenkins-sh-permission-denied/</guid>
       <description>Jenkinsfile pipeline { agent any stages { stage(&#39;Test&#39;) { steps { sh &#39;./mvnw test&#39; } } } post { always { junit &#39;target/surefire-reports/*.xml&#39; } } } 异常 ./mvnw: Permission denied 解决方案 git update-index --chmod +x mvnw</description>
+    </item>
+    
+    <item>
+      <title>[转]Spring中使用@Autowired注解静态实例对象</title>
+      <link>https://www.mingaccount.com/2019/07/spring-autowired-static-object/</link>
+      <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/spring-autowired-static-object/</guid>
+      <description>问题 最近项目小组在重新规划工程的业务缓存，其中涉及到部分代码重构，过程中发现有些工具类中的静态方法需要依赖别的对象实例（该实例已配置在xml</description>
     </item>
     
   </channel>

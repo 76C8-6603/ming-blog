@@ -285,10 +285,6 @@
                     class="tag-list-count">28</span></li>
             
             
-            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/test/" class="tag-list-link">test</a><span
-                    class="tag-list-count">1</span></li>
-            
-            
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
                     class="tag-list-count">1</span></li>
             
@@ -317,16 +313,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget-body">
         <ul class="recent-post-list list-unstyled no-thumbnail">
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://www.mingaccount.com/2021/03/test-article/" class="title">测试文章</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2021-03-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-03-05</time>
-                    </p>
-                </div>
-            </li>
             <li>
                 <div class="item-inner">
                     <p class="item-title">
@@ -367,6 +353,16 @@
                     </p>
                 </div>
             </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.mingaccount.com/2020/10/windows-hyper-v-and-container/" class="title">启用Windows Hyper-v和containers</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-10-19 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-10-19</time>
+                    </p>
+                </div>
+            </li>
         </ul>
     </div>
 </div>
@@ -382,42 +378,6 @@
     
     
     
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2019/11/jenkins-docker-command-permission-denied/"
-    >Docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        详细异常 Docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock 解决方案 sudo usermod -a -G docker jenkins 原因是jenkins用户还没有被加到docker组里面 参考stackoverflo
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2019/11/jenkins-docker-command-permission-denied/" class="">
-  <time datetime="2019-11-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-11-05</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/jenkins/"> jenkins </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2019/11/jenkins-docker-command-permission-denied/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 71words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
-      </p>
-    </article>
     <article
       class="article article-type-page"
       itemscope
@@ -631,6 +591,42 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2019/09/java-stream-bom/#comments" class="article-comment-link">Comments</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 218words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2019/09/spark-session-cant-read-local-file/"
+    >SparkSession.read().csv()无法定位本地文件的问题</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        原因是spark有两个文件头 [file://]代表本地 [hdfs://]代表hdfs路径 如果路径没有文件头，spark会将该路径默认添加上&
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2019/09/spark-session-cant-read-local-file/" class="">
+  <time datetime="2019-09-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-09-18</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/spark/"> spark </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2019/09/spark-session-cant-read-local-file/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 156words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </p>
     </article></div>

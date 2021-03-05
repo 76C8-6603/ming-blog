@@ -285,10 +285,6 @@
                     class="tag-list-count">28</span></li>
             
             
-            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/test/" class="tag-list-link">test</a><span
-                    class="tag-list-count">1</span></li>
-            
-            
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
                     class="tag-list-count">1</span></li>
             
@@ -317,16 +313,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget-body">
         <ul class="recent-post-list list-unstyled no-thumbnail">
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://www.mingaccount.com/2021/03/test-article/" class="title">测试文章</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2021-03-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-03-05</time>
-                    </p>
-                </div>
-            </li>
             <li>
                 <div class="item-inner">
                     <p class="item-title">
@@ -367,6 +353,16 @@
                     </p>
                 </div>
             </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.mingaccount.com/2020/10/windows-hyper-v-and-container/" class="title">启用Windows Hyper-v和containers</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-10-19 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-10-19</time>
+                    </p>
+                </div>
+            </li>
         </ul>
     </div>
 </div>
@@ -382,42 +378,6 @@
     
     
     
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2019/07/free-translate-api/"
-    >免费API收集</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        Google翻译 GET http://translate.google.cn/translate_a/single?client=gtx&amp;dt=t&amp;dj=1&amp;ie=UTF-8&amp;sl=auto&amp;tl=zh_CN&amp;q=hence 返回示例 { &quot;sentences&quot;: [ { &quot;trans&quot;: &quot;因此&quot;, &quot;orig&quot;: &quot;hence&quot;, &quot;backend&quot;: 10 } ], &quot;src&quot;: &quot;en&quot;, &quot;confidence&quot;: 1.0, &quot;spell&quot;: {}, &quot;ld_result&quot;: { &quot;srclangs&quot;: [ &quot;en&quot; ], &quot;srclangs_confidences&quot;: [ 1.0 ], &quot;extended_srclangs&quot;: [ &quot;en&quot; ] } } 微软翻译 GET http://api.microsofttranslator.com/v2/Http.svc/Translate?appId=AFC76A66CF4F434ED080D245C30CF1E71C22959C&amp;from=&amp;to=zh-Hans&amp;text=hence 返回
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2019/07/free-translate-api/" class="">
-  <time datetime="2019-07-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-07-23</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/api/"> api </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2019/07/free-translate-api/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 205words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
-      </p>
-    </article>
     <article
       class="article article-type-page"
       itemscope
@@ -634,6 +594,42 @@
         <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2019/07/lombok/#comments" class="article-comment-link">Comments</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 5570words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 12minutes </span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2019/07/maven-jar-clash/"
+    >Maven jar包冲突导致NoClassDefFoundError</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        问题背景 项目的两个依赖，包含了同一个路径，然而因为项目原因还不能删除其中任何一个 代码在本地和线上都能正常通过编译 但是一执行到对应代码就会抛出
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2019/07/maven-jar-clash/" class="">
+  <time datetime="2019-07-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-07-06</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/maven/"> maven </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2019/07/maven-jar-clash/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 193words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </p>
     </article></div>
   

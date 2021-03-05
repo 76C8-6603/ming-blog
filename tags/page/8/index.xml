@@ -5,19 +5,10 @@
     <link>https://www.mingaccount.com/tags/</link>
     <description>Recent content in Tags on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>阻止Gson将long类型的字段转为科学计数法</title>
-      <link>https://www.mingaccount.com/2017/06/gson-scientific-notation/</link>
-      <pubDate>Thu, 08 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/06/gson-scientific-notation/</guid>
-      <description>GsonBuilder gsonBuilder = new GsonBuilder(); gsonBuilder.setLongSerializationPolicy( LongSerializationPolicy.STRING ); Gson gson = gsonBuilder.create();</description>
-    </item>
     
     <item>
       <title>Spring切面编程</title>
@@ -188,6 +179,15 @@
       
       <guid>https://www.mingaccount.com/2017/01/decorator-pattern/</guid>
       <description>简介 动态地给一个对象添加一些额外的职责，就增加功能来说，装饰模式比生成子类更加灵活。 装饰模式常用在为主类添加一些特有的功能的时候。装饰模式可</description>
+    </item>
+    
+    <item>
+      <title>java7特性try-with-resources</title>
+      <link>https://www.mingaccount.com/2016/08/try-with-resources/</link>
+      <pubDate>Tue, 09 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/08/try-with-resources/</guid>
+      <description>概览 try-with-resources表达式可以自动关闭申明在表达式中的资源，但前提是这些资源类要实现java.lang.AutoClos</description>
     </item>
     
   </channel>

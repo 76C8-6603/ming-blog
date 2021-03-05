@@ -5,19 +5,10 @@
     <link>https://www.mingaccount.com/posts/</link>
     <description>Recent content in Posts on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Markdown常用语法备忘</title>
-      <link>https://www.mingaccount.com/2019/01/markdown-common-symbol/</link>
-      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/01/markdown-common-symbol/</guid>
-      <description>markdown语法大多数符号需要加一个空格和正式内容区分开才会生效 横线 -&amp;ndash; *** ___ 标题 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标</description>
-    </item>
     
     <item>
       <title>Springboot filter异常全局处理</title>
@@ -188,6 +179,15 @@
       
       <guid>https://www.mingaccount.com/2018/08/vim-common-command/</guid>
       <description>vi /etc/hosts i 修改模式 esc 退出修改 :q 正常退出(文件没有修改 :q! 不保存退出 :wq 保存退出 G 跳到末尾行 dd 删除当前行 gg 跳到第一行第一个字符 $ 跳到当前行的最后一个字</description>
+    </item>
+    
+    <item>
+      <title>SpringBoot定时任务</title>
+      <link>https://www.mingaccount.com/2018/08/spring-boot-schedule/</link>
+      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/08/spring-boot-schedule/</guid>
+      <description>开启定时任务 @Configuration @EnableScheduling @ComponentScan(basePackages=&amp;quot;com.myco.tasks&amp;quot;) public class AppConfig { } 如果需要对定时任务的生命周期有其他的操作，可以实现接口SchedulingConfigurer @Configuration @EnableScheduling public class AppConfig implements SchedulingConfigurer { @Override</description>
     </item>
     
   </channel>
