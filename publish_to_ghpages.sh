@@ -1,15 +1,9 @@
-echo "push all changes"
-git config remote.origin.url https://github.com/76C8-6603/ming-blog.git
-git add .
-git commit -m "New Articles"
-git config --global user.name "76c8-6603"
-git config --global user.email "tianshiming5@outlook.com"
-git push --all https://github.com/76C8-6603/ming-blog.git
+
 if [ "`git status -s`" ]
 then
 	    echo "The working directory is dirty. Please commit any pending changes."
 	        exit 1;
-	fi
+fi
 
 	echo "Deleting old publication"
 	rm -rf public
@@ -29,5 +23,4 @@ then
 	echo "Updating gh-pages branch"
 	cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)"
 
-	echo "Pushing to github"
-	git push --all https://github.com/76C8-6603/ming-blog.git
+
