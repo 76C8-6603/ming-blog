@@ -5,10 +5,19 @@
     <link>https://www.mingaccount.com/tags/jenkins/</link>
     <description>Recent content in jenkins on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 11 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Nov 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[转]字符编码笔记：ASCII、Unicode、UTF-8 和 Base64</title>
+      <link>https://www.mingaccount.com/2018/03/char-encode/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/03/char-encode/</guid>
+      <description>1. ASCII码 我们知道，在计算机内部，所有的信息最终都表示为一个二进制的字符串。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就</description>
+    </item>
     
     <item>
       <title>Java合理避免空指针</title>
@@ -179,15 +188,6 @@
       
       <guid>https://www.mingaccount.com/2017/09/map-and-flatmap/</guid>
       <description>资源类 User @Data public User{ private String name; private List&amp;lt;String&amp;gt; tags; } map&amp;amp;flatmap map将每个参数对象映射为返回类型，一个参数对应一个返回值 List&amp;lt;User&amp;gt; userList = new ArrayList&amp;lt;User&amp;gt;(); //...省略赋值 List&amp;lt;String&amp;gt; userNames = userList.stream().map(user -&amp;gt; user.getName()).collect(Collectors.toList()); flatMa</description>
-    </item>
-    
-    <item>
-      <title>常用正则表达式</title>
-      <link>https://www.mingaccount.com/2017/09/common-regexp/</link>
-      <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/09/common-regexp/</guid>
-      <description>纯数字 /^\d+$/ 小数 /^\d*\.\d+$/ 整数或者小数 /^\d*(\.\d+)?$/ 正负整数或者小数 /^-?\d*(\.\d+)?$/ 整数小数或者分数 /[-]?[0-9]+[,.]?[0-9]*([\/][0-9]+[,.]?[0-9]*)*/ 数字字母 /^[a-zA-Z0-9]*$/ 单词 /^[a-zA-Z \-]{1,50}$/ MM/DD/YYYY 1900-2099 兼容的分隔符：空格 - / . /^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$/ YYYY/MM/DD 1900-2099 兼容的分隔符：空格 -</description>
     </item>
     
   </channel>

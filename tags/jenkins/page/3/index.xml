@@ -5,10 +5,19 @@
     <link>https://www.mingaccount.com/tags/jenkins/</link>
     <description>Recent content in jenkins on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 11 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Nov 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java加密类Cipher的使用</title>
+      <link>https://www.mingaccount.com/2019/07/java-cipher/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/java-cipher/</guid>
+      <description>public class EncryptUtils { private static final String SECRET_KEY_1 = &amp;quot;YIORGA4dBYp6y7u8&amp;quot;; private static final String SECRET_KEY_2 = &amp;quot;C6B8r5y7u7Uh37Sy&amp;quot;; private IvParameterSpec ivParameterSpec; private SecretKeySpec secretKeySpec; private Cipher cipher; public EncryptUtils() throws UnsupportedEncodingException, NoSuchPaddingException, NoSuchAlgorithmException { ivParameterSpec = new IvParameterSpec(SECRET_KEY_1.getBytes(&amp;quot;UTF-8&amp;quot;)); secretKeySpec = new SecretKeySpec(SECRET_KEY_2.getBytes(&amp;quot;UTF-8&amp;quot;), &amp;quot;AES&amp;quot;); cipher = Cipher.getInstance(&amp;quot;AES/CBC/PKCS5PADDING&amp;quot;); } /** * Encrypt the string with this internal algorithm. * * @param toBeEncrypt string object to be encrypt. * @return returns encrypted string.</description>
+    </item>
     
     <item>
       <title>spring boot configuration annotation processor not found in classpath</title>
@@ -88,7 +97,7 @@
       <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.mingaccount.com/2019/06/maven-how-to-import-local-jar/</guid>
-      <description>pom设置 &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-install-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.5.1&amp;lt;/version&amp;gt; &amp;lt;executions&amp;gt; &amp;lt;execution&amp;gt; &amp;lt;id&amp;gt;install-jar-lib&amp;lt;/id&amp;gt; &amp;lt;goals&amp;gt; &amp;lt;goal&amp;gt;install-file&amp;lt;/goal&amp;gt; &amp;lt;/goals&amp;gt; &amp;lt;!--在mvn package的时候将jar包追加到本地仓库，可修改为validate，以线上容器编译</description>
+      <description>方法一：直接通过命令导入本地包 mvn install:install-file -Dfile=your-artifact-1.0.jar \ [-DpomFile=your-pom.xml] \ [-Dsources=src.jar] \ [-Djavadoc=apidocs.jar] \ [-DgroupId=org.some.group] \ [-DartifactId=your-artifact] \ [-Dversion=1.0] \ [-Dpackaging=jar] \ [-Dclassifier=sources] \ [-DgeneratePom=true] \ [-DcreateChecksum=true] 方法二：通过plugin导入本地包 pom设置 &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-install-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.5.1&amp;lt;/version&amp;gt; &amp;lt;executions&amp;gt; &amp;lt;execution&amp;gt; &amp;lt;id&amp;gt;install-jar-lib&amp;lt;/id&amp;gt; &amp;lt;goals&amp;gt; &amp;lt;goal&amp;gt;install-file&amp;lt;/goal&amp;gt;</description>
     </item>
     
     <item>
@@ -179,15 +188,6 @@
       
       <guid>https://www.mingaccount.com/2019/01/docker-common-command/</guid>
       <description># 列出所有container docker container ls -a # 通过指定名称查询container docker container ls -f name=mysql # 删除所有停止的container docker container prune # 列出所有dock</description>
-    </item>
-    
-    <item>
-      <title>h2兼容模式</title>
-      <link>https://www.mingaccount.com/2018/12/h2-compatible/</link>
-      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/12/h2-compatible/</guid>
-      <description>h2有多种数据库兼容模式，例如Mysql：jdbc:h2:mem:testdb;MODE=MYSQL。 但是兼容模式并不可靠，还是有部分特有语</description>
     </item>
     
   </channel>

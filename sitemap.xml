@@ -311,6 +311,20 @@
   </url>
   
   <url>
+    <loc>https://www.mingaccount.com/2019/11/jenkins-docker-command-permission-denied/</loc>
+    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/tags/jenkins/</loc>
+    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.mingaccount.com/2019/10/mysql-table-design/</loc>
     <lastmod>2019-10-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -397,13 +411,6 @@
   <url>
     <loc>https://www.mingaccount.com/2019/08/mysql-dead-cycle/</loc>
     <lastmod>2019-08-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.mingaccount.com/tags/jenkins/</loc>
-    <lastmod>2019-08-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1090,6 +1097,20 @@
   <url>
     <loc>https://www.mingaccount.com/2017/09/map-and-flatmap/</loc>
     <lastmod>2017-09-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/tags/transactional/</loc>
+    <lastmod>2017-09-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/2017/09/transactional/</loc>
+    <lastmod>2017-09-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -10,6 +10,24 @@
     
     
     <item>
+      <title>JavaString 特殊符号处理工具类</title>
+      <link>https://www.mingaccount.com/2017/05/java-string-special-symbol-handler/</link>
+      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/05/java-string-special-symbol-handler/</guid>
+      <description>Java, Java Script, HTML, JSON, CSV and XML org.apache.commons.lang3.StringEscapeUtils //使用示例 StringEscapeUtils.escapeCsv(&amp;quot;&amp;quot;); SqtringEscapeUtils.escapeXml(&amp;quot;&amp;quot;); api文档 Regexp 正则表达式转义所有特殊符号 其他 com.google.common.escape.Escapers Escaper build = Escapers.builder().addEscape(&#39;$&#39;, &amp;quot; &amp;quot;).build(); String str = build.escape(&amp;quot;$$$$&amp;quot;); api文档</description>
+    </item>
+    
+    <item>
+      <title>正则表达式转义所有特殊符号</title>
+      <link>https://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</link>
+      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</guid>
+      <description>正则表达式的特殊符号包括 \ $ ( ) * + . [ ] ? ^ { } | - 实现代码(java) public class RegexUtils { private static final String[] SPECIAL_SYMBOLS = new String[]{&amp;quot;\\&amp;quot;, &amp;quot;$&amp;quot;, &amp;quot;(&amp;quot;, &amp;quot;)&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;[&amp;quot;, &amp;quot;]&amp;quot;, &amp;quot;?&amp;quot;, &amp;quot;^&amp;quot;, &amp;quot;{&amp;quot;, &amp;quot;}&amp;quot;, &amp;quot;|&amp;quot;, &amp;quot;-&amp;quot;}; /** * 转义目标正</description>
+    </item>
+    
+    <item>
       <title>Java方法的默认参数</title>
       <link>https://www.mingaccount.com/2017/05/java-method-first-default-param/</link>
       <pubDate>Sat, 20 May 2017 00:00:00 +0000</pubDate>
@@ -169,24 +187,6 @@
       
       <guid>https://www.mingaccount.com/2016/06/pojo-builder/</guid>
       <description>现在可以通过lombok注解@Builder一步实现 1.调用效果 public class Test{ public static void main(String[] args){ Student student = Student.builder().name(&amp;quo</description>
-    </item>
-    
-    <item>
-      <title>Mybatis insert完成后获取自增主键</title>
-      <link>https://www.mingaccount.com/2016/05/mybatis-get-auto-increment-id/</link>
-      <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2016/05/mybatis-get-auto-increment-id/</guid>
-      <description>示例代码 public void insert(User user){ mapper.insert(user); String id = user.getId(); } id会赋值到传进来的user对象中 xml &amp;lt;insert keyProperty=&amp;quot;id&amp;quot; keyColumn=&amp;quot;id&amp;quot; useGeneratedKeys=&amp;quot;true&amp;quot;&amp;gt; INSERT INTO ... &amp;lt;/insert&amp;gt; keyProperty代表实体类中主键对应的成员变量名称 ke</description>
-    </item>
-    
-    <item>
-      <title>Assert常用方法</title>
-      <link>https://www.mingaccount.com/2016/05/assert-common-method/</link>
-      <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2016/05/assert-common-method/</guid>
-      <description>org.junit.Assert assertEquals 判断对象是否相等，equals方法判断 assertSame 判断对象是否相等，==判断 assertTrue 判断条件是否为真 assertFalse 判断条件是否为假 assertNotNull 判断对象是否不为null assertArrayEquals 判断数</description>
     </item>
     
   </channel>

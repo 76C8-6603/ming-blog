@@ -21,30 +21,26 @@
     
     
     <meta name="description" content="maven package生成的jar包默认是没有项目依赖的 需要导出的jar包包含项目所有的依赖，需要配置pom： &amp;lt;build&amp;gt; &amp;lt;finalName&amp;gt;yourApp&amp;lt;/finalName&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-shade-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;shadedArtifactAttached&amp;gt;true&amp;lt;/shadedArtifactAttached&amp;gt; &amp;lt;shadedClassifierName&amp;gt;jar-with-dependencies&amp;lt;/shadedClassifierName&amp;gt; &amp;lt;!-- Any name that makes sense --&amp;gt; &amp;lt;outputDirectory&amp;gt;../output/jar-with-dependencies&amp;lt;/outputDirectory&amp;gt; &amp;lt;/configuration&amp;gt;" />
-    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
+    <meta name="generator" content="Hugo 0.81.0 with theme pure" />
     <title>Maven package完整依赖jar包 - Ming Blog</title>
     
     
-    <link rel="stylesheet" href="https://www.mingaccount.com/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
+    <link rel="stylesheet" href="https://www.mingaccount.com/css/style.min.3b3758b179de48a6a56cf033b9c294d08a134c2c123c47cd9b6e8eb3b7e8d2d2.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
     <meta property="og:title" content="Maven package完整依赖jar包" />
 <meta property="og:description" content="maven package生成的jar包默认是没有项目依赖的 需要导出的jar包包含项目所有的依赖，需要配置pom： &lt;build&gt; &lt;finalName&gt;yourApp&lt;/finalName&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt; &lt;configuration&gt; &lt;shadedArtifactAttached&gt;true&lt;/shadedArtifactAttached&gt; &lt;shadedClassifierName&gt;jar-with-dependencies&lt;/shadedClassifierName&gt; &lt;!-- Any name that makes sense --&gt; &lt;outputDirectory&gt;../output/jar-with-dependencies&lt;/outputDirectory&gt; &lt;/configuration&gt;" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.mingaccount.com/2018/07/maven-package-complete-dependency/" />
-<meta property="article:published_time" content="2018-07-15T00:00:00+00:00" />
-<meta property="article:modified_time" content="2018-07-15T00:00:00+00:00" />
+<meta property="og:url" content="https://www.mingaccount.com/2018/07/maven-package-complete-dependency/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-07-15T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2018-07-15T00:00:00&#43;00:00" />
+
 <meta itemprop="name" content="Maven package完整依赖jar包">
-<meta itemprop="description" content="maven package生成的jar包默认是没有项目依赖的 需要导出的jar包包含项目所有的依赖，需要配置pom： &lt;build&gt; &lt;finalName&gt;yourApp&lt;/finalName&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt; &lt;configuration&gt; &lt;shadedArtifactAttached&gt;true&lt;/shadedArtifactAttached&gt; &lt;shadedClassifierName&gt;jar-with-dependencies&lt;/shadedClassifierName&gt; &lt;!-- Any name that makes sense --&gt; &lt;outputDirectory&gt;../output/jar-with-dependencies&lt;/outputDirectory&gt; &lt;/configuration&gt;">
-<meta itemprop="datePublished" content="2018-07-15T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2018-07-15T00:00:00+00:00" />
+<meta itemprop="description" content="maven package生成的jar包默认是没有项目依赖的 需要导出的jar包包含项目所有的依赖，需要配置pom： &lt;build&gt; &lt;finalName&gt;yourApp&lt;/finalName&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt; &lt;configuration&gt; &lt;shadedArtifactAttached&gt;true&lt;/shadedArtifactAttached&gt; &lt;shadedClassifierName&gt;jar-with-dependencies&lt;/shadedClassifierName&gt; &lt;!-- Any name that makes sense --&gt; &lt;outputDirectory&gt;../output/jar-with-dependencies&lt;/outputDirectory&gt; &lt;/configuration&gt;"><meta itemprop="datePublished" content="2018-07-15T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-07-15T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="148">
-
-
-
-<meta itemprop="keywords" content="maven," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="maven," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Maven package完整依赖jar包"/>
 <meta name="twitter:description" content="maven package生成的jar包默认是没有项目依赖的 需要导出的jar包包含项目所有的依赖，需要配置pom： &lt;build&gt; &lt;finalName&gt;yourApp&lt;/finalName&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt; &lt;configuration&gt; &lt;shadedArtifactAttached&gt;true&lt;/shadedArtifactAttached&gt; &lt;shadedClassifierName&gt;jar-with-dependencies&lt;/shadedClassifierName&gt; &lt;!-- Any name that makes sense --&gt; &lt;outputDirectory&gt;../output/jar-with-dependencies&lt;/outputDirectory&gt; &lt;/configuration&gt;"/>
 
@@ -203,7 +199,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/jenkins/" class="tag-list-link">jenkins</a><span
-                    class="tag-list-count">1</span></li>
+                    class="tag-list-count">2</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/jooq/" class="tag-list-link">jooq</a><span
@@ -291,6 +287,10 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/transactional/" class="tag-list-link">transactional</a><span
                     class="tag-list-count">1</span></li>
             
             
@@ -532,8 +532,8 @@
     })
     hljs.initHighlightingOnLoad();
 </script>
-<script src="https://www.mingaccount.com/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
-<script src="https://www.mingaccount.com/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+<script src="https://www.mingaccount.com/js/application.min.a94ab19cb63a95c8d7fbd7b85cab3ddeea8c369bdf75b9cab6708787ead123af.js"></script>
+<script src="https://www.mingaccount.com/js/plugin.min.19c5bcb2fb0789ab4f2b7834e5ceb5e92635645605bab902c1024b25f1502364.js"></script>
 
 <script>
     (function (window) {
@@ -551,7 +551,7 @@
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
-<script type="text/javascript" src="https://www.mingaccount.com/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script type="text/javascript" src="https://www.mingaccount.com/js/insight.min.4a2d52de4bfff73e0c688404fe3d17c9a3ae12d9888e1e1ac9c690e4890de2ded50fe55f2b819c2ba55435a76f396f3ea6805765f0b0af5635cdf74ea459eab0.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 <script>
     tocbot.init({

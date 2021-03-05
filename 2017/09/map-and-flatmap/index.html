@@ -21,30 +21,26 @@
     
     
     <meta name="description" content="资源类 User @Data public User{ private String name; private List&amp;lt;String&amp;gt; tags; } map&amp;amp;flatmap map将每个参数对象映射为返回类型，一个参数对应一个返回值 List&amp;lt;User&amp;gt; userList = new ArrayList&amp;lt;User&amp;gt;(); //...省略赋值 List&amp;lt;String&amp;gt; userNames = userList.stream().map(user -&amp;gt; user.getName()).collect(Collectors.toList()); flatMa" />
-    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
+    <meta name="generator" content="Hugo 0.81.0 with theme pure" />
     <title>java lambda表达式map和flatMap - Ming Blog</title>
     
     
-    <link rel="stylesheet" href="https://www.mingaccount.com/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
+    <link rel="stylesheet" href="https://www.mingaccount.com/css/style.min.3b3758b179de48a6a56cf033b9c294d08a134c2c123c47cd9b6e8eb3b7e8d2d2.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
     <meta property="og:title" content="java lambda表达式map和flatMap" />
 <meta property="og:description" content="资源类 User @Data public User{ private String name; private List&lt;String&gt; tags; } map&amp;flatmap map将每个参数对象映射为返回类型，一个参数对应一个返回值 List&lt;User&gt; userList = new ArrayList&lt;User&gt;(); //...省略赋值 List&lt;String&gt; userNames = userList.stream().map(user -&gt; user.getName()).collect(Collectors.toList()); flatMa" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.mingaccount.com/2017/09/map-and-flatmap/" />
-<meta property="article:published_time" content="2017-09-23T00:00:00+00:00" />
-<meta property="article:modified_time" content="2017-09-23T00:00:00+00:00" />
+<meta property="og:url" content="https://www.mingaccount.com/2017/09/map-and-flatmap/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-09-23T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2017-09-23T00:00:00&#43;00:00" />
+
 <meta itemprop="name" content="java lambda表达式map和flatMap">
-<meta itemprop="description" content="资源类 User @Data public User{ private String name; private List&lt;String&gt; tags; } map&amp;flatmap map将每个参数对象映射为返回类型，一个参数对应一个返回值 List&lt;User&gt; userList = new ArrayList&lt;User&gt;(); //...省略赋值 List&lt;String&gt; userNames = userList.stream().map(user -&gt; user.getName()).collect(Collectors.toList()); flatMa">
-<meta itemprop="datePublished" content="2017-09-23T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2017-09-23T00:00:00+00:00" />
+<meta itemprop="description" content="资源类 User @Data public User{ private String name; private List&lt;String&gt; tags; } map&amp;flatmap map将每个参数对象映射为返回类型，一个参数对应一个返回值 List&lt;User&gt; userList = new ArrayList&lt;User&gt;(); //...省略赋值 List&lt;String&gt; userNames = userList.stream().map(user -&gt; user.getName()).collect(Collectors.toList()); flatMa"><meta itemprop="datePublished" content="2017-09-23T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-09-23T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="175">
-
-
-
-<meta itemprop="keywords" content="java," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="java," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="java lambda表达式map和flatMap"/>
 <meta name="twitter:description" content="资源类 User @Data public User{ private String name; private List&lt;String&gt; tags; } map&amp;flatmap map将每个参数对象映射为返回类型，一个参数对应一个返回值 List&lt;User&gt; userList = new ArrayList&lt;User&gt;(); //...省略赋值 List&lt;String&gt; userNames = userList.stream().map(user -&gt; user.getName()).collect(Collectors.toList()); flatMa"/>
 
@@ -203,7 +199,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/jenkins/" class="tag-list-link">jenkins</a><span
-                    class="tag-list-count">1</span></li>
+                    class="tag-list-count">2</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/jooq/" class="tag-list-link">jooq</a><span
@@ -291,6 +287,10 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/transactional/" class="tag-list-link">transactional</a><span
                     class="tag-list-count">1</span></li>
             
             
@@ -471,7 +471,7 @@ Set&lt;String&gt; allUserTags = userList.stream().flatMap(user -&gt; user.getTag
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="https://www.mingaccount.com/2017/09/common-regexp/" title="常用正则表达式"><i
+                <a href="https://www.mingaccount.com/2017/09/transactional/" title="事务简介"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
             </li>
@@ -534,8 +534,8 @@ Set&lt;String&gt; allUserTags = userList.stream().flatMap(user -&gt; user.getTag
     })
     hljs.initHighlightingOnLoad();
 </script>
-<script src="https://www.mingaccount.com/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
-<script src="https://www.mingaccount.com/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+<script src="https://www.mingaccount.com/js/application.min.a94ab19cb63a95c8d7fbd7b85cab3ddeea8c369bdf75b9cab6708787ead123af.js"></script>
+<script src="https://www.mingaccount.com/js/plugin.min.19c5bcb2fb0789ab4f2b7834e5ceb5e92635645605bab902c1024b25f1502364.js"></script>
 
 <script>
     (function (window) {
@@ -553,7 +553,7 @@ Set&lt;String&gt; allUserTags = userList.stream().flatMap(user -&gt; user.getTag
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
-<script type="text/javascript" src="https://www.mingaccount.com/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script type="text/javascript" src="https://www.mingaccount.com/js/insight.min.4a2d52de4bfff73e0c688404fe3d17c9a3ae12d9888e1e1ac9c690e4890de2ded50fe55f2b819c2ba55435a76f396f3ea6805765f0b0af5635cdf74ea459eab0.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 <script>
     tocbot.init({

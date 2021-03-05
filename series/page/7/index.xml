@@ -10,6 +10,24 @@
     
     
     <item>
+      <title>事务简介</title>
+      <link>https://www.mingaccount.com/2017/09/transactional/</link>
+      <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/09/transactional/</guid>
+      <description>事务的四大特性 ACID: Atomicity：原子性，事务要么全部完成，要么回滚到执行前的状态； Consistency：一致性，写入数据满足约束条件。</description>
+    </item>
+    
+    <item>
+      <title>常用正则表达式</title>
+      <link>https://www.mingaccount.com/2017/09/common-regexp/</link>
+      <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/09/common-regexp/</guid>
+      <description>纯数字 /^\d+$/ 小数 /^\d*\.\d+$/ 整数或者小数 /^\d*(\.\d+)?$/ 正负整数或者小数 /^-?\d*(\.\d+)?$/ 整数小数或者分数 /[-]?[0-9]+[,.]?[0-9]*([\/][0-9]+[,.]?[0-9]*)*/ 数字字母 /^[a-zA-Z0-9]*$/ 单词 /^[a-zA-Z \-]{1,50}$/ MM/DD/YYYY 1900-2099 兼容的分隔符：空格 - / . /^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$/ YYYY/MM/DD 1900-2099 兼容的分隔符：空格 -</description>
+    </item>
+    
+    <item>
       <title>Mysql 创建视图报错：View&#39;s SELECT contains a subquery in the FROM clause</title>
       <link>https://www.mingaccount.com/2017/09/mysql-create-view-exception/</link>
       <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
@@ -169,24 +187,6 @@
       
       <guid>https://www.mingaccount.com/2017/06/method-get-all-argnames/</guid>
       <description>LocalVariableTableParameterNameDiscoverer discoverer = new LocalVariableTableParameterNameDiscoverer(); discoverer.getParameterNames(method); 详情参考API文档</description>
-    </item>
-    
-    <item>
-      <title>JavaString 特殊符号处理工具类</title>
-      <link>https://www.mingaccount.com/2017/05/java-string-special-symbol-handler/</link>
-      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/05/java-string-special-symbol-handler/</guid>
-      <description>Java, Java Script, HTML, JSON, CSV and XML org.apache.commons.lang3.StringEscapeUtils //使用示例 StringEscapeUtils.escapeCsv(&amp;quot;&amp;quot;); SqtringEscapeUtils.escapeXml(&amp;quot;&amp;quot;); api文档 Regexp 正则表达式转义所有特殊符号 其他 com.google.common.escape.Escapers Escaper build = Escapers.builder().addEscape(&#39;$&#39;, &amp;quot; &amp;quot;).build(); String str = build.escape(&amp;quot;$$$$&amp;quot;); api文档</description>
-    </item>
-    
-    <item>
-      <title>正则表达式转义所有特殊符号</title>
-      <link>https://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</link>
-      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/05/regex-escape-all-special-symbol/</guid>
-      <description>正则表达式的特殊符号包括 \ $ ( ) * + . [ ] ? ^ { } | - 实现代码(java) public class RegexUtils { private static final String[] SPECIAL_SYMBOLS = new String[]{&amp;quot;\\&amp;quot;, &amp;quot;$&amp;quot;, &amp;quot;(&amp;quot;, &amp;quot;)&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;[&amp;quot;, &amp;quot;]&amp;quot;, &amp;quot;?&amp;quot;, &amp;quot;^&amp;quot;, &amp;quot;{&amp;quot;, &amp;quot;}&amp;quot;, &amp;quot;|&amp;quot;, &amp;quot;-&amp;quot;}; /** * 转义目标正</description>
     </item>
     
   </channel>

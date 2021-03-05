@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>h2兼容模式</title>
+      <link>https://www.mingaccount.com/2018/12/h2-compatible/</link>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/12/h2-compatible/</guid>
+      <description>h2有多种数据库兼容模式，例如Mysql：jdbc:h2:mem:testdb;MODE=MYSQL。 但是兼容模式并不可靠，还是有部分特有语</description>
+    </item>
+    
+    <item>
       <title>h2 url参数</title>
       <link>https://www.mingaccount.com/2018/12/h2-url/</link>
       <pubDate>Tue, 11 Dec 2018 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>https://www.mingaccount.com/2018/08/request-param-lost-add-symbol/</guid>
       <description>最近在开发中碰见一个问题，后端代码调用接口，在请求端参数没有任何问题，但是当接口接收到参数时，其中的加号全部变为了空格。 在查阅资料后发现是U</description>
-    </item>
-    
-    <item>
-      <title>Maven package完整依赖jar包</title>
-      <link>https://www.mingaccount.com/2018/07/maven-package-complete-dependency/</link>
-      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/07/maven-package-complete-dependency/</guid>
-      <description>maven package生成的jar包默认是没有项目依赖的 需要导出的jar包包含项目所有的依赖，需要配置pom： &amp;lt;build&amp;gt; &amp;lt;finalName&amp;gt;yourApp&amp;lt;/finalName&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-shade-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;shadedArtifactAttached&amp;gt;true&amp;lt;/shadedArtifactAttached&amp;gt; &amp;lt;shadedClassifierName&amp;gt;jar-with-dependencies&amp;lt;/shadedClassifierName&amp;gt; &amp;lt;!-- Any name that makes sense --&amp;gt; &amp;lt;outputDirectory&amp;gt;../output/jar-with-dependencies&amp;lt;/outputDirectory&amp;gt; &amp;lt;/configuration&amp;gt;</description>
     </item>
     
   </channel>

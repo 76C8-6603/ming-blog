@@ -21,30 +21,26 @@
     
     
     <meta name="description" content="1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成" />
-    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
+    <meta name="generator" content="Hugo 0.81.0 with theme pure" />
     <title>Spring集成测试 - Ming Blog</title>
     
     
-    <link rel="stylesheet" href="https://www.mingaccount.com/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
+    <link rel="stylesheet" href="https://www.mingaccount.com/css/style.min.3b3758b179de48a6a56cf033b9c294d08a134c2c123c47cd9b6e8eb3b7e8d2d2.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
     <meta property="og:title" content="Spring集成测试" />
 <meta property="og:description" content="1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.mingaccount.com/2017/09/spring-test/" />
-<meta property="article:published_time" content="2017-09-15T00:00:00+00:00" />
-<meta property="article:modified_time" content="2017-09-15T00:00:00+00:00" />
+<meta property="og:url" content="https://www.mingaccount.com/2017/09/spring-test/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-09-15T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2017-09-15T00:00:00&#43;00:00" />
+
 <meta itemprop="name" content="Spring集成测试">
-<meta itemprop="description" content="1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成">
-<meta itemprop="datePublished" content="2017-09-15T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2017-09-15T00:00:00+00:00" />
-<meta itemprop="wordCount" content="57856">
-
-
-
-<meta itemprop="keywords" content="spring,unit-test,junit4,junit5,testng,mockmvc," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成"><meta itemprop="datePublished" content="2017-09-15T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-09-15T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="57855">
+<meta itemprop="keywords" content="spring,unit-test,junit4,junit5,testng,mockmvc," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Spring集成测试"/>
 <meta name="twitter:description" content="1. 概览 一般情况下我们要测试项目或者平台的某个功能，先要部署启动应用才能进行，如果在不启动应用或者连接其他企业级平台的情况下，就能做相应的集成"/>
 
@@ -203,7 +199,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/jenkins/" class="tag-list-link">jenkins</a><span
-                    class="tag-list-count">1</span></li>
+                    class="tag-list-count">2</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/jooq/" class="tag-list-link">jooq</a><span
@@ -291,6 +287,10 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/testng/" class="tag-list-link">testng</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/transactional/" class="tag-list-link">transactional</a><span
                     class="tag-list-count">1</span></li>
             
             
@@ -414,7 +414,7 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2017/09/spring-test/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 57856words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 57855words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 116minutes </span>
       </div>
     </div>
@@ -2312,7 +2312,7 @@ void userTest() {
 </code></pre>
 <p>注意<code>ISOLATED</code>和<code>AFTER_TEST_METHOD</code>是分别从<code>Sql.TransactionMode</code>和<code>Sql.ExecutionPhase</code>静态导入的。</p>
 <h3 id="597-通过sqlconfig进行脚本配置">5.9.7. 通过<code>@SqlConfig</code>进行脚本配置</h3>
-<p>你可以配置脚本解析或者异常处理通过使用<code>@SqlConfig</code>注解。当作为一个类级别的注解申明时，<code>@SqlConfig</code>服务于整个测试类的层次结构，对其中的所有SQL脚本生效。当通过<code>config</code>属性直接申明到<code>@Sql</code>注解里的时候，<code>@SqlConfig</code>作为一个本地配置服务，只对<code>@Sql</code>注解范围内的SQL脚本生效。每个<code>@SqlConfig</code>的属性都有一个隐性的默认值。因为Java语言规范中定义的注解属性规则，注解属性是不能分配<code>null</code>值的。因此，为了支持覆盖继承的全局属性，<code>@SqlConfig</code>属性有一个显性的默认值为 &ldquo;&quot;(字符串)，{}(数组)，或者<code>DEFAULT</code>(枚举)。这种方法允许本地的<code>@SqlConfig</code>提供除了&rdquo;&quot;，{}，或者<code>DEFAULT</code>以外的值来选择性的覆盖来自全局的每个属性。只要本地<code>@SqlConfig</code>没有提供一个显性的属性值（&quot;&rdquo;,{},DEFAULT除外），那么对应属性仍然从全局继承。</p>
+<p>你可以配置脚本解析或者异常处理通过使用<code>@SqlConfig</code>注解。当作为一个类级别的注解申明时，<code>@SqlConfig</code>服务于整个测试类的层次结构，对其中的所有SQL脚本生效。当通过<code>config</code>属性直接申明到<code>@Sql</code>注解里的时候，<code>@SqlConfig</code>作为一个本地配置服务，只对<code>@Sql</code>注解范围内的SQL脚本生效。每个<code>@SqlConfig</code>的属性都有一个隐性的默认值。因为Java语言规范中定义的注解属性规则，注解属性是不能分配<code>null</code>值的。因此，为了支持覆盖继承的全局属性，<code>@SqlConfig</code>属性有一个显性的默认值为 &ldquo;&quot;(字符串)，{}(数组)，或者<code>DEFAULT</code>(枚举)。这种方法允许本地的<code>@SqlConfig</code>提供除了&rdquo;&quot;，{}，或者<code>DEFAULT</code>以外的值来选择性的覆盖来自全局的每个属性。只要本地<code>@SqlConfig</code>没有提供一个显性的属性值（&quot;&quot;,{},DEFAULT除外），那么对应属性仍然从全局继承。</p>
 <p><code>@Sql</code>和<code>@SqlConfig</code>提供的配置选项跟<code>ScriptUtils</code>和<code>ResourceDatabasePopulator</code>提供的相等，但是是<code>&lt;jdbc:initialize-database/&gt;</code>提供的XML命名空间元素的超集。详情参考<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/test/context/jdbc/Sql.html">@Sql</a> 和<a href="https://docs.spring.io/spring-framework/docs/5.3.2/javadoc-api/org/springframework/test/context/jdbc/SqlConfig.html">@SqlConfig</a></p>
 <h3 id="598-sql的事务管理">5.9.8. <code>@Sql</code>的事务管理</h3>
 <p>默认情况下，<code>SqlScriptsTestExecutionListener</code>会推断<code>@Sql</code>配置的脚本期望的事务语义。具体来说，SQL脚本没有运行在一个事务中，但在一个Spring管理的事务中（举个例子，一个由<code>TransactionalTestExecutionListener</code>管理的事务，当测试被<code>@Transactional</code>注解修饰时），或者在一个隔离的事务当中，取决于<code>@SqlConfig</code>属性<code>transactionMode</code>的取值和测试<code>ApplicationContext</code>中是否有<code>PlatformTransactionManager</code>存在。就算最低的要求，也需要一个<code>javax.sql.DataSource</code>在测试<code>ApplicationContext</code>中存在。</p>
@@ -3100,8 +3100,8 @@ this.restTemplate = new RestTemplate(new MockMvcClientHttpRequestFactory(mockMvc
     })
     hljs.initHighlightingOnLoad();
 </script>
-<script src="https://www.mingaccount.com/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
-<script src="https://www.mingaccount.com/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+<script src="https://www.mingaccount.com/js/application.min.a94ab19cb63a95c8d7fbd7b85cab3ddeea8c369bdf75b9cab6708787ead123af.js"></script>
+<script src="https://www.mingaccount.com/js/plugin.min.19c5bcb2fb0789ab4f2b7834e5ceb5e92635645605bab902c1024b25f1502364.js"></script>
 
 <script>
     (function (window) {
@@ -3119,7 +3119,7 @@ this.restTemplate = new RestTemplate(new MockMvcClientHttpRequestFactory(mockMvc
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
-<script type="text/javascript" src="https://www.mingaccount.com/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script type="text/javascript" src="https://www.mingaccount.com/js/insight.min.4a2d52de4bfff73e0c688404fe3d17c9a3ae12d9888e1e1ac9c690e4890de2ded50fe55f2b819c2ba55435a76f396f3ea6805765f0b0af5635cdf74ea459eab0.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 <script>
     tocbot.init({
