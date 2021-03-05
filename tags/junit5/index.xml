@@ -40,15 +40,6 @@ The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence,
     </item>
     
     <item>
-      <title>jenkins找不到本地仓库中的jar包</title>
-      <link>https://www.mingaccount.com/2020/10/jenkins-mavne-local-artifact/</link>
-      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2020/10/jenkins-mavne-local-artifact/</guid>
-      <description>原因 jenkins环境有个单独的maven仓库配置，目录在： /var/bin/jenkins/.m2</description>
-    </item>
-    
-    <item>
       <title>启用Windows Hyper-v和containers</title>
       <link>https://www.mingaccount.com/2020/10/windows-hyper-v-and-container/</link>
       <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
@@ -190,6 +181,15 @@ The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence,
       
       <guid>https://www.mingaccount.com/2020/02/hive-todate-tochar/</guid>
       <description>hive的日期格式可由String类型保存，只能识别两种格式yyyy-MM-dd和yyyy-MM-dd HH:mm:ss。 只要将日期转为这两种</description>
+    </item>
+    
+    <item>
+      <title>像IDEA一样匹配一个WORDS</title>
+      <link>https://www.mingaccount.com/2020/01/regex-match-words-like-idea/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2020/01/regex-match-words-like-idea/</guid>
+      <description>String.format(&amp;quot;(?&amp;lt;![\\u4E00-\\u9FA5aa-zA-Z0-9_])%s(?![\\u4E00-</description>
     </item>
     
   </channel>

@@ -66,20 +66,6 @@
   </url>
   
   <url>
-    <loc>https://www.mingaccount.com/tags/jenkins/</loc>
-    <lastmod>2020-10-29T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.mingaccount.com/2020/10/jenkins-mavne-local-artifact/</loc>
-    <lastmod>2020-10-29T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.mingaccount.com/tags/windows/</loc>
     <lastmod>2020-10-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -346,6 +332,27 @@
   </url>
   
   <url>
+    <loc>https://www.mingaccount.com/tags/jenkins/</loc>
+    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/2019/10/jenkins-mavne-local-artifact/</loc>
+    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/tags/maven/</loc>
+    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.mingaccount.com/2019/10/mysql-table-design/</loc>
     <lastmod>2019-10-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -509,13 +516,6 @@
   <url>
     <loc>https://www.mingaccount.com/2019/07/mysql-insert-chinese-exception/</loc>
     <lastmod>2019-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.mingaccount.com/tags/maven/</loc>
-    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

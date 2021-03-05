@@ -11,15 +11,6 @@
     
     
     <item>
-      <title>像IDEA一样匹配一个WORDS</title>
-      <link>https://www.mingaccount.com/2020/01/regex-match-words-like-idea/</link>
-      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2020/01/regex-match-words-like-idea/</guid>
-      <description>String.format(&amp;quot;(?&amp;lt;![\\u4E00-\\u9FA5aa-zA-Z0-9_])%s(?![\\u4E00-</description>
-    </item>
-    
-    <item>
       <title>Mysql Explain用法详解</title>
       <link>https://www.mingaccount.com/2019/12/mysql-explain/</link>
       <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
@@ -80,6 +71,15 @@
       
       <guid>https://www.mingaccount.com/2019/11/jenkins-docker-command-permission-denied/</guid>
       <description>详细异常 Docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock 解决方案 sudo usermod -a -G docker jenkins 原因是jenkins用户还没有被加到docker组里面 参考stackoverflo</description>
+    </item>
+    
+    <item>
+      <title>jenkins找不到本地仓库中的jar包</title>
+      <link>https://www.mingaccount.com/2019/10/jenkins-mavne-local-artifact/</link>
+      <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/10/jenkins-mavne-local-artifact/</guid>
+      <description>背景 在execute shell中写的命令老是出错，各种权限问题，但是直接在目标文件夹里执行命令又没有问题。 原因 主要就是用户权限的问题，切换到</description>
     </item>
     
     <item>
