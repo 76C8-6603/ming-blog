@@ -5,10 +5,37 @@
     <link>https://www.mingaccount.com/tags/</link>
     <description>Recent content in Tags on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Markdown常用语法备忘</title>
+      <link>https://www.mingaccount.com/2019/01/markdown-common-symbol/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/01/markdown-common-symbol/</guid>
+      <description>markdown语法大多数符号需要加一个空格和正式内容区分开才会生效 横线 -&amp;ndash; *** ___ 标题 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标</description>
+    </item>
+    
+    <item>
+      <title>Springboot filter异常全局处理</title>
+      <link>https://www.mingaccount.com/2019/01/spring-boot-filter-exception-global-handler/</link>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/01/spring-boot-filter-exception-global-handler/</guid>
+      <description>背景 controller的全局异常处理可以通过@RestControllerAdvice @ExceptionHandler来处理。但是如果f</description>
+    </item>
+    
+    <item>
+      <title>Docker常用命令</title>
+      <link>https://www.mingaccount.com/2019/01/docker-common-command/</link>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/01/docker-common-command/</guid>
+      <description># 列出所有container docker container ls -a # 通过指定名称查询container docker container ls -f name=mysql # 删除所有停止的container docker container prune # 列出所有dock</description>
+    </item>
     
     <item>
       <title>h2兼容模式</title>
@@ -161,33 +188,6 @@
       
       <guid>https://www.mingaccount.com/2018/08/vim-common-command/</guid>
       <description>vi /etc/hosts i 修改模式 esc 退出修改 :q 正常退出(文件没有修改 :q! 不保存退出 :wq 保存退出 G 跳到末尾行 dd 删除当前行 gg 跳到第一行第一个字符 $ 跳到当前行的最后一个字</description>
-    </item>
-    
-    <item>
-      <title>SpringBoot定时任务</title>
-      <link>https://www.mingaccount.com/2018/08/spring-boot-schedule/</link>
-      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/08/spring-boot-schedule/</guid>
-      <description>开启定时任务 @Configuration @EnableScheduling @ComponentScan(basePackages=&amp;quot;com.myco.tasks&amp;quot;) public class AppConfig { } 如果需要对定时任务的生命周期有其他的操作，可以实现接口SchedulingConfigurer @Configuration @EnableScheduling public class AppConfig implements SchedulingConfigurer { @Override</description>
-    </item>
-    
-    <item>
-      <title>大浏览量系统的静态化架构设计</title>
-      <link>https://www.mingaccount.com/2018/08/static-sturcture-design/</link>
-      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/08/static-sturcture-design/</guid>
-      <description>本篇文章着重整理什么是静态化系统架构，以及静态化架构的几种方案。 首先先贴一个淘宝系统升级的历程(09~13)： 09年，系统拆分，静态文件合并</description>
-    </item>
-    
-    <item>
-      <title>请求参数中的&#43;号为什么会丢失,如何保证参数完整</title>
-      <link>https://www.mingaccount.com/2018/08/request-param-lost-add-symbol/</link>
-      <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/08/request-param-lost-add-symbol/</guid>
-      <description>最近在开发中碰见一个问题，后端代码调用接口，在请求端参数没有任何问题，但是当接口接收到参数时，其中的加号全部变为了空格。 在查阅资料后发现是U</description>
     </item>
     
   </channel>

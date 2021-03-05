@@ -5,10 +5,37 @@
     <link>https://www.mingaccount.com/</link>
     <description>Recent content on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SpringBoot定时任务</title>
+      <link>https://www.mingaccount.com/2018/08/spring-boot-schedule/</link>
+      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/08/spring-boot-schedule/</guid>
+      <description>开启定时任务 @Configuration @EnableScheduling @ComponentScan(basePackages=&amp;quot;com.myco.tasks&amp;quot;) public class AppConfig { } 如果需要对定时任务的生命周期有其他的操作，可以实现接口SchedulingConfigurer @Configuration @EnableScheduling public class AppConfig implements SchedulingConfigurer { @Override</description>
+    </item>
+    
+    <item>
+      <title>大浏览量系统的静态化架构设计</title>
+      <link>https://www.mingaccount.com/2018/08/static-sturcture-design/</link>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/08/static-sturcture-design/</guid>
+      <description>本篇文章着重整理什么是静态化系统架构，以及静态化架构的几种方案。 首先先贴一个淘宝系统升级的历程(09~13)： 09年，系统拆分，静态文件合并</description>
+    </item>
+    
+    <item>
+      <title>请求参数中的&#43;号为什么会丢失,如何保证参数完整</title>
+      <link>https://www.mingaccount.com/2018/08/request-param-lost-add-symbol/</link>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/08/request-param-lost-add-symbol/</guid>
+      <description>最近在开发中碰见一个问题，后端代码调用接口，在请求端参数没有任何问题，但是当接口接收到参数时，其中的加号全部变为了空格。 在查阅资料后发现是U</description>
+    </item>
     
     <item>
       <title>Maven package完整依赖jar包</title>
@@ -161,33 +188,6 @@
       
       <guid>https://www.mingaccount.com/2018/05/spring-transaction-invalid/</guid>
       <description>问题代码 service方法抛出了异常，但是没有rollback @Transactional public void batchInsert() throws CommonException{} 抛出的自定义异常继承于Exception public class CommonException extends Exception{} 问题原因 @Tra</description>
-    </item>
-    
-    <item>
-      <title>quartz cron表达式详解</title>
-      <link>https://www.mingaccount.com/2018/05/quartz-cron/</link>
-      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/05/quartz-cron/</guid>
-      <description>Cron表达式是一个字符串，字符串以5或6个空格隔开，分为6或7个域，每一个域代表一个含义，Cron有如下两种语法格式： （1） Seconds Minutes Hours DayofMonth Month DayofWeek Year</description>
-    </item>
-    
-    <item>
-      <title>Windows IP DNS批处理</title>
-      <link>https://www.mingaccount.com/2018/03/windows-dns/</link>
-      <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/03/windows-dns/</guid>
-      <description>指定ip信息，只需要修改set参数 name是控制面板\网络和 Internet\网络连接中对应的连接名称 @echo off set name=&amp;quot;Wi-Fi&amp;quot; set ipaddress=172.16.61.216 set mask=255.255.255.0 set gateway=172.16.61.254 set dns1=172.16.3.38 set dns2=172.16.3.41 netsh interface ip set address</description>
-    </item>
-    
-    <item>
-      <title>判断int和Integer类型是否相等时，空指针异常</title>
-      <link>https://www.mingaccount.com/2018/03/int-equals-integer/</link>
-      <pubDate>Mon, 19 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/03/int-equals-integer/</guid>
-      <description>需要注意在判断int和Integer是否相等时，会先将Integer拆箱，如果Integer为null，会报空指针异常。 因此需要提前处理好I</description>
     </item>
     
   </channel>

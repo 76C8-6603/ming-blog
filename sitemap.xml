@@ -3,6 +3,55 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.mingaccount.com/</loc>
+    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/posts/</loc>
+    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/tags/</loc>
+    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/tags/test/</loc>
+    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/2021/03/test-article/</loc>
+    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/tags/npl/</loc>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/2021/03/standford-npl/</loc>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.mingaccount.com/2021/02/duration-format/</loc>
     <lastmod>2021-02-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -10,28 +59,7 @@
   </url>
   
   <url>
-    <loc>https://www.mingaccount.com/</loc>
-    <lastmod>2021-02-20T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.mingaccount.com/posts/</loc>
-    <lastmod>2021-02-20T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.mingaccount.com/tags/protocol/</loc>
-    <lastmod>2021-02-20T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.mingaccount.com/tags/</loc>
     <lastmod>2021-02-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -47,6 +75,20 @@
   <url>
     <loc>https://www.mingaccount.com/2020/11/spring-boot-schema/</loc>
     <lastmod>2020-11-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/tags/jenkins/</loc>
+    <lastmod>2020-10-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/2020/10/jenkins-mavne-local-artifact/</loc>
+    <lastmod>2020-10-29T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -318,13 +360,6 @@
   </url>
   
   <url>
-    <loc>https://www.mingaccount.com/tags/jenkins/</loc>
-    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.mingaccount.com/2019/10/mysql-table-design/</loc>
     <lastmod>2019-10-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -403,6 +438,13 @@
   
   <url>
     <loc>https://www.mingaccount.com/2019/08/jooq-transaction/</loc>
+    <lastmod>2019-08-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingaccount.com/tags/transactional/</loc>
     <lastmod>2019-08-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -1097,13 +1139,6 @@
   <url>
     <loc>https://www.mingaccount.com/2017/09/map-and-flatmap/</loc>
     <lastmod>2017-09-23T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.mingaccount.com/tags/transactional/</loc>
-    <lastmod>2017-09-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

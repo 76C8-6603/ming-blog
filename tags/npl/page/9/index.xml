@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>npl on Ming Blog</title>
+    <link>https://www.mingaccount.com/tags/npl/</link>
+    <description>Recent content in npl on Ming Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://www.mingaccount.com/tags/npl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>java7特性try-with-resources</title>
+      <link>https://www.mingaccount.com/2016/08/try-with-resources/</link>
+      <pubDate>Tue, 09 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/08/try-with-resources/</guid>
+      <description>概览 try-with-resources表达式可以自动关闭申明在表达式中的资源，但前提是这些资源类要实现java.lang.AutoClos</description>
+    </item>
+    
+    <item>
+      <title>Mysql Where条件判断 字符串和数字 是否相等时存在的问题</title>
+      <link>https://www.mingaccount.com/2016/07/mysql-compare-string-and-number/</link>
+      <pubDate>Fri, 08 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/07/mysql-compare-string-and-number/</guid>
+      <description>测试数据 random 24 24uixcvkjklwer 查询sql1 SELECT random FROM table WHERE random = 24 该sql会把两条记录都查出来 查询sql2 SELECT random FROM table WHERE random = &#39;24&#39; 该sql只会匹配第一条记录 总结 条件列为字符</description>
+    </item>
+    
+    <item>
+      <title>实体类通过建造者模式创建</title>
+      <link>https://www.mingaccount.com/2016/06/pojo-builder/</link>
+      <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/06/pojo-builder/</guid>
+      <description>现在可以通过lombok注解@Builder一步实现 1.调用效果 public class Test{ public static void main(String[] args){ Student student = Student.builder().name(&amp;quo</description>
+    </item>
+    
+    <item>
+      <title>Mybatis insert完成后获取自增主键</title>
+      <link>https://www.mingaccount.com/2016/05/mybatis-get-auto-increment-id/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/05/mybatis-get-auto-increment-id/</guid>
+      <description>示例代码 public void insert(User user){ mapper.insert(user); String id = user.getId(); } id会赋值到传进来的user对象中 xml &amp;lt;insert keyProperty=&amp;quot;id&amp;quot; keyColumn=&amp;quot;id&amp;quot; useGeneratedKeys=&amp;quot;true&amp;quot;&amp;gt; INSERT INTO ... &amp;lt;/insert&amp;gt; keyProperty代表实体类中主键对应的成员变量名称 ke</description>
+    </item>
+    
+    <item>
+      <title>Assert常用方法</title>
+      <link>https://www.mingaccount.com/2016/05/assert-common-method/</link>
+      <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/05/assert-common-method/</guid>
+      <description>org.junit.Assert assertEquals 判断对象是否相等，equals方法判断 assertSame 判断对象是否相等，==判断 assertTrue 判断条件是否为真 assertFalse 判断条件是否为假 assertNotNull 判断对象是否不为null assertArrayEquals 判断数</description>
+    </item>
+    
+    <item>
+      <title>Mysql Like语句匹配下划线时无法得到正确数据</title>
+      <link>https://www.mingaccount.com/2016/05/mysql-like-underline/</link>
+      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/05/mysql-like-underline/</guid>
+      <description>示例sql SELECT * FROM table WHERE field LIKE &#39;%_%&#39; 目的是获取中间有下划线的field，但是这样的sql无法获取到期望的结果 问题原因 like语句中除了百分号是通配符，</description>
+    </item>
+    
+    <item>
+      <title>所有HTTP头字段(header fields)</title>
+      <link>https://www.mingaccount.com/2016/05/http-heads/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/05/http-heads/</guid>
+      <description>wiki List of HTTP header fields</description>
+    </item>
+    
+    <item>
+      <title>所有HTTP状态码(status code)</title>
+      <link>https://www.mingaccount.com/2016/05/status-code/</link>
+      <pubDate>Sun, 08 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/05/status-code/</guid>
+      <description>常见状态码 所有状态码iana all HTTP status code 常用状态码及说明wiki List of HTTP status code 状态码 状态码英文名称 中文描述 100 Continue 继续。客户端应继续其请求 101 Switching Protocols 切换协议</description>
+    </item>
+    
+    <item>
+      <title>所有Content-type(content type)</title>
+      <link>https://www.mingaccount.com/2016/05/content-type/</link>
+      <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/05/content-type/</guid>
+      <description>所有的Content-type 完整列表iana media type 常用的Content-type 常用列表及说明runoob content type ** application application/java-archive application/EDI-X12 application/EDIFACT application/javascript application/octet-stream application/ogg application/pdf application/xhtml+xml application/x-shockwave-flash application/json application/ld+json application/xml application/zip</description>
+    </item>
+    
+    <item>
+      <title>Java注释引用类和其成员</title>
+      <link>https://www.mingaccount.com/2016/04/java-comment-refere-class/</link>
+      <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/04/java-comment-refere-class/</guid>
+      <description>注释中如果要指向一个类或者其成员，直接写名字容易出错，且ide无法跳转。可以使用{@link}来引用 /** * {@link String#toString()} } * 在类后面追加#号，可以指向类</description>
+    </item>
+    
+    <item>
+      <title>Mysql modify和change的区别</title>
+      <link>https://www.mingaccount.com/2016/03/mysql-modify-and-change/</link>
+      <pubDate>Mon, 21 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/03/mysql-modify-and-change/</guid>
+      <description>他们之间的区别就是是否能够同时修改列名和列的定义。 CHANGE 你可以修改列名和列定义 ALTER TABLE t1 CHANGE a b BIGINT NOT NULL MODIFY 可以修改列定义，但是不能修改列名 ALTER TABLE t1 MODIFY b INT NOT</description>
+    </item>
+    
+    <item>
+      <title>Java注解说明</title>
+      <link>https://www.mingaccount.com/2016/03/annotation/</link>
+      <pubDate>Sat, 05 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/03/annotation/</guid>
+      <description>标准申明 /** * Describes the Request-For-Enhancement(RFE) that led * to the presence of the annotated API element. */ public @interface RequestForEnhancement { int id(); String synopsis(); String engineer() default &amp;quot;[unassigned]&amp;quot;; String date(); default &amp;quot;[unimplemented]&amp;quot;; } RequestForEnhancement注解包含的成员参数，需</description>
+    </item>
+    
+    <item>
+      <title>Java final成员变量初始化</title>
+      <link>https://www.mingaccount.com/2016/01/java-final-constructor/</link>
+      <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/01/java-final-constructor/</guid>
+      <description>public class Test{ /** ** 一种是直接指定初始值 **/ final String msg = &amp;quot;&amp;quot;; /** ** 另一种是不指定初始值，在构造方法里面指定 ** 但不允许无参构造的存在，并且每一个构造方法都要对该变</description>
+    </item>
+    
+    <item>
+      <title>Oracle limit 问题</title>
+      <link>https://www.mingaccount.com/2016/01/oracle-limit/</link>
+      <pubDate>Wed, 06 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/01/oracle-limit/</guid>
+      <description>1.Oracle 12c R1 (12.1)支持limit语句 从Oracle 12c R1 (12.1)版本开始，oracle开始支持limit语句，但是跟熟悉的limit(1,</description>
+    </item>
+    
+  </channel>
+</rss>

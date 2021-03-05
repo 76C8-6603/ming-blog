@@ -5,10 +5,37 @@
     <link>https://www.mingaccount.com/posts/</link>
     <description>Recent content in Posts on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>quartz cron表达式详解</title>
+      <link>https://www.mingaccount.com/2018/05/quartz-cron/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/05/quartz-cron/</guid>
+      <description>Cron表达式是一个字符串，字符串以5或6个空格隔开，分为6或7个域，每一个域代表一个含义，Cron有如下两种语法格式： （1） Seconds Minutes Hours DayofMonth Month DayofWeek Year</description>
+    </item>
+    
+    <item>
+      <title>Windows IP DNS批处理</title>
+      <link>https://www.mingaccount.com/2018/03/windows-dns/</link>
+      <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/03/windows-dns/</guid>
+      <description>指定ip信息，只需要修改set参数 name是控制面板\网络和 Internet\网络连接中对应的连接名称 @echo off set name=&amp;quot;Wi-Fi&amp;quot; set ipaddress=172.16.61.216 set mask=255.255.255.0 set gateway=172.16.61.254 set dns1=172.16.3.38 set dns2=172.16.3.41 netsh interface ip set address</description>
+    </item>
+    
+    <item>
+      <title>判断int和Integer类型是否相等时，空指针异常</title>
+      <link>https://www.mingaccount.com/2018/03/int-equals-integer/</link>
+      <pubDate>Mon, 19 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/03/int-equals-integer/</guid>
+      <description>需要注意在判断int和Integer是否相等时，会先将Integer拆箱，如果Integer为null，会报空指针异常。 因此需要提前处理好I</description>
+    </item>
     
     <item>
       <title>[转]字符编码笔记：ASCII、Unicode、UTF-8 和 Base64</title>
@@ -161,33 +188,6 @@
       
       <guid>https://www.mingaccount.com/2017/10/split-regexp/</guid>
       <description>excel拆分规则 固定长度拆分 指定符号拆分 忽略重复拆分符号 带文本识别符号的拆分（比如&amp;quot;1,2,3,4,5&amp;quot;现在按照逗号分</description>
-    </item>
-    
-    <item>
-      <title>Java8 lamda表达式中的parallel</title>
-      <link>https://www.mingaccount.com/2017/09/java8-parallel/</link>
-      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/09/java8-parallel/</guid>
-      <description>概览 Java8为集合流处理提供了并发支持。并且就算集合不是线程安全的，你也可以在不修改集合的状态下，对集合进行并发汇总操作。但是这里面仍有一</description>
-    </item>
-    
-    <item>
-      <title>java8 lambda reduce&amp;collect</title>
-      <link>https://www.mingaccount.com/2017/09/lambda-reduce/</link>
-      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/09/lambda-reduce/</guid>
-      <description>Reduction 首先看一个例子： double average = roster .stream() .filter(p -&amp;gt; p.getGender() == Person.Sex.MALE) .mapToInt(Person::getAge) .average() .getAsDouble(); 像上面的例子一样，JDK还包含很多其他的终端操作（比如说average,sum,min,max,</description>
-    </item>
-    
-    <item>
-      <title>java lambda表达式map和flatMap</title>
-      <link>https://www.mingaccount.com/2017/09/map-and-flatmap/</link>
-      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/09/map-and-flatmap/</guid>
-      <description>资源类 User @Data public User{ private String name; private List&amp;lt;String&amp;gt; tags; } map&amp;amp;flatmap map将每个参数对象映射为返回类型，一个参数对应一个返回值 List&amp;lt;User&amp;gt; userList = new ArrayList&amp;lt;User&amp;gt;(); //...省略赋值 List&amp;lt;String&amp;gt; userNames = userList.stream().map(user -&amp;gt; user.getName()).collect(Collectors.toList()); flatMa</description>
     </item>
     
   </channel>

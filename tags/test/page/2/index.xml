@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>test on Ming Blog</title>
+    <link>https://www.mingaccount.com/tags/test/</link>
+    <description>Recent content in test on Ming Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://www.mingaccount.com/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hive中的to_date和to_char</title>
+      <link>https://www.mingaccount.com/2020/02/hive-todate-tochar/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2020/02/hive-todate-tochar/</guid>
+      <description>hive的日期格式可由String类型保存，只能识别两种格式yyyy-MM-dd和yyyy-MM-dd HH:mm:ss。 只要将日期转为这两种</description>
+    </item>
+    
+    <item>
+      <title>像IDEA一样匹配一个WORDS</title>
+      <link>https://www.mingaccount.com/2020/01/regex-match-words-like-idea/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2020/01/regex-match-words-like-idea/</guid>
+      <description>String.format(&amp;quot;(?&amp;lt;![\\u4E00-\\u9FA5aa-zA-Z0-9_])%s(?![\\u4E00-</description>
+    </item>
+    
+    <item>
+      <title>Mysql Explain用法详解</title>
+      <link>https://www.mingaccount.com/2019/12/mysql-explain/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/12/mysql-explain/</guid>
+      <description>根据版本不同，官方文档有详细说明 使用参照文档 查询结果对照文档</description>
+    </item>
+    
+    <item>
+      <title>Hadoop安装踩坑</title>
+      <link>https://www.mingaccount.com/2019/12/hadoop-shit/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/12/hadoop-shit/</guid>
+      <description>切记！！！！！ 没有比官网教程更详细，更靠谱的教程！！！！！ 其他的基本都是官网的翻译，但是官网的教程是实时更新的，要是不注意版本，坑根本就踩不</description>
+    </item>
+    
+    <item>
+      <title>@Autowired注解直接修饰在成员变量时提醒Field injection is not recommended</title>
+      <link>https://www.mingaccount.com/2019/12/field-injection-not-recommended/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/12/field-injection-not-recommended/</guid>
+      <description>Spring依赖注入方式 直接修饰成员变量，也就是提醒不推荐的情况 @RestController public class TestController{ @Autowired private TestService testService; } 修饰构造函数，@Autowired可省略 @RestController public class TestController{ private TestService testService; public TestController(TestService</description>
+    </item>
+    
+    <item>
+      <title>Hadoop ssh localhost 无密码登录</title>
+      <link>https://www.mingaccount.com/2019/12/hadoop-ssh-local-host-no-paw/</link>
+      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/12/hadoop-ssh-local-host-no-paw/</guid>
+      <description>首先确保安装SSH server： sudo apt-get install openssh-server 启动SSH server: sudo service ssh start #检查ssh是否正常启动 ssh localhost 安装后，可以使用如下命令登陆本机： ssh localhost 此时会有SSH</description>
+    </item>
+    
+    <item>
+      <title>db2 cast decimal异常</title>
+      <link>https://www.mingaccount.com/2019/11/db2-cast-decimal-exception/</link>
+      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/11/db2-cast-decimal-exception/</guid>
+      <description>完整异常 [42611][-604] The length, precision, or scale attribute for column, distinct type, structured type, array type, attribute of structured type, routine, cast target type, type mapping, or global variable &amp;quot;decimal(38, 2)&amp;quot; is not valid.. SQLCODE=-604, SQLSTATE=42611, DRIVER=4.26.14 [56098][-727] An error occurred during implicit system action type &amp;quot;2&amp;quot;. Information returned for the error includes SQLCODE &amp;quot;-604&amp;quot;, SQLSTATE &amp;quot;42611&amp;quot; and message tokens &amp;quot;decimal(38, 2)&amp;quot;.. SQLCODE=-727, SQLSTATE=56098, DRIVER=4.26.14 报错</description>
+    </item>
+    
+    <item>
+      <title>db2 sum函数报错Arithmetic overflow...</title>
+      <link>https://www.mingaccount.com/2019/11/db2sumerror/</link>
+      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/11/db2sumerror/</guid>
+      <description>完整异常 Arithmetic overflow or other arithmetic exception occurred.. SQLCODE=-802, SQLSTATE=22003, DRIVER=4.26.14 报错sql SELECT SUM(C_1788) FROM table c_1788列是integer类型 报错原因 c_1788列数值长度为9，sum值肯定溢出</description>
+    </item>
+    
+    <item>
+      <title>Docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock</title>
+      <link>https://www.mingaccount.com/2019/11/jenkins-docker-command-permission-denied/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/11/jenkins-docker-command-permission-denied/</guid>
+      <description>详细异常 Docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock 解决方案 sudo usermod -a -G docker jenkins 原因是jenkins用户还没有被加到docker组里面 参考stackoverflo</description>
+    </item>
+    
+    <item>
+      <title>[转]Mysql表设计注意事项</title>
+      <link>https://www.mingaccount.com/2019/10/mysql-table-design/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/10/mysql-table-design/</guid>
+      <description>作者：孤独烟 链接：https://zhuanlan.zhihu.com/p/73260510 来源：知乎 著作权归作者所有。商业转载请联系作者获</description>
+    </item>
+    
+    <item>
+      <title>[转]分库分表如何部署上线</title>
+      <link>https://www.mingaccount.com/2019/10/divide-table-how-to-deploy/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/10/divide-table-how-to-deploy/</guid>
+      <description>转自公众号“孤独烟” 引言 我们先来讲一个段子 面试官：“有并发的经验没？” 应聘者：“有一点。” 面试官：“那你们为了处理并发，做了哪些优化？” 应聘</description>
+    </item>
+    
+    <item>
+      <title>[转]自增主键用完了该怎么办</title>
+      <link>https://www.mingaccount.com/2019/10/auto-increment-id-is-dry/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/10/auto-increment-id-is-dry/</guid>
+      <description>转自微信公众号“孤独烟” 简单版 我们先明白一点，在mysql中，Int整型的范围如下 我们以无符号整型为例，存储范围为0～4294967295，</description>
+    </item>
+    
+    <item>
+      <title>Docker Registry</title>
+      <link>https://www.mingaccount.com/2019/09/docker-registry/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/09/docker-registry/</guid>
+      <description>Docker Registry负责保存管理镜像，可以使用默认官方的Docker Hub，但需要登录，并且是公开的。 私有的Registry，主要下面两种： Docker</description>
+    </item>
+    
+    <item>
+      <title>Maven项目转为Gradle</title>
+      <link>https://www.mingaccount.com/2019/09/gradle-init/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/09/gradle-init/</guid>
+      <description>执行转换命令 gradle init 问题 idea构建控制台乱码 菜单 Help-&amp;gt;Edit Custom VM Options 添加以下VM参数 -Dfile.encoding=utf-8 gradle build失败 idea清除所有失效缓存 File-&amp;gt;invalidate caches/restart gradle输出目录默认</description>
+    </item>
+    
+    <item>
+      <title>Java读取文件内容文件头有﻿</title>
+      <link>https://www.mingaccount.com/2019/09/java-stream-bom/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/09/java-stream-bom/</guid>
+      <description>&amp;ldquo;\ufeff&amp;quot;是UTF-8 BOM编码的文件头，代表该文件按照什么字节顺序排序 调用java的工具类 [UnicodeIn</description>
+    </item>
+    
+    <item>
+      <title>SparkSession.read().csv()无法定位本地文件的问题</title>
+      <link>https://www.mingaccount.com/2019/09/spark-session-cant-read-local-file/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/09/spark-session-cant-read-local-file/</guid>
+      <description>原因是spark有两个文件头 [file://]代表本地 [hdfs://]代表hdfs路径 如果路径没有文件头，spark会将该路径默认添加上&amp;</description>
+    </item>
+    
+    <item>
+      <title>Spring @Value注解无法正确赋值问题</title>
+      <link>https://www.mingaccount.com/2019/09/spring-value-anno-cant-set-value/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/09/spring-value-anno-cant-set-value/</guid>
+      <description>正确的调用方式为： @Component public class IconProperties { @Value(&amp;quot;${icon.url}&amp;quot;) private String url; } public class test{ @Autowired IconProperties icon; public void test(){ String url = icon.url; } } 这里有三个需要注意的点： 1.@Value赋值是否正确 2.IconProp</description>
+    </item>
+    
+    <item>
+      <title>JOOQ事务处理</title>
+      <link>https://www.mingaccount.com/2019/08/jooq-transaction/</link>
+      <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/08/jooq-transaction/</guid>
+      <description>基于Spring 的@Transactional注解，JOOQ可以非常简单的实现事务管理，详细参考JOOQ-Spring Transactional Management 这里主要讨论如Sp</description>
+    </item>
+    
+    <item>
+      <title>Mysql循环语句，死循环解决办法</title>
+      <link>https://www.mingaccount.com/2019/08/mysql-dead-cycle/</link>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/08/mysql-dead-cycle/</guid>
+      <description>delimiter // #定义标识符为双斜杠 drop procedure if exists test; #如果存在test存储过程则删除 create procedure test() #创建无参存储过程,名称为test begin declare i int; #申明变量 set i = 0; #变量赋</description>
+    </item>
+    
+    <item>
+      <title>jenkins sh permission denied</title>
+      <link>https://www.mingaccount.com/2019/08/jenkins-sh-permission-denied/</link>
+      <pubDate>Sun, 11 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/08/jenkins-sh-permission-denied/</guid>
+      <description>Jenkinsfile pipeline { agent any stages { stage(&#39;Test&#39;) { steps { sh &#39;./mvnw test&#39; } } } post { always { junit &#39;target/surefire-reports/*.xml&#39; } } } 异常 ./mvnw: Permission denied 解决方案 git update-index --chmod +x mvnw</description>
+    </item>
+    
+  </channel>
+</rss>

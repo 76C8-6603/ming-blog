@@ -5,10 +5,28 @@
     <link>https://www.mingaccount.com/posts/</link>
     <description>Recent content in Posts on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>测试文章</title>
+      <link>https://www.mingaccount.com/2021/03/test-article/</link>
+      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2021/03/test-article/</guid>
+      <description>测试测试</description>
+    </item>
+    
+    <item>
+      <title>Standford npl 使用说明</title>
+      <link>https://www.mingaccount.com/2021/03/standford-npl/</link>
+      <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2021/03/standford-npl/</guid>
+      <description>实例 下面是两个简单的实例，目的是获取一个单词的词根，并自动识别大小写。一个使用的是SimpleCoreNLPAPI简单实现，另外一个是通过完</description>
+    </item>
     
     <item>
       <title>Duration format PnDTnHnMn.nS ISO-8601</title>
@@ -28,6 +46,15 @@ The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence,
       
       <guid>https://www.mingaccount.com/2020/11/spring-boot-schema/</guid>
       <description>最简单的方式，是直接在资源目录下新建schema.sql和data.sql schema.sql代表DDL data.sql代表DML 默认情况下</description>
+    </item>
+    
+    <item>
+      <title>jenkins找不到本地仓库中的jar包</title>
+      <link>https://www.mingaccount.com/2020/10/jenkins-mavne-local-artifact/</link>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2020/10/jenkins-mavne-local-artifact/</guid>
+      <description>原因 jenkins环境有个单独的maven仓库配置，目录在： /var/bin/jenkins/.m2</description>
     </item>
     
     <item>
@@ -163,33 +190,6 @@ The ASCII letter &amp;ldquo;T&amp;rdquo; must occur before the first occurrence,
       
       <guid>https://www.mingaccount.com/2020/02/hive-ratio-implement/</guid>
       <description>select a.date , a.measure , case when b.measure is null or b.measure=0 then null else concat( cast( cast((if(a.measure is null, 0, a.measure)-if(b.measure is null,0,b.measure))*100/b.measure as decimal(10,2)) as string) ,&#39;%&#39;) end as ratio_column from test_table a left join test_table b on ( to_date(from_unixtime(unix_timestamp(concat(a.date,&#39;&#39;),&#39;yyyyMM&#39;),&#39;yyyy-MM-dd HH:mm:ss&#39;)) = add_months(to_date(from_unixtime(unix_timestamp(concat(b.date,&#39;&#39;),&#39;yyyyMM&#39;),&#39;yyyy-MM-dd HH:mm:ss&#39;)),+1) and 1 = 1 ) 提醒： 1. 第一个join条件的&amp;rsqu</description>
-    </item>
-    
-    <item>
-      <title>Hive中的to_date和to_char</title>
-      <link>https://www.mingaccount.com/2020/02/hive-todate-tochar/</link>
-      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2020/02/hive-todate-tochar/</guid>
-      <description>hive的日期格式可由String类型保存，只能识别两种格式yyyy-MM-dd和yyyy-MM-dd HH:mm:ss。 只要将日期转为这两种</description>
-    </item>
-    
-    <item>
-      <title>像IDEA一样匹配一个WORDS</title>
-      <link>https://www.mingaccount.com/2020/01/regex-match-words-like-idea/</link>
-      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2020/01/regex-match-words-like-idea/</guid>
-      <description>String.format(&amp;quot;(?&amp;lt;![\\u4E00-\\u9FA5aa-zA-Z0-9_])%s(?![\\u4E00-</description>
-    </item>
-    
-    <item>
-      <title>Mysql Explain用法详解</title>
-      <link>https://www.mingaccount.com/2019/12/mysql-explain/</link>
-      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/12/mysql-explain/</guid>
-      <description>根据版本不同，官方文档有详细说明 使用参照文档 查询结果对照文档</description>
     </item>
     
   </channel>

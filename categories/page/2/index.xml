@@ -10,6 +10,33 @@
     
     
     <item>
+      <title>Hive中的to_date和to_char</title>
+      <link>https://www.mingaccount.com/2020/02/hive-todate-tochar/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2020/02/hive-todate-tochar/</guid>
+      <description>hive的日期格式可由String类型保存，只能识别两种格式yyyy-MM-dd和yyyy-MM-dd HH:mm:ss。 只要将日期转为这两种</description>
+    </item>
+    
+    <item>
+      <title>像IDEA一样匹配一个WORDS</title>
+      <link>https://www.mingaccount.com/2020/01/regex-match-words-like-idea/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2020/01/regex-match-words-like-idea/</guid>
+      <description>String.format(&amp;quot;(?&amp;lt;![\\u4E00-\\u9FA5aa-zA-Z0-9_])%s(?![\\u4E00-</description>
+    </item>
+    
+    <item>
+      <title>Mysql Explain用法详解</title>
+      <link>https://www.mingaccount.com/2019/12/mysql-explain/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/12/mysql-explain/</guid>
+      <description>根据版本不同，官方文档有详细说明 使用参照文档 查询结果对照文档</description>
+    </item>
+    
+    <item>
       <title>Hadoop安装踩坑</title>
       <link>https://www.mingaccount.com/2019/12/hadoop-shit/</link>
       <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
@@ -160,33 +187,6 @@
       
       <guid>https://www.mingaccount.com/2019/08/jenkins-sh-permission-denied/</guid>
       <description>Jenkinsfile pipeline { agent any stages { stage(&#39;Test&#39;) { steps { sh &#39;./mvnw test&#39; } } } post { always { junit &#39;target/surefire-reports/*.xml&#39; } } } 异常 ./mvnw: Permission denied 解决方案 git update-index --chmod +x mvnw</description>
-    </item>
-    
-    <item>
-      <title>[转]Spring中使用@Autowired注解静态实例对象</title>
-      <link>https://www.mingaccount.com/2019/07/spring-autowired-static-object/</link>
-      <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/07/spring-autowired-static-object/</guid>
-      <description>问题 最近项目小组在重新规划工程的业务缓存，其中涉及到部分代码重构，过程中发现有些工具类中的静态方法需要依赖别的对象实例（该实例已配置在xml</description>
-    </item>
-    
-    <item>
-      <title>Mysql 日期TIMESTAMP类型插入，与系统时间有差异</title>
-      <link>https://www.mingaccount.com/2019/07/mysql-timestamp-time-zone/</link>
-      <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/07/mysql-timestamp-time-zone/</guid>
-      <description>1.数据库url后追加 &amp;amp;serverTimezone=Asia/Shanghai 2.修改数据库默认时区 show variables like &amp;quot;%time_zone%&amp;quot;;#查询当前时区 set global time_zone = &#39;+8:00&#39;; #修改mysql</description>
-    </item>
-    
-    <item>
-      <title>免费API收集</title>
-      <link>https://www.mingaccount.com/2019/07/free-translate-api/</link>
-      <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/07/free-translate-api/</guid>
-      <description>Google翻译 GET http://translate.google.cn/translate_a/single?client=gtx&amp;amp;dt=t&amp;amp;dj=1&amp;amp;ie=UTF-8&amp;amp;sl=auto&amp;amp;tl=zh_CN&amp;amp;q=hence 返回示例 { &amp;quot;sentences&amp;quot;: [ { &amp;quot;trans&amp;quot;: &amp;quot;因此&amp;quot;, &amp;quot;orig&amp;quot;: &amp;quot;hence&amp;quot;, &amp;quot;backend&amp;quot;: 10 } ], &amp;quot;src&amp;quot;: &amp;quot;en&amp;quot;, &amp;quot;confidence&amp;quot;: 1.0, &amp;quot;spell&amp;quot;: {}, &amp;quot;ld_result&amp;quot;: { &amp;quot;srclangs&amp;quot;: [ &amp;quot;en&amp;quot; ], &amp;quot;srclangs_confidences&amp;quot;: [ 1.0 ], &amp;quot;extended_srclangs&amp;quot;: [ &amp;quot;en&amp;quot; ] } } 微软翻译 GET http://api.microsofttranslator.com/v2/Http.svc/Translate?appId=AFC76A66CF4F434ED080D245C30CF1E71C22959C&amp;amp;from=&amp;amp;to=zh-Hans&amp;amp;text=hence 返回</description>
     </item>
     
   </channel>

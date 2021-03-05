@@ -5,10 +5,37 @@
     <link>https://www.mingaccount.com/tags/</link>
     <description>Recent content in Tags on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[转]Spring中使用@Autowired注解静态实例对象</title>
+      <link>https://www.mingaccount.com/2019/07/spring-autowired-static-object/</link>
+      <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/spring-autowired-static-object/</guid>
+      <description>问题 最近项目小组在重新规划工程的业务缓存，其中涉及到部分代码重构，过程中发现有些工具类中的静态方法需要依赖别的对象实例（该实例已配置在xml</description>
+    </item>
+    
+    <item>
+      <title>Mysql 日期TIMESTAMP类型插入，与系统时间有差异</title>
+      <link>https://www.mingaccount.com/2019/07/mysql-timestamp-time-zone/</link>
+      <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/mysql-timestamp-time-zone/</guid>
+      <description>1.数据库url后追加 &amp;amp;serverTimezone=Asia/Shanghai 2.修改数据库默认时区 show variables like &amp;quot;%time_zone%&amp;quot;;#查询当前时区 set global time_zone = &#39;+8:00&#39;; #修改mysql</description>
+    </item>
+    
+    <item>
+      <title>免费API收集</title>
+      <link>https://www.mingaccount.com/2019/07/free-translate-api/</link>
+      <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/07/free-translate-api/</guid>
+      <description>Google翻译 GET http://translate.google.cn/translate_a/single?client=gtx&amp;amp;dt=t&amp;amp;dj=1&amp;amp;ie=UTF-8&amp;amp;sl=auto&amp;amp;tl=zh_CN&amp;amp;q=hence 返回示例 { &amp;quot;sentences&amp;quot;: [ { &amp;quot;trans&amp;quot;: &amp;quot;因此&amp;quot;, &amp;quot;orig&amp;quot;: &amp;quot;hence&amp;quot;, &amp;quot;backend&amp;quot;: 10 } ], &amp;quot;src&amp;quot;: &amp;quot;en&amp;quot;, &amp;quot;confidence&amp;quot;: 1.0, &amp;quot;spell&amp;quot;: {}, &amp;quot;ld_result&amp;quot;: { &amp;quot;srclangs&amp;quot;: [ &amp;quot;en&amp;quot; ], &amp;quot;srclangs_confidences&amp;quot;: [ 1.0 ], &amp;quot;extended_srclangs&amp;quot;: [ &amp;quot;en&amp;quot; ] } } 微软翻译 GET http://api.microsofttranslator.com/v2/Http.svc/Translate?appId=AFC76A66CF4F434ED080D245C30CF1E71C22959C&amp;amp;from=&amp;amp;to=zh-Hans&amp;amp;text=hence 返回</description>
+    </item>
     
     <item>
       <title>Java加密类Cipher的使用</title>
@@ -161,33 +188,6 @@
       
       <guid>https://www.mingaccount.com/2019/02/scala-tail-recursive/</guid>
       <description>最大公约数： @tailrec def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b) 阶乘: def factorial(n: Int): Int = { @tailrec def iter(x: Int, result: Int): Int = if (x == 0) result else iter(x - 1, result * x) iter(n, 1) } @tailrec注解可以检测</description>
-    </item>
-    
-    <item>
-      <title>Markdown常用语法备忘</title>
-      <link>https://www.mingaccount.com/2019/01/markdown-common-symbol/</link>
-      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/01/markdown-common-symbol/</guid>
-      <description>markdown语法大多数符号需要加一个空格和正式内容区分开才会生效 横线 -&amp;ndash; *** ___ 标题 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标</description>
-    </item>
-    
-    <item>
-      <title>Springboot filter异常全局处理</title>
-      <link>https://www.mingaccount.com/2019/01/spring-boot-filter-exception-global-handler/</link>
-      <pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/01/spring-boot-filter-exception-global-handler/</guid>
-      <description>背景 controller的全局异常处理可以通过@RestControllerAdvice @ExceptionHandler来处理。但是如果f</description>
-    </item>
-    
-    <item>
-      <title>Docker常用命令</title>
-      <link>https://www.mingaccount.com/2019/01/docker-common-command/</link>
-      <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/01/docker-common-command/</guid>
-      <description># 列出所有container docker container ls -a # 通过指定名称查询container docker container ls -f name=mysql # 删除所有停止的container docker container prune # 列出所有dock</description>
     </item>
     
   </channel>
