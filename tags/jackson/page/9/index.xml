@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>java7特性try-with-resources</title>
+      <link>https://www.mingaccount.com/2016/08/try-with-resources/</link>
+      <pubDate>Tue, 09 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2016/08/try-with-resources/</guid>
+      <description>概览 try-with-resources表达式可以自动关闭申明在表达式中的资源，但前提是这些资源类要实现java.lang.AutoClos</description>
+    </item>
+    
+    <item>
       <title>Mysql Where条件判断 字符串和数字 是否相等时存在的问题</title>
       <link>https://www.mingaccount.com/2016/07/mysql-compare-string-and-number/</link>
       <pubDate>Fri, 08 Jul 2016 00:00:00 +0000</pubDate>

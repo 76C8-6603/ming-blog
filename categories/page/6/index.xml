@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>Java中的随机数生成API</title>
+      <link>https://www.mingaccount.com/2018/04/java-random-number/</link>
+      <pubDate>Fri, 13 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/04/java-random-number/</guid>
+      <description>ThreadLocalRandom Java 1.7或者之后的版本 import java.util.concurrent.ThreadLocalRandom; // nextInt is normally exclusive of the top value, // so add 1 to make it inclusive int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1); ThreadLocalRandom API Random Java 1.7之前 import java.util.Random; /** * Returns a pseudo-random number between min and max, inclusive. * The difference between min and max can be at</description>
+    </item>
+    
+    <item>
       <title>Windows IP DNS批处理</title>
       <link>https://www.mingaccount.com/2018/03/windows-dns/</link>
       <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>https://www.mingaccount.com/2017/10/split-regexp/</guid>
       <description>excel拆分规则 固定长度拆分 指定符号拆分 忽略重复拆分符号 带文本识别符号的拆分（比如&amp;quot;1,2,3,4,5&amp;quot;现在按照逗号分</description>
-    </item>
-    
-    <item>
-      <title>Java8 lamda表达式中的parallel</title>
-      <link>https://www.mingaccount.com/2017/09/java8-parallel/</link>
-      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/09/java8-parallel/</guid>
-      <description>概览 Java8为集合流处理提供了并发支持。并且就算集合不是线程安全的，你也可以在不修改集合的状态下，对集合进行并发汇总操作。但是这里面仍有一</description>
     </item>
     
   </channel>
