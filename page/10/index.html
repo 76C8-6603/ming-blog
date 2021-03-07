@@ -190,7 +190,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/java/" class="tag-list-link">java</a><span
-                    class="tag-list-count">38</span></li>
+                    class="tag-list-count">39</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/jenkins/" class="tag-list-link">jenkins</a><span
@@ -609,30 +609,30 @@
         <h1 itemprop="name">
   <a
     class="article-title"
-    href="/2018/09/spring-boot-mybatis-multi-source/"
-    >SpringBoot Mybatis配置多数据源</a
+    href="/2018/09/xml-serialize/"
+    >xml序列化和反序列化</a
   >
 </h1>
 
       </div>
       <div class="article-entry text-muted" itemprop="description">
-        @Configuration @MapperScan(basePackages = MysqlDatasourceConfig.PACKAGE, sqlSessionFactoryRef = &quot;mysqlSessionFactory&quot;) public class MysqlDatasourceConfig { public static final String PACKAGE = &quot;com.ming.mapper.mysql1&quot;; public static final String MAPPER_LOCATION = &quot;classpath:mapper/mysql1/*.xml&quot;; @Primary @Bean(name = &quot;mysqlDatasource&quot;) @ConfigurationProperties(&quot;spring.datasource.druid.mysql1&quot;) public DataSource mysqlDataSource(){ return DruidDataSourceBuilder.create().build(); } @Bean(name = &quot;mysqlTransactionManager&quot;) @Primary public DataSourceTransactionManager mysqlTransactionManager() { return new DataSourceTransactionManager(mysqlDataSource()); } @Bean(name = &quot;mysqlSessionFactory&quot;) @Primary public SqlSessionFactory mysqlSessionFactory(@Qualifier(&quot;mysqlDatasource&quot;) DataSource dataSource) throws Exception { final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean(); sessionFactory.setDataSource(dataSource); sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MysqlDatasourceConfig.MAPPER_LOCATION)); return
+        XmlMapper 依赖 &lt;dependency&gt; &lt;groupId&gt;com.fasterxml.jackson.dataformat&lt;/groupId&gt; &lt;artifactId&gt;jackson-dataformat-xml&lt;/artifactId&gt; &lt;/dependency&gt; 基础类 @Data class SimpleBean { private int x = 1; private int y = 2; } 序列化到xml String @Test public void whenJavaSerializedToXmlStr_thenCorrect() throws JsonProcessingException { XmlMapper xmlMapper = new XmlMapper(); String xml = xmlMapper.writeValueAsString(new SimpleBean()); assertNotNull(xml); } 得到的结果： &lt;SimpleBean&gt; &lt;x&gt;1&lt;/x&gt; &lt;y&gt;2&lt;/y&gt; &lt;/SimpleBean&gt; 序列化到xml File
       </div>
       <p class="article-meta">
 <span class="article-date">
   <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2018/09/spring-boot-mybatis-multi-source/" class="">
-  <time datetime="2018-09-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-09-10</time>
+<a href="https://www.mingaccount.com/2018/09/xml-serialize/" class="">
+  <time datetime="2018-09-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-09-21</time>
 </a>
 </span>
   
   <span class="article-tag">
     <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/spring/"> spring </a>
+    <a class="article-tag-link" href="/tags/java/"> java </a>
   </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2018/09/spring-boot-mybatis-multi-source/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 155words</span>
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2018/09/xml-serialize/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 414words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
       </p>
     </article></div>

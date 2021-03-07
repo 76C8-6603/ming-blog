@@ -731,6 +731,13 @@
   </url>
   
   <url>
+    <loc>https://www.mingaccount.com/2018/09/xml-serialize/</loc>
+    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.mingaccount.com/2018/09/spring-boot-mybatis-multi-source/</loc>
     <lastmod>2018-09-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>

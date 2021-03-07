@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>Maven命令备忘</title>
+      <link>https://www.mingaccount.com/2017/06/maven-common-command/</link>
+      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/06/maven-common-command/</guid>
+      <description># 编译项目 mvn compile # 执行项目中的单元测试 # 查找单元测试类的默认规则：**/*Test.java;**/Test*.java;**/*TestCa</description>
+    </item>
+    
+    <item>
       <title>阻止Gson将long类型的字段转为科学计数法</title>
       <link>https://www.mingaccount.com/2017/06/gson-scientific-notation/</link>
       <pubDate>Thu, 08 Jun 2017 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>https://www.mingaccount.com/2017/01/strategy-pattern/</guid>
       <description>简介 策略模式：它定义了算法家族，分别封装起来，让他们之间可以互相替换，此模式让算法的变化，不会影响到使用算法的客户。 所谓的策略模式跟简单工厂</description>
-    </item>
-    
-    <item>
-      <title>装饰模式</title>
-      <link>https://www.mingaccount.com/2017/01/decorator-pattern/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/01/decorator-pattern/</guid>
-      <description>简介 动态地给一个对象添加一些额外的职责，就增加功能来说，装饰模式比生成子类更加灵活。 装饰模式常用在为主类添加一些特有的功能的时候。装饰模式可</description>
     </item>
     
   </channel>

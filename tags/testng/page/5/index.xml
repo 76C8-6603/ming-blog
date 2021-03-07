@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>SpringBoot定时任务</title>
+      <link>https://www.mingaccount.com/2018/08/spring-boot-schedule/</link>
+      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/08/spring-boot-schedule/</guid>
+      <description>开启定时任务 @Configuration @EnableScheduling @ComponentScan(basePackages=&amp;quot;com.myco.tasks&amp;quot;) public class AppConfig { } 如果需要对定时任务的生命周期有其他的操作，可以实现接口SchedulingConfigurer @Configuration @EnableScheduling public class AppConfig implements SchedulingConfigurer { @Override</description>
+    </item>
+    
+    <item>
       <title>大浏览量系统的静态化架构设计</title>
       <link>https://www.mingaccount.com/2018/08/static-sturcture-design/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
@@ -179,15 +188,6 @@
       
       <guid>https://www.mingaccount.com/2018/05/spring-transaction-invalid/</guid>
       <description>问题代码 service方法抛出了异常，但是没有rollback @Transactional public void batchInsert() throws CommonException{} 抛出的自定义异常继承于Exception public class CommonException extends Exception{} 问题原因 @Tra</description>
-    </item>
-    
-    <item>
-      <title>quartz cron表达式详解</title>
-      <link>https://www.mingaccount.com/2018/05/quartz-cron/</link>
-      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/05/quartz-cron/</guid>
-      <description>Cron表达式是一个字符串，字符串以5或6个空格隔开，分为6或7个域，每一个域代表一个含义，Cron有如下两种语法格式： （1） Seconds Minutes Hours DayofMonth Month DayofWeek Year</description>
     </item>
     
   </channel>

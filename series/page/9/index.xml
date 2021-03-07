@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>装饰模式</title>
+      <link>https://www.mingaccount.com/2017/01/decorator-pattern/</link>
+      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/01/decorator-pattern/</guid>
+      <description>简介 动态地给一个对象添加一些额外的职责，就增加功能来说，装饰模式比生成子类更加灵活。 装饰模式常用在为主类添加一些特有的功能的时候。装饰模式可</description>
+    </item>
+    
+    <item>
       <title>java7特性try-with-resources</title>
       <link>https://www.mingaccount.com/2016/08/try-with-resources/</link>
       <pubDate>Tue, 09 Aug 2016 00:00:00 +0000</pubDate>

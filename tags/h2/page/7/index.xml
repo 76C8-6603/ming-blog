@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>excel拆分(split)功能实现</title>
+      <link>https://www.mingaccount.com/2017/10/split-regexp/</link>
+      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/10/split-regexp/</guid>
+      <description>excel拆分规则 固定长度拆分 指定符号拆分 忽略重复拆分符号 带文本识别符号的拆分（比如&amp;quot;1,2,3,4,5&amp;quot;现在按照逗号分</description>
+    </item>
+    
+    <item>
       <title>Java8 lamda表达式中的parallel</title>
       <link>https://www.mingaccount.com/2017/09/java8-parallel/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
@@ -179,15 +188,6 @@
       
       <guid>https://www.mingaccount.com/2017/06/maven-dependency-scope/</guid>
       <description>compile This is the default scope, used if none is specified. Compile dependencies are available in all classpaths of a project. Furthermore, those dependencies are propagated to dependent projects. provided This is much like compile, but indicates you expect the JDK or a container to provide the dependency at runtime. For example, when building a web application for the Java Enterprise Edition, you would set the dependency on the Servlet</description>
-    </item>
-    
-    <item>
-      <title>Maven命令备忘</title>
-      <link>https://www.mingaccount.com/2017/06/maven-common-command/</link>
-      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/06/maven-common-command/</guid>
-      <description># 编译项目 mvn compile # 执行项目中的单元测试 # 查找单元测试类的默认规则：**/*Test.java;**/Test*.java;**/*TestCa</description>
     </item>
     
   </channel>
