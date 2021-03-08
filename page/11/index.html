@@ -270,7 +270,7 @@
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/redis/" class="tag-list-link">redis</a><span
-                    class="tag-list-count">1</span></li>
+                    class="tag-list-count">2</span></li>
             
             
             <li class="tag-list-item"><a href="https://www.mingaccount.com/tags/regexp/" class="tag-list-link">regexp</a><span
@@ -382,6 +382,42 @@
     
     
     
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2018/09/xml-serialize/"
+    >xml序列化和反序列化</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">
+        XmlMapper 依赖 &lt;dependency&gt; &lt;groupId&gt;com.fasterxml.jackson.dataformat&lt;/groupId&gt; &lt;artifactId&gt;jackson-dataformat-xml&lt;/artifactId&gt; &lt;/dependency&gt; 基础类 @Data class SimpleBean { private int x = 1; private int y = 2; } 序列化到xml String @Test public void whenJavaSerializedToXmlStr_thenCorrect() throws JsonProcessingException { XmlMapper xmlMapper = new XmlMapper(); String xml = xmlMapper.writeValueAsString(new SimpleBean()); assertNotNull(xml); } 得到的结果： &lt;SimpleBean&gt; &lt;x&gt;1&lt;/x&gt; &lt;y&gt;2&lt;/y&gt; &lt;/SimpleBean&gt; 序列化到xml File
+      </div>
+      <p class="article-meta">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.mingaccount.com/2018/09/xml-serialize/" class="">
+  <time datetime="2018-09-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-09-21</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/java/"> java </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2018/09/xml-serialize/#comments" class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 414words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1minutes </span>
+      </p>
+    </article>
     <article
       class="article article-type-page"
       itemscope
@@ -599,42 +635,6 @@
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1132words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 3minutes </span>
       </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2018/08/java8-lamda-interface/"
-    >[译]Java8的函数式接口</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        Java8引入了 java.util.function 包，他包含了函数式接口，具体的描述在以下api说明文档中： 函数式接口为lambda表达式和方法引用提供目标类型。每个函数式
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://www.mingaccount.com/2018/08/java8-lamda-interface/" class="">
-  <time datetime="2018-08-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-08-21</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/java/"> java </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2018/08/java8-lamda-interface/#comments" class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 846words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
-      </p>
     </article></div>
   
 <nav class="bar bar-footer clearfix" data-stick-bottom>
@@ -652,7 +652,7 @@
       </li>
     </ul>
     <div class="total-article bar-right">
-      Page:11/25
+      Page:11/26
     </div>
   </div>
 </nav>

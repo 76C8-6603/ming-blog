@@ -5,10 +5,19 @@
     <link>https://www.mingaccount.com/tags/redis/</link>
     <description>Recent content in redis on Ming Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 05 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Nov 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.mingaccount.com/tags/redis/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vim命令备忘</title>
+      <link>https://www.mingaccount.com/2018/08/vim-common-command/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2018/08/vim-common-command/</guid>
+      <description>vi /etc/hosts i 修改模式 esc 退出修改 :q 正常退出(文件没有修改 :q! 不保存退出 :wq 保存退出 G 跳到末尾行 dd 删除当前行 gg 跳到第一行第一个字符 $ 跳到当前行的最后一个字</description>
+    </item>
     
     <item>
       <title>SpringBoot定时任务</title>
@@ -179,15 +188,6 @@
       
       <guid>https://www.mingaccount.com/2018/05/hutool/</guid>
       <description>Hutool封装大量java工具类 maven配置： &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;cn.hutool&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;hutool-all&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.4.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; API文档 官方首页</description>
-    </item>
-    
-    <item>
-      <title>Spring @Transactional事务失效</title>
-      <link>https://www.mingaccount.com/2018/05/spring-transaction-invalid/</link>
-      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2018/05/spring-transaction-invalid/</guid>
-      <description>问题代码 service方法抛出了异常，但是没有rollback @Transactional public void batchInsert() throws CommonException{} 抛出的自定义异常继承于Exception public class CommonException extends Exception{} 问题原因 @Tra</description>
     </item>
     
   </channel>

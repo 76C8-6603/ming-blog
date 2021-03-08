@@ -46,6 +46,16 @@
     </item>
     
     <item>
+      <title>redis.conf</title>
+      <link>https://www.mingaccount.com/2019/11/redis-conf/</link>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2019/11/redis-conf/</guid>
+      <description>redis.conf
+ # Redis configuration file example. # # Note that in order to read the configuration file, Redis must be # started with the file path as first argument: # # ./redis-server /path/to/redis.conf # Note on units: when memory size is needed, it is possible to specify # it in the usual form of 1k 5GB 4M and so forth: # # 1k =&amp;gt; 1000 bytes # 1kb =&amp;gt; 1024 bytes # 1m =&amp;gt; 1000000 bytes # 1mb =&amp;gt; 1024*1024 bytes # 1g =&amp;gt; 1000000000 bytes # 1gb =&amp;gt; 1024*1024*1024 bytes # # units are case insensitive so 1GB 1Gb 1gB are all the same.</description>
+    </item>
+    
+    <item>
       <title>db2 cast decimal异常</title>
       <link>https://www.mingaccount.com/2019/11/db2-cast-decimal-exception/</link>
       <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
@@ -178,15 +188,6 @@
       
       <guid>https://www.mingaccount.com/2019/08/jenkins-sh-permission-denied/</guid>
       <description>Jenkinsfile pipeline { agent any stages { stage(&#39;Test&#39;) { steps { sh &#39;./mvnw test&#39; } } } post { always { junit &#39;target/surefire-reports/*.xml&#39; } } } 异常 ./mvnw: Permission denied 解决方案 git update-index --chmod +x mvnw</description>
-    </item>
-    
-    <item>
-      <title>[转]Spring中使用@Autowired注解静态实例对象</title>
-      <link>https://www.mingaccount.com/2019/07/spring-autowired-static-object/</link>
-      <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2019/07/spring-autowired-static-object/</guid>
-      <description>问题 最近项目小组在重新规划工程的业务缓存，其中涉及到部分代码重构，过程中发现有些工具类中的静态方法需要依赖别的对象实例（该实例已配置在xml</description>
     </item>
     
   </channel>

@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>Maven依赖scope属性</title>
+      <link>https://www.mingaccount.com/2017/06/maven-dependency-scope/</link>
+      <pubDate>Fri, 16 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/06/maven-dependency-scope/</guid>
+      <description>compile This is the default scope, used if none is specified. Compile dependencies are available in all classpaths of a project. Furthermore, those dependencies are propagated to dependent projects. provided This is much like compile, but indicates you expect the JDK or a container to provide the dependency at runtime. For example, when building a web application for the Java Enterprise Edition, you would set the dependency on the Servlet</description>
+    </item>
+    
+    <item>
       <title>Maven命令备忘</title>
       <link>https://www.mingaccount.com/2017/06/maven-common-command/</link>
       <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>https://www.mingaccount.com/2017/01/prototype-pattern/</guid>
       <description>简介 用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。[DP] 原型模式要表达的意思就是克隆。当多个对象只有个别属性值不一样时，</description>
-    </item>
-    
-    <item>
-      <title>策略模式</title>
-      <link>https://www.mingaccount.com/2017/01/strategy-pattern/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/01/strategy-pattern/</guid>
-      <description>简介 策略模式：它定义了算法家族，分别封装起来，让他们之间可以互相替换，此模式让算法的变化，不会影响到使用算法的客户。 所谓的策略模式跟简单工厂</description>
     </item>
     
   </channel>

@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>如何在资源文件中读取Maven相关的参数</title>
+      <link>https://www.mingaccount.com/2017/10/maven-filter-resources-file/</link>
+      <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.mingaccount.com/2017/10/maven-filter-resources-file/</guid>
+      <description>pom resources 首先要为pom文件新添一个resources标签 &amp;lt;project&amp;gt; &amp;lt;name&amp;gt;...&amp;lt;/name&amp;gt; &amp;lt;groupId&amp;gt;...&amp;lt;/groupId&amp;gt; &amp;lt;version&amp;gt;...&amp;lt;/version&amp;gt; ... &amp;lt;build&amp;gt; &amp;lt;resources&amp;gt; &amp;lt;resource&amp;gt; &amp;lt;directory&amp;gt;src/main/resources&amp;lt;/directory&amp;gt; &amp;lt;/resource&amp;gt; &amp;lt;filtering&amp;gt;true&amp;lt;/filtering&amp;gt; &amp;lt;/resources&amp;gt; &amp;lt;/build&amp;gt; &amp;lt;/project&amp;gt; 默认情况下&amp;lt;filtering&amp;gt;的属性为fals</description>
+    </item>
+    
+    <item>
       <title>excel拆分(split)功能实现</title>
       <link>https://www.mingaccount.com/2017/10/split-regexp/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>https://www.mingaccount.com/2017/07/markdown-lifecycle/</guid>
       <description>lifecycle-phase maven有三个内部生命周期：default，clean，和site。 每个生命周期由多个阶段(phase)组成 clean Phase Description pre-clean execute processes needed prior to the actual project cleaning clean</description>
-    </item>
-    
-    <item>
-      <title>Maven依赖scope属性</title>
-      <link>https://www.mingaccount.com/2017/06/maven-dependency-scope/</link>
-      <pubDate>Fri, 16 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.mingaccount.com/2017/06/maven-dependency-scope/</guid>
-      <description>compile This is the default scope, used if none is specified. Compile dependencies are available in all classpaths of a project. Furthermore, those dependencies are propagated to dependent projects. provided This is much like compile, but indicates you expect the JDK or a container to provide the dependency at runtime. For example, when building a web application for the Java Enterprise Edition, you would set the dependency on the Servlet</description>
     </item>
     
   </channel>
