@@ -7,9 +7,17 @@
 
 客户端指令
 ```redis
-GET key #获取指定key的值
-DEL key #删除指定key的键值
+#获取指定key的值
+GET key 
 
+#删除指定key的键值
+DEL key 
+
+#列出所有key
+KEYS *  
+
+#模糊匹配所有key
+KEYS user*  
 KEYS *  #列出所有key
 KEYS user*  #模糊匹配所有key
 
