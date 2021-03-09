@@ -130,4 +130,6 @@ ssh-keygen #生成SSH key
 #在目录下查找循环引用
 find -L ./ -mindepth 15
 
+# 定时任务
+sudo crontab -e
 ```
