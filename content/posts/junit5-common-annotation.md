@@ -2,7 +2,7 @@
 
     title: "Junit5常用注解"
     date: 2018-11-13
-    tags: ["junit5"]
+    tags: ["test"]
 
 ---
 ### @BeforeAll

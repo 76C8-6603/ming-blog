@@ -1,7 +1,7 @@
 ---
     title: "Spring集成测试"
     date: 2017-09-15
-    tags: ["spring","unit-test","junit4","junit5","testng","mockmvc"]
+    tags: ["spring","test"]
     
 ---
 

@@ -17,6 +17,9 @@ pwd #查看当前目录的绝对路径
 
 ll #查看目录下文件的详细信息，包括权限属组等信息
 
+# 创建一个软连接到指定目录，相当于快捷方式
+ln -s ~/test.sh /etc/test/
+
 find / -name web.xml #查看名字为web.xml的文件，需要等待片刻
 
 find .|xargs grep -rl "google.com" #搜索当前目录文件内容并返回文件名
@@ -123,4 +126,8 @@ apt-get upgrade [软件名] #ubuntu更新软件
 jps #查看当前所有的java进程，并显示进程id
 
 ssh-keygen #生成SSH key
+
+#在目录下查找循环引用
+find -L ./ -mindepth 15
+
 ```
