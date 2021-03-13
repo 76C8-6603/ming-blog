@@ -132,4 +132,10 @@ find -L ./ -mindepth 15
 
 # 定时任务
 sudo crontab -e
+
+# 查询对应端口的service
+sudo netstat -plant | grep 80
+
+# 检查服务的状态
+systemctl status nginx
 ```
