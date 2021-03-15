@@ -30,22 +30,28 @@ find .|xargs grep -rn "google.com" #搜索当前目录文件内容并返回文�
 
 find .|xargs grep -rn1 "google.com" #搜索当前目录文件内容并返回文件名，并展示上下文内容
 
+# 查看文件的最后一百行 -f 属性循环读取
+tail -n 100 cata.log 
+# 查看文件中过滤内容（忽略大小写）的前后五行
+tail -n 40 -f cata.log|grep -i 'error' -5
+
 mkdir -p #创建文件夹
 
 cat [目录1]  >> [目录2] #把目录1的文件内容输入到目录2中 
 
 chmod a+x filename #让执行文件能被./filename调用
 
-mv #文件移动或者重命名
-
 #将当前目录下的所有文件移到上层目录，以便删除上级目录
 mv * ../
 
-vi /etc/hosts #HOST修改需重启
+#HOST修改需重启
+vi /etc/hosts 
 
-vi /etc/resolv.conf #DNS修改即时生效
+#DNS修改即时生效
+vi /etc/resolv.conf 
 
-vi /etc/sysconfig/network-scripts/ifcfg-eth0 #IP修改需重启
+#IP修改需重启
+vi /etc/sysconfig/network-scripts/ifcfg-eth0 
 
 cat /etc/os-release #查看当前系统版本信息
 
