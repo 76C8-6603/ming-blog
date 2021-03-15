@@ -1,6 +1,6 @@
 ---
 
-    title: "Spring cloud circuit breaker 熔断器\断路器"
+    title: "Spring cloud circuit breaker 熔断器断路器"
     date: 2021-02-23
     tags: ["spring cloud"]
     draft: true
