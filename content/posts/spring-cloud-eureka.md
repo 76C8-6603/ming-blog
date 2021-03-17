@@ -1,6 +1,6 @@
 ---
 
-    title: "Spring cloud eurake"
+    title: "Spring Cloud eurake"
     date: 2020-12-27
     tags: ["spring cloud","eureka"]
 ---
