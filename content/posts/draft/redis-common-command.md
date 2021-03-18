@@ -18,10 +18,20 @@ KEYS *
 
 #模糊匹配所有key
 KEYS user*  
-KEYS *  #列出所有key
-KEYS user*  #模糊匹配所有key
+
+# 设置键值
+# EX 指定超时时间，单位秒
+# PX 指定超时时间，单位毫秒
+# EXAT 指定Unix时间超时，单位秒
+# PXAT 指定Unix时间超时，单位毫秒
+# nx 代表对应key值不存在时成功，xx相反，代表对应key值存在时成功
+# KEEPTTL 保留与key值关联的生存时间
+# GET 返回set前的旧值，如果key不存在就是nil
+SET key value [EX seconds] [PX milliseconds] [EXAT timstamp-seconds] [PXAT timestamp-milliseconds] [KEEPTTL]  [nx/xx] [GET]
+
 
 ```
+详细参考[redis commands](https://redis.io/commands)
 
 linux命令
 ```shell
@@ -31,4 +41,3 @@ linux命令
 redis-check-aof --fix <filename>
 ```
 
-详细参考[redisdoc](http://redisdoc.com/)
