@@ -20,7 +20,7 @@ public @interface RequestForEnhancement {
 }
 ```
 `RequestForEnhancement`注解包含的成员参数，需要通过方法来申明。如果有默认值，可以通过`default`来指定。  
-成员方法的返回类型是有限制的，只能是：  
+成员方法的返回类型是有限制的，只能是：   
 * 原始类型
 * String
 * Class
