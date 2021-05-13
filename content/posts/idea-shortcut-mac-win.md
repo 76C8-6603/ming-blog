@@ -86,6 +86,7 @@
 | Alt + Shift + 后方向键 | Option + Shift + 后方向键 | 移动光标所在行向下移动                                       |
 | Ctrl + Shift + Alt + V | Command + Shift + Option + V | 无格式黏贴       |
 | Ctrl + Shift + Alt + S | Command + ;                  | 打开当前项目设置 |
+| Ctrl + Shift + F10 | Control + Shift + R | 运行当前可执行方法 |
 
 
 
