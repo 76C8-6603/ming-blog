@@ -90,6 +90,6 @@
 | Ctrl + Shift + M | Option + Command + M | extract method |
 | Ctrl + Alt + O | Control + Option + O | 去掉当前类中所有无效import |
 | Ctrl + Alt + Z | Option + Command + Z | revert commit | 
-
+| Ctrl + {/} | Control + M | 切换光标到离当前代码块最近的括号上 |
 
 
