@@ -87,6 +87,9 @@
 | Ctrl + Shift + Alt + V | Command + Shift + Option + V | 无格式黏贴       |
 | Ctrl + Shift + Alt + S | Command + ;                  | 打开当前项目设置 |
 | Ctrl + Shift + F10 | Control + Shift + R | 运行当前可执行方法 |
+| Ctrl + Shift + M | Option + Command + M | extract method |
+| Ctrl + Alt + O | Control + Option + O | 去掉当前类中所有无效import |
+| Ctrl + Alt + Z | Option + Command + Z | revert commit | 
 
 
 

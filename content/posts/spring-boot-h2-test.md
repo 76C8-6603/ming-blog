@@ -2,7 +2,7 @@
 
     title: "Spring boot h2集成数据库进行测试"
     date: 2018-10-22
-    tags: ["spring","h2"]
+    tags: ["spring","h2","test"]
 
 ---
 
