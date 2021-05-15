@@ -13,8 +13,8 @@ OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
 # 解决方案
 挂tz，需要设置一下代理
 ```shell
-git config --global http.proxy "127.0.0.1:1080"
-git config --global https.proxy "127.0.0.1:1080"
+git config --global http.proxy "socks5://127.0.0.1:1080"
+git config --global https.proxy "socks5://127.0.0.1:1080"
 ```
 如果不想设置全局的话删掉`--global`即可  
 注意上面的ip和端口号，要参考代理软件的socket配置，比如shadow**** 可以在`偏好设置->高级`中找到
