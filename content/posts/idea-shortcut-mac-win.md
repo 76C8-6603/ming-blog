@@ -90,6 +90,7 @@
 | Ctrl + Shift + M | Option + Command + M | extract method |
 | Ctrl + Alt + O | Control + Option + O | 去掉当前类中所有无效import |
 | Ctrl + Alt + Z | Option + Command + Z | revert commit | 
+| 忘了 | Shift + Command + N | 新增草稿文件 |
 
 
 
