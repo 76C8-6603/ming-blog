@@ -41,4 +41,31 @@ pipeline.prettyPrint(tokenAnnotation,System.out);
 ```
 上面的例子可以对整句话进行解析，最后打印的结果是其中每个单词的分析结果。分析结果的格式是每个属性都对应了一个结果，比如lemma词根对应一个结果，truecase大小写对应一个结果，可以直接获取，也可以进行重写合并等操作，具体不展开，参考官方文档。  
 
+
+## 安装
+该工具需要引入两个jar包，一个是程序主体，另外一个是数据内容，根据所要分析的语言不同，选择不同的包下载。
+
+```xml
+<dependency>
+    <groupId>edu.stanford.nlp</groupId>
+    <artifactId>stanford-corenlp</artifactId>
+    <version>4.2.0</version>
+</dependency>
+```
+上面就是程序主体
+
+> 数据内容下载地址： [Standford NLP](https://stanfordnlp.github.io/CoreNLP/#quickstart)  
+
+上面就是数据内容的下载地址，根据不同语言选择，英文的大概有400MB左右，只有直接下载，不能通过maven。  
+下载完成后，可以通过mvn install插件手动安装到本地仓库中
+```shell
+mvn install:install-file \
+   -Dfile=stanford-nlp-models-4.2.0.jar \
+   -DgroupId=edu.stanford.nlp.local \
+   -DartifactId=stanford-nlp-models \
+   -Dversion=4.2.0 \
+   -Dpackaging=jar \
+   -DgeneratePom=true
+```
+
 > 关于更多可用属性，可以参考[all annotator](https://stanfordnlp.github.io/CoreNLP/annotators.html)
