@@ -2,7 +2,7 @@
 
     title: "IDEA快捷键mac对照"
     date: 2021-05-13
-    tags: ["idea"]
+    tags: ["idea","mac"]
 
 ---
 

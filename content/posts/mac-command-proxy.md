@@ -2,7 +2,7 @@
 
     title: "Mac终端代理配置"
     date: 2021-05-15
-    tags: ["linux"]
+    tags: ["linux","mac"]
 
 ---
 # 1. 默认命令配置
