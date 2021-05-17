@@ -2,7 +2,7 @@
 
     title: "IDEA快捷键mac对照"
     date: 2021-05-13
-    tags: ["idea"]
+    tags: ["idea","mac"]
 
 ---
 
@@ -91,5 +91,7 @@
 | Ctrl + Alt + O | Control + Option + O | 去掉当前类中所有无效import |
 | Ctrl + Alt + Z | Option + Command + Z | revert commit | 
 | Ctrl + {/} | Control + M | 切换光标到离当前代码块最近的括号上 |
+| 忘了 | Shift + Command + N | 新增草稿文件 |
+
 
 
