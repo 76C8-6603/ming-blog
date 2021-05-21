@@ -5,4 +5,4 @@
     tags: ["spring","test"]
 
 ---
-参考官方文档[Spring Boot Test](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-testing)
+参考官方文档[Spring Boot Test](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.testing)
