@@ -66,4 +66,7 @@ curl <仓库地址>/v2/_catalog
 
 # 查询镜像tag(版本）
 curl <仓库地址>/h2/<镜像名>/tags/list
+
+# 创建并启动容器
+docker-compose up -d
 ```
