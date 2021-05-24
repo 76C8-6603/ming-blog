@@ -76,4 +76,7 @@ mvn --encrypt-password <password>
 
 # 加载资源文件，通常用于检查指定${}是否正常赋值
 mvn process-resources
+
+# maven 清理所有仓库和缓存
+mvn dependency:purge-local-repository -DactTransitively=false -DreResolve=false
 ```

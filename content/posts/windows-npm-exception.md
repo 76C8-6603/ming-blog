@@ -1,7 +1,7 @@
 ---
 title: "Windows CMD 错误pngquant failed to build, make sure that libpng-dev is installed"
 date: 2020-10-18
-tags: ["windows","npm"]
+tags: ["windows","nodejs"]
 
 ---
 
