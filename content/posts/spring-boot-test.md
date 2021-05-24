@@ -1,6 +1,6 @@
 ---
 
-    title: "Srping Boot测试"
+    title: "Spring Boot测试"
     date: 2018-05-21
     tags: ["spring","test"]
 
