@@ -37,7 +37,7 @@ docker container rm [container-name]
 docker ps
 
 # 进入容器
-docker exec -it mysql bash
+docker exec -it mysql [bash][/bin/bash][/bin/sh]
 
 # 删除镜像，注意之前必须停止容器并删除
 docker rmi [镜像id]
@@ -69,4 +69,7 @@ curl <仓库地址>/h2/<镜像名>/tags/list
 
 # 创建并启动容器
 docker-compose up -d
+
+# 将容器内部的文件拷贝到宿主机
+docker cp mawall_ppcl:/data/dist  /home/data/test/
 ```

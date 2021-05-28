@@ -144,4 +144,28 @@ sudo netstat -plant | grep 80
 
 # 检查服务的状态
 systemctl status nginx
+
+# 可以解决一些服务不可见的问题
+systemctl daemon-reload
+
+# 启动，终止，和重启进程
+systemctl start mongod
+systemctl stop mongod
+systemctl restart mongod
+
+# 让进程随系统自启动
+systemctl enable mongod
+
+# centos7 防火墙添加端口
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --reload
+
+# centos7 查看所有现有规则
+firewall-cmd --list-ports
+
+# centos7 开启端口区间
+firewall-cmd --zone=public --add-port=4400-4600/tcp --permanent
+
+# 查看端口占用情况
+netstat -tunlp | grep 8080
 ```

@@ -11,7 +11,7 @@
 git pull
 
 #拉线上代码
-git clone https://***.git.com
+git clone [-b dev] https://***.git.com
 
 #查看工作区状态
 git status -s
