@@ -8,20 +8,16 @@
 ```java
 Settings settings = new Settings();
 //去掉别名的引号
-settings.setRenderNameStyle(RenderNameStyle.AS_IS); settings.setRenderQuotedNames(RenderQuotedNames.NEVER);
+settings.setRenderQuotedNames(RenderQuotedNames.NEVER);
 Configuration configuration = new DefaultConfiguration().set(settings); 
 //设置sql打印监听
-configuration.set(new DefaultExecuteListenerProvider(new SqlLogListener(TITLE)));
+configuration.set(new DefaultExecuteListenerProvider(new SqlLogListener()));
 //获取sql dialect
-SQLDialect sqlDialect = dataSourceDef.getDataSourceType().getSqlDialectFamily();
-configuration.set(sqlDialect); //数据源配置
+configuration.set(SQLDialect.MYSQL); 
 //获取connection
 try {
     Connection connection = ...;
     configuration.set(connection);
-} catch (Exception e) {
-    throw new NewOperatorException("获取数据库连接异常"); 
-}
+} catch (Exception e) {}
 this.dslContext = DSL.using(configuration);
-return this.dslContext;
 ```
