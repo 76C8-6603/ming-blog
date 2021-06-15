@@ -131,7 +131,11 @@ apt-get upgrade [软件名] #ubuntu更新软件
 
 jps #查看当前所有的java进程，并显示进程id
 
-ssh-keygen #生成SSH key
+# 生成SSH key
+ssh-keygen 
+
+# 设置免密登陆，前提是已执行ssh-keygen
+ssh-copy-id root@192.168.100.100
 
 #在目录下查找循环引用
 find -L ./ -mindepth 15
@@ -168,4 +172,10 @@ firewall-cmd --zone=public --add-port=4400-4600/tcp --permanent
 
 # 查看端口占用情况
 netstat -tunlp | grep 8080
+
+# 查看主机名称
+hostname
+
+# 修改主机名称
+hostnamectl set-hostname custom-host
 ```
