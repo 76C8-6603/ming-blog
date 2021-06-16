@@ -178,4 +178,25 @@ hostname
 
 # 修改主机名称
 hostnamectl set-hostname custom-host
+
+# 挂载情况
+df -h
+
+# 挂载镜像
+mount *.ios /mnt
+
+# 取消挂载
+umount /mnt
+
+# centos/redhat 升级历史
+yum history
+
+# centos/redhat 升级回滚
+yum history undo {history id}
+
+# centos/redhat 展示所有重复的安装
+yum list openssl-libs --show-duplicates
+
+# 降级指定的软件
+yum downgrade openssl-libs
 ```
