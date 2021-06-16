@@ -105,7 +105,8 @@ sudo useradd -m hadoop -s /bin/bash #添加用户
 
 sudo adduser hadoop sudo #给用户追加管理员权限
 
-top #表示1分钟，5分钟，15分钟的运行队列平均进程数
+# 实时查看资源占用情况
+top 
 
 while true;do ps -u your-user-name -L | wc -l;sleep 1;done #查看当前用户开启的线程数
 
@@ -183,7 +184,7 @@ hostnamectl set-hostname custom-host
 df -h
 
 # 挂载镜像
-mount *.ios /mnt
+mount -o loop *.ios /mnt
 
 # 取消挂载
 umount /mnt
@@ -202,4 +203,7 @@ yum downgrade openssl-libs
 
 # 实时修改内核运行参数
 sysctl vm.swappiness=10
+
+# 查看内存占用
+free
 ```
