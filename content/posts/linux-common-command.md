@@ -199,4 +199,7 @@ yum list openssl-libs --show-duplicates
 
 # 降级指定的软件
 yum downgrade openssl-libs
+
+# 实时修改内核运行参数
+sysctl vm.swappiness=10
 ```
