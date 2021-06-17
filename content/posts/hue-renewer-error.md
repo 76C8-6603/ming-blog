@@ -9,4 +9,9 @@
 # 解决方案
 查看`/var/kerberos/krb5kdc/kdc.conf`  
 * 如果有`ticket_lifetime = 10m`注释掉。  
-* 在realms对应的域名下添加`max.renewable.life = 90d 0h 0m 0s`
+
+执行命令
+```shell
+kadmin.local -q "modprinc -maxrenewlife 90day krbtgt/EXAMPLE.COM@EXAMPLE.COM"
+kadmin.local -q "modprinc -maxrenewlife 90day allow_renewable hue/cdh-1@EXAMPLE.COM"
+```
