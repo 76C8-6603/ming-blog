@@ -72,4 +72,10 @@ docker-compose up -d
 
 # 将容器内部的文件拷贝到宿主机
 docker cp mawall_ppcl:/data/dist  /home/data/test/
+
+# 查看当前容器的资源占用情况
+docker stats
+
+# 在容器外部直接执行命令
+docker exec -i custom-mysql mysql -uroot -p
 ```
