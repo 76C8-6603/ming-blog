@@ -206,4 +206,10 @@ sysctl vm.swappiness=10
 
 # 查看内存占用
 free
+
+# 树形结构查看目录
+tree /etc
+
+# 将source的内容追加到target内容之后
+cat source.csv >> target.csv
 ```
