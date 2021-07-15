@@ -212,4 +212,7 @@ tree /etc
 
 # 将source的内容追加到target内容之后
 cat source.csv >> target.csv
+
+# 统计文件行数。还有其他选项：-c统计字节数，-m统计字符数，-w统计字数，-L打印最长行的长度
+wc -l target.csv
 ```
