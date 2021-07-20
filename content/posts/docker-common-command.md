@@ -78,4 +78,7 @@ docker stats
 
 # 在容器外部直接执行命令
 docker exec -i custom-mysql mysql -uroot -p
+
+# 检查容器的配置信息，以格式化json展现，包括容器的运行状态信息
+docker inspect elasticsearch
 ```
