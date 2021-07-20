@@ -3,7 +3,6 @@
     title: "Redis数据类型"
     date: 2019-12-08
     tags: ["redis"]
-    draft: true
 ---
 
 # String
