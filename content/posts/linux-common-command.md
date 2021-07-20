@@ -180,9 +180,6 @@ hostname
 # 修改主机名称
 hostnamectl set-hostname custom-host
 
-# 挂载情况
-df -h
-
 # 挂载镜像
 mount -o loop *.ios /mnt
 
@@ -215,4 +212,16 @@ cat source.csv >> target.csv
 
 # 统计文件行数。还有其他选项：-c统计字节数，-m统计字符数，-w统计字数，-L打印最长行的长度
 wc -l target.csv
+
+# 磁盘占用情况，挂载情况
+df -h
+
+# 查看哪个目录占用空间最大
+du -s /* | sort -nr
+
+# 查看当前目录下文件大小情况
+du -h --max-depth=1
+
+# 查看删除的文件是否被进程占用
+lsof | grep deleted
 ```
