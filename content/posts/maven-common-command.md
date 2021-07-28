@@ -79,4 +79,7 @@ mvn process-resources
 
 # maven 清理所有仓库和缓存
 mvn dependency:purge-local-repository -DactTransitively=false -DreResolve=false
+
+# 查看maven的debug信息，其中包含当前使用的仓库，settings.xml等
+mvn -X
 ```

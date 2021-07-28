@@ -224,4 +224,7 @@ du -h --max-depth=1
 
 # 查看删除的文件是否被进程占用
 lsof | grep deleted
+
+# 登录没有shell的服务账号，比如jenkins
+sudo su -s /bin/bash jenkins
 ```
