@@ -81,4 +81,7 @@ docker exec -i custom-mysql mysql -uroot -p
 
 # 检查容器的配置信息，以格式化json展现，包括容器的运行状态信息
 docker inspect elasticsearch
+
+# 查看容器网段
+docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
 ```
