@@ -84,4 +84,10 @@ docker inspect elasticsearch
 
 # 查看容器网段
 docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
+
+# 保存离线镜像
+docker save -o .\firstTry.tar $(docker images --format "{{.Repository}}:{{.Tag}}")
+
+# 从本地加载离线镜像
+docker load -i .\firstTry.tar
 ```
