@@ -90,4 +90,7 @@ docker save -o .\firstTry.tar $(docker images --format "{{.Repository}}:{{.Tag}}
 
 # 从本地加载离线镜像
 docker load -i .\firstTry.tar
+
+# 删除所有无效镜像
+docker image prune 
 ```
