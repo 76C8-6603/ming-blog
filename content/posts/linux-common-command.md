@@ -202,7 +202,10 @@ yum downgrade openssl-libs
 sysctl vm.swappiness=10
 
 # 查看内存占用
-free
+free -m
+
+# 清理内存
+echo 1 > /proc/sys/vm/drop_caches
 
 # 树形结构查看目录
 tree /etc
