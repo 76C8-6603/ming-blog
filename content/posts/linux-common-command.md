@@ -230,4 +230,7 @@ lsof | grep deleted
 
 # 登录没有shell的服务账号，比如jenkins
 sudo su -s /bin/bash jenkins
+
+# 文件校验sha-256
+shasum -a 256 web.jar
 ```
