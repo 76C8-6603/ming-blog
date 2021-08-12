@@ -93,4 +93,7 @@ docker load -i .\firstTry.tar
 
 # 删除所有无效镜像
 docker image prune 
+
+# 删除以test开头的所有容器
+docker rm -f $(docker ps -a |  grep "test*"  | awk '{print $1}')
 ```
