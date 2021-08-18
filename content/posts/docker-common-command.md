@@ -76,8 +76,8 @@ docker cp mawall_ppcl:/data/dist  /home/data/test/
 # 查看当前容器的资源占用情况
 docker stats
 
-# 在容器外部直接执行命令
-docker exec -i custom-mysql mysql -uroot -p
+# 在容器外部直接执行命令(这里是执行mysql脚本）
+docker exec -i common-mysql mysql -uroot -ppassword <init.sql
 
 # 检查容器的配置信息，以格式化json展现，包括容器的运行状态信息
 docker inspect elasticsearch
