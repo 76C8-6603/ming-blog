@@ -67,6 +67,10 @@ curl <仓库地址>/v2/_catalog
 # 查询镜像tag(版本）
 curl <仓库地址>/h2/<镜像名>/tags/list
 
+# 安装docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
 # 创建并启动容器
 docker-compose up -d
 

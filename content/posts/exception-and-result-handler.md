@@ -8,10 +8,11 @@
 # 完全处理后的controller
 ```java
 @RestController
+@DefaultEx(TestException.class)
 public class TestController{
     
     @GetMapping
-    @UnknownExceptionHandler(msg = "test1 exception", baseException = TestException.class)
+    @UnknownEx("test1 exception")
     public String test(String arg) {
         if(StringUtils.isEmpty(arg)){
             throw new TestException("参数arg不能为空");
@@ -20,14 +21,16 @@ public class TestController{
     }
 
     @PostMapping
-    @UnknownExceptionHandler(msg = "test2 exception", baseException = TestException.class)
+    @UnknownEx(msg = "test2 exception", baseException = TestException.class)
     public Map<String, String> test2(String arg) {
         //...
         return map;
     }
 
+    /**
+     * 因为类注解DefaultEx的存在，这个方法的异常也会被捕获封装
+     */
     @GetMapping
-    @UnknownExceptionHandler( baseException = TestException.class)
     public void test3(String arg) {
         //...    
     }
@@ -234,61 +237,99 @@ public class ResultEntity<T> {
 }
 ```
 
-# `@UnknownExceptionHandler`切面
-注解定义： 
+# 异常处理切面
+## `@UnknownEx`注解
 ```java
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface UnknownExceptionHandler {
-    String msg() default "";
-    Class<? extends BaseException> baseException();
+public @interface UnknownEx {
+    @AliasFor("msg")
+    String value() default "未知异常";
+    @AliasFor("value")
+    String msg() default "未知异常";
+    Class<? extends BaseException> defaultException() default UnknownException.class;
 }
 ```
 
-切面代码：
+## `@DefaultEx`注解
+```java
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+public @interface DefaultEx {
+    Class<? extends BaseException> value();
+}
+```
+
+## 切面代码：
 ```java
 @Aspect
 @Component
 public class UnknownExceptionAdvice {
-    
-    @Pointcut("within(com.ming.dictionary..*)")
+
+    @Pointcut("within(com.test..*)")
     public void withinPackage() {}
 
     /**
-     * 通过注解{@link UnknownExceptionHandler}支持的未知异常处理
-     * 如果项目基础异常{@link BaseException}的子类，直接抛出
-     * 如果是未知异常，则需要获取{@link UnknownExceptionHandler}注解的异常信息
+     * 方法被注解{@link UnknownEx}修饰，或者类被{@link DefaultEx}修饰
+     * @param joinPoint 切面信息
      * @param ex 方法本来抛出的异常
-     * @param unknownExceptionHandler 目标方法的注解
-     * @throws Throwable 抛出原本异常或者包装异常
      */
-    @AfterThrowing(pointcut = "@annotation(unknownExceptionHandler)" +
+    @AfterThrowing(pointcut = "(@annotation(com.ds.console.annotation.UnknownEx) || @target(com.ds.console.annotation.DefaultEx))" +
             "&& withinPackage() "
             , throwing = "ex"
-            , argNames = "ex,unknownExceptionHandler"
+            , argNames = "joinPoint, ex"
     )
-    public void unknownExceptionHandler(Throwable ex, UnknownExceptionHandler unknownExceptionHandler) throws Throwable {
+    public void unknownExceptionHandler(JoinPoint joinPoint, Throwable ex) throws Throwable {
         if (ex instanceof BaseException) {
             throw ex;
         }else{
             BaseException baseException;
             try {
-                String msg = unknownExceptionHandler.msg();
-                if(StringUtils.isNotEmpty(msg)) {
-                    baseException = unknownExceptionHandler.baseException().getConstructor(String.class,Throwable.class).newInstance(msg,ex);
-                }else{
-                    baseException = unknownExceptionHandler.baseException().getConstructor(Throwable.class).newInstance(ex);
-                }
+                baseException = buildException(joinPoint, ex);
             } catch (Exception e) {
                 throw new BaseException() {
                     @Override
-                    protected ResponseInfoEnum getInfoEnum() {
-                        return ResponseInfoEnum.UNKNOWN_EXCEPTION;
+                    protected ErrorCode getInfoEnum() {
+                        return ErrorCode.UNEXPECTED_ERROR;
                     }
                 };
             }
             throw baseException;
         }
+    }
+
+    /**
+     * 获取默认异常class，可以从类上的{@link DefaultEx}获取，或者从方法上的{@link UnknownEx#defaultException()}获取
+     * @param joinPoint 切面信息
+     * @param ex 方法本来抛出的异常
+     * @return BaseException的实现类
+     */
+    private BaseException buildException(JoinPoint joinPoint, Throwable ex) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        BaseException exception;
+        MethodSignature signature = (MethodSignature) joinPoint.getSignature();
+        UnknownEx unknownEx = signature.getMethod().getAnnotation(UnknownEx.class);
+        DefaultEx defaultEx = joinPoint.getTarget().getClass().getAnnotation(DefaultEx.class);
+
+        if (unknownEx != null) {
+            //如果方法有UnknownEx注解
+            Class<? extends BaseException> baseEx = unknownEx.defaultException();
+            if (baseEx == UnknownException.class && defaultEx != null) {
+                //如果unknownEx注解的异常类为空，并且类有DefaultEx注解
+                baseEx = defaultEx.value();
+            }
+            String msg = unknownEx.msg();
+            if(StringUtils.isNotEmpty(msg)) {
+                exception = baseEx.getConstructor(String.class,Throwable.class).newInstance(msg,ex);
+            }else{
+                exception = baseEx.getConstructor(Throwable.class).newInstance(ex);
+            }
+        }else {
+            //如果方法没有UnknownEx注解，那么类必定有DefaultEx注解
+            exception = defaultEx.value().getConstructor(Throwable.class).newInstance(ex);
+        }
+
+        return exception;
+
     }
 }
 
