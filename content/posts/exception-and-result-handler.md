@@ -279,9 +279,9 @@ public class UnknownExceptionAdvice {
             , throwing = "ex"
             , argNames = "joinPoint, ex"
     )
-    public void unknownExceptionHandler(JoinPoint joinPoint, Throwable ex) throws Throwable {
+    public void unknownExceptionHandler(JoinPoint joinPoint, Throwable ex){
         if (ex instanceof BaseException) {
-            throw ex;
+            throw (BaseException)ex;
         }else{
             BaseException baseException;
             try {
