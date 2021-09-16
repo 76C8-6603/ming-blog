@@ -267,7 +267,9 @@ public @interface DefaultEx {
 public class UnknownExceptionAdvice {
 
     @Pointcut("within(com.test..*)")
-    public void withinPackage() {}
+    public void withinPackage() {
+        //pointcut表达式
+    }
 
     /**
      * 方法被注解{@link UnknownEx}修饰，或者类被{@link DefaultEx}修饰
