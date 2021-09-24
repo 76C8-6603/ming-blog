@@ -100,4 +100,7 @@ docker image prune
 
 # 删除以test开头的所有容器
 docker rm -f $(docker ps -a |  grep "test*"  | awk '{print $1}')
+
+# 设置容器开机启动，这里根据两个容器的id进行设置
+docker container update --restart=always 9153272cbb54 c9c1531b1625
 ```

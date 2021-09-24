@@ -233,4 +233,25 @@ sudo su -s /bin/bash jenkins
 
 # 文件校验sha-256
 shasum -a 256 web.jar
+
+# 删除已输入命令
+control/ctrl + c
+
+# 删除光标前的所有命令
+control/ctrl + u
+
+# 往回删除一个单词
+control/ctrl + w
+
+# 删除光标以后的单词
+control/ctrl + k
+
+# 移动光标到命令头
+control/ctrl + a
+
+# 移动光标到命令尾
+control/ctrl + e
+
+# 清屏
+control/ctrl + l
 ```
