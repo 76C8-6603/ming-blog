@@ -92,7 +92,8 @@
 | Ctrl + Alt + Z | Option + Command + Z | revert commit | 
 | Ctrl + {/} | Control + M | 切换光标到离当前代码块最近的括号上 |
 | 忘了 | Shift + Command + N | 新增草稿文件 |
-| Ctrl + G | Command + L | 
+| Ctrl + G | Command + L | 跳转指定行 |
+| Ctrl + Shift + J | Control + Shift + J | 将下一行与当前行合并 |
 
 
 
