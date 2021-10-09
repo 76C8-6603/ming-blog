@@ -2,7 +2,7 @@
 
     title: "Java中的随机数生成API"
     date: 2018-04-13
-    tags: ["java","random"]
+    tags: ["java"]
 
 ---
 
