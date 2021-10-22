@@ -51,4 +51,9 @@ git submodule add <url> [path]
 # 撤回git add操作
 git reset <file>
 
+# 为当前项目添加第二个远程仓库，别名second
+git remote add second https://test.git
+
+# 查看当前项目的远程仓库
+git remote
 ```
