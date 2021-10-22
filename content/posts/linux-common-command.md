@@ -132,6 +132,10 @@ apt-get upgrade [软件名] #ubuntu更新软件
 
 jps #查看当前所有的java进程，并显示进程id
 
+
+# 根据jps查出的对应id，跳转到指定目录，ll找到log日志文件
+cd /proc/[jps id]/fd
+
 # 生成SSH key
 ssh-keygen 
 
