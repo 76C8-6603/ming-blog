@@ -56,4 +56,12 @@ git remote add second https://test.git
 
 # 查看当前项目的远程仓库
 git remote
+
+# 关掉git代理
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+# 开启git代理
+git config --global http.proxy "socks5://127.0.0.1:1080"
+git config --global https.proxy "socks5://127.0.0.1:1080"
 ```
