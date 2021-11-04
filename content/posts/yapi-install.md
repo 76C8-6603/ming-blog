@@ -5,6 +5,11 @@
     tags: ["linux"]
 
 ---
+## Docker部署
+[yapi docker install](https://github.com/fjc0k/docker-YApi)
+
+
+## 手动安装
 参照官方文档[yapi install](https://hellosean1025.github.io/yapi/devops/index.html)  
 注意提供的可视化部署已不可用，直接通过命令行部署  
 
