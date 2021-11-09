@@ -35,7 +35,10 @@ tail -n 100 cata.log
 # 查看文件中过滤内容（忽略大小写）的前后五行
 tail -n 40 -f cata.log|grep -i 'error' -5
 
-mkdir -p #创建文件夹
+# 创建文件夹
+mkdir -p 
+# 创建多个子目录
+mkdir -p test/{sql,scripts}
 
 cat [目录1]  >> [目录2] #把目录1的文件内容输入到目录2中 
 
@@ -258,4 +261,10 @@ control/ctrl + e
 
 # 清屏
 control/ctrl + l
+
+# chroot new root directory
+mkdir -p new-root/{bin,lib64}
+cp /bin/bash new-root/bin
+cp /lib64/{ld-linux-x86-64.so*,libc.so*,libdl.so.2,libreadline.so*,libtinfo.so*} new-root/lib64
+sudo chroot new-root
 ```
