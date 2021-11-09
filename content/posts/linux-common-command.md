@@ -241,6 +241,9 @@ sudo su -s /bin/bash jenkins
 # 文件校验sha-256
 shasum -a 256 web.jar
 
+# 查看所有进程
+ps aux
+
 # 删除已输入命令
 control/ctrl + c
 
