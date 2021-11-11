@@ -265,9 +265,7 @@ control/ctrl + e
 # 清屏
 control/ctrl + l
 
-# chroot new root directory
-mkdir -p new-root/{bin,lib64}
-cp /bin/bash new-root/bin
-cp /lib64/{ld-linux-x86-64.so*,libc.so*,libdl.so.2,libreadline.so*,libtinfo.so*} new-root/lib64
-sudo chroot new-root
+# trace域名
+traceroute www.google.com
+
 ```
