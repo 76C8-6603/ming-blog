@@ -2,7 +2,7 @@
 
     title: "yapi安装"
     date: 2020-07-05
-    tags: ["linux"]
+    tags: ["yapi"]
 
 ---
 ## Docker部署
