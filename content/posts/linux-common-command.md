@@ -193,6 +193,9 @@ mount -o loop *.ios /mnt
 # 取消挂载
 umount /mnt
 
+# 查看文件所在的文件系统
+df ~/mount-dir
+
 # centos/redhat 升级历史
 yum history
 
@@ -267,5 +270,8 @@ control/ctrl + l
 
 # trace域名
 traceroute www.google.com
+
+# 更新指定文件的时间属性为当前系统时间，如果文件不存在会自动创建（这里会创建0,1,2三个文件）
+touch test/{0,1,2}
 
 ```
