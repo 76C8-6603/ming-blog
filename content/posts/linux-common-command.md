@@ -5,6 +5,8 @@
     
 ---
 
+可参考[man7](https://www.kernel.org/doc/man-pages/)
+
 
 ```shell script
 cd - #查看上一次所在的目录
