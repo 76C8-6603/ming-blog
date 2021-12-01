@@ -17,10 +17,10 @@ kubectl get pod -n <name-space>
 kubectl get svc -n <name-space>	
 
 # 一般在pod部署失败的情况查看一下,pod相关的信息
-kubectl describe pod -n <name-space>	
+kubectl describe pods <pod-name> -n <name-space>	
 
 # 进入pod内部,查看pod的内部信息
-kubectl exec -it <pod-name> -n <name-space> <cmd> 	
+kubectl exec -it <pod-name> -n <name-space> -- /bin/sh 	
 
 # 查看pod的日志信息
 kubectl logs <pod-name> -n <name-space> --tail <numbers> -f	
@@ -33,4 +33,10 @@ kubectl get deployment -n <name-space>
 
 # 可以修改某个pod的部署信息,修改完pod会自动被删除,然后重新拉起修改的内容自动生效
 kubectl edit deployment <deployment-name> -n <name-space>	
+
+# 手动指定pod的镜像版本
+kubectl set image {镜像名} {容器名}={镜像地址}:{tag} -n {namespace}
+
+# 查看容器的环境变量
+kubectl {容器名} -n {namespace} -- env 
 ```
