@@ -1,5 +1,5 @@
 ---
-    title: "Spring Expression Language"
+    title: "Spring Expression Language(SPEL)"
     date: 2017-09-15
     tags: ["spring"]
 ---
