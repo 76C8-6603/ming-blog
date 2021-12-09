@@ -1,5 +1,5 @@
 ---
-    title: "Mysql循环语句，死循环解决办法"
+    title: "Mysql循环语句，死循环解决办法（mysql process）"
     date: 2019-08-15
     tags: ["mysql"]
     
@@ -31,8 +31,12 @@ call test();                            #调用存储过程
 
 这种情况光是关闭SQL窗口，是不管用的，SQL会在后台继续运行，需要找到对应线程，手动杀死
 ```sql
-#展示所有运行中的线程，线程信息里会展示对应SQL
+# 展示所有运行中的进程，进程信息里会展示对应SQL
 SHOW PROCESSLIST;
-#杀掉对应线程id
+
+# 或者通过sql具体筛选进程
+SELECT * FROM information_schema.PROCESSLIST WHERE DB = ‘bcloud_dev001’
+
+# 杀掉对应线程id
 KILL 123456;
 ```
