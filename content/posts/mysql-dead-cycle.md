@@ -35,7 +35,7 @@ call test();                            #调用存储过程
 SHOW PROCESSLIST;
 
 # 或者通过sql具体筛选进程
-SELECT * FROM information_schema.PROCESSLIST WHERE DB = ‘bcloud_dev001’
+SELECT * FROM information_schema.PROCESSLIST WHERE DB = ‘test’
 
 # 杀掉对应线程id
 KILL 123456;
