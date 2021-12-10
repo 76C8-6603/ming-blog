@@ -38,5 +38,5 @@ kubectl edit deployment <deployment-name> -n <name-space>
 kubectl set image {镜像名} {容器名}={镜像地址}:{tag} -n {namespace}
 
 # 查看容器的环境变量
-kubectl {容器名} -n {namespace} -- env 
+kubectl exec {容器名} -n {namespace} -- env 
 ```
