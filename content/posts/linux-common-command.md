@@ -127,7 +127,14 @@ sudo tar -zxf 压缩包目录 -C 目标解压目录 #文件解压
 
 sudo chown -R [userName] [filePath] #更改文件及其所有子文件的所有者权限
 
-unzip #解压zip文件
+# 解压zip文件
+unzip 
+
+# 解压jar
+jar -xvf hello.jar
+
+# 压缩jar
+jar -cvf0m hello.jar ./META-INF/MANIFEST.MF .
 
 vi /etc/apt/sources.list #编辑环境变量
 
@@ -275,5 +282,6 @@ traceroute www.google.com
 
 # 更新指定文件的时间属性为当前系统时间，如果文件不存在会自动创建（这里会创建0,1,2三个文件）
 touch test/{0,1,2}
+
 
 ```
