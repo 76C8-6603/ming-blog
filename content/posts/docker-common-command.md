@@ -104,6 +104,9 @@ docker rm -f $(docker ps -a |  grep "test*"  | awk '{print $1}')
 # 设置容器开机启动，这里根据两个容器的id进行设置
 docker container update --restart=always 9153272cbb54 c9c1531b1625
 
+# 取消容器开机自启动
+docker container update --restart=no 9153272cbb54 c9c1531b1625
+
 # 将指定名称的容器打为镜像
 docker commit rabbitmq rabbitmq:custom
 ```
