@@ -1,6 +1,6 @@
 ---
 
-    title: "Maven命令备忘"
+    title: "Maven常用命令备忘"
     date: 2017-06-15
     tags: ["maven"]
 
@@ -82,4 +82,13 @@ mvn dependency:purge-local-repository -DactTransitively=false -DreResolve=false
 
 # 查看maven的debug信息，其中包含当前使用的仓库，settings.xml等
 mvn -X
+
+mvn deploy:deploy-file \
+  -DgroupId=com.cloudera.hive \
+  -DartifactId=HiveJDBC41 \
+  -Dversion=2.6.5 \
+  -Dpackaging=jar \
+  -Dfile=./HiveJDBC41.jar \
+  -Durl=http://custom-repository.com/repository/maven-releases/ \
+  -DrepositoryId=releases
 ```
