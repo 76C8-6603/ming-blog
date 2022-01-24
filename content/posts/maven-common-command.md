@@ -83,6 +83,7 @@ mvn dependency:purge-local-repository -DactTransitively=false -DreResolve=false
 # 查看maven的debug信息，其中包含当前使用的仓库，settings.xml等
 mvn -X
 
+# maven部署jar到线上仓库
 mvn deploy:deploy-file \
   -DgroupId=com.cloudera.hive \
   -DartifactId=HiveJDBC41 \
@@ -91,4 +92,9 @@ mvn deploy:deploy-file \
   -Dfile=./HiveJDBC41.jar \
   -Durl=http://custom-repository.com/repository/maven-releases/ \
   -DrepositoryId=releases
+
+# 更新maven仓库
+mvn help:system
+
+
 ```
