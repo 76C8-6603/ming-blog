@@ -7,6 +7,16 @@
 ---
 
 ```shell
+
+# 查看客户端和kubernetes master服务的版本
+kubectl version
+
+# 查看集群信息
+kubectl cluster-info
+
+# 获取所有node
+kubectl get nodes
+
 # 获得K8S集群下的所有命名空间
 kubectl get ns
 
