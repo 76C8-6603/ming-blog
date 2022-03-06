@@ -2,7 +2,7 @@
 
     title: "pac自定义规则"
     date: 2018-05-15
-    tags: ["website build"]
+    tags: ["architecture"]
 
 ---
 

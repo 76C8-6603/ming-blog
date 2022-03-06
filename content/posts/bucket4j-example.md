@@ -2,7 +2,7 @@
 
     title: "Bucket4j 实例"
     date: 2019-04-11
-    tags: ["website build","java"]
+    tags: ["architecture","java"]
 
 ---
 # 简介

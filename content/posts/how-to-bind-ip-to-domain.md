@@ -1,7 +1,7 @@
 ---
     title: "怎么给自己的域名指定IP"
     date: 2020-02-20
-    tags: ["website build"]
+    tags: ["architecture"]
     
 ---
 ### 这里主要参照NameCheap，其他域名服务商大同小异

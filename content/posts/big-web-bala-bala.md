@@ -1,7 +1,7 @@
 ---
     title: "大型网站架构演化概论"
     date: 2018-09-01 
-    tags: ["website build"]
+    tags: ["architecture"]
     
 ---
 

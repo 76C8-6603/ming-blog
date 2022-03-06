@@ -1,7 +1,7 @@
 ---
     title: "大浏览量系统的静态化架构设计"
     date: 2018-08-08
-    tags: ["website build"]
+    tags: ["architecture"]
     
 ---
 
