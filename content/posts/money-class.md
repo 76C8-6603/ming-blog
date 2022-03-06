@@ -2,7 +2,7 @@
 
     title: "货币类（比例分配货币）"
     date: 2019-04-25
-    tags: ["arichitecture"]
+    tags: ["architecture"]
 
 ---
 ## 背景
