@@ -6,4 +6,4 @@
     draft: true
 
 ---
-[]
+[缓存穿透，缓存击穿，缓存雪崩](https://zhuanlan.zhihu.com/p/359118610)

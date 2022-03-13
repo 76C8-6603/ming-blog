@@ -256,6 +256,9 @@ shasum -a 256 web.jar
 # 查看所有进程
 ps aux
 
+# 查看指定匹配参数进程
+ps aux | grep java
+
 # 删除已输入命令
 control/ctrl + c
 
@@ -285,4 +288,10 @@ touch test/{0,1,2}
 
 # 查看cpu核心数
 lscpu
+
+# 动态图表查看当前网络状态
+nethogs
+
+# 查看当前目录下的文件大小
+du -sh *
 ```
