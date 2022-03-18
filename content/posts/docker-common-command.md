@@ -71,8 +71,8 @@ curl <仓库地址>/h2/<镜像名>/tags/list
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-# 创建并启动容器
-docker-compose up -d
+# 创建并启动容器 -f 指定非标准命名的文件
+docker-compose -f mysql.yml up -d
 
 # 将容器内部的文件拷贝到宿主机
 docker cp mawall_ppcl:/data/dist  /home/data/test/

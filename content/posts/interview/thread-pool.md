@@ -6,4 +6,4 @@
     draft: true
 
 ---
-[线程池](https://zhuanlan.zhihu.com/p/73990200)
+[线程池](https://www.cnblogs.com/aspirant/p/6920418.html)
