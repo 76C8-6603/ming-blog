@@ -93,6 +93,12 @@ ps -ef  #查询所有正在运行的service
     ps -ef | grep mysql #查询mysql相关的进程
 service --status-all  #查询所有已安装的service
 
+# ping指定ip+端口
+telnet 198.0.0.2 10086
+
+# mac ping指定ip + 端口
+nc -vz -w 2 172.105.197.158 10086
+
 reboot
     #-d重新开机时不把数据写入记录文件/var/tmp/wtmp。具有-n效果
     #-f强制重新开机，不调用shutdow指令
