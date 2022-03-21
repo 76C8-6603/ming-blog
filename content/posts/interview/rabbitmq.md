@@ -9,5 +9,5 @@
 
 [消息队列知识](https://zhuanlan.zhihu.com/p/52773169)  
 [图解rabbitmq](https://zhuanlan.zhihu.com/p/48779080)  
-[消息队列必问](https://zhuanlan.zhihu.com/p/62382615)  
+[消息队列必问](https://zhuanlan.zhihu.com/p/140885460)  
 
