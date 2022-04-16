@@ -11,3 +11,5 @@
 ```sql
 show engine innodb status \G;
 ```
+
+[MVCC](https://zhuanlan.zhihu.com/p/52977862)  

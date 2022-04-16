@@ -8,4 +8,5 @@
 ---
 
 > [Mysql索引底层原理](https://zhuanlan.zhihu.com/p/113917726)  
-> [Mysql索引面试问题](https://zhuanlan.zhihu.com/p/73204847)
+> [Mysql索引面试问题](https://zhuanlan.zhihu.com/p/73204847)  
+> [深度分页](https://zhuanlan.zhihu.com/p/345082332)

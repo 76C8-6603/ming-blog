@@ -11,5 +11,6 @@
 [图解rabbitmq](https://zhuanlan.zhihu.com/p/48779080)  
 [消息队列必问](https://zhuanlan.zhihu.com/p/140885460)  
 [消息队列死信](https://zhuanlan.zhihu.com/p/171550167)  
+[消息队列问题处理 有代码](https://zhuanlan.zhihu.com/p/384200726)  
 
 
