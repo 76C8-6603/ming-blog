@@ -73,6 +73,10 @@
   * &deg; `&deg;`
   * 空格 `&nbsp;`
 
+* 样式  
+  * <span style="color:blue">字体颜色</span> `<span style="color:blue">some blue text</span>`
+  * <span style="background-color:yellow">字体背景颜色</span> `<span style="background-color:blue">字体背景颜色</span>`
+
 
 
     
