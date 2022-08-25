@@ -1,6 +1,6 @@
 ---
 
-    title: "Angular <select> placeholder"
+    title: "Angular select tab placeholder"
     date: 2022-05-31
     tags: ["angular"]
 
