@@ -5,6 +5,8 @@
     tags: ["swift"]
 
 ---
+> 详细基础知识参考 [swift language guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)  
+
 ### `let`常量  
 ### `var`变量  
 ### `var aDouble: Double`类型申明  
