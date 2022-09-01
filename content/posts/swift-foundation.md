@@ -6,6 +6,7 @@
 
 ---
 > 详细基础知识参考 [swift language guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)  
+> build & package [swift package manager](https://www.swift.org/package-manager/)  
 
 ### `let`常量  
 ### `var`变量  
