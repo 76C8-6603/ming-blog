@@ -7,6 +7,10 @@
 ---
 
 ```shell
+
+# swift interactive shell
+swift repl
+
 # init a package (create manifest file for current package)
 swift package init
 

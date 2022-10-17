@@ -51,5 +51,14 @@ kubectl set image {镜像名} {容器名}={镜像地址}:{tag} -n {namespace}
 kubectl exec {容器名} -n {namespace} -- env 
 
 # 查看pod的事件记录
-kubectl get event -n {namespace} | grep redis
+kubectl get event -n {namespace} | grep redis  
+
+# 查看所有node资源占用
+kubectl top node
+
+# 查看所有pod的资源占用信息
+kubectl top pod --all-namespaces --containers
+
+# 查看指定namespace下的pod资源占用
+kubectl top pod -n <namespace>
 ```
