@@ -1,6 +1,6 @@
 ---
 
-    title: "免费CA机构"
+    title: "免费CA机构(ssl证书申请）"
     date: 2017-05-13
     tags: ["architecture"]
 
@@ -11,7 +11,7 @@ CA机构颁发HTTPS所需要的TLS证书，一般在域名服务商处就可以�
 
 ### 通过certbot和nginx生成ssl证书
 ```shell
-sudo apt install python-certbot-nginx
+sudo apt install python3-certbot-nginx
 sudo certbot --nginx
 sudo systemctl restart nginx
 ```

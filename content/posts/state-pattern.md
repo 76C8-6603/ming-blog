@@ -10,7 +10,7 @@
 
 状态模式可以将复杂的判断逻辑简化，将庞大的判断逻辑分隔开，对单个判断的修改不会影响到其他判断。并且在客户端调用时，也只需要执行Context向外暴露的类即可，不需要知道到底有多少判断逻辑。  
 
-![state pattern](W3sDesign_State_Design_Pattern_UML.jpg)  
+![state pattern](/W3sDesign_State_Design_Pattern_UML.jpg)  
 
 State类
 ```java
