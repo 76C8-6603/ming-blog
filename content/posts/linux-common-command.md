@@ -49,6 +49,9 @@ chmod a+x filename #让执行文件能被./filename调用
 #将当前目录下的所有文件移到上层目录，以便删除上级目录
 mv * ../
 
+# 显示当前ip
+ip addr
+
 #HOST修改需重启
 vi /etc/hosts 
 
@@ -99,12 +102,34 @@ telnet 198.0.0.2 10086
 # mac ping指定ip + 端口
 nc -vz -w 2 172.105.197.158 10086
 
+# 关机
+halt
+power off
+shutdown -h now
+
+# 10分钟后关机
+shutdown -h 10
+
+# 取消关机进程
+shutdown -c
+
+# 重启
 reboot
     #-d重新开机时不把数据写入记录文件/var/tmp/wtmp。具有-n效果
-    #-f强制重新开机，不调用shutdow指令
+    #-f强制重新开机，不调用shutdown指令
     #-i重新开机之前，关闭所有网络界面
     #-n重新开机之前不检查是否有程序未结束
     #-w仅做测试，不真正重启，只会在/var/log/wtmp写入记录
+    
+# 定时重启
+# 10分钟后重启
+shutdown -r 10
+
+# 指定时间重启
+shutdown -r 17:00
+
+#取消重启
+shutdown -c
     
 su - [用户名] #完全切换到指定用户，需要指定用户的密码
 
@@ -303,4 +328,10 @@ du -sh *
 
 # 把指定命令输出的内容作为当前命令的一部分
 vi `ls`
+
+# 查看磁盘和分区
+lsblk
+
+# 挂载指定磁盘
+mount /dev/sdb2 /mnt
 ```
