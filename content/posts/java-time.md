@@ -62,6 +62,17 @@ public class TimeTest {
         final LocalDate localDate = ZonedDateTime.now().withDayOfMonth(1).minusDays(7).toLocalDate();
         System.out.println(localDate);
     }
+
+    /**
+     * 把Date的时分秒删除，只保留日期
+     */
+    @Test
+    void test6() {
+        ZoneId defaultZone = ZoneId.systemDefault();
+        ZonedDateTime zonedDateTime = ZonedDateTime.ofInstant(new Date().toInstant(), defaultZone)
+                .truncatedTo(ChronoUnit.DAYS);
+        Date date = Date.from(zonedDateTime.toInstant());
+    }
     
 }
 ```

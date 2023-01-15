@@ -71,7 +71,8 @@ cp -r dir1/. dir2
 
 unset #删除对应的环境变量
 
-nslookup [ip/域名] #通过域名查找ip和dns，或者通过ip查找域名
+#通过域名查找ip和dns，或者通过ip查找域名
+nslookup [ip/域名] 
 
 wget 域名  #通过指定域名下载文件到当前目录
 
@@ -171,7 +172,16 @@ vi /etc/apt/sources.list #编辑环境变量
 
 dpkg -i *.deb #ubuntu体系安装软件包命令
 
-apt-get upgrade [软件名] #ubuntu更新软件
+apt-get upgrade [软件名] #ubuntu更新
+
+# 删除软件并删除对应配置
+apt-get remove --purge [软件名]
+
+# 自动移除无用依赖
+apt-get autoremove 
+
+# 列出所有安装包
+apt list --installed
 
 jps #查看当前所有的java进程，并显示进程id
 
@@ -334,4 +344,6 @@ lsblk
 
 # 挂载指定磁盘
 mount /dev/sdb2 /mnt
+
+
 ```
