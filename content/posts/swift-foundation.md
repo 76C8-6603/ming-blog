@@ -5,7 +5,7 @@
     tags: ["swift"]
 
 ---
-> 详细基础知识参考 [swift language guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)  
+> 详细基础知识参考 [swift language guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html) or [Apple Swift](https://developer.apple.com/documentation/swift)    
 > build & package [swift package manager](https://www.swift.org/package-manager/)  
 
 ### `let`常量  

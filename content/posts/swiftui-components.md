@@ -1,6 +1,6 @@
 ---
 
-    title: "SwiftUI Examples"
+    title: "SwiftUI Components"
     date: 2022-11-06
     tags: ["swift"]
 
@@ -376,6 +376,155 @@ struct StackingPlaceholder: View {
 ```  
 
 ![img.png](/img-16.png)
+
+
+### @Binding
+指定绑定实例，当前类可以读取和修改它，但是不是这个实例的拥有者，不负责创建这个实例。在传递这个实例的时候，需要在前面加`$`
+```swift
+import SwiftUI
+
+struct RecipeEditor: View {
+    @Binding var config: RecipeEditorConfig
+    
+    var body: some View {
+        NavigationStack {
+            RecipeEditorForm(config: $config)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Text(editorTitle)
+                    }
+                    
+                    ToolbarItem(placement: cancelButtonPlacement) {
+                        Button {
+                            config.cancel()
+                        } label: {
+                            Text("Cancel")
+                        }
+                    }
+                    
+                    ToolbarItem(placement: saveButtonPlacement) {
+                        Button {
+                            config.done()
+                        } label: {
+                            Text("Save")
+                        }
+                    }
+                }
+            #if os(macOS)
+                .padding()
+            #endif
+        }
+    }
+    
+    private var editorTitle: String {
+        config.recipe.isNew ? "Add Recipe" : "Edit Recipe"
+    }
+    
+    private var cancelButtonPlacement: ToolbarItemPlacement {
+        #if os(macOS)
+        .cancellationAction
+        #else
+        .navigationBarLeading
+        #endif
+    }
+    
+    private var saveButtonPlacement: ToolbarItemPlacement {
+        #if os(macOS)
+        .confirmationAction
+        #else
+        .navigationBarTrailing
+        #endif
+    }
+}
+```
+
+### @State
+指定绑定实例，当前类是该实例的拥有者，该实例也在当前类的生命周期内，并且该实例有任何变动，当前类会重新构建编译，引用最新的实例
+```swift
+import SwiftUI
+
+struct ContentListView: View {
+    @Binding var selection: Recipe.ID?
+    let selectedSidebarItem: SidebarItem
+    @EnvironmentObject private var recipeBox: RecipeBox
+    @State private var recipeEditorConfig = RecipeEditorConfig()
+
+    var body: some View {
+        RecipeListView(selection: $selection, selectedSidebarItem: selectedSidebarItem)
+            .navigationTitle(selectedSidebarItem.title)
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        recipeEditorConfig.presentAddRecipe(sidebarItem: selectedSidebarItem)
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .sheet(isPresented: $recipeEditorConfig.isPresented,
+                           onDismiss: didDismissEditor) {
+                        RecipeEditor(config: $recipeEditorConfig)
+                    }
+                }
+            }
+    }
+    
+    private func didDismissEditor() {
+        if recipeEditorConfig.shouldSaveChanges {
+            if recipeEditorConfig.recipe.isNew {
+                selection = recipeBox.add(recipeEditorConfig.recipe)
+            } else {
+                recipeBox.update(recipeEditorConfig.recipe)
+            }
+        }
+    }
+}
+
+```
+
+### sheet
+
+`sheet`可以用于管理弹出的表单view, 实例中有两个参数：  
+1. `isPresented` 是否展示  
+2. `onDismiss` 监听`isPresented`从true变为false，参数是监听方法
+
+```swift
+import SwiftUI
+
+struct ContentListView: View {
+    @Binding var selection: Recipe.ID?
+    let selectedSidebarItem: SidebarItem
+    @EnvironmentObject private var recipeBox: RecipeBox
+    @State private var recipeEditorConfig = RecipeEditorConfig()
+
+    var body: some View {
+        RecipeListView(selection: $selection, selectedSidebarItem: selectedSidebarItem)
+            .navigationTitle(selectedSidebarItem.title)
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        recipeEditorConfig.presentAddRecipe(sidebarItem: selectedSidebarItem)
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .sheet(isPresented: $recipeEditorConfig.isPresented,
+                           onDismiss: didDismissEditor) {
+                        RecipeEditor(config: $recipeEditorConfig)
+                    }
+                }
+            }
+    }
+    
+    private func didDismissEditor() {
+        if recipeEditorConfig.shouldSaveChanges {
+            if recipeEditorConfig.recipe.isNew {
+                selection = recipeBox.add(recipeEditorConfig.recipe)
+            } else {
+                recipeBox.update(recipeEditorConfig.recipe)
+            }
+        }
+    }
+}
+
+```
 
 
 
