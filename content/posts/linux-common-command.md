@@ -345,5 +345,6 @@ lsblk
 # 挂载指定磁盘
 mount /dev/sdb2 /mnt
 
-
+# 查看指定挂载硬盘的详细信息，包括文件系统类型和uuid等
+file -s /dev/sda3
 ```

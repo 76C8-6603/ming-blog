@@ -500,7 +500,7 @@ struct ContentListView: View {
             .navigationTitle(selectedSidebarItem.title)
             .toolbar {
                 ToolbarItem {
-                    Button {
+                    Button {  
                         recipeEditorConfig.presentAddRecipe(sidebarItem: selectedSidebarItem)
                     } label: {
                         Image(systemName: "plus")
@@ -525,6 +525,72 @@ struct ContentListView: View {
 }
 
 ```
+
+### symbolVariant  
+改变符号的样式
+```swift
+import SwiftUI
+
+struct StarRating: View {
+    @Binding var rating: Int
+    private let maxRating = 5
+
+    var body: some View {
+        HStack {
+            ForEach(1..<maxRating + 1, id: \.self) { value in
+                Image(systemName: "star")
+                    .symbolVariant(value <= rating ? .fill : .none)
+                    .foregroundColor(.accentColor)
+                    .onTapGesture {
+                        if value != rating {
+                            rating = value
+                        } else {
+                            rating = 0
+                        }
+                    }
+            }
+        }
+    }
+}
+```  
+
+![img17](/img-17.png)  
+
+### onTapGesture
+根据用户的手势改变View的状态  
+下面是一个星级评价页面，用户点击评级，再次点击取消评级
+```swift
+import SwiftUI
+
+struct StarRating: View {
+    @Binding var rating: Int
+    private let maxRating = 5
+
+    var body: some View {
+        HStack {
+            ForEach(1..<maxRating + 1, id: \.self) { value in
+                Image(systemName: "star")
+                    .symbolVariant(value <= rating ? .fill : .none)
+                    .foregroundColor(.accentColor)
+                    .onTapGesture {
+                        if value != rating {
+                            rating = value
+                        } else {
+                            rating = 0
+                        }
+                    }
+            }
+        }
+    }
+}
+```  
+
+![img17](/img-17.png)  
+
+
+
+
+
 
 
 
