@@ -79,4 +79,10 @@ sudo ufw logging on
 
 # 允许Nginx的所有端口
 sudo ufw allow 'Nginx Full'
+
+# 展示所有规则带序号　
+sudo ufw status numbered
+
+# 删除指定序号规则
+sudo ufw delete 9
 ```

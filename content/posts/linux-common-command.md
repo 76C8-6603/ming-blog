@@ -142,6 +142,9 @@ sudo useradd -m hadoop -s /bin/bash #添加用户
 
 sudo adduser hadoop sudo #给用户追加管理员权限
 
+# 创建用户，并把它分配给指定组
+sudo usermod -a -G <group> <user>
+
 # 实时查看资源占用情况
 top 
 
@@ -182,6 +185,9 @@ apt-get autoremove
 
 # 列出所有安装包
 apt list --installed
+
+# 搜索指定包
+apt-cache search zfs
 
 jps #查看当前所有的java进程，并显示进程id
 
@@ -347,4 +353,14 @@ mount /dev/sdb2 /mnt
 
 # 查看指定挂载硬盘的详细信息，包括文件系统类型和uuid等
 file -s /dev/sda3
+
+# 关闭wifi
+nmcli radio wifi off
+
+# 启用wifi
+nmcli radio wifi on
+
+# 查看当前网络端口使用情况
+rpcinfo -p
+
 ```
