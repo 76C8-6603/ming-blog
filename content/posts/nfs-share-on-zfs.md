@@ -52,11 +52,17 @@ ufw allow from 192.168.0.0/24 to any port 2049
 # 开放上面配置文件的端口
 ufw allow from 192.168.0.0/24 to any port 12222
 
-# 查看端口，找到service: nlockmgr, 记下它的所有端口
+# 创建文件
+nano /etc/modprobe.d/nlockmgr.conf
+
+# 添加以下内容，然后重启
+options lockd nlm_udpport=5000 nlm_tcpport=5000
+
+# 查看端口，找到service: nlockmgr, 记下它的所有端口(5000)
 rpcinfo -p
 
 # 开放所有nlockmgr端口
-ufw allow from 192.168.0.0/24 to any port <all nlockmgr ports>
+ufw allow from 192.168.0.0/24 to any port 5000
 ```
 
 

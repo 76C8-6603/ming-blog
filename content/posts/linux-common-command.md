@@ -46,6 +46,9 @@ cat [目录1]  >> [目录2] #把目录1的文件内容输入到目录2中
 
 chmod a+x filename #让执行文件能被./filename调用
 
+# 改变指定文件的权限，1(执行) 2(写) 4(读）
+chmod 777 <filename>
+
 #将当前目录下的所有文件移到上层目录，以便删除上级目录
 mv * ../
 
@@ -142,10 +145,25 @@ sudo useradd -m hadoop -s /bin/bash #添加用户
 
 sudo adduser hadoop sudo #给用户追加管理员权限
 
+# 删掉用户的管理员权限
+sudo deluser USERNAME sudo
+
 # 创建用户，并把它分配给指定组
 sudo usermod -a -G <group> <user>
 
-# 实时查看资源占用情况
+# 改变已有用户组
+sudo usermod -G<group> <user>
+
+# 给用户创建home
+sudo mkhomedir_helper ming
+
+# 查看当前用户组
+groups ming
+
+# 删除指定用户和他的用户组
+userdel -r <user>
+
+# 实时查看资源占用情况, cpu占用
 top 
 
 while true;do ps -u your-user-name -L | wc -l;sleep 1;done #查看当前用户开启的线程数
@@ -160,7 +178,11 @@ ls -lrt /usr/bin/java #查找安装路径
 
 sudo tar -zxf 压缩包目录 -C 目标解压目录 #文件解压
 
-sudo chown -R [userName] [filePath] #更改文件及其所有子文件的所有者权限
+#更改文件及其所有子文件的所有者权限
+sudo chown -R [userName] [filePath] 
+
+# 改变文件组 myfile 的组改为 root
+chgrp root myfile
 
 # 解压zip文件
 unzip 
@@ -221,7 +243,7 @@ systemctl start mongod
 systemctl stop mongod
 systemctl restart mongod
 
-# 让进程随系统自启动
+# 让进程随系统自启动,开机启动
 systemctl enable mongod
 
 # centos7 防火墙添加端口
@@ -266,6 +288,9 @@ yum downgrade openssl-libs
 
 # 实时修改内核运行参数
 sysctl vm.swappiness=10
+
+# 在已执行命令中查找指定内容
+history | grep <search>
 
 # 查看内存占用
 free -m
@@ -360,7 +385,12 @@ nmcli radio wifi off
 # 启用wifi
 nmcli radio wifi on
 
-# 查看当前网络端口使用情况
+# 查看当前rpc网络端口使用情况
 rpcinfo -p
+
+# 修改指定用户对指定文件的权限
+setfacl -R -m u:username:rwx myfolder
+
+
 
 ```
