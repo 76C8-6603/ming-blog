@@ -5,6 +5,7 @@
     tags: ["swift"]
 
 ---
+> refer to [Apple Documentation](https://developer.apple.com/documentation/swiftui/app-organization)  
 
 ## Text
 A Text view displays read-only text.  
@@ -378,7 +379,7 @@ struct StackingPlaceholder: View {
 ![img.png](/img-16.png)
 
 
-### @Binding
+## @Binding
 指定绑定实例，当前类可以读取和修改它，但是不是这个实例的拥有者，不负责创建这个实例。在传递这个实例的时候，需要在前面加`$`
 ```swift
 import SwiftUI
@@ -438,7 +439,7 @@ struct RecipeEditor: View {
 }
 ```
 
-### @State
+## @State
 指定绑定实例，当前类是该实例的拥有者，该实例也在当前类的生命周期内，并且该实例有任何变动，当前类会重新构建编译，引用最新的实例
 ```swift
 import SwiftUI
@@ -480,7 +481,7 @@ struct ContentListView: View {
 
 ```
 
-### sheet
+## sheet
 
 `sheet`可以用于管理弹出的表单view, 实例中有两个参数：  
 1. `isPresented` 是否展示  
@@ -526,7 +527,7 @@ struct ContentListView: View {
 
 ```
 
-### symbolVariant  
+## symbolVariant  
 改变符号的样式
 ```swift
 import SwiftUI
@@ -556,7 +557,7 @@ struct StarRating: View {
 
 ![img17](/img-17.png)  
 
-### onTapGesture
+## onTapGesture
 根据用户的手势改变View的状态  
 下面是一个星级评价页面，用户点击评级，再次点击取消评级
 ```swift
@@ -588,7 +589,71 @@ struct StarRating: View {
 ![img17](/img-17.png)  
 
 
+## Slider
+范围值选定轴
+```swift
+@State private var speed = 50.0
+@State private var isEditing = false
 
+var body: some View {
+    Slider(
+        value: $speed,
+        in: 0...100,
+        step: 5
+    ) {
+        Text("Speed")
+    } minimumValueLabel: {
+        Text("0")
+    } maximumValueLabel: {
+        Text("100")
+    } onEditingChanged: { editing in
+        isEditing = editing
+    }
+    Text("\(speed)")
+        .foregroundColor(isEditing ? .red : .blue)
+}
+```
+
+![img18](/img-19.png)  
+
+## TextField
+文本输入框
+
+```swift
+Form {
+    TextField(text: $username, prompt: Text("Required")) {
+        Text("Username")
+    }
+    SecureField(text: $password, prompt: Text("Required")) {
+        Text("Password")
+    }
+}
+```
+![img.png](/img-20.png)  
+
+```swift
+@State private var username: String = ""
+@FocusState private var emailFieldIsFocused: Bool = false
+
+var body: some View {
+    TextField(
+        "User name (email address)",
+        text: $username
+    )
+    .focused($emailFieldIsFocused)
+    .onSubmit {
+        validate(name: username)
+    }
+    .textInputAutocapitalization(.never)
+    .disableAutocorrection(true)
+    .border(.secondary)
+
+    Text(username)
+        .foregroundColor(emailFieldIsFocused ? .red : .blue)
+}
+```
+
+![img.png](/img-21.png)
 
 
 

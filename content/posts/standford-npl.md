@@ -1,15 +1,15 @@
 ---
 
-    title: "Standford npl 使用说明"
+    title: "Standford nlp 使用说明"
     date: 2021-03-04
-    tags: ["npl"]
+    tags: ["nlp"]
 
 ---
 
 # 实例
 下面是两个简单的实例，目的是获取一个单词的词根，并自动识别大小写。一个使用的是`SimpleCoreNLP`API简单实现，另外一个是通过完整的Pipeline来实现。
 
-## SimpleCoreNPL
+## SimpleCoreNLP
 ```java
 //直接获取一个单词的词根，但是此方法不会自动识别大小写
 String tokenLemma = new Sentence("Cyberpunk").lemma(0);
