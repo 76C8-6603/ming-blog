@@ -3,7 +3,6 @@
     title: "maven test不能运行"
     date: 2021-05-17
     tags: ["maven","test"]
-    draft: true
 
 ---
 

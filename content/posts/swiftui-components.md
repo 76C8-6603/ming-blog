@@ -656,6 +656,49 @@ var body: some View {
 ![img.png](/img-21.png)
 
 
+## wrappedValue
+如果要读取 `@Binding` or `@State` 对象的属性，而不是返回一个绑定对象，那么就需要 `wrappedValue`
+
+```swift
+@Binding private var recipe:Recipe
+
+RecipeDetailView(recipe: recipe)
+                .navigationTitle(recipe.wrappedValue.title)
+```
+上面的代码向`navigationTile`方法传递了一个String  
+
+## Custom Binding
+`@State`只能绑定初始化静态值，但如果你需要的值是一个动态值，那么就需要用到自定义绑定  
+```swift
+import SwiftUI
+
+struct DetailView: View {
+    @Binding var recipeId: Recipe.ID?
+    @EnvironmentObject private var recipeBox: RecipeBox
+    @State private var showDeleteConfirmation = false
+    
+    private var recipe: Binding<Recipe> {
+        Binding {
+            if let id = recipeId {
+                return recipeBox.recipe(with: id) ?? Recipe.emptyRecipe()
+            } else {
+                return Recipe.emptyRecipe()
+            }
+        } set: { updatedRecipe in
+            recipeBox.update(updatedRecipe)
+        }
+    }
+    
+    ....
+}
+```
+类中的`recipe`属性相当于 `@State private var recipe:Recipe=...`  
+但是这里的`recipe`是通过`id`检索`recipeBox`得来的，所以静态初始化行不通，就需要自定义Binding。  
+注意recipe返回的是`Binding`，闭包中是对`Binding`的 `get` 和 `set` 的实现。  
+
+
+
+
 
 
 
