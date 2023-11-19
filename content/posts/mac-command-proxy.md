@@ -13,8 +13,8 @@ vi ~/.bash_profile
 加入如下内容
 ```
 # proxy
-alias proxy='export all_proxy=socks5://127.0.0.1:1080'
-alias unproxy='unset all_proxy'
+alias proxy='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
+alias unproxy='unset all_proxy https_proxy http_proxy'
 ```
 
 执行以下命令生效
@@ -30,8 +30,8 @@ vi ~/.zshrc
 加入如下内容
 ```
 # proxy
-alias proxy='export all_proxy=socks5://127.0.0.1:1080'
-alias unproxy='unset all_proxy'
+alias proxy='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
+alias unproxy='unset all_proxy https_proxy http_proxy'
 ```
 
 执行以下命令生效
