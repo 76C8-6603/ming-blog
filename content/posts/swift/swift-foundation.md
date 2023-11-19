@@ -12,6 +12,7 @@
 ### `var`变量  
 ### `var aDouble: Double`类型申明  
 ### 没有隐式类型转换，类型转换需要直接申明`String(aDouble)`  
+### 通用String类型转换`String(describing: money)` 推荐
 ### `This is a float: \(aDouble)` 字符串插入变量  
 ### `"""`三个双引号可以处理跨行字符串  
 ```swift
@@ -679,7 +680,13 @@ func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
 }
 anyCommonElements([1, 2, 3], [3])
 ```
-Writing <T: Equatable> is the same as writing <T> ... where T: Equatable.
+Writing <T: Equatable> is the same as writing <T> ... where T: Equatable.  
+
+
+### Decimal to format string  
+```swift
+String(format: "%.2f", decimalValue as CVarArg)
+```
 
 
 

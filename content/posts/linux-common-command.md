@@ -77,6 +77,9 @@ unset #删除对应的环境变量
 #通过域名查找ip和dns，或者通过ip查找域名
 nslookup [ip/域名] 
 
+# brew软件安装路径查看
+brew list go
+
 wget 域名  #通过指定域名下载文件到当前目录
 
 scp -r ~/data root@127.0.0.1:~/data #指定服务上传  

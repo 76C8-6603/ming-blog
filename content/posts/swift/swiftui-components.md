@@ -463,6 +463,9 @@ struct ContentListView: View {
                     .sheet(isPresented: $recipeEditorConfig.isPresented,
                            onDismiss: didDismissEditor) {
                         RecipeEditor(config: $recipeEditorConfig)
+                            .presentationDetents([.medium, .large])
+                            .presentationBackgroundInteraction(.automatic)
+                            .presentationBackground(.regularMaterial)
                     }
                 }
             }
@@ -653,7 +656,15 @@ var body: some View {
 }
 ```
 
-![img.png](/img-21.png)
+![img.png](/img-21.png)  
+
+format by local currency:  
+
+```swift
+TextField("",value: $money, format: .currency(code: Locale.current.currency?.identifier ?? "CNY"))
+                    .font(.largeTitle)
+```  
+![img.png](/img-22.png)
 
 
 ## wrappedValue
@@ -695,6 +706,163 @@ struct DetailView: View {
 类中的`recipe`属性相当于 `@State private var recipe:Recipe=...`  
 但是这里的`recipe`是通过`id`检索`recipeBox`得来的，所以静态初始化行不通，就需要自定义Binding。  
 注意recipe返回的是`Binding`，闭包中是对`Binding`的 `get` 和 `set` 的实现。  
+
+
+## Divider
+分隔符  
+```swift
+Divider()
+```
+![img.png](/img-23.png)
+
+
+## TabView  
+底部主菜单
+```swift
+TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+    Text("Tab Content 1").tabItem {Label("首页", systemImage: "house")}.tag(1)
+    Text("Tab Content 2").tabItem { Label("详情", systemImage: "list.bullet.rectangle.portrait.fill") }.tag(2)
+    Text("Tab Content 3").tabItem { Label("新增", systemImage: "plus.circle.fill") }.tag(3)
+    Text("Tab Content 4").tabItem { Label("图表", systemImage: "chart.bar.xaxis.ascending") }.tag(4)
+    Text("Tab Content 5").tabItem { Label("我的", systemImage: "person") }.tag(5)
+}
+```
+
+![img.png](/img-24.png)
+
+
+## 获取当前时间
+```swift
+Text(Date(), style: .date) 
+```
+
+
+## DatePicker  
+```swift
+DatePicker(selection: .constant(date), displayedComponents:[.hourAndMinute, .date], label: { Text("日期") })
+```
+![img_2.png](/img_25.png)  
+
+## Map  
+[refer to](https://medium.com/@pblanesp/how-to-display-a-map-and-track-the-users-location-in-swiftui-7d288cdb747e) 
+
+```swift
+import CoreLocation
+import MapKit
+import SwiftUI
+
+struct ContentView: View {
+    
+    let locationManager = CLLocationManager()
+    
+    @State var region = MKCoordinateRegion(
+        center: .init(latitude: 37.334_900,longitude: -122.009_020),
+        span: .init(latitudeDelta: 0.2, longitudeDelta: 0.2)
+    )
+    
+    var body: some View {
+        Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.follow))
+            .edgesIgnoringSafeArea(.all)
+            .onAppear {
+                locationManager.requestWhenInUseAuthorization()
+            }
+    }
+}
+```
+
+## 货币输入和键盘  
+
+```swift
+TextField("",value: $money, format: .currency(code: Locale.current.currency?.identifier ?? "CNY"))
+    .font(.largeTitle)
+    .keyboardType(.decimalPad)
+```
+
+## 阻塞指定时间
+一秒后改变状态
+```swift
+DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+    self.isFocused = true
+}
+```
+
+## focused  
+
+只有一个文本框需要自动弹出键盘  
+注意`.onAppear`需要在父类层级才会在打开页面时生效，如果直接加到`TextField`需要延时(参考[SwiftUI @FocusState - how to give it initial value](https://stackoverflow.com/questions/68073919/swiftui-focusstate-how-to-give-it-initial-value) 和 [SwiftUI: How to make TextField become first responder?](https://stackoverflow.com/questions/56507839/swiftui-how-to-make-textfield-become-first-responder))
+```swift
+struct MyView: View {
+    
+    @FocusState private var isTitleTextFieldFocused: Bool
+
+    @State private var title = ""
+    
+    var body: some View {
+        VStack {
+            TextField("Title", text: $title)
+                .focused($isTitleTextFieldFocused)
+        }
+        .onAppear {
+            self.isTitleTextFieldFocused = true
+        }
+        .padding()
+        
+    }
+}
+```
+
+多个文本框需要自动弹出键盘  
+```swift
+struct LoginForm: View {
+    enum Field: Hashable {
+        case usernameField
+        case passwordField
+    }
+
+    @State private var username = ""
+    @State private var password = ""
+    @FocusState private var focusedField: Field?
+
+    var body: some View {
+        Form {
+            TextField("Username", text: $username)
+                .focused($focusedField, equals: .usernameField)
+
+            SecureField("Password", text: $password)
+                .focused($focusedField, equals: .passwordField)
+
+            Button("Sign In") {
+                if username.isEmpty {
+                    focusedField = .usernameField
+                } else if password.isEmpty {
+                    focusedField = .passwordField
+                } else {
+                    handleLogin(username, password)
+                }
+            }
+        }
+    }
+}
+```
+
+## Section 改变边框颜色  
+```swift
+Section("AI"){
+    TextField("#标签", text: $tag)
+}.listRowBackground(
+    RoundedRectangle(cornerRadius: 10)
+    .stroke(Color(UIColor.systemTeal), lineWidth: 3)
+)
+```
+
+## 系统颜色
+
+```swift
+Color(UIColor.systemTeal)
+Color(UIColor.systemRed)
+Color(UIColor.systemCyan)
+```
+
 
 
 
