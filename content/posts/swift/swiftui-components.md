@@ -859,7 +859,7 @@ Form {
 }
 ```
 
-![img.png](../../../static/img-27.png)
+![img.png](/img-27.png)
 
 ## Section 改变边框颜色  
 ```swift
@@ -884,7 +884,7 @@ Color(UIColor.systemCyan)
  TextField("...", text: $remark, axis: .vertical)
     .lineLimit(2...10)
 ```
-![img.png](../../../static/img-26.png)
+![img.png](/img-26.png)
 
 
 
