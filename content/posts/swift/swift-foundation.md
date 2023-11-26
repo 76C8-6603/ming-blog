@@ -688,6 +688,10 @@ Writing <T: Equatable> is the same as writing <T> ... where T: Equatable.
 String(format: "%.2f", decimalValue as CVarArg)
 ```
 
+### protected variable
+Swift don't have `protected` modifier like JAVA, use `internal` replace.  
+see [this answer](https://stackoverflow.com/questions/41764977/how-to-declare-a-protected-variable-in-swift)  
+
 
 
 

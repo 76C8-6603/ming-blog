@@ -844,6 +844,22 @@ struct LoginForm: View {
     }
 }
 ```
+## Form Section 带分区的表单结构  
+```swift
+Form {
+    Section{
+        Text("Test1")
+        Text("Test2")
+    }
+    
+    Section{
+        Text("Test1")
+        Text("Test2")
+    }
+}
+```
+
+![img.png](../../../static/img-27.png)
 
 ## Section 改变边框颜色  
 ```swift
@@ -862,6 +878,14 @@ Color(UIColor.systemTeal)
 Color(UIColor.systemRed)
 Color(UIColor.systemCyan)
 ```
+
+## 多行的TextField  
+```swift
+ TextField("...", text: $remark, axis: .vertical)
+    .lineLimit(2...10)
+```
+![img.png](../../../static/img-26.png)
+
 
 
 
