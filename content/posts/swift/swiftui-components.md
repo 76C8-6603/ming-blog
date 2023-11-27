@@ -887,6 +887,30 @@ Color(UIColor.systemCyan)
 ![img.png](/img-26.png)
 
 
+## form中隐藏的section，但占用空间
+
+```swift
+Form{
+    Section{
+        Button("") {
+            
+        }.disabled(true)
+    }.listRowBackground(
+        Color(.clear)
+    )
+}
+```
+
+## 删除Vstack中组件的默认间距
+
+```swift
+VStack(spacing: 0) {
+    Text("1")
+    Text("2")
+    Text("3")
+}
+```
+
 
 
 
