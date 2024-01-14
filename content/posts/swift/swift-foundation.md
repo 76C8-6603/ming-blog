@@ -692,6 +692,47 @@ String(format: "%.2f", decimalValue as CVarArg)
 Swift don't have `protected` modifier like JAVA, use `internal` replace.  
 see [this answer](https://stackoverflow.com/questions/41764977/how-to-declare-a-protected-variable-in-swift)  
 
+### guard  
+guard 是 Swift 语言中的一个关键字，用于提前退出（early exit）一个代码块，同时保证在退出代码块之前必须满足某些条件。guard 语句通常用于在函数的开始部分检查条件，并在条件不满足时提前退出。这是一种编写更安全、更清晰代码的方式。  
+```swift
+guard 条件 else {
+    // 如果条件不满足，则执行这里的代码
+    // 通常包括退出当前函数、循环或其他范围的语句
+    return, break, continue, throw 等
+}
+// 如果条件满足，则继续执行 guard 之后的代码
+
+```
+
+还可以绑定参数：  
+```swift
+func someFunction(optionalValue: String?) {
+    guard let value = optionalValue else {
+        print("没有值")
+        return
+    }
+    // 这里可以安全地使用 value，因为已经确保它不是 nil
+    print("值为: \(value)")
+}
+```
+
+### DispatchQueue.global
+全局并发队列，下面的代码会在用户触发时异步执行  
+```swift
+DispatchQueue.global(qos: .userInitiated).async {
+    self.model = try? MyModel(configuration: MLModelConfiguration())
+}
+```
+全局并发队列，不能去修改跟用户界面有关的参数，如果要修改，需要回到主线程  
+```swift
+DispatchQueue.global(qos: .userInitiated).async {
+    self.model = try? MyModel(configuration: MLModelConfiguration())
+    DispatchQueue.main.async {
+        self.isLoaded = true
+    }
+}
+```
+
 
 
 

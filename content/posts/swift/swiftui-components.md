@@ -911,6 +911,29 @@ VStack(spacing: 0) {
 }
 ```
 
+## 横向滚动栏  
+showsIndicators 控制是否展示滚动条  
+```swift
+ScrollView(.horizontal, showsIndicators: false) {
+    HStack{
+        ForEach(array, id: \.self) { title in
+            Text(title)
+        }
+    }.padding(8)
+}
+```
+
+
+## 更改整个背景的颜色  
+```swift
+HStack{
+}
+.padding(.top, 5)
+.frame(maxWidth: .infinity)
+.background(Color(UIColor.systemGray6))
+```
+
+
 
 
 

@@ -49,4 +49,7 @@ lldb Factorial
 
 # disable all breakpoints
 (lldb)br di
+
+# compile model and generate the .mlmodelc file
+xcrun coremlcompiler compile MyModel.mlmodel MyModel.mlmodelc
 ```
