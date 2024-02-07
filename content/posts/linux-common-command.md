@@ -44,7 +44,7 @@ mkdir -p test/{sql,scripts}
 
 cat [目录1]  >> [目录2] #把目录1的文件内容输入到目录2中 
 
-chmod a+x filename #让执行文件能被./filename调用
+chmod a+x filename #让执行文件能被./filename调用，变为可执行
 
 # 改变指定文件的权限，1(执行) 2(写) 4(读）
 chmod 777 <filename>
@@ -144,7 +144,7 @@ sudo  -i #暂时切换到root账户，logout命令可退出root，需要sudoers�
 
 sudo passwd root #设置root密码　
 
-sudo useradd -m hadoop -s /bin/bash #添加用户
+sudo useradd -m hadoop -s /bin/bash #添加用户 新建用户
 
 sudo adduser hadoop sudo #给用户追加管理员权限
 

@@ -933,6 +933,45 @@ HStack{
 .background(Color(UIColor.systemGray6))
 ```
 
+## 在点击对应tab时隐藏底部TabBar
+
+```swift
+struct ContentView: View {
+  var body: some View {
+    TabView {
+      HomeView()
+        .toolbar(.hidden, for: .tabBar).
+        .tabItem {
+          Label("", systemImage: "house.fill")
+        }
+    }
+  }
+}
+```
+
+## 在组件出现之前执行代码块.task  
+
+```swift
+let url = URL(string: "https://example.com")!
+@State private var message = "Loading..."
+
+
+var body: some View {
+    Text(message)
+        .task {
+            do {
+                var receivedLines = [String]()
+                for try await line in url.lines {
+                    receivedLines.append(line)
+                    message = "Received \(receivedLines.count) lines"
+                }
+            } catch {
+                message = "Failed to load"
+            }
+        }
+}
+```
+
 
 
 
